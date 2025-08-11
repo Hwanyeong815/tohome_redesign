@@ -43,7 +43,9 @@ const Navbar = () => {
                 <div className="search">
                     <img src="images/icon/icon_search.png" alt="돋보기" />
                 </div>
-                <img src="images/icon/icon_cart.png" alt="쇼핑카트" />
+                <Link to="/cart">
+                    <img src="images/icon/icon_cart.png" alt="쇼핑카트" />
+                </Link>
             </SearchWrap>
             <NavStyle className="nav" isOpen={isOpen}>
                 <ul className="gnb">

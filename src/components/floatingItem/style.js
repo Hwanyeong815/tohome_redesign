@@ -65,7 +65,21 @@ export const FloatingMenuStyle = styled.div`
     background-color: white;
 
     .item {
+        &:hover {
+            cursor: pointer;
+            .txt-box {
+                border-bottom: 1px solid #3c6039;
+                p {
+                    color: #3c6039;
+                }
+                img {
+                    filter: brightness(0) saturate(100%) invert(30%) sepia(51%) saturate(370%)
+                        hue-rotate(68deg) brightness(80%) contrast(90%);
+                }
+            }
+        }
         .txt-box {
+            border-bottom: 1px solid #fff;
             display: flex;
             align-items: center;
             padding: 10px 15px;

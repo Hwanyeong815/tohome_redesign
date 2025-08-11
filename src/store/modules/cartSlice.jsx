@@ -5,12 +5,12 @@ const initialState = {
     products: productData,
 };
 export const cartSlice = createSlice({
-    name: 'product',
+    name: 'cart',
     initialState,
     reducers: {
         xxx: (state, action) => {},
     },
 });
 
-export const productActions = cartSlice.actions;
+export const cartActions = cartSlice.actions;
 export default cartSlice.reducer;

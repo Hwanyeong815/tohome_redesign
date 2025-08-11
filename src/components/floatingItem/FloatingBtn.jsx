@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FloatingBtnStyle } from './style';
+import { Link } from 'react-router-dom';
 
 const FloatingBtn = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +35,9 @@ const FloatingBtn = () => {
                             새벽배송
                         </p>
                         <p className="img-box">
-                            <img src="/images/icon/icon_cart.png" alt="장바구니" />
+                            <Link to="/cart">
+                                <img src="images/icon/icon_cart.png" alt="쇼핑카트" />
+                            </Link>
                             장바구니
                         </p>
                     </div>

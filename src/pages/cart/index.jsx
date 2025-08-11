@@ -8,7 +8,7 @@ const Cart = () => {
     return (
         <CartWrap>
             <div className="inner">
-                <h2>카트</h2>
+                <h2>카트mmmm</h2>
                 <Cartitem />
                 <CartOrder />
                 <CartResult />

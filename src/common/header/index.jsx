@@ -14,7 +14,7 @@ const Header = () => {
                             <img src="/images/common/logo_tohome.png" alt="로고" />
                             <img
                                 className="hoverImg"
-                                src="images/common/logo_tohome1.png"
+                                src="/images/common/logo_tohome1.png"
                                 alt="로고"
                             />
                         </Link>

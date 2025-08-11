@@ -30,11 +30,11 @@ const FloatingBtn = () => {
                 <FloatingBtnStyle>
                     <div>
                         <p className="img-box">
-                            <img src="images/icon/icon_dawnDelivery.png" alt="새벽배송" />
+                            <img src="/images/icon/icon_dawnDelivery.png" alt="새벽배송" />
                             새벽배송
                         </p>
                         <p className="img-box">
-                            <img src="images/icon/icon_cart.png" alt="장바구니" />
+                            <img src="/images/icon/icon_cart.png" alt="장바구니" />
                             장바구니
                         </p>
                     </div>

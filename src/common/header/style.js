@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HeaderStyle = styled.header`
     &.header {
         height: 230px;
-        /* background-color: #fff; */
+
         .inner {
             position: relative;
 
@@ -52,12 +52,13 @@ export const HeaderStyle = styled.header`
 export const NavStyle = styled.nav.withConfig({
     shouldForwardProp: (prop) => prop !== 'isOpen', // isOpen은 DOM으로 전달하지 않음
 })`
-    height: 180px;
-    position: absolute;
+    bottom: 0;
+    margin-top: 95px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    display: flex;
 
     .gnb {
         color: #333;

@@ -165,7 +165,9 @@ export const Con3Style = styled.div`
         width: 1160px;
         height: 1641px;
         /* border: 1px solid #000; */
+        /* position: relative; */
         .top {
+            /* position: absolute; */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -175,6 +177,11 @@ export const Con3Style = styled.div`
                 width: 494px;
                 height: 310px;
                 /* border: 1px solid #000; */
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
                 p {
                     font-size: 34px;
                     margin-bottom: 23px;
@@ -206,6 +213,9 @@ export const Con3Style = styled.div`
             .box1 {
                 width: 654px;
                 height: 310px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 /* margin-top: 170px; */
                 /* border: 1px solid #000; */
                 p {
@@ -240,6 +250,9 @@ export const Con3Style = styled.div`
                 width: 494px;
                 height: 310px;
                 /* border: 1px solid #000; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 p {
                     font-size: 34px;
                     margin-bottom: 23px;
@@ -259,6 +272,105 @@ export const Con3Style = styled.div`
                     span {
                         font-size: 18px;
                     }
+                }
+            }
+        }
+    }
+`;
+
+export const Con4Style = styled.div`
+    margin-top: 180px;
+    width: 100%;
+    height: 1185px;
+    background-color: #fdfbf0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        margin-top: 100px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .box {
+        height: 870px;
+        border: 1px solid;
+        width: 1200px;
+        .txt {
+            margin-bottom: 15px;
+            .left {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                .qNum {
+                    font-size: 25px;
+                    font-weight: 700;
+                }
+                .bubbleQ {
+                    position: relative;
+                    background: #2c5428;
+                    color: #fff;
+                    padding: 28px 50px;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    font-size: 20px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -6px;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(45deg);
+                        width: 12px;
+                        height: 12px;
+                        background: #2c5428;
+                        border-radius: 2px; /* 살짝 둥근 꼬리 */
+                    }
+                }
+            }
+            .right {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: flex-end;
+                margin-top: 10px;
+            }
+            .aNum {
+                font-size: 25px;
+                font-weight: 700;
+                display: flex;
+                right: 0;
+            }
+            .bubbleA {
+                position: relative;
+                background: #fff;
+                border: 1px solid #b1b1b1;
+                color: #000;
+                font-size: 18px;
+                padding: 28px 60px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: -6px;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                    width: 12px;
+                    height: 12px;
+                    background: #fff;
+                    //   border: 1px solid #b1b1b1;
+                    border-right: 1px solid #b1b1b1;
+                    border-bottom: 1px solid #b1b1b1;
+                    border-radius: 2px; /* 살짝 둥근 꼬리 */
                 }
             }
         }

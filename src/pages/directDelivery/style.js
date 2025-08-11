@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DirectDeliveryWrap = styled.div`
     .inner {
-        padding: 100px 0;
+        /* padding: 100px 0; */
     }
     .titleBox {
         border-top: 1px solid;

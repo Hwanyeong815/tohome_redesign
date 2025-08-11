@@ -8,7 +8,31 @@ const Cart = () => {
     return (
         <CartWrap>
             <div className="inner">
-                <h2>카트mm222mm</h2>
+                <div className="steps">
+                    <div className="cart box">
+                        <span className="dot on"></span>
+                        <span className="txt on">장바구니</span>
+                    </div>
+                    <div className="line"></div>
+                    <div className="delivery box">
+                        <span className="dot"></span>
+                        <span className="txt">배송정보 입력</span>
+                    </div>
+                    <div className="line"></div>
+                    <div className="pay box">
+                        <span className="dot"></span>
+                        <span className="txt">결제하기</span>
+                    </div>
+                </div>
+                <div className="menu">
+                    <ul>
+                        <li>새벽배송</li>
+                        <li className="on">선물하기 1</li>
+                        <li>정기구독 0</li>
+                        <li>브랜드직송 0</li>
+                    </ul>
+                </div>
+
                 <Cartitem />
                 <CartOrder />
                 <CartResult />

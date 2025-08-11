@@ -5,7 +5,7 @@ const CategoryTop = () => {
     return (
         <>
             <CategoryTopWrap>
-                <h2>
+                <h2 className="categoty-title">
                     <img src="/images/category/menu_icon_01.png" alt="" />
                     과일·채소
                 </h2>

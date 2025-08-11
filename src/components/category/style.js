@@ -5,7 +5,7 @@ export const CategoryTopWrap = styled.div`
     margin: auto;
     text-align: center;
     border-bottom: 1px solid #666;
-    h2 {
+    h2.categoty-title {
         font-size: 36px;
         font-weight: 600;
         display: flex;
@@ -37,7 +37,7 @@ export const CategorySub = styled.ul`
 export const CategoryBoxWrap = styled.ul`
     display: flex;
     justify-content: space-between;
-    padding: 135px 0;
+    padding: 130px 0;
 `;
 export const CategoryFilterWrap = styled.div`
     width: 250px;
@@ -115,65 +115,71 @@ export const CategoryListWrap = styled.div`
     }
     .category-item-wrap {
         width: 1180px;
-        .category-item {
-            width: 250px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #333;
-            margin-bottom: 65px;
-            .img-wrap {
-                position: relative;
-                overflow: hidden;
-                img {
-                    width: 250px;
-                    margin-bottom: 15px;
-                    display: block;
+    }
+`;
+export const CategoryItemWrap = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    li {
+        width: 250px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #333;
+        margin-bottom: 5px;
+        .img-wrap {
+            position: relative;
+            overflow: hidden;
+            img {
+                width: 250px;
+                margin-bottom: 15px;
+                display: block;
+            }
+            .overlay {
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.4);
+                left: 0;
+                top: 0;
+                width: 250px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                opacity: 0;
+                transition: 0.3s ease;
+                &:hover {
+                    opacity: 1;
                 }
-                .overlay {
-                    position: absolute;
-                    background-color: rgba(0, 0, 0, 0.4);
-                    left: 0;
-                    top: 0;
-                    width: 250px;
-                    height: 300px;
+                .icon-btn {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 10px;
+                    border: 1px solid #fff;
+                    background: transparent;
+                    color: #fff;
+                    font-size: 18px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    gap: 20px;
-                    opacity: 0;
-                    transition: 0.3s ease;
-                    &:hover {
-                        opacity: 1;
-                    }
-                    .icon-btn {
-                        width: 45px;
-                        height: 45px;
-                        border-radius: 10px;
-                        border: 1px solid #fff;
-                        background: transparent;
-                        color: #fff;
-                        font-size: 18px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
                 }
             }
-            h3 {
-                font-size: 18px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .price-box {
+            text-align: right;
+            .discount {
+                font-size: 15px;
+                color: #999;
+                text-decoration: line-through;
             }
-            .price-box {
-                text-align: right;
-                .price {
+            .price {
+                font-size: 17px;
+                span {
+                    color: #ff7259;
                     font-size: 15px;
-                    color: #999;
-                }
-                .discount {
-                    font-size: 17px;
-                    span {
-                        color: #ff7259;
-                        font-size: 15px;
-                        margin-right: 8px;
-                    }
+                    margin-right: 8px;
                 }
             }
         }

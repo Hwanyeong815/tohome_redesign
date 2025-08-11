@@ -1,5 +1,5 @@
 import CategoryItem from './CategoryItem';
-import { CategoryListWrap } from './style';
+import { CategoryListWrap, CategoryItemWrap } from './style';
 import { Link } from 'react-router-dom';
 
 const CategoryList = () => {
@@ -22,7 +22,16 @@ const CategoryList = () => {
                 </ul>
             </div>
             <div className="category-item-wrap">
-                <CategoryItem className="category-item" />
+                <CategoryItemWrap>
+                    <CategoryItem />
+                    <CategoryItem />
+                    <CategoryItem />
+                    <CategoryItem />
+                    <CategoryItem />
+                    <CategoryItem />
+                    <CategoryItem />
+                    <CategoryItem />
+                </CategoryItemWrap>
             </div>
         </CategoryListWrap>
     );

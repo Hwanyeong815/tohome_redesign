@@ -1,12 +1,19 @@
 import GiftList from '../../components/gift/GiftList';
+import GiftPoint from '../../components/gift/GiftPoint';
+import GiftTutorial from '../../components/gift/GiftTutorial';
+import GiftBest from '../../components/gift/GiftBest';
+import GiftPremium from '../../components/gift/GiftPremium';
+import GiftPopular from '../../components/gift/GiftPopular';
 
 const Gift = () => {
     return (
         <div className="inner">
-            <div className="inner">
-                <h2>선물하기</h2>
-            </div>
+            <GiftPoint />
+            <GiftTutorial />
             <GiftList />
+            <GiftBest />
+            <GiftPremium />
+            <GiftPopular />
         </div>
     );
 };

@@ -7,6 +7,7 @@ import {
     About,
     Best,
     Cart,
+    Category,
     DawnDelivery,
     DirectDelivery,
     Gift,
@@ -71,6 +72,8 @@ const App = () => {
                         <Route path="/sideDish" element={<SideDish />} />
 
                         <Route path="*" element={<NotFiles />} />
+
+                        <Route path="/category" element={<Category />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

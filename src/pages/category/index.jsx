@@ -1,11 +1,13 @@
-import React from 'react';
+import CategoryBox from '../../components/category/CategoryBox';
+import CategoryTop from '../../components/category/CategoryTop';
+import { CategoryWrap } from './style';
 
 const Category = () => {
     return (
-        <div>
-            상품목록
-            <p>menu01~menu10</p>
-        </div>
+        <CategoryWrap>
+            <CategoryTop />
+            <CategoryBox />
+        </CategoryWrap>
     );
 };
 

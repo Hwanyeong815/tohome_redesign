@@ -21,6 +21,9 @@ const HealthList = () => {
     return (
         <div>
             <h2 className="main-title">투홈 건강식품구독</h2>
+            <div className="logo_sub" style={{ width: '400px' }}>
+                <img src="images/main/logo_medisola.png" alt="" />
+            </div>
             <h3 className="sub-title">
                 건강할 때부터, 건강이 걱정될 때까지. 나를 위한 똑똑한 영양 맞춤 푸드케어 브랜드
             </h3>

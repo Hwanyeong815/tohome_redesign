@@ -29,25 +29,27 @@ const SubscribeUl = () => {
         cssEase: 'linear',
     };
     return (
-        <Swiper
-            slidesPerView={5.5}
-            spaceBetween={10}
-            loop={true}
-            freeMode={true}
-            autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            }}
-            speed={3000} // 슬라이드가 흘러가는 속도
-            modules={[FreeMode, Autoplay]}
-        >
-            {sideDishes.map((dishes, idx) => (
-                <SwiperSlide key={idx}>
-                    <SubscribeLi dishes={dishes} />
-                </SwiperSlide>
-            ))}
-        </Swiper>
+        <>
+            <Swiper
+                slidesPerView={5.5}
+                spaceBetween={10}
+                loop={true}
+                freeMode={true}
+                autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                }}
+                speed={3000} // 슬라이드가 흘러가는 속도
+                modules={[FreeMode, Autoplay]}
+            >
+                {sideDishes.map((dishes, idx) => (
+                    <SwiperSlide key={idx}>
+                        <SubscribeLi dishes={dishes} />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </>
     );
 };
 

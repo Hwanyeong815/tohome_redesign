@@ -15,6 +15,7 @@ export const Content4Style = styled.section`
             .main-title {
                 margin-top: 70px;
             }
+
             .txts {
                 padding-left: 240px;
                 /* background-color: azure; */
@@ -109,7 +110,18 @@ export const Content4Style = styled.section`
             .main-title {
                 margin-top: 70px;
             }
+            .logo_sub {
+                margin: 70px auto 35px;
+                width: 410px;
 
+                img {
+                    width: 100%;
+                }
+            }
+            .sub-title {
+                margin-top: 0;
+                margin-bottom: 70px;
+            }
             .foodtype-wrap {
                 display: flex;
                 width: 100%;

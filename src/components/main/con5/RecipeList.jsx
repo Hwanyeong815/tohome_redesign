@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const RecipeLi = ({ product }) => {
+const RecipeList = ({ product }) => {
     const { id, name, price, thumbnailImage } = product;
     const navigate = useNavigate();
     const onGo = () => {
@@ -16,4 +16,4 @@ const RecipeLi = ({ product }) => {
     );
 };
 
-export default RecipeLi;
+export default RecipeList;

@@ -49,7 +49,7 @@ const Content4 = () => {
                                     src="images/icon/icon_sidedish3.png"
                                     alt="images/icon/icon_sidedish3.png"
                                 />
-                                <p>신합리적인 가격</p>
+                                <p>합리적인 가격</p>
                             </div>
                         </div>
                         <button className="more1">

@@ -11,11 +11,11 @@ const Content5 = () => {
         <ContentStyle>
             <section>
                 오늘의 레시피
-                <ContentUl>
+                {/* <ContentUl>
                     {todayRecipe.map((product) => (
                         <RecipeLi key={product.id} product={product} />
                     ))}
-                </ContentUl>
+                </ContentUl> */}
             </section>
             <section>선물하기</section>x{' '}
         </ContentStyle>

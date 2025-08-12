@@ -129,8 +129,9 @@ export const Content3Style = styled.div`
                 }
                 p {
                     transition: 0.3s;
-                    font-size: 15px;
-                    font-weight: 600;
+                    font-size: 15px !important;
+                    font-weight: 500;
+                    white-space: pre-line;
                     color: white;
                     position: absolute;
                     bottom: 100px;
@@ -138,7 +139,7 @@ export const Content3Style = styled.div`
                     left: 50%;
                     transform: translate(-50%, 50%);
                     word-break: keep-all;
-                    width: 180px;
+                    width: 240px;
                     opacity: 0;
                 }
                 button {

@@ -32,11 +32,23 @@ import CustomerAdd from './components/support/customer/CustomerAdd';
 import CustomerEdit from './components/support/customer/CustomerEdit';
 import NoticeDetail from './components/support/notice/NoticeDetail';
 import Notice from './components/support/notice/Notice';
+import { useEffect, useState } from 'react';
+import Spinner from './components/spinner';
 
 const App = () => {
+    const [isSpinner, setIsSpinner] = useState(true);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsSpinner(false);
+        }, 1000);
+        return () => {
+            clearTimeout(timer);
+        };
+    }, []);
     return (
         <>
             <GlobalStyle />
+            {isSpinner && <Spinner />}
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Layout />}>

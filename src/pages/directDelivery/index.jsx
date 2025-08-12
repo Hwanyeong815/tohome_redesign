@@ -13,20 +13,14 @@ const DirectDelivery = () => {
                     </h2>
                     <p>누군가의 손끝에서 시작된 정성이, 당신의 식탁 위에 도착합니다.</p>
                 </div> */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2cd1167bb5973ebd0780773546e47e39cd1ac33a
+
                 <TopSection
                     title="브랜드직송관"
                     subtitle="누군가의 손끝에서 시작된 정성이, 당신의 식탁 위에 도착합니다."
                 />
-<<<<<<< HEAD
-=======
-=======
+
                 <TopSection title="브랜드직송관" subtitle="psdfsdfsdf" />
->>>>>>> 84838263fcd3a129c26384ed03fa2fe93991dd25
->>>>>>> 2cd1167bb5973ebd0780773546e47e39cd1ac33a
+
                 <div className="banner">
                     <div className="left">
                         <div className="points">

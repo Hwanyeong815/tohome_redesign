@@ -18,7 +18,6 @@ export const Content4Style = styled.section`
 
             .txts {
                 padding-left: 240px;
-                /* background-color: azure; */
                 width: 590px;
                 height: 100%;
                 > p {
@@ -113,8 +112,8 @@ export const Content4Style = styled.section`
             .logo_sub {
                 margin: 70px auto 35px;
                 width: 410px;
-
                 img {
+                    box-sizing: border-box;
                     width: 100%;
                 }
             }

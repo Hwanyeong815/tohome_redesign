@@ -9,7 +9,9 @@ const RecipeList = ({ product }) => {
     };
     return (
         <li onClick={onGo}>
-            <img src={thumbnailImage} alt="" />
+            <div className="img-wrap">
+                <img src={thumbnailImage} alt="" />
+            </div>
             <h2>{name}</h2>
             <p>{price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</p>
         </li>

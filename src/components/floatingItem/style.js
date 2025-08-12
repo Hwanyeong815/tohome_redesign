@@ -34,14 +34,13 @@ export const FloatingBtnStyle = styled.div`
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 5px;
+            gap: 10px;
             align-items: center;
             /* height: 50px; */
             text-align: center;
             font-size: 13px;
             img {
                 width: 30px;
-                margin-top: 10px;
             }
         }
     }

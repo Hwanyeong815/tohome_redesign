@@ -2,8 +2,8 @@ import TopSection from '../../components/topSection/TopSection';
 import GiftList from '../../components/gift/GiftList';
 import GiftPoint from '../../components/gift/GiftPoint';
 import GiftTutorial from '../../components/gift/GiftTutorial';
-import GiftBest from '../../components/gift/giftBest/GiftBest';
-import GiftPremium from '../../components/gift/giftPremium/GiftPremium';
+// import GiftBest from '../../components/gift/giftBest/GiftBest';
+// import GiftPremium from '../../components/gift/giftPremium/GiftPremium';
 import GiftPopular from '../../components/gift/GiftPopular';
 
 const Gift = () => {
@@ -18,11 +18,11 @@ const Gift = () => {
                 <GiftPoint />
                 <GiftTutorial />
             </div>
-            <GiftBest />
+            {/* <GiftBest /> */}
             <div className="inner">
-                <GiftPremium />
+                {/* <GiftPremium />
                 <GiftPopular />
-                <GiftList />
+                <GiftList /> */}
             </div>
         </>
     );

@@ -15,8 +15,7 @@ const CategoryItem = () => {
                 </div>
             </div>
             <h3>
-                [새벽시장]
-                <br />
+                [새벽시장] <br />
                 부사 사과 4입 1.1kg
             </h3>
             <div className="price-box">

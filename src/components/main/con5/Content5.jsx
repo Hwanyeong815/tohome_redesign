@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { ContentStyle, ContentUl } from '../style';
-import RecipeLi from './RecipeLi';
+import RecipeList from './RecipeList';
+import { Content05Style } from './style';
 
 const Content5 = () => {
     const { products } = useSelector((state) => state.cart);
@@ -9,15 +10,17 @@ const Content5 = () => {
     );
     return (
         <ContentStyle>
-            <section>
-                오늘의 레시피
-                <ContentUl>
+            <Content05Style>
+                <section className="main-today-reicpe">
+                    오늘의 레시피
+                    {/* <ContentUl>
                     {todayRecipe.map((product) => (
-                        <RecipeLi key={product.id} product={product} />
+                        <RecipeList key={product.id} product={product} />
                     ))}
-                </ContentUl>
-            </section>
-            <section>선물하기</section>x{' '}
+                </ContentUl> */}
+                </section>
+                <section className="main-gift-wrap">선물하기</section>
+            </Content05Style>
         </ContentStyle>
     );
 };

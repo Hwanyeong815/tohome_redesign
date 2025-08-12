@@ -2,6 +2,30 @@ import { useSelector } from 'react-redux';
 import { ContentStyle } from '../style';
 import { Content3Style } from './style';
 import { Link, useNavigate } from 'react-router-dom';
+import BannerLi from './BannerLi';
+
+const banners = [
+    {
+        img1: '/images/main/main_brand1.png',
+        img2: '/images/main/main_brand1t.png',
+        p: '우리 음식의 고유한 원형을 식탁에 전하는 명인명촌',
+    },
+    {
+        img1: '/images/main/main_brand2.png',
+        img2: '/images/main/main_brand2t.png',
+        p: '현대백화점 식재료 X 유명 맛집 레시피 집에서 즐기는 프리미엄 가정 간편식',
+    },
+    {
+        img1: '/images/main/main_brand3.png',
+        img2: '/images/main/main_brand3t.png',
+        p: '대를 거듭하며 이어온 헤리티지 현대식품관 본점 브랜드',
+    },
+    {
+        img1: '/images/main/main_brand4.png',
+        img2: '/images/main/main_brand4t.png',
+        p: '오늘의 나와 미래의 아이들이 함께하는 지속가능한 미식 생활',
+    },
+];
 
 const Content3 = () => {
     // const { products } = useSelector((state) => state.cart);
@@ -36,38 +60,9 @@ const Content3 = () => {
                         </p>
                     </div>
                     <div className="brand-about-banner">
-                        <div className="img-box">
-                            <img src="/images/main/main_brand1.png" alt="" />
-                            <img src="/images/main/main_brand1t.png" alt="" />
-                            <p>우리 음식의 고유한 원형을 식탁에 전하는 명인명촌</p>
-                            <button>
-                                자세히보기 <img src="images/icon/icon_all_w.png" alt="" />
-                            </button>
-                        </div>
-                        <div className="img-box">
-                            <img src="/images/main/main_brand2.png" alt="" />
-                            <img src="/images/main/main_brand2t.png" alt="" />
-                            <p>우리 음식의 고유한 원형을 식탁에 전하는 명인명촌</p>
-                            <button>
-                                자세히보기 <img src="images/icon/icon_all_w.png" alt="" />
-                            </button>
-                        </div>
-                        <div className="img-box">
-                            <img src="/images/main/main_brand3.png" alt="" />
-                            <img src="/images/main/main_brand3t.png" alt="" />
-                            <p>우리 음식의 고유한 원형을 식탁에 전하는 명인명촌</p>
-                            <button>
-                                자세히보기 <img src="images/icon/icon_all_w.png" alt="" />
-                            </button>
-                        </div>
-                        <div className="img-box">
-                            <img src="/images/main/main_brand4.png" alt="" />
-                            <img src="/images/main/main_brand4t.png" alt="" />
-                            <p>우리 음식의 고유한 원형을 식탁에 전하는 명인명촌</p>
-                            <button>
-                                자세히보기 <img src="images/icon/icon_all_w.png" alt="" />
-                            </button>
-                        </div>
+                        {banners.map((banner) => (
+                            <BannerLi key={banner.index} banner={banner} />
+                        ))}
                     </div>
                 </section>
                 <section className="main-dawn-wrap">

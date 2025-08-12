@@ -166,6 +166,8 @@ export const CategoryItemWrap = styled.ul`
         }
         h3 {
             font-size: 18px;
+            word-break: keep-all;
+            white-space: pre-line;
         }
         .price-box {
             text-align: right;

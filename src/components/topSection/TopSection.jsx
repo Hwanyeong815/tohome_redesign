@@ -1,4 +1,3 @@
-import React from 'react';
 import { TitleBox } from './style';
 const TopSection = ({ title, subtitle }) => {
     return (

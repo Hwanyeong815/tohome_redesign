@@ -43,6 +43,31 @@ export const ContentStyle = styled.div`
     }
     .all-btn {
     }
+    .more {
+        &:hover {
+            &::before {
+                transform: translateX(-50%);
+            }
+        }
+        margin-top: 80px;
+        text-align: left;
+        width: 100px;
+        position: relative;
+        background-color: transparent;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0%;
+            top: 0%;
+            background-image: url('images/icon/icon_all.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            transition: 0.3s;
+        }
+    }
 `;
 
 export const ContentUl = styled.ul`

@@ -41,6 +41,7 @@ export const HeaderStyle = styled.header`
                         transition: 0.3s;
                         &.hoverImg {
                             top: 200%;
+                            width: 60%;
                         }
                     }
                 }

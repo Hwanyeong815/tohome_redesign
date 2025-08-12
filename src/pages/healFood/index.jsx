@@ -1,8 +1,17 @@
-// import HealFoodCon from '../../components/healFood/healFoodCon';
-// import HealFoodList from '../../components/healFood/healFoodList';
+import { useEffect } from 'react';
 import { HealFoodStyle } from './style';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const HealFood = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 700,
+            once: true,
+            offset: 80,
+        });
+    }, []);
+
     return (
         <HealFoodStyle>
             <div className="banner">
@@ -15,8 +24,15 @@ const HealFood = () => {
             <div className="inner">
                 <section>
                     <div className="info">
-                        <strong>건강을 생각한 메디쏠라의 맞춤형 식단 추천</strong>
-                        <p>
+                        <strong
+                            data-aos="zoom-in"
+                            data-aos-delay="120"
+                            data-aos-duration="600"
+                            style={{ display: 'inline-block' }}
+                        >
+                            건강을 생각한 메디쏠라의 맞춤형 식단 추천
+                        </strong>
+                        <p data-aos="zoom-in" data-aos-delay="150" data-aos-duration="800">
                             매주 한 번, 메디쏠라의 건강식품으로 건강한 식탁을 차려보세요.
                             <br />
                             당뇨, 암, 신장, 저당 등 맞춤형 식단으로 각자의 건강을 챙기고, 신선한
@@ -27,26 +43,35 @@ const HealFood = () => {
                         </p>
                     </div>
                     <div className="list">
-                        <div className="meal item1">
-                            <img src="images/healfood/healfood01.jpg" alt="당뇨케어 식단" />
+                        <div className="meal item1" data-aos="fade-up" data-aos-duration="500">
+                            <div className="imgs">
+                                <img src="images/healfood/healfood01.jpg" alt="당뇨케어 식단" />
+                            </div>
+
                             <strong>[투홈구독] 메디쏠라 당뇨케어 식단</strong>
                             <span>당뇨환자용 질환의 영양 관리를 위한 맞춤형 영양식단</span>
                             <button>상품보기</button>
                         </div>
-                        <div className="meal item1">
-                            <img src="images/healfood/healfood01.jpg" alt="암케어 식단" />
+                        <div className="meal item1" data-aos="fade-up" data-aos-duration="700">
+                            <div className="imgs">
+                                <img src="images/healfood/healfood02.jpg" alt="암케어 식단" />
+                            </div>
                             <strong>[투홈구독] 메디쏠라 암케어 식단</strong>
                             <span>암환자의 영양 관리를 위한 맞춤형 영양식단</span>
                             <button>상품보기</button>
                         </div>
-                        <div className="meal item1">
-                            <img src="images/healfood/healfood01.jpg" alt="신장케어 식단" />
+                        <div className="meal item1" data-aos="fade-up" data-aos-duration="1200">
+                            <div className="imgs">
+                                <img src="images/healfood/healfood03.jpg" alt="신장케어 식단" />
+                            </div>
                             <strong>[투홈구독] 메디쏠라 신장케어 식단</strong>
                             <span>신장 질환자의 영양 관리를 위한 맞춤형 영양식단</span>
                             <button>상품보기</button>
                         </div>
-                        <div className="meal item1">
-                            <img src="images/healfood/healfood01.jpg" alt="저당관리 식단" />
+                        <div className="meal item1" data-aos="fade-up" data-aos-duration="900">
+                            <div className="imgs">
+                                <img src="images/healfood/healfood04.jpg" alt="저당관리 식단" />
+                            </div>
                             <strong>[투홈구독] 메디쏠라 저당관리 식단</strong>
                             <span>탄:단:지 비율을 고려한 당 걱정없는 저당관리식단</span>
                             <button>상품보기</button>

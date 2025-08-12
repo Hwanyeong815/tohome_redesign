@@ -16,6 +16,7 @@ const SideDishList = () => {
                 <h2>8월 반찬 안내</h2>
             </div>
             <div className="items">
+                {/* 원본 */}
                 <SideDishItem />
                 <SideDishItem />
                 <SideDishItem />
@@ -26,6 +27,7 @@ const SideDishList = () => {
                 <SideDishItem />
                 <SideDishItem />
 
+                {/* 복사본 */}
                 <SideDishItem />
                 <SideDishItem />
                 <SideDishItem />

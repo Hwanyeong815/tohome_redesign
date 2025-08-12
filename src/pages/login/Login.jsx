@@ -1,3 +1,4 @@
+import LoginPage from '../../components/login/LoginPage';
 import { LoginStyle } from './style';
 
 const Login = () => {
@@ -5,6 +6,7 @@ const Login = () => {
         <LoginStyle>
             <div className="inner">
                 <h2>로그인</h2>
+                <LoginPage />
             </div>
         </LoginStyle>
     );

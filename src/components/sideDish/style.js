@@ -4,19 +4,14 @@ export const SideDishListStyle = styled.div`
     width: 1440px;
     height: 500px;
     margin-top: 150px;
+
     .title {
         display: flex;
         justify-content: left;
+        align-items: center;
+        width: 900px;
         margin-bottom: 15px;
-        width: 806px;
-        margin-bottom: 15px;
-
-        h2 {
-            font-size: 25px;
-            color: #333;
-            position: relative;
-            animation: ani2 1s ease-in-out 0s 1 forwards;
-        }
+        animation: ani2 1s ease-in-out 0s 1 forwards;
         @keyframes ani2 {
             0% {
                 transform: translateY(50%);
@@ -27,15 +22,18 @@ export const SideDishListStyle = styled.div`
                 opacity: 1;
             }
         }
+    }
+    h2 {
+        font-size: 25px;
+        color: #333;
         &::after {
             content: '';
             width: 640px;
             height: 1px;
-            background: #000;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            display: inline-block; /* ← 핵심 */
+            background: #333;
             margin-left: 20px;
+            vertical-align: middle;
         }
     }
 
@@ -55,7 +53,6 @@ export const SideDishListStyle = styled.div`
             display: flex;
             justify-content: center;
             text-align: center;
-
             animation: scroll 10s linear infinite;
             @keyframes scroll {
                 0% {

@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 
-import { ContentStyle, ContentUl } from '../style';
+import { ContentStyle } from '../style';
+import { Content4Style } from './style';
 
 const Content4 = () => {
     const { products } = useSelector((state) => state.cart);
@@ -9,8 +10,14 @@ const Content4 = () => {
     // );
     return (
         <ContentStyle>
-            <section>투홈 반찬구독</section>
-            <section>투홈 건강식품구독</section>
+            <Content4Style>
+                <section className="side-dish-wrap">
+                    <h2 className="main-title">투홈 반찬구독</h2>
+                </section>
+                <section className="health-sub-wrap">
+                    <h2 className="main-title">투홈 건강식품구독</h2>
+                </section>
+            </Content4Style>
         </ContentStyle>
     );
 };

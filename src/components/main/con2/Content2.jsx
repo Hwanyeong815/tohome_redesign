@@ -20,9 +20,6 @@ const Content2 = () => {
     return (
         <ContentStyle>
             <MainRecomStyle>
-                <h2 className="main-title">추천상품</h2>
-                {/* <h3 className="sub-title">좋은 한끼를 위한 MD의 작은 제안</h3> */}
-
                 <MainRecom className="mainRecom" />
             </MainRecomStyle>
             <section>

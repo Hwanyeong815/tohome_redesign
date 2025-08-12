@@ -50,11 +50,7 @@ const Content1 = () => {
                         <h3 className="sub-title">
                             현대식품관에서 처음 선보이는 오늘 막 도착한 신상품
                         </h3>
-                        {/* <Slider {...settings2} className="ul">
-                            {newRecom.map((product) => (
-                                <NewProductLi key={product.id} product={product} />
-                            ))}
-                        </Slider> */}
+
                         <MainNewPro newRecom={newRecom} />
                     </section>
                 </MainCon1Style>

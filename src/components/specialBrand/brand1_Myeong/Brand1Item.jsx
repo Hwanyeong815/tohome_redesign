@@ -1,5 +1,5 @@
 const BrandItem = () => {
-    return <div></div>;
+    return <div className="inner"></div>;
 };
 
 export default BrandItem;

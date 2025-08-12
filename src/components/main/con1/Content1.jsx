@@ -10,16 +10,11 @@ import NewProductLi from './NewProductLi';
 import MainNewPro from './MainNewPro';
 
 const settings1 = {
-    dots: false, // 아래 점 네비게이션 여부
-    infinite: false, // 무한 반복 여부
-    speed: 500, // 슬라이드 전환 속도(ms)
-    slidesToShow: 4, // 한번에 보여질 슬라이드 개수
-    slidesToScroll: 1, // 한번에 넘어가는 슬라이드 개수
-};
-const settings2 = {
-    slidesToShow: 1,
-    arrows: false,
-    // ...기타 옵션
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
 };
 
 const Content1 = () => {
@@ -50,11 +45,7 @@ const Content1 = () => {
                         <h3 className="sub-title">
                             현대식품관에서 처음 선보이는 오늘 막 도착한 신상품
                         </h3>
-                        {/* <Slider {...settings2} className="ul">
-                            {newRecom.map((product) => (
-                                <NewProductLi key={product.id} product={product} />
-                            ))}
-                        </Slider> */}
+
                         <MainNewPro newRecom={newRecom} />
                     </section>
                 </MainCon1Style>

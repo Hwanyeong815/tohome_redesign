@@ -64,11 +64,27 @@ export const MainCon1Style = styled.article`
 
         .swiper-slide {
             display: flex;
+            gap: 100px;
             margin-bottom: 95px;
 
             .left {
+                width: 400px;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-image: url('images/main/main_gradient.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 540px;
+                    height: 540px;
+                    left: 190px;
+                    top: 0;
+                    z-index: -1;
+                }
                 text-align: left;
-                padding: 0 145px;
+                /* padding: 0 145px; */
+                margin: auto;
                 strong {
                     font-size: 18px;
                     margin-bottom: 10px;

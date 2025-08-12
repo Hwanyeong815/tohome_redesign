@@ -43,14 +43,14 @@ export const SideDishStyle = styled.div`
                 font-weight: 600;
                 color: #3c6039;
             }
-            p {
-                font-size: 22px;
-                line-height: 150%;
-                font-weight: 500;
-                color: #666666;
-                text-align: center;
-                margin-top: 20px;
-            }
         }
+    }
+    p {
+        font-size: 22px;
+        line-height: 150%;
+        font-weight: 500;
+        color: #666666;
+        text-align: center;
+        margin-top: 20px;
     }
 `;

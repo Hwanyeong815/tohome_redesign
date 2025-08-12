@@ -1,17 +1,12 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-
-const SubscribeLi = ({ product }) => {
-    const { id, name, price, thumbnailImage } = product;
-    const navigate = useNavigate();
-    const onGo = () => {
-        navigate(`product/${id}`);
-    };
+const SubscribeLi = ({ dishes }) => {
+    const { sideId, thumbnail, title, des } = dishes;
     return (
-        <li onClick={onGo}>
-            <img src={thumbnailImage} alt="" />
-            <h2>{name}</h2>
-            <p>{price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</p>
+        <li>
+            <div className="img-wrap">
+                <img src={thumbnail} alt={title} />
+            </div>
+            <h3>{title}</h3>
+            <p>{des}</p>
         </li>
     );
 };

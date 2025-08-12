@@ -1,8 +1,9 @@
 import Cartitem from '../../components/cart/CartItem';
+import CartList from '../../components/cart/CartList';
 import CartOrder from '../../components/cart/CartOrder';
 import CartResult from '../../components/cart/CartResult';
 import CartSide from '../../components/cart/CartSide';
-import { CartWrap } from './style';
+import { CartBottomStyle, CartWrap } from './style';
 
 const Cart = () => {
     return (
@@ -32,11 +33,12 @@ const Cart = () => {
                         <li>브랜드직송 0</li>
                     </ul>
                 </div>
-
-                <Cartitem />
-                <CartOrder />
-                <CartResult />
-                <CartSide />
+                <CartBottomStyle>
+                    {/* <CartList /> */}
+                    <CartOrder />
+                    <CartResult />
+                    <CartSide />
+                </CartBottomStyle>
             </div>
         </CartWrap>
     );

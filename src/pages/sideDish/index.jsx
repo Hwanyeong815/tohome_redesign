@@ -1,7 +1,17 @@
+import { useEffect } from 'react';
 import SideDishList from '../../components/sideDish/SideDishList';
 import { SideDishStyle } from './style';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SideDish = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 700,
+            once: true,
+            offset: 80,
+        });
+    }, []);
     return (
         <SideDishStyle>
             <div className="banner">
@@ -14,8 +24,15 @@ const SideDish = () => {
             <div className="inner">
                 <section>
                     <div className="info">
-                        <strong>반찬 고민 덜어주는 예향의 메뉴 추천</strong>
-                        <p>
+                        <strong
+                            data-aos="zoom-in"
+                            data-aos-delay="120"
+                            data-aos-duration="600"
+                            style={{ display: 'inline-block' }}
+                        >
+                            반찬 고민 덜어주는 예향의 메뉴 추천
+                        </strong>
+                        <p data-aos="zoom-in" data-aos-delay="120" data-aos-duration="800">
                             일주일에 한 번 반찬 고민없이 예향의 반찬으로 근사한 식탁을 차려보세요.
                             <br />
                             반찬 가게가 많지 않던 20년 전, 현대백화점 압구정 본점에 문을 연 예향은

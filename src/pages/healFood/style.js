@@ -70,11 +70,20 @@ export const HealFoodStyle = styled.div`
                 &:nth-child(4) {
                     margin-right: 0;
                 }
-                img {
-                    width: 550;
+                .imgs {
+                    width: 550px;
                     height: 350px;
                     border-radius: 25px;
+                    overflow: hidden;
                     margin-bottom: 30px;
+                    img {
+                        width: 550px;
+                        height: 350px;
+                        transition: transform 0.3s ease;
+                    }
+                }
+                &:hover img {
+                    transform: scale(1.1);
                 }
                 strong {
                     font-size: 20px;

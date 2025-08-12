@@ -15,3 +15,4 @@ export { default as Sale } from './sale';
 export { default as SideDish } from './sideDish';
 export { default as SpecialBrand } from './specialBrand';
 export { default as Support } from './support';
+export { default as Category } from './category';

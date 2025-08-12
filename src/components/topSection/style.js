@@ -6,7 +6,7 @@ export const TitleBox = styled.div`
     text-align: center;
     width: 100%;
     h2 {
-        font-size: 36px;
+        font-size: 36px !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -23,5 +23,6 @@ export const TitleBox = styled.div`
         font-size: 20px;
         font-weight: 500;
         color: #666;
+        white-space: pre-line;
     }
 `;

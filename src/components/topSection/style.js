@@ -6,7 +6,7 @@ export const TitleBox = styled.div`
     text-align: center;
     width: 100%;
     h2 {
-        font-size: 36px;
+        font-size: 36px !important;
         display: flex;
         align-items: center;
         justify-content: center;

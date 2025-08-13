@@ -1,8 +1,77 @@
 import styled from 'styled-components';
 
+export const CartBottomStyle = styled.div`
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+    .countBox {
+        border: 1px solid #000;
+        width: 382px;
+        height: 430px;
+        padding: 80px 20px;
+        box-sizing: border-box;
+        .total {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            span {
+                font-size: 15px;
+                font-weight: 700;
+                color: #666;
+            }
+            .priceT {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+            .discountT {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+            .delivery {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .line {
+            border: 1px solid #3f3f3f;
+            margin-top: 20px;
+        }
+        .cost {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            p {
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+        .order {
+            width: 100%;
+            margin-top: 35px;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                width: 190px;
+                padding: 10px;
+                box-sizing: border-box;
+                background: none;
+                font-size: 15px;
+                font-weight: 700;
+                background: #386633;
+                color: #fff;
+            }
+        }
+    }
+`;
+
 export const CartWrap = styled.div`
     .inner {
-        padding: 100px;
+        padding: 100px 0;
     }
     h2 {
         font-size: 30px;
@@ -12,6 +81,7 @@ export const CartWrap = styled.div`
     }
     .steps {
         display: flex;
+        justify-content: center;
         .box {
             display: flex;
             width: 145px;
@@ -52,13 +122,20 @@ export const CartWrap = styled.div`
     .menu {
         display: flex;
         justify-content: center;
-        
+        margin-top: 45px;
         ul {
             display: flex;
             gap: 20px;
             li {
                 padding: 18px 7px;
-                border: 1px solid #000;
+                color: #2f592b;
+                font-size: 24px;
+                font-weight: 600;
+                color: #b1b1b1;
+                &.on {
+                    border-bottom: 2px solid #2f592b;
+                    color: #2f592b;
+                }
             }
         }
     }

@@ -1,5 +1,15 @@
+import { Box, ItemBox } from './style';
+// import SubBox from './SubBox';
 const Cartitem = () => {
-    return <div>카트아이템</div>;
+    return (
+        <Box>
+            <div className="left">
+                {/* <SubBox />
+                <SubBox />
+                <SubBox /> */}
+            </div>
+        </Box>
+    );
 };
 
 export default Cartitem;

@@ -1,3 +1,4 @@
+import JoinItem from '../../components/login/JoinItem';
 import { JoinStyle } from './style';
 
 const Join = () => {
@@ -5,6 +6,7 @@ const Join = () => {
         <JoinStyle>
             <div className="inner">
                 <h2>회원가입</h2>
+                <JoinItem />
             </div>
         </JoinStyle>
     );

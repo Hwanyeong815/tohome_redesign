@@ -1,17 +1,21 @@
 const HelathArr = [
     {
+        id: 1,
         title: '암케어식단',
         img: 'images/main/healthFood1.png',
     },
     {
+        id: 2,
         title: '신장케어식단',
         img: 'images/main/healthFood2.png',
     },
     {
+        id: 3,
         title: '당뇨케어식단',
         img: 'images/main/healthFood3.png',
     },
     {
+        id: 4,
         title: '저당관리식단',
         img: 'images/main/healthFood4.png',
     },
@@ -30,28 +34,12 @@ const HealthList = () => {
             <ul className="foodtype-wrap">
                 {HelathArr.map((health) => {
                     return (
-                        <li key={health.index}>
+                        <li key={health.id}>
                             <p>{health.title}</p>
                             <img src={health.img} alt={health.title} className="back" />
                         </li>
                     );
                 })}
-                {/* <li>
-                    <p>암케어식단</p>
-                    <img src="images/main/healthFood1.png" alt="healthFood1.png" className="back" />
-                </li>
-                <li>
-                    <p>암케어식단</p>
-                    <img src="images/main/healthFood1.png" alt="healthFood1.png" className="back" />
-                </li>
-                <li>
-                    <p>암케어식단</p>
-                    <img src="images/main/healthFood1.png" alt="healthFood1.png" className="back" />
-                </li>
-                <li>
-                    <p>암케어식단</p>
-                    <img src="images/main/healthFood1.png" alt="healthFood1.png" className="back" />
-                </li> */}
             </ul>
         </div>
     );

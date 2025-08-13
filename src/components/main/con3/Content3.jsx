@@ -6,21 +6,25 @@ import BannerLi from './BannerLi';
 
 const banners = [
     {
+        id: 1,
         img1: '/images/main/main_brand1.png',
         img2: '/images/main/main_brand1t.png',
         p: '우리 음식의 고유한 원형을 식탁에 전하는 명인명촌',
     },
     {
+        id: 2,
         img1: '/images/main/main_brand2.png',
         img2: '/images/main/main_brand2t.png',
         p: '현대백화점 식재료 X 유명 맛집 레시피 집에서 즐기는 프리미엄 가정 간편식',
     },
     {
+        id: 3,
         img1: '/images/main/main_brand3.png',
         img2: '/images/main/main_brand3t.png',
         p: '대를 거듭하며 이어온 헤리티지 현대식품관 본점 브랜드',
     },
     {
+        id: 4,
         img1: '/images/main/main_brand4.png',
         img2: '/images/main/main_brand4t.png',
         p: '오늘의 나와 미래의 아이들이 함께하는 지속가능한 미식 생활',
@@ -61,7 +65,7 @@ const Content3 = () => {
                     </div>
                     <div className="brand-about-banner">
                         {banners.map((banner) => (
-                            <BannerLi key={banner.index} banner={banner} />
+                            <BannerLi key={banner.id} banner={banner} />
                         ))}
                     </div>
                 </section>

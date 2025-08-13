@@ -1,10 +1,6 @@
 import { useSelector } from 'react-redux';
 import SubscribeLi from './SubscribeLi';
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -43,8 +39,8 @@ const SubscribeUl = () => {
                 speed={3000} // 슬라이드가 흘러가는 속도
                 modules={[FreeMode, Autoplay]}
             >
-                {sideDishes.map((dishes, idx) => (
-                    <SwiperSlide key={idx}>
+                {sideDishes.map((dishes) => (
+                    <SwiperSlide key={dishes.sideId}>
                         <SubscribeLi dishes={dishes} />
                     </SwiperSlide>
                 ))}

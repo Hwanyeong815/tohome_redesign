@@ -54,8 +54,15 @@ export const GiftTutorialWrap = styled.div`
     .tutorial-box {
         background-color: #f3f3f3;
         border-radius: 35px;
-        padding: 70px;
-        margin-bottom: 150px;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        transition: height 0.5s ease, opacity 0.5s ease;
+        &.open {
+            opacity: 1;
+            padding: 70px;
+            margin-bottom: 150px;
+        }
         h3 {
             text-align: center;
             font-size: 20px;

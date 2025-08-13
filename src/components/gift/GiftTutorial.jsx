@@ -1,15 +1,44 @@
+import { useRef, useState } from 'react';
 import { GiftTutorialWrap } from './style';
 
 const GiftTutorial = () => {
+    const [open, setOpen] = useState(false);
+    const [height, setHeight] = useState('0px');
+    const tutorialRef = useRef(null);
+    const toggleOpen = () => {
+        if (open) {
+            setHeight(`${tutorialRef.current.scrollHeight}px`);
+            requestAnimationFrame(() => {
+                setHeight('0px');
+            });
+        } else {
+            setHeight(`${tutorialRef.current.scrollHeight}px`);
+        }
+        setOpen(!open);
+    };
     return (
         <GiftTutorialWrap>
             <div className="tutorial-btn">
-                <button>
+                <button onClick={toggleOpen}>
                     선물하기 튜토리얼
                     <img src="/images/gift/about_arrow.png" alt="" />
                 </button>
             </div>
-            <div className="tutorial-box">
+
+            <div
+                ref={tutorialRef}
+                className={`tutorial-box ${open ? 'open' : ''}`}
+                style={{
+                    height,
+                    overflow: 'hidden',
+                    transition: 'height 0.5s ease',
+                }}
+                onTransitionEnd={() => {
+                    if (open) {
+                        setHeight('auto');
+                    }
+                }}
+            >
                 <h3>[투홈으로 마음 전하는 방법]</h3>
                 <ul className="present">
                     <li>
@@ -62,9 +91,9 @@ const GiftTutorial = () => {
                         문의하실 수 있습니다.
                     </p>
                     <p>
-                        선물배송 조회는 [마이페이지>나의활동>받은선물조회]에서
-                        확인하실 수 있습니다.(주문번호, 이름, 휴대폰 번호 입력
-                        필수)
+                        선물배송 조회는
+                        [마이페이지&gt;나의활동&gt;받은선물조회]에서 확인하실 수
+                        있습니다.(주문번호, 이름, 휴대폰 번호 입력 필수)
                     </p>
                 </div>
             </div>

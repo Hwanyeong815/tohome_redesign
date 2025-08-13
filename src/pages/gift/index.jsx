@@ -1,10 +1,10 @@
 import TopSection from '../../components/topSection/TopSection';
-import GiftList from '../../components/gift/GiftList';
 import GiftPoint from '../../components/gift/GiftPoint';
 import GiftTutorial from '../../components/gift/GiftTutorial';
-// import GiftBest from '../../components/gift/giftBest/GiftBest';
-// import GiftPremium from '../../components/gift/giftPremium/GiftPremium';
-import GiftPopular from '../../components/gift/GiftPopular';
+import GiftBest from '../../components/gift/giftBest/GiftBest';
+import GiftPremium from '../../components/gift/giftPremium/GiftPremium';
+import GiftPopular from '../../components/gift/giftPopular/GiftPopular';
+import GiftProduct from '../../components/gift/giftProduct/GiftProduct';
 
 const Gift = () => {
     return (
@@ -18,12 +18,12 @@ const Gift = () => {
                 <GiftPoint />
                 <GiftTutorial />
             </div>
-            {/* <GiftBest /> */}
+            <GiftBest />
             <div className="inner">
-                {/* <GiftPremium />
+                <GiftPremium />
                 <GiftPopular />
-                <GiftList /> */}
             </div>
+            <GiftProduct />
         </>
     );
 };

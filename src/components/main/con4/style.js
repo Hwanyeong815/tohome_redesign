@@ -137,6 +137,7 @@ export const Content4Style = styled.section`
                         p {
                             &::before {
                                 opacity: 1;
+                                top: 0;
                             }
                         }
                     }
@@ -164,11 +165,11 @@ export const Content4Style = styled.section`
                             width: 60px;
                             height: 500px;
                             position: absolute;
-                            top: 0;
+                            top: -100%;
                             left: 50%;
                             transform: translateX(-50%);
                             z-index: -1;
-                            transition: 0.3s;
+                            transition: 0.5s;
                             opacity: 0;
                         }
                     }

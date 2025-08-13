@@ -1,11 +1,12 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { ContentStyle, ContentUl } from '../style';
 import RecipeList from './RecipeList';
 import { Content05Style } from './style';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Content5 = () => {
-    const { products } = useSelector((state) => state.cart);
+    const { products, gift, menus } = useSelector((state) => state.cart);
     const todayRecipe = products.filter((product) =>
         product.tags?.some((tag) => tag.name === '오늘의레시피' && tag.rank <= 5)
     );
@@ -16,7 +17,25 @@ const Content5 = () => {
         navigate('/gift');
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
-    // 테스트111
+
+    const dispatch = useDispatch();
+    const [isChecked, setIsChecked] = useState(false);
+
+    // const handleCheckboxChange = (e) => {
+    //     setIsChecked(e.target.checked);
+
+    //     if (e.target.checked) {
+    //         // 체크되면 장바구니에 아이템 추가
+    //         dispatch(addToCart({ id: 1, name: '예시 재료' }));
+    //     } else {
+    //         // 체크 해제 시 장바구니에서 제거하는 로직도 가능
+    //     }
+    // };
+    const handleAddAll = () => {
+        const allItems = [...products, ...gifts, ...menus];
+        dispatch(cartActions.addMultipleToCart(allItems));
+    };
+
     return (
         <ContentStyle>
             <Content05Style>

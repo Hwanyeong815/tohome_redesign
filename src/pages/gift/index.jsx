@@ -14,6 +14,8 @@ const Gift = () => {
                     title="Gift to Home"
                     subtitle="거리는 멀어도 마음은 가까이,
                 직접 전달하기 어려운 선물은 현대식품관 투홈 선물하기를 이용해보세요."
+                    borderBottom={true}
+                    borderTop={true}
                 />
                 <GiftPoint />
                 <GiftTutorial />

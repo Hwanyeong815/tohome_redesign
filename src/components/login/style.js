@@ -1,141 +1,295 @@
 import styled from 'styled-components';
 
-export const LoginPageStyle = styled.div`
-    width: 1440px;
-    padding: 0 40px;
-    box-sizing: border-box;
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 150px;
-    .left {
-        width: 715px;
-        height: 700px;
-        padding: 0, 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+export const JoinItemStyle = styled.div`
+    .inner {
+        width: 1440px;
+        margin: auto;
         color: #333;
-        > img {
-            width: 200px;
-            margin-top: 20px;
-            margin-bottom: 40px;
-        }
-        span {
-            text-align: center;
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 40px;
-        }
-        .txtbox {
-            width: 450px;
-            height: 60px;
-            padding: 15px 20px;
-            box-sizing: border-box;
-            border: 1px solid #c5c5c5;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            margin-bottom: -1px;
-            i {
-                color: #9e9e9e;
-                font-size: 20px;
-                margin-right: 10px;
-                margin-top: 10px;
-            }
-            input {
-                width: 400px;
-                height: 30px;
-                border: none;
-                outline: none;
-                font-size: 15px;
-                color: #7e7e7e;
-            }
-        }
-        p {
-            margin: 30px 0;
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
-        }
-        .btns {
-            display: flex;
-            gap: 12px;
-            button {
-                width: 160px;
-                height: 35px;
-                border-radius: 5px;
-                color: #fff;
-                background-color: #3c6039;
-                font-size: 15px;
-                font-weight: 600;
-                display: inline-block;
-                text-align: center;
-                &:hover {
-                    border: 2px solid #3c6039;
-                    color: #3c6039;
-                    background-color: #fff;
-                }
-            }
-        }
-        .bottom {
-            .or {
-                width: 450px;
-                height: 50px;
+        .section1 {
+            margin-bottom: 50px;
+            .toptxt {
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                margin: 0 20px;
+                justify-content: space-between;
                 align-items: center;
-                margin-top: 15px;
-                margin-bottom: 55px;
-                p {
-                    width: 60px;
-                    height: 40px;
+                margin-bottom: 18px;
+                span {
                     font-size: 20px;
-                    background-color: #fff;
+                    font-weight: 600;
                 }
-                .line {
-                    display: block;
-                    width: 450px;
-                    height: 2px;
-                    background: #ececec;
-                    margin-top: -50px;
-                    z-index: -1;
+                .sub {
+                    display: flex;
+                    gap: 5px;
+                    justify-content: right;
+                    align-items: center;
+                    p {
+                        font-size: 15px;
+                        &:nth-child(1) {
+                            color: #ff0000;
+                        }
+                    }
                 }
             }
-            .snsbox {
-                width: 450px;
-                height: 120px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                button {
-                    width: 450px;
-                    height: 50px;
-                    background-color: #fff;
-                    border: 1px solid #c5c5c5;
-                    font-size: 18px;
-                    margin-left: 10px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 8px;
-                    img {
-                        width: 23px;
-                        height: 23px;
-                        display: block;
+            .table-wrap colgroup {
+                .w1 {
+                    width: 300px;
+                }
+                .w2 {
+                    width: 1140px;
+                }
+            }
+            .form tbody tr {
+                td {
+                    border: 1px solid #adadad;
+                    vertical-align: top;
+                    padding: 10px 15px;
+                    label {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #333;
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        gap: 5px;
+                        margin-top: 10px;
+                    }
+                    p {
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #ff0000;
+                    }
+                }
+                td input {
+                    width: 700px;
+                    height: 48px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border: 1px solid #d8d8d8;
+                    padding: 0px 15px;
+                    box-sizing: border-box;
+                    outline: none;
+                }
+            }
+            tr {
+                &:nth-child(5) {
+                    td {
+                        &:nth-child(2) {
+                            input {
+                                width: 220px;
+                                margin-right: 10px;
+                            }
+                            select {
+                                margin-left: 10px;
+                                width: 220px;
+                                height: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+            tr {
+                &:nth-child(6) {
+                    td {
+                        &:nth-child(2) {
+                            input {
+                                margin-right: 10px;
+                                width: 100px;
+                            }
+                            select {
+                                margin-right: 10px;
+                                width: 120px;
+                                height: 48px;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
-    .right {
-        img {
-            width: 700px;
-            height: 700px;
+        /* section1 */
+
+        .section2 {
+            .bottomtxt {
+                display: flex;
+                margin: 0 20px;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 18px;
+                span {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+            .table-wrap colgroup {
+                .w1 {
+                    width: 300px;
+                    background-color: #ececec;
+                }
+                .w2 {
+                    width: 1140px;
+                }
+            }
+            .form tbody tr {
+                td {
+                    border: 1px solid #adadad;
+                    vertical-align: top;
+                    padding: 10px 15px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    .gender {
+                        display: flex;
+                        gap: 10px;
+                        p {
+                            button {
+                                font-size: 16px;
+                                font-weight: 500;
+                                width: 90px;
+                                height: 48px;
+                                background: #fff;
+                                color: #7e7e7e;
+                                border: 1px solid #7e7e7e;
+                                &:hover {
+                                    color: #fff;
+                                    background: #666666;
+                                }
+                            }
+                        }
+                    }
+                    label {
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        gap: 5px;
+                        margin-top: 10px;
+                    }
+                }
+                td input {
+                    width: 700px;
+                    height: 48px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border: 1px solid #d8d8d8;
+                    padding: 0px 15px;
+                    box-sizing: border-box;
+                    outline: none;
+                }
+            }
+            .form {
+                tr {
+                    &:nth-child(2) {
+                        td {
+                            &:nth-child(2) {
+                                display: flex;
+                                border-top: none;
+                                border-left: none;
+                                border-bottom: none;
+                                select {
+                                    width: 100px;
+                                    height: 48px;
+                                    margin-right: 5px;
+                                }
+                                span {
+                                    margin-right: 15px;
+                                }
+                                p {
+                                    margin-right: 10px;
+
+                                    button {
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        width: 90px;
+                                        height: 48px;
+                                        background: #fff;
+
+                                        color: #7e7e7e;
+                                        border: 1px solid #7e7e7e;
+                                        &:hover {
+                                            color: #fff;
+                                            background: #666666;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            tr {
+                &:nth-child(3) {
+                    td {
+                        .address {
+                        }
+                        &:nth-child(2) {
+                            input {
+                                width: 500px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
         }
+        details {
+            p {
+                text-align: left;
+            }
+            .agree {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                input[type='checkbox'] {
+                    width: 24px;
+                    height: 24px;
+                    border: 2px solid #b1b1b1;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    background-color: #fff;
+                    transition: all 0.2s;
+                    margin-right: 12px;
+
+                    /* 체크된 상태 */
+                    &:checked {
+                        background-color: #3c6039;
+                        border-color: #3c6039;
+                    }
+
+                    /* 체크된 상태에 체크마크 표시 */
+                    &:checked::after {
+                        content: '✔';
+                        display: block;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: 500;
+                color: #333333;
+                margin-right: 4px;
+            }
+        }
+        .joinbtn p {
+            margin: 60px auto 0px;
+            button {
+                width: 240px;
+                height: 40px;
+                background-color: #3c6039;
+                color: #fff;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 5px;
+                &:hover {
+                    background-color: #fff;
+                    border: 1px solid #3c6039;
+                    color: #3c6039;
+                }
+            }
+        }
+        margin-bottom: 150px;
     }
 `;

@@ -1,7 +1,7 @@
 import { TitleBox } from './style';
-const TopSection = ({ title, subtitle }) => {
+const TopSection = ({ title, subtitle, borderTop, borderBottom }) => {
     return (
-        <TitleBox>
+        <TitleBox borderTop={borderTop} borderBottom={borderBottom}>
             <h2>
                 <img src="/images/directDelivery/icon/title.png" alt="" />
                 {title}

@@ -1,40 +1,25 @@
+import { useSelector } from 'react-redux';
 import { CategoryTopWrap, CategorySub } from './style';
-import { Link } from 'react-router-dom';
 
-const CategoryTop = () => {
+const CategoryTop = ({ categoryID }) => {
+    const categories = useSelector((state) => state.category.categories);
+    const categoryData = categories[categoryID];
+    const title = categoryData?.products[0]?.category.main || '카테고리';
+    const subCategories = categoryData
+        ? [...new Set(categoryData.products.map((p) => p.category.sub))]
+        : [];
     return (
         <>
             <CategoryTopWrap>
                 <h2 className="categoty-title">
                     <img src="/images/category/menu_icon_01.png" alt="" />
-                    과일·채소
+                    {title}
                 </h2>
             </CategoryTopWrap>
             <CategorySub>
-                <li>
-                    <Link to="/">전체보기</Link>
-                </li>
-                <li>
-                    <Link to="/">계절 과일</Link>
-                </li>
-                <li>
-                    <Link to="/">일상 채소</Link>
-                </li>
-                <li>
-                    <Link to="/">버섯·나물·두부</Link>
-                </li>
-                <li>
-                    <Link to="/">샐러드·쌈채소</Link>
-                </li>
-                <li>
-                    <Link to="/">냉동·간편·건과일</Link>
-                </li>
-                <li>
-                    <Link to="/">H·SWEET·약속농장</Link>
-                </li>
-                <li>
-                    <Link to="/">산들내음</Link>
-                </li>
+                {subCategories.map((sub, idx) => (
+                    <li key={idx}>{sub}</li>
+                ))}
             </CategorySub>
         </>
     );

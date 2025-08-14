@@ -1,39 +1,12 @@
-// Checkbox.jsx
-import React from 'react';
+import { CheckboxStyle } from './style';
 
-const Checkbox = ({ checked, onChange, label, disabled }) => {
+const Checkbox = ({ checked, onChange, disabled }) => {
     return (
-        <label>
+        <CheckboxStyle>
             <input type="checkbox" checked={checked} onChange={onChange} disabled={disabled} />
-            {label && <span>{label}</span>}
-        </label>
+            <span className="custom-check" />
+        </CheckboxStyle>
     );
 };
 
 export default Checkbox;
-// 수정필요
-
-/*// App.jsx
-import React, { useState } from 'react';
-import Checkbox from './Checkbox';
-
-const App = () => {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = (e) => {
-    setIsChecked(e.target.checked);
-  };
-
-  return (
-    <div>
-      <Checkbox
-        checked={isChecked}
-        onChange={handleCheckboxChange}
-        label="동의합니다"
-      />
-    </div>
-  );
-};
-
-export default App;
-*/

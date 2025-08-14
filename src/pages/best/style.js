@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 export const BestWrap = styled.div`
     .inner {
-        padding: 100px;
     }
     h2 {
-        font-size: 30px;
     }
     p {
         text-align: center;
+    }
+    .top-line {
+        border: 1px solid #000;
     }
 `;

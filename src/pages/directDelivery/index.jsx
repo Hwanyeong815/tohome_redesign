@@ -13,10 +13,16 @@ const DirectDelivery = () => {
                     </h2>
                     <p>누군가의 손끝에서 시작된 정성이, 당신의 식탁 위에 도착합니다.</p>
                 </div> */}
+
                 <TopSection
                     title="브랜드직송관"
                     subtitle="누군가의 손끝에서 시작된 정성이, 당신의 식탁 위에 도착합니다."
+                    borderBottom={true}
+                    borderTop={true}
                 />
+
+                <TopSection title="브랜드직송관" subtitle="psdfsdfsdf" />
+
                 <div className="banner">
                     <div className="left">
                         <div className="points">

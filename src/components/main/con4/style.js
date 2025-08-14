@@ -15,9 +15,9 @@ export const Content4Style = styled.section`
             .main-title {
                 margin-top: 70px;
             }
+
             .txts {
                 padding-left: 240px;
-                /* background-color: azure; */
                 width: 590px;
                 height: 100%;
                 > p {
@@ -109,7 +109,18 @@ export const Content4Style = styled.section`
             .main-title {
                 margin-top: 70px;
             }
-
+            .logo_sub {
+                margin: 70px auto 35px;
+                width: 410px;
+                img {
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+            }
+            .sub-title {
+                margin-top: 0;
+                margin-bottom: 70px;
+            }
             .foodtype-wrap {
                 display: flex;
                 width: 100%;
@@ -126,6 +137,7 @@ export const Content4Style = styled.section`
                         p {
                             &::before {
                                 opacity: 1;
+                                top: 0;
                             }
                         }
                     }
@@ -153,11 +165,11 @@ export const Content4Style = styled.section`
                             width: 60px;
                             height: 500px;
                             position: absolute;
-                            top: 0;
+                            top: -100%;
                             left: 50%;
                             transform: translateX(-50%);
                             z-index: -1;
-                            transition: 0.3s;
+                            transition: 0.5s;
                             opacity: 0;
                         }
                     }

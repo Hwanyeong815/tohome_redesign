@@ -371,7 +371,7 @@ export default [
         name: '[경복궁BLACK] \n꼬리곰탕 600g (냉동)',
         price: 11200,
         discountedPrice: 8400,
-        isDiscounted: ture,
+        isDiscounted: true,
         discountRate: 25,
         pricePerUnit: '100g당 1,400원',
         thumbnailImage: '/images/gift/25.jpg',

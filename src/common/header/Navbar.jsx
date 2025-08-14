@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { NavStyle, SearchWrap, TopMenu } from './style';
 import FloatingMenu from '../../components/floatingItem/FloatingMenu';
 import { useState } from 'react';
+import { RiShoppingCartLine } from 'react-icons/ri';
+import { GoSearch } from 'react-icons/go';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,10 +43,10 @@ const Navbar = () => {
             </TopMenu>
             <SearchWrap>
                 <div className="search">
-                    <img src="images/icon/icon_search.png" alt="돋보기" />
+                    <GoSearch className="search-item" />
                 </div>
-                <Link to="/cart">
-                    <img src="images/icon/icon_cart.png" alt="쇼핑카트" />
+                <Link to="/cart" className="cart">
+                    <RiShoppingCartLine /> <span>0</span>
                 </Link>
             </SearchWrap>
             <NavStyle className="nav" isOpen={isOpen}>

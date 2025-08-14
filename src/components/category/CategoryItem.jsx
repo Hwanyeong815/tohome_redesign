@@ -1,10 +1,18 @@
 import { BsCart2, BsSuitHeart } from 'react-icons/bs';
 
-const CategoryItem = () => {
+const CategoryItem = ({ product }) => {
+    const {
+        thumbnailImage,
+        name,
+        price,
+        discountedPrice,
+        isDiscounted,
+        discountRate,
+    } = product;
     return (
         <li>
             <div className="img-wrap">
-                <img src="/images/menu01/01.jpg" alt="" />
+                <img src={thumbnailImage} alt={name} />
                 <div className="overlay">
                     <button className="icon-btn">
                         <BsSuitHeart />
@@ -14,15 +22,14 @@ const CategoryItem = () => {
                     </button>
                 </div>
             </div>
-            <h3>
-                [새벽시장]
-                <br />
-                부사 사과 4입 1.1kg
-            </h3>
+            <h3>{name}</h3>
             <div className="price-box">
-                <p className="discount">41,220원</p>
+                {isDiscounted && (
+                    <p className="discount">{discountedPrice}원</p>
+                )}
                 <p className="price">
-                    <span>10%</span>45,800원
+                    {isDiscounted && <span>{discountRate}%</span>}
+                    {price}원
                 </p>
             </div>
         </li>

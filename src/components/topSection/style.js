@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const TitleBox = styled.div`
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: ${(props) => (props.borderTop ? '1px solid #000' : 'none')};
+    border-bottom: ${(props) => (props.borderBottom ? '1px solid #000' : 'none')};
     padding: 75px 0;
     text-align: center;
     width: 100%;
@@ -23,5 +23,6 @@ export const TitleBox = styled.div`
         font-size: 20px;
         font-weight: 500;
         color: #666;
+        white-space: pre-line;
     }
 `;

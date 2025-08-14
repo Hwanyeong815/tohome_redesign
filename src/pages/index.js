@@ -1,5 +1,5 @@
 export { default as About } from './about';
-export { default as Best } from './best/Best';
+export { default as Best } from './best';
 export { default as Cart } from './cart';
 export { default as DawnDelivery } from './dawnDelivery';
 export { default as DirectDelivery } from './directDelivery';

@@ -184,11 +184,30 @@ export const SearchWrap = styled.ul`
         &:hover {
             width: 300px;
         }
+        &-item,
         img {
+            font-size: 25px;
             position: absolute;
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
+        }
+    }
+    .cart {
+        font-size: 25px;
+        position: relative;
+        span {
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            width: 24px;
+            height: 24px;
+            background-color: #f3829e;
+            border-radius: 50px;
+            line-height: 24px;
+            text-align: center;
+            color: white;
+            font-size: 17px;
         }
     }
 `;

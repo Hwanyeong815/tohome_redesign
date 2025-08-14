@@ -2,35 +2,30 @@ import CategoryItem from './CategoryItem';
 import { CategoryListWrap, CategoryItemWrap } from './style';
 import { Link } from 'react-router-dom';
 
-const CategoryList = () => {
+const CategoryList = ({ products }) => {
     return (
         <CategoryListWrap>
             <div>
                 <ul className="category-sort">
                     <li>
-                        <Link to="/">전체보기</Link>
+                        <Link to="/">판매량순</Link>
                     </li>
                     <li>
-                        <Link to="/">계절 과일</Link>
+                        <Link to="/">신상품순</Link>
                     </li>
                     <li>
-                        <Link to="/">일상 채소</Link>
+                        <Link to="/">높은가격순</Link>
                     </li>
                     <li>
-                        <Link to="/">버섯·나물·두부</Link>
+                        <Link to="/">낮은가격순</Link>
                     </li>
                 </ul>
             </div>
             <div className="category-item-wrap">
                 <CategoryItemWrap>
-                    <CategoryItem />
-                    <CategoryItem />
-                    <CategoryItem />
-                    <CategoryItem />
-                    <CategoryItem />
-                    <CategoryItem />
-                    <CategoryItem />
-                    <CategoryItem />
+                    {products.map((item) => (
+                        <CategoryItem key={item.id} product={item} />
+                    ))}
                 </CategoryItemWrap>
             </div>
         </CategoryListWrap>

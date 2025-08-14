@@ -1,7 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { ProductDetailDiv } from './style';
+import { ProductDetailStyle } from './style';
+import DetailSide from './productDetail/DetailSide';
+import DetailTab from './productDetail/DetailTab';
+import DetailArt from './productDetail/DetailArt';
 
 const ProductDetail = () => {
     const { productID } = useParams();
@@ -40,23 +43,13 @@ const ProductDetail = () => {
     } = obj;
 
     return (
-        <ProductDetailDiv>
-            상세페이지
-            <img src={thumbnailImage} alt={name} />
-            <h2>
-                {name}
-                {des}
-            </h2>
-            <h3>{pricePerUnit}</h3>
-            <h3>{price}</h3>
-            {/* 신상품, 베스트 메뉴 태그일 경우 버튼 생성 */}
-            <p>
-                {id}
-                {origin}
-            </p>
-            <div>할인율 : {discountRate}%</div>
-            {packagingType}
-        </ProductDetailDiv>
+        <ProductDetailStyle>
+            <DetailSide products={products} />
+            <section>
+                <DetailTab />
+                <DetailArt />
+            </section>
+        </ProductDetailStyle>
     );
 };
 

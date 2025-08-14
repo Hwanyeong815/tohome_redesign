@@ -80,6 +80,7 @@ export const ProductItemStyle = styled.li`
     }
 `;
 
-export const ProductDetailDiv = styled.div`
-    background-color: pink;
+export const ProductDetailStyle = styled.div`
+    padding: 60px 20px;
+    display: flex;
 `;

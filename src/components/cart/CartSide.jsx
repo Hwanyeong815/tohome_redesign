@@ -20,8 +20,14 @@ const CartSide = () => {
                 <p>총 배송비</p>
                 <p>00,000원</p>
             </div>
-            <div className="order">
-                <button>주문하기</button>
+            <div className="buttons">
+                {/* <div className="CartListB">
+                    <button>주문하기</button>
+                </div> */}
+                <div className="CartOrderB">
+                    <button>결제하기</button>
+                    <button>취소하기</button>
+                </div>
             </div>
         </div>
     );

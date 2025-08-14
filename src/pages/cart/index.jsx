@@ -38,9 +38,9 @@ const Cart = () => {
 
                 <CartBottomStyle>
                     {/* <CartList /> */}
-                    {/* <CartOrder /> */}
-                    <CartResult />
-                    {/* <CartSide /> */}
+                    <CartOrder />
+                    {/* <CartResult /> */} 
+                    <CartSide />
                 </CartBottomStyle>
             </div>
         </CartWrap>

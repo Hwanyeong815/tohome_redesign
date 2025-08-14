@@ -21,8 +21,6 @@ const DirectDelivery = () => {
                     borderTop={true}
                 />
 
-                <TopSection title="브랜드직송관" subtitle="psdfsdfsdf" />
-
                 <div className="banner">
                     <div className="left">
                         <div className="points">

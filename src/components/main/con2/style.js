@@ -38,14 +38,23 @@ export const MainRecomStyle = styled.div`
             }
         }
         h3 {
-            position: relative;
-        }
-        .timer {
+            height: 100px;
+            width: 100%;
             position: absolute;
-            left: 0;
-            border: 1px solid #000;
-            bottom: -25px;
+            .timer {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: absolute;
+                left: 50%;
+                font-weight: 700;
+                transform: translate(-50%, -50%);
+                color: #333;
+                bottom: -25px;
+                font-size: 35px;
+            }
         }
+
         section {
             user-select: none;
             display: flex;

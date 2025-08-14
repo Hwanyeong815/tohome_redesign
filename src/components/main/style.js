@@ -68,6 +68,27 @@ export const ContentStyle = styled.div`
             transition: 0.3s;
         }
     }
+    .price-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 50px;
+        font-size: 17px;
+        font-weight: 600;
+        .original-price {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 15px;
+        }
+        .discounted-price {
+            font-size: 17px;
+            .dis-rate {
+                font-size: 15px;
+                margin-right: 10px;
+                color: #ff7259;
+            }
+        }
+    }
 `;
 
 export const ContentUl = styled.ul`
@@ -123,27 +144,6 @@ export const ContentUl = styled.ul`
         }
         p {
             text-align: right;
-        }
-        .price-wrap {
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            height: 50px;
-            font-size: 17px;
-            font-weight: 600;
-            .original-price {
-                color: #888;
-                text-decoration: line-through;
-                font-size: 15px;
-            }
-            .discounted-price {
-                font-size: 17px;
-                .dis-rate {
-                    font-size: 15px;
-                    margin-right: 10px;
-                    color: #ff7259;
-                }
-            }
         }
     }
 `;

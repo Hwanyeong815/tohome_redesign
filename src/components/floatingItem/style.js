@@ -4,11 +4,12 @@ export const FloatingBtnStyle = styled.div`
     z-index: 100;
 
     position: fixed;
-    top: 250px;
-    right: 60px;
-    width: 80px;
-    /* height: 300px; */
-    /* border: 1px solid #000; */
+    /* top: 250px; */
+    top: 13vw;
+    right: 3.1vw;
+    /* width: 80px; */
+    width: 4vw;
+
     div {
         background-color: white;
         height: 150px;

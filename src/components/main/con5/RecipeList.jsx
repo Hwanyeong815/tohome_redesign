@@ -19,7 +19,7 @@ const RecipeList = ({ product }) => {
         // <li onClick={onGo}>
         <li>
             <div className="img-box">
-                <Checkbox checked={isChecked} onChange={handleCheckboxChange} />
+                <Checkbox checked={isChecked} onChange={handleCheckboxChange} htmlFor="recipe" />
                 <img src={thumbnailImage} alt="" />
                 <div className="overlay">
                     <button className="icon-btn">

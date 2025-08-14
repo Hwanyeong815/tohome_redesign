@@ -13,16 +13,16 @@ const JoinItem = () => {
                         </div>
                     </div>
 
-                    <form action="#" method="post" name="form" class="form">
-                        <table class="table-wrap">
+                    <form action="#" method="post" name="form" className="form">
+                        <table className="table-wrap">
                             <colgroup>
-                                <col class="w1" />
-                                <col class="w2" />
+                                <col className="w1" />
+                                <col className="w2" />
                             </colgroup>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <label for="userid">
+                                        <label htmlFor="userid">
                                             아이디 <p>*</p>
                                         </label>
                                     </td>
@@ -39,7 +39,7 @@ const JoinItem = () => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="userpassword">
+                                        <label htmlFor="userpassword">
                                             비밀번호 <p>*</p>
                                         </label>
                                     </td>
@@ -56,7 +56,7 @@ const JoinItem = () => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="userpassword2">
+                                        <label htmlFor="userpassword2">
                                             비밀번호 확인 <p>*</p>
                                         </label>
                                     </td>
@@ -73,7 +73,7 @@ const JoinItem = () => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="username">
+                                        <label htmlFor="username">
                                             이름 <p>*</p>
                                         </label>
                                     </td>
@@ -81,7 +81,7 @@ const JoinItem = () => {
                                         <input
                                             type=""
                                             name="username"
-                                            id="username"
+                                            id="username1"
                                             placeholder="ex) 이지은"
                                             title="이름을 입력하세요"
                                             required
@@ -90,7 +90,7 @@ const JoinItem = () => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="email">
+                                        <label htmlFor="email">
                                             이메일 <p>*</p>
                                         </label>
                                     </td>
@@ -98,7 +98,7 @@ const JoinItem = () => {
                                         <input
                                             type=""
                                             name="email"
-                                            id="email"
+                                            id="email1"
                                             placeholder="ex)rere0811@google.com"
                                             title="이메일을 입력하세요"
                                             required
@@ -106,8 +106,8 @@ const JoinItem = () => {
                                         @
                                         <select
                                             name="email"
-                                            id="email"
-                                            class="400"
+                                            id="email2"
+                                            className="400"
                                             title="주소를 선택하세요"
                                         >
                                             <option value="">========= 선 택 =========</option>
@@ -121,7 +121,7 @@ const JoinItem = () => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="phonenumber">
+                                        <label htmlFor="phonenumber">
                                             전화번호 <p>*</p>
                                         </label>
                                     </td>
@@ -129,7 +129,7 @@ const JoinItem = () => {
                                         <select
                                             name="phonenumber"
                                             id="phonenumber"
-                                            class="400"
+                                            className="400"
                                             title="번호를 선택하세요"
                                         >
                                             <option value="">==== 선 택 ====</option>
@@ -155,16 +155,16 @@ const JoinItem = () => {
                                         </select>
                                         <input
                                             type=""
-                                            name="email"
-                                            id="email"
+                                            name="phone"
+                                            id="phone1"
                                             placeholder="ex)1234"
                                             title="번호를 입력하세요"
                                             required
                                         />
                                         <input
                                             type=""
-                                            name="email"
-                                            id="email"
+                                            name="phone"
+                                            id="phone2"
                                             placeholder="ex)5678"
                                             title="번호를 입력하세요"
                                             required
@@ -180,16 +180,16 @@ const JoinItem = () => {
                     <div className="bottomtxt">
                         <span>추가정보</span>
                     </div>
-                    <form action="#" method="post" name="form" class="form">
-                        <table class="table-wrap">
+                    <form action="#" method="post" name="form" className="form">
+                        <table className="table-wrap">
                             <colgroup>
-                                <col class="w1" />
-                                <col class="w2" />
+                                <col className="w1" />
+                                <col className="w2" />
                             </colgroup>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <label for="address">성별</label>
+                                        <label htmlFor="address">성별</label>
                                     </td>
                                     <td>
                                         <div className="gender">
@@ -204,11 +204,16 @@ const JoinItem = () => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="address">생년월일</label>
+                                        <label htmlFor="address">생년월일</label>
                                     </td>
                                     <td>
                                         <div className="birthday">
-                                            <select name="month" id="month" class="200" title="월">
+                                            <select
+                                                name="month"
+                                                id="month1"
+                                                className="200"
+                                                title="월"
+                                            >
                                                 <option value="">년</option>
                                                 <option value="1">2025</option>
                                                 <option value="2">2024</option>
@@ -259,7 +264,12 @@ const JoinItem = () => {
                                             </select>
                                             <span>년</span>
 
-                                            <select name="month" id="month" class="200" title="월">
+                                            <select
+                                                name="month"
+                                                id="month2"
+                                                className="200"
+                                                title="월"
+                                            >
                                                 <option value="">월</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -275,7 +285,12 @@ const JoinItem = () => {
                                                 <option value="12">12</option>
                                             </select>
                                             <span>월</span>
-                                            <select name="date" id="date" class="200" title="일">
+                                            <select
+                                                name="date"
+                                                id="date"
+                                                className="200"
+                                                title="일"
+                                            >
                                                 <option value="">일</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -321,13 +336,13 @@ const JoinItem = () => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="address">주소</label>
+                                        <label htmlFor="address">주소</label>
                                     </td>
                                     <td>
                                         <input
                                             type=""
                                             name="email"
-                                            id="email"
+                                            id="addr1"
                                             placeholder="ex)서울시 강남구 삼성동 "
                                             title="주소를 입력하세요"
                                             required
@@ -335,7 +350,7 @@ const JoinItem = () => {
                                         <input
                                             type=""
                                             name="email"
-                                            id="email"
+                                            id="addr2"
                                             placeholder=" 상세주소를 입력하세요   ex)123-4번길 1층 "
                                             title="상세주소를 입력하세요"
                                             required
@@ -344,15 +359,15 @@ const JoinItem = () => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="recommendid">추천인 아이디</label>
+                                        <label htmlFor="recommendid">추천인 아이디</label>
                                     </td>
                                     <td>
                                         <input
                                             type="text"
                                             placeholder="추천인 아이디를 입력하세요   ex)ezen1234"
                                             name="username"
-                                            id="username"
-                                            class="w410"
+                                            id="username2"
+                                            className="w410"
                                             title="추천인 아이디를 입력하세요"
                                             required
                                         />

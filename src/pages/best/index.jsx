@@ -8,7 +8,15 @@ const Best = () => {
     const { products, menus, gifts, specials } = useSelector((state) => state.cart);
     const AllMenus = [...products, ...menus, ...gifts, ...specials];
 
-    const bestUl = AllMenus.filter((product) => product.tags?.some((tag) => tag.name === '베스트'));
+    // const brandDelivery = AllMenus.filter(
+    //     (product) => product.details?.deliveryType === '브랜드직송'
+    // );
+
+    const brandDelivery = AllMenus.filter(
+        (product) => product.details?.deliveryType === '브랜드직송'
+    ).slice(0, 40); // 처음 40개만
+
+    // const bestUl = AllMenus.filter((product) => product.tags?.some((tag) => tag.name === '베스트'));
 
     return (
         <BestWrap>
@@ -21,7 +29,7 @@ const Best = () => {
                     subtitle={'현대식품관 투홈의 인기 상품을 만나보세요'}
                 />
 
-                <ProductList products={bestUl} />
+                <ProductList products={brandDelivery} />
                 {/* <BestList products={bestUl} /> */}
             </div>
         </BestWrap>

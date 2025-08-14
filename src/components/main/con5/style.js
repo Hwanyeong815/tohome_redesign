@@ -137,9 +137,10 @@ export const Content05Style = styled.div`
                 position: relative;
                 .img-wrap {
                     width: 250px;
-                    height: 306px;
+                    /* height: 306px; */
                     img {
                         width: 100%;
+                        opacity: 0;
                     }
                 }
             }

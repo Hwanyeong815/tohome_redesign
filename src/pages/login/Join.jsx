@@ -9,10 +9,10 @@ const Join = () => {
                 <h2>회원가입</h2>
                 <JoinItem />
                 <JoinInfo />
-                <div className="joinbtn">
-                    <p>
-                        <button type="submit">가입하기</button>
-                    </p>
+                <div className="btn-wrap">
+                    <button className="join-btn" type="submit">
+                        가입하기
+                    </button>
                 </div>
             </div>
         </JoinStyle>

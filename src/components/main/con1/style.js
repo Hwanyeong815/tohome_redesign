@@ -64,12 +64,12 @@ export const MainCon1Style = styled.article`
 
         .swiper-slide {
             display: flex;
-            gap: 100px;
+
             margin-bottom: 95px;
 
             .left {
-                width: 400px;
                 position: relative;
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -83,7 +83,6 @@ export const MainCon1Style = styled.article`
                     z-index: -1;
                 }
                 text-align: left;
-                /* padding: 0 145px; */
                 margin: auto;
                 strong {
                     font-size: 18px;
@@ -100,7 +99,7 @@ export const MainCon1Style = styled.article`
                 }
                 p {
                     text-align: left;
-                    white-space: pre-line;
+
                     font-size: 22px;
                 }
             }

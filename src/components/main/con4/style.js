@@ -104,6 +104,7 @@ export const Content4Style = styled.section`
 
     .health-sub {
         &-wrap {
+            cursor: pointer;
             margin-top: 50px;
 
             .main-title {

@@ -51,11 +51,17 @@ const MainRecom = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <img className="back" src="/images/main/mainRecom2.png" alt="" />
-                    <h3 className="sub-title">오늘 이 시간, 더 가볍게 만나는 건강 간식</h3>
+                    <h3 className="sub-title">
+                        오늘 이 시간, 더 가볍게 만나는 건강 간식
+                        <span className="timer">03 : 05 : 47</span>
+                    </h3>
+
                     <section>
                         <div className="left">
                             <strong>오늘의 타임특가</strong>
+
                             <h2>[modoo] 모두의 데일리 서리태 볶음콩 (33입/박스)</h2>
+
                             <div className="txt">
                                 <p>건강한 간식으로 사랑받는 서리태 볶음콩 선물세트를</p>
                                 <p>오늘 하루, 특별한 가격에 준비했어요.</p>

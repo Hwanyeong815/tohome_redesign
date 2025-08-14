@@ -22,9 +22,30 @@ export const MainRecomStyle = styled.div`
         display: flex;
         flex-direction: column;
         /* margin-top: 70px; */
+        height: 900px;
+        box-sizing: border-box;
         padding-top: 265px;
         margin-bottom: 95px;
         position: relative;
+
+        &:hover {
+            .right {
+                .img-box {
+                    img {
+                        width: 120%;
+                    }
+                }
+            }
+        }
+        h3 {
+            position: relative;
+        }
+        .timer {
+            position: absolute;
+            left: 0;
+            border: 1px solid #000;
+            bottom: -25px;
+        }
         section {
             user-select: none;
             display: flex;
@@ -83,8 +104,15 @@ export const MainRecomStyle = styled.div`
                 .img-box {
                     width: 870px;
                     height: 470px;
+                    position: relative;
+                    overflow: hidden;
                     img {
                         width: 100%;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: 0.8s;
                     }
                 }
                 .txts {
@@ -111,6 +139,7 @@ export const MainRecomStyle = styled.div`
             z-index: -1;
             opacity: 20%;
             background-color: white;
+            filter: blur(3px);
         }
     }
     .swiper-pagination {

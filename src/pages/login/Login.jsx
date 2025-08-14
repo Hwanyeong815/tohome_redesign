@@ -1,8 +1,10 @@
 import { LoginStyle } from './style';
 import { FaUser } from 'react-icons/fa6';
 import { RiLockPasswordLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
     return (
         <LoginStyle>
             <div className="inner">
@@ -30,7 +32,7 @@ const Login = () => {
                         <p>비회원 주문 조회 / 아이디·비밀번호 찾기</p>
                         <div className="btns">
                             <button>로그인</button>
-                            <button>회원가입</button>
+                            <button onClick={() => navigate('/join')}>회원가입</button>
                         </div>
 
                         <div className="bottom">

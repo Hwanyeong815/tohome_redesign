@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ProductStyle = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    gap: 0;
+    justify-content: space-between;
     .inner {
     }
     h2 {

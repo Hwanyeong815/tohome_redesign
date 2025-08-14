@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import Cartitem from '../../components/cart/CartItem';
 import CartList from '../../components/cart/CartList';
 import CartOrder from '../../components/cart/CartOrder';
@@ -25,6 +26,7 @@ const Cart = () => {
                         <span className="txt">결제하기</span>
                     </div>
                 </div>
+
                 <div className="menu">
                     <ul>
                         <li>새벽배송</li>
@@ -33,11 +35,12 @@ const Cart = () => {
                         <li>브랜드직송 0</li>
                     </ul>
                 </div>
+
                 <CartBottomStyle>
                     {/* <CartList /> */}
-                    <CartOrder />
+                    {/* <CartOrder /> */}
                     <CartResult />
-                    <CartSide />
+                    {/* <CartSide /> */}
                 </CartBottomStyle>
             </div>
         </CartWrap>

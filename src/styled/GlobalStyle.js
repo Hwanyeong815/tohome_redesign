@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     line-height: 1.6;
     color:#333;
+    overflow-x: hidden;
   }
   a, button {
     text-decoration: none;

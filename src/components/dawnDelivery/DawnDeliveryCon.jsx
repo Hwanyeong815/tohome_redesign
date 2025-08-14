@@ -99,10 +99,10 @@ const DawnDeliveryCon = () => {
       </Con2Style>
       <Con3Style>
         <h2>투홈 패키지 안내</h2>
-        <div className="box">
-          <div className="top">
+        <div className="wholeBox">
+          <div className="box top">
             <img src="./images/dawnDelivery/con3/img1.png" alt="img1" />
-            <div className="box1">
+            <div className="txtBox">
               <p>투홈백</p>
               <span className="title">
                 보냉백은 한 번 구매하면 계속 사용할 수 있으며,
@@ -129,57 +129,51 @@ const DawnDeliveryCon = () => {
               </div>
             </div>
           </div>
-          <div className="middle">
-            <div className="box1">
-              <p>회수용 보냉백</p>
-              <span>
-                투홈백을 깜빡했나요? <br /> 회수용 보냉백이 대신합니다
-              </span>
-              <div className="text">
-                <img src="./images/dawnDelivery/con2/check.png" alt="check" />
+          <div className="box middle">
+            <div className="box">
+              <div className="txtBox">
+                <p>회수용 보냉백</p>
                 <span>
-                  투홈백 없이도, 냉기를 오래 유지하는 회수용 보냉백으로 신선하게
-                  받아보세요.
+                  투홈백을 깜빡했나요? <br /> 회수용 보냉백이 대신합니다
                 </span>
-              </div>
-              <div className="text">
-                <img src="./images/dawnDelivery/con2/check.png" alt="check" />
-                <span>
-                  다음 주문 때 문 앞에 꺼내두면 현대식품관이 직접 회수해요.
-                </span>
-              </div>
-              <div className="text">
-                <img src="./images/dawnDelivery/con2/check.png" alt="check" />
-                <span>일회용 포장 없이 더 친환경적으로 사용할 수 있어요.</span>
+                <div className="text">
+                  <img src="./images/dawnDelivery/con2/check.png" alt="check" />
+                  <span>
+                    투홈백 없이도, 냉기를 오래 유지하는 회수용 보냉백으로
+                    신선하게 받아보세요.
+                  </span>
+                </div>
+                <div className="text">
+                  <img src="./images/dawnDelivery/con2/check.png" alt="check" />
+                  <span>
+                    다음 주문 때 문 앞에 꺼내두면 현대식품관이 직접 회수해요.
+                  </span>
+                </div>
+                <div className="text">
+                  <img src="./images/dawnDelivery/con2/check.png" alt="check" />
+                  <span>
+                    일회용 포장 없이 더 친환경적으로 사용할 수 있어요.
+                  </span>
+                </div>
               </div>
             </div>
             <img src="./images/dawnDelivery/con3/img2.png" alt="img2" />
           </div>
-          <div className="bottom">
+          <div className="box bottom">
             <img src="./images/dawnDelivery/con3/img3.png" alt="img3" />
-            <div className="box1">
-              <p>투홈백</p>
+            <div className="txtBox">
+              <p>투홈 박스</p>
               <span>
-                보냉백은 한 번 구매하면 계속 사용할 수 있으며, <br />
-                새벽배송 시 현관 앞에 두면 신선식품을 담아드립니다.
+                투홈백 없이도 모든 상품을 신선하게 종이 박스로 배송하며, <br />
+                분리 포장보다 불필요한 부자재가 확연히 줄어요.
               </span>
               <div className="text">
                 <img src="./images/dawnDelivery/con2/check.png" alt="check" />
-                <span>안감까지 보냉처리해 신선해요</span>
+                <span>비교적 쓰레기가 적게 나와요</span>
               </div>
               <div className="text">
                 <img src="./images/dawnDelivery/con2/check.png" alt="check" />
-                <span>폐 페트병을 재활용한 친환경 소재로 제작했어요</span>
-              </div>
-              <div className="text">
-                <img src="./images/dawnDelivery/con2/check.png" alt="check" />
-                <span>접어서 보관이 가능해요</span>
-              </div>
-              <div className="text">
-                <img src="./images/dawnDelivery/con2/check.png" alt="check" />
-                <span>
-                  종이박스 등 불필요한 포장재를 분리수거 할 필요가 없어요
-                </span>
+                <span>재활용이 쉬운 부자재를 함께 담았어요</span>
               </div>
             </div>
           </div>

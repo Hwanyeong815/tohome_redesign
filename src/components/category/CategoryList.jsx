@@ -7,18 +7,10 @@ const CategoryList = ({ products }) => {
         <CategoryListWrap>
             <div>
                 <ul className="category-sort">
-                    <li>
-                        <Link to="/">판매량순</Link>
-                    </li>
-                    <li>
-                        <Link to="/">신상품순</Link>
-                    </li>
-                    <li>
-                        <Link to="/">높은가격순</Link>
-                    </li>
-                    <li>
-                        <Link to="/">낮은가격순</Link>
-                    </li>
+                    <li>판매량순</li>
+                    <li>신상품순</li>
+                    <li>높은가격순</li>
+                    <li>낮은가격순</li>
                 </ul>
             </div>
             <div className="category-item-wrap">

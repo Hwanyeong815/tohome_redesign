@@ -3,7 +3,7 @@ import CategoryFilter from './CategoryFilter';
 import CategoryList from './CategoryList';
 import { CategoryBoxWrap } from './style';
 
-const CategoryBox = ({ categoryID }) => {
+const CategoryBox = ({ categoryID, selectedSub }) => {
     const categories = useSelector((state) => state.category.categories);
     const products = categories[categoryID]?.products || [];
     const unifiedProducts = products.map((u) => ({
@@ -20,10 +20,13 @@ const CategoryBox = ({ categoryID }) => {
             u.snackId ||
             u.liquidId,
     }));
+    const filterProducts = selectedSub
+        ? unifiedProducts.filter((f) => f.category.sub === selectedSub)
+        : unifiedProducts;
     return (
         <CategoryBoxWrap>
             <CategoryFilter />
-            <CategoryList products={unifiedProducts} />
+            <CategoryList products={filterProducts} />
         </CategoryBoxWrap>
     );
 };

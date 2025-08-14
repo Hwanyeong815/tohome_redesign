@@ -28,8 +28,10 @@ export const CategorySub = styled.ul`
     font-size: 15px;
     li {
         margin-left: 40px;
+        cursor: pointer;
         &:first-child {
             margin-left: 0;
+            color: #3c6039;
         }
     }
 `;
@@ -37,7 +39,7 @@ export const CategorySub = styled.ul`
 export const CategoryBoxWrap = styled.ul`
     display: flex;
     justify-content: space-between;
-    padding: 130px 0;
+    padding: 100px 0;
 `;
 export const CategoryFilterWrap = styled.div`
     width: 250px;
@@ -94,6 +96,7 @@ export const CategoryListWrap = styled.div`
         margin-bottom: 30px;
         li {
             margin-left: 40px;
+            cursor: pointer;
             position: relative;
             a {
                 color: #666;
@@ -165,9 +168,11 @@ export const CategoryItemWrap = styled.ul`
             }
         }
         h3 {
-            font-size: 18px;
-            word-break: keep-all;
-            white-space: pre-line;
+            font-size: 16px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
         .price-box {
             text-align: right;
@@ -175,6 +180,7 @@ export const CategoryItemWrap = styled.ul`
                 font-size: 15px;
                 color: #999;
                 text-decoration: line-through;
+                min-height: 24px;
             }
             .price {
                 font-size: 17px;

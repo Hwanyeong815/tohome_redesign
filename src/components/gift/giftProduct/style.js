@@ -14,6 +14,54 @@ export const GiftProductWrap = styled.div`
     }
 `;
 
+export const GiftListTopWrap = styled.ul`
+    display: flex;
+    width: 1200px;
+    margin: 30px auto 0;
+    justify-content: center;
+    font-size: 15px;
+    padding: 30px 0 100px;
+    border-top: 1px solid #666;
+    li {
+        margin-left: 40px;
+        cursor: pointer;
+        &:first-child {
+            margin-left: 0;
+            color: #3c6039;
+        }
+    }
+`;
+
+export const GiftProducts = styled.div`
+    .category-sort {
+        display: flex;
+        justify-content: right;
+        font-size: 15px;
+        margin-bottom: 30px;
+        li {
+            margin-left: 40px;
+            cursor: pointer;
+            position: relative;
+            a {
+                color: #666;
+            }
+            &::after {
+                content: '';
+                width: 1px;
+                height: 15px;
+                background-color: #666;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-55%);
+                right: -20px;
+            }
+            &:last-child::after {
+                content: none;
+            }
+        }
+    }
+`;
+
 export const GiftListWrap = styled.ul`
     display: flex;
     flex-wrap: wrap;
@@ -62,9 +110,11 @@ export const GiftListWrap = styled.ul`
             }
         }
         h3 {
-            font-size: 18px;
-            word-break: keep-all;
-            white-space: pre-line;
+            font-size: 16px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
         .price-box {
             text-align: right;
@@ -72,6 +122,7 @@ export const GiftListWrap = styled.ul`
                 font-size: 15px;
                 color: #999;
                 text-decoration: line-through;
+                min-height: 24px;
             }
             .price {
                 font-size: 17px;

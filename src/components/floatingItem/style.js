@@ -4,11 +4,12 @@ export const FloatingBtnStyle = styled.div`
     z-index: 100;
 
     position: fixed;
-    top: 250px;
-    right: 60px;
-    width: 80px;
-    /* height: 300px; */
-    /* border: 1px solid #000; */
+    /* top: 250px; */
+    top: 13vw;
+    right: 3.1vw;
+    /* width: 80px; */
+    width: 4vw;
+
     div {
         background-color: white;
         height: 150px;
@@ -16,7 +17,7 @@ export const FloatingBtnStyle = styled.div`
         border-radius: 100px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         gap: 10px;
         position: relative;
         padding: 10px 0;
@@ -52,6 +53,25 @@ export const FloatingBtnStyle = styled.div`
         width: 100%;
         gap: 10px;
         background-color: transparent;
+    }
+    .cart {
+        font-size: 30px;
+        height: 31px;
+
+        position: relative;
+        span {
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            width: 24px;
+            height: 24px;
+            background-color: #f3829e;
+            border-radius: 50px;
+            line-height: 24px;
+            text-align: center;
+            color: white;
+            font-size: 17px;
+        }
     }
 `;
 export const FloatingMenuStyle = styled.div`

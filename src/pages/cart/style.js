@@ -103,6 +103,7 @@ export const CartWrap = styled.div`
         display: flex;
         justify-content: center;
         .box {
+            cursor: pointer;
             display: flex;
             width: 145px;
             flex-direction: column;
@@ -132,6 +133,9 @@ export const CartWrap = styled.div`
             display: flex;
         }
         .line {
+            &.on {
+                background: #2f592b;
+            }
             background: #b1b1b1;
             height: 3px;
             width: 390px;
@@ -140,6 +144,7 @@ export const CartWrap = styled.div`
     }
 
     .menu {
+        cursor: pointer;
         display: flex;
         justify-content: center;
         margin-top: 45px;

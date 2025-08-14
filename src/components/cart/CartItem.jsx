@@ -1,12 +1,12 @@
 import { Box, ItemBox } from './style';
-// import SubBox from './SubBox';
+import SubBox from './SubBox';
 const Cartitem = () => {
     return (
         <Box>
             <div className="left">
-                {/* <SubBox />
                 <SubBox />
-                <SubBox /> */}
+                <SubBox />
+                <SubBox />
             </div>
         </Box>
     );

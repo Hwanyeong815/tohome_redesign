@@ -1,12 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
 import { GiftProductWrap } from './style';
 import GiftList from './GiftList';
+import GiftListTop from './GiftListTop';
 
 const GiftProduct = () => {
+    const [selectedSub, setSelectedSub] = useState(null);
     return (
         <GiftProductWrap>
-            <GiftList />
-            {/* <button>더보기</button> */}
+            <GiftListTop onSelectSub={setSelectedSub} />
+            <GiftList selectedSub={selectedSub} />
         </GiftProductWrap>
     );
 };

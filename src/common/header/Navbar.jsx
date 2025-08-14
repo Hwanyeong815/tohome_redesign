@@ -16,24 +16,9 @@ const Navbar = () => {
         <>
             <TopMenu className="top-menu">
                 <li>
-                    <Link to="/healFood">건강식품구독</Link>
-                </li>
-                <li>
-                    <Link to="/sideDish">반찬구독</Link>
-                </li>
-                <li>
                     <Link to="/login">로그인</Link>
                 </li>
-                <li>
-                    <Link to="/dawnDelivery" style={{ color: 'green' }}>
-                        새벽투홈
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/about" style={{ color: 'green' }}>
-                        브랜드소개
-                    </Link>
-                </li>
+
                 <li>
                     <Link to="/join">회원가입</Link>
                 </li>
@@ -80,7 +65,7 @@ const Navbar = () => {
                     <span className="line"></span>
                 </div>
             </NavStyle>
-            {isOpen && <FloatingMenu />}
+            {isOpen && <FloatingMenu setIsOpen={setIsOpen} />}
         </>
     );
 };

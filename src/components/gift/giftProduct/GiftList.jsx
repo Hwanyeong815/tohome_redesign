@@ -1,29 +1,26 @@
 import GiftListItem from './GiftListItem';
-import { GiftListWrap } from './style';
+import { GiftProducts, GiftListWrap } from './style';
 import { useSelector } from 'react-redux';
 
-const GiftList = () => {
-    const { gifts } = useSelector((state) => state.cart);
+const GiftList = ({ selectedSub }) => {
+    const gifts = useSelector((state) => state.cart.gifts);
+    const filterGifts = selectedSub ? gifts.filter((f) => f.category.sub === selectedSub) : gifts;
     return (
-        <>
-            <div className="gift-tab">
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+        <GiftProducts>
+            <div>
+                <ul className="category-sort">
+                    <li>판매량순</li>
+                    <li>신상품순</li>
+                    <li>높은가격순</li>
+                    <li>낮은가격순</li>
+                </ul>
             </div>
             <GiftListWrap>
-                {gifts.map((gift) => (
+                {filterGifts.map((gift) => (
                     <GiftListItem key={gift.giftId} gift={gift} />
                 ))}
             </GiftListWrap>
-        </>
+        </GiftProducts>
     );
 };
 

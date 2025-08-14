@@ -10,8 +10,12 @@ export const CheckboxStyle = styled.label`
     }
 
     position: absolute;
-    top: 15px;
-    right: 15px;
+    /* top: 15px; */
+    /* right: 15px; */
+    top: ${(props) => props.top || '0px'};
+    right: ${(props) => props.right || '0px'};
+    left: ${(props) => props.left || '0px'};
+    bottom: ${(props) => props.bottom || '0px'};
 
     .custom-check {
         width: 30px;
@@ -32,10 +36,14 @@ export const CheckboxStyle = styled.label`
         top: 50%;
         left: 40%;
         transform: translate(-50%, -50%);
-        background-image: url('images/icon/icon_check.png');
+        background-image: url('/images/icon/icon_check.png');
         background-size: cover;
         background-repeat: no-repeat;
         width: 20px;
         height: 15px;
+    }
+    .check-label {
+        font-size: 14px;
+        color: #333;
     }
 `;

@@ -165,4 +165,20 @@ export const JoinStyle = styled.div`
     p {
         text-align: center;
     }
+    .btn-wrap {
+        width: 100%;
+        position: relative;
+        .join-btn {
+            cursor: pointer;
+            font-size: 15px;
+            color: white;
+            width: 240px;
+            height: 40px;
+            margin-top: 60px;
+            background-color: #3c6039;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 `;

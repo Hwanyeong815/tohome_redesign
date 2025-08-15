@@ -7,7 +7,10 @@ const GiftProduct = () => {
     const [selectedSub, setSelectedSub] = useState(null);
     return (
         <GiftProductWrap>
-            <GiftListTop onSelectSub={setSelectedSub} />
+            <GiftListTop
+                onSelectSub={setSelectedSub}
+                selectedSub={selectedSub}
+            />
             <GiftList selectedSub={selectedSub} />
         </GiftProductWrap>
     );

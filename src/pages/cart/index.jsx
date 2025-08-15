@@ -15,33 +15,58 @@ const Cart = () => {
         <CartWrap>
             <div className="inner">
                 <div className="steps">
-                    <div className="cart box" onClick={() => setIsCartTab('List')}>
+                    <div
+                        className="cart box"
+                        onClick={() => setIsCartTab('List')}
+                    >
                         <span className="dot on"></span>
                         <span className="txt on">장바구니</span>
                     </div>
                     <div
                         className={`line ${
-                            isCartTab === 'Order' || isCartTab === 'Result' ? 'on' : ''
+                            isCartTab === 'Order' || isCartTab === 'Result'
+                                ? 'on'
+                                : ''
                         }`}
                     ></div>
-                    <div className="delivery box" onClick={() => setIsCartTab('Order')}>
+                    <div
+                        className="delivery box"
+                        onClick={() => setIsCartTab('Order')}
+                    >
                         <span
                             className={`dot ${
-                                isCartTab === 'Order' || isCartTab === 'Result' ? 'on' : ''
+                                isCartTab === 'Order' || isCartTab === 'Result'
+                                    ? 'on'
+                                    : ''
                             }`}
                         ></span>
                         <span
                             className={`txt ${
-                                isCartTab === 'Order' || isCartTab === 'Result' ? 'on' : ''
+                                isCartTab === 'Order' || isCartTab === 'Result'
+                                    ? 'on'
+                                    : ''
                             }`}
                         >
                             배송정보 입력
                         </span>
                     </div>
-                    <div className={`line ${isCartTab === 'Result' ? 'on' : ''}`}></div>
-                    <div className="pay box" onClick={() => setIsCartTab('Result')}>
-                        <span className={`dot ${isCartTab === 'Result' ? 'on' : ''}`}></span>
-                        <span className={`txt ${isCartTab === 'Result' ? 'on' : ''}`}>
+                    <div
+                        className={`line ${isCartTab === 'Result' ? 'on' : ''}`}
+                    ></div>
+                    <div
+                        className="pay box"
+                        onClick={() => setIsCartTab('Result')}
+                    >
+                        <span
+                            className={`dot ${
+                                isCartTab === 'Result' ? 'on' : ''
+                            }`}
+                        ></span>
+                        <span
+                            className={`txt ${
+                                isCartTab === 'Result' ? 'on' : ''
+                            }`}
+                        >
                             결제하기
                         </span>
                     </div>
@@ -77,17 +102,12 @@ const Cart = () => {
                 </div>
 
                 <CartBottomStyle>
-<<<<<<< HEAD
-                    {/* <CartList /> */}
-                    <CartOrder />
-                    {/* <CartResult /> */} 
-                    <CartSide />
-=======
                     {isCartTab === 'List' && <CartList />}
                     {isCartTab === 'Order' && <CartOrder />}
-                    {(isCartTab === 'List' || isCartTab === 'Order') && <CartSide />}
+                    {(isCartTab === 'List' || isCartTab === 'Order') && (
+                        <CartSide />
+                    )}
                     {isCartTab === 'Result' && <CartResult />}
->>>>>>> 4701dfc3e336637962cc40a83549b61bf659d278
                 </CartBottomStyle>
             </div>
         </CartWrap>

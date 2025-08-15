@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { CategoryTopWrap, CategorySub } from './style';
 
-const CategoryTop = ({ categoryID, onSelectSub }) => {
+const CategoryTop = ({ categoryID, onSelectSub, selectedSub }) => {
     const categories = useSelector((state) => state.category.categories);
     const categoryData = categories[categoryID];
     const title = categoryData?.products[0]?.category.main || '카테고리';
@@ -21,7 +21,11 @@ const CategoryTop = ({ categoryID, onSelectSub }) => {
                     전체보기
                 </li>
                 {subCategories.map((sub, idx) => (
-                    <li key={idx} onClick={() => onSelectSub(sub)}>
+                    <li
+                        key={idx}
+                        className={selectedSub === sub ? 'active' : ''}
+                        onClick={() => onSelectSub(sub)}
+                    >
                         {sub}
                     </li>
                 ))}

@@ -2,7 +2,14 @@ import { BsCart2, BsSuitHeart } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const CategoryItem = ({ product }) => {
-    const { thumbnailImage, name, price, discountedPrice, isDiscounted, discountRate } = product;
+    const {
+        thumbnailImage,
+        name,
+        price,
+        discountedPrice,
+        isDiscounted,
+        discountRate,
+    } = product;
     return (
         <li>
             <Link to="">
@@ -29,14 +36,24 @@ const CategoryItem = ({ product }) => {
                 <div className="price-box">
                     {isDiscounted ? (
                         <p className="discount">
-                            {discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+                            {price
+                                .toString()
+                                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                            원
                         </p>
                     ) : (
                         <p className="discount">{''}</p>
                     )}
                     <p className="price">
                         {isDiscounted && <span>{discountRate}%</span>}
-                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+                        {isDiscounted
+                            ? discountedPrice
+                                  .toString()
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                            : price
+                                  .toString()
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        원
                     </p>
                 </div>
             </Link>

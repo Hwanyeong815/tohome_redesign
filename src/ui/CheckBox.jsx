@@ -2,7 +2,7 @@ import { CheckboxStyle } from './style';
 
 const Checkbox = ({ checked, onChange, disabled, label, htmlFor, top, bottom, left, right }) => {
     return (
-        <CheckboxStyle top={top} left={left} right={right} bottom={bottom}>
+        <CheckboxStyle $top={top} $left={left} $right={right} $bottom={bottom}>
             <input
                 type="checkbox"
                 checked={checked}

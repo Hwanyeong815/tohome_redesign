@@ -3,12 +3,13 @@ import { createSlice } from '@reduxjs/toolkit';
 const memberData = [
     {
         id: 1,
-        name: '홍길동',
-        email: '',
-        password: 'a1234',
+        name: '이지은',
+        email: 'rere0811@Google.com',
+        password: 'rere0811@',
         tel: '010-0000-0000',
-        userid: 'hong1234',
-        addr: '서울시 관악구',
+        userid: 'rere0811',
+        addr: ['서울시 강남구 삼성동', '123-4번길 1층'],
+        phone: [1234, 5678],
     },
 ];
 

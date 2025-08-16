@@ -39,6 +39,9 @@ export const LoginStyle = styled.div`
                 margin-bottom: 40px;
             }
             .txtbox {
+                &-wrap {
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                }
                 width: 450px;
                 height: 60px;
                 padding: 15px 20px;
@@ -48,7 +51,7 @@ export const LoginStyle = styled.div`
                 justify-content: left;
                 align-items: center;
                 margin-bottom: -1px;
-                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
                 i {
                     color: #9e9e9e;
                     font-size: 20px;

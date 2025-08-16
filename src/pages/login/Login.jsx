@@ -17,17 +17,19 @@ const Login = () => {
                             <br />
                             로그인 후 다양한 혜택과 이벤트를 확인하세요.
                         </span>
-                        <div className="txtbox id">
-                            <i>
-                                <FaUser />
-                            </i>
-                            <input type="text" placeholder="아이디:ezen0811" />
-                        </div>
-                        <div className="txtbox password">
-                            <i>
-                                <RiLockPasswordLine />
-                            </i>
-                            <input type="text" placeholder="비밀번호:abc0811" />
+                        <div className="txtbox-wrap">
+                            <div className="txtbox id">
+                                <i>
+                                    <FaUser />
+                                </i>
+                                <input type="text" placeholder="아이디:rere0811" />
+                            </div>
+                            <div className="txtbox password">
+                                <i>
+                                    <RiLockPasswordLine />
+                                </i>
+                                <input type="text" placeholder="비밀번호:rere0811@" />
+                            </div>
                         </div>
                         <p>비회원 주문 조회 / 아이디·비밀번호 찾기</p>
                         <div className="btns">

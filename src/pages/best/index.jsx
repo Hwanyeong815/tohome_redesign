@@ -22,8 +22,8 @@ const Best = () => {
         <BestWrap>
             <div className="inner">
                 <TopSection
-                    borderTop={false}
-                    borderBottom={false}
+                    $borderTop="none"
+                    $borderBottom="none"
                     className="top-line"
                     title={'투홈 베스트'}
                     subtitle={'현대식품관 투홈의 인기 상품을 만나보세요'}

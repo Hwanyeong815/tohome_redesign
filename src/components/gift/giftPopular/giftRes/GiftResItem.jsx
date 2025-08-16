@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { BsCart2, BsSuitHeart } from 'react-icons/bs';
 
-const GiftBestItem = ({ gift }) => {
+const GiftResItem = ({ res }) => {
     const {
         name,
         price,
@@ -9,17 +9,12 @@ const GiftBestItem = ({ gift }) => {
         isDiscounted,
         discountRate,
         thumbnailImage,
-        tags,
-    } = gift;
-    const bestTag = tags.find((tag) => tag.name === '베스트10');
+    } = res;
     return (
         <li>
             <Link to="">
-                <div className="best-img">
+                <div className="popular-img">
                     <img src={thumbnailImage} alt={name} />
-                    <span className="ranking">
-                        {bestTag ? bestTag.rank : ''}
-                    </span>
                     <div className="overlay">
                         <button className="icon-btn">
                             <BsSuitHeart />
@@ -66,4 +61,4 @@ const GiftBestItem = ({ gift }) => {
     );
 };
 
-export default GiftBestItem;
+export default GiftResItem;

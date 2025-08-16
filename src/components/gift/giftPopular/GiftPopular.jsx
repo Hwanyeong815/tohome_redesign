@@ -1,5 +1,14 @@
+import GiftRes from './giftRes/GiftRes';
+import GiftSnack from './giftSnack/GiftSnack';
+import { GiftPopularWrap } from './style';
+
 const GiftPopular = () => {
-    return <div>맛집,간식</div>;
+    return (
+        <GiftPopularWrap>
+            <GiftRes />
+            <GiftSnack />
+        </GiftPopularWrap>
+    );
 };
 
 export default GiftPopular;

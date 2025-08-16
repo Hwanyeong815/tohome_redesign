@@ -1,36 +1,53 @@
 import styled from 'styled-components';
 
-export const GiftPremiumWrap = styled.div`
-    padding-top: 150px;
-    margin: auto;
-    h2 {
+export const GiftResWrap = styled.div`
+    width: 700px;
+    .gift-rest-title {
+        display: flex;
+        justify-content: space-between;
         margin-bottom: 30px;
-        font-size: 25px !important;
-    }
-    .btn-more {
-        font-size: 12px;
-        color: #888;
-        background-color: #fff;
-        border: 1px solid #888;
-        width: 135px;
-        height: 40px;
-        display: block;
-        margin: 60px auto 0;
+        align-items: center;
+        p {
+            margin-right: 20px;
+            display: flex;
+            gap: 40px;
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                height: 28px;
+                position: relative;
+                background-color: transparent;
+                &:first-child {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: -20px;
+                        width: 1px;
+                        height: 16px;
+                        background-color: #888;
+                    }
+                }
+            }
+        }
     }
 `;
 
-export const GiftPremiumListWrap = styled.ul`
-    display: flex;
-    gap: 40px;
-    width: 1440px;
-    flex-wrap: wrap;
-    > li {
-        border-bottom: 1px solid #333;
-        padding-bottom: 20px;
+export const GiftResListWrap = styled.ul`
+    .slick-slide {
+        width: 330px !important;
+        margin-right: 40px;
+        box-sizing: border-box;
+    }
+    .slick-list {
+        overflow: hidden;
     }
     li {
         width: 330px;
-        .premium-img {
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+        .popular-img {
             height: 330px;
             overflow: hidden;
             display: flex;
@@ -79,22 +96,20 @@ export const GiftPremiumListWrap = styled.ul`
             -webkit-box-orient: vertical;
         }
         .price-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-            .price-dsc {
-                font-size: 13px;
-                color: #3c6039;
-                span {
-                    border: 1px solid #3c6039;
-                    padding: 3px 10px;
-                    margin-right: 10px;
-                }
+            text-align: right;
+            .discount {
+                font-size: 15px;
+                color: #999;
+                text-decoration: line-through;
+                min-height: 24px;
             }
             .price {
-                text-align: right;
                 font-size: 17px;
+                span {
+                    color: #ff7259;
+                    font-size: 15px;
+                    margin-right: 8px;
+                }
             }
         }
     }

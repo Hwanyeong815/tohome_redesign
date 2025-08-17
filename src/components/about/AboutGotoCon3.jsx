@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { AboutLeft } from './style';
 
-const AboutGotoCon3 = () => {
+const AboutGotoCon3 = (props) => {
     return (
         <>
-            <AboutLeft>
+            <AboutLeft {...props}>
                 <li>
                     <div className="con-text">
                         <h3

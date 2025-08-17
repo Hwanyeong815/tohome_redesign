@@ -487,6 +487,7 @@ export default [
             { name: '베스트', rank: 18 },
             { name: '신상품', rank: 23 },
             { name: '베스트10', rank: 8 },
+            { name: '프리미엄', rank: 4 },
         ],
         details: {
             origin: '전복(국내산),랍스터(캐나다)',
@@ -681,7 +682,6 @@ export default [
         tags: [
             { name: '베스트', rank: 25 },
             { name: '신상품', rank: 16 },
-            { name: '프리미엄', rank: 4 },
         ],
         details: {
             origin: '국내산(고창군)',

@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const SaleWrap = styled.div`
-    .inner {
-        padding: 100px;
-    }
-    h2 {
-        font-size: 30px;
-    }
-    p {
-        text-align: center;
+    .top-wrap {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #333;
+            width: 1200px;
+            height: 1px;
+            left: 50%;
+            top: 53%;
+            transform: translateX(-50%);
+        }
     }
 `;

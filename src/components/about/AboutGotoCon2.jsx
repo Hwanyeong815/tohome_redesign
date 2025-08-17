@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { AboutRight } from './style';
 
-const AboutGotoCon2 = () => {
+const AboutGotoCon2 = (props) => {
     return (
         <>
-            <AboutRight>
+            <AboutRight {...props}>
                 <li
                     style={{
                         background:

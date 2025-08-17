@@ -3,13 +3,25 @@ import { ProductItemStyle } from './style';
 import { BsCart2, BsSuitHeart } from 'react-icons/bs';
 
 const ProductItem = ({ product }) => {
-    const { thumbnailImage, name, price, discountedPrice, isDiscounted, discountRate } = product;
+    const {
+        thumbnailImage,
+        name,
+        price,
+        discountedPrice,
+        isDiscounted,
+        discountRate,
+        des,
+        info,
+        thumbs,
+    } = product;
     return (
         <ProductItemStyle className="img-wrap">
             <li>
                 <Link to="">
                     <div className="img-wrap">
-                        <img src={thumbnailImage} alt={name} />
+                        {thumbnailImage && <img src={thumbnailImage} alt={name} />}
+                        {thumbs && <img src={thumbs} alt={name} />}
+
                         <div className="overlay">
                             <button className="icon-btn">
                                 <BsSuitHeart />
@@ -44,6 +56,7 @@ const ProductItem = ({ product }) => {
                         </p>
                     </div>
                 </Link>
+                <div className="des">{info}</div>
             </li>
         </ProductItemStyle>
     );

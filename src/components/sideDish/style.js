@@ -11,7 +11,7 @@ export const SideDishListStyle = styled.div`
         align-items: center;
         width: 900px;
         margin-bottom: 15px;
-        animation: ani2 1s ease-in-out 0s 1 forwards;
+        /* animation: ani2 1s ease-in-out 0s 1 forwards;
         @keyframes ani2 {
             0% {
                 transform: translateY(50%);
@@ -21,7 +21,7 @@ export const SideDishListStyle = styled.div`
                 transform: translateY(0);
                 opacity: 1;
             }
-        }
+        } */
     }
     h2 {
         font-size: 25px;
@@ -91,6 +91,41 @@ export const SideDishListStyle = styled.div`
             color: #333;
             &:last-child {
                 margin-left: 50px;
+            }
+        }
+    }
+    .swiper-slide {
+        width: 280px;
+        height: 400px;
+        background-color: transparent;
+
+        li {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            .img-wrap {
+                width: 280px;
+                height: 280px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+
+            h3 {
+                font-size: 25px;
+                margin-top: 15px;
+                text-align: center;
+                white-space: nowrap;
+            }
+            p {
+                margin-top: 5px;
+                font-size: 17px;
+                text-align: center;
+                word-break: keep-all;
             }
         }
     }

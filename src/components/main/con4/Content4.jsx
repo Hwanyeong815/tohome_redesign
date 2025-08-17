@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { ContentStyle } from '../style';
 import { Content4Style } from './style';
 import { MdArrowForwardIos } from 'react-icons/md';
-import SubscribeLi from './SubscribeLi';
+
 import SubscribeUl from './SubscribeUl';
 import { useNavigate } from 'react-router-dom';
 import HealthList from './HealthList';

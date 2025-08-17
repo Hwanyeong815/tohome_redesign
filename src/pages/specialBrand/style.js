@@ -40,5 +40,14 @@ export const SpecialBrandWrap = styled.div`
                 }
             }
         }
+        .filter-category-wrap {
+            display: flex;
+            border-top: 1px solid #666;
+            justify-content: space-between;
+            padding: 30px;
+            p {
+                font-size: 20px;
+            }
+        }
     }
 `;

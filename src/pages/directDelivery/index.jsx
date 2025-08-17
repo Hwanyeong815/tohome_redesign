@@ -1,19 +1,56 @@
+import { useState } from 'react';
 import DeliveryList from '../../components/directDelivery/DeliveryList';
 import TopSection from '../../components/topSection/TopSection';
 import { DirectDeliveryWrap } from './style';
+import { useSelector } from 'react-redux';
+import ProductList from '../../components/product/ProductList';
 
 const DirectDelivery = () => {
+    const [sortType, setSortType] = useState('판매량순');
+
+    const { products, menus, specials } = useSelector((state) => state.cart);
+    const AllMenus = [...products, ...menus, ...specials];
+
+    const ditectDeliveryUl = AllMenus.filter(
+        (product) => product.details?.deliveryType === '브랜드직송'
+    ).slice(0, 40);
+
+    const sortedDirectDelivery = () => {
+        switch (sortType) {
+            case '판매량순':
+                return [...ditectDeliveryUl].sort((a, b) => {
+                    if (a.rank === b.rank)
+                        return ditectDeliveryUl.indexOf(a) - ditectDeliveryUl.indexOf(b);
+                    return b.rank - a.rank;
+                });
+            case '신상품순':
+                return [...ditectDeliveryUl]
+                    .filter((product) => product.tags?.some((tag) => tag.name === '신상품'))
+                    .sort((a, b) => {
+                        if (a.rank === b.rank)
+                            return ditectDeliveryUl.indexOf(a) - ditectDeliveryUl.indexOf(b);
+                        return b.rank - a.rank;
+                    });
+            case '높은가격순':
+                return [...ditectDeliveryUl].sort((a, b) => {
+                    const priceA = a.discountedPrice || a.price;
+                    const priceB = b.discountedPrice || b.price;
+                    return priceB - priceA;
+                });
+            case '낮은가격순':
+                return [...ditectDeliveryUl].sort((a, b) => {
+                    const priceA = a.discountedPrice || a.price;
+                    const priceB = b.discountedPrice || b.price;
+                    return priceA - priceB;
+                });
+            default:
+                return ditectDeliveryUl;
+        }
+    };
+
     return (
         <DirectDeliveryWrap>
             <div className="inner">
-                {/* <div className="titleBox">
-                    <h2>
-                        <img src="/images/directDelivery/icon/title.png" alt="" />
-                        브랜드직송관
-                    </h2>
-                    <p>누군가의 손끝에서 시작된 정성이, 당신의 식탁 위에 도착합니다.</p>
-                </div> */}
-
                 <TopSection
                     title="브랜드직송관"
                     subtitle="누군가의 손끝에서 시작된 정성이, 당신의 식탁 위에 도착합니다."
@@ -83,8 +120,18 @@ const DirectDelivery = () => {
                         <li>아기·어린이</li>
                     </ul>
                 </div>
-
-                <DeliveryList />
+                <div className="filter-wrap">
+                    {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
+                        <p
+                            key={type}
+                            onClick={() => setSortType(type)}
+                            className={sortType === type ? 'on' : ''}
+                        >
+                            {type}
+                        </p>
+                    ))}
+                </div>
+                {ditectDeliveryUl.length > 0 && <ProductList products={sortedDirectDelivery()} />}
             </div>
         </DirectDeliveryWrap>
     );

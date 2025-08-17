@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/autoplay';
-
 import { FreeMode, Autoplay } from 'swiper/modules';
+import { SubscribeUlStyle } from './style';
 
 const SubscribeUl = () => {
     const { sideDishes } = useSelector((state) => state.cart);
@@ -25,7 +25,7 @@ const SubscribeUl = () => {
         cssEase: 'linear',
     };
     return (
-        <>
+        <SubscribeUlStyle>
             <Swiper
                 slidesPerView={5.5}
                 spaceBetween={10}
@@ -45,7 +45,7 @@ const SubscribeUl = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </>
+        </SubscribeUlStyle>
     );
 };
 

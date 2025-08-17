@@ -29,6 +29,7 @@ export const ProductItemStyle = styled.li`
             overflow: hidden;
             img {
                 width: 250px;
+                height: 305px;
                 margin-bottom: 15px;
                 display: block;
             }
@@ -38,7 +39,7 @@ export const ProductItemStyle = styled.li`
                 left: 0;
                 top: 0;
                 width: 250px;
-                height: 300px;
+                height: 305px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -59,12 +60,15 @@ export const ProductItemStyle = styled.li`
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.66);
+                    }
                 }
             }
         }
         h3 {
             font-size: 16px;
-            height: 72px;
+            height: 55px;
             overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -90,6 +94,11 @@ export const ProductItemStyle = styled.li`
                     margin-right: 8px;
                 }
             }
+        }
+        .des {
+            font-size: 15px;
+            margin-top: 20px;
+            word-break: keep-all;
         }
     }
 `;

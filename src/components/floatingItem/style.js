@@ -7,12 +7,11 @@ export const FloatingBtnStyle = styled.div`
     /* top: 250px; */
     top: 13vw;
     right: 3.1vw;
-    /* width: 80px; */
-    width: 4vw;
+    width: 80px;
 
     div {
         background-color: white;
-        height: 150px;
+        height: 160px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
         border-radius: 100px;
         display: flex;

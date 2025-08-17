@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FloatingBtnStyle } from './style';
 import { Link, useNavigate } from 'react-router-dom';
 import { RiShoppingCartLine } from 'react-icons/ri';
+import { IoIosArrowDropup } from 'react-icons/io';
 
 const FloatingBtn = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -51,7 +52,8 @@ const FloatingBtn = () => {
                     </div>
                     <button className="top" onClick={scrollToTop}>
                         <p>TOP</p>
-                        <img src="/images/icon/icon_topBtn.png" alt="탑버튼" />
+                        <IoIosArrowDropup />
+                        {/* <img src="/images/icon/icon_topBtn.png" alt="탑버튼" /> */}
                     </button>
                 </FloatingBtnStyle>
             )}

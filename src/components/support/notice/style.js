@@ -4,10 +4,11 @@ export const NoticeStyle = styled.article`
     margin-top: 127px;
     h2 {
         font-size: 32px;
-        text-align: left;
-        border: 1px solid #000;
+        text-align: left !important;
+        margin-bottom: 20px;
     }
     .select {
+        cursor: pointer;
         display: flex;
         height: 86px;
         padding: 0 40px;
@@ -59,6 +60,59 @@ export const NoticeListStyle = styled.div`
                 line-height: 70px;
                 border-bottom: 1px solid #b1b1b1;
             }
+        }
+    }
+`;
+
+export const NoticeDetailStyle = styled.div`
+    margin-top: 20px;
+    h2 {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: left;
+    }
+    p {
+        /* white-space: pre-line; */
+        word-break: keep-all;
+    }
+    .detail {
+        &-wrap {
+            /* border: 1px solid #000; */
+        }
+        &-head {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+        }
+        &-body {
+            background-color: #ececec;
+            h3 {
+                background-color: white;
+            }
+            .title {
+                font-size: 20px;
+                padding: 10px 10px;
+            }
+
+            .context {
+                padding: 20px;
+            }
+            .date {
+                margin-top: 40px;
+                text-align: right;
+                padding: 20px;
+            }
+        }
+    }
+    .btn-wrap {
+        width: 100%;
+        text-align: right;
+        margin-top: 40px;
+        button {
+            background-color: #333;
+            color: white;
+            width: 85px;
+            height: 40px;
+            font-size: 16px;
         }
     }
 `;

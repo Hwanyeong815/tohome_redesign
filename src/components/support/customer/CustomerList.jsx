@@ -8,8 +8,8 @@ import { useEffect } from 'react';
 
 const CustomerList = () => {
     const { customers } = useSelector((state) => state.support);
-    const { pageData, totalCount, perPage, currentPage, totalPages } = useSelector(
-        (state) => state.pagination
+    const { pageData, perPage, currentPage, totalPages } = useSelector(
+        (state) => state.pagination.customer
     );
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -18,11 +18,11 @@ const CustomerList = () => {
     const currentCustomers = pageData.slice(startIdx, endIdx);
 
     useEffect(() => {
-        dispatch(paginationActions.setData(customers));
+        dispatch(paginationActions.setData({ key: 'customer', data: customers }));
     }, [customers]);
 
     const handlePageChange = (page) => {
-        dispatch(paginationActions.goToPage(page));
+        dispatch(paginationActions.goToPage({ key: 'customer', page }));
     };
 
     const onMake = () => {

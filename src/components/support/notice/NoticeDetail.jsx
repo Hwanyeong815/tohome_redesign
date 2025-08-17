@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import { NoticeDetailStyle } from './style';
 
 const CustomerDetail = () => {
     const { noticeID } = useParams();
@@ -8,7 +10,6 @@ const CustomerDetail = () => {
     const dispatch = useDispatch();
 
     const newItem = notices.find((notice) => notice.noticeId === Number(noticeID));
-    // const newItem = notices.find((notice) => String(notice.noticeId) === noticeID);
 
     if (!newItem) {
         return (
@@ -18,17 +19,38 @@ const CustomerDetail = () => {
             </div>
         );
     }
-    const { noticeId, name, title, content, date } = newItem;
+    const {
+        noticeId,
+        title,
+
+        date,
+        context,
+        tags: { name },
+    } = newItem;
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
-        <div>
+        <NoticeDetailStyle>
             <div className="inner">
-                <h3>{title}</h3>
-                <p>작성자: {name}</p>
-                <p>날짜: {date}</p>
-                <div>{content}</div>
+                <div className="detail-wrap">
+                    <div className="detail-head">
+                        <h2>공지사항</h2>
+                        <p>#{name}</p>
+                    </div>
+                    <div className="detail-body">
+                        <h3 className="title">{title}</h3>
+                        <p className="context">{context}</p>
+                        <p className="date">{date}</p>
+                    </div>
+                </div>
+                <div className="btn-wrap">
+                    <button onClick={() => navigate(-1)}>목록으로</button>
+                </div>
             </div>
-        </div>
+        </NoticeDetailStyle>
     );
 };
 

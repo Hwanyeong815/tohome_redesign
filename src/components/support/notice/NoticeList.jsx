@@ -6,12 +6,13 @@ import { useEffect } from 'react';
 import Pagination from '../../pagination';
 import { paginationActions } from '../../../store/modules/paginationSlice';
 
-const NoticeList = () => {
+const NoticeList = ({ noticeTab }) => {
     const { notices } = useSelector((state) => state.support);
     console.log(notices);
     const { pageData, totalCount, perPage, currentPage, totalPages } = useSelector(
-        (state) => state.pagination
+        (state) => state.pagination.notice
     );
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const startIdx = (currentPage - 1) * perPage;
@@ -19,11 +20,16 @@ const NoticeList = () => {
     const currentNotices = pageData.slice(startIdx, endIdx);
 
     useEffect(() => {
-        dispatch(paginationActions.setData(notices));
-    }, [notices]);
+        const filteredNotices =
+            noticeTab === 'all'
+                ? notices
+                : notices.filter((notice) => notice.tags?.name === noticeTab);
+
+        dispatch(paginationActions.setData({ key: 'notice', data: filteredNotices }));
+    }, [notices, noticeTab]);
 
     const handlePageChange = (page) => {
-        dispatch(paginationActions.goToPage(page));
+        dispatch(paginationActions.goToPage({ key: 'notice', page }));
     };
 
     const onMake = () => {

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Content4Style = styled.section`
     .side-dish {
         &-wrap {
+            cursor: pointer;
             position: relative;
             left: 50%;
             transform: translateX(-50%);
@@ -64,46 +65,12 @@ export const Content4Style = styled.section`
         }
         &-right-wrap {
             width: 1330px;
-
-            .swiper-slide {
-                width: 280px;
-                height: 400px;
-                background-color: transparent;
-
-                li {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    .img-wrap {
-                        width: 280px;
-                        height: 280px;
-                        img {
-                            width: 100%;
-                        }
-                    }
-
-                    h3 {
-                        font-size: 25px;
-                        margin-top: 15px;
-                        text-align: center;
-                        white-space: nowrap;
-                    }
-                    p {
-                        margin-top: 5px;
-                        font-size: 17px;
-                        text-align: center;
-                        word-break: keep-all;
-                    }
-                }
-            }
         }
     }
 
     .health-sub {
         &-wrap {
+            cursor: pointer;
             margin-top: 50px;
 
             .main-title {
@@ -137,6 +104,7 @@ export const Content4Style = styled.section`
                         p {
                             &::before {
                                 opacity: 1;
+                                top: 0;
                             }
                         }
                     }
@@ -164,11 +132,11 @@ export const Content4Style = styled.section`
                             width: 60px;
                             height: 500px;
                             position: absolute;
-                            top: 0;
+                            top: -100%;
                             left: 50%;
                             transform: translateX(-50%);
                             z-index: -1;
-                            transition: 0.3s;
+                            transition: 0.5s;
                             opacity: 0;
                         }
                     }
@@ -177,6 +145,44 @@ export const Content4Style = styled.section`
                         filter: brightness(0.3);
                     }
                 }
+            }
+        }
+    }
+`;
+
+export const SubscribeUlStyle = styled.div`
+    .swiper-slide {
+        width: 280px;
+        height: 400px;
+        background-color: transparent;
+
+        li {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            .img-wrap {
+                width: 280px;
+                height: 280px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+
+            h3 {
+                font-size: 25px;
+                margin-top: 15px;
+                text-align: center;
+                white-space: nowrap;
+            }
+            p {
+                margin-top: 5px;
+                font-size: 17px;
+                text-align: center;
+                word-break: keep-all;
             }
         }
     }

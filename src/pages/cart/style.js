@@ -48,22 +48,42 @@ export const CartBottomStyle = styled.div`
                 font-weight: 600;
             }
         }
-        .order {
-            width: 100%;
-            margin-top: 35px;
-            /* border: 1px solid #000; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            button {
-                width: 190px;
-                padding: 10px;
-                box-sizing: border-box;
-                background: none;
-                font-size: 15px;
-                font-weight: 700;
-                background: #386633;
-                color: #fff;
+        .buttons {
+            .CartListB {
+                width: 100%;
+                margin-top: 35px;
+                /* border: 1px solid #000; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    width: 190px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    background: none;
+                    font-size: 15px;
+                    font-weight: 700;
+                    background: #386633;
+                    color: #fff;
+                }
+            }
+            .CartOrderB {
+                width: 100%;
+                margin-top: 35px;
+                display: flex;
+                button {
+                    width: 172px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    background: none;
+                    font-size: 15px;
+                    font-weight: 700;
+                    background: #9e9e9e;
+                    color: #fff;
+                    &:first-child {
+                        background: #386633;
+                    }
+                }
             }
         }
     }
@@ -83,6 +103,7 @@ export const CartWrap = styled.div`
         display: flex;
         justify-content: center;
         .box {
+            cursor: pointer;
             display: flex;
             width: 145px;
             flex-direction: column;
@@ -112,6 +133,9 @@ export const CartWrap = styled.div`
             display: flex;
         }
         .line {
+            &.on {
+                background: #2f592b;
+            }
             background: #b1b1b1;
             height: 3px;
             width: 390px;
@@ -120,6 +144,7 @@ export const CartWrap = styled.div`
     }
 
     .menu {
+        cursor: pointer;
         display: flex;
         justify-content: center;
         margin-top: 45px;

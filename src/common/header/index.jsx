@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import { HeaderStyle, SearchWrap, TopMenu } from './style';
-import FloatingMenu from '../../components/floatingItem/FloatingMenu';
+
 import FloatingBtn from '../../components/floatingItem/FloatingBtn';
-import Spinner from '../../components/spinner';
 
 const Header = () => {
     return (

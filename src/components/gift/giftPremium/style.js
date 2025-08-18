@@ -5,9 +5,9 @@ export const GiftPremiumWrap = styled.div`
     margin: auto;
     h2 {
         margin-bottom: 30px;
-        font-size: 25px;
+        font-size: 25px !important;
     }
-    button {
+    .btn-more {
         font-size: 12px;
         color: #888;
         background-color: #fff;
@@ -26,7 +26,7 @@ export const GiftPremiumListWrap = styled.ul`
     flex-wrap: wrap;
     > li {
         border-bottom: 1px solid #333;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
     li {
         width: 330px;
@@ -36,17 +36,52 @@ export const GiftPremiumListWrap = styled.ul`
             display: flex;
             align-items: center;
             margin-bottom: 20px;
+            position: relative;
             img {
                 width: 330px;
                 cursor: pointer;
             }
+            .overlay {
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.4);
+                left: 0;
+                top: 0;
+                width: 330px;
+                height: 330px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                opacity: 0;
+                transition: 0.3s ease;
+                &:hover {
+                    opacity: 1;
+                }
+                .icon-btn {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 10px;
+                    border: 1px solid #fff;
+                    background: transparent;
+                    color: #fff;
+                    font-size: 18px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
         }
         h3 {
-            font-size: 18px;
+            font-size: 16px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
         .price-box {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-top: 10px;
             .price-dsc {
                 font-size: 13px;

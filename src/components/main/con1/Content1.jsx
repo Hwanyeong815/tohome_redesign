@@ -6,14 +6,13 @@ import BestMenuLi from './BestMenuLi';
 import { MainCon1Style } from './style';
 
 import Slider from 'react-slick';
-import NewProductLi from './NewProductLi';
 import MainNewPro from './MainNewPro';
 
 const settings1 = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 4.5,
     slidesToScroll: 1,
 };
 

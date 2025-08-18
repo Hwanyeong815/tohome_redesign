@@ -68,6 +68,27 @@ export const ContentStyle = styled.div`
             transition: 0.3s;
         }
     }
+    .price-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 50px;
+        font-size: 17px;
+        font-weight: 600;
+        .original-price {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 15px;
+        }
+        .discounted-price {
+            font-size: 17px;
+            .dis-rate {
+                font-size: 15px;
+                margin-right: 10px;
+                color: #ff7259;
+            }
+        }
+    }
 `;
 
 export const ContentUl = styled.ul`
@@ -80,8 +101,41 @@ export const ContentUl = styled.ul`
         .img-box {
             width: 250px;
             height: 310px;
+            position: relative;
             img {
                 width: 100%;
+            }
+            .overlay {
+                user-select: none;
+                pointer-events: none;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.4);
+                left: 0;
+                top: 0;
+                width: 250px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                opacity: 0;
+                /* opacity: 1; */
+                transition: 0.3s ease;
+                &:hover {
+                    opacity: 1;
+                }
+                .icon-btn {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 10px;
+                    border: 1px solid #fff;
+                    background: transparent;
+                    color: #fff;
+                    font-size: 18px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
         h2 {
@@ -90,27 +144,6 @@ export const ContentUl = styled.ul`
         }
         p {
             text-align: right;
-        }
-        .price-wrap {
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            height: 50px;
-            font-size: 17px;
-            font-weight: 600;
-            .original-price {
-                color: #888;
-                text-decoration: line-through;
-                font-size: 15px;
-            }
-            .discounted-price {
-                font-size: 17px;
-                .dis-rate {
-                    font-size: 15px;
-                    margin-right: 10px;
-                    color: #ff7259;
-                }
-            }
         }
     }
 `;

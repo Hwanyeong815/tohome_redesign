@@ -293,3 +293,53 @@ export const JoinItemStyle = styled.div`
         margin-bottom: 150px;
     }
 `;
+
+export const JoinInfoStyle = styled.div`
+    .info-tab {
+        &-wrap {
+        }
+        &-head {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+            height: 70px;
+            padding: 0 20px;
+            border: 1px solid #b1b1b1;
+            form {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                /* background-color: aqua; */
+            }
+            .arrowDown {
+                font-size: 30px;
+                height: 35px;
+            }
+        }
+        &-body {
+            padding: 30px;
+            border: 1px solid #000;
+            width: 100%;
+            box-sizing: border-box;
+            max-height: 300px;
+            overflow-y: auto;
+
+            p {
+                text-align: left;
+                line-height: 1.4;
+            }
+            .checkbox {
+                /* border: 1px solid #000; */
+                padding-left: 20px;
+                padding-bottom: 10px;
+                &:last-of-type {
+                    padding-bottom: 0;
+                }
+                height: 40px;
+            }
+        }
+    }
+`;

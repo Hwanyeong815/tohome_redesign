@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const FaqStyle = styled.section`
-    padding-top: 70px;
+    padding-top: 85px;
     h2 {
         font-size: 32px;
         font-weight: 600;
-        /* padding: 30px; */
-        text-align: left;
+
+        text-align: left !important;
         margin-bottom: 16px;
     }
     h3 {

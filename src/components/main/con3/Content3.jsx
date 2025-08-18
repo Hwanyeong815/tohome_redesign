@@ -35,14 +35,22 @@ const Content3 = () => {
     // const { products } = useSelector((state) => state.cart);
 
     const navigate = useNavigate();
-    const onClick = () => {
+    const onClick1 = () => {
         navigate('/about');
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    };
+    const onClick2 = () => {
+        navigate('/specialBrand');
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    };
+    const onClick3 = () => {
+        navigate('/dawnDelivery');
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
     return (
         <ContentStyle>
             <Content3Style>
-                <section onClick={onClick} className="main-about">
+                <section onClick={onClick1} className="main-about">
                     <h2>현대식품관 BRAND STORY</h2>
                     <div>
                         <p>“정성으로 차린 식탁,</p>
@@ -52,7 +60,7 @@ const Content3 = () => {
                     <button className="main-about-btn">브랜드 소개</button>
                 </section>
 
-                <section className="brand-about">
+                <section className="brand-about" onClick={onClick2}>
                     <h2 className="main-title">브랜드로 만나는 미식의 깊이</h2>
                     <strong>Connecting Taste & Story</strong>
                     <div className="txts">
@@ -69,7 +77,7 @@ const Content3 = () => {
                         ))}
                     </div>
                 </section>
-                <section className="main-dawn-wrap">
+                <section className="main-dawn-wrap" onClick={onClick3}>
                     <div>
                         <img src="images/main/main_dawn.png" alt="" />
                         <div className="txts">

@@ -25,8 +25,15 @@ export const MainCon1Style = styled.article`
                 h2 {
                     margin-top: 20px;
                     width: 310px;
+                    height: 60px;
                     white-space: break-spaces;
                     text-align: left;
+                }
+                h3 {
+                    font-size: 15px;
+                    white-space: pre-line;
+                    word-break: keep-all;
+                    /* padding: 0 10px; */
                 }
 
                 p {
@@ -64,12 +71,12 @@ export const MainCon1Style = styled.article`
 
         .swiper-slide {
             display: flex;
-            gap: 100px;
+
             margin-bottom: 95px;
 
             .left {
-                width: 400px;
                 position: relative;
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -83,7 +90,6 @@ export const MainCon1Style = styled.article`
                     z-index: -1;
                 }
                 text-align: left;
-                /* padding: 0 145px; */
                 margin: auto;
                 strong {
                     font-size: 18px;
@@ -95,12 +101,15 @@ export const MainCon1Style = styled.article`
                     font-size: 50px;
                 }
                 h4 {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
                     font-size: 32px;
                     padding: 55px 0;
                 }
                 p {
                     text-align: left;
-                    white-space: pre-line;
+
                     font-size: 22px;
                 }
             }

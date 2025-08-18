@@ -5,7 +5,7 @@ export const SupportWrap = styled.div`
         padding: 100px 0;
     }
     h2 {
-        font-size: 30px;
+        font-size: 30px !important;
     }
     p {
         text-align: center;
@@ -18,6 +18,7 @@ export const SupporMainTap = styled.section`
     border-bottom: 1px solid #000;
     width: 100%;
     height: 80px;
+
     h2 {
         height: 100%;
         font-size: 40px;

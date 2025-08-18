@@ -6,7 +6,6 @@ const CartList = () => {
     return (
         <CartBoxStyle>
             <Cartitem />
-            {/* <Cartitem /> */}
         </CartBoxStyle>
     );
 };

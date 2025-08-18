@@ -2,16 +2,10 @@ import { useSelector } from 'react-redux';
 import ProductItem from './ProductItem';
 import { ProductStyle } from './style';
 
-const ProductList = () => {
-    const { products } = useSelector((state) => state.cart);
-
-    const bestTop5 = products.filter((product) =>
-        product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 5)
-    );
-
+const ProductList = ({ products = [] }) => {
     return (
         <ProductStyle>
-            {bestTop5.map((product) => (
+            {products.map((product) => (
                 <ProductItem key={product.id} product={product} />
             ))}
         </ProductStyle>

@@ -1,50 +1,60 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { NavStyle, SearchWrap, TopMenu } from './style';
 import FloatingMenu from '../../components/floatingItem/FloatingMenu';
 import { useState } from 'react';
+import { RiShoppingCartLine } from 'react-icons/ri';
+import { GoSearch } from 'react-icons/go';
+import { useDispatch, useSelector } from 'react-redux';
+import { authActions } from '../../store/modules/authSlice';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const { authed, user } = useSelector((state) => state.auth);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const onLogout = () => {
+        dispatch(authActions.logout(user));
+        navigate('/login');
     };
 
     return (
         <>
             <TopMenu className="top-menu">
-                <li>
-                    <Link to="/healFood">건강식품구독</Link>
-                </li>
-                <li>
-                    <Link to="/sideDish">반찬구독</Link>
-                </li>
-                <li>
-                    <Link to="/login">로그인</Link>
-                </li>
-                <li>
-                    <Link to="/dawnDelivery" style={{ color: 'green' }}>
-                        새벽투홈
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/about" style={{ color: 'green' }}>
-                        브랜드소개
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/join">회원가입</Link>
-                </li>
+                {authed ? (
+                    <>
+                        <li>
+                            <Link to="/">{user.name}님 환영합니다</Link>
+                        </li>
+                        <li onClick={onLogout}>
+                            <Link>로그아웃</Link>
+                        </li>
+                    </>
+                ) : (
+                    <>
+                        <li>
+                            <Link to="/login">로그인</Link>
+                        </li>
+
+                        <li>
+                            <Link to="/join">회원가입</Link>
+                        </li>
+                    </>
+                )}
+
                 <li>
                     <Link to="/support">고객센터</Link>
                 </li>
             </TopMenu>
             <SearchWrap>
                 <div className="search">
-                    <img src="images/icon/icon_search.png" alt="돋보기" />
+                    <GoSearch className="search-item" />
                 </div>
-                <Link to="/cart">
-                    <img src="images/icon/icon_cart.png" alt="쇼핑카트" />
+                <Link to="/cart" className="cart">
+                    <RiShoppingCartLine /> <span>0</span>
                 </Link>
             </SearchWrap>
             <NavStyle className="nav" isOpen={isOpen}>
@@ -78,7 +88,7 @@ const Navbar = () => {
                     <span className="line"></span>
                 </div>
             </NavStyle>
-            {isOpen && <FloatingMenu />}
+            {isOpen && <FloatingMenu setIsOpen={setIsOpen} />}
         </>
     );
 };

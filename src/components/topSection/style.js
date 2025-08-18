@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const TitleBox = styled.div`
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: ${(props) => props.$borderTop || 'none'};
+    border-bottom: ${(props) => props.$borderBottom || 'none'};
     padding: 75px 0;
     text-align: center;
     width: 100%;

@@ -21,7 +21,15 @@ const FaqItem = ({ faq, isOpen, onClick }) => {
                     <span className="circle">Q</span>
                     {title}
                 </section>
-                <img src="images/icon/icon_arrow.png" alt="화살표" />
+                {isOpen ? (
+                    <img
+                        src="images/icon/icon_arrow.png"
+                        alt="화살표"
+                        style={{ transform: 'rotate(180deg)' }}
+                    />
+                ) : (
+                    <img src="images/icon/icon_arrow.png" alt="화살표" />
+                )}
             </div>
             <div
                 className="accBody"

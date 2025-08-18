@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import FaqItem from './FaqItem';
-import { useDispatch, useSelector } from 'react-redux';
 import { supportActions } from '../../../store/modules/supportSlice';
 
 const FaqList = ({ selectedTag, filteredFaqs, openFaqIds, dispatch, faqs }) => {

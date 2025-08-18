@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 export const DawnDeliveryConStyle = styled.div`
     position: relative;
-    /* margin-top: 90; */
-    /* height: 1260px; */
+    h2 {
+        font-size: 36px !important;
+        font-weight: 700 !important;
+        margin-bottom: 100px;
+    }
 `;
 export const Con1Style = styled.div`
     margin-top: 110px;
     height: 1260px;
-    h2 {
-        font-size: 36px;
-        font-weight: 700;
-    }
+
     .box {
         width: 1440px;
         height: 940px;
@@ -19,7 +19,6 @@ export const Con1Style = styled.div`
         .top {
             width: 100%;
             display: flex;
-
             .left {
                 width: 720px;
                 height: 470px;
@@ -45,6 +44,7 @@ export const Con1Style = styled.div`
                     /* border: 1px solid #000; */
                     p {
                         font-size: 24px;
+                        font-weight: 700;
                         text-align: center;
                         margin-bottom: 40px;
                     }
@@ -71,11 +71,11 @@ export const Con1Style = styled.div`
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: 580px;
+                    width: 610px;
                     height: 232px;
-                    /* border: 1px solid #000; */
                     p {
                         font-size: 24px;
+                        font-weight: 700;
                         text-align: center;
                         margin-bottom: 40px;
                     }
@@ -97,19 +97,16 @@ export const Con1Style = styled.div`
 `;
 
 export const Con2Style = styled.div`
-    /* margin-top: 55px; */
-    height: 726px;
+    padding: 70px 0;
+    /* height: 726px; */
     background-color: #fdfbf0;
     width: 100%;
-    /* border: 1px solid #000; */
     display: flex;
-
     justify-content: center;
     align-items: center;
     .box {
         width: 886px;
         height: 590px;
-        /* border: 1px solid #000; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -135,6 +132,11 @@ export const Con2Style = styled.div`
             }
         }
         .txt-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 15px;
             img {
                 /* margin-right: 10px; */
             }
@@ -151,7 +153,7 @@ export const Con2Style = styled.div`
 `;
 
 export const Con3Style = styled.div`
-    margin-top: 180px;
+    padding: 180px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,20 +163,27 @@ export const Con3Style = styled.div`
         font-weight: 700;
         margin-bottom: 100px;
     }
-    .box {
-        width: 1160px;
-        height: 1641px;
-        /* border: 1px solid #000; */
-        /* position: relative; */
-        .top {
-            /* position: absolute; */
+    .wholeBox {
+        /* padding: 0 140px; */
+        .box {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 206px;
+            width: 1160px;
+            &:nth-child(2) {
+                gap: 0;
+            }
+        }
+        .top {
+            /* position: absolute; */
+            /* display: flex;
+      justify-content: space-between;
+      align-items: center; */
             img {
             }
-            .box1 {
-                width: 494px;
+            .txtBox {
+                width: 448px;
                 height: 310px;
                 /* border: 1px solid #000; */
                 right: 0;
@@ -184,6 +193,7 @@ export const Con3Style = styled.div`
 
                 p {
                     font-size: 34px;
+                    font-weight: 600;
                     margin-bottom: 23px;
                 }
                 .title {
@@ -208,9 +218,10 @@ export const Con3Style = styled.div`
             display: flex;
             justify-content: space-between;
             align-items: center;
-            img {
+            .box {
+                gap: 0;
             }
-            .box1 {
+            .txtBox {
                 width: 654px;
                 height: 310px;
                 display: flex;
@@ -246,8 +257,8 @@ export const Con3Style = styled.div`
             align-items: center;
             img {
             }
-            .box1 {
-                width: 494px;
+            .txtBox {
+                width: 448px;
                 height: 310px;
                 /* border: 1px solid #000; */
                 display: flex;
@@ -279,26 +290,33 @@ export const Con3Style = styled.div`
 `;
 
 export const Con4Style = styled.div`
-    margin-top: 180px;
-    width: 100%;
-    height: 1185px;
+    /* width: calc(100vw - var(--scrollbar-width)); */
+    width: 100vw;
+    overflow: hidden;
     background-color: #fdfbf0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 100px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(images/dawnDelivery/con4/Q&A.png);
+    background-repeat: no-repeat;
+    background-position: 7px 270px;
     h2 {
-        margin-top: 100px;
+        text-align: center;
+        margin-bottom: 0 !important;
         font-size: 36px;
         font-weight: 700;
     }
     p {
+        display: flex;
         font-size: 30px;
         font-weight: 700;
+        justify-content: center;
     }
     .box {
-        height: 870px;
-        border: 1px solid;
         width: 1200px;
+        margin: 0 auto;
+        margin-top: 46px;
         .txt {
             margin-bottom: 15px;
             .left {
@@ -315,10 +333,6 @@ export const Con4Style = styled.div`
                     color: #fff;
                     padding: 28px 50px;
                     border-radius: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
                     font-size: 20px;
                     &::before {
                         content: '';
@@ -354,16 +368,12 @@ export const Con4Style = styled.div`
                 font-size: 18px;
                 padding: 28px 60px;
                 border-radius: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
                 &::before {
                     content: '';
                     position: absolute;
                     right: -6px;
                     top: 50%;
-                    transform: translateY(-50%) rotate(45deg);
+                    transform: translateY(-50%) rotate(-45deg);
                     width: 12px;
                     height: 12px;
                     background: #fff;

@@ -3,23 +3,23 @@ import { useSelector } from 'react-redux';
 import { ContentStyle } from '../style';
 import { Content4Style } from './style';
 import { MdArrowForwardIos } from 'react-icons/md';
-import SubscribeLi from './SubscribeLi';
+
 import SubscribeUl from './SubscribeUl';
 import { useNavigate } from 'react-router-dom';
 import HealthList from './HealthList';
 const Content4 = () => {
     const { products } = useSelector((state) => state.cart);
-    // const newRecom = products.filter((product) =>
-    //     product.tags?.some((tag) => tag.name === '제철과일' && tag.rank <= 5)
-    // );
+
     const navigate = useNavigate();
 
     const onClick1 = () => {
         navigate('/sideDish');
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
+
     const onClick2 = () => {
-        navigate('/sideDish');
+        navigate('/healFood');
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
 
     return (
@@ -61,9 +61,11 @@ const Content4 = () => {
                         <SubscribeUl />
                     </div>
                 </section>
-                <section className="health-sub-wrap">
+                {/* 반찬구독 */}
+                <section className="health-sub-wrap" onClick={onClick2}>
                     <HealthList />
                 </section>
+                {/* 건강식품구독 */}
             </Content4Style>
         </ContentStyle>
     );

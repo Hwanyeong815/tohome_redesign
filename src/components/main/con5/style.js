@@ -18,7 +18,7 @@ export const Content05Style = styled.div`
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid #000;
+
             position: relative;
             &:hover {
                 cursor: pointer;
@@ -134,11 +134,13 @@ export const Content05Style = styled.div`
         .recipe-body {
             margin-top: 120px;
             li {
+                position: relative;
                 .img-wrap {
                     width: 250px;
-                    height: 306px;
+                    /* height: 306px; */
                     img {
                         width: 100%;
+                        opacity: 0;
                     }
                 }
             }
@@ -185,6 +187,4 @@ export const Content05Style = styled.div`
             background-color: transparent;
         }
     }
-
-    /* background-position: 0 0; */
 `;

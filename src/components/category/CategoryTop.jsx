@@ -1,40 +1,51 @@
+import { useSelector } from 'react-redux';
 import { CategoryTopWrap, CategorySub } from './style';
-import { Link } from 'react-router-dom';
 
-const CategoryTop = () => {
+const categoryIcons = {
+    fruit: 'menu_icon_01.png',
+    grain: 'menu_icon_02.png',
+    seafood: 'menu_icon_03.png',
+    meat: 'menu_icon_04.png',
+    rice: 'menu_icon_05.png',
+    side: 'menu_icon_06.png',
+    seasoning: 'menu_icon_07.png',
+    bakery: 'menu_icon_08.png',
+    snack: 'menu_icon_09.png',
+    liquid: 'menu_icon_10.png',
+};
+
+const CategoryTop = ({ categoryID, onSelectSub, selectedSub }) => {
+    const categories = useSelector((state) => state.category.categories);
+    const categoryData = categories[categoryID];
+    const title = categoryData?.products[0]?.category.main || '카테고리';
+    const subCategories = categoryData
+        ? [...new Set(categoryData.products.map((p) => p.category.sub))]
+        : [];
+    const iconSrc = categoryIcons[categoryID]
+        ? `/images/category/${categoryIcons[categoryID]}`
+        : undefined;
+
     return (
         <>
             <CategoryTopWrap>
                 <h2 className="categoty-title">
-                    <img src="/images/category/menu_icon_01.png" alt="" />
-                    과일·채소
+                    {iconSrc && <img src={iconSrc} alt={title} />}
+                    {title}
                 </h2>
             </CategoryTopWrap>
             <CategorySub>
-                <li>
-                    <Link to="/">전체보기</Link>
+                <li className="show-all" onClick={() => onSelectSub(null)}>
+                    전체보기
                 </li>
-                <li>
-                    <Link to="/">계절 과일</Link>
-                </li>
-                <li>
-                    <Link to="/">일상 채소</Link>
-                </li>
-                <li>
-                    <Link to="/">버섯·나물·두부</Link>
-                </li>
-                <li>
-                    <Link to="/">샐러드·쌈채소</Link>
-                </li>
-                <li>
-                    <Link to="/">냉동·간편·건과일</Link>
-                </li>
-                <li>
-                    <Link to="/">H·SWEET·약속농장</Link>
-                </li>
-                <li>
-                    <Link to="/">산들내음</Link>
-                </li>
+                {subCategories.map((sub, idx) => (
+                    <li
+                        key={idx}
+                        className={selectedSub === sub ? 'active' : ''}
+                        onClick={() => onSelectSub(sub)}
+                    >
+                        {sub}
+                    </li>
+                ))}
             </CategorySub>
         </>
     );

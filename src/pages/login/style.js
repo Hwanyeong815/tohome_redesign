@@ -39,6 +39,9 @@ export const LoginStyle = styled.div`
                 margin-bottom: 40px;
             }
             .txtbox {
+                &-wrap {
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                }
                 width: 450px;
                 height: 60px;
                 padding: 15px 20px;
@@ -48,7 +51,7 @@ export const LoginStyle = styled.div`
                 justify-content: left;
                 align-items: center;
                 margin-bottom: -1px;
-                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
                 i {
                     color: #9e9e9e;
                     font-size: 20px;
@@ -164,5 +167,21 @@ export const JoinStyle = styled.div`
     }
     p {
         text-align: center;
+    }
+    .btn-wrap {
+        width: 100%;
+        position: relative;
+        .join-btn {
+            cursor: pointer;
+            font-size: 15px;
+            color: white;
+            width: 240px;
+            height: 40px;
+            margin-top: 60px;
+            background-color: #3c6039;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 `;

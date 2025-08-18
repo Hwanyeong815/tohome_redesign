@@ -6,9 +6,18 @@ export const SideDishStyle = styled.div`
     height: 1700px;
     margin-bottom: 150px;
     .banner {
-        width: 100%;
+        width: 100vw;
         height: 796px;
+
         z-index: 0;
+        position: relative;
+        img {
+            width: 100vw;
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         .txt-box {
             width: 1000px;
             position: absolute;

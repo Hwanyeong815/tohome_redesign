@@ -8,9 +8,28 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { useState } from 'react';
+import { MdOutlineWatchLater } from 'react-icons/md';
+import { useEffect, useState } from 'react';
 
 const MainRecom = () => {
+    const [time, setTime] = useState(3 * 60 * 60);
+
+    useEffect(() => {
+        if (time <= 0) return;
+
+        const timer = setInterval(() => {
+            setTime((prev) => prev - 3);
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [time]);
+
+    const formatTime = (seconds) => {
+        const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
+        const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+        const s = String(seconds % 60).padStart(2, '0');
+        return `${h} : ${m} : ${s}`;
+    };
     return (
         <>
             <h2 className="main-title">추천상품</h2>
@@ -18,13 +37,19 @@ const MainRecom = () => {
                 modules={[Autoplay, Pagination]}
                 spaceBetween={0}
                 slidesPerView={1}
-                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                autoplay={{ delay: 4000, disableOnInteraction: true }}
                 pagination={{ clickable: true }}
                 loop={true}
             >
                 <SwiperSlide>
                     <img className="back" src="/images/main/mainRecom1.png" alt="" />
-                    <h3 className="sub-title">좋은 한끼를 위한 MD의 작은 제안</h3>
+                    <h3 className="sub-title">
+                        좋은 한끼를 위한 MD의 작은 제안
+                        <span className="timer">
+                            <MdOutlineWatchLater />
+                            {formatTime(time)}
+                        </span>
+                    </h3>
                     <section>
                         <div className="left">
                             <strong>MD’s PICK</strong>
@@ -42,7 +67,7 @@ const MainRecom = () => {
                                 <img src="/images/main/mainRecom1.png" alt="" />
                             </div>
                             <div className="txts">
-                                <p>MD’s PICK</p>
+                                <p>MD&quot;s PICK</p>
                                 <p>오늘의 타임특가</p>
                                 <p>오늘의 브랜드</p>
                             </div>
@@ -52,10 +77,13 @@ const MainRecom = () => {
                 <SwiperSlide>
                     <img className="back" src="/images/main/mainRecom2.png" alt="" />
                     <h3 className="sub-title">오늘 이 시간, 더 가볍게 만나는 건강 간식</h3>
+
                     <section>
                         <div className="left">
                             <strong>오늘의 타임특가</strong>
+
                             <h2>[modoo] 모두의 데일리 서리태 볶음콩 (33입/박스)</h2>
+
                             <div className="txt">
                                 <p>건강한 간식으로 사랑받는 서리태 볶음콩 선물세트를</p>
                                 <p>오늘 하루, 특별한 가격에 준비했어요.</p>

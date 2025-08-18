@@ -1,20 +1,67 @@
-const GiftBestItem = () => {
+import { Link } from 'react-router-dom';
+import { BsCart2, BsSuitHeart } from 'react-icons/bs';
+
+const GiftBestItem = ({ gift }) => {
+    const {
+        name,
+        price,
+        discountedPrice,
+        isDiscounted,
+        discountRate,
+        thumbnailImage,
+        tags,
+    } = gift;
+    const bestTag = tags.find((tag) => tag.name === '베스트10');
     return (
         <li>
-            <div className="best-img">
-                <img src="/images/gift/01.jpg" alt="" />
-                <span className="ranking">1</span>
-            </div>
-            <h3>
-                [그랑크리 드 바츠] <br />
-                선물세트 B (3개입)
-            </h3>
-            <div className="price-box">
-                <p className="discount">41,220원</p>
-                <p className="price">
-                    <span>10%</span>45,800원
-                </p>
-            </div>
+            <Link to="">
+                <div className="best-img">
+                    <img src={thumbnailImage} alt={name} />
+                    <span className="ranking">
+                        {bestTag ? bestTag.rank : ''}
+                    </span>
+                    <div className="overlay">
+                        <button className="icon-btn">
+                            <BsSuitHeart />
+                        </button>
+                        <button className="icon-btn">
+                            <BsCart2 />
+                        </button>
+                    </div>
+                </div>
+                <h3>
+                    {' '}
+                    {name.split('\n').map((line, idx) => (
+                        <span key={idx}>
+                            {line}
+                            <br />
+                        </span>
+                    ))}
+                </h3>
+                <div className="price-box">
+                    {isDiscounted ? (
+                        <p className="discount">
+                            {price
+                                .toString()
+                                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                            원
+                        </p>
+                    ) : (
+                        <p className="discount">{''}</p>
+                    )}
+                    <p className="price">
+                        {isDiscounted && <span>{discountRate}%</span>}
+                        {isDiscounted
+                            ? discountedPrice
+                                  .toString()
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                            : price
+                                  .toString()
+                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        원
+                    </p>
+                </div>
+            </Link>
         </li>
     );
 };

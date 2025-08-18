@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import FaqItem from './FaqItem';
 import { FaqStyle, FaqTap } from './style';
-import { supportActions } from '../../../store/modules/supportSlice';
 import { useEffect, useState } from 'react';
 import FaqList from './FaqList';
 import Pagination from '../../pagination';
@@ -46,7 +44,7 @@ const Faq = () => {
                 dispatch={dispatch}
                 faqs={faqs}
             />
-            <Pagination />
+            {/* <Pagination /> */}
         </FaqStyle>
     );
 };

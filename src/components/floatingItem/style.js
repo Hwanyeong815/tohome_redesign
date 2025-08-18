@@ -76,7 +76,7 @@ export const FloatingBtnStyle = styled.div`
 export const FloatingMenuStyle = styled.div`
     z-index: 10;
     position: absolute;
-    top: 270px;
+    top: 220px;
     right: 20px;
     padding: 20px;
     border-radius: 16px;

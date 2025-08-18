@@ -424,7 +424,7 @@ export default [
         discountRate: null,
         pricePerUnit: '100g당 1,500원',
 
-        img: '/images/product/product08.png',
+        thumbnailImage: '/images/product/product08.png',
 
         category: {
             main: '육류·달걀',

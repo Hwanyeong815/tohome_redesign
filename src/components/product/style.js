@@ -16,7 +16,6 @@ export const ProductStyle = styled.ul`
 export const ProductItemStyle = styled.li`
     display: flex;
     flex-wrap: wrap;
-
     gap: 60px;
 
     li {
@@ -29,6 +28,7 @@ export const ProductItemStyle = styled.li`
         .img-wrap {
             position: relative;
             overflow: hidden;
+
             img {
                 width: 250px;
                 height: 305px;

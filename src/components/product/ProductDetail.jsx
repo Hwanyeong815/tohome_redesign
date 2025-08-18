@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { ProductDetailStyle } from './style';
@@ -8,11 +7,18 @@ import DetailArt from './productDetail/DetailArt';
 import { useState } from 'react';
 
 const ProductDetail = () => {
-    const { productID } = useParams();
-    const { products } = useSelector((state) => state.cart);
-    const obj = products.find((product) => product.id === Number(productID));
+    const { productID } = useParams(); // 🔥 두 개 다 꺼내짐
+    const { products, menus, specials } = useSelector((state) => state.cart);
+    const AllMenus = [...products, ...menus, ...specials];
+
+    const CATEGORY_LIST = ['best', 'food', 'drink'];
+
+    const obj = AllMenus.find((product) => product.id === Number(productID));
+
+    if (!obj)
+        return <p style={{ textAlign: 'center', padding: '30px' }}>상품을 찾을 수 없습니다.</p>;
+
     const {
-        id,
         name,
         des,
         price,

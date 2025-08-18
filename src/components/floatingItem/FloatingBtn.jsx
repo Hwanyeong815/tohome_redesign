@@ -42,10 +42,7 @@ const FloatingBtn = () => {
                 <FloatingBtnStyle>
                     <div>
                         <p className="img-box" onClick={onClick1}>
-                            <img
-                                src="/images/icon/icon_dawnDelivery.png"
-                                alt="새벽배송"
-                            />
+                            <img src="/images/icon/icon_dawnDelivery.png" alt="새벽배송" />
                             새벽배송
                         </p>
                         <p className="img-box">

@@ -1,23 +1,22 @@
-import { BsCart2, BsSuitHeart } from 'react-icons/bs';
+import { useState } from 'react';
+import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const GiftListItem = ({ gift }) => {
-    const {
-        thumbnailImage,
-        name,
-        price,
-        discountedPrice,
-        isDiscounted,
-        discountRate,
-    } = gift;
+    const { thumbnailImage, name, price, discountedPrice, isDiscounted, discountRate } = gift;
+    const [hoverHeart, setHoverHeart] = useState(false);
     return (
         <li>
             <Link to="">
                 <div className="img-wrap">
                     <img src={thumbnailImage} alt={name} />
                     <div className="overlay">
-                        <button className="icon-btn">
-                            <BsSuitHeart />
+                        <button
+                            className="icon-btn"
+                            onMouseEnter={() => setHoverHeart(true)}
+                            onMouseLeave={() => setHoverHeart(false)}
+                        >
+                            {hoverHeart ? <BsSuitHeartFill /> : <BsSuitHeart />}
                         </button>
                         <button className="icon-btn">
                             <BsCart2 />
@@ -35,10 +34,7 @@ const GiftListItem = ({ gift }) => {
                     <div className="price-box">
                         {isDiscounted ? (
                             <p className="discount">
-                                {price
-                                    .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                                원
+                                {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
                             </p>
                         ) : (
                             <p className="discount">{''}</p>
@@ -46,12 +42,8 @@ const GiftListItem = ({ gift }) => {
                         <p className="price">
                             {isDiscounted && <span>{discountRate}%</span>}
                             {isDiscounted
-                                ? discountedPrice
-                                      .toString()
-                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                                : price
-                                      .toString()
-                                      .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                                ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                                : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                             원
                         </p>
                     </div>

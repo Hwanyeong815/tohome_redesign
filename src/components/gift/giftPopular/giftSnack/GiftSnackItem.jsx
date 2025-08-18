@@ -1,23 +1,22 @@
 import { Link } from 'react-router-dom';
-import { BsCart2, BsSuitHeart } from 'react-icons/bs';
+import { useState } from 'react';
+import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 
 const GiftSnackItem = ({ snc }) => {
-    const {
-        name,
-        price,
-        discountedPrice,
-        isDiscounted,
-        discountRate,
-        thumbnailImage,
-    } = snc;
+    const { name, price, discountedPrice, isDiscounted, discountRate, thumbnailImage } = snc;
+    const [hoverHeart, setHoverHeart] = useState(false);
     return (
         <li>
             <Link to="">
                 <div className="popular-img">
                     <img src={thumbnailImage} alt={name} />
                     <div className="overlay">
-                        <button className="icon-btn">
-                            <BsSuitHeart />
+                        <button
+                            className="icon-btn"
+                            onMouseEnter={() => setHoverHeart(true)}
+                            onMouseLeave={() => setHoverHeart(false)}
+                        >
+                            {hoverHeart ? <BsSuitHeartFill /> : <BsSuitHeart />}
                         </button>
                         <button className="icon-btn">
                             <BsCart2 />
@@ -36,10 +35,7 @@ const GiftSnackItem = ({ snc }) => {
                 <div className="price-box">
                     {isDiscounted ? (
                         <p className="discount">
-                            {price
-                                .toString()
-                                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                            원
+                            {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
                         </p>
                     ) : (
                         <p className="discount">{''}</p>
@@ -47,12 +43,8 @@ const GiftSnackItem = ({ snc }) => {
                     <p className="price">
                         {isDiscounted && <span>{discountRate}%</span>}
                         {isDiscounted
-                            ? discountedPrice
-                                  .toString()
-                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                            : price
-                                  .toString()
-                                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                            ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                            : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                         원
                     </p>
                 </div>

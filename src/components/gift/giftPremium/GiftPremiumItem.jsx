@@ -1,18 +1,24 @@
-import { BsCart2, BsSuitHeart } from 'react-icons/bs';
+import { useState } from 'react';
+import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const GiftPremiumItem = ({ gift }) => {
     const { name, price, thumbnailImage, tags, details } = gift;
     const deliveryTag = tags.find((tag) => tag.name === '프리미엄');
     const best10Tag = tags.find((tag) => tag.name === '베스트10');
+    const [hoverHeart, setHoverHeart] = useState(false);
     return (
         <li>
             <Link to="">
                 <div className="premium-img">
                     <img src={thumbnailImage} alt={name} />
                     <div className="overlay">
-                        <button className="icon-btn">
-                            <BsSuitHeart />
+                        <button
+                            className="icon-btn"
+                            onMouseEnter={() => setHoverHeart(true)}
+                            onMouseLeave={() => setHoverHeart(false)}
+                        >
+                            {hoverHeart ? <BsSuitHeartFill /> : <BsSuitHeart />}
                         </button>
                         <button className="icon-btn">
                             <BsCart2 />
@@ -31,18 +37,11 @@ const GiftPremiumItem = ({ gift }) => {
                 <div>
                     <ul className="price-box">
                         <li className="price-dsc">
-                            <span>
-                                {deliveryTag ? details.deliveryType : ''}
-                            </span>
-                            {deliveryTag && best10Tag && (
-                                <span>{best10Tag.name}</span>
-                            )}
+                            <span>{deliveryTag ? details.deliveryType : ''}</span>
+                            {deliveryTag && best10Tag && <span>{best10Tag.name}</span>}
                         </li>
                         <li className="price">
-                            {price
-                                .toString()
-                                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                            원
+                            {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
                         </li>
                     </ul>
                 </div>

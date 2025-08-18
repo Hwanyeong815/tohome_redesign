@@ -73,11 +73,11 @@ export const GiftBestListWrap = styled.ul`
                 position: absolute;
                 left: 20px;
                 top: 20px;
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
                 background-color: #3c6039;
                 color: #fff;
-                font-size: 55px;
+                font-size: 40px;
                 text-align: center;
                 line-height: 1.3;
             }

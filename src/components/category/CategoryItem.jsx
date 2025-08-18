@@ -1,16 +1,22 @@
-import { BsCart2, BsSuitHeart } from 'react-icons/bs';
+import { useState } from 'react';
+import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const CategoryItem = ({ product }) => {
     const { thumbnailImage, name, price, discountedPrice, isDiscounted, discountRate } = product;
+    const [hoverHeart, setHoverHeart] = useState(false);
     return (
         <li>
             <Link to="">
                 <div className="img-wrap">
                     <img src={thumbnailImage} alt={name} />
                     <div className="overlay">
-                        <button className="icon-btn">
-                            <BsSuitHeart />
+                        <button
+                            className="icon-btn"
+                            onMouseEnter={() => setHoverHeart(true)}
+                            onMouseLeave={() => setHoverHeart(false)}
+                        >
+                            {hoverHeart ? <BsSuitHeartFill /> : <BsSuitHeart />}
                         </button>
                         <button className="icon-btn">
                             <BsCart2 />

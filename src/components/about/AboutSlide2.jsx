@@ -26,32 +26,23 @@ const AboutSlide2 = ({ about }) => {
                 <strong>{title}</strong>
                 <p>{des}</p>
                 <ul className="AboutMagazine">
-                    <Link to="/magazine">
-                        <li>
-                            <small>{magazine}</small>
-                            <div className="AboutBanner">
-                                <p>{bannersubl}</p>
-                                <em>{bannersubttll}</em>
-                                <img
-                                    src="/images/about/about_arrow.png"
-                                    alt=""
-                                />
-                            </div>
-                        </li>
-                    </Link>
-                    <Link to="/magazine">
-                        <li>
-                            <small>{magazine}</small>
-                            <div className="AboutBanner">
-                                <p>{bannersubr}</p>
-                                <em>{bannersubttlr}</em>
-                                <img
-                                    src="/images/about/about_arrow.png"
-                                    alt=""
-                                />
-                            </div>
-                        </li>
-                    </Link>
+                    <li>
+                        <small>{magazine}</small>
+                        <div className="AboutBanner">
+                            <p>{bannersubl}</p>
+                            <em>{bannersubttll}</em>
+                            <img src="/images/about/about_arrow.png" alt="" />
+                        </div>
+                    </li>
+
+                    <li>
+                        <small>{magazine}</small>
+                        <div className="AboutBanner">
+                            <p>{bannersubr}</p>
+                            <em>{bannersubttlr}</em>
+                            <img src="/images/about/about_arrow.png" alt="" />
+                        </div>
+                    </li>
                 </ul>
             </li>
         </AboutSlideItem>

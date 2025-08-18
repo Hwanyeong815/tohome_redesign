@@ -57,21 +57,37 @@ export const CategoryFilterWrap = styled.div`
         }
         li {
             font-size: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 12px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
         }
         label {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 10px;
             input[type='checkbox'] {
-                width: 20px;
-                height: 20px;
+                display: none;
+            }
+            .custom-check {
+                width: 24px;
+                height: 24px;
                 border: 1px solid #1a3c22;
+                border-radius: 4px;
+                background-size: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: all 0.2s;
+                cursor: pointer;
+            }
+            input[type='checkbox']:checked + .custom-check {
+                background-image: url('/images/category/category_check.png');
             }
         }
     }
     .filter-button {
         font-size: 15px;
+        margin-top: 30px;
         button {
             width: 120px;
             height: 35px;

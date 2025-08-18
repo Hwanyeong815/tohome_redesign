@@ -159,6 +159,7 @@ export const AboutSlideItem = styled.ul`
             padding: 30px;
             width: 250px;
             border: 1px solid #888;
+            cursor: pointer;
 
             small {
                 font-size: 14px;

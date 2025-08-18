@@ -312,7 +312,7 @@ export const JoinInfoStyle = styled.div`
                 position: relative;
                 width: 100%;
                 height: 100%;
-                background-color: aqua;
+                /* background-color: aqua; */
             }
             .arrowDown {
                 font-size: 30px;
@@ -324,6 +324,22 @@ export const JoinInfoStyle = styled.div`
             border: 1px solid #000;
             width: 100%;
             box-sizing: border-box;
+            max-height: 300px;
+            overflow-y: auto;
+
+            p {
+                text-align: left;
+                line-height: 1.4;
+            }
+            .checkbox {
+                /* border: 1px solid #000; */
+                padding-left: 20px;
+                padding-bottom: 10px;
+                &:last-of-type {
+                    padding-bottom: 0;
+                }
+                height: 40px;
+            }
         }
     }
 `;

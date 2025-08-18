@@ -1,14 +1,45 @@
 import styled from 'styled-components';
 
 export const BestWrap = styled.div`
-    .inner {
+    .top-wrap {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #333;
+            width: 1200px;
+            height: 1px;
+            left: 50%;
+            top: 53%;
+            transform: translateX(-50%);
+        }
     }
-    h2 {
-    }
-    p {
-        text-align: center;
-    }
-    .top-line {
-        border: 1px solid #000;
+    .filter-wrap {
+        display: flex;
+        justify-content: end;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        p {
+            cursor: pointer;
+            position: relative;
+            font-size: 15px;
+            color: #666;
+            &.on {
+                font-weight: 700;
+            }
+            &:not(:last-child) {
+                margin-right: 20px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 60%;
+                    background-color: #666;
+                    right: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
     }
 `;

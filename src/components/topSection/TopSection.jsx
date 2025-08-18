@@ -1,7 +1,7 @@
 import { TitleBox } from './style';
-const TopSection = ({ title, subtitle, borderTop, borderBottom }) => {
+const TopSection = ({ title, subtitle, $borderTop, $borderBottom }) => {
     return (
-        <TitleBox borderTop={borderTop} borderBottom={borderBottom}>
+        <TitleBox $borderTop={$borderTop} $borderBottom={$borderBottom}>
             <h2>
                 <img src="/images/directDelivery/icon/title.png" alt="" />
                 {title}

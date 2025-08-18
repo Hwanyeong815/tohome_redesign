@@ -9,7 +9,11 @@ const Category = () => {
     const [selectedSub, setSelectedSub] = useState(null);
     return (
         <CategoryWrap>
-            <CategoryTop categoryID={categoryID} onSelectSub={setSelectedSub} />
+            <CategoryTop
+                categoryID={categoryID}
+                onSelectSub={setSelectedSub}
+                selectedSub={selectedSub}
+            />
             <CategoryBox categoryID={categoryID} selectedSub={selectedSub} />
         </CategoryWrap>
     );

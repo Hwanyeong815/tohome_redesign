@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const CheckboxStyle = styled.label`
+    .checkbox-wrap {
+        position: relative;
+    }
+
     display: inline-flex;
     align-items: center;
     cursor: pointer;
@@ -12,10 +16,10 @@ export const CheckboxStyle = styled.label`
     position: absolute;
     /* top: 15px; */
     /* right: 15px; */
-    top: ${(props) => props.top || '0px'};
-    right: ${(props) => props.right || '0px'};
-    left: ${(props) => props.left || '0px'};
-    bottom: ${(props) => props.bottom || '0px'};
+    top: ${(props) => props.$top || 'auto'};
+    right: ${(props) => props.$right || 'auto'};
+    left: ${(props) => props.$left || 'auto'};
+    bottom: ${(props) => props.$bottom || 'auto'};
 
     .custom-check {
         width: 30px;
@@ -23,8 +27,8 @@ export const CheckboxStyle = styled.label`
         border: 2px solid #b1b1b1;
         border-radius: 5px;
         background-color: white;
-
         margin-right: 8px;
+        position: relative;
     }
     input:checked + .custom-check {
         border-color: #ff7259;
@@ -34,7 +38,7 @@ export const CheckboxStyle = styled.label`
         content: '';
         position: absolute;
         top: 50%;
-        left: 40%;
+        left: 50%;
         transform: translate(-50%, -50%);
         background-image: url('/images/icon/icon_check.png');
         background-size: cover;

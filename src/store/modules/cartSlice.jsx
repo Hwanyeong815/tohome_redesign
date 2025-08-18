@@ -15,10 +15,13 @@ import menu10Data from '../../assets/data/menu10Data.js';
 import specialBrandData from '../../assets/data/specialBrandData.js';
 
 const initialState = {
-    carts: localStorage.getItem('carts') ? JSON.parse(localStorage.getItem('carts')) : [],
+    carts: localStorage.getItem('carts')
+        ? JSON.parse(localStorage.getItem('carts'))
+        : [],
     products: productData,
     sideDishes: sideDishData,
     gifts: giftData,
+    sortType: '판매량순',
     menus: [
         ...menu01Data,
         ...menu02Data,
@@ -41,7 +44,9 @@ export const cartSlice = createSlice({
             state.carts.push(action.payload);
         },
         removeFromCart: (state, action) => {
-            state.carts = state.carts.filter((item) => item.id !== action.payload);
+            state.carts = state.carts.filter(
+                (item) => item.id !== action.payload
+            );
         },
         clearCart: (state) => {
             state.carts = [];
@@ -49,6 +54,12 @@ export const cartSlice = createSlice({
         addMultipleToCart: (state, action) => {
             // action.payload: 합쳐서 넣고 싶은 배열
             state.carts.push(...action.payload);
+        },
+        setCurrentCategory(state, action) {
+            state.currentCategory = action.payload;
+        },
+        setSortType(state, action) {
+            state.sortType = action.payload;
         },
     },
 });

@@ -18,7 +18,6 @@ const CategoryItem = ({ product }) => {
                     </div>
                 </div>
                 <h3>
-                    {' '}
                     {name.split('\n').map((line, idx) => (
                         <span key={idx}>
                             {line}
@@ -29,14 +28,17 @@ const CategoryItem = ({ product }) => {
                 <div className="price-box">
                     {isDiscounted ? (
                         <p className="discount">
-                            {discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+                            {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
                         </p>
                     ) : (
                         <p className="discount">{''}</p>
                     )}
                     <p className="price">
                         {isDiscounted && <span>{discountRate}%</span>}
-                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+                        {isDiscounted
+                            ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                            : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        원
                     </p>
                 </div>
             </Link>

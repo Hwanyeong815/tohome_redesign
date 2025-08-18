@@ -12,6 +12,7 @@ const SideDish = () => {
             offset: 80,
         });
     }, []);
+
     return (
         <SideDishStyle>
             <div className="banner">

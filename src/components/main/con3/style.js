@@ -1,18 +1,16 @@
 import styled from 'styled-components';
 
 export const Content3Style = styled.div`
-    .main-about {
-        &:hover {
-            cursor: pointer;
-            .main-about-btn {
-                background-color: white;
-                color: #333;
-                border-color: white;
-            }
-        }
-    }
     .main {
         &-about {
+            &:hover {
+                cursor: pointer;
+                .main-about-btn {
+                    background-color: white;
+                    color: #333;
+                    border-color: white;
+                }
+            }
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -69,7 +67,7 @@ export const Content3Style = styled.div`
         }
     }
     .brand-about {
-        margin-top: 150px;
+        margin-top: 350px;
         h2 {
             margin-bottom: 115px;
         }
@@ -167,6 +165,7 @@ export const Content3Style = styled.div`
         }
     }
     .main-dawn-wrap {
+        cursor: pointer;
         margin-top: 150px;
         width: 100%;
         height: 300px;

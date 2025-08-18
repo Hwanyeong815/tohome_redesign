@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeUp = keyframes`
+0%{
+    opacity: 0;
+    transform: translateY(20px);
+}
+100%{
+    opacity: 1;
+    transform: translateY(0);
+}
+`;
 
 export const AboutTopWrap = styled.div`
     width: 100%;
@@ -8,7 +19,14 @@ export const AboutTopWrap = styled.div`
     background-position: 0 0;
     margin-top: 50px;
     text-align: center;
+    .about-logo,
+    .about-title,
+    .about-text {
+        opacity: 0;
+    }
     .about-logo {
+        animation: ${fadeUp} 0.7s ease-out forwards;
+        animation-delay: 0.5s;
         &::after {
             content: '';
             width: 45px;
@@ -24,6 +42,8 @@ export const AboutTopWrap = styled.div`
     .about-title {
         font-size: 34px;
         margin-bottom: 100px;
+        animation: ${fadeUp} 0.7s ease-out forwards;
+        animation-delay: 0.9s;
         span {
             color: #666;
         }
@@ -33,6 +53,8 @@ export const AboutTopWrap = styled.div`
         margin: auto;
         background-color: #fff;
         padding: 75px 0;
+        animation: ${fadeUp} 0.7s ease-out forwards;
+        animation-delay: 1.2s;
         p {
             line-height: 2;
         }

@@ -62,7 +62,7 @@ const JoinItem = () => {
                                     </td>
                                     <td>
                                         <input
-                                            type=""
+                                            type="password"
                                             name="userpassword2"
                                             id="userpassword2"
                                             placeholder="ex)rere0811@"

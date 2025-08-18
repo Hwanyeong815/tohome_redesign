@@ -1,16 +1,17 @@
+import { info } from 'sass';
+
 export default [
     {
         id: 1,
         name: '[그리니팅] 진짜레몬 (80ml*5개입)',
-        des: '100% 순수 레몬즙',
+        des: '레몬 4개를 통쨰로 한 팩에. 시칠리아 레몬공장에서 착즙한 유기농 레몬즙',
         price: 27400,
         discountedPrice: 20550,
         isDiscounted: true,
         discountRate: 25,
         pricePerUnit: '100g당 가격: 5,138원',
 
-        thumbnailImage:
-            'https://tohomeimage.thehyundai.com/PD/PDImages/S/1/5/8/8805489004851_01.jpg?RS=720x864',
+        thumbnailImage: '/images/product/product01.png',
 
         category: {
             main: '과일·채소',
@@ -19,7 +20,7 @@ export default [
 
         tags: [
             { name: '베스트', rank: 1 },
-            // { name: '신상품', rank: 10 },
+            { name: '신상품', rank: 10 },
         ],
 
         details: {
@@ -62,15 +63,14 @@ export default [
     {
         id: 2,
         name: '[새벽시장] 수박 7kg (1통)',
-        des: '폭염으로 인해 상품의 당도가 다소 떨어질 수 있습니다. 구매 후 당일 섭취 부탁드립니다. 품질관리를 위해 노력하겠습니다.',
+        des: '봄 여름 단짝, 달콤한 수박. 시원하고 아삭한 과육과 풍부한 과즙에서 느껴지는 달콤함!',
         price: 57200,
         discountedPrice: null,
         isDiscounted: false,
         discountRate: null,
         pricePerUnit: '100g당 817원',
 
-        thumbnailImage:
-            'https://tohomeimage.thehyundai.com/PD/PDImages/S/9/7/2/2810000388279_01.jpg?RS=720x864',
+        thumbnailImage: '/images/product/product02.png',
 
         category: {
             main: '과일·채소',
@@ -79,7 +79,7 @@ export default [
 
         tags: [
             { name: '베스트', rank: 2 },
-            // { name: '신상품', rank: 11 },
+            { name: '신상품', rank: 11 },
         ],
 
         details: {
@@ -122,15 +122,14 @@ export default [
     {
         id: 3,
         name: '[새벽시장] 불로초 감귤 (1.5kg)',
-        des: null,
+        des: '제주감귤 대표 브랜드로 최상위의 맛과 영양. 입안가득 새콤달콤한 과즙을 느껴보세요!',
         price: 27200,
         discountedPrice: 24480,
         isDiscounted: true,
         discountRate: 10,
         pricePerUnit: '100g당 1,632원',
 
-        thumbnailImage:
-            'https://tohomeimage.thehyundai.com/PD/PDImages/S/4/8/1/8806079995184_00.jpg?RS=720x864',
+        thumbnailImage: '/images/product/product03.png',
 
         category: {
             main: '과일·채소',
@@ -139,7 +138,7 @@ export default [
 
         tags: [
             { name: '베스트', rank: 3 },
-            // { name: '신상품', rank: 12 },
+            { name: '신상품', rank: 12 },
         ],
 
         details: {
@@ -181,16 +180,15 @@ export default [
     },
     {
         id: 4,
-        name: '[암소한우] 한우 1등급 채끝스테이크 300g (냉장)',
-        des: '도축장명 및 축산물 이력번호는 상품 패키지에 개별 표기되어있습니다.',
+        name: '[로버츠베리에] 야생 빌베리 (12pack)',
+        des: '한 잔에 담긴 핀란드 야생 베리. 껍질과 씨앗까지 온전히 담은 풍부한 영양 음료',
         price: 27200,
         discountedPrice: 24480,
         isDiscounted: true,
         discountRate: 10,
         pricePerUnit: '100g당 1,632원',
 
-        thumbnailImage:
-            'https://tohomeimage.thehyundai.com/PD/PDImages/S/7/1/6/8809168569617_00.jpg?RS=720x864',
+        thumbnailImage: '/images/product/product04.png',
 
         category: {
             main: '육류·달걀',
@@ -199,7 +197,7 @@ export default [
 
         tags: [
             { name: '베스트', rank: 4 },
-            // { name: '신상품', rank: 13 },
+            { name: '신상품', rank: 13 },
         ],
 
         details: {
@@ -241,16 +239,15 @@ export default [
     },
     {
         id: 5,
-        name: '[현대쌀집][백미4kg] 프리미엄 쌀',
-        des: '수령 후 냉장보관 권장합니다. 쌀은 신선식품으로 수령 후 2주이내 품질관련 문의 가능합니다.',
+        name: '[리치몬드 과자점] 밤 파이 세트 (10개입)',
+        des: '정성스럽게 빚은 달콤함. 밤을 닮은 둥근 모양 속 알밤을 통째 숨기고 있는 밤파이',
         price: 33600,
         discountedPrice: null,
         isDiscounted: false,
         discountRate: null,
         pricePerUnit: null,
 
-        thumbnailImage:
-            'https://tohomeimage.thehyundai.com/PD/PDImages/S/0/0/9/8809152871900_00.jpg?RS=720x864',
+        thumbnailImage: '/images/product/product05.png',
 
         category: {
             main: '육류·달걀',
@@ -259,7 +256,7 @@ export default [
 
         tags: [
             { name: '베스트', rank: 5 },
-            // { name: '신상품', rank: 14 },
+            { name: '신상품', rank: 14 },
         ],
 
         details: {
@@ -479,17 +476,16 @@ export default [
     {
         // https://tohome.thehyundai.com/front/pd/pdd/productDetail.do?slitmCd=S02006004336
         id: 9,
-        name: '[새벽시장]천봉엑셀라 복숭아 5입',
+        name: '[새벽시장] \n 천봉엑셀라 복숭아 5입',
         info: '복숭아 본연의 향긋한 향미와 핑크빛 과육',
-        des: '딱딱이 복숭아입니다.',
+        des: '복숭아 본연의 향긋한 향미와 핑크빛 과육',
         price: 32900,
         discountedPrice: 29610,
         isDiscounted: true,
         discountRate: 10,
         pricePerUnit: null,
 
-        thumbnailImage:
-            'https://tohomeimage.thehyundai.com/PD/PDImages/S/0/0/9/8809152871900_00.jpg?RS=720x864',
+        thumbnailImage: '/images/product/product09.png',
 
         category: {
             main: '과일·채소',
@@ -537,9 +533,9 @@ export default [
     },
     {
         id: 10,
-        name: '[주인환 농부]머스크 멜론, 2종',
+        name: '[주인환 농부] \n 머스크 멜론, 2종',
         info: '달콤한 향과 맛, 부드러운 식감의 머스크 멜론',
-        des: '딱딱이 복숭아입니다.',
+        des: '달콤한 향과 맛, 부드러운 식감의 머스크 멜론',
         price: 28000,
         discountedPrice: null,
         isDiscounted: false,
@@ -595,9 +591,9 @@ export default [
     },
     {
         id: 11,
-        name: '[새벽시장]후무사 자두 900g',
+        name: '[새벽시장] \n 후무사 자두 900g',
         info: '후숙 없이 신선할 때 즐기기 좋은 후무사 자두',
-        des: '',
+        des: '후숙 없이 신선할 때 즐기기 좋은 후무사 자두',
         price: 20300,
         discountedPrice: 18270,
         isDiscounted: true,
@@ -653,9 +649,9 @@ export default [
     },
     {
         id: 12,
-        name: '[새벽시장] 샤인머스캣 포도 1송이 (640g 이상)',
+        name: '[새벽시장] \n 샤인머스캣 포도 1송이 (640g 이상)',
         info: '알알이 꽉찬 달콤한 과즙의 샤인머스캣',
-        des: '',
+        des: '알알이 꽉찬 달콤한 과즙의 샤인머스캣',
         price: 28000,
         discountedPrice: 21000,
         isDiscounted: true,
@@ -711,9 +707,9 @@ export default [
     },
     {
         id: 13,
-        name: '[새벽시장] 수박 7kg (1통)',
+        name: '[새벽시장] \n 수박 7kg (1통)',
         info: '시원하고 아삭한 과육과 풍부한 과즙의 달콤한 수박',
-        des: '',
+        des: '시원하고 아삭한 과육과 풍부한 과즙의 달콤한 수박',
         price: 57200,
         discountedPrice: null,
         isDiscounted: false,
@@ -769,9 +765,9 @@ export default [
     },
     {
         id: 14,
-        name: '[경복궁BLACK] 영양삼계탕 (냉동)',
+        name: '[경복궁BLACK] \n 영양삼계탕 (냉동)',
         info: '몸에 좋은 한방 약재를 고아낸 삼계탕',
-        des: '',
+        des: '몸에 좋은 한방 약재를 고아낸 삼계탕',
         price: 15000,
         discountedPrice: null,
         isDiscounted: false,
@@ -827,8 +823,8 @@ export default [
     },
     {
         id: 15,
-        name: '[청해포구] 백점복 전복 선물세트',
-        // info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
+        name: '[청해포구] \n 백점복 전복 선물세트',
+        info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
         des: '',
         price: 82000,
         discountedPrice: null,
@@ -886,7 +882,7 @@ export default [
     {
         id: 16,
         name: '[풍천장어갤러리] \n 고창 풍천장어 2마리',
-        // info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
+        info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
         des: '',
         price: 55800,
         discountedPrice: 44600,
@@ -942,8 +938,8 @@ export default [
     },
     {
         id: 17,
-        name: '[경복궁BLACK] 영양갈비탕 (냉동)',
-        // info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
+        name: '[경복궁BLACK] \n 영양갈비탕 (냉동)',
+        info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
         des: '1kg(2인분), 2kg(4인분), 3kg(6인분), 4kg(8인분), 5kg(10인분) 입니다. 고창 풍천장어 활어 손질 후 초벌 중량 600g 2kg 이상 주문시부터 무료 배송입니다.',
         price: 15000,
         discountedPrice: 55800,
@@ -1000,7 +996,8 @@ export default [
     },
     {
         id: 18,
-        name: '[압구정 예향] 정성 가득 보양 삼계탕',
+        name: '[압구정 예향] \n 정성 가득 보양 삼계탕',
+        info: '30년 전통의 명가 경복궁의 육향 그윽한 갈비탕',
         des: '',
         price: 18000,
         discountedPrice: 16200,

@@ -25,8 +25,15 @@ export const MainCon1Style = styled.article`
                 h2 {
                     margin-top: 20px;
                     width: 310px;
+                    height: 60px;
                     white-space: break-spaces;
                     text-align: left;
+                }
+                h3 {
+                    font-size: 15px;
+                    white-space: pre-line;
+                    word-break: keep-all;
+                    /* padding: 0 10px; */
                 }
 
                 p {
@@ -94,6 +101,9 @@ export const MainCon1Style = styled.article`
                     font-size: 50px;
                 }
                 h4 {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
                     font-size: 32px;
                     padding: 55px 0;
                 }

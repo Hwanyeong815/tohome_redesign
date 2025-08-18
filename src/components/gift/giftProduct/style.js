@@ -29,6 +29,9 @@ export const GiftListTopWrap = styled.ul`
             margin-left: 0;
             color: #3c6039;
         }
+        &.active {
+            color: #386633;
+        }
     }
 `;
 
@@ -42,8 +45,9 @@ export const GiftProducts = styled.div`
             margin-left: 40px;
             cursor: pointer;
             position: relative;
-            a {
-                color: #666;
+            color: #666;
+            &.active {
+                color: #477c42;
             }
             &::after {
                 content: '';

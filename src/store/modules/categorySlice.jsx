@@ -12,6 +12,7 @@ import liquid from '../../assets/data/menu10Data.js';
 
 const initialState = {
     currentCategory: null,
+    sortType: '판매량순',
     categories: {
         fruit: { title: '과일·채소', products: fruit },
         grain: { title: '곡물·견과', products: grain },
@@ -31,6 +32,9 @@ export const categorySlice = createSlice({
     reducers: {
         setCurrentCategory(state, action) {
             state.currentCategory = action.payload;
+        },
+        setSortType(state, action) {
+            state.sortType = action.payload;
         },
     },
 });

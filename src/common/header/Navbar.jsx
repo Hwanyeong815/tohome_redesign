@@ -1,27 +1,50 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { NavStyle, SearchWrap, TopMenu } from './style';
 import FloatingMenu from '../../components/floatingItem/FloatingMenu';
 import { useState } from 'react';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { GoSearch } from 'react-icons/go';
+import { useDispatch, useSelector } from 'react-redux';
+import { authActions } from '../../store/modules/authSlice';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const { authed, user } = useSelector((state) => state.auth);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const onLogout = () => {
+        dispatch(authActions.logout(user));
+        navigate('/login');
     };
 
     return (
         <>
             <TopMenu className="top-menu">
-                <li>
-                    <Link to="/login">로그인</Link>
-                </li>
+                {authed ? (
+                    <>
+                        <li>
+                            <Link to="/">{user.name}님 환영합니다</Link>
+                        </li>
+                        <li onClick={onLogout}>
+                            <Link>로그아웃</Link>
+                        </li>
+                    </>
+                ) : (
+                    <>
+                        <li>
+                            <Link to="/login">로그인</Link>
+                        </li>
 
-                <li>
-                    <Link to="/join">회원가입</Link>
-                </li>
+                        <li>
+                            <Link to="/join">회원가입</Link>
+                        </li>
+                    </>
+                )}
+
                 <li>
                     <Link to="/support">고객센터</Link>
                 </li>

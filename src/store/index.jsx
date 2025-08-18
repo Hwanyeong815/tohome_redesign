@@ -3,6 +3,8 @@ import cart from './modules/cartSlice';
 import support from './modules/supportSlice';
 import pagination from './modules/paginationSlice';
 import category from './modules/categorySlice';
+import gift from './modules/giftSlice';
+import auth from './modules/authSlice';
 
 const store = configureStore({
     reducer: {
@@ -10,6 +12,8 @@ const store = configureStore({
         support,
         pagination,
         category,
+        gift,
+        auth,
     },
 });
 

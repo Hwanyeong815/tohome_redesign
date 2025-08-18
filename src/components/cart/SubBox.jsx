@@ -1,49 +1,104 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ItemBox } from './style';
-import { FaMinus } from 'react-icons/fa6';
-import { FaPlus } from 'react-icons/fa6';
-import { IoGiftOutline } from 'react-icons/io5';
-import { IoClose } from 'react-icons/io5';
+import { FaMinus, FaPlus } from 'react-icons/fa6';
+import { IoGiftOutline, IoClose } from 'react-icons/io5';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../store/modules/cartSlice';
 
-const SubBox = () => {
+// 문자열 금액 → 숫자 변환
+const toNum = (v) => {
+    const n = Number(String(v ?? '').replace(/[^\d.-]/g, ''));
+    return Number.isFinite(n) ? n : 0;
+};
+
+const SubBox = ({ cart, setIsCartTab }) => {
+    const {
+        id,
+        name,
+        price,
+        discountedPrice,
+        thumbnailImage,
+        pricePerUnit,
+        quantity,
+    } = cart;
+
+    const dispatch = useDispatch();
+
+    // 안전한 수량 + 합계 계산
+    const { qty, lineOriginal, lineDiscounted } = useMemo(() => {
+        const qtySafe = Number(quantity) || 1;
+        const priceNum = toNum(price);
+        const discNum = discountedPrice != null ? toNum(discountedPrice) : null;
+
+        return {
+            qty: qtySafe,
+            lineOriginal: priceNum * qtySafe,
+            lineDiscounted: discNum != null ? discNum * qtySafe : null,
+        };
+    }, [price, discountedPrice, quantity]);
+    // console.log(unitWeight);
     return (
         <ItemBox>
-            {/* <div className="subBox"> */} 
-            <div className="image"></div>
+            <img className="image" src={thumbnailImage} alt={name} />
             <div className="txt">
-                <div className="brandName">
-                    <p>[브랜드이름]</p>
-                </div>
+                {/* <div className="brandName">
+                    <p>{manufacturer}</p>
+                </div> */}
+
                 <div className="name">
-                    <p>제품명</p>
-                    <span>제품명 무게 (냉동여부)</span>
+                    <p>{name}</p>
+                    <span>{pricePerUnit}</span>
                 </div>
+
                 <div className="price">
-                    <p>17,900원</p>
-                    <span>25,580</span>
+                    {lineDiscounted != null ? (
+                        <>
+                            <p>{lineDiscounted.toLocaleString()}원</p>
+                            <span>{lineOriginal.toLocaleString()}원</span>
+                        </>
+                    ) : (
+                        <p>{lineOriginal.toLocaleString()}원</p>
+                    )}
                 </div>
+
                 <div className="calc">
-                    <button className="minus">
+                    <button
+                        className="minus"
+                        onClick={() =>
+                            dispatch(cartActions.decreaseQuantity(id))
+                        }
+                    >
                         <FaMinus />
                     </button>
-                    <p className="num">1</p>
-                    <button className="plus">
+                    <p className="num">{qty}</p>
+                    <button
+                        className="plus"
+                        onClick={() =>
+                            dispatch(cartActions.increaseQuantity(id))
+                        }
+                    >
                         <FaPlus />
                     </button>
                 </div>
+
                 <div className="purchase">
-                    <button>바로구매</button>
+                    <button onClick={() => setIsCartTab('Order')}>
+                        바로구매
+                    </button>
                 </div>
+
                 <div className="icons">
                     <div className="gift">
                         <IoGiftOutline />
                     </div>
-                    <div className="cancel">
+                    <div
+                        className="cancel"
+                        onClick={() => dispatch(cartActions.removeFromCart(id))}
+                    >
                         <IoClose />
                     </div>
                 </div>
             </div>
-            {/* </div> */}
         </ItemBox>
     );
 };

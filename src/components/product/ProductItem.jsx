@@ -1,8 +1,11 @@
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../store/modules/cartSlice';
 import { ProductItemStyle } from './style';
 import { BsCart2, BsSuitHeart } from 'react-icons/bs';
 
 const ProductItem = ({ product }) => {
     const { id, name, price, thumbnailImage } = product;
+    const dispatch = useDispatch();
     return (
         <ProductItemStyle className="img-wrap">
             <div className="img-wrap">
@@ -11,7 +14,10 @@ const ProductItem = ({ product }) => {
                     <button className="icon-btn">
                         <BsSuitHeart />
                     </button>
-                    <button className="icon-btn">
+                    <button
+                        className="icon-btn"
+                        onClick={() => dispatch(cartActions.addToCart(product))}
+                    >
                         <BsCart2 />
                     </button>
                 </div>

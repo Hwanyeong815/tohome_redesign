@@ -6,10 +6,13 @@ import CartResult from '../../components/cart/CartResult';
 import CartSide from '../../components/cart/CartSide';
 import { CartBottomStyle, CartWrap } from './style';
 import { useState } from 'react';
+import CartEmpty from '../../components/cart/CartEmpty';
+import { useSelector } from 'react-redux';
 
 const Cart = () => {
     const [isCartTab, setIsCartTab] = useState('List'); // List ,Order, Result
     const [isMenuTab, setIsMenuTab] = useState('새벽배송'); //새벽배송, 선물하기, 정기구독, 브랜드직송
+    const { carts } = useSelector((state) => state.cart);
 
     return (
         <CartWrap>
@@ -102,12 +105,25 @@ const Cart = () => {
                 </div>
 
                 <CartBottomStyle>
-                    {isCartTab === 'List' && <CartList />}
-                    {isCartTab === 'Order' && <CartOrder />}
-                    {(isCartTab === 'List' || isCartTab === 'Order') && (
-                        <CartSide />
+                    {carts.length > 0 ? (
+                        <>
+                            {/* {CartSide.length > 0 ? <CartList /> : <CartEmpty />} */}
+                            {isCartTab === 'List' && (
+                                <CartList setIsCartTab={setIsCartTab} />
+                            )}
+                            {isCartTab === 'Order' && <CartOrder />}
+                            {(isCartTab === 'List' ||
+                                isCartTab === 'Order') && (
+                                <CartSide
+                                    setIsCartTab={setIsCartTab}
+                                    isCartTab={isCartTab}
+                                />
+                            )}
+                            {isCartTab === 'Result' && <CartResult />}
+                        </>
+                    ) : (
+                        <CartEmpty />
                     )}
-                    {isCartTab === 'Result' && <CartResult />}
                 </CartBottomStyle>
             </div>
         </CartWrap>

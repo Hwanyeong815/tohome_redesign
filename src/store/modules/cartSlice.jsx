@@ -14,10 +14,45 @@ import menu09Data from '../../assets/data/menu09Data.js';
 import menu10Data from '../../assets/data/menu10Data.js';
 import specialBrandData from '../../assets/data/specialBrandData.js';
 
+const toNum = (v) => {
+    const n = Number(String(v ?? '').replace(/[^\d.-]/g, ''));
+    return Number.isFinite(n) ? n : 0;
+};
+
+const normalizeItem = (raw) => {
+    const qty = Number(raw?.quantity) || 1;
+    const price = toNum(raw?.price);
+    const disc =
+        raw?.discountedPrice != null ? toNum(raw.discountedPrice) : null;
+    const unit = disc != null ? disc : price;
+
+    return {
+        ...raw,
+        price,
+        discountedPrice: disc,
+        quantity: qty,
+        itemtotal: unit * qty,
+    };
+};
+
+const loadCarts = () => {
+    try {
+        const parsed = JSON.parse(localStorage.getItem('carts') || '[]');
+        return Array.isArray(parsed) ? parsed.map(normalizeItem) : [];
+    } catch {
+        return [];
+    }
+};
+
 const initialState = {
-    carts: localStorage.getItem('carts')
-        ? JSON.parse(localStorage.getItem('carts'))
-        : [],
+    priceTotal: 0,
+    quantityTotal: 0,
+    totalDiscount: 0,
+    totalDiscounted: 0,
+    totalDeliveryFee: 0,
+    totalPayable: 0,
+    carts: loadCarts(),
+
     products: productData,
     sideDishes: sideDishData,
     gifts: giftData,
@@ -35,31 +70,130 @@ const initialState = {
         ...menu10Data,
     ],
     specials: specialBrandData,
+    currentCategory: null,
 };
+
+const DELIVERY_THRESHOLD = 10000;
+const DELIVERY_FEE = 3000;
+
 export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
         addToCart: (state, action) => {
-            state.carts.push(action.payload);
+            const incoming = normalizeItem(action.payload);
+            const exist = state.carts.find((c) => c.id === incoming.id);
+
+            if (exist) {
+                const newQty =
+                    (Number(exist.quantity) || 1) +
+                    (Number(incoming.quantity) || 1);
+                const unit =
+                    exist.discountedPrice != null
+                        ? exist.discountedPrice
+                        : exist.price;
+
+                exist.quantity = newQty;
+                exist.itemtotal = unit * newQty;
+            } else {
+                state.carts.push(incoming);
+            }
+
+            localStorage.setItem('carts', JSON.stringify(state.carts));
         },
+
         removeFromCart: (state, action) => {
             state.carts = state.carts.filter(
                 (item) => item.id !== action.payload
             );
+            localStorage.setItem('carts', JSON.stringify(state.carts));
         },
-        clearCart: (state) => {
-            state.carts = [];
+
+        emptyCart: (state, action) => {
+            if (action.payload) {
+                state.carts = [];
+            }
+            localStorage.setItem('carts', JSON.stringify(state.carts));
         },
+
         addMultipleToCart: (state, action) => {
-            // action.payload: 합쳐서 넣고 싶은 배열
-            state.carts.push(...action.payload);
+            const normalized = action.payload.map(normalizeItem);
+            state.carts.push(...normalized);
+            localStorage.setItem('carts', JSON.stringify(state.carts));
         },
+
         setCurrentCategory(state, action) {
             state.currentCategory = action.payload;
         },
+
         setSortType(state, action) {
             state.sortType = action.payload;
+        },
+
+        increaseQuantity(state, action) {
+            const id = action.payload;
+            const item = state.carts.find((cart) => cart.id === id);
+            if (item) {
+                const q = Number(item.quantity) || 1;
+                const unit =
+                    item.discountedPrice != null
+                        ? item.discountedPrice
+                        : item.price;
+                item.quantity = q + 1;
+                item.itemtotal = unit * item.quantity;
+                localStorage.setItem('carts', JSON.stringify(state.carts));
+            }
+        },
+
+        decreaseQuantity(state, action) {
+            const id = action.payload;
+            const item = state.carts.find((cart) => cart.id === id);
+            if (item) {
+                const q = Number(item.quantity) || 1;
+                const unit =
+                    item.discountedPrice != null
+                        ? item.discountedPrice
+                        : item.price;
+                const next = Math.max(q - 1, 1);
+                item.quantity = next;
+                item.itemtotal = unit * next;
+                localStorage.setItem('carts', JSON.stringify(state.carts));
+            }
+        },
+
+        totalCart(state) {
+            state.priceTotal = state.carts.reduce((acc, item) => {
+                const qty = Number(item?.quantity) || 1;
+                const price = toNum(item?.price);
+                return acc + price * qty;
+            }, 0);
+
+            state.quantityTotal = state.carts.reduce((acc, item) => {
+                return acc + (Number(item?.quantity) || 1);
+            }, 0);
+
+            state.totalDiscounted = state.carts.reduce((acc, item) => {
+                const qty = Number(item?.quantity) || 1;
+                const price = toNum(item?.price);
+                const disc =
+                    item?.discountedPrice != null
+                        ? toNum(item.discountedPrice)
+                        : null;
+                const unit = disc != null ? disc : price;
+                return acc + unit * qty;
+            }, 0);
+
+            state.totalDiscount = Math.max(
+                0,
+                state.priceTotal - state.totalDiscounted
+            );
+
+            state.totalDeliveryFee =
+                state.totalDiscounted >= DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
+
+            state.totalPayable = state.totalDiscounted + state.totalDeliveryFee;
+
+            localStorage.setItem('carts', JSON.stringify(state.carts));
         },
     },
 });

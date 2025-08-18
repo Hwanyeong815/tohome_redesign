@@ -20,6 +20,7 @@ const Navbar = () => {
         dispatch(authActions.logout(user));
         navigate('/login');
     };
+    const { carts } = useSelector((state) => state.cart);
 
     return (
         <>
@@ -54,7 +55,7 @@ const Navbar = () => {
                     <GoSearch className="search-item" />
                 </div>
                 <Link to="/cart" className="cart">
-                    <RiShoppingCartLine /> <span>0</span>
+                    <RiShoppingCartLine /> <span>{carts.length}</span>
                 </Link>
             </SearchWrap>
             <NavStyle className="nav" isOpen={isOpen}>

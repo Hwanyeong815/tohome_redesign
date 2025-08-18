@@ -1,30 +1,63 @@
-import { useDispatch } from 'react-redux';
-import { cartActions } from '../../store/modules/cartSlice';
+import { Link } from 'react-router-dom';
 import { ProductItemStyle } from './style';
 import { BsCart2, BsSuitHeart } from 'react-icons/bs';
 
 const ProductItem = ({ product }) => {
-    const { id, name, price, thumbnailImage } = product;
-    const dispatch = useDispatch();
+    const {
+        thumbnailImage,
+        name,
+        price,
+        discountedPrice,
+        isDiscounted,
+        discountRate,
+        des,
+        info,
+        thumbs,
+    } = product;
     return (
         <ProductItemStyle className="img-wrap">
-            <div className="img-wrap">
-                <img src={thumbnailImage} alt="" />
-                <div className="overlay">
-                    <button className="icon-btn">
-                        <BsSuitHeart />
-                    </button>
-                    <button
-                        className="icon-btn"
-                        onClick={() => dispatch(cartActions.addToCart(product))}
-                    >
-                        <BsCart2 />
-                    </button>
-                </div>
-            </div>
+            <li>
+                <Link to="">
+                    <div className="img-wrap">
+                        {thumbnailImage && <img src={thumbnailImage} alt={name} />}
+                        {thumbs && <img src={thumbs} alt={name} />}
 
-            <h2>{name}</h2>
-            <p>{price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원</p>
+                        <div className="overlay">
+                            <button className="icon-btn">
+                                <BsSuitHeart />
+                            </button>
+                            <button className="icon-btn">
+                                <BsCart2 />
+                            </button>
+                        </div>
+                    </div>
+                    <h3>
+                        {name.split('\n').map((line, idx) => (
+                            <span key={idx}>
+                                {line}
+                                <br />
+                            </span>
+                        ))}
+                    </h3>
+                    <div className="price-box">
+                        {isDiscounted ? (
+                            <p className="discount">
+                                {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+                            </p>
+                        ) : (
+                            <p className="discount">{''}</p>
+                        )}
+                        <p className="price">
+                            {isDiscounted && <span>{discountRate}%</span>}
+                            {isDiscounted
+                                ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                                : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                            원
+                        </p>
+                    </div>
+                </Link>
+                <div className="des">{info}</div>
+            </li>
         </ProductItemStyle>
     );
 };

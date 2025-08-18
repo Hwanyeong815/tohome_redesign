@@ -508,3 +508,7 @@ export const MagazineDetailItem4Style = styled.div`
         }
     }
 `;
+
+export const MagazineBottomStyle = styled.div`
+    margin-top: 30px;
+`;

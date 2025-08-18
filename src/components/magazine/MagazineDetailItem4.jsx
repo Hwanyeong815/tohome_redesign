@@ -111,11 +111,11 @@ const MagazineDetailItem4 = () => {
                     </div>
                 </div>
             </div>
-            <div className="back-imgs">
+            {/* <div className="back-imgs">
                 <img src="" alt="" />
                 <img src="" alt="" />
                 <img src="" alt="" />
-            </div>
+            </div> */}
         </MagazineDetailItem4Style>
     );
 };

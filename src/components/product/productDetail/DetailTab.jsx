@@ -1,17 +1,29 @@
-import React from 'react';
-import { DetailTabStyle } from './style';
+// DetailTab.jsx
+import React from "react";
+import { DetailTabStyle } from "./style";
 
-const DetailTab = () => {
-    return (
-        <DetailTabStyle>
-            <ul>
-                <li className="on">상세정보</li>
-                <li>구매정보</li>
-                <li>취소/교환/반품</li>
-                <li>리뷰 283</li>
-            </ul>
-        </DetailTabStyle>
-    );
+const TABS = ["상세정보", "구매정보", "취소/교환/반품", "리뷰 283"];
+
+const DetailTab = ({ active = 0, onChange = () => {} }) => {
+  return (
+    <DetailTabStyle role="tablist" aria-label="상품 상세 탭">
+      <ul>
+        {TABS.map((label, i) => (
+          <li key={label}>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={active === i}
+              className={active === i ? "on" : ""}
+              onClick={() => onChange(i)}
+            >
+              {label}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </DetailTabStyle>
+  );
 };
 
 export default DetailTab;

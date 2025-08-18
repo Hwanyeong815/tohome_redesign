@@ -16,11 +16,7 @@ const Content5 = () => {
         navigate('/gift');
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
-<<<<<<< HEAD
-    // 테스트
-=======
-    // 테스트111
->>>>>>> develop
+
     return (
         <ContentStyle>
             <Content05Style>

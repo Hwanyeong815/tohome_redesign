@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import ProductItem from './ProductItem';
 import { ProductStyle } from './style';
 

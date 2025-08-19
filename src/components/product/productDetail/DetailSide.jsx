@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { DetailSideStyle } from './style';
 import { FaAngleRight } from 'react-icons/fa6';
 import { FaAngleDown } from 'react-icons/fa';
-import { FaPlus } from 'react-icons/fa6';
-import { FaMinus } from 'react-icons/fa6';
+import { FaPlus, FaMinus } from 'react-icons/fa6';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../../store/modules/cartSlice';
+import { useNavigate } from 'react-router-dom';
 
-const DetailSide = ({ obj }) => {
+const toNum = (v) => {
+    const n = Number(String(v ?? '').replace(/[^\d.-]/g, ''));
+    return Number.isFinite(n) ? n : 0;
+};
+
+const DetailSide = ({ obj, setIsCartTab }) => {
     const {
         id,
         name,
@@ -22,57 +29,70 @@ const DetailSide = ({ obj }) => {
             packagingType,
             additionalDiscount,
             deliveryType,
-            barcode,
-            size,
-            unitWeight,
             manufacturer,
-            importer,
-            originLaw,
-            expirationPolicy,
-            itemName,
-            gmoInfo,
-            importNotice,
-            productContents,
-            storageMethod,
-            customerService,
-            safetyNotice,
         },
     } = obj;
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const SHIP_PATH = '/order';
+
+    const [qty, setQty] = useState(1);
+    useEffect(() => {
+        setQty(1);
+    }, [id]);
+
+    const { lineOriginal, lineDiscounted } = useMemo(() => {
+        const qtySafe = Number(qty) || 1;
+        const priceNum = toNum(price);
+        const discNum = discountedPrice != null ? toNum(discountedPrice) : null;
+
+        return {
+            lineOriginal: priceNum * qtySafe,
+            lineDiscounted: discNum != null ? discNum * qtySafe : null,
+        };
+    }, [price, discountedPrice, qty]);
+
     return (
         <DetailSideStyle>
             <div className="proInfo">
                 <div className="brandwrap">
                     <div className="tag">
-                        {tags.name ? <span>{tags.name} </span> : ''}
+                        {tags?.name ? <span>{tags.name} </span> : ''}
                         {deliveryType ? <span>{deliveryType} </span> : ''}
                     </div>
                     <div className="brand">
-                        <span>{manufacturer || ''}</span>
+                        <span>{manufacturer ?? ''}</span>
                         <div className="icon">
                             <FaAngleRight />
                         </div>
                     </div>
                 </div>
+
                 <h2>{name}</h2>
+
                 <div className="price">
                     <div className="price-box">
                         {isDiscounted ? (
                             <p className="discount">
-                                {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+                                {price
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                                원
                             </p>
                         ) : (
                             <p className="discount">{''}</p>
                         )}
                         <p className="price">
-                            {isDiscounted
-                                ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                                : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                            {(isDiscounted ? discountedPrice : price)
+                                .toString()
+                                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                             원{isDiscounted && <span>{discountRate}%</span>}
                         </p>
                     </div>
-
                     <span>{pricePerUnit}</span>
                 </div>
+
                 <div className="detailInfo">
                     <dl>
                         <div className="infoItem">
@@ -87,49 +107,34 @@ const DetailSide = ({ obj }) => {
                             <dt>추가 혜택가</dt>
                             <dd>{additionalDiscount}</dd>
                         </div>
-                        <div className="infoItem deliveryType">
-                            <dt>배송형태</dt>
-                            <dd>
-                                {deliveryType === '택배배송' ? (
-                                    <>
-                                        <p>택배배송 / 밤 9시까지 결제 시</p>
-                                        <p>배송비 3,500원 (5만원 이상 구매 시 무료)</p>
-                                    </>
-                                ) : deliveryType === '브랜드직송' ? (
-                                    <>
-                                        <strong> 브랜드직송</strong>
-                                        <p>
-                                            브랜드직송 판매자{manufacturer ? { manufacturer } : ''}
-                                            가 직접 고객님께 배송(출고, 택배)하는 상품입니다.
-                                        </p>
-                                        <p>주문 후 2일 이내에 상품이 출발합니다.</p>
-                                        <p>배송비 3,300원 (2만 5천원 이상 구매 시 무료)</p>
-                                    </>
-                                ) : (
-                                    <>
-                                        <p>새벽배송 / 밤 11시까지 결제 시</p>
-                                        <p>택배배송 / 밤 9시까지 결제 시</p>
-                                        <p>배송비 3,500원 (5만원 이상 구매 시 무료)</p>
-                                    </>
-                                )}
-                                <div className="deliveryInfo">
-                                    <span>배송안내</span>
-                                    <div className="icon">
-                                        <FaAngleDown />
-                                    </div>
-                                </div>
-                            </dd>
-                        </div>
+
                         <div className="infoItem name">
                             <dt>상품선택</dt>
                             <dd>
                                 <p>{name}</p>
+
                                 <div className="quantity">
-                                    <button>
+                                    <button
+                                        type="button"
+                                        aria-label="수량 감소"
+                                        aria-disabled={qty <= 1}
+                                        className={
+                                            qty <= 1 ? 'is-disabled' : ''
+                                        }
+                                        onClick={() =>
+                                            qty > 1 && setQty(qty - 1)
+                                        }
+                                    >
                                         <FaMinus />
                                     </button>
-                                    <span>1</span>
-                                    <button>
+
+                                    <span>{qty}</span>
+
+                                    <button
+                                        type="button"
+                                        aria-label="수량 증가"
+                                        onClick={() => setQty(qty + 1)}
+                                    >
                                         <FaPlus />
                                     </button>
                                 </div>
@@ -137,13 +142,57 @@ const DetailSide = ({ obj }) => {
                         </div>
                     </dl>
                 </div>
+
                 <div className="totalPrice">
                     <p>총 금액</p>
-                    <strong>58,500원</strong>
+                    <strong>
+                        {(
+                            (isDiscounted
+                                ? lineDiscounted ?? lineOriginal
+                                : lineOriginal) || 0
+                        ).toLocaleString()}
+                        원
+                    </strong>
                 </div>
+
                 <div className="buttonWrap">
-                    <button>장바구니</button>
-                    <button>바로구매</button>
+                    <button
+                        type="button"
+                        onClick={() =>
+                            dispatch(
+                                cartActions.addToCart({
+                                    id,
+                                    name,
+                                    price,
+                                    discountedPrice,
+                                    thumbnailImage,
+                                    pricePerUnit,
+                                    quantity: qty,
+                                })
+                            )
+                        }
+                    >
+                        장바구니
+                    </button>
+                    <button
+                        type="button"
+                        onClick={() => {
+                            dispatch(
+                                cartActions.addToCart({
+                                    id,
+                                    name,
+                                    price,
+                                    discountedPrice,
+                                    thumbnailImage,
+                                    pricePerUnit,
+                                    quantity: qty,
+                                })
+                            );
+                            navigate('/cart', { state: { goTo: 'order' } });
+                        }}
+                    >
+                        바로구매
+                    </button>
                 </div>
             </div>
         </DetailSideStyle>

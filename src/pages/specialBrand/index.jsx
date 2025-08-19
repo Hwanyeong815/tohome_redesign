@@ -6,6 +6,7 @@ import Brand2Table from '../../components/specialBrand/Brand2Table';
 import Brand3Yehyang from '../../components/specialBrand/Brand3Yehyang';
 import Brand4Market from '../../components/specialBrand/Brand4Market';
 import BrandList from '../../components/specialBrand/BrandList';
+import ProductTop from '../../components/product/ProductTop';
 
 const SpecialBrand = () => {
     const [activeTab, setActiveTab] = useState('Brand1Myeong');
@@ -47,16 +48,6 @@ const SpecialBrand = () => {
                 {(activeTab === '예향' || activeTab === 'Brand3Yehyang') && <Brand3Yehyang />}
                 {(activeTab === '동행마켓' || activeTab === 'Brand4Market') && <Brand4Market />}
 
-                <div className="filter-category-wrap">
-                    <p>기름·식초</p>
-                    <p>소금·장류·소스</p>
-                    <p>젓갈·장아찌</p>
-                    <p>음료·차류·청</p>
-                    <p>간식·디저트</p>
-                    <p>신선·농산·간식</p>
-                    <p>간편식·반찬</p>
-                    <p>전통주·선물세트</p>
-                </div>
                 <BrandList brandTag={activeTab} />
             </div>
         </SpecialBrandWrap>

@@ -6,7 +6,8 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import { FreeMode } from 'swiper/modules';
 
-const DetailArtMain = () => {
+const DetailArtMain = ({ obj }) => {
+    const { thumbnailImage, thumbs } = obj;
     return (
         <DetailArtMainStyle>
             <div className="detailContent">
@@ -22,7 +23,10 @@ const DetailArtMain = () => {
                 >
                     <SwiperSlide className="slide">
                         <div className="mainImg">
-                            <img src="/images/product/detailArt/mainImg.png" alt="" />
+                            {thumbnailImage && <img src={thumbnailImage} alt={name} />}
+                            {thumbs && <img src={thumbs} alt={name} />}
+
+                            {/* <img src="/images/product/detailArt/mainImg.png" alt="" /> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="slide">

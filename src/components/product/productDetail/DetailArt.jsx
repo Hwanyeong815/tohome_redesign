@@ -8,7 +8,7 @@ import DetailReview from './DetailReview';
 const DetailArt = ({ activeIndex = 0, obj }) => {
     return (
         <DetailArtStyle>
-            {activeIndex === 0 && <DetailArtMain />}
+            {activeIndex === 0 && <DetailArtMain obj={obj} />}
             {activeIndex === 1 && <DetailArtSub obj={obj} />}
             {activeIndex === 2 && <DetailArtFaq />}
             {activeIndex === 3 && <DetailReview />}

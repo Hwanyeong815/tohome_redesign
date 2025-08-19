@@ -10,8 +10,10 @@ const ProductItem = ({ product }) => {
     const handleClick = () => {
         // 모든 클릭이 productDetail 페이지로 이동
         navigate(`/product/${product.id}`);
+        window.scrollTo({ top: 0, left: 0 });
     };
     const {
+        images,
         thumbnailImage,
         name,
         price,
@@ -26,8 +28,12 @@ const ProductItem = ({ product }) => {
         <ProductItemStyle className="img-wrap">
             <li>
                 <div className="img-wrap">
-                    {thumbnailImage && <img src={thumbnailImage} alt={name} />}
+                    {/* {thumbnailImage && <img src={thumbnailImage} alt={name} />}
                     {thumbs && <img src={thumbs} alt={name} />}
+                    {images && <img src={images} alt={name} />} */}
+                    {[thumbnailImage, thumbs, images].map(
+                        (img, i) => img && <img key={i} src={img} alt={name} />
+                    )}
 
                     <div className="overlay">
                         <button className="icon-btn">

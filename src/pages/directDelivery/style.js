@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const DirectDeliveryWrap = styled.div`
     .inner {
-        /* padding: 100px 0; */
     }
     .titleBox {
         border-top: 1px solid;
@@ -37,7 +36,7 @@ export const DirectDeliveryWrap = styled.div`
         padding: 30px 0;
         display: grid;
         width: 100%;
-        // border: 1px solid;
+
         .left {
             display: flex;
             flex-direction: column;

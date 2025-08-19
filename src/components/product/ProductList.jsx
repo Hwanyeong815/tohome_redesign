@@ -11,7 +11,7 @@ const ProductList = ({ products = [] }) => {
         const windowHeight = window.innerHeight;
         const fullHeight = document.documentElement.scrollHeight;
 
-        if (scrollTop + windowHeight / 2 >= fullHeight / 2) {
+        if (scrollTop + windowHeight >= (fullHeight * 2) / 3) {
             setVisibleCount((prev) => Math.min(prev + 5, products.length));
         }
     };

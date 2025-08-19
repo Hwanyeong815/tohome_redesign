@@ -13,7 +13,7 @@ export const ProductStyle = styled.ul`
     display: flex;
     gap: 10px;
 `;
-export const ProductItemStyle = styled.li`
+export const ProductItemStyle = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
@@ -108,4 +108,26 @@ export const ProductItemStyle = styled.li`
 export const ProductDetailStyle = styled.div`
     padding: 60px 20px;
     display: flex;
+`;
+
+export const ProductTopStyle = styled.ul`
+    width: 1200px;
+    border-top: 1px solid;
+    margin-top: 125px;
+    margin: auto;
+    padding-top: 30px;
+    box-sizing: border-box;
+    /* padding: 0 120px; */
+    display: flex;
+    justify-content: space-around;
+    li {
+        max-width: 90px;
+        /* border: 1px solid #000; */
+        white-space: nowrap;
+        padding: 5px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: ${(props) => props.fontSize || '15px'};
+    }
 `;

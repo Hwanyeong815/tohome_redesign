@@ -20,14 +20,37 @@ const toNum = (v) => {
     return Number.isFinite(n) ? n : 0;
 };
 
-const normalizeItem = (raw) => {
-    const qty = Number(raw?.quantity) || 1;
-    const price = toNum(raw?.price);
-    const disc = raw?.discountedPrice != null ? toNum(raw.discountedPrice) : null;
-    const unit = disc != null ? disc : price;
+const normalizeProductId = (raw) => {
+    const id =
+        raw.id ??
+        raw.fruitId ??
+        raw.brandId ??
+        raw.grainId ??
+        raw.seafoodId ??
+        raw.meatId ??
+        raw.riceId ??
+        raw.sideId ??
+        raw.seasoningId ??
+        raw.bakeryId ??
+        raw.snackId ??
+        raw.liquidId;
 
     return {
         ...raw,
+        id: Number(id),
+    };
+};
+
+const normalizeItem = (raw) => {
+    const base = normalizeProductId(raw);
+
+    const qty = Number(base?.quantity) || 1;
+    const price = toNum(base?.price);
+    const disc = base?.discountedPrice != null ? toNum(base.discountedPrice) : null;
+    const unit = disc != null ? disc : price;
+
+    return {
+        ...base,
         price,
         discountedPrice: disc,
         quantity: qty,
@@ -53,9 +76,10 @@ const initialState = {
     totalPayable: 0,
     carts: loadCarts(),
 
-    products: productData,
-    sideDishes: sideDishData,
-    gifts: giftData,
+    products: productData.map(normalizeItem),
+    sideDishes: sideDishData.map(normalizeItem),
+    gifts: giftData.map(normalizeItem),
+
     sortType: '판매량순',
     menus: [
         ...menu01Data,
@@ -69,8 +93,8 @@ const initialState = {
         ...menu09Data,
         ...menu10Data,
     ],
-    specials: specialBrandData,
-    recipes: recipeProductData,
+    specials: specialBrandData.map(normalizeItem),
+    recipes: recipeProductData.map(normalizeItem),
     currentCategory: null,
 };
 

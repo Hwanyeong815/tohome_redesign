@@ -7,13 +7,27 @@ import DetailArt from './productDetail/DetailArt';
 import { useState } from 'react';
 
 const ProductDetail = () => {
-    const { productID } = useParams(); // 🔥 두 개 다 꺼내짐
+    const { productID } = useParams();
     const { products, menus, specials } = useSelector((state) => state.cart);
     const AllMenus = [...products, ...menus, ...specials];
 
-    const CATEGORY_LIST = ['best', 'food', 'drink'];
+    const obj = AllMenus.find((product) => {
+        const candidateId =
+            product.id ??
+            product.fruitId ??
+            product.brandId ??
+            product.grainId ??
+            product.seafoodId ??
+            product.meatId ??
+            product.riceId ??
+            product.sideId ??
+            product.seasoningId ??
+            product.bakeryId ??
+            product.snackId ??
+            product.liquidId;
 
-    const obj = AllMenus.find((product) => product.id === Number(productID));
+        return Number(candidateId) === Number(productID);
+    });
 
     if (!obj)
         return <p style={{ textAlign: 'center', padding: '30px' }}>상품을 찾을 수 없습니다.</p>;

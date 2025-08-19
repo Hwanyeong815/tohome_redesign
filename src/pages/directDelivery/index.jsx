@@ -1,50 +1,54 @@
 import { useState } from 'react';
-import DeliveryList from '../../components/directDelivery/DeliveryList';
+import { useMemo } from 'react';
 import TopSection from '../../components/topSection/TopSection';
 import { DirectDeliveryWrap } from './style';
 import { useSelector } from 'react-redux';
 import ProductList from '../../components/product/ProductList';
+import ProductTop from '../../components/product/ProductTop';
 
 const DirectDelivery = () => {
     const [sortType, setSortType] = useState('판매량순');
+    const [selectedSub, setSelectedSub] = useState('전체보기');
 
     const { products, menus, specials } = useSelector((state) => state.cart);
     const AllMenus = [...products, ...menus, ...specials];
 
-    const ditectDeliveryUl = AllMenus.filter(
+    const directDeliveryUl = AllMenus.filter(
         (product) => product.details?.deliveryType === '브랜드직송'
     ).slice(0, 40);
+
+    const subCategories = directDeliveryUl
+        ? [...new Set(directDeliveryUl.map((f) => f.category.main))]
+        : [];
+
+    const filteredProducts = useMemo(() => {
+        return selectedSub === '전체보기'
+            ? directDeliveryUl
+            : directDeliveryUl.filter((product) => product.category.main === selectedSub);
+    }, [selectedSub, directDeliveryUl]);
 
     const sortedDirectDelivery = () => {
         switch (sortType) {
             case '판매량순':
-                return [...ditectDeliveryUl].sort((a, b) => {
-                    if (a.rank === b.rank)
-                        return ditectDeliveryUl.indexOf(a) - ditectDeliveryUl.indexOf(b);
-                    return b.rank - a.rank;
-                });
+                return [...filteredProducts].sort((a, b) => b.rank - a.rank);
             case '신상품순':
-                return [...ditectDeliveryUl]
+                return [...filteredProducts]
                     .filter((product) => product.tags?.some((tag) => tag.name === '신상품'))
-                    .sort((a, b) => {
-                        if (a.rank === b.rank)
-                            return ditectDeliveryUl.indexOf(a) - ditectDeliveryUl.indexOf(b);
-                        return b.rank - a.rank;
-                    });
+                    .sort((a, b) => b.rank - a.rank);
             case '높은가격순':
-                return [...ditectDeliveryUl].sort((a, b) => {
+                return [...filteredProducts].sort((a, b) => {
                     const priceA = a.discountedPrice || a.price;
                     const priceB = b.discountedPrice || b.price;
                     return priceB - priceA;
                 });
             case '낮은가격순':
-                return [...ditectDeliveryUl].sort((a, b) => {
+                return [...filteredProducts].sort((a, b) => {
                     const priceA = a.discountedPrice || a.price;
                     const priceB = b.discountedPrice || b.price;
                     return priceA - priceB;
                 });
             default:
-                return ditectDeliveryUl;
+                return filteredProducts;
         }
     };
 
@@ -107,19 +111,13 @@ const DirectDelivery = () => {
                         <img src="/images/directDelivery/bannerImg.png" alt="" />
                     </div>
                 </div>
-                <div className="menu">
-                    <ul>
-                        <li>전체보기</li>
-                        <li>신선·곡물</li>
-                        <li>조리·반찬</li>
-                        <li>베이커리·디저트·간식</li>
-                        <li>델리·그로서리</li>
-                        <li>오일·장류·조미료</li>
-                        <li>음료·차·커피</li>
-                        <li>전통주·와인</li>
-                        <li>아기·어린이</li>
-                    </ul>
-                </div>
+
+                <ProductTop
+                    className="menu"
+                    subCategories={subCategories}
+                    selectedSub={selectedSub}
+                    setSelectedSub={setSelectedSub}
+                />
                 <div className="filter-wrap">
                     {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
                         <p
@@ -131,7 +129,8 @@ const DirectDelivery = () => {
                         </p>
                     ))}
                 </div>
-                {ditectDeliveryUl.length > 0 && <ProductList products={sortedDirectDelivery()} />}
+
+                {directDeliveryUl.length > 0 && <ProductList products={sortedDirectDelivery()} />}
             </div>
         </DirectDeliveryWrap>
     );

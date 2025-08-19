@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const CategoryItem = ({ product }) => {
     const { thumbnailImage, name, price, discountedPrice, isDiscounted, discountRate } = product;
     const [hoverHeart, setHoverHeart] = useState(false);
+    const [clicked, setClicked] = useState(false);
     return (
         <li>
             <Link to="">
@@ -15,8 +16,9 @@ const CategoryItem = ({ product }) => {
                             className="icon-btn"
                             onMouseEnter={() => setHoverHeart(true)}
                             onMouseLeave={() => setHoverHeart(false)}
+                            onClick={() => setClicked((prev) => !prev)} // 클릭 시 toggle
                         >
-                            {hoverHeart ? <BsSuitHeartFill /> : <BsSuitHeart />}
+                            {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
                         </button>
                         <button className="icon-btn">
                             <BsCart2 />

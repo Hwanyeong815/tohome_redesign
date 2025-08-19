@@ -1,10 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { ProductItemStyle } from './style';
-import { BsCart2, BsSuitHeart } from 'react-icons/bs';
+import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/modules/cartSlice';
+import { useState } from 'react';
 
 const ProductItem = ({ product }) => {
+    const [hoverHeart, setHoverHeart] = useState(false);
+    const [clicked, setClicked] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const handleClick = () => {
@@ -36,8 +39,13 @@ const ProductItem = ({ product }) => {
                     )}
 
                     <div className="overlay">
-                        <button className="icon-btn">
-                            <BsSuitHeart />
+                        <button
+                            className="icon-btn"
+                            onMouseEnter={() => setHoverHeart(true)}
+                            onMouseLeave={() => setHoverHeart(false)}
+                            onClick={() => setClicked((prev) => !prev)} // 클릭 시 toggle
+                        >
+                            {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
                         </button>
                         <button
                             className="icon-btn"

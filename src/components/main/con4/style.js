@@ -3,6 +3,12 @@ import styled from 'styled-components';
 export const Content4Style = styled.section`
     .side-dish {
         &-wrap {
+            &.position-fix {
+                width: 100vw;
+                position: relative; /* left 대신 relative + margin auto 사용 */
+                left: 50%;
+                transform: translateX(-50%);
+            }
             cursor: pointer;
             position: relative;
             left: 50%;

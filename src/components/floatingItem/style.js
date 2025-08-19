@@ -48,10 +48,17 @@ export const FloatingBtnStyle = styled.div`
         margin-top: 30px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-content: center;
+        /* align-items: center; */
         width: 100%;
         gap: 10px;
         background-color: transparent;
+        p {
+            font-size: 16px;
+        }
+        span {
+            font-size: 20px;
+        }
     }
     .cart {
         font-size: 30px;

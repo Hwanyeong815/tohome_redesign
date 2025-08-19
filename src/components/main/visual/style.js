@@ -69,11 +69,11 @@ export const VisualStyle = styled.div`
 `;
 
 export const BannerWrap = styled.article`
-    width: 100%;
-
-    &.visual-con5 {
-        background-color: #fdfbf0;
+    cursor: grab;
+    &:active {
+        cursor: grabbing;
     }
+    width: 100%;
     display: flex;
     flex-direction: ${({ $position }) => ($position === 'right' ? 'row-reverse' : 'row')};
     align-items: center;
@@ -107,6 +107,8 @@ export const BannerWrap = styled.article`
         }
     }
     .img-box {
+        box-sizing: border-box;
+        position: relative;
         width: 790px;
         height: 680px;
     }
@@ -126,6 +128,102 @@ export const BannerWrap = styled.article`
             background-color: #888;
             color: #fff;
             cursor: pointer;
+        }
+    }
+    &.visual-con {
+        &1 {
+        }
+        &2 {
+            .img-box {
+                padding: 45px 65px;
+                box-sizing: border-box;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 50px;
+                img {
+                    width: 270px;
+                    height: 270px;
+                }
+            }
+        }
+        &3 {
+            .img-box {
+                padding: 90px 0;
+                img {
+                    &:nth-child(1) {
+                        width: 475px;
+                    }
+                    &:nth-child(2) {
+                        width: 225px;
+                        height: 200px;
+                        position: absolute;
+                        top: 130px;
+                        right: 90px;
+                    }
+                    &:nth-child(3) {
+                        width: 225px;
+                        height: 200px;
+                        position: absolute;
+                        bottom: 110px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        &4 {
+            .img-box {
+                padding: 65px 85px;
+                img {
+                    &:nth-child(1) {
+                        width: 550px;
+                        height: 550px;
+                    }
+                    &:nth-child(2) {
+                        width: 200px;
+                        height: 200px;
+                        position: absolute;
+                        top: 100px;
+                        left: 0;
+                    }
+                    &:nth-child(3) {
+                        width: 215px;
+                        height: 215px;
+                        position: absolute;
+                        bottom: 42px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        &5 {
+            background-color: #fdfbf0;
+            .img-box {
+                padding: 45px 65px;
+                box-sizing: border-box;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 50px;
+                &-sub {
+                    &:nth-child(1) {
+                        width: 290px;
+                    }
+                    &:nth-child(3) {
+                        width: 250px;
+                        height: 250px;
+                    }
+                    width: 250px;
+                    height: 250px;
+                    overflow: visible;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
 `;

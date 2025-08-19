@@ -7,6 +7,10 @@ import { MdArrowForwardIos } from 'react-icons/md';
 import SubscribeUl from './SubscribeUl';
 import { useNavigate } from 'react-router-dom';
 import HealthList from './HealthList';
+
+import { useEffect } from 'react';
+import AOS from 'aos';
+
 const Content4 = () => {
     const { products } = useSelector((state) => state.cart);
 
@@ -22,10 +26,18 @@ const Content4 = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
 
+    useEffect(() => {
+        AOS.refresh();
+    }, []);
     return (
         <ContentStyle>
             <Content4Style>
-                <section className="side-dish-wrap" onClick={onClick1}>
+                <section
+                    className="side-dish-wrap position-fix"
+                    onClick={onClick1}
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div className="txts">
                         <h2 className="main-title">투홈 반찬구독</h2>
                         <p>압구정 예향 반찬 구독 (8월 첫째주)</p>
@@ -62,7 +74,12 @@ const Content4 = () => {
                     </div>
                 </section>
                 {/* 반찬구독 */}
-                <section className="health-sub-wrap" onClick={onClick2}>
+                <section
+                    className="health-sub-wrap"
+                    onClick={onClick2}
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-center"
+                >
                     <HealthList />
                 </section>
                 {/* 건강식품구독 */}

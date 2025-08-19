@@ -55,7 +55,9 @@ const FloatingBtn = () => {
                     </div>
                     <button className="top" onClick={scrollToTop}>
                         <p>TOP</p>
-                        <IoIosArrowDropup />
+                        <span>
+                            <IoIosArrowDropup />
+                        </span>
                         {/* <img src="/images/icon/icon_topBtn.png" alt="탑버튼" /> */}
                     </button>
                 </FloatingBtnStyle>

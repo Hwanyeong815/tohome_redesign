@@ -39,7 +39,11 @@ const Content5 = () => {
     return (
         <ContentStyle>
             <Content05Style>
-                <section className="main-today-recipe">
+                <section
+                    className="main-today-recipe"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-center"
+                >
                     <h2 className="main-title">오늘의 레시피</h2>
                     <p className="title2">
                         <span>오늘 뭐 먹지? 고민은 그만</span>
@@ -82,7 +86,12 @@ const Content5 = () => {
                         </ContentUl>
                     </div>
                 </section>
-                <section className="main-gift-wrap" onClick={onClick1}>
+                <section
+                    className="main-gift-wrap"
+                    onClick={onClick1}
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div className="txt-box">
                         <img src="images/main/main_gift01.png" alt="모눈종이" />
                         <p>

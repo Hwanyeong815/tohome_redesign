@@ -19,11 +19,16 @@ export const Content3Style = styled.div`
             width: 100vw;
             left: 50%;
             transform: translateX(-50%);
+            &.position-fix {
+                width: 100vw;
+                position: relative; /* left 대신 relative + margin auto 사용 */
+                left: 50%;
+                transform: translateX(-50%);
+            }
             img {
                 width: 100%;
                 position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
+
                 top: 0;
                 z-index: -1;
             }

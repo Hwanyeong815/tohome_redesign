@@ -1,6 +1,5 @@
-import { useSelector } from 'react-redux';
 import ProductItem from './ProductItem';
-import { ProductStyle } from './style';
+import { ProductListStyle } from './style';
 import { useEffect, useState } from 'react';
 
 const ProductList = ({ products = [] }) => {
@@ -21,11 +20,11 @@ const ProductList = ({ products = [] }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [products]);
     return (
-        <ProductStyle>
+        <ProductListStyle>
             {products.slice(0, visibleCount).map((product) => (
                 <ProductItem key={product.id} product={product} />
             ))}
-        </ProductStyle>
+        </ProductListStyle>
     );
 };
 

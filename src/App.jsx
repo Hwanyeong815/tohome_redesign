@@ -1,5 +1,5 @@
 import Layout from './common/Layout';
-
+import 'aos/dist/aos.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -45,6 +45,7 @@ const App = () => {
             clearTimeout(timer);
         };
     }, []);
+
     return (
         <>
             <GlobalStyle />

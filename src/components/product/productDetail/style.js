@@ -125,20 +125,6 @@ export const DetailSideStyle = styled.div`
                                 display: flex;
                                 align-items: center;
                             }
-                            .quantity {
-                                width: 92px;
-                                border: 1px solid #aea7a2;
-                                padding: 7px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                gap: 17px;
-                                border-radius: 3px;
-                                button {
-                                    background: none;
-                                    display: flex;
-                                }
-                            }
                         }
                     }
                     &.deliveryType {
@@ -168,6 +154,19 @@ export const DetailSideStyle = styled.div`
                         font-size: 15px;
                         font-weight: 500;
                         flex: 1;
+                    }
+                    .quantity {
+                        width: 92px;
+                        border: 1px solid #aea7a2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 17px;
+                        border-radius: 3px;
+                        button {
+                            background: none;
+                            display: flex;
+                        }
                     }
                 }
             }

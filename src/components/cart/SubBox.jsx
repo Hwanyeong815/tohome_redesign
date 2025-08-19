@@ -36,7 +36,6 @@ const SubBox = ({ cart, setIsCartTab }) => {
             lineDiscounted: discNum != null ? discNum * qtySafe : null,
         };
     }, [price, discountedPrice, quantity]);
-    // console.log(unitWeight);
     return (
         <ItemBox>
             <img className="image" src={thumbnailImage} alt={name} />

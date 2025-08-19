@@ -23,7 +23,8 @@ const toNum = (v) => {
 const normalizeItem = (raw) => {
     const qty = Number(raw?.quantity) || 1;
     const price = toNum(raw?.price);
-    const disc = raw?.discountedPrice != null ? toNum(raw.discountedPrice) : null;
+    const disc =
+        raw?.discountedPrice != null ? toNum(raw.discountedPrice) : null;
     const unit = disc != null ? disc : price;
 
     return {
@@ -42,6 +43,10 @@ const loadCarts = () => {
     } catch {
         return [];
     }
+};
+
+const save = (carts) => {
+    localStorage.setItem('carts', JSON.stringify(carts));
 };
 
 const initialState = {
@@ -77,43 +82,53 @@ const initialState = {
 const DELIVERY_THRESHOLD = 10000;
 const DELIVERY_FEE = 3000;
 
+// payload가 id 혹은 { id } 모두 오케이 + 타입 통일
+const getId = (p) => String(p?.id ?? p);
+
 export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
         addToCart: (state, action) => {
             const incoming = normalizeItem(action.payload);
-            const exist = state.carts.find((c) => c.id === incoming.id);
+            const exist = state.carts.find(
+                (c) => String(c.id) === String(incoming.id)
+            );
 
             if (exist) {
-                const newQty = (Number(exist.quantity) || 1) + (Number(incoming.quantity) || 1);
-                const unit = exist.discountedPrice != null ? exist.discountedPrice : exist.price;
+                const newQty =
+                    (Number(exist.quantity) || 1) +
+                    (Number(incoming.quantity) || 1);
+                const unit =
+                    exist.discountedPrice != null
+                        ? exist.discountedPrice
+                        : exist.price;
 
                 exist.quantity = newQty;
                 exist.itemtotal = unit * newQty;
             } else {
                 state.carts.push(incoming);
             }
-
-            localStorage.setItem('carts', JSON.stringify(state.carts));
+            save(state.carts);
         },
 
         removeFromCart: (state, action) => {
-            state.carts = state.carts.filter((item) => item.id !== action.payload);
-            localStorage.setItem('carts', JSON.stringify(state.carts));
+            const id = getId(action.payload);
+            state.carts = state.carts.filter((item) => String(item.id) !== id);
+            save(state.carts);
         },
 
         emptyCart: (state, action) => {
             if (action.payload) {
                 state.carts = [];
             }
-            localStorage.setItem('carts', JSON.stringify(state.carts));
+            save(state.carts);
         },
 
         addMultipleToCart: (state, action) => {
             const normalized = action.payload.map(normalizeItem);
             state.carts.push(...normalized);
-            localStorage.setItem('carts', JSON.stringify(state.carts));
+            save(state.carts);
         },
 
         setCurrentCategory(state, action) {
@@ -125,27 +140,43 @@ export const cartSlice = createSlice({
         },
 
         increaseQuantity(state, action) {
-            const id = action.payload;
-            const item = state.carts.find((cart) => cart.id === id);
+            const id = getId(action.payload);
+            const item = state.carts.find((cart) => String(cart.id) === id);
             if (item) {
                 const q = Number(item.quantity) || 1;
-                const unit = item.discountedPrice != null ? item.discountedPrice : item.price;
+                const unit =
+                    item.discountedPrice != null
+                        ? item.discountedPrice
+                        : item.price;
                 item.quantity = q + 1;
                 item.itemtotal = unit * item.quantity;
-                localStorage.setItem('carts', JSON.stringify(state.carts));
+                save(state.carts);
+            } else {
+                // 상세페이지에서 미존재 상태에서 + 클릭 시 자동으로 담기
+                state.carts.push({
+                    id,
+                    quantity: 1,
+                    price: 0,
+                    discountedPrice: null,
+                    itemtotal: 0,
+                });
+                save(state.carts);
             }
         },
 
         decreaseQuantity(state, action) {
-            const id = action.payload;
-            const item = state.carts.find((cart) => cart.id === id);
+            const id = getId(action.payload);
+            const item = state.carts.find((cart) => String(cart.id) === id);
             if (item) {
                 const q = Number(item.quantity) || 1;
-                const unit = item.discountedPrice != null ? item.discountedPrice : item.price;
+                const unit =
+                    item.discountedPrice != null
+                        ? item.discountedPrice
+                        : item.price;
                 const next = Math.max(q - 1, 1);
                 item.quantity = next;
                 item.itemtotal = unit * next;
-                localStorage.setItem('carts', JSON.stringify(state.carts));
+                save(state.carts);
             }
         },
 
@@ -163,18 +194,25 @@ export const cartSlice = createSlice({
             state.totalDiscounted = state.carts.reduce((acc, item) => {
                 const qty = Number(item?.quantity) || 1;
                 const price = toNum(item?.price);
-                const disc = item?.discountedPrice != null ? toNum(item.discountedPrice) : null;
+                const disc =
+                    item?.discountedPrice != null
+                        ? toNum(item.discountedPrice)
+                        : null;
                 const unit = disc != null ? disc : price;
                 return acc + unit * qty;
             }, 0);
 
-            state.totalDiscount = Math.max(0, state.priceTotal - state.totalDiscounted);
+            state.totalDiscount = Math.max(
+                0,
+                state.priceTotal - state.totalDiscounted
+            );
 
-            state.totalDeliveryFee = state.totalDiscounted >= DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
+            state.totalDeliveryFee =
+                state.totalDiscounted >= DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
 
             state.totalPayable = state.totalDiscounted + state.totalDeliveryFee;
 
-            localStorage.setItem('carts', JSON.stringify(state.carts));
+            save(state.carts);
         },
     },
 });

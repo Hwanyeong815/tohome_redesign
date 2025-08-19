@@ -310,3 +310,7 @@ export const ResultBoxStyle = styled.div`
         }
     }
 `;
+
+export const CartEmptyStyle = styled.div`
+    width: 100%;
+`;

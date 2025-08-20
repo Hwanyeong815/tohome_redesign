@@ -15,36 +15,46 @@ const AboutSlide3 = ({ about }) => {
     } = about;
     return (
         <AboutSlideItem>
-            <li>
+            <div className="bannerImg">
                 <img src={imgUrl} alt="" />
-            </li>
-            <li className="AboutSlideDetail">
-                <h4>
-                    {titleEng}
-                    <span>3</span>
-                </h4>
-                <strong>{title}</strong>
-                <p>{des}</p>
-                <ul className="AboutMagazine">
-                    <li>
-                        <small>{magazine}</small>
-                        <div className="AboutBanner">
-                            <p>{bannersubl}</p>
-                            <em>{bannersubttll}</em>
-                            <img src="/images/about/about_arrow.png" alt="" />
-                        </div>
-                    </li>
+            </div>
+            <div className="AboutSlideDetail">
+                <div className="txt">
+                    <h4>
+                        {titleEng}
+                        <span>3</span>
+                    </h4>
+                    <strong>{title}</strong>
+                    <p>{des}</p>
+                </div>
+                <div className="AboutMagazine">
+                    <ul>
+                        <li>
+                            <small>{magazine}</small>
+                            <div className="AboutBanner">
+                                <p>{bannersubl}</p>
+                                <em>{bannersubttll}</em>
+                                <img
+                                    src="/images/about/about_arrow.png"
+                                    alt=""
+                                />
+                            </div>
+                        </li>
 
-                    <li>
-                        <small>{magazine}</small>
-                        <div className="AboutBanner">
-                            <p>{bannersubr}</p>
-                            <em>{bannersubttlr}</em>
-                            <img src="/images/about/about_arrow.png" alt="" />
-                        </div>
-                    </li>
-                </ul>
-            </li>
+                        <li>
+                            <small>{magazine}</small>
+                            <div className="AboutBanner">
+                                <p>{bannersubr}</p>
+                                <em>{bannersubttlr}</em>
+                                <img
+                                    src="/images/about/about_arrow.png"
+                                    alt=""
+                                />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </AboutSlideItem>
     );
 };

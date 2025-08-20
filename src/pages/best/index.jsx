@@ -10,7 +10,10 @@ const Best = () => {
 
     const bestUl = AllMenus.filter((product) =>
         product.tags?.some((tag) => tag.name === '베스트')
-    ).filter((product, index, self) => index === self.findIndex((p) => p.name === product.name));
+    ).filter(
+        (product, index, self) =>
+            index === self.findIndex((p) => p.name === product.name)
+    );
 
     const [sortType, setSortType] = useState('판매량순');
 
@@ -18,14 +21,18 @@ const Best = () => {
         switch (sortType) {
             case '판매량순':
                 return [...bestUl].sort((a, b) => {
-                    if (a.rank === b.rank) return bestUl.indexOf(a) - bestUl.indexOf(b);
+                    if (a.rank === b.rank)
+                        return bestUl.indexOf(a) - bestUl.indexOf(b);
                     return b.rank - a.rank;
                 });
             case '신상품순':
                 return [...bestUl]
-                    .filter((product) => product.tags?.some((tag) => tag.name === '신상품'))
+                    .filter((product) =>
+                        product.tags?.some((tag) => tag.name === '신상품')
+                    )
                     .sort((a, b) => {
-                        if (a.rank === b.rank) return bestUl.indexOf(a) - bestUl.indexOf(b);
+                        if (a.rank === b.rank)
+                            return bestUl.indexOf(a) - bestUl.indexOf(b);
                         return b.rank - a.rank;
                     });
             case '높은가격순':
@@ -57,16 +64,23 @@ const Best = () => {
                         subtitle={'현대식품관 투홈의 인기 상품을 만나보세요'}
                     />
                 </section>
-                <div className="filter-wrap">
-                    {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
-                        <p
-                            key={type}
-                            onClick={() => setSortType(type)}
-                            className={sortType === type ? 'on' : ''}
-                        >
-                            {type}
-                        </p>
-                    ))}
+                <div className="filter">
+                    <div className="filter-wrap">
+                        {[
+                            '판매량순',
+                            '신상품순',
+                            '높은가격순',
+                            '낮은가격순',
+                        ].map((type) => (
+                            <p
+                                key={type}
+                                onClick={() => setSortType(type)}
+                                className={sortType === type ? 'on' : ''}
+                            >
+                                {type}
+                            </p>
+                        ))}
+                    </div>
                 </div>
 
                 <ProductList products={sortedBest()} />

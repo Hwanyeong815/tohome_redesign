@@ -17,7 +17,7 @@ const ProductTop = ({ subCategories, selectedSub, setSelectedSub, fontSize }) =>
                     className={selectedSub === sub ? 'on' : ''}
                     onClick={() => {
                         console.log('클릭한 카테고리:', sub);
-                        setSelectedSub(sub);
+                        setSelectedSub(sub); 
                     }}
                 >
                     {sub}

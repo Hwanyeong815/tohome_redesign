@@ -28,6 +28,9 @@ export const HealFoodStyle = styled.div`
             font-weight: 600;
             color: #333;
             margin-top: 22px;
+            .mobileOnly {
+                display: none;
+            }
         }
     }
     section {
@@ -50,6 +53,9 @@ export const HealFoodStyle = styled.div`
                 color: #666666;
                 text-align: center;
                 margin-top: 20px;
+                .mobileOnly {
+                    display: none;
+                }
             }
         }
         .list {
@@ -111,6 +117,77 @@ export const HealFoodStyle = styled.div`
                     font-weight: 600;
                     border-bottom: 1px solid #333;
                     background: none;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        margin-top: 2.0513vw;
+        height: 462.8205vw;
+        .banner {
+            width: 100vw;
+            height: 51.2821vw;
+            background-image: url(images/healfood/mobileBanner.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            .txt-box {
+                top: 8.2051vw;
+            }
+            p {
+                font-size: 3.0769vw;
+            }
+            h2 {
+                font-size: 3.8462vw;
+                .mobileOnly {
+                    display: inline;
+                }
+            }
+            img {
+                display: none;
+            }
+        }
+        section {
+            width: 100vw;
+            margin-top: 12.3077vw;
+            gap: 12.3077vw;
+            .info {
+                width: 82.3077vw;
+                strong {
+                    font-size: 3.8462vw;
+                }
+                p {
+                    font-size: 3.0769vw;
+                    .mobileOnly {
+                        display: inline;
+                    }
+                }
+            }
+            .list {
+                width: 100vw;
+                flex-direction: row;
+                .meal {
+                    width: 91.7949vw;
+                    height: 80.1359vw;
+                    .imgs {
+                        width: 91.7949vw;
+                        height: 58.4154vw;
+                        img {
+                            width: 91.7949vw;
+                            height: 58.4154vw;
+                        }
+                    }
+                    strong {
+                        font-size: 3.8462vw;
+                    }
+                    span {
+                        font-size: 3.0769vw;
+                    }
+                    button {
+                        width: 20.7692vw;
+                        height: 6.1538vw;
+                        font-size: 3.0769vw;
+                        margin-top: 2.0513vw;
+                    }
                 }
             }
         }

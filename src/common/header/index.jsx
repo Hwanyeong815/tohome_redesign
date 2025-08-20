@@ -8,6 +8,9 @@ const Header = () => {
     return (
         <HeaderStyle className="header">
             <div className="inner">
+                <div className="status-bar">
+                    <img src="/images/common/status-bar.png" alt="" />
+                </div>
                 <div className="headBody">
                     <h1>
                         <Link to="/">

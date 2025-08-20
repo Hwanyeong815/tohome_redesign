@@ -3,13 +3,15 @@ import styled from 'styled-components';
 export const HeaderStyle = styled.header`
     &.header {
         height: 230px;
+        .status-bar {
+            display: none;
+        }
 
         .inner {
             position: relative;
 
             .headBody {
                 height: 50px;
-
                 position: absolute;
                 left: 50%;
                 top: 80px;
@@ -36,13 +38,47 @@ export const HeaderStyle = styled.header`
                     img {
                         position: absolute;
                         left: 50%;
-                        transform: translate(-50%, -50%);
                         top: 50%;
+                        transform: translate(-50%, -50%);
                         transition: 0.3s;
                         &.hoverImg {
                             top: 200%;
                             width: 60%;
                         }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        &.header {
+            position: sticky !important;
+            left: 50%;
+            top: 0;
+            z-index: 500;
+            height: 38.4615vw;
+
+            .status-bar {
+                z-index: 100;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                top: 0;
+                background-color: aquamarine;
+                opacity: 0.5;
+                display: block;
+            }
+
+            .inner {
+                width: 91.7949vw;
+            }
+            .headBody {
+                top: 15.3846vw !important;
+                h1 {
+                    /* border: 1px solid #000; */
+
+                    img {
+                        width: 30.7692vw;
                     }
                 }
             }
@@ -59,10 +95,8 @@ export const NavStyle = styled.nav.withConfig({
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    display: flex;
 
     .gnb {
-        color: #333;
         display: flex;
         justify-content: center;
         gap: 0px;
@@ -135,6 +169,44 @@ export const NavStyle = styled.nav.withConfig({
       }
     `}
     }
+    @media screen and (max-width: 600px) {
+        margin-top: 11.0256vw;
+
+        .gnb {
+            width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+
+            li {
+                box-sizing: border-box;
+                height: 12.8205vw;
+                a {
+                    height: 12.8205vw;
+                    font-size: 16px;
+                    padding: 3.8462vw 5vw;
+                    box-sizing: border-box;
+                    white-space: nowrap;
+                }
+
+                &:nth-child(n + 4):not(:nth-child(7)) {
+                    display: none;
+                }
+            }
+        }
+        .all-menu {
+            /* border: 1px solid #000; */
+            left: 0;
+            top: 55%;
+            width: 3.6923vw;
+            margin: 0;
+            padding: 0;
+            gap: 1.0256vw;
+            span {
+                width: 3.5897vw;
+                height: 0.3231vw;
+            }
+        }
+    }
 `;
 
 export const TopMenu = styled.ul`
@@ -165,6 +237,15 @@ export const TopMenu = styled.ul`
             }
         }
     }
+    @media screen and (max-width: 600px) {
+        &.top-menu {
+            background-color: turquoise;
+            li {
+                a {
+                }
+            }
+        }
+    }
 `;
 
 export const SearchWrap = styled.ul`
@@ -184,8 +265,7 @@ export const SearchWrap = styled.ul`
         &:hover {
             width: 300px;
         }
-        &-item,
-        img {
+        &-item {
             font-size: 25px;
             position: absolute;
             right: 10px;
@@ -208,6 +288,41 @@ export const SearchWrap = styled.ul`
             text-align: center;
             color: white;
             font-size: 17px;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        align-content: center;
+        top: 15.3846vw;
+        right: 0;
+
+        padding: 0;
+
+        .search {
+            width: 6.1538vw;
+            height: 6.1538vw;
+            background-color: transparent;
+
+            &-item {
+                font-size: 19px;
+                /* text-align: center; */
+                position: absolute;
+                /* right: 10px; */
+                right: 0;
+                /* top: 50%; */
+                transform: translateY(-50%);
+            }
+        }
+        .cart {
+            /* height: auto; */
+            text-align: center;
+            font-size: 19px;
+            width: 6.1538vw;
+            height: 6.1538vw;
+            span {
+                width: 5.1282vw;
+                height: 5.1282vw;
+                font-size: 3.8462vw;
+            }
         }
     }
 `;

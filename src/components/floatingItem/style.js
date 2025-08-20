@@ -79,6 +79,9 @@ export const FloatingBtnStyle = styled.div`
             font-size: 17px;
         }
     }
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
 `;
 export const FloatingMenuStyle = styled.div`
     z-index: 10;

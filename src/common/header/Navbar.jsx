@@ -52,10 +52,15 @@ const Navbar = () => {
             </TopMenu>
             <SearchWrap>
                 <div className="search">
-                    <GoSearch className="search-item" />
+                    <p>
+                        <GoSearch className="search-item" />
+                    </p>
                 </div>
                 <Link to="/cart" className="cart">
-                    <RiShoppingCartLine /> <span>{carts.length}</span>
+                    <p>
+                        <RiShoppingCartLine />
+                        {carts.length > 0 && <span>{carts.length}</span>}
+                    </p>
                 </Link>
             </SearchWrap>
             <NavStyle className="nav" isOpen={isOpen}>

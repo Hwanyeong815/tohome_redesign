@@ -68,7 +68,7 @@ const Sale = () => {
                         </p>
                     ))}
                 </div>
-                <ProductList products={sortedSale()} />
+                <ProductList products={sortedSale()} showCheckbox={false} />
             </div>
         </SaleWrap>
     );

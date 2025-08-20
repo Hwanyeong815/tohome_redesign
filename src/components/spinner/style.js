@@ -5,7 +5,7 @@ export const SpinnerStyle = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: 500;
 
     display: flex;
     flex-direction: column;
@@ -13,8 +13,8 @@ export const SpinnerStyle = styled.div`
     &::before {
         content: '';
         position: absolute;
-        width: 100vw;
-        height: 100vw;
+        width: 120vw;
+        height: 120vw;
         background-color: white;
         top: 50%;
         left: 50%;

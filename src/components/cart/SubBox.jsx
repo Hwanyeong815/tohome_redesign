@@ -12,15 +12,7 @@ const toNum = (v) => {
 };
 
 const SubBox = ({ cart, setIsCartTab }) => {
-    const {
-        id,
-        name,
-        price,
-        discountedPrice,
-        thumbnailImage,
-        pricePerUnit,
-        quantity,
-    } = cart;
+    const { id, name, price, discountedPrice, thumbnailImage, pricePerUnit, quantity } = cart;
 
     const dispatch = useDispatch();
 
@@ -28,7 +20,9 @@ const SubBox = ({ cart, setIsCartTab }) => {
     const { qty, lineOriginal, lineDiscounted } = useMemo(() => {
         const qtySafe = Number(quantity) || 1;
         const priceNum = toNum(price);
-        const discNum = discountedPrice != null ? toNum(discountedPrice) : null;
+        // const discNum = discountedPrice != null ? toNum(discountedPrice) : null;
+        const discNum =
+            discountedPrice != null && toNum(discountedPrice) !== 0 ? toNum(discountedPrice) : null;
 
         return {
             qty: qtySafe,
@@ -63,27 +57,21 @@ const SubBox = ({ cart, setIsCartTab }) => {
                 <div className="calc">
                     <button
                         className="minus"
-                        onClick={() =>
-                            dispatch(cartActions.decreaseQuantity(id))
-                        }
+                        onClick={() => dispatch(cartActions.decreaseQuantity(id))}
                     >
                         <FaMinus />
                     </button>
                     <p className="num">{qty}</p>
                     <button
                         className="plus"
-                        onClick={() =>
-                            dispatch(cartActions.increaseQuantity(id))
-                        }
+                        onClick={() => dispatch(cartActions.increaseQuantity(id))}
                     >
                         <FaPlus />
                     </button>
                 </div>
 
                 <div className="purchase">
-                    <button onClick={() => setIsCartTab('Order')}>
-                        바로구매
-                    </button>
+                    <button onClick={() => setIsCartTab('Order')}>바로구매</button>
                 </div>
 
                 <div className="icons">

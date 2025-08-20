@@ -32,37 +32,6 @@ const ProductDetail = () => {
     if (!obj)
         return <p style={{ textAlign: 'center', padding: '30px' }}>상품을 찾을 수 없습니다.</p>;
 
-    const {
-        name,
-        des,
-        price,
-        discountedPrice,
-        isDiscounted,
-        discountRate,
-        pricePerUnit,
-        thumbnailImage,
-        details: {
-            origin,
-            packagingType,
-            additionalDiscount,
-            deliveryType,
-            barcode,
-            size,
-            unitWeight,
-            manufacturer,
-            importer,
-            originLaw,
-            expirationPolicy,
-            itemName,
-            gmoInfo,
-            importNotice,
-            productContents,
-            storageMethod,
-            customerService,
-            safetyNotice,
-        },
-    } = obj;
-
     const [activeTab, setActiveTab] = useState(0);
 
     return (

@@ -33,13 +33,17 @@ const normalizeProductId = (raw) => {
         raw.seasoningId ??
         raw.bakeryId ??
         raw.snackId ??
+        raw.recipeProductId ??
         raw.liquidId;
 
+    const numId = Number(id);
     return {
         ...raw,
-        id: Number(id),
+        id: Number.isFinite(numId) ? numId : undefined,
     };
 };
+
+// cartSlice.jsx (or cartSlice.js)
 
 const normalizeItem = (raw) => {
     const base = normalizeProductId(raw);
@@ -47,14 +51,18 @@ const normalizeItem = (raw) => {
     const qty = Number(base?.quantity) || 1;
     const price = toNum(base?.price);
     const disc = base?.discountedPrice != null ? toNum(base.discountedPrice) : null;
-    const unit = disc != null ? disc : price;
+
+    // ⭐ 바로 이 부분이야! `unit` 계산 로직 변경!
+    // discountedPrice가 'null'이 아니고 '0'이 아닐 때만 할인 가격을 적용.
+    // 그 외 (null이거나 0인 경우)에는 price(원가)를 사용!
+    const unit = disc != null && disc !== 0 ? disc : price;
 
     return {
         ...base,
         price,
         discountedPrice: disc,
         quantity: qty,
-        itemtotal: unit * qty,
+        itemtotal: unit * qty, // 이제 unit이 제대로 된 가격이라 itemtotal도 맞게 계산돼!
     };
 };
 
@@ -114,6 +122,7 @@ export const cartSlice = createSlice({
     reducers: {
         addToCart: (state, action) => {
             const incoming = normalizeItem(action.payload);
+
             const exist = state.carts.find((c) => String(c.id) === String(incoming.id));
 
             if (exist) {
@@ -125,7 +134,9 @@ export const cartSlice = createSlice({
             } else {
                 state.carts.push(incoming);
             }
-            save(state.carts);
+            // save(state.carts);
+            save(JSON.parse(JSON.stringify(state.carts)));
+            // console.log('💜 save 직전 state.carts 상태:', state.carts); // ⭐ 이거도 추가!
         },
 
         removeFromCart: (state, action) => {
@@ -138,12 +149,6 @@ export const cartSlice = createSlice({
             if (action.payload) {
                 state.carts = [];
             }
-            save(state.carts);
-        },
-
-        addMultipleToCart: (state, action) => {
-            const normalized = action.payload.map(normalizeItem);
-            state.carts.push(...normalized);
             save(state.carts);
         },
 
@@ -215,7 +220,8 @@ export const cartSlice = createSlice({
 
             state.totalPayable = state.totalDiscounted + state.totalDeliveryFee;
 
-            save(state.carts);
+            // save(state.carts);
+            save(JSON.parse(JSON.stringify(state.carts)));
         },
     },
 });

@@ -17,13 +17,18 @@ export const ProductItemStyle = styled.li`
     box-sizing: border-box;
     border-bottom: 1px solid #333;
     margin-bottom: 65px;
+
     &:not(:nth-child(5n)) {
         margin-right: 9.5px;
     }
 
     .img-wrap {
+        background-color: #ff7259;
         position: relative;
         overflow: hidden;
+        width: 250px;
+        height: 305px;
+        margin-bottom: 20px;
 
         img {
             width: 250px;
@@ -63,8 +68,12 @@ export const ProductItemStyle = styled.li`
                 }
             }
         }
+        .checkbox {
+            background-color: #ff7259;
+        }
     }
     h3 {
+        word-break: keep-all;
         font-size: 16px;
         height: 55px;
         overflow: hidden;
@@ -101,6 +110,7 @@ export const ProductItemStyle = styled.li`
 `;
 
 export const ProductDetailStyle = styled.div`
+    max-height: 900px;
     padding: 60px 20px;
     display: flex;
 `;

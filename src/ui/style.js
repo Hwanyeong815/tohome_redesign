@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const CheckboxStyle = styled.label`
+    z-index: 20;
     .checkbox-wrap {
         position: relative;
     }

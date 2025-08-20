@@ -266,19 +266,29 @@ export const DetailArtMainStyle = styled.div`
     padding-bottom: 16px;
     width: 1330px;
     .slide {
-        cursor: pointer;
+        cursor: grab;
+        &:active {
+            cursor: grabbing;
+        }
         /* min-width: 200px; */
         width: min-content;
         margin-right: 10px;
     }
     .detailContent {
-        /* display: inline-flex; */
-
-        /* flex-wrap: nowrap; */
-        /* gap: 30px; */
+        /* display: flex;
+        gap: 30px;
+        width: max-content;
+        height: 100vh;
+        overflow: hidden; */
+    }
+    .box,
+    .mainImg {
+        /* flex: 0 0 100vw;  */
+        /* background-color: white; */
     }
     .mainImg {
         width: 575px;
+        height: 100%;
         img {
             width: 100%;
         }

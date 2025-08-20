@@ -69,7 +69,7 @@ const Best = () => {
                     ))}
                 </div>
 
-                <ProductList products={sortedBest()} />
+                <ProductList products={sortedBest()} showCheckbox={false} />
             </div>
         </BestWrap>
     );

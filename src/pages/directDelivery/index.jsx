@@ -130,7 +130,7 @@ const DirectDelivery = () => {
                     ))}
                 </div>
 
-                {directDeliveryUl.length > 0 && <ProductList products={sortedDirectDelivery()} />}
+                {directDeliveryUl.length > 0 && <ProductList products={sortedDirectDelivery()} showCheckbox={false}/>}
             </div>
         </DirectDeliveryWrap>
     );

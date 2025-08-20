@@ -7,8 +7,6 @@ const Cartitem = ({ cart, setIsCartTab }) => {
         <Box>
             <div className="left">
                 <SubBox key={cart} cart={cart} setIsCartTab={setIsCartTab} />
-                {/* <SubBox />
-                <SubBox /> */}
             </div>
         </Box>
     );

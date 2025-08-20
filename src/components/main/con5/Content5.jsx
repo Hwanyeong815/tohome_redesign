@@ -1,39 +1,82 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { ContentStyle, ContentUl } from '../style';
-import RecipeList from './RecipeList';
 import { Content05Style } from './style';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import ProductList from '../../product/ProductList';
+import { cartActions } from '../../../store/modules/cartSlice';
 
 const Content5 = () => {
-    const { products, gift, menus } = useSelector((state) => state.cart);
-    const todayRecipe = products.filter((product) =>
+    const { products, menus, specials } = useSelector((state) => state.cart);
+    const AllMenus = [...products, ...menus, ...specials];
+    const todayRecipe = AllMenus.filter((product) =>
         product.tags?.some((tag) => tag.name === '오늘의레시피' && tag.rank <= 5)
     );
-
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const [selectedItems, setSelectedItems] = useState(() => {
+        return new Set(todayRecipe.map((product) => product.id));
+    });
+
+    ////////
+
+    // Handle individual checkbox changes
+    const handleItemSelect = (productId, isSelected) => {
+        const newSelectedItems = new Set(selectedItems);
+        if (isSelected) {
+            newSelectedItems.add(productId);
+        } else {
+            newSelectedItems.delete(productId);
+        }
+        setSelectedItems(newSelectedItems);
+    };
+
+    // Handle select all checkbox
+    const handleSelectAll = (isSelected) => {
+        if (isSelected) {
+            const allIds = new Set(todayRecipe.map((product) => product.id));
+            setSelectedItems(allIds);
+        } else {
+            setSelectedItems(new Set());
+        }
+    };
+
+    // Add selected items to cart
+    const handleAddSelectedToCart = () => {
+        const selectedProducts = todayRecipe.filter((product) => selectedItems.has(product.id));
+
+        selectedProducts.forEach((product) => {
+            console.log('💚 addToCart 호출 직전 Product 객체:', product);
+            dispatch(cartActions.addToCart(product));
+        });
+
+        // Clear selections after adding to cart
+        setSelectedItems(new Set());
+
+        // Show success message (optional)
+        alert(`${selectedProducts.length}개의 상품이 장바구니에 담겼습니다.`);
+    };
+
+    // Add all items to cart
+    const handleAddAllToCart = () => {
+        todayRecipe.forEach((product) => {
+            console.log('💚 addToCart 호출 직전 Product 객체:', product);
+            dispatch(cartActions.addToCart(product));
+        });
+
+        // Clear selections
+        setSelectedItems(new Set());
+
+        // Show success message (optional)
+        alert(`${todayRecipe.length}개의 상품이 장바구니에 담겼습니다.`);
+    };
+
+    ////////////////////
 
     const onClick1 = () => {
         navigate('/gift');
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-    };
-
-    const dispatch = useDispatch();
-    const [isChecked, setIsChecked] = useState(false);
-
-    // const handleCheckboxChange = (e) => {
-    //     setIsChecked(e.target.checked);
-
-    //     if (e.target.checked) {
-    //         // 체크되면 장바구니에 아이템 추가
-    //         dispatch(addToCart({ id: 1, name: '예시 재료' }));
-    //     } else {
-    //         // 체크 해제 시 장바구니에서 제거하는 로직도 가능
-    //     }
-    // };
-    const handleAddAll = () => {
-        const allItems = [...products, ...gifts, ...menus];
-        dispatch(cartActions.addMultipleToCart(allItems));
     };
 
     return (
@@ -73,25 +116,25 @@ const Content5 = () => {
                             </button>
                             <div className="line"></div>
                             <div className="btn-wrap">
-                                <button className="btn">선택 재료 담기</button>
-                                <button className="btn">재료 한번에 담기</button>
+                                <button className="btn" onClick={handleAddSelectedToCart}>
+                                    선택 재료 담기
+                                </button>
+                                <button className="btn" onClick={handleAddAllToCart}>
+                                    재료 한번에 담기
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div className="recipe-body">
-                        <ContentUl>
-                            {todayRecipe.map((product) => (
-                                <RecipeList key={product.id} product={product} />
-                            ))}
-                        </ContentUl>
+                        <ProductList
+                            products={todayRecipe}
+                            showCheckbox={true}
+                            selectedItems={selectedItems}
+                            onItemSelect={handleItemSelect}
+                        />
                     </div>
                 </section>
-                <section
-                    className="main-gift-wrap"
-                    onClick={onClick1}
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
-                >
+                <section className="main-gift-wrap" onClick={onClick1} data-aos="fade-up">
                     <div className="txt-box">
                         <img src="images/main/main_gift01.png" alt="모눈종이" />
                         <p>

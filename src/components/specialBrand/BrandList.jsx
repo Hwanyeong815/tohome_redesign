@@ -72,7 +72,7 @@ const BrandList = ({ brandTag }) => {
                     </p>
                 ))}
             </div>
-            <ProductList products={getSortedProducts()} />
+            <ProductList products={getSortedProducts()} showCheckbox={false} />
         </BrandListStyle>
     );
 };

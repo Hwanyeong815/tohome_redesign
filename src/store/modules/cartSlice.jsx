@@ -43,8 +43,6 @@ const normalizeProductId = (raw) => {
     };
 };
 
-// cartSlice.jsx (or cartSlice.js)
-
 const normalizeItem = (raw) => {
     const base = normalizeProductId(raw);
 
@@ -52,9 +50,6 @@ const normalizeItem = (raw) => {
     const price = toNum(base?.price);
     const disc = base?.discountedPrice != null ? toNum(base.discountedPrice) : null;
 
-    // ⭐ 바로 이 부분이야! `unit` 계산 로직 변경!
-    // discountedPrice가 'null'이 아니고 '0'이 아닐 때만 할인 가격을 적용.
-    // 그 외 (null이거나 0인 경우)에는 price(원가)를 사용!
     const unit = disc != null && disc !== 0 ? disc : price;
 
     return {
@@ -62,7 +57,7 @@ const normalizeItem = (raw) => {
         price,
         discountedPrice: disc,
         quantity: qty,
-        itemtotal: unit * qty, // 이제 unit이 제대로 된 가격이라 itemtotal도 맞게 계산돼!
+        itemtotal: unit * qty,
     };
 };
 
@@ -113,7 +108,6 @@ const initialState = {
 const DELIVERY_THRESHOLD = 10000;
 const DELIVERY_FEE = 3000;
 
-// payload가 id 혹은 { id } 모두 오케이 + 타입 통일
 const getId = (p) => String(p?.id ?? p);
 
 export const cartSlice = createSlice({
@@ -134,9 +128,8 @@ export const cartSlice = createSlice({
             } else {
                 state.carts.push(incoming);
             }
-            // save(state.carts);
+
             save(JSON.parse(JSON.stringify(state.carts)));
-            // console.log('💜 save 직전 state.carts 상태:', state.carts); // ⭐ 이거도 추가!
         },
 
         removeFromCart: (state, action) => {
@@ -170,7 +163,6 @@ export const cartSlice = createSlice({
                 item.itemtotal = unit * item.quantity;
                 save(state.carts);
             } else {
-                // 상세페이지에서 미존재 상태에서 + 클릭 시 자동으로 담기
                 state.carts.push({
                     id,
                     quantity: 1,
@@ -220,7 +212,6 @@ export const cartSlice = createSlice({
 
             state.totalPayable = state.totalDiscounted + state.totalDeliveryFee;
 
-            // save(state.carts);
             save(JSON.parse(JSON.stringify(state.carts)));
         },
     },

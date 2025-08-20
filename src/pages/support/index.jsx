@@ -5,7 +5,7 @@ import Notice from '../../components/support/notice/Notice';
 import { SupporMainTap, SupportWrap } from './style';
 
 const Support = () => {
-    const [activeTab, setActiveTab] = useState('all'); // all, faq, notice, customer
+    const [activeTab, setActiveTab] = useState('all');
 
     return (
         <SupportWrap>
@@ -50,31 +50,3 @@ const Support = () => {
 };
 
 export default Support;
-
-// import Customer from '../../components/support/customer/Customer';
-// import Faq from '../../components/support/faq/Faq';
-// import Notice from '../../components/support/notice/Notice';
-// import { SupporMainTap, SupportWrap } from './style';
-
-// const Support = () => {
-//     return (
-//         <SupportWrap>
-//             <div className="inner">
-//                 <SupporMainTap>
-//                     <h2>고객센터</h2>
-//                     <div className="tab">
-//                         <p className="on">ALL</p>
-//                         <p>자주하는 질문</p>
-//                         <p>공지사항</p>
-//                         <p>문의 게시판</p>
-//                     </div>
-//                 </SupporMainTap>
-//                 <Faq />
-//                 <Notice />
-//                 <Customer />
-//             </div>
-//         </SupportWrap>
-//     );
-// };
-
-// export default Support;

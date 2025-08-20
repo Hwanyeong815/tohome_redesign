@@ -9,7 +9,7 @@ const Sale = () => {
     const AllMenus = [...products, ...menus, ...specials];
 
     const saleUl = AllMenus.filter(
-        (product) => product.tags?.some((tag) => tag.name === '베스트') && product.discountedPrice // discountPrice가 존재하는 경우만
+        (product) => product.tags?.some((tag) => tag.name === '베스트') && product.discountedPrice
     ).filter((product, index, self) => index === self.findIndex((p) => p.name === product.name));
 
     const [sortType, setSortType] = useState('판매량순');

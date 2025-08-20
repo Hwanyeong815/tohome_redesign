@@ -9,9 +9,6 @@ const MagazineListRight = ({ start, onToggle }) => {
     const h3Ref = useRef(null);
     const h4Ref = useRef(null);
 
-    // rotateRefs.current = [];
-    // parsleyRefs.current = [];
-
     const addRotateRef = (el) => {
         if (el && !rotateRefs.current.includes(el)) rotateRefs.current.push(el);
     };
@@ -20,8 +17,7 @@ const MagazineListRight = ({ start, onToggle }) => {
     };
 
     useEffect(() => {
-        if (!start) return; // left 끝날 때까지 대기
-
+        if (!start) return;
         const tl = gsap.timeline();
 
         tl.from(h2Ref.current, { opacity: 0, x: 50, duration: 0.5 });

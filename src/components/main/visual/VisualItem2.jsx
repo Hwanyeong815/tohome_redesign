@@ -17,7 +17,6 @@ const VisualItem2 = ({ visual, isActive }) => {
 
     useEffect(() => {
         if (isActive) {
-            // 각 이미지마다 다른 delay 적용
             imgRefs.current.forEach((el, index) => {
                 gsap.fromTo(
                     el,

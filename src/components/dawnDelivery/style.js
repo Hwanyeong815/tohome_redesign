@@ -377,7 +377,6 @@ export const Con4Style = styled.div`
                     width: 12px;
                     height: 12px;
                     background: #fff;
-                    //   border: 1px solid #b1b1b1;
                     border-right: 1px solid #b1b1b1;
                     border-bottom: 1px solid #b1b1b1;
                     border-radius: 2px; /* 살짝 둥근 꼬리 */

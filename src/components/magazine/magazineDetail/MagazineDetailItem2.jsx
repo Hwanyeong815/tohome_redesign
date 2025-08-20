@@ -7,9 +7,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MagazineDetailItem2 = () => {
     useEffect(() => {
-        // 🌟🌟🌟 GSAP이 애니메이션할 대상: <textPath> 요소의 ID 🌟🌟🌟
         const targetTextPath = document.querySelector('#animatedCurvedTextOnPath');
-        // ScrollTrigger의 트리거 대상: SVG 전체 컨테이너 ID
+
         const triggerContainer = document.querySelector('#mainSvgContainer');
 
         if (!targetTextPath || !triggerContainer) {
@@ -19,40 +18,35 @@ const MagazineDetailItem2 = () => {
             return;
         }
 
-        // 🌟🌟🌟 path를 따라 글자가 움직이면서 나타나는 애니메이션 🌟🌟🌟
         gsap.fromTo(
-            targetTextPath, // 애니메이션 대상은 <textPath> 요소!
+            targetTextPath,
             {
-                startOffset: '100%', // 시작: 텍스트가 path의 맨 끝에 (오른쪽에) 숨어있다가
-                opacity: 0, // 완전 투명하게
+                startOffset: '100%',
+                opacity: 0,
             },
             {
-                startOffset: '0%', // 끝: 텍스트가 path의 맨 시작점 (왼쪽으로) 이동해서 나타나고
-                opacity: 1, // 불투명하게 됨
-                duration: 2, // 애니메이션은 2초 동안 진행
-                ease: 'power3.out', // 부드럽게 마무리되는 효과
+                startOffset: '0%',
+                opacity: 1,
+                duration: 2,
+                ease: 'power3.out',
                 scrollTrigger: {
-                    trigger: triggerContainer, // SVG 전체 컨테이너가 화면에 나타날 때 애니메이션 시작
-                    start: 'top 80%', // 컨테이너의 상단이 뷰포트의 80% 지점에 닿으면 시작
-                    // markers: true,         // 개발 시에만 쓰는 마커, 완료 후엔 지워!
+                    trigger: triggerContainer,
+                    start: 'top 80%',
                 },
             }
         );
 
-        // 만약 'SVG 컨테이너 자체'를 움직이는 애니메이션도 여전히 원한다면 (이전에 있었던 X, Y, Scale 등)
-        // triggerContainer (mainSvgContainer)를 타겟으로 추가적인 애니메이션을 여기 넣어주면 돼.
-        // 예를 들어:
         gsap.from(triggerContainer, {
-            y: 50, // 살짝 아래에서 시작
-            opacity: 0, // 투명하게 시작
-            duration: 1, // 1초 동안
+            y: 50,
+            opacity: 0,
+            duration: 1,
             ease: 'power1.out',
             scrollTrigger: {
                 trigger: triggerContainer,
-                start: 'top 95%', // 텍스트 애니메이션보다 살짝 일찍
+                start: 'top 95%',
             },
         });
-    }, []); // 이펙트는 컴포넌트 마운트 시 한 번만 실행 (의존성 배열 빈 상태)
+    }, []);
 
     return (
         <MagazineDetailItem2Style>
@@ -68,7 +62,7 @@ const MagazineDetailItem2 = () => {
                     viewBox="-100 -100 700 700"
                     fill="none"
                     className="pathTxt"
-                    id="mainSvgContainer" // SVG 컨테이너 id
+                    id="mainSvgContainer"
                 >
                     <path
                         id="myActualTextPathCurve"

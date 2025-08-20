@@ -21,7 +21,6 @@ const Content5 = () => {
 
     ////////
 
-    // Handle individual checkbox changes
     const handleItemSelect = (productId, isSelected) => {
         const newSelectedItems = new Set(selectedItems);
         if (isSelected) {
@@ -32,7 +31,6 @@ const Content5 = () => {
         setSelectedItems(newSelectedItems);
     };
 
-    // Handle select all checkbox
     const handleSelectAll = (isSelected) => {
         if (isSelected) {
             const allIds = new Set(todayRecipe.map((product) => product.id));
@@ -42,33 +40,25 @@ const Content5 = () => {
         }
     };
 
-    // Add selected items to cart
     const handleAddSelectedToCart = () => {
         const selectedProducts = todayRecipe.filter((product) => selectedItems.has(product.id));
 
         selectedProducts.forEach((product) => {
-            console.log('💚 addToCart 호출 직전 Product 객체:', product);
             dispatch(cartActions.addToCart(product));
         });
 
-        // Clear selections after adding to cart
         setSelectedItems(new Set());
 
-        // Show success message (optional)
         alert(`${selectedProducts.length}개의 상품이 장바구니에 담겼습니다.`);
     };
 
-    // Add all items to cart
     const handleAddAllToCart = () => {
         todayRecipe.forEach((product) => {
-            console.log('💚 addToCart 호출 직전 Product 객체:', product);
             dispatch(cartActions.addToCart(product));
         });
 
-        // Clear selections
         setSelectedItems(new Set());
 
-        // Show success message (optional)
         alert(`${todayRecipe.length}개의 상품이 장바구니에 담겼습니다.`);
     };
 

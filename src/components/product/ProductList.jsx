@@ -9,7 +9,7 @@ const ProductList = ({
     onItemSelect,
     onSelectAll,
 }) => {
-    const [visibleCount, setVisibleCount] = useState(15); // 처음 8개만 보여주기
+    const [visibleCount, setVisibleCount] = useState(15);
 
     const handleScroll = () => {
         const scrollTop = window.scrollY;
@@ -26,7 +26,6 @@ const ProductList = ({
         return () => window.removeEventListener('scroll', handleScroll);
     }, [products]);
 
-    // Handle individual item selection from ProductItem
     const handleProductItemSelect = (productId, isSelected) => {
         if (onItemSelect) {
             onItemSelect(productId, isSelected);

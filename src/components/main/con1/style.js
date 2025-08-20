@@ -145,35 +145,4 @@ export const MainCon1Style = styled.article`
             transform: rotate(-45deg);
         }
     }
-    /* ul {
-        display: flex;
-        li {
-            width: 240px;
-            h2 {
-                font-size: 20px;
-                font-weight: 600;
-                text-align: left;
-                word-break: keep-all;
-            }
-            p {
-            }
-            img {
-                width: 100%;
-            }
-        }
-    } */
 `;
-
-// .mySwiper {
-//   padding: 20px;
-//   max-width: 600px;
-//   margin: 0 auto;
-//   background-color: #fafafa;
-//   border-radius: 8px;
-//   box-sizing: border-box;
-// }
-
-// /* 슬라이드 안 컨텐츠 여백 */
-// .slideContent {
-//   padding: 10px;
-// }

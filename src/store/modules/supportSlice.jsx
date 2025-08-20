@@ -19,7 +19,6 @@ export const supportSlice = createSlice({
         setCurrentCustomer: (state, action) => {},
         removeCustomer: (state, action) => {},
         updateCustomer: (state, action) => {},
-        //
         faqToggle: (state, action) => {
             const id = action.payload;
             if (state.openFaqIds.includes(id)) {

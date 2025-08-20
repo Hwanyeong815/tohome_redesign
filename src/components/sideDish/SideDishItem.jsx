@@ -11,9 +11,3 @@ const SideDishItem = () => {
 };
 
 export default SideDishItem;
-// const SideDishItem = ({ item }) => {
-//     const { id } = item;
-//     return <div>{id}아이템</div>;
-// };
-
-// export default SideDishItem;

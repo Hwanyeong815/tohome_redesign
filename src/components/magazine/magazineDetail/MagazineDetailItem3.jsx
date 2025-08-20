@@ -17,7 +17,6 @@ const MagazineDetailItem3 = () => {
     };
 
     useEffect(() => {
-        // main-img 애니메이션
         if (mainImgRef.current) {
             gsap.fromTo(
                 mainImgRef.current,
@@ -37,7 +36,6 @@ const MagazineDetailItem3 = () => {
             );
         }
 
-        // detail-vectors 애니메이션
         imgRefs.current.forEach((img, index) => {
             gsap.fromTo(
                 img,

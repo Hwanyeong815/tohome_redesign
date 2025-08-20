@@ -2,12 +2,6 @@ import FaqItem from './FaqItem';
 import { supportActions } from '../../../store/modules/supportSlice';
 
 const FaqList = ({ selectedTag, filteredFaqs, openFaqIds, dispatch, faqs }) => {
-    // useEffect(() => {
-    //     if (openFaqIds.length === 0 && faqs.length > 0) {
-    //         dispatch(supportActions.faqToggle(faqs[0].faqId));
-    //     }
-    // }, [openFaqIds, faqs, dispatch]);
-
     return (
         <div>
             <h3>

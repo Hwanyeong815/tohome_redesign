@@ -1,7 +1,6 @@
 import React from 'react';
 import { ProductTopStyle } from './style';
 
-// const ProductTop = ({ subCategories, selectedSub, setSelectedSub }) => {
 const ProductTop = ({ subCategories, selectedSub, setSelectedSub, fontSize }) => {
     return (
         <ProductTopStyle fontSize={fontSize}>
@@ -16,7 +15,6 @@ const ProductTop = ({ subCategories, selectedSub, setSelectedSub, fontSize }) =>
                     key={sub}
                     className={selectedSub === sub ? 'on' : ''}
                     onClick={() => {
-                        console.log('클릭한 카테고리:', sub);
                         setSelectedSub(sub);
                     }}
                 >

@@ -1,4 +1,3 @@
-// MagazineListLeft.jsx
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import magazineData from '../../../assets/data/magazineData';
@@ -10,7 +9,6 @@ const MagazineListLeft = ({ onComplete }) => {
     };
 
     useEffect(() => {
-        // refs 확보 후 바로 실행
         const images = wrapRefs.current.map((ref) => ref.querySelector('img'));
 
         const promises = images.map(
@@ -22,7 +20,6 @@ const MagazineListLeft = ({ onComplete }) => {
         );
 
         Promise.all(promises).then(() => {
-            // refs 확보 후 다음 이벤트 루프에서 실행
             setTimeout(() => {
                 gsap.from(wrapRefs.current, {
                     opacity: 0,

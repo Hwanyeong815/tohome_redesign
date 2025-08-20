@@ -20,14 +20,9 @@ const ProductItem = ({
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const handleClick = () => {
-        // 모든 클릭이 productDetail 페이지로 이동
         navigate(`/product/${product.id}`);
         window.scrollTo({ top: 0, left: 0 });
     };
-
-    // const handleChange = (e) => {
-    //     onItemSelect(product.id, e.target.checked);
-    // };
 
     const {
         images,
@@ -43,11 +38,11 @@ const ProductItem = ({
     } = product;
 
     const imgList = thumbnailImage
-        ? [thumbnailImage] // thumbnailImage가 있으면 그것만 사용
+        ? [thumbnailImage]
         : [
-              ...(Array.isArray(thumbs) ? thumbs : []), // thumbs 배열 있으면 사용
-              ...(Array.isArray(images) ? images : []), // images 배열 있으면 사용
-          ].filter(Boolean); // undefined/null 제거
+              ...(Array.isArray(thumbs) ? thumbs : []),
+              ...(Array.isArray(images) ? images : []),
+          ].filter(Boolean);
 
     return (
         <ProductItemStyle>
@@ -61,7 +56,7 @@ const ProductItem = ({
                         className="icon-btn"
                         onMouseEnter={() => setHoverHeart(true)}
                         onMouseLeave={() => setHoverHeart(false)}
-                        onClick={() => setClicked((prev) => !prev)} // 클릭 시 toggle
+                        onClick={() => setClicked((prev) => !prev)}
                     >
                         {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
                     </button>

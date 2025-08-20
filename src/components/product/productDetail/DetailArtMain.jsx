@@ -39,8 +39,8 @@ const DetailArtMain = ({ obj }) => {
                 <Swiper
                     modules={[FreeMode]}
                     freeMode={{
-                        enabled: true, // 자유 스크롤 활성화
-                        momentum: true, // 관성 스크롤
+                        enabled: true,
+                        momentum: true,
                     }}
                     slidesPerView="auto"
                     spaceBetween={20}
@@ -51,8 +51,6 @@ const DetailArtMain = ({ obj }) => {
                         <div className="mainImg">
                             {thumbnailImage && <img src={thumbnailImage} alt={name} />}
                             {thumbs && <img src={thumbs} alt={name} />}
-
-                            {/* <img src="/images/product/detailArt/mainImg.png" alt="" /> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="slide">

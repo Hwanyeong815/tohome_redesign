@@ -91,7 +91,6 @@ const MainVisual = () => {
                 autoplay={{ delay: 4000, disableOnInteraction: false }}
                 loop={true}
                 slidesPerView={1}
-                // speed={1000}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
                 {visualData.map((visual, index) => {

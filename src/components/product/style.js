@@ -29,7 +29,6 @@ export const ProductItemStyle = styled.li`
     }
 
     .img-wrap {
-        background-color: #ff7259;
         position: relative;
         overflow: hidden;
         width: 250px;

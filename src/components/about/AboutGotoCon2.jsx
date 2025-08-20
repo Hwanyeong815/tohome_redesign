@@ -18,17 +18,18 @@ const AboutGotoCon2 = (props) => {
                 </li>
                 <li>
                     <div className="con-text">
-                        <h3
-                            style={{
-                                background:
-                                    "url('/images/about/about_icon_02.png') no-repeat right 10px top 0",
-                            }}
-                        >
-                            새벽투홈
-                        </h3>
-                        <p className="green-title">
-                            신선함을 지키는 새벽 배송 시스템
-                        </p>
+                        <div className="titleWrap">
+                            <div className="title">
+                                <h3>새벽투홈</h3>
+                                <img
+                                    src="/images/about/about_icon_02.png"
+                                    alt=""
+                                />
+                            </div>
+                            <p className="green-title">
+                                신선함을 지키는 새벽 배송 시스템
+                            </p>
+                        </div>
                         <p>
                             하루의 시작, 현대식품관에서 고르고 고른 정갈한
                             식재료를 아침 현관 앞에서 편하게 받아보세요.

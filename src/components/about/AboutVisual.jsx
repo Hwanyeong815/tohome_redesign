@@ -58,11 +58,12 @@ const AboutVisual = () => {
     return (
         <AboutSlideWrap>
             <Swiper
+                className="about-swiper"
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;
                 }}
                 modules={[Autoplay]}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                // autoplay={{ delay: 5000, disableOnInteraction: false }}
                 loop={true}
                 slidesPerView={1}
             >

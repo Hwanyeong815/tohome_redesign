@@ -7,15 +7,16 @@ const AboutGotoCon1 = (props) => {
             <AboutLeft {...props}>
                 <li>
                     <div className="con-text">
-                        <h3
-                            style={{
-                                background:
-                                    "url('/images/about/about_icon_01.png') no-repeat right 10px top 0",
-                            }}
-                        >
-                            투홈구독
-                        </h3>
-                        <p className="green-title">나의 규칙적 미식 생활</p>
+                        <div className="titleWrap">
+                            <div className="title">
+                                <h3>투홈구독</h3>
+                                <img
+                                    src="/images/about/about_icon_01.png"
+                                    alt=""
+                                />
+                            </div>
+                            <p className="green-title">나의 규칙적 미식 생활</p>
+                        </div>
                         <p>
                             반찬 걱정은 투홈이 덜어드릴게요. 원하는 주기에 맞춰
                             찾아오는 작은 미식의 기쁨을 누려보세요.

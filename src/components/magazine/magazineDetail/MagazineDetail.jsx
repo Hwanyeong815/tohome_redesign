@@ -1,4 +1,3 @@
-import MagazineBottom from '../MagazineBottom';
 import MagazineDetailItem1 from './MagazineDetailItem1';
 import MagazineDetailItem2 from './MagazineDetailItem2';
 import MagazineDetailItem3 from './MagazineDetailItem3';

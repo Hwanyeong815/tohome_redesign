@@ -10,6 +10,12 @@ export const ProductListStyle = styled.ul`
     h2 {
         font-size: 20px;
     }
+    @media screen and (max-width: 600px) {
+        width: 100vw;
+        gap: 6.1538vw;
+        display: flex;
+        justify-content: center;
+    }
 `;
 export const ProductItemStyle = styled.li`
     width: 250px;
@@ -106,6 +112,39 @@ export const ProductItemStyle = styled.li`
         font-size: 15px;
         margin-top: 20px;
         word-break: keep-all;
+    }
+    @media screen and (max-width: 600px) {
+        width: 43.5897vw;
+        height: 77.0256vw;
+        margin-right: 0 !important;
+        border-bottom: 0;
+        margin-bottom: 0;
+        .img-wrap {
+            width: 43.5897vw;
+            img {
+                width: 43.5897vw;
+                height: 51.2821vw;
+            }
+            .overlay {
+                width: 43.5897vw;
+                height: 51.2821vw;
+            }
+        }
+        h3 {
+            font-size: 3.5897vw;
+            height: 10.7692vw;
+        }
+        .price-box {
+            .discount {
+                font-size: 3.0769vw;
+            }
+            .price {
+                font-size: 3.5897vw;
+                span {
+                    font-size: 3.5897vw;
+                }
+            }
+        }
     }
 `;
 

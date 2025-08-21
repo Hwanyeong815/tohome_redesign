@@ -120,6 +120,7 @@ export const ProductItemStyle = styled.li`
         margin-bottom: 0;
         .img-wrap {
             width: 43.5897vw;
+            height: 51.2821vw;
             img {
                 width: 43.5897vw;
                 height: 51.2821vw;

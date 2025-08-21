@@ -58,7 +58,11 @@ const ProductItem = ({
                         onMouseLeave={() => setHoverHeart(false)}
                         onClick={() => setClicked((prev) => !prev)}
                     >
-                        {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
+                        {hoverHeart || clicked ? (
+                            <BsSuitHeartFill />
+                        ) : (
+                            <BsSuitHeart />
+                        )}
                     </button>
                     <button
                         className="icon-btn"
@@ -88,7 +92,8 @@ const ProductItem = ({
             <div className="price-box" onClick={handleClick}>
                 {isDiscounted ? (
                     <p className="discount">
-                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        원
                     </p>
                 ) : (
                     <p className="discount">{''}</p>
@@ -96,8 +101,12 @@ const ProductItem = ({
                 <p className="price">
                     {isDiscounted && <span>{discountRate}%</span>}
                     {isDiscounted
-                        ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                        : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        ? discountedPrice
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                        : price
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                     원
                 </p>
             </div>

@@ -4,6 +4,8 @@ import BestMenuLi from './BestMenuLi';
 import { MainCon1Style } from './style';
 import Slider from 'react-slick';
 import MainNewPro from './MainNewPro';
+import { useState } from 'react';
+import ProductList from '../../product/ProductList';
 
 const settings1 = {
     dots: false,
@@ -14,9 +16,13 @@ const settings1 = {
 };
 
 const Content1 = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
     const { products } = useSelector((state) => state.cart);
     const bestTop5 = products.filter((product) =>
         product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 5)
+    );
+    const bestTop6 = products.filter((product) =>
+        product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 6)
     );
     const newRecom = products.filter((product) =>
         product.tags?.some((tag) => tag.name === '신상품' && tag.rank <= 3)
@@ -33,13 +39,25 @@ const Content1 = () => {
                     >
                         <h2 className="main-title">베스트 메뉴</h2>
                         <h3 className="sub-title">
-                            현대식품관에서 처음 선보이는 오늘 막 도착한 신상품
+                            지금 가장 사랑받는 메뉴, 한눈에 담아보세요
                         </h3>
-                        <Slider {...settings1} className="ul">
-                            {bestTop5.map((product) => (
-                                <BestMenuLi key={product.id} product={product} />
-                            ))}
-                        </Slider>
+                        {isMobile ? (
+                            <div className="productWrap">
+                                <ProductList
+                                    products={bestTop6}
+                                    showCheckbox={false}
+                                />
+                            </div>
+                        ) : (
+                            <Slider {...settings1} className="ul">
+                                {bestTop5.map((product) => (
+                                    <BestMenuLi
+                                        key={product.id}
+                                        product={product}
+                                    />
+                                ))}
+                            </Slider>
+                        )}
                     </section>
                     <section
                         className="main-newPro-wrap"

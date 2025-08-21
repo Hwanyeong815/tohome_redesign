@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { ContentStyle, ContentUl } from '../style';
+import { ContentStyle } from '../style';
 import { Content05Style } from './style';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';

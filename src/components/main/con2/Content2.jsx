@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 
-import { ContentStyle, ContentUl } from '../style';
+import { ContentStyle } from '../style';
 
 import MainRecom from './MainRecom';
 import { MainRecomStyle } from './style';

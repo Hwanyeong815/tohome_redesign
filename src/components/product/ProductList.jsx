@@ -33,7 +33,7 @@ const ProductList = ({
     };
 
     return (
-        <ProductListStyle>
+        <ProductListStyle className="product-list">
             {products.slice(0, visibleCount).map((product, idx) => (
                 <ProductItem
                     key={String(product.id ?? idx)}

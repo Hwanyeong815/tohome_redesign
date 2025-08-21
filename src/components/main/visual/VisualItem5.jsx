@@ -22,17 +22,32 @@ const VisualItem5 = ({ visual, isActive }) => {
                 gsap.fromTo(
                     el,
                     { opacity: 0, y: 50 },
-                    { opacity: 1, y: 0, duration: 0.8, delay: index * 0.2, ease: 'power3.out' }
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: index * 0.2,
+                        ease: 'power3.out',
+                    }
                 );
             });
 
             gsap.fromTo(
                 txtRef.current,
                 { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: 'power3.out' }
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    delay: 0.2,
+                    ease: 'power3.out',
+                }
             );
         } else {
-            gsap.set([...imgRefs.current, txtRef.current], { opacity: 0, y: 0 });
+            gsap.set([...imgRefs.current, txtRef.current], {
+                opacity: 0,
+                y: 0,
+            });
         }
     }, [isActive]);
 
@@ -56,6 +71,9 @@ const VisualItem5 = ({ visual, isActive }) => {
             <div className="txt-box" ref={txtRef}>
                 <h3>
                     <img src="/images/main/mainVisual5tit.png" alt={title} />
+                </h3>
+                <h3 className="mobileOnlyTit">
+                    <img src="/images/main/mobileBanner5tit.png" alt="" />
                 </h3>
                 <p>{des}</p>
                 <div className="more">더보기</div>

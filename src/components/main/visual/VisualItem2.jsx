@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const VisualItem2 = ({ visual, isActive }) => {
-    const { title, des, img, imgs, position } = visual;
+    const { title, title2, des, des2, img, imgs, position } = visual;
     const imgRefs = useRef([]);
     imgRefs.current = [];
 
@@ -21,17 +21,32 @@ const VisualItem2 = ({ visual, isActive }) => {
                 gsap.fromTo(
                     el,
                     { opacity: 0, y: 50 },
-                    { opacity: 1, y: 0, duration: 0.8, delay: index * 0.2, ease: 'power3.out' }
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: index * 0.2,
+                        ease: 'power3.out',
+                    }
                 );
             });
 
             gsap.fromTo(
                 txtRef.current,
                 { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: 'power3.out' }
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    delay: 0.2,
+                    ease: 'power3.out',
+                }
             );
         } else {
-            gsap.set([...imgRefs.current, txtRef.current], { opacity: 0, y: 0 });
+            gsap.set([...imgRefs.current, txtRef.current], {
+                opacity: 0,
+                y: 0,
+            });
         }
     }, [isActive]);
 
@@ -40,7 +55,12 @@ const VisualItem2 = ({ visual, isActive }) => {
             <div className="img-box">
                 {imgs ? (
                     imgs.map((obj, idx) => (
-                        <img src={obj.src} alt={`${title}-${idx}`} key={idx} ref={addToRefs} />
+                        <img
+                            src={obj.src}
+                            alt={`${title}-${idx}`}
+                            key={idx}
+                            ref={addToRefs}
+                        />
                     ))
                 ) : (
                     <img src={img} alt={title} ref={addToRefs} />
@@ -55,7 +75,16 @@ const VisualItem2 = ({ visual, isActive }) => {
                         </span>
                     ))}
                 </h3>
+                <h3 className="mobileOnlyT">
+                    {title2.split('\n').map((line, idx) => (
+                        <span key={idx}>
+                            {line}
+                            <br />
+                        </span>
+                    ))}
+                </h3>
                 <p>{des}</p>
+                <p className="mobileOnly">{des2}</p>
                 <div className="more">더보기</div>
             </div>
         </BannerWrap>

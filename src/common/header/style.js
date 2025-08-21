@@ -14,6 +14,7 @@ export const HeaderStyle = styled.header`
         height: 230px;
         .status-bar {
             display: none;
+            background-color: white;
         }
 
         .inner {
@@ -61,11 +62,12 @@ export const HeaderStyle = styled.header`
     }
     @media screen and (max-width: 600px) {
         &.header {
-            position: sticky !important;
+            /* position: sticky !important; */
             left: 50%;
             top: 0;
             z-index: 500;
             height: 38.4615vw;
+            margin-bottom: 2.5641vw;
 
             .status-bar {
                 display: block;
@@ -193,6 +195,9 @@ export const NavStyle = styled.nav.withConfig({
                     padding: 3.8462vw 5vw;
                     box-sizing: border-box;
                     white-space: nowrap;
+                }
+                &::before {
+                    top: 5.5282vw;
                 }
 
                 &:nth-child(n + 4):not(:nth-child(7)) {

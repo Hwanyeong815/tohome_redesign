@@ -1,5 +1,3 @@
-import { info } from 'sass';
-
 export default [
     {
         id: 1,

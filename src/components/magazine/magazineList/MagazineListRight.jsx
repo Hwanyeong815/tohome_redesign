@@ -56,12 +56,24 @@ const MagazineListRight = ({ start, onToggle }) => {
             <div className="right-title">
                 <h2 ref={h2Ref}>Bon&apos; s appetit</h2>
                 <h3 ref={h3Ref}>Chef&apos;s Recipe at Home</h3>
+                <div ref={h4Ref}>
+                    <h4 className="web">
+                        <span>7월 첫째주 셰프의 레시피</span>‘으깬 감자 구이’
+                    </h4>
+                    <h4 className="mobile">: 집에서 만드는 셰프의 레시피</h4>
+                </div>
+            </div>
+
+            <div className="right-title-mobile-bottom">
                 <h4 ref={h4Ref}>
-                    <span>7월 첫째주 셰프의 레시피</span>‘으깬 감자 구이’
+                    <span>7월 첫째주 셰프의 레시피</span>
+                    <p>‘으깬 감자 구이’</p>
                 </h4>
             </div>
             <div className="right-high">
-                <h3>Tohome Magazine : 집에서 만드는 셰프의 레시피</h3>
+                <h3>
+                    Tohome Magazine <span>: 집에서 만드는 셰프의 레시피</span>
+                </h3>
             </div>
 
             <button className="more" onClick={onToggle}>

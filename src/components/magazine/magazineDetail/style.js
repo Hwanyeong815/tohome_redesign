@@ -163,9 +163,15 @@ export const MagazineDetailItem2Style = styled.div`
         /* background-color: azure; */
         position: relative;
         .pathTxt {
+            overflow: visible;
             position: absolute;
-            right: -50px;
-            top: -50px;
+            right: -280px;
+            top: -30px;
+            /* transform: scale(1.1); */
+            font-size: 12px;
+            /* opacity: 0; */
+            /* right: -50px; */
+            /* top: -50px; */
         }
         img {
             /* &:nth-child(2) {

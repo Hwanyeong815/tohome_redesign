@@ -1,82 +1,99 @@
 import { MagazineDetailItem2Style } from './style';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MagazineDetailItem2 = () => {
+    const defRef = useRef(null);
+    const pathRef = useRef(null);
+    const textPathRef = useRef(null);
+
     useEffect(() => {
-        const targetTextPath = document.querySelector('#animatedCurvedTextOnPath');
+        // refs가 모두 준비되었는지 확인
+        if (!defRef.current || !pathRef.current || !textPathRef.current) return;
 
-        const triggerContainer = document.querySelector('#mainSvgContainer');
+        // defs에 path 복사
+        defRef.current.setAttribute('d', pathRef.current.getAttribute('d'));
 
-        if (!targetTextPath || !triggerContainer) {
-            console.warn(
-                'SVG 요소를 찾을 수 없어! HTML ID를 다시 확인해봐! (myActualTextPathCurve 또는 mainSvgContainer)'
-            );
-            return;
-        }
+        // 초기 상태: 텍스트 완전히 숨기기
+        textPathRef.current.parentElement.setAttribute('opacity', '0');
 
-        gsap.fromTo(
-            targetTextPath,
+        // startOffset 범위 설정
+        const minOffset = 0;
+        const maxOffset = 10;
+
+        const minOpacity = 0;
+        const maxOpacity = 1;
+
+        // ScrollTrigger + scrub
+        gsap.to(
+            {},
             {
-                startOffset: '100%',
-                opacity: 0,
-            },
-            {
-                startOffset: '0%',
-                opacity: 1,
-                duration: 2,
-                ease: 'power3.out',
                 scrollTrigger: {
-                    trigger: triggerContainer,
+                    trigger: pathRef.current,
                     start: 'top 80%',
+                    end: 'top 50%',
+                    scrub: 1,
+                    onUpdate: (self) => {
+                        if (!textPathRef.current) return; // 안전 체크
+
+                        // position 변경
+                        const offset = minOffset + self.progress * (maxOffset - minOffset);
+                        textPathRef.current.setAttribute('startOffset', `${offset}%`);
+
+                        // opacity 변경
+                        const opacity = minOpacity + self.progress * (maxOpacity - minOpacity);
+                        textPathRef.current.parentElement.setAttribute('opacity', opacity);
+                    },
                 },
             }
         );
-
-        gsap.from(triggerContainer, {
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            ease: 'power1.out',
-            scrollTrigger: {
-                trigger: triggerContainer,
-                start: 'top 95%',
-            },
-        });
     }, []);
 
     return (
         <MagazineDetailItem2Style>
             <div className="chefs">
                 <img src="/images/magazine/detail-chef.png" alt="" />
-                {/* <img src="/images/magazine/detail-chef-txt.png" alt="" /> */}
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    // width="145"
-                    // height="215"
+                    className="pathTxt"
                     width="500"
                     height="500"
-                    viewBox="-100 -100 700 700"
-                    fill="none"
-                    className="pathTxt"
-                    id="mainSvgContainer"
+                    viewBox="0 0 500 500"
+                    preserveAspectRatio="xMidYMid meet"
                 >
-                    <path
-                        id="myActualTextPathCurve"
-                        d="M10 80 Q 75 10 150 80"
-                        fill="none"
-                        stroke="red"
-                    />
-                </svg>
+                    <defs>
+                        {/* textPath가 따라갈 실제 경로 */}
+                        <path id="def-1" ref={defRef} />
+                    </defs>
 
-                <text>
-                    <textPath href="#myActualTextPathCurve" id="animatedCurvedTextOnPath">
-                        이 글자들이 곡선을 따라 움직일 거야!
-                    </textPath>
-                </text>
+                    {/* 눈에 보이는 원형 경로 */}
+                    <path
+                        id="path-1"
+                        ref={pathRef}
+                        d="M1.08659 144.5C1.08659 65.0265 57.0029 1 125.5 1C193.997 1 249.913 65.0265 249.913 144.5C249.913 223.974 193.997 288 125.5 288V289C194.812 289 251 224.305 251 144.5C251 64.6949 194.812 0 125.5 0C56.1883 0 1.12057e-05 64.6949 1.12057e-05 144.5C1.12057e-05 224.305 56.1883 289 125.5 289V288C57.0029 288 1.08659 223.974 1.08659 144.5Z"
+                        fill="none"
+                        // stroke="red"
+                        strokeWidth="2"
+                    />
+
+                    {/* 원을 따라 움직이는 텍스트 */}
+                    <text fontSize="20" fill="black">
+                        <textPath
+                            ref={textPathRef}
+                            href="#def-1"
+                            startOffset="0%"
+                            side="right"
+                            method="align"
+                            spacing="auto"
+                            dominantBaseline="middle"
+                        >
+                            이달의 셰프 ‘윤태림(Yoon Taerim)’
+                        </textPath>
+                    </text>
+                </svg>
             </div>
             <div className="txts">
                 <h2 className="fontChange" data-aos="fade-up" data-aos-delay="200">

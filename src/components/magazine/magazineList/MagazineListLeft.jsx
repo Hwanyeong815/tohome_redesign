@@ -37,6 +37,7 @@ const MagazineListLeft = ({ onComplete }) => {
             {magazineData.slice(0, 12).map((list, idx) => (
                 <div className="img-wrap" key={list.id ?? idx} ref={addToRefs}>
                     <img src={list.images} alt="" loading="lazy" />
+                    <p className="des">{list.des}</p>
                 </div>
             ))}
         </section>

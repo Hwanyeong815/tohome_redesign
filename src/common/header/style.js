@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
 export const HeaderStyle = styled.header`
+    .overlay {
+        /* floatinmenu */
+        z-index: 999;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        opacity: 0.4;
+    }
+
     &.header {
         height: 230px;
         .status-bar {
@@ -59,14 +68,12 @@ export const HeaderStyle = styled.header`
             height: 38.4615vw;
 
             .status-bar {
+                display: block;
                 z-index: 100;
                 width: 100%;
                 position: fixed;
                 left: 0;
                 top: 0;
-                background-color: aquamarine;
-                opacity: 0.5;
-                display: block;
             }
 
             .inner {
@@ -239,7 +246,7 @@ export const TopMenu = styled.ul`
     }
     @media screen and (max-width: 600px) {
         &.top-menu {
-            background-color: turquoise;
+            display: none;
             li {
                 a {
                 }

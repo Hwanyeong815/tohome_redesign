@@ -3,10 +3,12 @@ import ProductList from '../product/ProductList';
 import { MagazineBottomStyle } from './style';
 import { useEffect, useRef, useState } from 'react';
 import { cartActions } from '../../store/modules/cartSlice';
+import { useNavigate } from 'react-router-dom';
 
-const MagazineBottom = () => {
+const MagazineBottom = ({ onPrev, onNext }) => {
     const { recipes } = useSelector((state) => state.cart);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [selectedItems, setSelectedItems] = useState(new Set());
 
@@ -52,7 +54,11 @@ const MagazineBottom = () => {
     };
 
     return (
-        <MagazineBottomStyle>
+        <MagazineBottomStyle className="mag-bottom">
+            <div className="mobile-btn-wrap">
+                <button onClick={onPrev}>조리방법</button>
+                <button onClick={() => navigate('/cart')}>장바구니로 이동</button>
+            </div>
             <div className="btn-wrap">
                 <button onClick={handleAddSelectedToCart}>선택 재료 담기</button>
                 <button onClick={handleAddAllToCart}>재료 한번에 담기</button>

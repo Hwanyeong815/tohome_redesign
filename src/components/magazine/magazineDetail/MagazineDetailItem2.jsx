@@ -5,30 +5,39 @@ import { useEffect, useRef, useState } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MagazineDetailItem2 = () => {
+const MagazineDetailItem2 = ({ onPrev, onNext }) => {
     const defRef = useRef(null);
     const pathRef = useRef(null);
     const textPathRef = useRef(null);
 
     useEffect(() => {
-        // refs가 모두 준비되었는지 확인
         if (!defRef.current || !pathRef.current || !textPathRef.current) return;
 
-        // defs에 path 복사
-        defRef.current.setAttribute('d', pathRef.current.getAttribute('d'));
+        // 보이는 path(d)를 defs로 복사
+        const d = pathRef.current.getAttribute('d');
+        if (d) defRef.current.setAttribute('d', d);
 
-        // 초기 상태: 텍스트 완전히 숨기기
-        textPathRef.current.parentElement.setAttribute('opacity', '0');
+        const textEl = textPathRef.current.parentElement; // <text>
 
-        // startOffset 범위 설정
+        // 공통 파라미터
         const minOffset = 0;
-        const maxOffset = 10;
-
+        const maxOffset = 10; // <- 모바일에서 여기서 멈춤
         const minOpacity = 0;
         const maxOpacity = 1;
 
-        // ScrollTrigger + scrub
-        gsap.to(
+        const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
+
+        // 모바일: 애니메이션 없이 최대 오프셋에서 고정
+        if (isMobile) {
+            if (textEl) textEl.setAttribute('opacity', '1'); // 항상 보이게
+            textPathRef.current.setAttribute('startOffset', `${maxOffset}%`); // max에서 멈춤
+            return;
+        }
+
+        // 데스크탑 이상: 스크롤 애니메이션
+        if (textEl) textEl.setAttribute('opacity', '0');
+
+        const tween = gsap.to(
             {},
             {
                 scrollTrigger: {
@@ -37,23 +46,39 @@ const MagazineDetailItem2 = () => {
                     end: 'top 50%',
                     scrub: 1,
                     onUpdate: (self) => {
-                        if (!textPathRef.current) return; // 안전 체크
-
-                        // position 변경
+                        if (!textPathRef.current) return;
                         const offset = minOffset + self.progress * (maxOffset - minOffset);
                         textPathRef.current.setAttribute('startOffset', `${offset}%`);
 
-                        // opacity 변경
-                        const opacity = minOpacity + self.progress * (maxOpacity - minOpacity);
-                        textPathRef.current.parentElement.setAttribute('opacity', opacity);
+                        if (textEl) {
+                            const opacity = minOpacity + self.progress * (maxOpacity - minOpacity);
+                            textEl.setAttribute('opacity', String(opacity));
+                        }
                     },
                 },
             }
         );
+
+        return () => {
+            tween?.scrollTrigger?.kill();
+            tween?.kill();
+        };
     }, []);
 
     return (
-        <MagazineDetailItem2Style>
+        <MagazineDetailItem2Style className="mag-item2 pop-up">
+            <div className="mobile-btn-wrap">
+                <button>이전</button>
+                <button onClick={onNext}>오늘의 재료</button>
+            </div>
+            <div className="mobile-txts">
+                <h2 className="fontChange" data-aos="fade-up" data-aos-delay="200">
+                    Chef&apos;s Say
+                </h2>
+                <h3 data-aos="fade-up" data-aos-delay="200">
+                    "겉은 바삭하고 속은 부드러운 으깬 감자구이"
+                </h3>
+            </div>
             <div className="chefs">
                 <img src="/images/magazine/detail-chef.png" alt="" />
                 <svg
@@ -106,8 +131,11 @@ const MagazineDetailItem2 = () => {
                     “강원도 고랭지에서 막 수확한 제철 감자를 삶아 곱게 으깬 뒤 파르미지아노 치즈와
                     파슬리를 올렸습니다. 에어프라이어로 겉은 은은하고 바삭하게, 속은 촉촉하게 구워
                     한 입마다 부드럽게 녹아내리죠. 치즈와 파슬리로 맛을 더 풍부하게 하고, 그릭
-                    요거트와 레몬을 곁들여 향과 고소함을 완성했습니다. 집에서도 간단히 만들 수
-                    있지만, 맛과 품격은 레스토랑 한 접시와 다름없습니다.”
+                    요거트와 레몬을 곁들여 향과 고소함을 완성했습니다.
+                    <span>
+                        <br /> <br />
+                    </span>
+                    집에서도 간단히 만들 수 있지만, 맛과 품격은 레스토랑 한 접시와 다름없습니다.”
                 </p>
             </div>
         </MagazineDetailItem2Style>

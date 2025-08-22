@@ -30,7 +30,6 @@ const Magazine = () => {
                 {isOpen ? (
                     <>
                         <MagazineDetail onToggle={onToggle} />
-                        <MagazineBottom />
                     </>
                 ) : (
                     <MagazineList onToggle={onToggle} />

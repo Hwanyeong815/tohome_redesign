@@ -13,6 +13,7 @@ const MagazineDetailItem1 = ({ onToggle }) => {
                     <h2 className="fontChange">Bon&apos;s appetit</h2>
                     <h3>7월 첫째주 셰프의 레시피</h3>
                     <h4>‘으깬 감자 구이’</h4>
+
                     <button className="more2">
                         자세히보기 <img src="/images/icon/icon_all.png" alt="" />
                     </button>

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const MagazineBottomStyle = styled.div`
-    margin-top: 100px;
+    background-color: white;
+    padding-top: 100px;
     .btn-wrap {
         display: flex;
         justify-content: end;
@@ -15,6 +16,22 @@ export const MagazineBottomStyle = styled.div`
             color: white;
             font-size: 17px;
             line-height: 17px;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        background-color: white;
+        margin-top: 0;
+        padding: 0;
+
+        .btn-wrap {
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            button {
+                width: 133px;
+                height: 31px;
+                font-size: 15px;
+            }
         }
     }
 `;

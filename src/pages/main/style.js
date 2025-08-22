@@ -8,5 +8,10 @@ export const MainStyle = styled.main`
     p {
     }
     @media screen and (max-width: 600px) {
+        .hover {
+            background: none !important;
+            color: inherit !important;
+            cursor: default !important;
+        }
     }
 `;

@@ -154,6 +154,9 @@ export const Content4Style = styled.section`
             }
         }
     }
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
 `;
 
 export const SubscribeUlStyle = styled.div`

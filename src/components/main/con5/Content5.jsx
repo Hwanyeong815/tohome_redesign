@@ -10,7 +10,9 @@ const Content5 = () => {
     const { products, menus, specials } = useSelector((state) => state.cart);
     const AllMenus = [...products, ...menus, ...specials];
     const todayRecipe = AllMenus.filter((product) =>
-        product.tags?.some((tag) => tag.name === '오늘의레시피' && tag.rank <= 5)
+        product.tags?.some(
+            (tag) => tag.name === '오늘의레시피' && tag.rank <= 5
+        )
     );
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -41,7 +43,9 @@ const Content5 = () => {
     };
 
     const handleAddSelectedToCart = () => {
-        const selectedProducts = todayRecipe.filter((product) => selectedItems.has(product.id));
+        const selectedProducts = todayRecipe.filter((product) =>
+            selectedItems.has(product.id)
+        );
 
         selectedProducts.forEach((product) => {
             dispatch(cartActions.addToCart(product));
@@ -90,26 +94,38 @@ const Content5 = () => {
                             <em>제철 식재료를 이용한 맛있는 반찬</em>
                             <h3>으깬 감자구이</h3>
                             <strong>
-                                <img src="images/icon/icon-park-outline_cook.svg" alt="" />
+                                <img
+                                    src="images/icon/icon-park-outline_cook.svg"
+                                    alt=""
+                                />
                                 <span>조리시간</span>
                                 1시간
                             </strong>
                             <p>
-                                겉은 바삭, 속은 촉촉 - 간편하게 즐기는 으깬 감자구이 <br /> 부드럽게
-                                으깬 감자를 한입 크기로 뭉쳐 노릇하게 구워낸 감자구이입니다. <br />{' '}
-                                겉은 바삭하고 속은 포슬포슬한 식감이 매력적이에요. <br /> 오븐이나
-                                에어프라이어로 간단히 조리할 수 있어 바쁜 하루, 든든한 간식이나
-                                반찬으로 제격입니다.
+                                겉은 바삭, 속은 촉촉 - 간편하게 즐기는 으깬
+                                감자구이 <br /> 부드럽게 으깬 감자를 한입 크기로
+                                뭉쳐 노릇하게 구워낸 감자구이입니다. <br /> 겉은
+                                바삭하고 속은 포슬포슬한 식감이 매력적이에요.{' '}
+                                <br /> 오븐이나 에어프라이어로 간단히 조리할 수
+                                있어 바쁜 하루, 든든한 간식이나 반찬으로
+                                제격입니다.
                             </p>
                             <button className="more2">
-                                <p>레시피보기</p> <img src="images/icon/icon_all.png" alt="" />
+                                <p>레시피보기</p>{' '}
+                                <img src="images/icon/icon_all.png" alt="" />
                             </button>
                             <div className="line"></div>
                             <div className="btn-wrap">
-                                <button className="btn" onClick={handleAddSelectedToCart}>
+                                <button
+                                    className="btn"
+                                    onClick={handleAddSelectedToCart}
+                                >
                                     선택 재료 담기
                                 </button>
-                                <button className="btn" onClick={handleAddAllToCart}>
+                                <button
+                                    className="btn"
+                                    onClick={handleAddAllToCart}
+                                >
                                     재료 한번에 담기
                                 </button>
                             </div>
@@ -124,15 +140,35 @@ const Content5 = () => {
                         />
                     </div>
                 </section>
-                <section className="main-gift-wrap" onClick={onClick1} data-aos="fade-up">
+                <section
+                    className="main-gift-wrap"
+                    onClick={onClick1}
+                    data-aos="fade-up"
+                >
                     <div className="txt-box">
                         <img src="images/main/main_gift01.png" alt="모눈종이" />
+                        <div className="mobileText">
+                            <p> 선 물 하 기</p>
+                            <span>
+                                진심을 담아 전하는 순간 <br />
+                                투홈의 선물하기를 이용하세요!
+                            </span>
+                        </div>
                         <p>
-                            진심을 담아 전하는 순간, 선물이 특별해지는 이유 투홈의 선물하기를
-                            이용하세요!
+                            진심을 담아 전하는 순간, 선물이 특별해지는 이유
+                            투홈의 선물하기를 이용하세요!
                         </p>
                     </div>
-                    <img src="images/main/main_gift.png" alt="main_gift.png" className="back" />
+                    <img
+                        src="images/main/main_gift.png"
+                        alt="main_gift.png"
+                        className="back"
+                    />
+                    <img
+                        src="images/main/mobile_gift.png"
+                        alt="mobile_gift.png"
+                        className="mobile_giftImg"
+                    />
                     <button className="more1">
                         <img src="images/icon/icon_all.png" alt="" />
                     </button>

@@ -61,7 +61,6 @@ export const MainRecomStyle = styled.div`
             gap: 90px;
             align-items: center;
             word-break: keep-all;
-
             padding: 90px;
 
             .left {
@@ -153,5 +152,95 @@ export const MainRecomStyle = styled.div`
     }
     .swiper-pagination {
         display: none;
+    }
+    @media screen and (max-width: 600px) {
+        .swiper {
+            margin-left: 0;
+            height: 381px;
+        }
+        .swiper-slide {
+            height: 337px;
+            padding-top: 0;
+            &:hover {
+                .right {
+                    .img-box {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .back {
+                display: none;
+            }
+            .sub-title {
+                display: none;
+            }
+            section {
+                padding: 0;
+                .left {
+                    display: none;
+                }
+                .right {
+                    width: 100vw;
+                    height: 337px;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    .img-box {
+                        width: 100vw;
+                        height: 235px;
+                        overflow: visible;
+                        img {
+                            width: 100vw;
+                            height: 235px;
+                        }
+                    }
+                    .txts {
+                        width: 358px;
+                        /* height: 24px; */
+                        display: flex;
+                        gap: 12px;
+                        p {
+                            width: 110px;
+                            font-size: 12px;
+                            line-height: 10px;
+                            height: 24px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;
+
+export const Content2Style = styled.div`
+    @media screen and (max-width: 600px) {
+        .price-box {
+            flex-direction: row !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            .price {
+                display: flex;
+                text-align: right;
+                padding-bottom: 0;
+                border-bottom: none;
+                padding-left: 0;
+                line-height: 1;
+            }
+            .discount {
+                display: flex;
+                border-bottom: none;
+                padding-bottom: 0;
+                align-items: center;
+            }
+            .des {
+                display: none;
+            }
+        }
     }
 `;

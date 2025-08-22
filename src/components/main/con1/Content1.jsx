@@ -58,6 +58,9 @@ const Content1 = () => {
                                 ))}
                             </Slider>
                         )}
+                        <div className="btn">
+                            <button>베스트 상품 더보기</button>
+                        </div>
                     </section>
                     <section
                         className="main-newPro-wrap"

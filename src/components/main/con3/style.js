@@ -21,14 +21,13 @@ export const Content3Style = styled.div`
             transform: translateX(-50%);
             &.position-fix {
                 width: 100vw;
-                position: relative; /* left 대신 relative + margin auto 사용 */
+                position: relative;
                 left: 50%;
                 transform: translateX(-50%);
             }
             img {
                 width: 100%;
                 position: absolute;
-
                 top: 0;
                 z-index: -1;
             }
@@ -88,6 +87,9 @@ export const Content3Style = styled.div`
             font-size: 25px;
             word-break: keep-all;
         }
+        .mobileOnly {
+            display: none;
+        }
         &-banner {
             cursor: pointer;
             margin-top: 75px;
@@ -115,7 +117,6 @@ export const Content3Style = styled.div`
                         opacity: 1;
                     }
                 }
-
                 img {
                     &:nth-child(1) {
                         width: 100%;
@@ -128,6 +129,9 @@ export const Content3Style = styled.div`
                         width: 204px;
                         mix-blend-mode: screen;
                         transition: 0.3s;
+                    }
+                    &:nth-child(3) {
+                        display: none;
                     }
                 }
                 p {
@@ -145,6 +149,7 @@ export const Content3Style = styled.div`
                     width: 240px;
                     opacity: 0;
                 }
+
                 button {
                     transition: 0.3s;
                     font-size: 15px;
@@ -183,6 +188,9 @@ export const Content3Style = styled.div`
             transform: translate(-50%, -50%);
             width: 100%;
         }
+        .mobileDawn {
+            display: none;
+        }
         .txts {
             position: absolute;
             left: 160px;
@@ -214,6 +222,149 @@ export const Content3Style = styled.div`
             p {
                 font-size: 25px;
                 font-weight: 500;
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .main-about {
+            height: 160px;
+            background-image: url(/images/main/brandStory.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            img {
+                display: none;
+            }
+            h2 {
+                font-size: 12px;
+                font-weight: 600;
+                margin-top: 18px;
+            }
+            div {
+                width: 260px;
+                margin-top: 26px;
+                line-height: 1;
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    width: 260px;
+                    letter-spacing: 0.9px;
+                }
+            }
+            button {
+                width: 90px;
+                height: 24px;
+                margin-top: 17px !important;
+                font-size: 8.4px;
+                margin: 0;
+                color: #fff !important;
+            }
+        }
+        .brand-about {
+            margin-top: 12.3077vw;
+
+            h2 {
+                margin-bottom: 0;
+                width: 100vw;
+                text-align: left;
+            }
+            strong {
+                display: none;
+            }
+            .txts {
+                display: none;
+            }
+            .mobileOnly {
+                display: flex;
+                font-size: 3.0769vw;
+                width: 390px;
+                justify-content: center;
+                text-align: center;
+                color: #666;
+            }
+            .brand-about-banner {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4px;
+                margin-top: 24px;
+                .img-box {
+                    width: 188px;
+                    height: 183px;
+                    &:hover {
+                        img:nth-child(2) {
+                            width: initial;
+                            top: initial;
+                        } /* 필요 시 원래 값으로 */
+                        p {
+                            transform: translate(-50%, 20%);
+                            opacity: 0;
+                        }
+                        button {
+                            transform: translateY(10%);
+                            opacity: 0;
+                        }
+                    }
+                    img {
+                        &:nth-child(1) {
+                            width: 188px;
+                            height: 183px;
+                        }
+                        &:nth-child(2) {
+                            display: none;
+                        }
+                        &:nth-child(3) {
+                            display: block;
+                            width: 100.3px;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            mix-blend-mode: screen;
+                            transition: 0.3s;
+                        }
+                    }
+                    button {
+                        display: none;
+                    }
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .main-dawn-wrap {
+            width: 100vw;
+            height: 120px;
+            margin-top: 12.3077vw;
+            img {
+                width: 100vw;
+                height: 120px;
+                display: none;
+            }
+            .mobileDawn {
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 100vw;
+                transform: translate(-50%, -50%);
+            }
+            .txts {
+                width: 170px;
+                height: 52px;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                h2 {
+                    font-size: 15px;
+                    padding-right: 20px;
+                    &::after {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+                p {
+                    font-size: 10px;
+                }
             }
         }
     }

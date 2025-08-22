@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import MagazineBottom from '../../components/magazine/MagazineBottom';
 import MagazineDetail from '../../components/magazine/magazineDetail/MagazineDetail';
 import MagazineList from '../../components/magazine/magazineList/MagazineList';
 import { MagazineWrap } from './style';

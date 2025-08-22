@@ -175,3 +175,20 @@ export const ProductTopStyle = styled.ul`
         font-size: ${(props) => props.fontSize || '15px'};
     }
 `;
+
+export const ProductResultStyle = styled.div`
+    .result {
+        &-top {
+            height: 250px;
+            h2 {
+                border-bottom: 1px solid #000;
+                padding-bottom: 30px;
+            }
+            .filter {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 30px;
+            }
+        }
+    }
+`;

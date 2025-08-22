@@ -25,12 +25,12 @@ export const MagazineBottomStyle = styled.div`
 
         .btn-wrap {
             justify-content: center;
-            gap: 24px;
-            margin-bottom: 24px;
+            gap: 6.1538vw;
+            margin-bottom: 6.1538vw;
             button {
-                width: 133px;
-                height: 31px;
-                font-size: 15px;
+                width: 34.1026vw;
+                height: 7.9487vw;
+                font-size: 3.8462vw;
             }
         }
     }

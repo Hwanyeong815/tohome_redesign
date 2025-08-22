@@ -9,7 +9,6 @@ export const MagazineWrap = styled.div`
             transform: none !important;
         }
         .inner {
-            /* width: 91.7949vw; */
             width: 100%;
             .web-bottom {
                 display: none;

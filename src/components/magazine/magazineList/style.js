@@ -177,8 +177,7 @@ export const MagazineListStyle = styled.div`
         }
     }
     @media screen and (max-width: 600px) {
-        /* height: max-content; */
-        height: 1330px;
+        height: 341.0256vw;
         flex-direction: column-reverse;
         justify-content: flex-end;
 
@@ -214,8 +213,6 @@ export const MagazineListStyle = styled.div`
             width: 100%;
             min-height: 171.7949vw;
             box-sizing: border-box;
-            /* display: flex; */
-            /* flex-direction: column; */
             &-title {
                 width: 66.1538vw;
                 height: 23.0769vw;
@@ -224,7 +221,7 @@ export const MagazineListStyle = styled.div`
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                gap: 0px;
+                gap: 0;
 
                 h2 {
                     font-size: 7.6923vw;
@@ -250,7 +247,7 @@ export const MagazineListStyle = styled.div`
                         display: flex;
                         flex-direction: column;
                         align-content: center;
-                        font-size: 25px;
+                        font-size: 6.4103vw;
                         font-weight: 600;
                         span {
                             font-weight: 500;
@@ -272,7 +269,7 @@ export const MagazineListStyle = styled.div`
                             text-align: center;
                         }
                         p {
-                            font-size: 25px;
+                            font-size: 6.4103vw;
                             text-align: center;
                         }
                     }

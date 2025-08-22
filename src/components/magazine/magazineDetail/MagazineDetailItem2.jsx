@@ -71,7 +71,7 @@ const MagazineDetailItem2 = ({ onPrev, onNext }) => {
                 <button>이전</button>
                 <button onClick={onNext}>오늘의 재료</button>
             </div>
-            <div className="mobile-txts">
+            <div className="web-txts">
                 <h2 className="fontChange" data-aos="fade-up" data-aos-delay="200">
                     Chef&apos;s Say
                 </h2>
@@ -120,13 +120,7 @@ const MagazineDetailItem2 = ({ onPrev, onNext }) => {
                     </text>
                 </svg>
             </div>
-            <div className="txts">
-                <h2 className="fontChange" data-aos="fade-up" data-aos-delay="200">
-                    Chef&apos;s Say
-                </h2>
-                <h3 data-aos="fade-up" data-aos-delay="200">
-                    "겉은 바삭하고 속은 부드러운 으깬 감자구이"
-                </h3>
+            <div className="mobile-txts">
                 <p data-aos="fade-up" data-aos-delay="200">
                     “강원도 고랭지에서 막 수확한 제철 감자를 삶아 곱게 으깬 뒤 파르미지아노 치즈와
                     파슬리를 올렸습니다. 에어프라이어로 겉은 은은하고 바삭하게, 속은 촉촉하게 구워

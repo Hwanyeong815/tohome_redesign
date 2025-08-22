@@ -45,49 +45,49 @@ export const MagazineDetailStyle = styled.div`
         max-width: auto;
         .mag-title {
             position: absolute;
-            top: 88px;
+            top: 22.5641vw;
             left: 50%;
             transform: translateX(-50%);
             padding: 0;
-            padding-left: 10px;
-            font-size: 20px;
+            padding-left: 2.5641vw;
+            font-size: 5.1282vw;
 
             &::before {
                 top: 5%;
-                left: -10px;
-
-                width: 20px;
-                height: 20px;
+                left: -2.5641vw;
+                width: 5.1282vw;
+                height: 5.1282vw;
             }
         }
         & > div {
             &:nth-child(1) {
             }
-            &.mag-item2,
+            &.mag-item2 {
+                padding-top: 125vw;
+            }
             &.mag-item3,
             &.mag-item4 {
-                padding-top: 388px;
+                padding-top: 99.4872vw;
             }
             &.mag-bottom {
-                padding-top: 88px;
+                padding-top: 22.5641vw;
             }
             &.mag-item2,
             &.mag-item3,
             &.mag-item4,
             &.mag-bottom {
                 box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.25);
-                width: 390px;
-                height: 540px;
+                width: 100vw;
+                height: 138.4615vw;
                 position: fixed;
                 bottom: 0;
                 left: 0;
                 z-index: 100;
-                border-radius: 30px 30px 0 0;
-                padding-bottom: 50px;
+                border-radius: 7.6923vw 7.6923vw 0 0;
+                padding-bottom: 12.8205vw;
                 background-color: white;
                 box-sizing: border-box;
                 overflow-y: scroll;
-                /* overflow: visible; */
 
                 .mobile-btn-wrap {
                     z-index: 100;
@@ -97,29 +97,29 @@ export const MagazineDetailStyle = styled.div`
                     transform: translateX(-50%);
                     display: flex;
                     justify-content: space-between;
-                    width: 358px;
-                    margin-top: 24px;
+                    width: 91.7949vw;
+                    margin-top: 6.1538vw;
                     box-sizing: border-box;
 
                     button {
-                        height: 40px;
+                        height: 10.2564vw;
                         position: relative;
                         background-color: transparent;
-                        font-size: 15px;
+                        font-size: 3.8462vw;
                         font-weight: 600;
                         &:first-of-type {
-                            padding-left: 32px;
+                            padding-left: 8.2051vw;
                             &::after {
-                                left: 0px;
+                                left: 0;
                                 background-image: url('/images/icon/btn-prev.png');
                             }
                         }
                         &:last-of-type {
-                            padding-right: 32px;
+                            padding-right: 8.2051vw;
 
                             &::after {
                                 background-image: url('/images/icon/btn-next.png');
-                                right: -15px;
+                                right: -3.8462vw;
                             }
                         }
                         &::after {
@@ -127,8 +127,8 @@ export const MagazineDetailStyle = styled.div`
                             position: absolute;
                             top: 55%;
                             transform: translateY(-50%);
-                            width: 24px;
-                            height: 24px;
+                            width: 6.1538vw;
+                            height: 6.1538vw;
                             background-repeat: no-repeat;
                         }
                     }
@@ -304,7 +304,7 @@ export const MagazineDetailItem1Style = styled.div`
                 top: 0;
                 width: 100%;
                 height: 135.1282vw;
-                border-radius: 0px;
+                border-radius: 0;
                 overflow: hidden;
                 img {
                     transform: translate(-15%, -2%) rotate(160deg);
@@ -339,31 +339,23 @@ export const MagazineDetailItem2Style = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 500px; */
+
     gap: 76px;
     .chefs {
         margin-left: 170px;
-        /* background-color: azure; */
-        /* position: relative; */
         position: relative;
         .pathTxt {
             overflow: visible;
             position: absolute;
             right: -280px;
             top: -30px;
-            /* transform: scale(1.1); */
+
             font-size: 12px;
-            /* opacity: 0; */
-            /* right: -50px; */
-            /* top: -50px; */
         }
         img {
-            /* &:nth-child(2) {
-               
-            } */
         }
     }
-    .mobile-txts {
+    .web-txts {
         display: none;
     }
     .txts {
@@ -400,22 +392,22 @@ export const MagazineDetailItem2Style = styled.div`
         /* background-color: black; */
         background-color: antiquewhite;
         /* margin-top: 88px; */
-        width: 390px;
-        height: 725px;
+        width: 100vw;
+        height: 185.8974vw;
         flex-direction: column;
         align-content: start;
         .chefs {
             width: 100%;
             .pathTxt {
                 opacity: 1 !important;
-                right: -110px;
-                top: -30px;
+                right: -28.2051vw;
+                top: -7.6923vw;
             }
             img {
             }
         }
-        .mobile-txts {
-            margin-top: 50px;
+        .web-txts {
+            margin-top: 12.8205vw;
             display: block;
             text-align: center;
             width: 100%;
@@ -423,17 +415,16 @@ export const MagazineDetailItem2Style = styled.div`
             /* position: absolute; */
 
             h2 {
-                font-size: 20px;
-            }
-            h3 {
-                margin-top: 16px;
-                font-size: 15px;
+                font-size: 5.1282vw;
+                h3 {
+                    margin-top: 4.1026vw;
+                    font-size: 3.8462vw;
+                }
             }
         }
-        .txts {
-            width: 100%;
+        .mobile-txts {
             box-sizing: border-box;
-            padding: 0 27px;
+            padding: 0 6.9231vw;
             margin: 0;
             h2,
             h3 {
@@ -442,7 +433,7 @@ export const MagazineDetailItem2Style = styled.div`
             p {
                 /* width: 390px; */
 
-                font-size: 13px;
+                font-size: 3.3333vw;
                 line-height: 1.5;
                 text-align: center;
 
@@ -527,8 +518,8 @@ export const MagazineDetailItem3Style = styled.div`
             margin: 0;
             padding: 0;
             height: min-content;
-            top: 154px;
-            width: 320px;
+            top: 39.4872vw;
+            width: 82.0513vw;
             img {
                 width: 100%;
             }
@@ -669,22 +660,22 @@ export const MagazineDetailItem4Style = styled.div`
         }
         .icons {
             position: absolute;
-            top: 135px;
+            top: 34.6154vw;
             left: 50%;
             transform: translateX(-50%);
-            gap: 24px;
+            gap: 6.1538vw;
 
             &-img-wrap {
-                min-width: 100px;
+                min-width: 25.641vw;
                 img {
-                    width: 20px;
-                    height: 20px;
+                    width: 5.1282vw;
+                    height: 5.1282vw;
                 }
                 strong {
-                    font-size: 9px;
+                    font-size: 2.3077vw;
                     span {
                         display: block;
-                        font-size: 12px;
+                        font-size: 3.0769vw;
                         margin-left: 0;
                     }
                 }
@@ -694,11 +685,11 @@ export const MagazineDetailItem4Style = styled.div`
             &-wrap-mobile-btns {
                 display: flex;
                 justify-content: space-between;
-                width: 350px;
+                width: 89.7436vw;
                 margin: 0;
                 padding: 0;
                 position: absolute;
-                top: 295px;
+                top: 75.641vw;
                 left: 50%;
                 transform: translateX(-50%);
                 button {
@@ -709,14 +700,11 @@ export const MagazineDetailItem4Style = styled.div`
                 /* flex-direction: row; */
                 align-content: center;
                 position: absolute;
-                top: 180px;
+                top: 46.1538vw;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 285px;
-                /* height: 260px; */
-                height: 320px;
-
-                /* height: min-content; */
+                width: 73.0769vw;
+                height: 82.0513vw;
                 margin: 0;
                 overflow: hidden;
 
@@ -748,10 +736,11 @@ export const MagazineDetailItem4Style = styled.div`
             }
 
             .img-wrap {
-                width: 120px;
-                height: 120px;
+                width: 30.7692vw;
+                height: 30.7692vw;
                 position: absolute;
-                top: -50px;
+                top: -12.8205vw;
+                top: -12.8205vw;
                 left: 50%;
                 transform: translateX(-50%);
 
@@ -762,28 +751,27 @@ export const MagazineDetailItem4Style = styled.div`
 
             .txt {
                 width: 100%;
-                margin-top: 90px;
+                margin-top: 23.0769vw;
 
                 h2,
                 p {
                     text-align: center;
-                    font-size: 15px;
+                    font-size: 3.8462vw;
                     width: 100%;
                 }
 
                 em {
                     display: flex;
-
                     text-align: left;
                     align-items: center;
-                    font-size: 12px;
+                    font-size: 3.0769vw;
 
                     span {
-                        width: 24px;
-                        height: 14px;
-                        font-size: 9px;
+                        width: 6.1538vw;
+                        height: 3.5897vw;
+                        font-size: 2.3077vw;
                         box-sizing: border-box;
-                        padding: 1px 4px;
+                        padding: 0.2564vw 1.0256vw;
                     }
                 }
                 p {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ProductTopStyle } from './style';
 
 const ProductTop = ({ subCategories, selectedSub, setSelectedSub, fontSize }) => {

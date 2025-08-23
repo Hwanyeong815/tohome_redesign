@@ -1,8 +1,5 @@
 import { useSelector } from 'react-redux';
-import SideDishItem from './SideDishItem';
 import { SideDishListStyle } from './style';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -16,20 +13,6 @@ const arr = [
     { id: 3, img: '이미지주소', title: '' },
     { id: 4, img: '이미지주소', title: '' },
 ];
-
-const settings = {
-    dots: false,
-    infinite: true,
-    speed: 5000,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    centerMode: true,
-    centerPadding: '100px',
-    cssEase: 'linear',
-};
 
 const SideDishList = () => {
     const { sideDishes } = useSelector((state) => state.cart);

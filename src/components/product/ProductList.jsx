@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 const ProductList = ({
     products = [],
     showCheckbox = true,
-    selectedItems = new Set(),
-    onItemSelect,
+    selectedItems = new Set(), // Set<number> 권장 (num 저장)
+    onItemSelect, // (num: number, checked: boolean) => void
     onSelectAll,
 }) => {
     const [visibleCount, setVisibleCount] = useState(15);
@@ -22,28 +22,36 @@ const ProductList = ({
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [products]);
+    }, [products.length]);
 
-    const handleProductItemSelect = (productId, isSelected) => {
-        if (onItemSelect) {
-            onItemSelect(productId, isSelected);
-        }
+    const toNum = (p) => {
+        const n = Number(p?.num);
+        return Number.isFinite(n) ? n : null;
     };
 
     return (
         <ProductListStyle className="product-list">
-            {products.slice(0, visibleCount).map((product, idx) => (
-                <ProductItem
-                    key={String(product.id ?? idx)}
-                    product={product}
-                    showCheckbox={showCheckbox}
-                    isSelected={selectedItems.has(product.id)}
-                    onSelect={onItemSelect}
-                    idx={idx}
-                />
-            ))}
+            {products.slice(0, visibleCount).map((product, idx) => {
+                const num = toNum(product);
+                const keyVal = num ?? idx;
+                const isSelected = num != null ? selectedItems.has(num) : false;
+
+                return (
+                    <ProductItem
+                        key={keyVal}
+                        product={product}
+                        showCheckbox={showCheckbox}
+                        isSelected={isSelected}
+                        // ✅ 자식에서 체크 상태만 넘기면, 여기서 num을 함께 전달
+                        onSelect={(checked) => {
+                            if (onItemSelect && num != null) onItemSelect(num, checked);
+                        }}
+                        idx={idx}
+                    />
+                );
+            })}
         </ProductListStyle>
     );
 };

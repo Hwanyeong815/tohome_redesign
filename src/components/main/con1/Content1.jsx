@@ -17,15 +17,19 @@ const settings1 = {
 
 const Content1 = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
-    const { products } = useSelector((state) => state.cart);
-    const bestTop5 = products.filter((product) =>
-        product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 5)
+    const { AllDataList } = useSelector((state) => state.cart);
+    const bestTop5 = AllDataList.filter(
+        (product) =>
+            product.id && // 🔴 id가 있는 애들만
+            product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 5)
     );
-    const bestTop6 = products.filter((product) =>
-        product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 6)
+    const bestTop6 = AllDataList.filter(
+        (product) =>
+            product.id && product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 6)
     );
-    const newRecom = products.filter((product) =>
-        product.tags?.some((tag) => tag.name === '신상품' && tag.rank <= 3)
+    const newRecom = AllDataList.filter(
+        (product) =>
+            product.id && product.tags?.some((tag) => tag.name === '신상품' && tag.rank <= 3)
     );
 
     return (
@@ -38,23 +42,15 @@ const Content1 = () => {
                         data-aos-anchor-placement="top-center"
                     >
                         <h2 className="main-title">베스트 메뉴</h2>
-                        <h3 className="sub-title">
-                            지금 가장 사랑받는 메뉴, 한눈에 담아보세요
-                        </h3>
+                        <h3 className="sub-title">지금 가장 사랑받는 메뉴, 한눈에 담아보세요</h3>
                         {isMobile ? (
                             <div className="productWrap">
-                                <ProductList
-                                    products={bestTop6}
-                                    showCheckbox={false}
-                                />
+                                <ProductList products={bestTop6} showCheckbox={false} />
                             </div>
                         ) : (
                             <Slider {...settings1} className="ul">
                                 {bestTop5.map((product) => (
-                                    <BestMenuLi
-                                        key={product.id}
-                                        product={product}
-                                    />
+                                    <BestMenuLi key={product.id} product={product} />
                                 ))}
                             </Slider>
                         )}

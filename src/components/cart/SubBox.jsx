@@ -11,7 +11,7 @@ const toNum = (v) => {
 };
 
 const SubBox = ({ cart, setIsCartTab }) => {
-    const { id, name, price, discountedPrice, thumbnailImage, pricePerUnit, quantity } = cart;
+    const { id, name, price, discountedPrice, thumbnail, pricePerUnit, quantity } = cart;
 
     const dispatch = useDispatch();
 
@@ -30,7 +30,7 @@ const SubBox = ({ cart, setIsCartTab }) => {
     }, [price, discountedPrice, quantity]);
     return (
         <ItemBox>
-            <img className="image" src={thumbnailImage} alt={name} />
+            <img className="image" src={thumbnail} alt={name} />
             <div className="txt">
                 <div className="name">
                     <p>{name}</p>

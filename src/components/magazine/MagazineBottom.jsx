@@ -1,45 +1,47 @@
 import { useDispatch, useSelector } from 'react-redux';
 import ProductList from '../product/ProductList';
 import { MagazineBottomStyle } from './style';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { cartActions } from '../../store/modules/cartSlice';
 import { useNavigate } from 'react-router-dom';
 
 const MagazineBottom = ({ onPrev, onNext }) => {
-    const { recipes } = useSelector((state) => state.cart);
+    const { AllDataList } = useSelector((state) => state.cart);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const [selectedItems, setSelectedItems] = useState(new Set());
+    const recipes = useMemo(
+        () =>
+            (AllDataList || []).filter(
+                (product) => product?.recipeProductId != null
+                // && product.tags?.some((t) => t.name === '매거진')
+            ),
+        [AllDataList]
+    );
 
+    const [selectedItems, setSelectedItems] = useState(new Set());
     const isInitialSelectionDone = useRef(false);
 
     useEffect(() => {
-        if (recipes && recipes.length > 0 && !isInitialSelectionDone.current) {
-            setSelectedItems(new Set(recipes.map((product) => product.id)));
+        if (recipes.length > 0 && !isInitialSelectionDone.current) {
+            setSelectedItems(new Set(recipes.map((p) => p.num)));
             isInitialSelectionDone.current = true;
         }
     }, [recipes]);
 
-    const handleItemSelect = (productId, isSelected) => {
-        const newSelectedItems = new Set(selectedItems);
-        if (isSelected) {
-            newSelectedItems.add(productId);
-        } else {
-            newSelectedItems.delete(productId);
-        }
-        setSelectedItems(newSelectedItems);
+    const handleItemSelect = (num, isSelected) => {
+        const next = new Set(selectedItems);
+        if (isSelected) next.add(num);
+        else next.delete(num);
+        setSelectedItems(next);
     };
 
     const handleAddSelectedToCart = () => {
         const selectedProducts = recipes.filter((product) => selectedItems.has(product.id));
-
         selectedProducts.forEach((product) => {
             dispatch(cartActions.addToCart(product));
         });
-
         setSelectedItems(new Set());
-
         alert(`${selectedProducts.length}개의 상품이 장바구니에 담겼습니다.`);
     };
 
@@ -47,9 +49,7 @@ const MagazineBottom = ({ onPrev, onNext }) => {
         recipes.forEach((product) => {
             dispatch(cartActions.addToCart(product));
         });
-
         setSelectedItems(new Set());
-
         alert(`${recipes.length}개의 상품이 장바구니에 담겼습니다.`);
     };
 

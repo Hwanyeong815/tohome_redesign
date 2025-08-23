@@ -98,6 +98,13 @@ export const HeaderStyle = styled.header`
 export const NavStyle = styled.nav.withConfig({
     shouldForwardProp: (prop) => prop !== 'isOpen', // isOpen은 DOM으로 전달하지 않음
 })`
+    .overlay {
+        z-index: 999;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        opacity: 0.4;
+    }
     bottom: 0;
     margin-top: 95px;
     width: 100%;
@@ -274,7 +281,22 @@ export const SearchWrap = styled.ul`
         background-color: #f3f3f3;
         border-radius: 35px;
         transition: 0.3s;
-        &:hover {
+        position: relative;
+        input {
+            outline: none;
+            border: none;
+            width: 80%;
+            background-color: transparent;
+            height: 30px;
+            padding-left: 20px;
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+            color: #000;
+        }
+        &:hover,
+        &:active,
+        &:focus {
             width: 300px;
         }
         &-item {

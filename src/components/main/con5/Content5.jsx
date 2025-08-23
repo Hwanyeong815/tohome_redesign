@@ -7,9 +7,8 @@ import ProductList from '../../product/ProductList';
 import { cartActions } from '../../../store/modules/cartSlice';
 
 const Content5 = () => {
-    const { products, menus, specials } = useSelector((state) => state.cart);
-    const AllMenus = [...products, ...menus, ...specials];
-    const todayRecipe = AllMenus.filter((product) =>
+    const { AllDataList } = useSelector((state) => state.cart);
+    const todayRecipe = AllDataList.filter((product) =>
         product.tags?.some((tag) => tag.name === '오늘의레시피' && tag.rank <= 5)
     );
     const dispatch = useDispatch();
@@ -29,15 +28,6 @@ const Content5 = () => {
             newSelectedItems.delete(productId);
         }
         setSelectedItems(newSelectedItems);
-    };
-
-    const handleSelectAll = (isSelected) => {
-        if (isSelected) {
-            const allIds = new Set(todayRecipe.map((product) => product.id));
-            setSelectedItems(allIds);
-        } else {
-            setSelectedItems(new Set());
-        }
     };
 
     const handleAddSelectedToCart = () => {

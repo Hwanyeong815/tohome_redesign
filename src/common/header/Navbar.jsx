@@ -6,22 +6,25 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 import { GoSearch } from 'react-icons/go';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
-import ProductSearch from '../../components/product/ProductSearch';
+import ProductSearch from '../../components/product/ProducTools/ProductSearch';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { authed, user } = useSelector((state) => state.auth);
+    const { carts } = useSelector((state) => state.cart);
+    const [searchTerm, setSearchTerm] = useState(''); // 검색어 상태
+    const [showSearch, setShowSearch] = useState(false); // 검색창 활성화 여부
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     const onLogout = () => {
         dispatch(authActions.logout(user));
         navigate('/login');
     };
-    const { carts } = useSelector((state) => state.cart);
 
     return (
         <>
@@ -53,9 +56,19 @@ const Navbar = () => {
             </TopMenu>
             <SearchWrap>
                 <div className="search">
-                    <p>
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <input
+                            type="text"
+                            value={searchTerm}
+                            placeholder=""
+                            onChange={(e) => {
+                                setSearchTerm(e.target.value);
+                                setShowSearch(true); // 입력하면 검색창 활성화
+                            }}
+                            onFocus={() => setShowSearch(true)} // 포커스되면 활성화
+                        />
                         <GoSearch className="search-item" />
-                    </p>
+                    </form>
                 </div>
                 <Link to="/cart" className="cart">
                     <p>
@@ -96,7 +109,15 @@ const Navbar = () => {
                 </div>
             </NavStyle>
             {isOpen && <FloatingMenu setIsOpen={setIsOpen} />}
-            {/* <ProductSearch /> */}
+            {showSearch && (
+                <ProductSearch
+                    keyword={searchTerm}
+                    onClose={() => {
+                        setShowSearch(false);
+                        setSearchTerm('');
+                    }}
+                />
+            )}
         </>
     );
 };

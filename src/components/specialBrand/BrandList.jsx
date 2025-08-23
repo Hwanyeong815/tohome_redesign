@@ -2,10 +2,10 @@ import { useSelector } from 'react-redux';
 import ProductList from '../product/ProductList';
 import { useMemo, useState } from 'react';
 import { BrandListStyle } from './style';
-import ProductTop from '../product/ProductTop';
+import ProductTop from '../product/ProducTools/ProductTop';
 
 const BrandList = ({ brandTag }) => {
-    const { specials } = useSelector((state) => state.cart);
+    const { AllDataList } = useSelector((state) => state.cart);
     const [sortType, setSortType] = useState('판매량순');
     const [selectedSub, setSelectedSub] = useState('전체보기');
 
@@ -16,7 +16,7 @@ const BrandList = ({ brandTag }) => {
         Brand4Market: '동행마켓',
     };
 
-    const filteredBrands = specials?.filter((item) => item.brandtag === brandTagMap[brandTag]);
+    const filteredBrands = AllDataList?.filter((item) => item.brandtag === brandTagMap[brandTag]);
 
     const subCategories =
         filteredBrands && filteredBrands.length > 0

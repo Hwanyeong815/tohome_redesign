@@ -1,7 +1,7 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { DetailSideStyle } from './style';
 import { FaAngleRight } from 'react-icons/fa6';
-import { FaAngleDown } from 'react-icons/fa';
+// import { FaAngleDown } from 'react-icons/fa';
 import { FaPlus, FaMinus } from 'react-icons/fa6';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../../store/modules/cartSlice';
@@ -12,30 +12,23 @@ const toNum = (v) => {
     return Number.isFinite(n) ? n : 0;
 };
 
-const DetailSide = ({ obj, setIsCartTab }) => {
+const DetailSide = ({ obj }) => {
     const {
         id,
         name,
-        des,
+        thumbnail,
         price,
         discountedPrice,
         isDiscounted,
         discountRate,
         pricePerUnit,
-        thumbnailImage,
         tags,
-        details: {
-            origin,
-            packagingType,
-            additionalDiscount,
-            deliveryType,
-            manufacturer,
-        },
+        details: { origin, packagingType, additionalDiscount, deliveryType, manufacturer },
     } = obj;
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const SHIP_PATH = '/order';
+    // const SHIP_PATH = '/order';
 
     const [qty, setQty] = useState(1);
     useEffect(() => {
@@ -75,10 +68,7 @@ const DetailSide = ({ obj, setIsCartTab }) => {
                     <div className="price-box">
                         {isDiscounted ? (
                             <p className="discount">
-                                {price
-                                    .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                                원
+                                {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
                             </p>
                         ) : (
                             <p className="discount">{''}</p>
@@ -118,12 +108,8 @@ const DetailSide = ({ obj, setIsCartTab }) => {
                                         type="button"
                                         aria-label="수량 감소"
                                         aria-disabled={qty <= 1}
-                                        className={
-                                            qty <= 1 ? 'is-disabled' : ''
-                                        }
-                                        onClick={() =>
-                                            qty > 1 && setQty(qty - 1)
-                                        }
+                                        className={qty <= 1 ? 'is-disabled' : ''}
+                                        onClick={() => qty > 1 && setQty(qty - 1)}
                                     >
                                         <FaMinus />
                                     </button>
@@ -147,9 +133,7 @@ const DetailSide = ({ obj, setIsCartTab }) => {
                     <p>총 금액</p>
                     <strong>
                         {(
-                            (isDiscounted
-                                ? lineDiscounted ?? lineOriginal
-                                : lineOriginal) || 0
+                            (isDiscounted ? lineDiscounted ?? lineOriginal : lineOriginal) || 0
                         ).toLocaleString()}
                         원
                     </strong>
@@ -165,7 +149,7 @@ const DetailSide = ({ obj, setIsCartTab }) => {
                                     name,
                                     price,
                                     discountedPrice,
-                                    thumbnailImage,
+                                    thumbnail,
                                     pricePerUnit,
                                     quantity: qty,
                                 })
@@ -183,7 +167,7 @@ const DetailSide = ({ obj, setIsCartTab }) => {
                                     name,
                                     price,
                                     discountedPrice,
-                                    thumbnailImage,
+                                    thumbnail,
                                     pricePerUnit,
                                     quantity: qty,
                                 })

@@ -1,5 +1,3 @@
-import { useLocation } from 'react-router-dom';
-import Cartitem from '../../components/cart/CartItem';
 import CartList from '../../components/cart/CartList';
 import CartOrder from '../../components/cart/CartOrder';
 import CartResult from '../../components/cart/CartResult';

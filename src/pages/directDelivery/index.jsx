@@ -1,56 +1,60 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useMemo } from 'react';
 import TopSection from '../../components/topSection/TopSection';
 import { DirectDeliveryWrap } from './style';
 import { useSelector } from 'react-redux';
 import ProductList from '../../components/product/ProductList';
-import ProductTop from '../../components/product/ProductTop';
+import ProductTop from '../../components/product/ProducTools/ProductTop';
 
 const DirectDelivery = () => {
     const [sortType, setSortType] = useState('판매량순');
     const [selectedSub, setSelectedSub] = useState('전체보기');
 
-    const { products, menus, specials } = useSelector((state) => state.cart);
-    const AllMenus = [...products, ...menus, ...specials];
+    const { AllDataList } = useSelector((state) => state.cart);
 
-    const directDeliveryUl = AllMenus.filter(
-        (product) => product.details?.deliveryType === '브랜드직송'
-    ).slice(0, 40);
+    const dataByNum = useMemo(() => {
+        if (!AllDataList) return [];
+        return AllDataList.filter(
+            (product) => product.details?.deliveryType === '브랜드직송'
+        ).slice(0, 40);
+    }, [AllDataList]);
 
-    const subCategories = directDeliveryUl
-        ? [...new Set(directDeliveryUl.map((f) => f.category.main))]
-        : [];
+    const subCategories = useMemo(() => {
+        return dataByNum.length > 0 ? [...new Set(dataByNum.map((f) => f.category.main))] : [];
+    }, [dataByNum]);
 
-    const filteredProducts = useMemo(() => {
-        return selectedSub === '전체보기'
-            ? directDeliveryUl
-            : directDeliveryUl.filter((product) => product.category.main === selectedSub);
-    }, [selectedSub, directDeliveryUl]);
+    const sortedData = useMemo(() => {
+        const arr = [...dataByNum];
 
-    const sortedDirectDelivery = () => {
+        const getRank = (x) => Number(x?.rank ?? 0);
+        const getPrice = (x) => Number(x?.discountedPrice ?? x?.price ?? 0);
+
         switch (sortType) {
             case '판매량순':
-                return [...filteredProducts].sort((a, b) => b.rank - a.rank);
+                return arr.sort((a, b) => {
+                    const r = getRank(b) - getRank(a);
+                    return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
+                });
             case '신상품순':
-                return [...filteredProducts]
-                    .filter((product) => product.tags?.some((tag) => tag.name === '신상품'))
-                    .sort((a, b) => b.rank - a.rank);
+                return arr
+                    .filter((p) => p.tags?.some((t) => t.name === '신상품'))
+                    .sort((a, b) => {
+                        const r = getRank(b) - getRank(a);
+                        return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
+                    });
             case '높은가격순':
-                return [...filteredProducts].sort((a, b) => {
-                    const priceA = a.discountedPrice || a.price;
-                    const priceB = b.discountedPrice || b.price;
-                    return priceB - priceA;
-                });
+                return arr.sort((a, b) => getPrice(b) - getPrice(a));
             case '낮은가격순':
-                return [...filteredProducts].sort((a, b) => {
-                    const priceA = a.discountedPrice || a.price;
-                    const priceB = b.discountedPrice || b.price;
-                    return priceA - priceB;
-                });
+                return arr.sort((a, b) => getPrice(a) - getPrice(b));
             default:
-                return filteredProducts;
+                return arr;
         }
-    };
+    }, [dataByNum, sortType]);
+
+    const filteredData = useMemo(() => {
+        if (selectedSub === '전체보기') return sortedData;
+        return sortedData.filter((p) => p.category?.main === selectedSub);
+    }, [sortedData, selectedSub]);
 
     return (
         <DirectDeliveryWrap>
@@ -129,8 +133,7 @@ const DirectDelivery = () => {
                         </p>
                     ))}
                 </div>
-
-                {directDeliveryUl.length > 0 && <ProductList products={sortedDirectDelivery()} showCheckbox={false}/>}
+                <ProductList products={filteredData} showCheckbox={false} />
             </div>
         </DirectDeliveryWrap>
     );

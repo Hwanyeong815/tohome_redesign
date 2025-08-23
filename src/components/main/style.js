@@ -12,7 +12,7 @@ export const ContentStyle = styled.div`
         text-align: center;
     }
     .btn {
-        /* display: none; */
+        display: none;
     }
 
     .main-title {

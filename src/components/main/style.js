@@ -12,7 +12,7 @@ export const ContentStyle = styled.div`
         text-align: center;
     }
     .btn {
-        display: none;
+        /* display: none; */
     }
 
     .main-title {
@@ -92,61 +92,48 @@ export const ContentStyle = styled.div`
             }
         }
     }
-`;
-
-export const ContentUl = styled.ul`
-    display: flex;
-    justify-content: space-between;
-
-    li {
-        width: 250px;
-        height: 480px;
-        .img-box {
-            width: 250px;
-            height: 310px;
-            position: relative;
-            img {
-                width: 100%;
-            }
-            .overlay {
-                user-select: none;
-                pointer-events: none;
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.4);
+    @media screen and (max-width: 600px) {
+        width: 100vw;
+        /* margin-top: 25.641vw; */
+        min-height: 0;
+        section {
+            margin-top: 12.3077vw;
+        }
+        .inner {
+            /* padding: 16.9231vw 0;
+            overflow: visible; */
+        }
+        .main-title {
+            font-size: 4.1026vw;
+            margin-left: 0;
+            padding-left: calc(5.1282vw + 5px);
+            &::before {
+                width: 5.1282vw;
+                height: 5.1282vw;
                 left: 0;
-                top: 0;
-                width: 250px;
-                height: 300px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                opacity: 0;
-                /* opacity: 1; */
-                transition: 0.3s ease;
-                &:hover {
-                    opacity: 1;
-                }
-                .icon-btn {
-                    width: 45px;
-                    height: 45px;
-                    border-radius: 10px;
-                    border: 1px solid #fff;
-                    background: transparent;
-                    color: #fff;
-                    font-size: 18px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
-        h2 {
-            height: 55px;
-            text-align: left;
+        .sub-title {
+            font-size: 3.0769vw;
+            margin-top: 6.1538vw;
+            margin-bottom: 6.1538vw;
         }
-        p {
-            text-align: right;
+        .des {
+            display: none;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 9.4872vw;
+            button {
+                background: none;
+                border-bottom: 1px solid #000;
+                font-size: 3.3333vw;
+                font-weight: 600;
+                padding: 5px 10px;
+            }
         }
     }
 `;

@@ -118,7 +118,7 @@ export const Content05Style = styled.div`
                     display: flex;
                     justify-content: end;
                     gap: 25px;
-                    .btn {
+                    .btn1 {
                         width: 195px;
                         height: 50px;
                         line-height: 50px;
@@ -146,13 +146,9 @@ export const Content05Style = styled.div`
             width: 480px;
             height: 180px;
             padding: 84px 164px;
-            /* margin-top: 84px; */
-            /* margin-left: 164px; */
-            /* position: relative; */
+
             img {
                 width: 480px;
-                /* position: absolute; */
-                /* top: 0; */
             }
             .mobileText {
                 display: none;

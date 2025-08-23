@@ -7,18 +7,67 @@ import ProductList from '../../product/ProductList';
 import { cartActions } from '../../../store/modules/cartSlice';
 
 const Content5 = () => {
-    const { products, gift, menus } = useSelector((state) => state.cart);
-    const todayRecipe = products.filter((product) =>
+    const { products, menus, specials } = useSelector((state) => state.cart);
+    const AllMenus = [...products, ...menus, ...specials];
+    const todayRecipe = AllMenus.filter((product) =>
         product.tags?.some((tag) => tag.name === '오늘의레시피' && tag.rank <= 5)
     );
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    const [selectedItems, setSelectedItems] = useState(() => {
+        return new Set(todayRecipe.map((product) => product.id));
+    });
+
+    ////////
+
+    const handleItemSelect = (productId, isSelected) => {
+        const newSelectedItems = new Set(selectedItems);
+        if (isSelected) {
+            newSelectedItems.add(productId);
+        } else {
+            newSelectedItems.delete(productId);
+        }
+        setSelectedItems(newSelectedItems);
+    };
+
+    const handleSelectAll = (isSelected) => {
+        if (isSelected) {
+            const allIds = new Set(todayRecipe.map((product) => product.id));
+            setSelectedItems(allIds);
+        } else {
+            setSelectedItems(new Set());
+        }
+    };
+
+    const handleAddSelectedToCart = () => {
+        const selectedProducts = todayRecipe.filter((product) => selectedItems.has(product.id));
+
+        selectedProducts.forEach((product) => {
+            dispatch(cartActions.addToCart(product));
+        });
+
+        setSelectedItems(new Set());
+
+        alert(`${selectedProducts.length}개의 상품이 장바구니에 담겼습니다.`);
+    };
+
+    const handleAddAllToCart = () => {
+        todayRecipe.forEach((product) => {
+            dispatch(cartActions.addToCart(product));
+        });
+
+        setSelectedItems(new Set());
+
+        alert(`${todayRecipe.length}개의 상품이 장바구니에 담겼습니다.`);
+    };
+
+    ////////////////////
+
     const onClick1 = () => {
         navigate('/gift');
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
-
     return (
         <ContentStyle>
             <Content05Style>
@@ -56,8 +105,12 @@ const Content5 = () => {
                             </button>
                             <div className="line"></div>
                             <div className="btn-wrap">
-                                <button className="btn">선택 재료 담기</button>
-                                <button className="btn">재료 한번에 담기</button>
+                                <button className="btn1" onClick={handleAddSelectedToCart}>
+                                    선택 재료 담기
+                                </button>
+                                <button className="btn1" onClick={handleAddAllToCart}>
+                                    재료 한번에 담기
+                                </button>
                             </div>
                         </div>
                     </div>

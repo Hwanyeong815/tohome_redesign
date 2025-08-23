@@ -96,7 +96,7 @@ const Navbar = () => {
                 </div>
             </NavStyle>
             {isOpen && <FloatingMenu setIsOpen={setIsOpen} />}
-            <ProductSearch />
+            {/* <ProductSearch /> */}
         </>
     );
 };

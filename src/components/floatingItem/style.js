@@ -82,7 +82,7 @@ export const FloatingBtnStyle = styled.div`
     }
 `;
 export const FloatingMenuStyle = styled.div`
-    z-index: 1500;
+    z-index: 10;
     position: absolute;
     top: 220px;
     right: 20px;

@@ -7,62 +7,12 @@ import ProductList from '../../product/ProductList';
 import { cartActions } from '../../../store/modules/cartSlice';
 
 const Content5 = () => {
-    const { products, menus, specials } = useSelector((state) => state.cart);
-    const AllMenus = [...products, ...menus, ...specials];
-    const todayRecipe = AllMenus.filter((product) =>
+    const { products, gift, menus } = useSelector((state) => state.cart);
+    const todayRecipe = products.filter((product) =>
         product.tags?.some((tag) => tag.name === '오늘의레시피' && tag.rank <= 5)
     );
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
-    const [selectedItems, setSelectedItems] = useState(() => {
-        return new Set(todayRecipe.map((product) => product.id));
-    });
-
-    ////////
-
-    const handleItemSelect = (productId, isSelected) => {
-        const newSelectedItems = new Set(selectedItems);
-        if (isSelected) {
-            newSelectedItems.add(productId);
-        } else {
-            newSelectedItems.delete(productId);
-        }
-        setSelectedItems(newSelectedItems);
-    };
-
-    const handleSelectAll = (isSelected) => {
-        if (isSelected) {
-            const allIds = new Set(todayRecipe.map((product) => product.id));
-            setSelectedItems(allIds);
-        } else {
-            setSelectedItems(new Set());
-        }
-    };
-
-    const handleAddSelectedToCart = () => {
-        const selectedProducts = todayRecipe.filter((product) => selectedItems.has(product.id));
-
-        selectedProducts.forEach((product) => {
-            dispatch(cartActions.addToCart(product));
-        });
-
-        setSelectedItems(new Set());
-
-        alert(`${selectedProducts.length}개의 상품이 장바구니에 담겼습니다.`);
-    };
-
-    const handleAddAllToCart = () => {
-        todayRecipe.forEach((product) => {
-            dispatch(cartActions.addToCart(product));
-        });
-
-        setSelectedItems(new Set());
-
-        alert(`${todayRecipe.length}개의 상품이 장바구니에 담겼습니다.`);
-    };
-
-    ////////////////////
 
     const onClick1 = () => {
         navigate('/gift');
@@ -106,12 +56,8 @@ const Content5 = () => {
                             </button>
                             <div className="line"></div>
                             <div className="btn-wrap">
-                                <button className="btn" onClick={handleAddSelectedToCart}>
-                                    선택 재료 담기
-                                </button>
-                                <button className="btn" onClick={handleAddAllToCart}>
-                                    재료 한번에 담기
-                                </button>
+                                <button className="btn">선택 재료 담기</button>
+                                <button className="btn">재료 한번에 담기</button>
                             </div>
                         </div>
                     </div>
@@ -124,15 +70,32 @@ const Content5 = () => {
                         />
                     </div>
                 </section>
-                <section className="main-gift-wrap" onClick={onClick1} data-aos="fade-up">
+                <section
+                    className="main-gift-wrap"
+                    onClick={onClick1}
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div className="txt-box">
                         <img src="images/main/main_gift01.png" alt="모눈종이" />
+                        <div className="mobileText">
+                            <p> 선 물 하 기</p>
+                            <span>
+                                진심을 담아 전하는 순간 <br />
+                                투홈의 선물하기를 이용하세요!
+                            </span>
+                        </div>
                         <p>
                             진심을 담아 전하는 순간, 선물이 특별해지는 이유 투홈의 선물하기를
                             이용하세요!
                         </p>
                     </div>
                     <img src="images/main/main_gift.png" alt="main_gift.png" className="back" />
+                    <img
+                        src="images/main/mobile_gift.png"
+                        alt="mobile_gift.png"
+                        className="mobile_giftImg"
+                    />
                     <button className="more1">
                         <img src="images/icon/icon_all.png" alt="" />
                     </button>

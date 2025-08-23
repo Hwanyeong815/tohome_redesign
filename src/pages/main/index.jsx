@@ -12,12 +12,25 @@ import 'aos/dist/aos.css';
 
 const Main = () => {
     useEffect(() => {
+        // SSR/빌드 안전 가드
+        if (typeof window === 'undefined') return;
+        const isMobile = () => window.matchMedia('(max-width: 600px)').matches;
         AOS.init({
-            duration: 1000,
-            once: false,
-            mirror: true,
+            duration: 1000, // 애니메이션 속도
+            once: false, // false로 해야 스크롤할 때마다 애니메이션 실행
+            mirror: true, // 위/아래 스크롤 시 애니메이션 반복
         });
+        // 초기 1회 리프레시
         AOS.refresh();
+        // 윈도우 리사이즈 시 상태가 바뀌면 하드 리프레시(옵션)
+        const onResize = () => {
+            // 뷰포트 변경으로 disable 조건이 달라질 수 있으니 강제 리프레시
+            AOS.refreshHard();
+        };
+        window.addEventListener('resize', onResize);
+        return () => {
+            window.removeEventListener('resize', onResize);
+        };
     }, []);
     return (
         <MainStyle>

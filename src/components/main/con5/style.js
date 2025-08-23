@@ -154,6 +154,9 @@ export const Content05Style = styled.div`
                 /* position: absolute; */
                 /* top: 0; */
             }
+            .mobileText {
+                display: none;
+            }
             p {
                 margin-top: 30px;
                 text-align: left;
@@ -169,11 +172,87 @@ export const Content05Style = styled.div`
             transform: translate(-50%, -50%);
             z-index: -1;
         }
+        .mobile_giftImg {
+            display: none;
+        }
         .more1 {
             position: absolute;
             right: -10px;
             bottom: 0;
             background-color: transparent;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .main-today-recipe {
+            display: none;
+        }
+        .main-gift-wrap {
+            display: flex;
+            width: 100vw;
+            height: 120px;
+            margin-top: 0;
+            .txt-box {
+                width: 100vw;
+                height: 120px;
+                padding: 0;
+                img {
+                    display: none;
+                }
+                .mobileText {
+                    width: 88vw;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    p {
+                        display: inline-flex;
+                        position: relative;
+                        font-size: 15px;
+                        font-weight: 600;
+                        justify-content: space-between;
+                        margin-top: 0;
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            background-image: url(/images/main/giftIcon.png);
+                            background-repeat: no-repeat;
+                            position: absolute;
+                            width: 24px;
+                            height: 24px;
+                            vertical-align: middle;
+                            margin-left: -26px;
+                        }
+                    }
+                    span {
+                        font-size: 10px;
+                        font-weight: 500;
+                        display: flex;
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                }
+                p {
+                    display: none;
+                }
+            }
+            .back {
+                display: none;
+            }
+            .mobile_giftImg {
+                display: block;
+                /* border-radius: 35px 35px 350px 35px; */
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+            .more1 {
+                display: none;
+            }
         }
     }
 `;

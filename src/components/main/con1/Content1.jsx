@@ -38,26 +38,12 @@ const Content1 = () => {
                         data-aos-anchor-placement="top-center"
                     >
                         <h2 className="main-title">베스트 메뉴</h2>
-                        <h3 className="sub-title">
-                            지금 가장 사랑받는 메뉴, 한눈에 담아보세요
-                        </h3>
-                        {isMobile ? (
-                            <div className="productWrap">
-                                <ProductList
-                                    products={bestTop6}
-                                    showCheckbox={false}
-                                />
-                            </div>
-                        ) : (
-                            <Slider {...settings1} className="ul">
-                                {bestTop5.map((product) => (
-                                    <BestMenuLi
-                                        key={product.id}
-                                        product={product}
-                                    />
-                                ))}
-                            </Slider>
-                        )}
+                        <h3 className="sub-title">지금 가장 사랑받는 메뉴, 한눈에 담아보세요</h3>
+                        <Slider {...settings1} className="ul">
+                            {bestTop5.map((product) => (
+                                <BestMenuLi key={product.id} product={product} />
+                            ))}
+                        </Slider>
                     </section>
                     <section
                         className="main-newPro-wrap"

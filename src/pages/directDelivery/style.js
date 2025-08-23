@@ -43,7 +43,7 @@ export const DirectDeliveryWrap = styled.div`
             gap: 24px;
             .points {
                 display: grid;
-                // gap: 20px;
+
                 .point {
                     margin-bottom: 30px;
                     .title {
@@ -81,13 +81,7 @@ export const DirectDeliveryWrap = styled.div`
                         color: #3c6039;
                         margin-right: 18px;
                     }
-                    // .dot{
-                    // width 4px;
-                    // height: 4px;
-                    // background: #999;
-                    // border-radius: 50%;
-                    // display: inline-block;
-                    // }
+
                     span {
                         font-size: 13px;
                         font-weight: 500;

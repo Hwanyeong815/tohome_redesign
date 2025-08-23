@@ -36,7 +36,7 @@ const SubscribeUl = () => {
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 }}
-                speed={3000} // 슬라이드가 흘러가는 속도
+                speed={3000}
                 modules={[FreeMode, Autoplay]}
             >
                 {sideDishes.map((dishes) => (

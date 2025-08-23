@@ -8,7 +8,7 @@ import { paginationActions } from '../../../store/modules/paginationSlice';
 
 const NoticeList = ({ noticeTab }) => {
     const { notices } = useSelector((state) => state.support);
-    console.log(notices);
+
     const { pageData, totalCount, perPage, currentPage, totalPages } = useSelector(
         (state) => state.pagination.notice
     );
@@ -30,10 +30,6 @@ const NoticeList = ({ noticeTab }) => {
 
     const handlePageChange = (page) => {
         dispatch(paginationActions.goToPage({ key: 'notice', page }));
-    };
-
-    const onMake = () => {
-        // auth가 true일때 글 작성
     };
 
     return (

@@ -25,4 +25,17 @@ export const TitleBox = styled.div`
         color: #666;
         white-space: pre-line;
     }
+    @media screen and (max-width: 600px) {
+        padding: 8.2051vw 0;
+        h2 {
+            font-size: 4.9231vw !important;
+            img {
+                width: 6.1538vw;
+                height: 6.1538vw;
+            }
+        }
+        p {
+            font-size: 3.0769vw;
+        }
+    }
 `;

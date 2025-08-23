@@ -133,17 +133,6 @@ export const Content05Style = styled.div`
         }
         .recipe-body {
             margin-top: 120px;
-            li {
-                position: relative;
-                .img-wrap {
-                    width: 250px;
-                    /* height: 306px; */
-                    img {
-                        width: 100%;
-                        opacity: 0;
-                    }
-                }
-            }
         }
     }
 

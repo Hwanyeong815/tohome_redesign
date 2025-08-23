@@ -89,61 +89,23 @@ export const ContentStyle = styled.div`
             }
         }
     }
-`;
-
-export const ContentUl = styled.ul`
-    display: flex;
-    justify-content: space-between;
-
-    li {
-        width: 250px;
-        height: 480px;
-        .img-box {
-            width: 250px;
-            height: 310px;
-            position: relative;
-            img {
-                width: 100%;
-            }
-            .overlay {
-                user-select: none;
-                pointer-events: none;
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.4);
-                left: 0;
-                top: 0;
-                width: 250px;
-                height: 300px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                opacity: 0;
-                /* opacity: 1; */
-                transition: 0.3s ease;
-                &:hover {
-                    opacity: 1;
-                }
-                .icon-btn {
-                    width: 45px;
-                    height: 45px;
-                    border-radius: 10px;
-                    border: 1px solid #fff;
-                    background: transparent;
-                    color: #fff;
-                    font-size: 18px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+    @media screen and (max-width: 600px) {
+        width: 100vw;
+        margin-top: 25.641vw;
+        .inner {
+            padding: 16.9231vw 0;
+        }
+        .main-title {
+            font-size: 4.1026vw;
+            &::before {
+                width: 5.1282vw;
+                height: 5.1282vw;
             }
         }
-        h2 {
-            height: 55px;
-            text-align: left;
-        }
-        p {
-            text-align: right;
+        .sub-title {
+            font-size: 3.0769vw;
+            margin-top: 6.1538vw;
+            margin-bottom: 6.1538vw;
         }
     }
 `;

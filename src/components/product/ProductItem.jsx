@@ -4,17 +4,26 @@ import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/modules/cartSlice';
 import { useState } from 'react';
+import Checkbox from '../../ui/CheckBox';
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({
+    product,
+    showCheckbox = true,
+    isSelected = false,
+    onSelect,
+    idx,
+    onItemSelect,
+}) => {
     const [hoverHeart, setHoverHeart] = useState(false);
     const [clicked, setClicked] = useState(false);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const handleClick = () => {
-        // 모든 클릭이 productDetail 페이지로 이동
         navigate(`/product/${product.id}`);
         window.scrollTo({ top: 0, left: 0 });
     };
+
     const {
         images,
         thumbnailImage,
@@ -27,24 +36,33 @@ const ProductItem = ({ product }) => {
         info,
         thumbs,
     } = product;
+
+    const imgList = thumbnailImage
+        ? [thumbnailImage]
+        : [
+              ...(Array.isArray(thumbs) ? thumbs : []),
+              ...(Array.isArray(images) ? images : []),
+          ].filter(Boolean);
+
     return (
-        <ProductItemStyle className="img-wrap">
+        <ProductItemStyle>
             <div className="img-wrap">
-                {/* {thumbnailImage && <img src={thumbnailImage} alt={name} />}
-                    {thumbs && <img src={thumbs} alt={name} />}
-                    {images && <img src={images} alt={name} />} */}
-                {[thumbnailImage, thumbs, images].map(
-                    (img, i) => img && <img key={i} src={img} alt={name} />
-                )}
+                {imgList.map((img, idx) => (
+                    <img key={idx} src={img} alt={name} />
+                ))}
 
                 <div className="overlay">
                     <button
                         className="icon-btn"
                         onMouseEnter={() => setHoverHeart(true)}
                         onMouseLeave={() => setHoverHeart(false)}
-                        onClick={() => setClicked((prev) => !prev)} // 클릭 시 toggle
+                        onClick={() => setClicked((prev) => !prev)}
                     >
-                        {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
+                        {hoverHeart || clicked ? (
+                            <BsSuitHeartFill />
+                        ) : (
+                            <BsSuitHeart />
+                        )}
                     </button>
                     <button
                         className="icon-btn"
@@ -53,6 +71,15 @@ const ProductItem = ({ product }) => {
                         <BsCart2 />
                     </button>
                 </div>
+                {showCheckbox && (
+                    <Checkbox
+                        htmlFor={`recipe-${product.id || idx}`}
+                        right={'15px'}
+                        top={'15px'}
+                        checked={isSelected}
+                        onChange={(e) => onSelect(product.id, e.target.checked)}
+                    />
+                )}
             </div>
             <h3 onClick={handleClick}>
                 {name.split('\n').map((line, idx) => (
@@ -65,7 +92,8 @@ const ProductItem = ({ product }) => {
             <div className="price-box" onClick={handleClick}>
                 {isDiscounted ? (
                     <p className="discount">
-                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        원
                     </p>
                 ) : (
                     <p className="discount">{''}</p>
@@ -73,8 +101,12 @@ const ProductItem = ({ product }) => {
                 <p className="price">
                     {isDiscounted && <span>{discountRate}%</span>}
                     {isDiscounted
-                        ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                        : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        ? discountedPrice
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                        : price
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                     원
                 </p>
             </div>

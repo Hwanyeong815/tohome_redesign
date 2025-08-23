@@ -1,9 +1,7 @@
-import { info } from 'sass';
-
 export default [
     {
         id: 1,
-        name: '[그리니팅] 진짜레몬 (80ml*5개입)',
+        name: '[그리니팅] \n 진짜레몬 (80ml*5개입)',
         des: '레몬 4개를 통쨰로 한 팩에. 시칠리아 레몬공장에서 착즙한 유기농 레몬즙',
         price: 27400,
         discountedPrice: 20550,
@@ -121,7 +119,7 @@ export default [
     },
     {
         id: 3,
-        name: '[새벽시장] 불로초 감귤 (1.5kg)',
+        name: '[새벽시장] \n불로초 감귤 1.5kg',
         des: '제주감귤 대표 브랜드로 최상위의 맛과 영양. 입안가득 새콤달콤한 과즙을 느껴보세요!',
         price: 27200,
         discountedPrice: 24480,

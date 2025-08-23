@@ -1,52 +1,56 @@
-import { Link } from 'react-router-dom';
-import { AboutSlideItem } from './style';
+import { Link } from "react-router-dom";
+import { AboutSlideItem } from "./style";
 
 const AboutSlide1 = ({ about }) => {
-    const {
-        imgUrl,
-        title,
-        titleEng,
-        des,
-        magazine,
-        bannersubl,
-        bannersubttll,
-        bannersubr,
-        bannersubttlr,
-    } = about;
-    return (
-        <AboutSlideItem>
+  const {
+    imgUrl,
+    title,
+    titleEng,
+    des,
+    magazine,
+    bannersubl,
+    bannersubttll,
+    bannersubr,
+    bannersubttlr,
+  } = about;
+  return (
+    <AboutSlideItem>
+      <div className="bannerImg">
+        <img src={imgUrl} alt="" />
+      </div>
+      <div className="AboutSlideDetail">
+        <div className="txt">
+          <h4>
+            {titleEng}
+            <span>1</span>
+          </h4>
+          <strong>{title}</strong>
+          <p>{des}</p>
+        </div>
+        <div className="AboutMagazine">
+          <ul>
             <li>
-                <img src={imgUrl} alt="" />
+              <small>{magazine}</small>
+              <div className="AboutBanner">
+                <p>{bannersubl}</p>
+                <em>{bannersubttll}</em>
+                <img src="/images/about/about_arrow.png" alt="" />
+              </div>
             </li>
-            <li className="AboutSlideDetail">
-                <h4>
-                    {titleEng}
-                    <span>1</span>
-                </h4>
-                <strong>{title}</strong>
-                <p>{des}</p>
-                <ul className="AboutMagazine">
-                    <li>
-                        <small>{magazine}</small>
-                        <div className="AboutBanner">
-                            <p>{bannersubl}</p>
-                            <em>{bannersubttll}</em>
-                            <img src="/images/about/about_arrow.png" alt="" />
-                        </div>
-                    </li>
 
-                    <li>
-                        <small>{magazine}</small>
-                        <div className="AboutBanner">
-                            <p>{bannersubr}</p>
-                            <em>{bannersubttlr}</em>
-                            <img src="/images/about/about_arrow.png" alt="" />
-                        </div>
-                    </li>
-                </ul>
+            <li>
+              <small>{magazine}</small>
+              <div className="AboutBanner">
+                <p>{bannersubr}</p>
+                <em>{bannersubttlr}</em>
+                <img src="/images/about/about_arrow.png" alt="" />
+              </div>
             </li>
-        </AboutSlideItem>
-    );
+          </ul>
+        </div>
+      </div>
+    </AboutSlideItem>
+  );
 };
 
 export default AboutSlide1;

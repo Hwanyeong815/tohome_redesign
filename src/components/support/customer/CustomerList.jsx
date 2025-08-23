@@ -25,10 +25,6 @@ const CustomerList = () => {
         dispatch(paginationActions.goToPage({ key: 'customer', page }));
     };
 
-    const onMake = () => {
-        // auth가 true일때 글 작성
-    };
-
     return (
         <CustomerListStyle>
             <table className="customerTable">

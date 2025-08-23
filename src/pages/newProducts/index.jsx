@@ -71,7 +71,9 @@ const NewProducts = () => {
                         </p>
                     ))}
                 </div>
-                {newProductsUl.length > 0 && <ProductList products={sortedNewProducts()} />}
+                {newProductsUl.length > 0 && (
+                    <ProductList products={sortedNewProducts()} showCheckbox={false} />
+                )}
             </div>
         </NewProductsWrap>
     );

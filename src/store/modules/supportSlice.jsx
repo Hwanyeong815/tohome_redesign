@@ -2,12 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 import customerData from '../../assets/data/customerData';
 import faqData from '../../assets/data/faqData';
 import noticeData from '../../assets/data/noticeData';
+import reviewData from '../../assets/data/reviewData';
 
 const initialState = {
     customers: customerData,
     faqs: faqData,
     openFaqIds: [],
     notices: noticeData,
+    reviews: reviewData,
 };
 export const supportSlice = createSlice({
     name: 'support',
@@ -17,7 +19,6 @@ export const supportSlice = createSlice({
         setCurrentCustomer: (state, action) => {},
         removeCustomer: (state, action) => {},
         updateCustomer: (state, action) => {},
-        //
         faqToggle: (state, action) => {
             const id = action.payload;
             if (state.openFaqIds.includes(id)) {

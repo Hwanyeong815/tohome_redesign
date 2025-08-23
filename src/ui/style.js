@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const CheckboxStyle = styled.label`
+    z-index: 20;
     .checkbox-wrap {
         position: relative;
     }
@@ -20,7 +21,10 @@ export const CheckboxStyle = styled.label`
     right: ${(props) => props.$right || 'auto'};
     left: ${(props) => props.$left || 'auto'};
     bottom: ${(props) => props.$bottom || 'auto'};
-
+    @media screen and (max-width: 600px) {
+        top: 2vw;
+        right: 0.8vw;
+    }
     .custom-check {
         width: 30px;
         height: 30px;

@@ -7,17 +7,18 @@ const AboutGotoCon3 = (props) => {
             <AboutLeft {...props}>
                 <li>
                     <div className="con-text">
-                        <h3
-                            style={{
-                                background:
-                                    "url('/images/about/about_icon_03.png') no-repeat right 10px top 0",
-                            }}
-                        >
-                            브랜드직송
-                        </h3>
-                        <p className="green-title">
-                            바이어의 탐구, 브랜드의 정성
-                        </p>
+                        <div className="titleWrap">
+                            <div className="title">
+                                <h3>브랜드직송</h3>
+                                <img
+                                    src="/images/about/about_icon_03.png"
+                                    alt=""
+                                />
+                            </div>
+                            <p className="green-title">
+                                바이어의 탐구, 브랜드의 정성
+                            </p>
+                        </div>
                         <p>
                             바이어의 안목으로 선별한 브랜드를, 진심 깃든 그대로
                             직송으로 전해드립니다.

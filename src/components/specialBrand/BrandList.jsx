@@ -9,7 +9,6 @@ const BrandList = ({ brandTag }) => {
     const [sortType, setSortType] = useState('판매량순');
     const [selectedSub, setSelectedSub] = useState('전체보기');
 
-    // brandTag 기준으로 필터링
     const brandTagMap = {
         Brand1Myeong: '명인명촌',
         Brand2Table: '1TABLE',
@@ -72,7 +71,7 @@ const BrandList = ({ brandTag }) => {
                     </p>
                 ))}
             </div>
-            <ProductList products={getSortedProducts()} />
+            <ProductList products={getSortedProducts()} showCheckbox={false} />
         </BrandListStyle>
     );
 };

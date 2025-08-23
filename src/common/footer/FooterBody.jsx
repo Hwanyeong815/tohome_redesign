@@ -21,7 +21,7 @@ const FooterBody = () => {
             </li>
             <li className="links">
                 <section>
-                    <img src="/images/common/logo_tohome2.png" alt="로고1" />
+                    <img src="/images/common/logo_tohome2.png" alt="로고1" className="logo" />
                     <div>
                         <Link to="/">
                             <img src="/images/icon/icon_youtube.png" alt="유튜브" />
@@ -47,6 +47,13 @@ const FooterBody = () => {
                     <p>개인정보처리방침</p>
                     <p>영상기기운영방침</p>
                 </div>
+            </li>
+            <li className="utill-mobile-wrap">
+                <p>브랜드소개</p>
+                <p>이용약관</p>
+                <p>개인정보처리방침</p>
+                <p>청소년보호정책</p>
+                <p>영상기기운영방침</p>
             </li>
         </FooterBodyUl>
     );

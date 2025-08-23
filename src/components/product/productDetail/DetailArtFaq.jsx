@@ -13,8 +13,8 @@ const DetailArtFaq = () => {
                 <Swiper
                     modules={[FreeMode]}
                     freeMode={{
-                        enabled: true, // 자유 스크롤 활성화
-                        momentum: true, // 관성 스크롤
+                        enabled: true,
+                        momentum: true,
                     }}
                     slidesPerView="auto"
                     spaceBetween={20}

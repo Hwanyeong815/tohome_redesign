@@ -15,6 +15,22 @@ export const FooterStyle = styled.footer`
         padding: 26px 0;
         border-top: 1px solid #333;
     }
+    @media screen and (max-width: 600px) {
+        /* height: 89.2308vw; */
+        height: max-content;
+        .inner {
+            width: 91.7949vw;
+            padding-top: 6.1538vw;
+        }
+        .copyright {
+            padding-top: 0;
+            padding-bottom: 4.1026vw;
+            margin-top: 9.2308vw;
+            border: none;
+
+            font-size: 1.7949vw;
+        }
+    }
 `;
 
 export const FooterBodyUl = styled.ul`
@@ -94,8 +110,6 @@ export const FooterBodyUl = styled.ul`
         }
     }
     .utill {
-        width: 300px;
-
         .option {
             text-align: center;
         }
@@ -109,6 +123,89 @@ export const FooterBodyUl = styled.ul`
             em {
                 display: flex;
                 justify-content: space-between;
+            }
+        }
+        &-mobile-wrap {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        margin-top: 18.4615vw;
+        flex-direction: column;
+        align-items: center;
+        li {
+            &:nth-child(1) {
+                flex-direction: row;
+                height: 12.3077vw;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    width: 41.0256vw;
+                    height: 12.3077vw;
+                    &:nth-child(2) {
+                        padding: 0;
+                        & > img {
+                            bottom: -1.8462vw;
+                            width: 4.4821vw;
+                        }
+                    }
+
+                    em {
+                        font-size: 2.5641vw;
+                        &::after {
+                            width: 29.4872vw;
+                        }
+                    }
+                    strong {
+                        height: max-content;
+                        margin: auto;
+                        font-size: 3.8462vw;
+                        img {
+                            width: 3.8462vw;
+                            gap: 1.0256vw;
+                        }
+                    }
+                    p {
+                        margin: auto;
+                        font-size: 2.5641vw;
+                    }
+                    h5 {
+                        padding: 0 1.0256vw;
+                        word-break: keep-all;
+                        margin: auto;
+                        font-size: 2.3077vw;
+                    }
+                }
+            }
+        }
+        .links {
+            position: absolute;
+            height: max-content;
+
+            top: 6.1538vw;
+            left: 50%;
+            transform: translateX(-50%);
+            section {
+                .logo {
+                    display: none;
+                }
+                & > img {
+                }
+                div {
+                }
+            }
+        }
+        .utill {
+            display: none;
+            &-mobile-wrap {
+                display: flex;
+                margin-top: 24px;
+                gap: 3.9103vw;
+                p {
+                    font-size: 2.5641vw;
+                }
             }
         }
     }
@@ -142,6 +239,37 @@ export const FooterInfoUl = styled.ul`
         }
         &:nth-child(3) {
             font-weight: 500;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        margin-top: 6.1538vw;
+
+        li {
+            margin-bottom: 2.0513vw;
+            padding: 0 7.1795vw;
+            box-sizing: border-box;
+            p {
+                font-size: 2.0513vw;
+            }
+            &:nth-child(1) {
+            }
+            &:nth-child(2) {
+                font-weight: 500;
+                div {
+                    gap: 2.1795vw;
+
+                    &:nth-child(2) {
+                        /* flex-direction: column; */
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        gap: 0;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                font-size: 1.7949vw;
+            }
         }
     }
 `;

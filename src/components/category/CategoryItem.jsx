@@ -16,7 +16,7 @@ const CategoryItem = ({ product }) => {
                             className="icon-btn"
                             onMouseEnter={() => setHoverHeart(true)}
                             onMouseLeave={() => setHoverHeart(false)}
-                            onClick={() => setClicked((prev) => !prev)} // 클릭 시 toggle
+                            onClick={() => setClicked((prev) => !prev)}
                         >
                             {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
                         </button>

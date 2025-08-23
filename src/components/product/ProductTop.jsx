@@ -1,7 +1,6 @@
 import React from 'react';
 import { ProductTopStyle } from './style';
 
-// const ProductTop = ({ subCategories, selectedSub, setSelectedSub }) => {
 const ProductTop = ({ subCategories, selectedSub, setSelectedSub, fontSize }) => {
     return (
         <ProductTopStyle fontSize={fontSize}>

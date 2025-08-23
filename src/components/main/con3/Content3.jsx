@@ -35,8 +35,6 @@ const banners = [
 ];
 
 const Content3 = () => {
-    // const { products } = useSelector((state) => state.cart);
-
     const navigate = useNavigate();
     const onClick1 = () => {
         navigate('/about');

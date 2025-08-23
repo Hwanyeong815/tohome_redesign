@@ -137,7 +137,6 @@ export const FormsStyle = styled.div`
                 li {
                     width: 207px;
                     height: 48px;
-                    //   border: 1px solid;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -155,7 +154,7 @@ export const FormsStyle = styled.div`
         align-items: center;
         border-bottom: 1px solid #000;
         padding: 20px;
-        // width: 960px;
+
         p {
             font-size: 24px;
             font-weight: 600;
@@ -224,7 +223,6 @@ export const FormsStyle = styled.div`
                 input {
                     width: 700px;
                     padding: 0 10px;
-                    //   font-size: 16px;
                 }
             }
             &.message {

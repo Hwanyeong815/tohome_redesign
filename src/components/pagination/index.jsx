@@ -32,35 +32,4 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
     );
 };
 
-// const pagination = () => {
-//     const { totalPages, currentPage } = useSelector((state) => state.pagination);
-//     const dispatch = useDispatch();
-
-//     const pageArray = [...Array(totalPages)].map((_, i) => i + 1);
-//     return (
-//         <PaginationStyle>
-//             <div>
-//                 <button onClick={() => dispatch(paginationActions.goToFirstPage())}>{`<<`}</button>
-//                 <button
-//                     onClick={() => dispatch(paginationActions.prevPage(currentPage))}
-//                 >{`<`}</button>
-//                 {pageArray.map((item) => (
-//                     <button
-//                         key={item}
-//                         className={currentPage === item ? 'on' : ''}
-//                         onClick={() => dispatch(paginationActions.goToPage(item))}
-//                     >
-//                         {item}
-//                     </button>
-//                 ))}
-
-//                 <button
-//                     onClick={() => dispatch(paginationActions.nextPage(currentPage))}
-//                 >{`>`}</button>
-//                 <button onClick={() => dispatch(paginationActions.goToLastPage())}>{`>>`}</button>
-//             </div>
-//         </PaginationStyle>
-//     );
-// };
-
 export default Pagination;

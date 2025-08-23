@@ -5,30 +5,22 @@ import { IoGiftOutline, IoClose } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/modules/cartSlice';
 
-// 문자열 금액 → 숫자 변환
 const toNum = (v) => {
     const n = Number(String(v ?? '').replace(/[^\d.-]/g, ''));
     return Number.isFinite(n) ? n : 0;
 };
 
 const SubBox = ({ cart, setIsCartTab }) => {
-    const {
-        id,
-        name,
-        price,
-        discountedPrice,
-        thumbnailImage,
-        pricePerUnit,
-        quantity,
-    } = cart;
+    const { id, name, price, discountedPrice, thumbnailImage, pricePerUnit, quantity } = cart;
 
     const dispatch = useDispatch();
 
-    // 안전한 수량 + 합계 계산
     const { qty, lineOriginal, lineDiscounted } = useMemo(() => {
         const qtySafe = Number(quantity) || 1;
         const priceNum = toNum(price);
-        const discNum = discountedPrice != null ? toNum(discountedPrice) : null;
+
+        const discNum =
+            discountedPrice != null && toNum(discountedPrice) !== 0 ? toNum(discountedPrice) : null;
 
         return {
             qty: qtySafe,
@@ -40,10 +32,6 @@ const SubBox = ({ cart, setIsCartTab }) => {
         <ItemBox>
             <img className="image" src={thumbnailImage} alt={name} />
             <div className="txt">
-                {/* <div className="brandName">
-                    <p>{manufacturer}</p>
-                </div> */}
-
                 <div className="name">
                     <p>{name}</p>
                     <span>{pricePerUnit}</span>
@@ -63,27 +51,21 @@ const SubBox = ({ cart, setIsCartTab }) => {
                 <div className="calc">
                     <button
                         className="minus"
-                        onClick={() =>
-                            dispatch(cartActions.decreaseQuantity(id))
-                        }
+                        onClick={() => dispatch(cartActions.decreaseQuantity(id))}
                     >
                         <FaMinus />
                     </button>
                     <p className="num">{qty}</p>
                     <button
                         className="plus"
-                        onClick={() =>
-                            dispatch(cartActions.increaseQuantity(id))
-                        }
+                        onClick={() => dispatch(cartActions.increaseQuantity(id))}
                     >
                         <FaPlus />
                     </button>
                 </div>
 
                 <div className="purchase">
-                    <button onClick={() => setIsCartTab('Order')}>
-                        바로구매
-                    </button>
+                    <button onClick={() => setIsCartTab('Order')}>바로구매</button>
                 </div>
 
                 <div className="icons">

@@ -41,32 +41,34 @@ const MainNewPro = () => {
             modules={[Autoplay, Pagination]}
             spaceBetween={30}
             slidesPerView={1}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            // autoplay={{ delay: 4000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             loop={true}
         >
-            {newProductsArr.map(({ title, subtitle, description, highlightText, img }, idx) => (
-                <SwiperSlide key={idx}>
-                    <div className="left">
-                        <strong>{highlightText}</strong>
-                        <h2>{title}</h2>
-                        <h4>
-                            {subtitle} <MdArrowForwardIos />
-                        </h4>
-                        <p>
-                            {description.split('\n').map((line, i) => (
-                                <span key={i}>
-                                    {line}
-                                    <br />
-                                </span>
-                            ))}
-                        </p>
-                    </div>
-                    <div className="right">
-                        <img src={img} alt={title} />
-                    </div>
-                </SwiperSlide>
-            ))}
+            {newProductsArr.map(
+                ({ title, subtitle, description, highlightText, img }, idx) => (
+                    <SwiperSlide key={idx}>
+                        <div className="left">
+                            <strong>{highlightText}</strong>
+                            <h2>{title}</h2>
+                            <h4>
+                                {subtitle} <MdArrowForwardIos />
+                            </h4>
+                            <p>
+                                {description.split('\n').map((line, i) => (
+                                    <span key={i}>
+                                        {line}
+                                        <br />
+                                    </span>
+                                ))}
+                            </p>
+                        </div>
+                        <div className="right">
+                            <img src={img} alt={title} />
+                        </div>
+                    </SwiperSlide>
+                )
+            )}
         </Swiper>
     );
 };

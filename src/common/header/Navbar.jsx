@@ -6,6 +6,7 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 import { GoSearch } from 'react-icons/go';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
+import ProductSearch from '../../components/product/ProductSearch';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -52,10 +53,15 @@ const Navbar = () => {
             </TopMenu>
             <SearchWrap>
                 <div className="search">
-                    <GoSearch className="search-item" />
+                    <p>
+                        <GoSearch className="search-item" />
+                    </p>
                 </div>
                 <Link to="/cart" className="cart">
-                    <RiShoppingCartLine /> <span>{carts.length}</span>
+                    <p>
+                        <RiShoppingCartLine />
+                        {carts.length > 0 && <span>{carts.length}</span>}
+                    </p>
                 </Link>
             </SearchWrap>
             <NavStyle className="nav" isOpen={isOpen}>
@@ -90,6 +96,7 @@ const Navbar = () => {
                 </div>
             </NavStyle>
             {isOpen && <FloatingMenu setIsOpen={setIsOpen} />}
+            <ProductSearch />
         </>
     );
 };

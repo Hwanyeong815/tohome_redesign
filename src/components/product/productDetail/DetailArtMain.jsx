@@ -1,32 +1,56 @@
 import { DetailArtMainStyle } from './style';
+
 import { FaCheck } from 'react-icons/fa6';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
+import SwiperCore from 'swiper';
 import { FreeMode } from 'swiper/modules';
+
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const DetailArtMain = ({ obj }) => {
     const { thumbnailImage, thumbs } = obj;
+
+    const swiperRef = useRef(null);
+
+    useEffect(() => {
+        const el = swiperRef.current.el;
+        const swiper = swiperRef.current.swiper;
+
+        const onWheel = (e) => {
+            e.preventDefault();
+            if (e.deltaY > 0) {
+                swiper.slideNext();
+            } else {
+                swiper.slidePrev();
+            }
+        };
+
+        el.addEventListener('wheel', onWheel, { passive: false });
+        return () => el.removeEventListener('wheel', onWheel);
+    }, []);
+
     return (
         <DetailArtMainStyle>
             <div className="detailContent">
                 <Swiper
                     modules={[FreeMode]}
                     freeMode={{
-                        enabled: true, // 자유 스크롤 활성화
-                        momentum: true, // 관성 스크롤
+                        enabled: true,
+                        momentum: true,
                     }}
                     slidesPerView="auto"
                     spaceBetween={20}
                     loop={false}
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
                 >
                     <SwiperSlide className="slide">
                         <div className="mainImg">
                             {thumbnailImage && <img src={thumbnailImage} alt={name} />}
                             {thumbs && <img src={thumbs} alt={name} />}
-
-                            {/* <img src="/images/product/detailArt/mainImg.png" alt="" /> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="slide">

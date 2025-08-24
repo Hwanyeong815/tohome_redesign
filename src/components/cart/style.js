@@ -112,6 +112,7 @@ export const ItemBox = styled.div`
             height: 40px;
             font-size: 25px;
             .cancel {
+                cursor: pointer;
                 font-size: 30px;
             }
         }

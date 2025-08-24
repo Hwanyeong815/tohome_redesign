@@ -51,7 +51,7 @@ export const AboutTopWrap = styled.div`
     .about-text {
         width: 1000px;
         margin: auto;
-        background-color: #fff;
+        background: rgba(255, 255, 255, 0.95);
         padding: 75px 0;
         animation: ${fadeUp} 0.7s ease-out forwards;
         animation-delay: 1.2s;

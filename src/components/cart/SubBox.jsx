@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { ItemBox } from './style';
 import { FaMinus, FaPlus } from 'react-icons/fa6';
 import { IoGiftOutline, IoClose } from 'react-icons/io5';
@@ -11,7 +11,7 @@ const toNum = (v) => {
 };
 
 const SubBox = ({ cart, setIsCartTab }) => {
-    const { id, name, price, discountedPrice, thumbnail, pricePerUnit, quantity } = cart;
+    const { num, name, price, discountedPrice, thumbnail, pricePerUnit, quantity } = cart;
 
     const dispatch = useDispatch();
 
@@ -51,14 +51,14 @@ const SubBox = ({ cart, setIsCartTab }) => {
                 <div className="calc">
                     <button
                         className="minus"
-                        onClick={() => dispatch(cartActions.decreaseQuantity(id))}
+                        onClick={() => dispatch(cartActions.decreaseQuantity(num))}
                     >
                         <FaMinus />
                     </button>
                     <p className="num">{qty}</p>
                     <button
                         className="plus"
-                        onClick={() => dispatch(cartActions.increaseQuantity(id))}
+                        onClick={() => dispatch(cartActions.increaseQuantity(num))}
                     >
                         <FaPlus />
                     </button>
@@ -74,7 +74,7 @@ const SubBox = ({ cart, setIsCartTab }) => {
                     </div>
                     <div
                         className="cancel"
-                        onClick={() => dispatch(cartActions.removeFromCart(id))}
+                        onClick={() => dispatch(cartActions.removeFromCart(num))}
                     >
                         <IoClose />
                     </div>

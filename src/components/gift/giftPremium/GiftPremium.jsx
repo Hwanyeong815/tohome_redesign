@@ -2,7 +2,7 @@ import { useState } from 'react';
 import GiftPremiumList from './GiftPremiumList';
 import { GiftPremiumWrap } from './style';
 import { useSelector } from 'react-redux';
-import { selectPremium } from '../../../store/modules/giftSlice';
+import { selectPremium } from '../../../store/modules/cartSlice';
 
 const GiftPremium = () => {
     const premiumlGifts = useSelector(selectPremium);

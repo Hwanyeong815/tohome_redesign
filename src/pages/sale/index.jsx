@@ -7,10 +7,12 @@ import { useMemo, useState } from 'react';
 const Sale = () => {
     const { AllDataList } = useSelector((state) => state.cart);
 
-    const DataByNum = useMemo(() => {
+    const dataByNum = useMemo(() => {
         const m = new Map();
         AllDataList?.forEach((item) => {
-            if (item.discountedPrice && !m.has(item.num)) m.set(item.num, item);
+            if (item.discountedPrice && !item.giftId && !m.has(item.num)) {
+                m.set(item.num, item);
+            }
         });
         return Array.from(m.values());
     }, [AllDataList]);
@@ -18,7 +20,7 @@ const Sale = () => {
     const [sortType, setSortType] = useState('판매량순');
 
     const sortedData = useMemo(() => {
-        const arr = [...DataByNum];
+        const arr = [...dataByNum];
 
         const getRank = (x) => Number(x?.rank ?? 0);
         const getPrice = (x) => Number(x?.discountedPrice ?? x?.price ?? 0);
@@ -27,14 +29,14 @@ const Sale = () => {
             case '판매량순':
                 return arr.sort((a, b) => {
                     const r = getRank(b) - getRank(a);
-                    return r !== 0 ? r : DataByNum.indexOf(a) - DataByNum.indexOf(b);
+                    return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
                 });
             case '신상품순':
                 return arr
                     .filter((p) => p.tags?.some((t) => t.name === '신상품'))
                     .sort((a, b) => {
                         const r = getRank(b) - getRank(a);
-                        return r !== 0 ? r : DataByNum.indexOf(a) - DataByNum.indexOf(b);
+                        return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
                     });
             case '높은가격순':
                 return arr.sort((a, b) => getPrice(b) - getPrice(a));
@@ -43,7 +45,7 @@ const Sale = () => {
             default:
                 return arr;
         }
-    }, [DataByNum, sortType]);
+    }, [dataByNum, sortType]);
 
     return (
         <SaleWrap>

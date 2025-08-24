@@ -1,20 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createSelector } from '@reduxjs/toolkit';
 import sideDishData from '../../assets/data/sideDishData.js';
-// import productData from '../../assets/data/productData.js';
-
-// import giftData from '../../assets/data/giftData.js';
-// import menu01Data from '../../assets/data/menu01Data.js';
-// import menu02Data from '../../assets/data/menu02Data.js';
-// import menu03Data from '../../assets/data/menu03Data.js';
-// import menu04Data from '../../assets/data/menu04Data.js';
-// import menu05Data from '../../assets/data/menu05Data.js';
-// import menu06Data from '../../assets/data/menu06Data.js';
-// import menu07Data from '../../assets/data/menu07Data.js';
-// import menu08Data from '../../assets/data/menu08Data.js';
-// import menu09Data from '../../assets/data/menu09Data.js';
-// import menu10Data from '../../assets/data/menu10Data.js';
-// import specialBrandData from '../../assets/data/specialBrandData.js';
-// import recipeProductData from '../../assets/data/recipeProductData.js';
 import AllMergeData from '../../assets/data/AllMergeData.js';
 
 const toNum = (v) => {
@@ -22,46 +7,69 @@ const toNum = (v) => {
     return Number.isFinite(n) ? n : 0;
 };
 
-// const normalizeProductId = (raw) => {
-//     const id =
-//         raw.id ??
-//         raw.fruitId ??
-//         raw.brandId ??
-//         raw.grainId ??
-//         raw.seafoodId ??
-//         raw.meatId ??
-//         raw.riceId ??
-//         raw.sideId ??
-//         raw.seasoningId ??
-//         raw.bakeryId ??
-//         raw.snackId ??
-//         raw.recipeProductId ??
-//         raw.liquidId;
-
-//     const numId = Number(id);
-//     return {
-//         ...raw,
-//         id: Number.isFinite(numId) ? numId : undefined,
-//     };
-// };
+export const selectAllDataList = (state) => state.cart.AllDataList ?? [];
 
 const normalizeItem = (raw) => {
-    const base = normalizeProductId(raw);
+    const base = raw;
+
+    const rawNum = base?.num;
+    const num = Number(rawNum);
+    const safeNum = Number.isFinite(num) ? num : undefined;
 
     const qty = Number(base?.quantity) || 1;
     const price = toNum(base?.price);
     const disc = base?.discountedPrice != null ? toNum(base.discountedPrice) : null;
-
     const unit = disc != null && disc !== 0 ? disc : price;
 
     return {
         ...base,
+        num: safeNum,
         price,
         discountedPrice: disc,
         quantity: qty,
         itemtotal: unit * qty,
     };
 };
+
+const slug = (s) =>
+    String(s ?? '')
+        .normalize('NFKD')
+        .replace(/\s+/g, '')
+        .replace(/[^\w가-힣·]/g, '')
+        .toLowerCase();
+
+const deriveCategories = (list = []) => {
+    const map = new Map();
+    list.forEach((raw) => {
+        const item = normalizeItem(raw);
+        const title = item.category?.main || item.category?.group || '기타';
+        const key = slug(title) || '기타';
+        if (!map.has(key)) {
+            map.set(key, { title, products: [] });
+        }
+        map.get(key).products.push(item);
+    });
+    return Object.fromEntries(map);
+};
+
+// AllMergeData에서 giftId 있는 것만 선별
+export const selectGifts = createSelector([selectAllDataList], (list) =>
+    list.filter((item) => !!item.giftId)
+);
+
+const byTagSortedAsc = (name) => (arr) =>
+    arr
+        .filter((g) => g.tags?.some((t) => t.name === name))
+        .sort((a, b) => {
+            const ra = a.tags.find((t) => t.name === name)?.rank ?? 0;
+            const rb = b.tags.find((t) => t.name === name)?.rank ?? 0;
+            return ra - rb;
+        });
+
+export const selectBest10 = createSelector(selectGifts, byTagSortedAsc('베스트10'));
+export const selectPremium = createSelector(selectGifts, byTagSortedAsc('프리미엄'));
+export const selectRes = createSelector(selectGifts, byTagSortedAsc('맛집'));
+export const selectSnack = createSelector(selectGifts, byTagSortedAsc('간식'));
 
 const loadCarts = () => {
     try {
@@ -76,6 +84,67 @@ const save = (carts) => {
     localStorage.setItem('carts', JSON.stringify(carts));
 };
 
+const legacyKeyToTitle = {
+    fruit: '과일·채소',
+    grain: '곡물·견과',
+    seafood: '생선·해산물·건어물',
+    meat: '육류·달걀',
+    rice: '밥·국·면',
+    side: '밑반찬·간식',
+    seasoning: '양념·오일·통조림',
+    bakery: '베이커리·치즈',
+    snack: '과자·초콜릿·캔디',
+    liquid: '물·우유·커피·음료',
+};
+const titleToLegacyKey = Object.fromEntries(
+    Object.entries(legacyKeyToTitle).map(([k, v]) => [v, k])
+);
+
+// num 우선, 없으면 도메인별 id 사용
+const pickStableId = (p) =>
+    p?.num ??
+    p?.fruitId ??
+    p?.grainId ??
+    p?.seafoodId ??
+    p?.meatId ??
+    p?.riceId ??
+    p?.sideId ??
+    p?.seasoningId ??
+    p?.bakeryId ??
+    p?.snackId ??
+    p?.liquidId ??
+    `${p?.name ?? ''}__${p?.brandName ?? ''}__${p?.price ?? ''}`;
+
+// AllMergeData → categories
+const buildCategories = (all = []) => {
+    const byMain = new Map(); // mainTitle -> { title, products, _seen }
+
+    for (const item of all) {
+        const main = item?.category?.main;
+        if (!main) continue;
+
+        const stableId = String(pickStableId(item) ?? '');
+        if (!stableId) continue;
+
+        if (!byMain.has(main)) byMain.set(main, { title: main, products: [], _seen: new Set() });
+        const bucket = byMain.get(main);
+
+        if (bucket._seen.has(stableId)) continue; // dedup
+        bucket._seen.add(stableId);
+        bucket.products.push(item);
+    }
+
+    const categories = {};
+    for (const [mainTitle, { title, products }] of byMain.entries()) {
+        const slugKey = slug(mainTitle);
+        categories[slugKey] = { title, products };
+
+        const legacyKey = titleToLegacyKey[mainTitle];
+        if (legacyKey) categories[legacyKey] = { title, products }; // 레거시 라우트 호환
+    }
+    return categories;
+};
+
 const initialState = {
     priceTotal: 0,
     quantityTotal: 0,
@@ -88,40 +157,38 @@ const initialState = {
     sortType: '판매량순',
 
     currentCategory: null,
-    ///
-    // products: productData.map(normalizeItem),
-    // sideDishes: sideDishData.map(normalizeItem),
-    // gifts: giftData.map(normalizeItem),
-    // menus: [
-    //     ...menu01Data,
-    //     ...menu02Data,
-    //     ...menu03Data,
-    //     ...menu04Data,
-    //     ...menu05Data,
-    //     ...menu06Data,
-    //     ...menu07Data,
-    //     ...menu08Data,
-    //     ...menu09Data,
-    //     ...menu10Data,
-    // ],
-    // specials: specialBrandData.map(normalizeItem),
-    // recipes: recipeProductData.map(normalizeItem),
-    AllDataList: AllMergeData,
+    sideDishes: sideDishData,
+    AllDataList: AllMergeData.map(normalizeItem),
+    categories: buildCategories(AllMergeData),
 };
 
 const DELIVERY_THRESHOLD = 10000;
 const DELIVERY_FEE = 3000;
 
-const getId = (p) => String(p?.id ?? p);
+const getNumKey = (p) => String(p?.num ?? p);
+
+export const selectCategories = (s) => s.cart.categories;
+export const selectCurrentCategory = (s) => s.cart.currentCategory;
+export const selectCurrentCategoryProducts = (s) => {
+    const key = s.cart.currentCategory;
+    if (!key) return [];
+    return s.cart.categories?.[key]?.products ?? [];
+};
 
 export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
         addToCart: (state, action) => {
-            const incoming = normalizeItem(action.payload);
+            const payload = action.payload;
+            const base = payload?.product
+                ? { ...(payload.product || {}), quantity: payload.qty ?? payload.quantity }
+                : payload;
+            const incoming = normalizeItem(base);
+            if (incoming.num == null) return;
 
-            const exist = state.carts.find((c) => String(c.id) === String(incoming.id));
+            const key = getNumKey(incoming);
+            const exist = state.carts.find((c) => getNumKey(c) === key);
 
             if (exist) {
                 const newQty = (Number(exist.quantity) || 1) + (Number(incoming.quantity) || 1);
@@ -137,8 +204,9 @@ export const cartSlice = createSlice({
         },
 
         removeFromCart: (state, action) => {
-            const id = getId(action.payload);
-            state.carts = state.carts.filter((item) => String(item.id) !== id);
+            const key = getNumKey(action.payload);
+            state.carts = state.carts.filter((item) => getNumKey(item) !== key);
+
             save(state.carts);
         },
 
@@ -158,8 +226,8 @@ export const cartSlice = createSlice({
         },
 
         increaseQuantity(state, action) {
-            const id = getId(action.payload);
-            const item = state.carts.find((cart) => String(cart.id) === id);
+            const key = getNumKey(action.payload);
+            const item = state.carts.find((cart) => getNumKey(cart) === key);
             if (item) {
                 const q = Number(item.quantity) || 1;
                 const unit = item.discountedPrice != null ? item.discountedPrice : item.price;
@@ -168,7 +236,8 @@ export const cartSlice = createSlice({
                 save(state.carts);
             } else {
                 state.carts.push({
-                    id,
+                    // id,
+                    num: Number(action.payload?.num ?? action.payload),
                     quantity: 1,
                     price: 0,
                     discountedPrice: null,
@@ -179,8 +248,8 @@ export const cartSlice = createSlice({
         },
 
         decreaseQuantity(state, action) {
-            const id = getId(action.payload);
-            const item = state.carts.find((cart) => String(cart.id) === id);
+            const key = getNumKey(action.payload);
+            const item = state.carts.find((cart) => getNumKey(cart) === key);
             if (item) {
                 const q = Number(item.quantity) || 1;
                 const unit = item.discountedPrice != null ? item.discountedPrice : item.price;
@@ -217,6 +286,12 @@ export const cartSlice = createSlice({
             state.totalPayable = state.totalDiscounted + state.totalDeliveryFee;
 
             save(JSON.parse(JSON.stringify(state.carts)));
+        },
+        setCurrentCategory(state, action) {
+            state.currentCategory = action.payload;
+        },
+        setSortType(state, action) {
+            state.sortType = action.payload;
         },
     },
 });

@@ -21,22 +21,63 @@ export const ProductTopStyle = styled.ul`
         align-items: center;
         justify-content: center;
         font-size: ${(props) => props.fontSize || '15px'};
+        &.on {
+            font-weight: 600;
+            color: #3c6039;
+        }
     }
 `;
 export const ProductResultStyle = styled.div`
     .result {
         &-top {
+            margin-top: 20px;
             height: 250px;
+            margin-bottom: 30px;
             h2 {
                 border-bottom: 1px solid #000;
                 padding-bottom: 30px;
+                strong {
+                    color: #3c6039;
+                }
+                span {
+                    color: #666;
+                }
             }
             .filter {
                 display: flex;
                 justify-content: space-around;
                 margin-top: 30px;
+                li {
+                    &.active {
+                        color: #3c6039;
+                    }
+                }
+            }
+            .sort {
+                margin-top: 110px;
+                display: flex;
+                justify-content: end;
+                li {
+                    padding: 0 20px;
+                    color: #666;
+                    font-size: 15px;
+                    height: 18px;
+                    line-height: 18px;
+
+                    &:not(:last-child) {
+                        border-right: 1px solid #666;
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                    &.active {
+                    }
+                }
             }
         }
+    }
+    .list {
+        border: 1px solid #000;
     }
 `;
 

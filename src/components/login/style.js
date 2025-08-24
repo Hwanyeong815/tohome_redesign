@@ -218,6 +218,7 @@ export const JoinItemStyle = styled.div`
                     td {
                         .address {
                         }
+
                         &:nth-child(2) {
                             input {
                                 width: 500px;
@@ -321,6 +322,7 @@ export const JoinInfoStyle = styled.div`
         }
         &-body {
             padding: 30px;
+
             border: 1px solid #000;
             width: 100%;
             box-sizing: border-box;
@@ -332,13 +334,25 @@ export const JoinInfoStyle = styled.div`
                 line-height: 1.4;
             }
             .checkbox {
-                /* border: 1px solid #000; */
+                &-wrap {
+                    padding: 30px;
+                    border: 1px solid #000;
+                }
+
                 padding-left: 20px;
                 padding-bottom: 10px;
                 &:last-of-type {
                     padding-bottom: 0;
                 }
                 height: 40px;
+            }
+        }
+        &-box {
+            &4 {
+                .info-tab-body {
+                    padding: 0;
+                    border: none;
+                }
             }
         }
     }

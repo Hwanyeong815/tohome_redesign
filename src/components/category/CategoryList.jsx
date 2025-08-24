@@ -1,28 +1,30 @@
 import { useDispatch, useSelector } from 'react-redux';
 import CategoryItem from './CategoryItem';
 import { CategoryListWrap, CategoryItemWrap } from './style';
-import { categoryActions } from '../../store/modules/categorySlice';
+import { cartActions } from '../../store/modules/cartSlice';
+// import { categoryActions } from '../../store/modules/categorySlice';
 
 const CategoryList = ({ products }) => {
     const dispatch = useDispatch();
-    const sortType = useSelector((state) => state.category.sortType);
+    const sortType = useSelector((state) => state.cart.sortType);
     const handleSort = (type) => {
-        dispatch(categoryActions.setSortType(type));
+        dispatch(cartActions.setSortType(type));
     };
     const finalPrice = (product) => {
         return product.isDiscounted && product.discountedPrice
             ? product.discountedPrice
             : product.price;
     };
-    const sortedProducts = [...products].sort((a, b) => {
+    const base = Array.isArray(products) ? products : [];
+    const sortedProducts = [...base].sort((a, b) => {
         if (sortType === '판매량순') {
-            const aRank = a.tags.find((t) => t.name === '베스트')?.rank ?? Infinity;
-            const bRank = b.tags.find((t) => t.name === '베스트')?.rank ?? Infinity;
+            const aRank = a.tags?.find((t) => t.name === '베스트')?.rank ?? Infinity;
+            const bRank = b.tags?.find((t) => t.name === '베스트')?.rank ?? Infinity;
             return aRank - bRank;
         }
         if (sortType === '신상품순') {
-            const aRank = a.tags.find((t) => t.name === '신상품')?.rank ?? Infinity;
-            const bRank = b.tags.find((t) => t.name === '신상품')?.rank ?? Infinity;
+            const aRank = a.tags?.find((t) => t.name === '신상품')?.rank ?? Infinity;
+            const bRank = b.tags?.find((t) => t.name === '신상품')?.rank ?? Infinity;
             return aRank - bRank;
         }
         if (sortType === '높은가격순') {
@@ -31,6 +33,7 @@ const CategoryList = ({ products }) => {
         if (sortType === '낮은가격순') {
             return finalPrice(a) - finalPrice(b);
         }
+        return 0;
     });
     return (
         <CategoryListWrap>

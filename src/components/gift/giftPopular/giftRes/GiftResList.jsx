@@ -1,7 +1,7 @@
 import { GiftResListWrap } from './style';
 import GiftResItem from './GiftResItem';
 import { useSelector } from 'react-redux';
-import { selectRes } from '../../../../store/modules/giftSlice';
+import { selectRes } from '../../../../store/modules/cartSlice';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -26,7 +26,7 @@ const GiftResList = forwardRef((props, ref) => {
         <GiftResListWrap>
             <Slider ref={sliderRef} {...settings}>
                 {restaurant.map((res) => (
-                    <GiftResItem key={res.giftID} res={res} />
+                    <GiftResItem key={res.giftId ?? gift.num} res={res} />
                 ))}
             </Slider>
         </GiftResListWrap>

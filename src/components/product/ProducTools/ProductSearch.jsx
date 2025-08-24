@@ -1,7 +1,22 @@
 import { ProductSearchStyle } from './style';
 import { IoCloseOutline } from 'react-icons/io5';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const ProductSearch = ({ onClose }) => {
+const ProductSearch = ({ onClose, onSelectKeyword, onSubmit }) => {
+    const [input, setInput] = useState('');
+
+    const navigate = useNavigate();
+
+    const goResult = (raw) => {
+        const q = raw.replace(/^#/, ''); // 태그 앞 # 제거
+        // 선택/제출 콜백도 그대로 지원 (있으면 호출)
+        onSelectKeyword?.(q);
+        onSubmit?.(q);
+        // /result로 이동 (쿼리스트링 방식)
+        navigate(`/result?q=${encodeURIComponent(q)}`);
+        onClose?.();
+    };
     return (
         <>
             <ProductSearchStyle>

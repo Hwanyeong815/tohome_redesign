@@ -11,7 +11,9 @@ const Best = () => {
         const m = new Map();
         AllDataList?.forEach((item) => {
             const isBest = item.tags?.some((t) => t.name === '베스트');
-            if (isBest && !m.has(item.num)) m.set(item.num, item);
+            if (isBest && !item.giftId && !m.has(item.num)) {
+                m.set(item.num, item);
+            }
         });
         return Array.from(m.values());
     }, [AllDataList]);

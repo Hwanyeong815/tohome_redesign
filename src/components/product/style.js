@@ -32,13 +32,12 @@ export const ProductItemStyle = styled.li`
         position: relative;
         overflow: hidden;
         width: 250px;
-        height: 305px;
+        height: 300px;
         margin-bottom: 20px;
 
         img {
-            width: 250px;
-            height: 305px;
-            margin-bottom: 15px;
+            width: 100%;
+            height: auto;
             display: block;
         }
         .overlay {

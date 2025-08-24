@@ -95,7 +95,8 @@ export const BrandListStyle = styled.div`
             font-size: 15px;
             color: #666;
             &.on {
-                font-weight: 700;
+                font-weight: 600;
+                color: #3c6039;
             }
             &:not(:last-child) {
                 margin-right: 20px;

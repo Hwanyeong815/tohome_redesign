@@ -2,13 +2,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-
 import { Autoplay, Pagination } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { useState } from 'react';
-
 import { MdArrowForwardIos } from 'react-icons/md';
 
 const newProductsArr = [
@@ -45,30 +41,28 @@ const MainNewPro = () => {
             pagination={{ clickable: true }}
             loop={true}
         >
-            {newProductsArr.map(
-                ({ title, subtitle, description, highlightText, img }, idx) => (
-                    <SwiperSlide key={idx}>
-                        <div className="left">
-                            <strong>{highlightText}</strong>
-                            <h2>{title}</h2>
-                            <h4>
-                                {subtitle} <MdArrowForwardIos />
-                            </h4>
-                            <p>
-                                {description.split('\n').map((line, i) => (
-                                    <span key={i}>
-                                        {line}
-                                        <br />
-                                    </span>
-                                ))}
-                            </p>
-                        </div>
-                        <div className="right">
-                            <img src={img} alt={title} />
-                        </div>
-                    </SwiperSlide>
-                )
-            )}
+            {newProductsArr.map(({ title, subtitle, description, highlightText, img }, idx) => (
+                <SwiperSlide key={idx}>
+                    <div className="left">
+                        <strong>{highlightText}</strong>
+                        <h2>{title}</h2>
+                        <h4>
+                            {subtitle} <MdArrowForwardIos />
+                        </h4>
+                        <p>
+                            {description.split('\n').map((line, i) => (
+                                <span key={i}>
+                                    {line}
+                                    <br />
+                                </span>
+                            ))}
+                        </p>
+                    </div>
+                    <div className="right">
+                        <img src={img} alt={title} />
+                    </div>
+                </SwiperSlide>
+            ))}
         </Swiper>
     );
 };

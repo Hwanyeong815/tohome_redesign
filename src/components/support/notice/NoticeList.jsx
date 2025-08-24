@@ -48,16 +48,29 @@ const NoticeList = ({ noticeTab }) => {
                         <th>등록일</th>
                     </tr>
                 </thead>
+
                 <tbody>
-                    {[...currentNotices].reverse().map((notice, index) => {
-                        return (
-                            <NoticeItem
-                                key={`${notice.date}-${index}`}
-                                notice={notice}
-                                index={index}
-                            />
-                        );
-                    })}
+                    {[...currentNotices]
+                        .sort((a, b) => new Date(b.date) - new Date(a.date)) // 최신순
+                        .map((notice, idx) => {
+                            // 안전한 기본값
+                            const safeTotal = Number.isFinite(totalCount)
+                                ? totalCount
+                                : pageData.length;
+                            const safePer = Number.isFinite(perPage) ? perPage : 10;
+                            const safePage = Number.isFinite(currentPage) ? currentPage : 1;
+
+                            return (
+                                <NoticeItem
+                                    key={notice.noticeId}
+                                    notice={notice}
+                                    index={idx}
+                                    totalCount={safeTotal}
+                                    perPage={safePer}
+                                    currentPage={safePage}
+                                />
+                            );
+                        })}
                 </tbody>
             </table>
             <Pagination

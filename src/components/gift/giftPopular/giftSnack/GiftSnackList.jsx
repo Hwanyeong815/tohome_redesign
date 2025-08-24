@@ -1,7 +1,7 @@
 import { GiftSnackListWrap } from './style';
 import GiftSnackItem from './GiftSnackItem';
 import { useSelector } from 'react-redux';
-import { selectSnack } from '../../../../store/modules/giftSlice';
+import { selectSnack } from '../../../../store/modules/cartSlice';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -26,7 +26,7 @@ const GiftSnackList = forwardRef((props, ref) => {
         <GiftSnackListWrap>
             <Slider ref={sliderRef} {...settings}>
                 {snack.map((snc) => (
-                    <GiftSnackItem key={snc.giftID} snc={snc} />
+                    <GiftSnackItem key={snc.giftId ?? snc.num} snc={snc} />
                 ))}
             </Slider>
         </GiftSnackListWrap>

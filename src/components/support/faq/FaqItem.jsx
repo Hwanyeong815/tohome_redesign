@@ -22,13 +22,13 @@ const FaqItem = ({ faq, isOpen, onClick }) => {
                     {title}
                 </section>
                 {isOpen ? (
+                    <img src="images/icon/icon_arrow.png" alt="화살표" />
+                ) : (
                     <img
                         src="images/icon/icon_arrow.png"
                         alt="화살표"
                         style={{ transform: 'rotate(180deg)' }}
                     />
-                ) : (
-                    <img src="images/icon/icon_arrow.png" alt="화살표" />
                 )}
             </div>
             <div

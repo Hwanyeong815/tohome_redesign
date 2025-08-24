@@ -8,35 +8,8 @@ import { FreeMode } from 'swiper/modules';
 
 const DetailArtSub = ({ obj }) => {
     const {
-        id,
         name,
-        des,
-        price,
-        discountedPrice,
-        isDiscounted,
-        discountRate,
-        pricePerUnit,
-        thumbnailImage,
-        details: {
-            origin,
-            packagingType,
-            additionalDiscount,
-            deliveryType,
-            barcode,
-            size,
-            unitWeight,
-            manufacturer,
-            importer,
-            originLaw,
-            expirationPolicy,
-            itemName,
-            gmoInfo,
-            importNotice,
-            productContents,
-            storageMethod,
-            customerService,
-            safetyNotice,
-        },
+        details: { barcode, size, manufacturer, expirationPolicy, itemName, storageMethod },
     } = obj;
     return (
         <DetailArtSubStyle>

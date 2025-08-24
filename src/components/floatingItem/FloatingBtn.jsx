@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 
 const FloatingBtn = () => {
     const { carts } = useSelector((state) => state.cart);
+    const { authed } = useSelector((state) => state.auth);
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
@@ -36,6 +37,20 @@ const FloatingBtn = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
 
+    const handleCartClick = () => {
+        if (!authed) {
+            const goLogin = window.confirm(
+                '로그인이 필요합니다. 로그인 하시겠습니까?\n(취소를 누르면 장바구니로 이동합니다.)'
+            );
+            if (goLogin) {
+                navigate('/login', { state: { redirectTo: '/cart' } });
+                return;
+            }
+        }
+        navigate('/cart');
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    };
+
     return (
         <>
             {isVisible && (
@@ -45,11 +60,15 @@ const FloatingBtn = () => {
                             <img src="/images/icon/icon_dawnDelivery.png" alt="새벽배송" />
                             새벽배송
                         </p>
-                        <p className="img-box">
-                            <Link to="/cart" className="cart">
+                        <p
+                            className="img-box"
+                            onClick={handleCartClick}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <span className="cart">
                                 <RiShoppingCartLine />
                                 <span>{carts.length}</span>
-                            </Link>
+                            </span>
                             장바구니
                         </p>
                     </div>

@@ -2,8 +2,8 @@ import { configureStore } from '@reduxjs/toolkit';
 import cart from './modules/cartSlice';
 import support from './modules/supportSlice';
 import pagination from './modules/paginationSlice';
-import category from './modules/categorySlice';
-import gift from './modules/giftSlice';
+// import category from './modules/categorySlice';
+// import gift from './modules/giftSlice';
 import auth from './modules/authSlice';
 
 const store = configureStore({
@@ -11,8 +11,8 @@ const store = configureStore({
         cart,
         support,
         pagination,
-        category,
-        gift,
+        // category,
+        // gift,
         auth,
     },
 });

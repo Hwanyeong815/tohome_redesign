@@ -2,12 +2,12 @@ import { useSelector } from 'react-redux';
 
 import { ContentStyle } from '../style';
 
-import MainRecom from './MainRecom';
 import { Content2Style, MainRecomStyle } from './style';
 import ProductList from '../../product/ProductList';
 
 import { useEffect } from 'react';
 import AOS from 'aos';
+import MainRecom from './MainRecom';
 
 const Content2 = () => {
     // const { products, menus, gifts, specials } = useSelector((state) => state.cart);

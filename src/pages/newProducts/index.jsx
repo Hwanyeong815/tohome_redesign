@@ -13,7 +13,10 @@ const NewProducts = () => {
     const dataByNum = useMemo(() => {
         const m = new Map();
         AllDataList?.forEach((item) => {
-            if (item.discountedPrice && !m.has(item.num)) m.set(item.num, item);
+            const isBest = item.tags?.some((t) => t.name === '신상품');
+            if (isBest && !item.giftId && !m.has(item.num)) {
+                m.set(item.num, item);
+            }
         });
         return Array.from(m.values());
     }, [AllDataList]);

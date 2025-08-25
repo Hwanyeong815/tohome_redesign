@@ -7,6 +7,7 @@ import { useRef } from 'react';
 import AboutSlide1 from './AboutSlide1';
 import AboutSlide2 from './AboutSlide2';
 import AboutSlide3 from './AboutSlide3';
+import { useNavigate } from 'react-router-dom';
 
 const aboutData = [
     {
@@ -54,10 +55,18 @@ const AboutSlideMap = {
 };
 
 const AboutVisual = () => {
+    const navigate = useNavigate();
+
+    const onMagazine = () => {
+        navigate('/magazine');
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    };
+
     const swiperRef = useRef(null);
     return (
         <AboutSlideWrap>
             <Swiper
+                onClick={onMagazine}
                 className="about-swiper"
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;
@@ -77,16 +86,10 @@ const AboutVisual = () => {
                 })}
             </Swiper>
             <div className="btn-wrap">
-                <button
-                    className="prev"
-                    onClick={() => swiperRef.current?.slidePrev()}
-                >
+                <button className="prev" onClick={() => swiperRef.current?.slidePrev()}>
                     <p>Prev</p>
                 </button>
-                <button
-                    className="next"
-                    onClick={() => swiperRef.current?.slideNext()}
-                >
+                <button className="next" onClick={() => swiperRef.current?.slideNext()}>
                     <p>Next</p>
                 </button>
             </div>

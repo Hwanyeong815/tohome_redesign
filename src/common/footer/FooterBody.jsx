@@ -1,7 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FooterBodyUl } from './style';
 
 const FooterBody = () => {
+    const navigate = useNavigate();
+    const onAbout = () => {
+        navigate('/about');
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    };
     return (
         <FooterBodyUl>
             <li>
@@ -39,8 +44,8 @@ const FooterBody = () => {
                 <div className="option">Family Site</div>
                 <div>
                     <em>
-                        <p>
-                            <Link to="/about">브랜드소개</Link>
+                        <p onClick={onAbout}>
+                            <Link>브랜드소개</Link>
                         </p>
                         <p>이용약관</p>
                     </em>

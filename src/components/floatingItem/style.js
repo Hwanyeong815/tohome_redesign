@@ -6,7 +6,7 @@ export const FloatingBtnStyle = styled.div`
     top: 13vw;
     right: 3.1vw;
     width: 80px;
-
+    cursor: pointer;
     div {
         background-color: white;
         height: 160px;

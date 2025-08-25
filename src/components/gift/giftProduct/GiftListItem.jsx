@@ -31,10 +31,7 @@ const GiftListItem = ({ gift }) => {
 
     return (
         <li>
-            <Link
-                to={safeNum ? `/product/${safeNum}` : '/'}
-                onClick={() => window.scrollTo({ top: 0, left: 0 })}
-            >
+            <Link>
                 <div className="img-wrap">
                     <img src={thumbnail} alt={name} onClick={handleClick} />
                     <div className="overlay">

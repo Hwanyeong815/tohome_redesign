@@ -20,7 +20,8 @@ export const VisualStyle = styled.div`
 
         button {
             position: absolute;
-            font-size: 10px;
+            font-size: 15px;
+            font-weight: 600;
             font-family: 'Arita-buri-SemiBold';
             background-color: transparent;
             p {
@@ -32,7 +33,7 @@ export const VisualStyle = styled.div`
                 content: '';
                 position: absolute;
                 top: -12px;
-                width: 30px;
+                width: 41px;
                 height: 1px;
                 background-color: #333;
             }
@@ -43,11 +44,11 @@ export const VisualStyle = styled.div`
                 left: -40%;
             }
             &.prev {
-                left: -30px;
+                left: -40px;
                 transform: rotate(-90deg);
             }
             &.next {
-                right: -30px;
+                right: -40px;
                 transform: rotate(90deg);
             }
             &:hover {
@@ -113,8 +114,7 @@ export const BannerWrap = styled.article`
     }
     width: 100%;
     display: flex;
-    flex-direction: ${({ $position }) =>
-        $position === 'right' ? 'row-reverse' : 'row'};
+    flex-direction: ${({ $position }) => ($position === 'right' ? 'row-reverse' : 'row')};
     align-items: center;
 
     .txt-box {

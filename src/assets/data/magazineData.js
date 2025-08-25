@@ -24,7 +24,7 @@ export default [
         listId: 4,
         name: '레시피04',
         images: '/images/magazine/List04.webp',
-        des: '홍시티라미수',
+        des: '김굴국',
         route: '',
     },
     {
@@ -52,7 +52,7 @@ export default [
         listId: 8,
         name: '레시피08',
         images: '/images/magazine/List08.webp',
-        des: '전어튀김덮밥',
+        des: '복숭아화채',
         route: '',
     },
     {
@@ -73,14 +73,14 @@ export default [
         listId: 11,
         name: '레시피11',
         images: '/images/magazine/List11.webp',
-        des: '냉이된장파스타',
+        des: '추석나물김밥',
         route: '',
     },
     {
         listId: 12,
         name: '레시피12',
         images: '/images/magazine/List12.webp',
-        des: '프렌치토스트',
+        des: '백화고동그랑땡',
         route: '',
     },
 ];

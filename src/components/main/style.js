@@ -94,12 +94,15 @@ export const ContentStyle = styled.div`
     }
     @media screen and (max-width: 600px) {
         width: 100vw;
-        /* margin-top: 25.641vw; */
         min-height: 0;
+        /* background-color: yellow; */
+
         section {
             margin-top: 12.3077vw;
         }
         .inner {
+            /* background-color: yellowgreen; */
+            /* width: 100vw; */
             /* padding: 16.9231vw 0;
             overflow: visible; */
         }

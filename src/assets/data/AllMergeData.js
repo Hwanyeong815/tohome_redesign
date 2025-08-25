@@ -1211,7 +1211,7 @@ export default [
     {
         id: 2,
         num: 51,
-        name: '[새벽시장] 수박 7kg (1통)',
+        name: '[새벽시장] \n 수박 7kg (1통)',
         des: '봄 여름 단짝, 달콤한 수박. 시원하고 아삭한 과육과 풍부한 과즙에서 느껴지는 달콤함!',
         price: 57200,
         discountedPrice: null,

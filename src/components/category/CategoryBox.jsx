@@ -2,10 +2,15 @@ import { useSelector } from 'react-redux';
 import CategoryFilter from './CategoryFilter';
 import CategoryList from './CategoryList';
 import { CategoryBoxWrap } from './style';
-import { useState } from 'react';
-import ProductList from '../product/ProductList';
+import { useMemo, useState } from 'react';
 
-// CategoryTop과 동일한 레거시 매핑 & slug
+const slug = (s) =>
+    String(s ?? '')
+        .normalize('NFKD')
+        .replace(/\s+/g, '')
+        .replace(/[^\w가-힣·]/g, '')
+        .toLowerCase();
+
 const legacyTitleMap = {
     fruit: '과일·채소',
     grain: '곡물·견과',
@@ -18,26 +23,16 @@ const legacyTitleMap = {
     snack: '과자·초콜릿·캔디',
     liquid: '물·우유·커피·음료',
 };
-const slug = (s) =>
-    String(s ?? '')
-        .normalize('NFKD')
-        .replace(/\s+/g, '')
-        .replace(/[^\w가-힣·]/g, '')
-        .toLowerCase();
 
 const CategoryBox = ({ categoryID, selectedSub }) => {
-    const categories = useSelector((state) => state.cart.categories);
+    const categories = useSelector((s) => s.cart.categories) ?? {};
 
-    // 1) 바로 키 조회
+    // 카테고리 버킷 찾기 (slug/레거시/한글 파라미터 모두 대응)
     let categoryData = categories?.[categoryID];
-
-    // 2) 레거시 키 → 타이틀 매핑 → slug로 조회
     if (!categoryData && legacyTitleMap[categoryID]) {
         const keyByTitle = slug(legacyTitleMap[categoryID]);
         categoryData = categories?.[keyByTitle];
     }
-
-    // 3) 한글/인코딩 라우트 파라미터 대응
     if (!categoryData && categoryID) {
         const decoded = decodeURIComponent(categoryID);
         const keyByDecoded = slug(decoded);
@@ -46,26 +41,32 @@ const CategoryBox = ({ categoryID, selectedSub }) => {
 
     const products = categoryData?.products || [];
 
-    // 기존 fruitId 등 폴백 유지 + num 우선
-    const unifiedProducts = products.map((u) => ({
-        ...u,
-        id:
-            u.num ??
-            u.fruitId ??
-            u.grainId ??
-            u.seafoodId ??
-            u.meatId ??
-            u.riceId ??
-            u.sideId ??
-            u.seasoningId ??
-            u.bakeryId ??
-            u.snackId ??
-            u.liquidId,
-    }));
+    // id 통일 (num 우선 → 없으면 도메인별 id)
+    const unifiedProducts = useMemo(
+        () =>
+            products.map((u) => ({
+                ...u,
+                id:
+                    u.num ??
+                    u.fruitId ??
+                    u.grainId ??
+                    u.seafoodId ??
+                    u.meatId ??
+                    u.riceId ??
+                    u.sideId ??
+                    u.seasoningId ??
+                    u.bakeryId ??
+                    u.snackId ??
+                    u.liquidId,
+            })),
+        [products]
+    );
 
-    const [priceRange, setPriceRange] = useState([]);
-    const [deliveryTypes, setDeliveryTypes] = useState([]);
+    // ---- 필터 UI 상태 ----
+    const [priceRange, setPriceRange] = useState([]); // ["~5천원", ...]
+    const [deliveryTypes, setDeliveryTypes] = useState([]); // ["새벽배송","택배배송","전체"]
 
+    // ---- 가격 구간 맵 ----
     const priceMap = {
         '~5천원': [0, 5000],
         '5천원~1만원': [5000, 10000],
@@ -75,31 +76,36 @@ const CategoryBox = ({ categoryID, selectedSub }) => {
         '5만원 이상': [50000, null],
     };
 
-    let filtered = unifiedProducts;
+    // 최종 필터
+    const filtered = useMemo(() => {
+        let arr = unifiedProducts;
 
-    if (selectedSub) {
-        filtered = filtered.filter((p) => p.category?.sub === selectedSub);
-    }
+        if (selectedSub) {
+            arr = arr.filter((p) => p?.category?.sub === selectedSub);
+        }
 
-    if (priceRange.length > 0) {
-        filtered = filtered.filter((p) =>
-            priceRange.some((label) => {
-                const [min, max] = priceMap[label];
-                if (max === null) return p.price >= min;
-                return p.price >= min && p.price < max;
-            })
-        );
-    }
+        if (priceRange.length > 0) {
+            arr = arr.filter((p) =>
+                priceRange.some((label) => {
+                    const [min, max] = priceMap[label] ?? [0, null];
+                    const price = Number(p?.price) || 0;
+                    if (max === null) return price >= min;
+                    return price >= min && price < max;
+                })
+            );
+        }
 
-    if (deliveryTypes.length > 0 && !deliveryTypes.includes('전체')) {
-        filtered = filtered.filter((p) => deliveryTypes.includes(p.details?.deliveryType));
-    }
+        if (deliveryTypes.length > 0 && !deliveryTypes.includes('전체')) {
+            arr = arr.filter((p) => deliveryTypes.includes(p?.details?.deliveryType));
+        }
+
+        return arr;
+    }, [unifiedProducts, selectedSub, priceRange, deliveryTypes]);
 
     return (
         <CategoryBoxWrap>
             <CategoryFilter setPriceRange={setPriceRange} setDeliveryTypes={setDeliveryTypes} />
             <CategoryList products={filtered} />
-            {/* <ProductList products={filtered} showCheckbox={false} /> */}
         </CategoryBoxWrap>
     );
 };

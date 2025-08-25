@@ -377,6 +377,12 @@ export const AboutLeft = styled.ul`
         height: 350px;
         display: flex;
         align-items: center;
+        a {
+            &:hover {
+                background: rgba(255, 255, 255, 0.95);
+                color: #333;
+            }
+        }
         &:last-child {
             width: 580px;
             border-radius: 0 0 33px 0;
@@ -521,6 +527,12 @@ export const AboutRight = styled.ul`
         height: 350px;
         display: flex;
         align-items: center;
+        a {
+            &:hover {
+                background: rgba(255, 255, 255, 0.95);
+                color: #333;
+            }
+        }
         &:first-child {
             width: 580px;
             border-radius: 0 0 0 33px;

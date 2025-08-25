@@ -16,6 +16,7 @@ export const DetailSideStyle = styled.div`
             .tag {
                 display: flex;
                 gap: 8px;
+
                 span {
                     padding: 3px 7px;
                     border: 1px solid #000;
@@ -59,6 +60,8 @@ export const DetailSideStyle = styled.div`
             padding: 15px 0;
             display: flex;
             justify-content: flex-start;
+            text-align: left;
+            word-break: keep-all;
         }
         .price {
             display: flex;
@@ -77,21 +80,26 @@ export const DetailSideStyle = styled.div`
             margin-top: 15px;
             border-top: 1px solid #aea7a2;
             dl {
-                /* border: 1px solid #000; */
                 .infoItem {
                     display: flex;
                     padding: 15px 0;
                     border-bottom: 1px solid #e7e7e7;
                     font-size: 15px;
                     font-weight: 500;
+
                     &:nth-child(4) {
                         dd {
                             display: flex;
-                            justify-content: flex-end;
-                            gap: 72px;
-
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: 20px;
                             p {
-                                margin-right: 57px;
+                                width: auto;
+                                height: auto;
+                                word-break: keep-all;
+                            }
+                            .quantity {
+                                height: 50%;
                             }
                             .deliveryInfo {
                                 display: flex;
@@ -256,7 +264,8 @@ export const DetailTabStyle = styled.div`
 
 export const DetailArtStyle = styled.div`
     width: 1330px;
-    /* overflow: scroll; */
+    height: max-content;
+
     .swiper-slide {
     }
 `;
@@ -265,26 +274,38 @@ export const DetailArtMainStyle = styled.div`
     padding: 22px 0;
     padding-bottom: 16px;
     width: 1330px;
-    .slide {
+    height: 800px;
+    height: max-content;
+    /* DetailArtMainStyle 내부 */
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior: contain; /* 페이지로 스크롤 전파 줄이기 */
+
+    .detailContent {
+        display: flex;
+        gap: 20px;
+    }
+
+    /* .slide {
         cursor: grab;
         &:active {
             cursor: grabbing;
         }
-        /* min-width: 200px; */
+
         width: min-content;
         margin-right: 10px;
-    }
+    } */
     .detailContent {
-        /* display: flex;
-        gap: 30px;
         width: max-content;
-        height: 100vh;
-        overflow: hidden; */
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        &.swiper-wheel-wrap {
+            overscroll-behavior: contain;
+        }
     }
     .box,
     .mainImg {
-        /* flex: 0 0 100vw;  */
-        /* background-color: white; */
     }
     .mainImg {
         width: 575px;
@@ -573,6 +594,25 @@ export const ReviewListStyle = styled.div`
         gap: 10px;
         padding: 20px 7px;
         border-bottom: 1px solid #000;
+        div {
+            cursor: pointer;
+            &.active {
+                p {
+                    font-weight: 700;
+                    color: #3c6039;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #3c6039;
+                    }
+                }
+            }
+        }
         p {
             font-size: 13px;
             font-weight: 600;

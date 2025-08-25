@@ -7,4 +7,9 @@ export const MainStyle = styled.main`
     }
     p {
     }
+    @media screen and (max-width: 600px) {
+        .inner {
+            width: 100vw;
+        }
+    }
 `;

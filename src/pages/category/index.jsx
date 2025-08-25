@@ -7,6 +7,7 @@ import { useState } from 'react';
 const Category = () => {
     const { categoryID } = useParams();
     const [selectedSub, setSelectedSub] = useState(null);
+
     return (
         <CategoryWrap>
             <CategoryTop

@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import CategoryItem from './CategoryItem';
 import { CategoryListWrap, CategoryItemWrap } from './style';
 import { cartActions } from '../../store/modules/cartSlice';
-// import { categoryActions } from '../../store/modules/categorySlice';
 
 const CategoryList = ({ products }) => {
     const dispatch = useDispatch();

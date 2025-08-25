@@ -11,6 +11,9 @@ export const ContentStyle = styled.div`
     p {
         text-align: center;
     }
+    .btn {
+        display: none;
+    }
 
     .main-title {
         font-size: 25px;
@@ -91,21 +94,46 @@ export const ContentStyle = styled.div`
     }
     @media screen and (max-width: 600px) {
         width: 100vw;
-        margin-top: 25.641vw;
+        /* margin-top: 25.641vw; */
+        min-height: 0;
+        section {
+            margin-top: 12.3077vw;
+        }
         .inner {
-            padding: 16.9231vw 0;
+            /* padding: 16.9231vw 0;
+            overflow: visible; */
         }
         .main-title {
             font-size: 4.1026vw;
+            margin-left: 0;
+            padding-left: calc(5.1282vw + 5px);
             &::before {
                 width: 5.1282vw;
                 height: 5.1282vw;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
         .sub-title {
             font-size: 3.0769vw;
             margin-top: 6.1538vw;
             margin-bottom: 6.1538vw;
+        }
+        .des {
+            display: none;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 9.4872vw;
+            button {
+                background: none;
+                border-bottom: 1px solid #000;
+                font-size: 3.3333vw;
+                font-weight: 600;
+                padding: 5px 10px;
+            }
         }
     }
 `;

@@ -1,16 +1,26 @@
 import { useState } from 'react';
 import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { cartActions } from '../../store/modules/cartSlice';
+import { useDispatch } from 'react-redux';
 
 const CategoryItem = ({ product }) => {
-    const { thumbnailImage, name, price, discountedPrice, isDiscounted, discountRate } = product;
+    const { thumbnail, name, price, discountedPrice, isDiscounted, discountRate } = product;
     const [hoverHeart, setHoverHeart] = useState(false);
     const [clicked, setClicked] = useState(false);
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        navigate(`/product/${product.num}`);
+        window.scrollTo({ top: 0, left: 0 });
+    };
     return (
         <li>
             <Link to="">
                 <div className="img-wrap">
-                    <img src={thumbnailImage} alt={name} />
+                    <img src={thumbnail} alt={name} onClick={handleClick} />
                     <div className="overlay">
                         <button
                             className="icon-btn"
@@ -20,7 +30,25 @@ const CategoryItem = ({ product }) => {
                         >
                             {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
                         </button>
-                        <button className="icon-btn">
+                        <button
+                            className="icon-btn"
+                            type="button"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                // cartSlice 기대 스키마에 맞춰 전달
+                                const payload = { num: product.num, qty: 1, product };
+                                // 액션명이 addToCart인지 addItem인지 프로젝트에 맞춰 사용
+                                if (cartActions.addToCart) {
+                                    dispatch(cartActions.addToCart(payload));
+                                } else if (cartActions.addItem) {
+                                    dispatch(cartActions.addItem(payload));
+                                } else {
+                                    // 최후방어: 기존처럼 전체 product도 시도
+                                    dispatch(cartActions.addToCart?.(product));
+                                }
+                            }}
+                        >
                             <BsCart2 />
                         </button>
                     </div>

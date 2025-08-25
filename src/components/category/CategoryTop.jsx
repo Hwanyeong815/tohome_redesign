@@ -15,12 +15,15 @@ const categoryIcons = {
 };
 
 const CategoryTop = ({ categoryID, onSelectSub, selectedSub }) => {
-    const categories = useSelector((state) => state.category.categories);
-    const categoryData = categories[categoryID];
-    const title = categoryData?.products[0]?.category.main || '카테고리';
+    // ✅ cart.categories 사용
+    const categories = useSelector((state) => state.cart.categories);
+    const categoryData = categories?.[categoryID];
+
+    const title = categoryData?.products?.[0]?.category?.main || '카테고리';
     const subCategories = categoryData
-        ? [...new Set(categoryData.products.map((p) => p.category.sub))]
+        ? [...new Set(categoryData.products.map((p) => p.category?.sub).filter(Boolean))]
         : [];
+
     const iconSrc = categoryIcons[categoryID]
         ? `/images/category/${categoryIcons[categoryID]}`
         : undefined;

@@ -6,7 +6,7 @@ export const FloatingBtnStyle = styled.div`
     top: 13vw;
     right: 3.1vw;
     width: 80px;
-
+    cursor: pointer;
     div {
         background-color: white;
         height: 160px;
@@ -82,10 +82,10 @@ export const FloatingBtnStyle = styled.div`
     }
 `;
 export const FloatingMenuStyle = styled.div`
-    z-index: 1000;
+    z-index: 1001;
     position: absolute;
     top: 220px;
-    right: 20px;
+    right: 0px;
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.15);

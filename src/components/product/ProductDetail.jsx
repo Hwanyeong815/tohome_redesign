@@ -7,27 +7,10 @@ import DetailArt from './productDetail/DetailArt';
 import { useState } from 'react';
 
 const ProductDetail = () => {
-    const { productID } = useParams();
-    const { products, menus, specials } = useSelector((state) => state.cart);
-    const AllMenus = [...products, ...menus, ...specials];
+    const { productNum } = useParams();
+    const { AllDataList } = useSelector((state) => state.cart);
 
-    const obj = AllMenus.find((product) => {
-        const candidateId =
-            product.id ??
-            product.fruitId ??
-            product.brandId ??
-            product.grainId ??
-            product.seafoodId ??
-            product.meatId ??
-            product.riceId ??
-            product.sideId ??
-            product.seasoningId ??
-            product.bakeryId ??
-            product.snackId ??
-            product.liquidId;
-
-        return Number(candidateId) === Number(productID);
-    });
+    const obj = AllDataList?.find((item) => Number(item.num) === Number(productNum));
 
     if (!obj)
         return <p style={{ textAlign: 'center', padding: '30px' }}>상품을 찾을 수 없습니다.</p>;
@@ -36,7 +19,7 @@ const ProductDetail = () => {
 
     return (
         <ProductDetailStyle>
-            <DetailSide products={products} obj={obj} />
+            <DetailSide products={AllDataList} obj={obj} />
             <section>
                 <DetailTab active={activeTab} onChange={setActiveTab} />
 

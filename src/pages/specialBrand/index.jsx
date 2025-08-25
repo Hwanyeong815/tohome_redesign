@@ -1,12 +1,10 @@
 import { useState } from 'react';
-
 import { SpecialBrandWrap } from './style';
 import Brand1Myeong from '../../components/specialBrand/Brand1Myeong';
 import Brand2Table from '../../components/specialBrand/Brand2Table';
 import Brand3Yehyang from '../../components/specialBrand/Brand3Yehyang';
 import Brand4Market from '../../components/specialBrand/Brand4Market';
 import BrandList from '../../components/specialBrand/BrandList';
-import ProductTop from '../../components/product/ProductTop';
 
 const SpecialBrand = () => {
     const [activeTab, setActiveTab] = useState('Brand1Myeong');

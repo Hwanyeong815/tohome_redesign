@@ -6,50 +6,32 @@ import { cartActions } from '../../store/modules/cartSlice';
 import { useState } from 'react';
 import Checkbox from '../../ui/CheckBox';
 
-const ProductItem = ({
-    product,
-    showCheckbox = true,
-    isSelected = false,
-    onSelect,
-    idx,
-    onItemSelect,
-}) => {
+const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelect, idx }) => {
     const [hoverHeart, setHoverHeart] = useState(false);
     const [clicked, setClicked] = useState(false);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const handleClick = () => {
-        navigate(`/product/${product.id}`);
+        navigate(`/product/${product.num}`);
         window.scrollTo({ top: 0, left: 0 });
     };
 
     const {
-        images,
-        thumbnailImage,
-        name,
-        price,
+        thumbnail,
+        name = '',
+        price = 0,
         discountedPrice,
-        isDiscounted,
+        isDiscounted = false,
         discountRate,
-        des,
         info,
-        thumbs,
-    } = product;
-
-    const imgList = thumbnailImage
-        ? [thumbnailImage]
-        : [
-              ...(Array.isArray(thumbs) ? thumbs : []),
-              ...(Array.isArray(images) ? images : []),
-          ].filter(Boolean);
+    } = product ?? {};
 
     return (
         <ProductItemStyle>
             <div className="img-wrap">
-                {imgList.map((img, idx) => (
-                    <img key={idx} src={img} alt={name} />
-                ))}
+                <img src={thumbnail} alt={name} onClick={handleClick} />
 
                 <div className="overlay">
                     <button
@@ -58,26 +40,37 @@ const ProductItem = ({
                         onMouseLeave={() => setHoverHeart(false)}
                         onClick={() => setClicked((prev) => !prev)}
                     >
-                        {hoverHeart || clicked ? (
-                            <BsSuitHeartFill />
-                        ) : (
-                            <BsSuitHeart />
-                        )}
+                        {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
                     </button>
                     <button
                         className="icon-btn"
-                        onClick={() => dispatch(cartActions.addToCart(product))}
+                        type="button"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            // cartSlice 기대 스키마에 맞춰 전달
+                            const payload = { num: product.num, qty: 1, product };
+                            // 액션명이 addToCart인지 addItem인지 프로젝트에 맞춰 사용
+                            if (cartActions.addToCart) {
+                                dispatch(cartActions.addToCart(payload));
+                            } else if (cartActions.addItem) {
+                                dispatch(cartActions.addItem(payload));
+                            } else {
+                                // 최후방어: 기존처럼 전체 product도 시도
+                                dispatch(cartActions.addToCart?.(product));
+                            }
+                        }}
                     >
                         <BsCart2 />
                     </button>
                 </div>
                 {showCheckbox && (
                     <Checkbox
-                        htmlFor={`recipe-${product.id || idx}`}
+                        htmlFor={`recipe-${product.num ?? product.id ?? idx}`}
                         right={'15px'}
                         top={'15px'}
                         checked={isSelected}
-                        onChange={(e) => onSelect(product.id, e.target.checked)}
+                        onChange={(e) => onSelect(product.num ?? product.id, e.target.checked)}
                     />
                 )}
             </div>
@@ -92,8 +85,7 @@ const ProductItem = ({
             <div className="price-box" onClick={handleClick}>
                 {isDiscounted ? (
                     <p className="discount">
-                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                        원
+                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
                     </p>
                 ) : (
                     <p className="discount">{''}</p>
@@ -101,12 +93,8 @@ const ProductItem = ({
                 <p className="price">
                     {isDiscounted && <span>{discountRate}%</span>}
                     {isDiscounted
-                        ? discountedPrice
-                              .toString()
-                              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                        : price
-                              .toString()
-                              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                        : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                     원
                 </p>
             </div>

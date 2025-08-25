@@ -2,48 +2,50 @@ import { useSelector } from 'react-redux';
 import { SaleWrap } from './style';
 import TopSection from '../../components/topSection/TopSection';
 import ProductList from '../../components/product/ProductList';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 const Sale = () => {
-    const { products, menus, specials } = useSelector((state) => state.cart);
-    const AllMenus = [...products, ...menus, ...specials];
+    const { AllDataList } = useSelector((state) => state.cart);
 
-    const saleUl = AllMenus.filter(
-        (product) => product.tags?.some((tag) => tag.name === '베스트') && product.discountedPrice
-    ).filter((product, index, self) => index === self.findIndex((p) => p.name === product.name));
+    const dataByNum = useMemo(() => {
+        const m = new Map();
+        AllDataList?.forEach((item) => {
+            if (item.discountedPrice && !item.giftId && !m.has(item.num)) {
+                m.set(item.num, item);
+            }
+        });
+        return Array.from(m.values());
+    }, [AllDataList]);
 
     const [sortType, setSortType] = useState('판매량순');
 
-    const sortedSale = () => {
+    const sortedData = useMemo(() => {
+        const arr = [...dataByNum];
+
+        const getRank = (x) => Number(x?.rank ?? 0);
+        const getPrice = (x) => Number(x?.discountedPrice ?? x?.price ?? 0);
+
         switch (sortType) {
             case '판매량순':
-                return [...saleUl].sort((a, b) => {
-                    if (a.rank === b.rank) return saleUl.indexOf(a) - saleUl.indexOf(b);
-                    return b.rank - a.rank;
+                return arr.sort((a, b) => {
+                    const r = getRank(b) - getRank(a);
+                    return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
                 });
             case '신상품순':
-                return [...saleUl]
-                    .filter((product) => product.tags?.some((tag) => tag.name === '신상품'))
+                return arr
+                    .filter((p) => p.tags?.some((t) => t.name === '신상품'))
                     .sort((a, b) => {
-                        if (a.rank === b.rank) return saleUl.indexOf(a) - saleUl.indexOf(b);
-                        return b.rank - a.rank;
+                        const r = getRank(b) - getRank(a);
+                        return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
                     });
             case '높은가격순':
-                return [...saleUl].sort((a, b) => {
-                    const priceA = a.discountedPrice || a.price;
-                    const priceB = b.discountedPrice || b.price;
-                    return priceB - priceA;
-                });
+                return arr.sort((a, b) => getPrice(b) - getPrice(a));
             case '낮은가격순':
-                return [...saleUl].sort((a, b) => {
-                    const priceA = a.discountedPrice || a.price;
-                    const priceB = b.discountedPrice || b.price;
-                    return priceA - priceB;
-                });
+                return arr.sort((a, b) => getPrice(a) - getPrice(b));
             default:
-                return saleUl;
+                return arr;
         }
-    };
+    }, [dataByNum, sortType]);
 
     return (
         <SaleWrap>
@@ -68,7 +70,7 @@ const Sale = () => {
                         </p>
                     ))}
                 </div>
-                <ProductList products={sortedSale()} showCheckbox={false} />
+                <ProductList products={sortedData} showCheckbox={false} />
             </div>
         </SaleWrap>
     );

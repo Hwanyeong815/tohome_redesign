@@ -3,27 +3,38 @@ import CustomerItem from './CustomerItem';
 import { CustomerListStyle } from './style';
 import Pagination from '../../pagination';
 import { paginationActions } from '../../../store/modules/paginationSlice';
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const CustomerList = () => {
     const { customers } = useSelector((state) => state.support);
-    const { pageData, perPage, currentPage, totalPages } = useSelector(
+
+    // 🔹 totalCount도 함께 가져와서 번호 계산에 사용
+    const { pageData, perPage, currentPage, totalPages, totalCount } = useSelector(
         (state) => state.pagination.customer
     );
+
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+
     const startIdx = (currentPage - 1) * perPage;
     const endIdx = startIdx + perPage;
-    const currentCustomers = pageData.slice(startIdx, endIdx);
+
+    // 최신일자 순으로 정렬해서 페이지 자르기
+    const currentCustomers = [...pageData]
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .slice(startIdx, endIdx);
 
     useEffect(() => {
         dispatch(paginationActions.setData({ key: 'customer', data: customers }));
-    }, [customers]);
+    }, [customers, dispatch]);
 
     const handlePageChange = (page) => {
         dispatch(paginationActions.goToPage({ key: 'customer', page }));
     };
+
+    // 안전한 기본값
+    const safeTotal = Number.isFinite(totalCount) ? totalCount : pageData.length;
+    const safePer = Number.isFinite(perPage) ? perPage : 10;
+    const safePage = Number.isFinite(currentPage) ? currentPage : 1;
 
     return (
         <CustomerListStyle>
@@ -44,11 +55,19 @@ const CustomerList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {[...currentCustomers].reverse().map((customer, index) => (
-                        <CustomerItem key={`${customer.date}-${index}`} customer={customer} />
+                    {currentCustomers.map((customer, idx) => (
+                        <CustomerItem
+                            key={`${customer.customerId ?? customer.date}-${idx}`}
+                            customer={customer}
+                            index={idx}
+                            totalCount={safeTotal}
+                            perPage={safePer}
+                            currentPage={safePage}
+                        />
                     ))}
                 </tbody>
-            </table>{' '}
+            </table>
+
             <Pagination
                 totalPages={totalPages}
                 currentPage={currentPage}

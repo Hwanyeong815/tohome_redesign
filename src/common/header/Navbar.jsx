@@ -6,22 +6,39 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 import { GoSearch } from 'react-icons/go';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
+import ProductSearch from '../../components/product/ProducTools/ProductSearch';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { authed, user } = useSelector((state) => state.auth);
+    const { carts } = useSelector((state) => state.cart);
+    const [searchTerm, setSearchTerm] = useState(''); // 검색어 상태
+    const [showSearch, setShowSearch] = useState(false); // 검색창 활성화 여부
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     const onLogout = () => {
         dispatch(authActions.logout(user));
         navigate('/login');
     };
-    const { carts } = useSelector((state) => state.cart);
 
+    const handleCartClick = () => {
+        if (!authed) {
+            const goLogin = window.confirm(
+                '로그인이 필요합니다. 로그인 하시겠습니까?\n(취소를 누르면 장바구니로 이동합니다.)'
+            );
+            if (goLogin) {
+                navigate('/login', { state: { redirectTo: '/cart' } });
+                return;
+            }
+        }
+        navigate('/cart');
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    };
     return (
         <>
             <TopMenu className="top-menu">
@@ -52,16 +69,50 @@ const Navbar = () => {
             </TopMenu>
             <SearchWrap>
                 <div className="search">
-                    <p>
-                        <GoSearch className="search-item" />
-                    </p>
+                    <form
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            const q = searchTerm.trim();
+                            if (!q) return;
+                            navigate(`/result?q=${encodeURIComponent(q)}`);
+                            setShowSearch(false);
+                            setSearchTerm('');
+                        }}
+                    >
+                        <input
+                            type="text"
+                            value={searchTerm}
+                            placeholder=""
+                            onChange={(e) => {
+                                setSearchTerm(e.target.value);
+                                setShowSearch(true);
+                            }}
+                            onFocus={() => setShowSearch(true)}
+                        />
+                        <GoSearch
+                            className="search-item"
+                            onClick={() => {
+                                const q = searchTerm.trim();
+                                if (!q) return;
+                                navigate(`/result?q=${encodeURIComponent(q)}`);
+                                setShowSearch(false);
+                                setSearchTerm('');
+                            }}
+                        />
+                    </form>
                 </div>
-                <Link to="/cart" className="cart">
+                <button
+                    type="button"
+                    className="cart"
+                    onClick={handleCartClick}
+                    aria-label="장바구니로 이동"
+                    style={{ background: 'transparent', border: 0, cursor: 'pointer' }}
+                >
                     <p>
                         <RiShoppingCartLine />
                         {carts.length > 0 && <span>{carts.length}</span>}
                     </p>
-                </Link>
+                </button>
             </SearchWrap>
             <NavStyle className="nav" isOpen={isOpen}>
                 <ul className="gnb">
@@ -95,6 +146,15 @@ const Navbar = () => {
                 </div>
             </NavStyle>
             {isOpen && <FloatingMenu setIsOpen={setIsOpen} />}
+            {showSearch && (
+                <ProductSearch
+                    // keyword prop은 사용 안 해도 동작하므로 빼도 되고 둬도 무방
+                    onClose={() => {
+                        setShowSearch(false);
+                        setSearchTerm('');
+                    }}
+                />
+            )}
         </>
     );
 };

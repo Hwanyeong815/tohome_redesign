@@ -51,7 +51,7 @@ export const AboutTopWrap = styled.div`
     .about-text {
         width: 1000px;
         margin: auto;
-        background-color: #fff;
+        background: rgba(255, 255, 255, 0.95);
         padding: 75px 0;
         animation: ${fadeUp} 0.7s ease-out forwards;
         animation-delay: 1.2s;
@@ -377,6 +377,12 @@ export const AboutLeft = styled.ul`
         height: 350px;
         display: flex;
         align-items: center;
+        a {
+            &:hover {
+                background: rgba(255, 255, 255, 0.95);
+                color: #333;
+            }
+        }
         &:last-child {
             width: 580px;
             border-radius: 0 0 33px 0;
@@ -521,6 +527,12 @@ export const AboutRight = styled.ul`
         height: 350px;
         display: flex;
         align-items: center;
+        a {
+            &:hover {
+                background: rgba(255, 255, 255, 0.95);
+                color: #333;
+            }
+        }
         &:first-child {
             width: 580px;
             border-radius: 0 0 0 33px;

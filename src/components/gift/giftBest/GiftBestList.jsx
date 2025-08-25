@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import GiftBestItem from './GiftBestItem';
 import { GiftBestListWrap } from './style';
-import { selectBest10 } from '../../../store/modules/giftSlice';
+import { selectBest10 } from '../../../store/modules/cartSlice';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

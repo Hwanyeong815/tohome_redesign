@@ -12,12 +12,34 @@ import 'aos/dist/aos.css';
 
 const Main = () => {
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: false,
-            mirror: true,
-        });
-        AOS.refresh();
+        if (typeof window === 'undefined') return;
+
+        const initAOS = () => {
+            AOS.init({
+                duration: 1000,
+                once: false,
+                mirror: true,
+
+                disable: () => window.matchMedia('(max-width: 600px)').matches,
+            });
+        };
+
+        initAOS();
+
+        let resizeTimer;
+        const onResize = () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                initAOS();
+                AOS.refreshHard();
+            }, 150);
+        };
+
+        window.addEventListener('resize', onResize);
+        return () => {
+            window.removeEventListener('resize', onResize);
+            clearTimeout(resizeTimer);
+        };
     }, []);
     return (
         <MainStyle>

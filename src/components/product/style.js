@@ -32,13 +32,12 @@ export const ProductItemStyle = styled.li`
         position: relative;
         overflow: hidden;
         width: 250px;
-        height: 305px;
+        height: 300px;
         margin-bottom: 20px;
 
         img {
-            width: 250px;
-            height: 305px;
-            margin-bottom: 15px;
+            width: 100%;
+            height: auto;
             display: block;
         }
         .overlay {
@@ -152,43 +151,5 @@ export const ProductDetailStyle = styled.div`
     max-height: 900px;
     padding: 60px 20px;
     display: flex;
-`;
-
-export const ProductTopStyle = styled.ul`
-    width: 1200px;
-    border-top: 1px solid;
-    margin-top: 125px;
-    margin: auto;
-    padding-top: 30px;
-    box-sizing: border-box;
-    /* padding: 0 120px; */
-    display: flex;
-    justify-content: space-around;
-    li {
-        max-width: 90px;
-        /* border: 1px solid #000; */
-        white-space: nowrap;
-        padding: 5px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: ${(props) => props.fontSize || '15px'};
-    }
-`;
-
-export const ProductResultStyle = styled.div`
-    .result {
-        &-top {
-            height: 250px;
-            h2 {
-                border-bottom: 1px solid #000;
-                padding-bottom: 30px;
-            }
-            .filter {
-                display: flex;
-                justify-content: space-around;
-                margin-top: 30px;
-            }
-        }
-    }
+    justify-content: center;
 `;

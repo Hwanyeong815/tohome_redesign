@@ -12,7 +12,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const DetailArtMain = ({ obj }) => {
-    const { thumbnailImage, thumbs } = obj;
+    const { thumbnail } = obj;
 
     const swiperRef = useRef(null);
 
@@ -49,8 +49,7 @@ const DetailArtMain = ({ obj }) => {
                 >
                     <SwiperSlide className="slide">
                         <div className="mainImg">
-                            {thumbnailImage && <img src={thumbnailImage} alt={name} />}
-                            {thumbs && <img src={thumbs} alt={name} />}
+                            {thumbnail && <img src={thumbnail} alt={name} />}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="slide">

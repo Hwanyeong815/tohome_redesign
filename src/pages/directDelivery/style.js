@@ -115,10 +115,14 @@ export const DirectDeliveryWrap = styled.div`
             justify-content: center;
             li {
                 padding: 5px 20px;
-                /* border: 1px solid #000; */
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                &.on {
+                    font-weight: 600;
+                    color: #3c6039;
+                }
             }
         }
     }
@@ -133,7 +137,8 @@ export const DirectDeliveryWrap = styled.div`
             font-size: 15px;
             color: #666;
             &.on {
-                font-weight: 700;
+                font-weight: 600;
+                color: #3c6039;
             }
             &:not(:last-child) {
                 margin-right: 20px;

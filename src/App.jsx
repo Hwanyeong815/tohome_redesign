@@ -34,7 +34,7 @@ import NoticeDetail from './components/support/notice/NoticeDetail';
 import Notice from './components/support/notice/Notice';
 import { useEffect, useState } from 'react';
 import Spinner from './components/spinner';
-import ProductResult from './components/product/ProductResult';
+import ProductResult from './components/product/ProducTools/ProductResult';
 
 const App = () => {
     const [isSpinner, setIsSpinner] = useState(true);
@@ -81,7 +81,7 @@ const App = () => {
                         <Route path="/support" element={<Support />} />
 
                         {/* 공통상세페이지 */}
-                        <Route path="/product/:productID" element={<ProductDetail />} />
+                        <Route path="/product/:productNum" element={<ProductDetail />} />
                         <Route path="/result" element={<ProductResult />} />
 
                         <Route path="/healFood" element={<HealFood />} />

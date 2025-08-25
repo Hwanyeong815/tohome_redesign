@@ -11,19 +11,6 @@ import { SubscribeUlStyle } from './style';
 const SubscribeUl = () => {
     const { sideDishes } = useSelector((state) => state.cart);
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 5000,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        centerMode: true,
-        centerPadding: '100px',
-        cssEase: 'linear',
-    };
     return (
         <SubscribeUlStyle>
             <Swiper

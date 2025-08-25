@@ -1,3 +1,4 @@
+// store/modules/authSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const memberData = [
@@ -13,13 +14,18 @@ const memberData = [
     },
 ];
 
+const persistedMembers = localStorage.getItem('members')
+    ? JSON.parse(localStorage.getItem('members'))
+    : memberData;
+
 const initialState = {
-    members: localStorage.getItem('members')
-        ? JSON.parse(localStorage.getItem('members'))
-        : memberData,
+    members: persistedMembers,
+    // 현재 멤버들 중 가장 큰 id + 1 로 nextId 계산
+    nextId: (persistedMembers.reduce((m, v) => Math.max(m, v.id || 0), 0) || 0) + 1,
     authed: localStorage.getItem('authed') ? JSON.parse(localStorage.getItem('authed')) : false,
     user: localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null,
 };
+
 export const authSlice = createSlice({
     name: 'auth',
     initialState,
@@ -34,15 +40,15 @@ export const authSlice = createSlice({
             localStorage.setItem('authed', JSON.stringify(state.authed));
             localStorage.setItem('user', JSON.stringify(state.user));
         },
-        logout: (state, action) => {
+        logout: (state) => {
             state.authed = false;
             state.user = null;
             localStorage.setItem('authed', JSON.stringify(state.authed));
             localStorage.setItem('user', JSON.stringify(state.user));
         },
         signup: (state, action) => {
-            action.payload.id = no++;
-            state.members.push(action.payload);
+            const newMember = { ...action.payload, id: state.nextId++ };
+            state.members.push(newMember);
             localStorage.setItem('members', JSON.stringify(state.members));
         },
     },

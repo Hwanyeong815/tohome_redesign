@@ -2,55 +2,51 @@ import { useSelector } from 'react-redux';
 import { BestWrap } from './style';
 import ProductList from '../../components/product/ProductList';
 import TopSection from '../../components/topSection/TopSection';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 const Best = () => {
-    const { products, menus, specials } = useSelector((state) => state.cart);
-    const AllMenus = [...products, ...menus, ...specials];
+    const { AllDataList } = useSelector((state) => state.cart);
 
-    const bestUl = AllMenus.filter((product) =>
-        product.tags?.some((tag) => tag.name === '베스트')
-    ).filter(
-        (product, index, self) =>
-            index === self.findIndex((p) => p.name === product.name)
-    );
+    const dataByNum = useMemo(() => {
+        const m = new Map();
+        AllDataList?.forEach((item) => {
+            const isBest = item.tags?.some((t) => t.name === '베스트');
+            if (isBest && !item.giftId && !m.has(item.num)) {
+                m.set(item.num, item);
+            }
+        });
+        return Array.from(m.values());
+    }, [AllDataList]);
 
     const [sortType, setSortType] = useState('판매량순');
 
-    const sortedBest = () => {
+    const sortedData = useMemo(() => {
+        const arr = [...dataByNum];
+
+        const getRank = (x) => Number(x?.rank ?? 0);
+        const getPrice = (x) => Number(x?.discountedPrice ?? x?.price ?? 0);
+
         switch (sortType) {
             case '판매량순':
-                return [...bestUl].sort((a, b) => {
-                    if (a.rank === b.rank)
-                        return bestUl.indexOf(a) - bestUl.indexOf(b);
-                    return b.rank - a.rank;
+                return arr.sort((a, b) => {
+                    const r = getRank(b) - getRank(a);
+                    return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
                 });
             case '신상품순':
-                return [...bestUl]
-                    .filter((product) =>
-                        product.tags?.some((tag) => tag.name === '신상품')
-                    )
+                return arr
+                    .filter((p) => p.tags?.some((t) => t.name === '신상품'))
                     .sort((a, b) => {
-                        if (a.rank === b.rank)
-                            return bestUl.indexOf(a) - bestUl.indexOf(b);
-                        return b.rank - a.rank;
+                        const r = getRank(b) - getRank(a);
+                        return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
                     });
             case '높은가격순':
-                return [...bestUl].sort((a, b) => {
-                    const priceA = a.discountedPrice || a.price;
-                    const priceB = b.discountedPrice || b.price;
-                    return priceB - priceA;
-                });
+                return arr.sort((a, b) => getPrice(b) - getPrice(a));
             case '낮은가격순':
-                return [...bestUl].sort((a, b) => {
-                    const priceA = a.discountedPrice || a.price;
-                    const priceB = b.discountedPrice || b.price;
-                    return priceA - priceB;
-                });
+                return arr.sort((a, b) => getPrice(a) - getPrice(b));
             default:
-                return bestUl;
+                return arr;
         }
-    };
+    }, [dataByNum, sortType]);
 
     return (
         <BestWrap>
@@ -66,12 +62,7 @@ const Best = () => {
                 </section>
                 <div className="filter">
                     <div className="filter-wrap">
-                        {[
-                            '판매량순',
-                            '신상품순',
-                            '높은가격순',
-                            '낮은가격순',
-                        ].map((type) => (
+                        {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
                             <p
                                 key={type}
                                 onClick={() => setSortType(type)}
@@ -83,7 +74,7 @@ const Best = () => {
                     </div>
                 </div>
 
-                <ProductList products={sortedBest()} showCheckbox={false} />
+                <ProductList products={sortedData} showCheckbox={false} />
             </div>
         </BestWrap>
     );

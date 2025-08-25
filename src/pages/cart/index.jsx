@@ -1,11 +1,9 @@
-import { useLocation } from 'react-router-dom';
-import Cartitem from '../../components/cart/CartItem';
 import CartList from '../../components/cart/CartList';
 import CartOrder from '../../components/cart/CartOrder';
 import CartResult from '../../components/cart/CartResult';
 import CartSide from '../../components/cart/CartSide';
 import { CartBottomStyle, CartWrap } from './style';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import CartEmpty from '../../components/cart/CartEmpty';
 import { useSelector } from 'react-redux';
 
@@ -13,6 +11,26 @@ const Cart = () => {
     const [isCartTab, setIsCartTab] = useState('List');
     const [isMenuTab, setIsMenuTab] = useState('새벽배송');
     const { carts } = useSelector((state) => state.cart);
+
+    // 탭별 서브셋
+    const brandCarts = useMemo(
+        () => carts.filter((c) => c.details?.deliveryType === '브랜드직송'),
+        [carts]
+    );
+
+    const giftCarts = useMemo(() => carts.filter((c) => !!c.giftId), [carts]);
+    const dawnCarts = useMemo(
+        () => carts.filter((c) => !c.giftId), // giftId 없는 것만
+        [carts]
+    );
+
+    const displayCarts = useMemo(() => {
+        if (isMenuTab === '브랜드직송') return brandCarts;
+        if (isMenuTab === '선물하기') return giftCarts;
+        if (isMenuTab === '정기구독') return [];
+        return dawnCarts; // 기본 = 새벽배송
+    }, [isMenuTab, brandCarts, giftCarts, dawnCarts]);
+    // 새벽배송 탭은 "전체" 요구 → 필터 없이 carts 전체 노출
 
     return (
         <CartWrap>
@@ -56,25 +74,25 @@ const Cart = () => {
                             className={isMenuTab === '새벽배송' ? 'on' : ''}
                             onClick={() => setIsMenuTab('새벽배송')}
                         >
-                            새벽배송
+                            새벽배송 {dawnCarts.length}
                         </li>
                         <li
                             className={isMenuTab === '선물하기' ? 'on' : ''}
                             onClick={() => setIsMenuTab('선물하기')}
                         >
-                            선물하기 1
+                            선물하기 {giftCarts.length}
                         </li>
                         <li
                             className={isMenuTab === '정기구독' ? 'on' : ''}
                             onClick={() => setIsMenuTab('정기구독')}
                         >
-                            정기구독 0
+                            정기구독
                         </li>
                         <li
                             className={isMenuTab === '브랜드직송' ? 'on' : ''}
                             onClick={() => setIsMenuTab('브랜드직송')}
                         >
-                            브랜드직송 0
+                            브랜드직송 {brandCarts.length}
                         </li>
                     </ul>
                 </div>
@@ -82,11 +100,16 @@ const Cart = () => {
                 <CartBottomStyle>
                     {carts.length > 0 ? (
                         <>
-                            {/* {CartSide.length > 0 ? <CartList /> : <CartEmpty />} */}
-                            {isCartTab === 'List' && <CartList setIsCartTab={setIsCartTab} />}
-                            {isCartTab === 'Order' && <CartOrder />}
+                            {isCartTab === 'List' && (
+                                <CartList setIsCartTab={setIsCartTab} items={displayCarts} />
+                            )}
+                            {isCartTab === 'Order' && <CartOrder />}+{' '}
                             {(isCartTab === 'List' || isCartTab === 'Order') && (
-                                <CartSide setIsCartTab={setIsCartTab} isCartTab={isCartTab} />
+                                <CartSide
+                                    setIsCartTab={setIsCartTab}
+                                    isCartTab={isCartTab}
+                                    isMenuTab={isMenuTab} // ✅ 현재 탭 전달
+                                />
                             )}
                             {isCartTab === 'Result' && <CartResult />}
                         </>

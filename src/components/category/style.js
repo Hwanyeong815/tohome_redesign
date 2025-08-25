@@ -5,6 +5,9 @@ export const CategoryTopWrap = styled.div`
     margin: auto;
     text-align: center;
     border-bottom: 1px solid #666;
+
+    padding-top: 76px;
+    padding-bottom: 30px;
     h2.categoty-title {
         font-size: 36px;
         font-weight: 600;
@@ -184,6 +187,9 @@ export const CategoryItemWrap = styled.ul`
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.66);
+                    }
                 }
             }
         }

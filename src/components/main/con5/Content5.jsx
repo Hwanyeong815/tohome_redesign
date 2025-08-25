@@ -7,9 +7,8 @@ import ProductList from '../../product/ProductList';
 import { cartActions } from '../../../store/modules/cartSlice';
 
 const Content5 = () => {
-    const { products, menus, specials } = useSelector((state) => state.cart);
-    const AllMenus = [...products, ...menus, ...specials];
-    const todayRecipe = AllMenus.filter((product) =>
+    const { AllDataList } = useSelector((state) => state.cart);
+    const todayRecipe = AllDataList.filter((product) =>
         product.tags?.some((tag) => tag.name === '오늘의레시피' && tag.rank <= 5)
     );
     const dispatch = useDispatch();
@@ -29,15 +28,6 @@ const Content5 = () => {
             newSelectedItems.delete(productId);
         }
         setSelectedItems(newSelectedItems);
-    };
-
-    const handleSelectAll = (isSelected) => {
-        if (isSelected) {
-            const allIds = new Set(todayRecipe.map((product) => product.id));
-            setSelectedItems(allIds);
-        } else {
-            setSelectedItems(new Set());
-        }
     };
 
     const handleAddSelectedToCart = () => {
@@ -68,7 +58,6 @@ const Content5 = () => {
         navigate('/gift');
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
-
     return (
         <ContentStyle>
             <Content05Style>
@@ -106,10 +95,10 @@ const Content5 = () => {
                             </button>
                             <div className="line"></div>
                             <div className="btn-wrap">
-                                <button className="btn" onClick={handleAddSelectedToCart}>
+                                <button className="btn1" onClick={handleAddSelectedToCart}>
                                     선택 재료 담기
                                 </button>
-                                <button className="btn" onClick={handleAddAllToCart}>
+                                <button className="btn1" onClick={handleAddAllToCart}>
                                     재료 한번에 담기
                                 </button>
                             </div>
@@ -124,15 +113,32 @@ const Content5 = () => {
                         />
                     </div>
                 </section>
-                <section className="main-gift-wrap" onClick={onClick1} data-aos="fade-up">
+                <section
+                    className="main-gift-wrap"
+                    onClick={onClick1}
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-center"
+                >
                     <div className="txt-box">
                         <img src="images/main/main_gift01.png" alt="모눈종이" />
+                        <div className="mobileText">
+                            <p> 선 물 하 기</p>
+                            <span>
+                                진심을 담아 전하는 순간 <br />
+                                투홈의 선물하기를 이용하세요!
+                            </span>
+                        </div>
                         <p>
                             진심을 담아 전하는 순간, 선물이 특별해지는 이유 투홈의 선물하기를
                             이용하세요!
                         </p>
                     </div>
                     <img src="images/main/main_gift.png" alt="main_gift.png" className="back" />
+                    <img
+                        src="images/main/mobile_gift.png"
+                        alt="mobile_gift.png"
+                        className="mobile_giftImg"
+                    />
                     <button className="more1">
                         <img src="images/icon/icon_all.png" alt="" />
                     </button>

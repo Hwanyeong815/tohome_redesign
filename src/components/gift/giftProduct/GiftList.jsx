@@ -2,6 +2,7 @@ import { cartActions } from '../../../store/modules/cartSlice';
 import GiftListItem from './GiftListItem';
 import { GiftProducts, GiftListWrap } from './style';
 import { useDispatch, useSelector } from 'react-redux';
+import { selectGifts } from '../../../store/modules/cartSlice';
 
 const GiftList = ({ selectedSub }) => {
     const dispatch = useDispatch();
@@ -9,8 +10,13 @@ const GiftList = ({ selectedSub }) => {
     const handleSort = (type) => {
         dispatch(cartActions.setSortType(type));
     };
-    const gifts = useSelector((state) => state.cart.gifts);
-    const filterGifts = selectedSub ? gifts.filter((f) => f.category.sub === selectedSub) : gifts;
+    // const selectGifts = useSelector((state) => state.cart.gifts);
+    // const filterGifts = selectedSub
+    //     ? selectGifts.filter((f) => f.category.sub === selectedSub)
+    //     : selectGifts;
+    const gifts = useSelector(selectGifts);
+    const filterGifts = selectedSub ? gifts.filter((f) => f.category?.sub === selectedSub) : gifts;
+
     const finalPrice = (product) => {
         return product.isDiscounted && product.discountedPrice
             ? product.discountedPrice

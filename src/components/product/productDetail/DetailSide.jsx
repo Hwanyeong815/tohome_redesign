@@ -1,9 +1,7 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { DetailSideStyle } from './style';
-import { FaAngleRight } from 'react-icons/fa6';
-import { FaAngleDown } from 'react-icons/fa';
-import { FaPlus, FaMinus } from 'react-icons/fa6';
-import { useDispatch } from 'react-redux';
+import { FaAngleRight, FaPlus, FaMinus } from 'react-icons/fa6';
+import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../../store/modules/cartSlice';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,35 +10,32 @@ const toNum = (v) => {
     return Number.isFinite(n) ? n : 0;
 };
 
-const DetailSide = ({ obj, setIsCartTab }) => {
+const DetailSide = ({ obj }) => {
     const {
         id,
+        num, // 혹시 detail 객체에 num이 있으면 우선 사용
         name,
-        des,
+        thumbnail,
         price,
         discountedPrice,
         isDiscounted,
         discountRate,
         pricePerUnit,
-        thumbnailImage,
         tags,
-        details: {
-            origin,
-            packagingType,
-            additionalDiscount,
-            deliveryType,
-            manufacturer,
-        },
+        details: { origin, packagingType, additionalDiscount, deliveryType, manufacturer },
     } = obj;
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const SHIP_PATH = '/order';
+    const { authed, user } = useSelector((state) => state.auth);
+
+    // ✅ num/id 혼재 방지: cart에 들어가는 product는 항상 num을 갖도록 통일
+    const safeNum = num ?? id;
 
     const [qty, setQty] = useState(1);
     useEffect(() => {
         setQty(1);
-    }, [id]);
+    }, [safeNum]);
 
     const { lineOriginal, lineDiscounted } = useMemo(() => {
         const qtySafe = Number(qty) || 1;
@@ -52,6 +47,45 @@ const DetailSide = ({ obj, setIsCartTab }) => {
             lineDiscounted: discNum != null ? discNum * qtySafe : null,
         };
     }, [price, discountedPrice, qty]);
+
+    // ✅ 공용 함수: 담기만/담고 이동 두 케이스를 깔끔하게
+    const addToCart = () => {
+        if (!safeNum) return;
+        dispatch(
+            cartActions.addToCart({
+                product: {
+                    ...obj,
+                    num: safeNum, // 통일
+                    id: safeNum, // 혹시 reducer가 id를 참조한다면 겸사겸사
+                    thumbnail,
+                    price,
+                    discountedPrice,
+                    pricePerUnit,
+                    name,
+                },
+                qty,
+            })
+        );
+    };
+
+    const buyNow = () => {
+        addToCart();
+        navigate('/cart', { state: { goTo: 'order' } });
+    };
+
+    const handleCartClick = () => {
+        if (!authed) {
+            const goLogin = window.confirm(
+                '로그인이 필요합니다. 로그인 하시겠습니까?\n(취소를 누르면 장바구니로 이동합니다.)'
+            );
+            if (goLogin) {
+                navigate('/login', { state: { redirectTo: '/cart' } });
+                return;
+            }
+        }
+        navigate('/cart');
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    };
 
     return (
         <DetailSideStyle>
@@ -75,10 +109,7 @@ const DetailSide = ({ obj, setIsCartTab }) => {
                     <div className="price-box">
                         {isDiscounted ? (
                             <p className="discount">
-                                {price
-                                    .toString()
-                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                                원
+                                {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
                             </p>
                         ) : (
                             <p className="discount">{''}</p>
@@ -118,12 +149,8 @@ const DetailSide = ({ obj, setIsCartTab }) => {
                                         type="button"
                                         aria-label="수량 감소"
                                         aria-disabled={qty <= 1}
-                                        className={
-                                            qty <= 1 ? 'is-disabled' : ''
-                                        }
-                                        onClick={() =>
-                                            qty > 1 && setQty(qty - 1)
-                                        }
+                                        className={qty <= 1 ? 'is-disabled' : ''}
+                                        onClick={() => qty > 1 && setQty(qty - 1)}
                                     >
                                         <FaMinus />
                                     </button>
@@ -147,48 +174,24 @@ const DetailSide = ({ obj, setIsCartTab }) => {
                     <p>총 금액</p>
                     <strong>
                         {(
-                            (isDiscounted
-                                ? lineDiscounted ?? lineOriginal
-                                : lineOriginal) || 0
+                            (isDiscounted ? lineDiscounted ?? lineOriginal : lineOriginal) || 0
                         ).toLocaleString()}
                         원
                     </strong>
                 </div>
 
                 <div className="buttonWrap">
-                    <button
-                        type="button"
-                        onClick={() =>
-                            dispatch(
-                                cartActions.addToCart({
-                                    id,
-                                    name,
-                                    price,
-                                    discountedPrice,
-                                    thumbnailImage,
-                                    pricePerUnit,
-                                    quantity: qty,
-                                })
-                            )
-                        }
-                    >
+                    {/* 🛒 장바구니: 담기만 */}
+                    <button type="button" onClick={addToCart}>
                         장바구니
                     </button>
+
+                    {/* ⚡ 바로구매: 담고 이동 */}
                     <button
                         type="button"
                         onClick={() => {
-                            dispatch(
-                                cartActions.addToCart({
-                                    id,
-                                    name,
-                                    price,
-                                    discountedPrice,
-                                    thumbnailImage,
-                                    pricePerUnit,
-                                    quantity: qty,
-                                })
-                            );
-                            navigate('/cart', { state: { goTo: 'order' } });
+                            addToCart(); // 담기
+                            handleCartClick(); // 로그인 체크 → cart 이동
                         }}
                     >
                         바로구매

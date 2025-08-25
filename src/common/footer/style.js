@@ -123,6 +123,11 @@ export const FooterBodyUl = styled.ul`
             em {
                 display: flex;
                 justify-content: space-between;
+                p {
+                    &:first-child {
+                        margin-right: 10px;
+                    }
+                }
             }
         }
         &-mobile-wrap {

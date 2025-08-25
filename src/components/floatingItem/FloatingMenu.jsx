@@ -72,14 +72,11 @@ const FloatingMenu = ({ setIsOpen }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { authed, user } = useSelector((state) => state.auth);
-    const handleClick = (route) => {
-        navigate(route);
-        setIsOpen(false);
-    };
 
     const handleOverlayClick = () => {
         setIsOpen(false);
     };
+
     const onLogout = () => {
         dispatch(authActions.logout(user));
         navigate('/login');
@@ -91,44 +88,51 @@ const FloatingMenu = ({ setIsOpen }) => {
             <FloatingMenuStyle>
                 <section className="mobile-logo-wrap">
                     <div className="mobile-logo-wrap-img">
-                        <img src="/images/common/logo_tohome1.png" alt="" />
+                        <img src="/images/common/logo_tohome1.png" alt="tohome" />
                     </div>
                     <p>
-                        <Link onClick={() => setIsOpen(flase)}>
+                        {/* 닫기는 네비게이션이 아니라 모달 close 동작이므로 Link 대신 button */}
+                        <button type="button" onClick={() => setIsOpen(false)}>
                             <IoClose />
-                        </Link>
+                        </button>
                     </p>
                 </section>
+
                 <section className="mobile-login-wrap">
                     <ul className="mobile-login-wrap-list">
                         {authed ? (
                             <>
                                 <li onClick={onLogout}>
-                                    <Link>로그아웃</Link>
+                                    {/* 단순 액션이면 Link 필요 없음 */}
+                                    <button type="button">로그아웃</button>
                                 </li>
-                                <li>마이페이지</li>
+                                <li>
+                                    <Link to="/mypage" onClick={() => setIsOpen(false)}>
+                                        마이페이지
+                                    </Link>
+                                </li>
                             </>
                         ) : (
                             <>
                                 <li>
-                                    <Link to="/login" onClick={() => setIsOpen(flase)}>
+                                    <Link to="/login" onClick={() => setIsOpen(false)}>
                                         로그인
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/join" onClick={() => setIsOpen(flase)}>
+                                    <Link to="/join" onClick={() => setIsOpen(false)}>
                                         회원가입
                                     </Link>
                                 </li>
                             </>
                         )}
-
                         <li>
-                            <Link to="/" onClick={() => setIsOpen(flase)}>
+                            <Link to="/" onClick={() => setIsOpen(false)}>
                                 홈
                             </Link>
                         </li>
                     </ul>
+
                     <div className="mobile-login-wrap-title">
                         {authed ? (
                             <h4>
@@ -139,21 +143,28 @@ const FloatingMenu = ({ setIsOpen }) => {
                         )}
                     </div>
                 </section>
+
                 <section className="item-wrap">
                     {MenuItems.map((menu) => (
-                        <div key={menu.id} onClick={() => handleClick(menu.route)}>
+                        <Link
+                            key={menu.id}
+                            to={menu.route}
+                            onClick={() => setIsOpen(false)}
+                            className="menu-link"
+                        >
                             <FloatingMenuItem menu={menu} />
-                        </div>
+                        </Link>
                     ))}
                 </section>
+
                 <section className="mobile-support-wrap">
                     <p>
-                        <Link to="/support" onClick={() => setIsOpen(flase)}>
+                        <Link to="/support" onClick={() => setIsOpen(false)}>
                             공지사항
                         </Link>
                     </p>
                     <p>
-                        <Link to="/support" onClick={() => setIsOpen(flase)}>
+                        <Link to="/support" onClick={() => setIsOpen(false)}>
                             고객센터
                         </Link>
                     </p>

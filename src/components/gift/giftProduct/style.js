@@ -110,6 +110,9 @@ export const GiftListWrap = styled.ul`
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.66);
+                    }
                 }
             }
         }

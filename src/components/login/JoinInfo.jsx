@@ -170,9 +170,9 @@ const JoinInfo = () => {
                             />
                         </p>
                     </div>
-                    <div className="info-tab-body">
+                    <div className="info-tab-body ">
                         {openIndex === 4 && (
-                            <>
+                            <section className="checkbox-wrap">
                                 <div className="checkbox">
                                     <Checkbox
                                         label="SMS 수신 동의"
@@ -189,7 +189,7 @@ const JoinInfo = () => {
                                         htmlFor="email"
                                     />
                                 </div>
-                            </>
+                            </section>
                         )}
                     </div>
                 </div>

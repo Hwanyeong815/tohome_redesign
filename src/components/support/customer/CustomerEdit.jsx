@@ -11,10 +11,9 @@ const CustomerEdit = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const { current, customers } = useSelector((s) => s.support);
+    const { current, customers } = useSelector((state) => state.support);
     const now = new Date();
 
-    // 1) 상세에서 넘긴 state → 2) param으로 store 검색 → 3) current
     const rawItem = useMemo(() => {
         const byState = location.state?.item;
         if (byState) return byState;
@@ -31,7 +30,7 @@ const CustomerEdit = () => {
         id: null,
         name: '',
         title: '',
-        content: '',
+        context: '',
         date: '',
     });
 
@@ -42,7 +41,7 @@ const CustomerEdit = () => {
                 id: getItemId(rawItem),
                 name: rawItem.name ?? rawItem.username ?? '',
                 title: rawItem.title ?? '',
-                content: rawItem.content ?? rawItem.context ?? '',
+                context: rawItem.context ?? rawItem.context ?? '',
                 date: rawItem.date ?? '',
             });
         }
@@ -90,9 +89,9 @@ const CustomerEdit = () => {
             </p>
             <p>
                 <textarea
-                    name="content"
+                    name="context"
                     rows="10"
-                    value={user.content}
+                    value={user.context}
                     onChange={changeInput}
                 />
             </p>

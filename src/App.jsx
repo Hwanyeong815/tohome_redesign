@@ -134,21 +134,6 @@ const App = () => {
                             />
                         </Route>
 
-                        {/* <Route path="/support" element={<Support />}>
-                            <Route
-                                path="customeradd"
-                                element={<CustomerAdd />}
-                            />
-                            <Route
-                                path="customeredit/:customerID"
-                                element={<CustomerEdit />}
-                            />{' '}
-                            <Route
-                                path=":customerID"
-                                element={<CustomerDetail />}
-                            />
-                        </Route> */}
-
                         {/* 공통상세페이지 */}
                         <Route
                             path="/product/:productNum"

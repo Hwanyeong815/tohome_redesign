@@ -12,8 +12,11 @@ const CustomerDetail = () => {
     const dispatch = useDispatch();
 
     const newItem = customers.find(
-        (customer) => customer.customerId === Number(customerID)
+        (customer) => String(customer.id ?? customerId) === String(customerID)
     );
+    if (!newItem) {
+        return <p>해당 게시글을 찾을 수 없습니다.</p>;
+    }
     const { customerId, username, title, context, date } = newItem;
     const { authed } = useSelector((state) => state.auth);
 
@@ -23,7 +26,9 @@ const CustomerDetail = () => {
             return navigate('/login');
         }
         dispatch(supportActions.setCurrentCustomer(newItem));
-        navigate(`/support/customeradd`);
+        navigate(`/support/customeredit/${newItem.id}`, {
+            state: { item: newItem },
+        });
     };
 
     const onDel = () => {
@@ -76,7 +81,10 @@ const CustomerDetail = () => {
                             <div className="btn-wrap">
                                 <button onClick={onEdit}>수정</button>
                                 <button onClick={onDel}>삭제</button>
-                                <button onClick={() => navigate(-1)}>
+                                <button
+                                    type="button"
+                                    onClick={() => navigate('/support')}
+                                >
                                     목록
                                 </button>
                             </div>

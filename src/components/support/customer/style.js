@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CustomerStyle = styled.div`
-    margin-top: 160px;
+    /* margin-top: 160px; */
     h2 {
         font-size: 32px;
         text-align: left !important;

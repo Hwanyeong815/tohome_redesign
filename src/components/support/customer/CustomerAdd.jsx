@@ -10,12 +10,12 @@ const CustomerAdd = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [data, setData] = useState({
-        name: '',
+        username: '',
         title: '',
-        content: '',
+        context: '',
         data: '',
     });
-    const { name, title, content, date } = data;
+    const { username, title, context, date } = data;
 
     const now = new Date();
 
@@ -34,6 +34,10 @@ const CustomerAdd = () => {
             now.getMonth() + 1
         } - ${now.getDate()}`;
         dispatch(supportActions.addCustomer(data));
+        navigate('/customer');
+    };
+    const onGo = (e) => {
+        e.preventDefault();
         navigate('/customer');
     };
     return (
@@ -59,19 +63,19 @@ const CustomerAdd = () => {
                             <p>
                                 <input
                                     type="text"
-                                    value={name}
+                                    value={username}
                                     placeholder="작성자"
-                                    name="name"
+                                    name="username"
                                     onChange={changeInput}
                                 />
                             </p>
                             <p>
                                 <textarea
-                                    name="content"
+                                    name="context"
                                     cols="100"
                                     rows="10"
                                     placeholder="문의하기"
-                                    value={content}
+                                    value={context}
                                     onChange={changeInput}
                                 ></textarea>
                             </p>
@@ -88,7 +92,7 @@ const CustomerAdd = () => {
                                 <div className="checkbox">답변 알림받기</div>
                                 <div className="btn-wrap">
                                     <button type="submit">저장하기</button>
-                                    <button>취소하기</button>
+                                    <button onClick={onGo}>취소하기</button>
                                     <button onClick={() => navigate(-1)}>
                                         목록
                                     </button>

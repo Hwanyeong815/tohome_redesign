@@ -19,6 +19,7 @@ export const Content3Style = styled.div`
             width: 100vw;
             left: 50%;
             transform: translateX(-50%);
+            margin-top: 160px;
             &.position-fix {
                 width: 100vw;
                 position: relative;
@@ -71,7 +72,8 @@ export const Content3Style = styled.div`
         }
     }
     .brand-about {
-        margin-top: 350px;
+        margin-top: 160px;
+
         h2 {
             margin-bottom: 115px;
         }

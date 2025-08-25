@@ -71,9 +71,7 @@ const Content3 = () => {
                         <p>일상에 특별함을 더하다”</p>
                     </div>
                     <img src="images/main/main_about.png" alt="" />
-                    <button className="main-about-btn hover">
-                        브랜드 소개
-                    </button>
+                    <button className="main-about-btn hover">브랜드 소개</button>
                 </section>
                 <section
                     className="brand-about"
@@ -85,10 +83,9 @@ const Content3 = () => {
                     <strong>Connecting Taste & Story</strong>
                     <div className="txts">
                         <p>
-                            전통과 혁신, 지역과 일상, 미식과 기술을 잇는
-                            현대식품관의 특화브랜드를 소개합니다. <br />{' '}
-                            ‘명인명촌, 원테이블, 동행마켓, 예향’ <br /> 각기
-                            다른 철학과 가치를 담은 네 가지 브랜드를 통해 <br />
+                            전통과 혁신, 지역과 일상, 미식과 기술을 잇는 현대식품관의 특화브랜드를
+                            소개합니다. <br /> ‘명인명촌, 원테이블, 동행마켓, 예향’ <br /> 각기 다른
+                            철학과 가치를 담은 네 가지 브랜드를 통해 <br />
                             풍요로운 식문화의 깊이를 경험해보세요.
                         </p>
                     </div>
@@ -106,15 +103,11 @@ const Content3 = () => {
                     className="main-dawn-wrap"
                     onClick={onClick3}
                     data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
+                    data-aos-anchor-placement="bottom-bottom"
                 >
                     <div>
                         <img src="images/main/main_dawn.png" alt="" />
-                        <img
-                            src="images/main/mobile_dawn.png"
-                            alt=""
-                            className="mobileDawn"
-                        />
+                        <img src="images/main/mobile_dawn.png" alt="" className="mobileDawn" />
                         <div className="txts">
                             <h2>투홈 새벽배송</h2>
                             <p>“월요일부터 일요일까지 하루도 빠짐없이</p>

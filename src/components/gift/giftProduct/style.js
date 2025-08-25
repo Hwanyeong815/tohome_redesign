@@ -24,6 +24,7 @@ export const GiftListTopWrap = styled.ul`
     border-top: 1px solid #666;
     li {
         margin-left: 40px;
+        font-size: 17px;
         cursor: pointer;
         &:first-child {
             margin-left: 0;

@@ -6,10 +6,46 @@ export const GiftBestWrap = styled.div`
     section {
         width: 1440px;
         margin: auto;
-        h2 {
-            text-align: center;
-            font-size: 25px;
+
+        .head {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
             margin-bottom: 30px;
+            h2 {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                text-align: center;
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+
+            .arrow-wrap {
+                width: 100px;
+                display: flex;
+                gap: 40px;
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    height: 28px;
+                    position: relative;
+                    background-color: transparent;
+                    &:first-child {
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: -20px;
+                            width: 1px;
+                            height: 16px;
+                            background-color: #888;
+                        }
+                    }
+                }
+            }
         }
     }
 `;

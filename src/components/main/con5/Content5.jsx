@@ -117,7 +117,7 @@ const Content5 = () => {
                     className="main-gift-wrap"
                     onClick={onClick1}
                     data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
+                    data-aos-anchor-placement="bottom-bottom"
                 >
                     <div className="txt-box">
                         <img src="images/main/main_gift01.png" alt="모눈종이" />

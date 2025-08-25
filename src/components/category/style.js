@@ -28,7 +28,7 @@ export const CategorySub = styled.ul`
     width: 1200px;
     margin: 30px auto 0;
     justify-content: center;
-    font-size: 15px;
+    font-size: 17px;
     li {
         margin-left: 40px;
         cursor: pointer;

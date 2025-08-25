@@ -17,19 +17,18 @@ export const NewProductsWrap = styled.div`
     .filter-wrap {
         display: flex;
         justify-content: end;
-        margin-top: 30px;
         margin-bottom: 30px;
         p {
             cursor: pointer;
             position: relative;
             font-size: 15px;
             color: #666;
+            margin-left: 20px;
             &.on {
                 font-weight: 600;
                 color: #3c6039;
             }
             &:not(:last-child) {
-                margin-right: 20px;
                 &::after {
                     content: '';
                     position: absolute;

@@ -8,6 +8,7 @@ export const Content4Style = styled.section`
                 position: relative; /* left 대신 relative + margin auto 사용 */
                 left: 50%;
                 transform: translateX(-50%);
+                margin-top: 160px;
             }
             cursor: pointer;
             position: relative;
@@ -49,7 +50,7 @@ export const Content4Style = styled.section`
 
                         p {
                             font-weight: 600;
-                            font-size: 15px;
+                            font-size: 14px;
                         }
                         img {
                             width: 70px;
@@ -66,6 +67,11 @@ export const Content4Style = styled.section`
                     height: 40px;
                     border: 1px solid #333;
                     background-color: transparent;
+                    transition: 0.3s;
+                    &:hover {
+                        background-color: #333;
+                        color: white;
+                    }
                 }
             }
         }
@@ -131,6 +137,7 @@ export const Content4Style = styled.section`
                         color: white;
                         font-size: 30px;
                         line-height: 1.2;
+                        word-break: break-all;
                         &::before {
                             content: '';
                             background-image: url('/images/main/bookmark.png');
@@ -176,8 +183,15 @@ export const SubscribeUlStyle = styled.div`
                 width: 280px;
                 height: 280px;
                 overflow: hidden;
+                position: relative;
+                user-select: none;
                 img {
-                    width: 100%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 10px;
+                    height: 90%;
                 }
             }
 

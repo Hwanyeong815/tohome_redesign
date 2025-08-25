@@ -6,11 +6,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const GiftBestList = () => {
+const GiftBestList = ({ sliderRef }) => {
     const best10 = useSelector(selectBest10);
+
     const settings = {
         dots: false,
-        arrows: false,
+        arrows: false, // 내부 화살표는 끔
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -23,7 +24,7 @@ const GiftBestList = () => {
 
     return (
         <GiftBestListWrap>
-            <Slider {...settings}>
+            <Slider ref={sliderRef} {...settings}>
                 {best10.map((gift) => (
                     <GiftBestItem key={gift.giftId} gift={gift} />
                 ))}

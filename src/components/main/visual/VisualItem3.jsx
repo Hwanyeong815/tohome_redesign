@@ -56,12 +56,7 @@ const VisualItem3 = ({ visual, isActive }) => {
             <div className="img-box">
                 {imgs ? (
                     imgs.map((obj, idx) => (
-                        <img
-                            src={obj.src}
-                            alt={`${title}-${idx}`}
-                            key={idx}
-                            ref={addToRefs}
-                        />
+                        <img src={obj.src} alt={`${title}-${idx}`} key={idx} ref={addToRefs} />
                     ))
                 ) : (
                     <img src={img} alt={title} ref={addToRefs} />
@@ -76,7 +71,14 @@ const VisualItem3 = ({ visual, isActive }) => {
                         </span>
                     ))}
                 </h3>
-                <p>{des}</p>
+                <p>
+                    {des.split('\n').map((line, idx) => (
+                        <span key={idx}>
+                            {line}
+                            <br />
+                        </span>
+                    ))}
+                </p>
                 <p className="mobileOnly">{des2}</p>
                 <div className="more">더보기</div>
             </div>

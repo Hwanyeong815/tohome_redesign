@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainRecomStyle = styled.div`
-    /* background-color: aquamarine; */
+    margin-top: 160px;
     position: relative;
     & > h2 {
         position: absolute;
@@ -9,7 +9,6 @@ export const MainRecomStyle = styled.div`
         z-index: 10;
     }
     h3 {
-        /* padding-top: 100px !important; */
         padding-bottom: 0;
         position: absolute;
         top: 135px;
@@ -343,8 +342,13 @@ export const Content2Style = styled.div`
             margin-top: 0;
         }
     }
+    section {
+        &:nth-child(2) {
+            margin-top: 160px;
+        }
+    }
     .product-list {
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     @media screen and (max-width: 600px) {

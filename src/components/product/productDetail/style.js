@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const DetailSideStyle = styled.div`
     border-right: 1px solid #000;
     padding: 77px 40px;
-    padding-left: 0;
+    padding-left: 20px;
     width: 568px;
-    /* min-width: 568px; */
     margin-right: 40px;
+
     .proInfo {
         width: 100%;
 
@@ -55,6 +55,7 @@ export const DetailSideStyle = styled.div`
             }
         }
         h2 {
+            line-height: 1.6;
             font-size: 24px;
             font-weight: 700;
             padding: 15px 0;
@@ -169,6 +170,7 @@ export const DetailSideStyle = styled.div`
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        padding: 10px 0;
                         gap: 17px;
                         border-radius: 3px;
                         button {
@@ -276,25 +278,15 @@ export const DetailArtMainStyle = styled.div`
     width: 1330px;
     height: 800px;
     height: max-content;
-    /* DetailArtMainStyle 내부 */
     overflow-x: auto;
     overflow-y: hidden;
-    overscroll-behavior: contain; /* 페이지로 스크롤 전파 줄이기 */
+    overscroll-behavior: contain;
 
     .detailContent {
         display: flex;
         gap: 20px;
     }
 
-    /* .slide {
-        cursor: grab;
-        &:active {
-            cursor: grabbing;
-        }
-
-        width: min-content;
-        margin-right: 10px;
-    } */
     .detailContent {
         width: max-content;
         display: flex;

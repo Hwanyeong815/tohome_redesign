@@ -10,10 +10,7 @@ const GiftList = ({ selectedSub }) => {
     const handleSort = (type) => {
         dispatch(cartActions.setSortType(type));
     };
-    // const selectGifts = useSelector((state) => state.cart.gifts);
-    // const filterGifts = selectedSub
-    //     ? selectGifts.filter((f) => f.category.sub === selectedSub)
-    //     : selectGifts;
+
     const gifts = useSelector(selectGifts);
     const filterGifts = selectedSub ? gifts.filter((f) => f.category?.sub === selectedSub) : gifts;
 

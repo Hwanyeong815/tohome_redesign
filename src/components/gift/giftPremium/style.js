@@ -16,6 +16,11 @@ export const GiftPremiumWrap = styled.div`
         height: 40px;
         display: block;
         margin: 60px auto 0;
+        transition: 0.3s;
+        &:hover {
+            background-color: #333;
+            color: white;
+        }
     }
 `;
 

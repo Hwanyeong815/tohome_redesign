@@ -4,6 +4,7 @@ export const Content05Style = styled.div`
     /* background-color: aqua; */
 
     .main-today-recipe {
+        margin-top: 160px;
         .title2 {
             margin-top: 70px;
             text-align: center;
@@ -118,15 +119,22 @@ export const Content05Style = styled.div`
                     display: flex;
                     justify-content: end;
                     gap: 25px;
-                    .btn {
-                        width: 195px;
-                        height: 50px;
-                        line-height: 50px;
+                    .btn1 {
+                        width: 172px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
                         border-radius: 50px;
                         background-color: #3c6039;
                         color: white;
-                        font-size: 20px;
+                        font-size: 17px;
                         font-weight: 600;
+                        &:hover {
+                            border: 2px solid #3c6039;
+                            background-color: white;
+                            color: #3c6039;
+                            line-height: 37px;
+                        }
                     }
                 }
             }

@@ -1,9 +1,6 @@
-import { useSelector } from 'react-redux';
-
 import { ContentStyle } from '../style';
 import { Content4Style } from './style';
 import { MdArrowForwardIos } from 'react-icons/md';
-
 import SubscribeUl from './SubscribeUl';
 import { useNavigate } from 'react-router-dom';
 import HealthList from './HealthList';
@@ -12,8 +9,6 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 
 const Content4 = () => {
-    const { products } = useSelector((state) => state.cart);
-
     const navigate = useNavigate();
 
     const onClick1 = () => {
@@ -34,9 +29,8 @@ const Content4 = () => {
             <Content4Style>
                 <section
                     className="side-dish-wrap position-fix"
-                    onClick={onClick1}
                     data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
+                    data-aos-anchor-placement="bottom-bottom"
                 >
                     <div className="txts">
                         <h2 className="main-title">투홈 반찬구독</h2>
@@ -64,7 +58,7 @@ const Content4 = () => {
                                 <p>합리적인 가격</p>
                             </div>
                         </div>
-                        <button className="more1">
+                        <button className="more1" onClick={onClick1}>
                             반찬 더보기
                             <MdArrowForwardIos />
                         </button>
@@ -78,7 +72,7 @@ const Content4 = () => {
                     className="health-sub-wrap"
                     onClick={onClick2}
                     data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
+                    data-aos-anchor-placement="bottom-bottom"
                 >
                     <HealthList />
                 </section>

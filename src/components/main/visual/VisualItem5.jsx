@@ -75,7 +75,14 @@ const VisualItem5 = ({ visual, isActive }) => {
                 <h3 className="mobileOnlyTit">
                     <img src="/images/main/mobileBanner5tit.png" alt="" />
                 </h3>
-                <p>{des}</p>
+                <p>
+                    {des.split('\n').map((line, idx) => (
+                        <span key={idx}>
+                            {line}
+                            <br />
+                        </span>
+                    ))}
+                </p>
                 <div className="more">더보기</div>
             </div>
         </BannerWrap>

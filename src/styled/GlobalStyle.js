@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
     color:#333;
         overflow-x: hidden;
+        word-break: keep-all;
   }
   a, button {
     text-decoration: none;

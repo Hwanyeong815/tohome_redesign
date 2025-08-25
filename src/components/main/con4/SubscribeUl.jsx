@@ -14,16 +14,20 @@ const SubscribeUl = () => {
     return (
         <SubscribeUlStyle>
             <Swiper
-                slidesPerView={5.5}
-                spaceBetween={10}
+                slidesPerView={5}
+                centeredSlides={false}
+                spaceBetween={100}
                 loop={true}
-                freeMode={true}
+                freeMode={{ enabled: false }}
                 autoplay={{
-                    delay: 0,
+                    delay: 400,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 }}
-                speed={3000}
+                slidesOffsetBefore={50}
+                slidesOffsetAfter={0}
+                speed={2000}
+                slidesPerGroup={1}
                 modules={[FreeMode, Autoplay]}
             >
                 {sideDishes.map((dishes) => (

@@ -5,6 +5,7 @@ export const VisualStyle = styled.div`
     background-color: aliceblue;
     position: relative;
     margin-top: 50px;
+    margin-bottom: 50px;
 
     h2 {
         font-size: 30px;

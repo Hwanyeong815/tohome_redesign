@@ -5,6 +5,7 @@ export const MainCon1Style = styled.article`
         overflow: hidden;
     }
     .main-best-wrap {
+        margin-top: 0;
         .ul {
             cursor: grab;
             white-space: nowrap;
@@ -69,7 +70,7 @@ export const MainCon1Style = styled.article`
         }
     }
     .main-newPro-wrap {
-        margin-top: 50px;
+        margin-top: 160px;
         padding-bottom: 10px;
 
         .swiper-slide {

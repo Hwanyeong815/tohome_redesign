@@ -23,7 +23,7 @@ export const ProductItemStyle = styled.li`
     box-sizing: border-box;
     border-bottom: 1px solid #333;
     margin-bottom: 65px;
-
+    cursor: pointer;
     &:not(:nth-child(5n)) {
         margin-right: 9.5px;
     }

@@ -24,16 +24,26 @@ const Faq = () => {
     return (
         <FaqStyle>
             <FaqTap onClick={handleTapClick}>
-                <h2>자주하는 질문</h2>
+                <h2>자주 묻는 질문</h2>
                 <div>
                     <p className={selectedTag === '전체' ? 'on' : ''}>전체</p>
-                    <p className={selectedTag === '투홈패스' ? 'on' : ''}>투홈패스</p>
-                    <p className={selectedTag === '주문/결제' ? 'on' : ''}>주문/결제</p>
+                    <p className={selectedTag === '투홈패스' ? 'on' : ''}>
+                        투홈패스
+                    </p>
+                    <p className={selectedTag === '주문/결제' ? 'on' : ''}>
+                        주문/결제
+                    </p>
                     <p className={selectedTag === '배송' ? 'on' : ''}>배송</p>
-                    <p className={selectedTag === '취소/반품/교환/AS' ? 'on' : ''}>
+                    <p
+                        className={
+                            selectedTag === '취소/반품/교환/AS' ? 'on' : ''
+                        }
+                    >
                         취소/반품/교환/AS
                     </p>
-                    <p className={selectedTag === '혜택/포인트' ? 'on' : ''}>혜택/포인트</p>
+                    <p className={selectedTag === '혜택/포인트' ? 'on' : ''}>
+                        혜택/포인트
+                    </p>
                     <p className={selectedTag === '회원' ? 'on' : ''}>회원</p>
                 </div>
             </FaqTap>

@@ -87,6 +87,43 @@ export const CustomerListStyle = styled.div`
 
 export const CustomerDetailStyle = styled.div`
     margin-top: 100px;
+    h2 {
+        font-size: 32px;
+        text-align: left !important;
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 20px;
+
+        span {
+            color: #9e9e9e;
+            margin-left: 20px;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 30px;
+                background-color: #9e9e9e;
+                left: -10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .btn-wrap {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+        button {
+            width: 70px;
+            height: 40px;
+            background-color: #ececec;
+            &:first-child {
+                color: white;
+                background: #333;
+            }
+        }
+    }
     .detail {
         &-wrap {
         }
@@ -151,6 +188,69 @@ export const CustomerDetailStyle = styled.div`
                         color: white;
                         background: #333;
                     }
+                }
+            }
+        }
+    }
+    input,
+    textarea {
+        width: 100%;
+        border: 1px solid #7e7e7e;
+        padding: 10px 12px;
+        font-size: 15px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: inherit;
+        color: #333;
+        font-weight: 500;
+        &::placeholder {
+            color: #000;
+        }
+    }
+
+    textarea {
+        min-height: 150px;
+        resize: vertical;
+        line-height: 1.5;
+        &::placeholder {
+            color: #000;
+        }
+    }
+
+    .detail-bottom {
+        margin-top: 20px;
+
+        .upload {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+
+            p {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .checkbox {
+            margin-bottom: 20px;
+        }
+
+        .btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+
+            button {
+                min-width: 80px;
+                height: 40px;
+                border: none;
+                cursor: pointer;
+                background: #ececec;
+
+                &:first-child {
+                    background: #333;
+                    color: #fff;
                 }
             }
         }

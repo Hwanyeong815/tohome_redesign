@@ -5,7 +5,7 @@ export const MainCon1Style = styled.article`
         overflow: hidden;
     }
     .main-best-wrap {
-        margin-top: 0;
+        margin-top: 160px;
         .ul {
             cursor: grab;
             white-space: nowrap;
@@ -20,9 +20,10 @@ export const MainCon1Style = styled.article`
             li {
                 box-sizing: border-box;
                 height: 410px;
-                width: 310px;
+                width: 290px;
                 position: relative;
                 h2 {
+                    padding: 0 4px;
                     margin-top: 10px;
                     width: 310px;
                     height: 60px;
@@ -34,6 +35,7 @@ export const MainCon1Style = styled.article`
                     white-space: pre-line;
                     word-break: keep-all;
                     padding: 10px 0;
+                    text-align: left;
                     /* padding: 0 10px; */
                 }
 
@@ -43,7 +45,7 @@ export const MainCon1Style = styled.article`
                     left: 0;
                     margin-top: 50px;
                     font-size: 15px;
-                    text-align: left;
+
                     padding-left: 10px;
                     padding-bottom: 5px;
                     border-bottom: 1px solid #000;
@@ -75,7 +77,10 @@ export const MainCon1Style = styled.article`
 
         .swiper-slide {
             display: flex;
-
+            cursor: grab;
+            &:active {
+                cursor: grabbing;
+            }
             margin-bottom: 95px;
 
             .left {

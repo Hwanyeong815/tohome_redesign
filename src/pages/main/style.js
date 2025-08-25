@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const MainStyle = styled.main`
+    .banner-wrap {
+        padding-top: 30px;
+    }
     .inner {
     }
     h2 {

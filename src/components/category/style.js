@@ -29,15 +29,20 @@ export const CategorySub = styled.ul`
     margin: 30px auto 0;
     justify-content: center;
     font-size: 17px;
+
     li {
         margin-left: 40px;
+        color: #666;
         cursor: pointer;
         &:first-child {
             margin-left: 0;
-            color: #3c6039;
+            /* color: #3c6039; */
+            /* color: #666; */
         }
         &.active {
             color: #386633;
+            /* color: #666; */
+            font-weight: 700;
         }
     }
 `;
@@ -61,6 +66,7 @@ export const CategoryFilterWrap = styled.div`
         li {
             font-size: 14px;
             margin-bottom: 12px;
+
             &:last-child {
                 margin-bottom: 0px;
             }
@@ -123,6 +129,7 @@ export const CategoryListWrap = styled.div`
             color: #666;
             &.active {
                 color: #477c42;
+                font-weight: 700;
             }
             &::after {
                 content: '';

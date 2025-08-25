@@ -1,12 +1,25 @@
 import styled from 'styled-components';
 
 export const VisualStyle = styled.div`
-    height: 680px;
-    background-color: aliceblue;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100vw;
+        height: 120%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        background-color: #fdfbf0;
+    }
     position: relative;
+    height: 680px;
     margin-top: 50px;
     margin-bottom: 50px;
+    width: 1440px;
 
+    .swiper-slide {
+        background-color: transparent;
+    }
     h2 {
         font-size: 30px;
     }
@@ -23,7 +36,7 @@ export const VisualStyle = styled.div`
             position: absolute;
             font-size: 15px;
             font-weight: 600;
-            font-family: 'Arita-buri-SemiBold';
+            font-family: 'Arita buri' !important;
             background-color: transparent;
             p {
                 transition: 0.3s;
@@ -34,7 +47,7 @@ export const VisualStyle = styled.div`
                 content: '';
                 position: absolute;
                 top: -12px;
-                width: 41px;
+                width: 40px;
                 height: 1px;
                 background-color: #333;
             }
@@ -266,6 +279,17 @@ export const BannerWrap = styled.article`
                     &:nth-child(3) {
                         width: 250px;
                         height: 250px;
+                        position: relative;
+
+                        overflow: visible !important;
+                        img {
+                            position: absolute;
+                            left: 0%;
+                            top: 40%;
+                            transform: translate(-50%, -50%);
+                            height: 120%;
+                            width: auto;
+                        }
                     }
                     width: 250px;
                     height: 250px;

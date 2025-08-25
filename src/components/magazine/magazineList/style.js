@@ -261,7 +261,7 @@ export const MagazineListStyle = styled.div`
                         flex-direction: column;
                         align-items: center;
                         position: absolute;
-                        bottom: 66px;
+                        bottom: 100px;
                         left: 50%;
                         transform: translateX(-50%);
                         color: #333;

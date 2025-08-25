@@ -39,7 +39,9 @@ const Main = () => {
     return (
         <MainStyle>
             <div className="inner">
-                <MainVisual />
+                <div className="banner-wrap">
+                    <MainVisual className="main-visual" />
+                </div>
                 <Content1 />
                 <Content2 />
                 <Content3 />

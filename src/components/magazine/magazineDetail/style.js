@@ -63,7 +63,7 @@ export const MagazineDetailStyle = styled.div`
             &:nth-child(1) {
             }
             &.mag-item2 {
-                padding-top: 125vw;
+                padding-top: 95vw;
             }
             &.mag-item3,
             &.mag-item4 {
@@ -392,22 +392,27 @@ export const MagazineDetailItem2Style = styled.div`
         /* background-color: black; */
         background-color: antiquewhite;
         /* margin-top: 88px; */
+
         width: 100vw;
         height: 185.8974vw;
         flex-direction: column;
         align-content: start;
         .chefs {
             width: 100%;
+            margin-left: 200px;
             .pathTxt {
                 opacity: 1 !important;
-                right: -28.2051vw;
-                top: -7.6923vw;
+                right: -18.2051vw;
+                top: -12.6923vw;
+                transform: scale(0.9);
             }
             img {
             }
         }
         .web-txts {
-            margin-top: 12.8205vw;
+            /* margin-top: 12.8205vw; */
+            /* padding-top: 0; */
+
             display: block;
             text-align: center;
             width: 100%;
@@ -514,16 +519,21 @@ export const MagazineDetailItem3Style = styled.div`
     @media screen and (max-width: 600px) {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
         .main-img {
             margin: 0;
             padding: 0;
             height: min-content;
             top: 39.4872vw;
             width: 82.0513vw;
+
             img {
-                width: 100%;
+                margin-left: 8vw;
+                width: 80%;
             }
         }
+
         .img-box {
         }
         .detail-vectors {

@@ -136,6 +136,9 @@ const Navbar = () => {
                         <Link to="/specialBrand">특화브랜드관</Link>
                     </li>
                     <li>
+                        <Link to="/healFood">구독투홈</Link>
+                    </li>
+                    <li>
                         <Link to="/magazine">매거진</Link>
                     </li>
                 </ul>

@@ -207,7 +207,7 @@ export const NavStyle = styled.nav.withConfig({
                     top: 5.5282vw;
                 }
 
-                &:nth-child(n + 4):not(:nth-child(7)) {
+                &:nth-child(n + 4):not(:nth-child(8)) {
                     display: none;
                 }
             }

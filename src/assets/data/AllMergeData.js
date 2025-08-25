@@ -1186,8 +1186,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1247,8 +1246,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1308,8 +1306,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1369,8 +1366,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1430,8 +1426,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1491,8 +1486,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1552,8 +1546,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1613,8 +1606,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1673,8 +1665,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1733,8 +1724,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1793,8 +1783,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1853,8 +1842,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1913,8 +1901,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1973,8 +1960,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2033,8 +2019,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2092,8 +2077,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2152,8 +2136,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2212,8 +2195,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2270,8 +2252,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2328,8 +2309,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2386,8 +2366,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2444,8 +2423,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2502,8 +2480,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2664,34 +2641,34 @@ export default [
             quantity: 1,
         },
     },
-    {
-        fruitId: 6,
-        num: 78,
-        name: '[새벽시장] \n수박 7kg 1통',
-        des: '폭염으로 인해 상품의 당도가 다소 떨어질 수 있습니다. 구매 후 당일 섭취 부탁드립니다. 품질관리를 위해 노력하겠습니다.',
-        price: 57200,
-        discountedPrice: '',
-        isDiscounted: false,
-        discountRate: '',
-        pricePerUnit: '100g당 817원',
-        thumbnail: '/images/menu01/06.jpg',
-        category: {
-            main: '과일·채소',
-            sub: '계절 과일',
-        },
-        tags: [
-            { name: '베스트', rank: 6 },
-            { name: '신상품', rank: 35 },
-        ],
-        details: {
-            origin: '국내산',
-            manufacturer: '찬솔농산',
-            packagingType: '냉장',
-            deliveryType: '택배배송',
-            stock: 100,
-            quantity: 1,
-        },
-    },
+    // {
+    //     fruitId: 6,
+    //     num: 78,
+    //     name: '[새벽시장] \n수박 7kg 1통',
+    //     des: '폭염으로 인해 상품의 당도가 다소 떨어질 수 있습니다. 구매 후 당일 섭취 부탁드립니다. 품질관리를 위해 노력하겠습니다.',
+    //     price: 57200,
+    //     discountedPrice: '',
+    //     isDiscounted: false,
+    //     discountRate: '',
+    //     pricePerUnit: '100g당 817원',
+    //     thumbnail: '/images/menu01/06.jpg',
+    //     category: {
+    //         main: '과일·채소',
+    //         sub: '계절 과일',
+    //     },
+    //     tags: [
+    //         { name: '베스트', rank: 6 },
+    //         { name: '신상품', rank: 35 },
+    //     ],
+    //     details: {
+    //         origin: '국내산',
+    //         manufacturer: '찬솔농산',
+    //         packagingType: '냉장',
+    //         deliveryType: '택배배송',
+    //         stock: 100,
+    //         quantity: 1,
+    //     },
+    // },
     {
         fruitId: 7,
         num: 79,
@@ -15524,8 +15501,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15584,8 +15560,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15644,8 +15619,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CustomerStyle = styled.div`
-    margin-top: 160px;
+    /* margin-top: 160px; */
     h2 {
         font-size: 32px;
         text-align: left !important;
@@ -22,6 +22,20 @@ export const CustomerStyle = styled.div`
                 left: -10px;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+        }
+    }
+    .btn-wrap {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+        button {
+            width: 70px;
+            height: 40px;
+            background-color: #ececec;
+            &:first-child {
+                color: white;
+                background: #333;
             }
         }
     }
@@ -142,3 +156,5 @@ export const CustomerDetailStyle = styled.div`
         }
     }
 `;
+
+export const CustomerAddStyle = styled.div``;

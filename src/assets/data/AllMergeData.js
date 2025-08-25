@@ -1186,7 +1186,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1246,7 +1247,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1306,7 +1308,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1366,7 +1369,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1426,7 +1430,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1486,7 +1491,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1546,7 +1552,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1606,7 +1613,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1665,7 +1673,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1724,7 +1733,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1783,7 +1793,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1842,7 +1853,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1901,7 +1913,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1960,7 +1973,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2019,7 +2033,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2077,7 +2092,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2136,7 +2152,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2195,7 +2212,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2252,7 +2270,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2309,7 +2328,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2366,7 +2386,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2423,7 +2444,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2480,7 +2502,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15459,6 +15482,187 @@ export default [
             packagingType: '상온',
             deliveryType: '새벽배송',
             stock: 100,
+            quantity: 1,
+        },
+    },
+    {
+        id: 24,
+        num: 614,
+        name: '[새벽시장] 복숭아(황도) 5입(1.2kg)',
+        des: '',
+        price: 23100,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,925원',
+
+        thumbnail: '/images/product/product24.png',
+
+        category: {
+            main: '과일·채소',
+            sub: '과일',
+        },
+
+        tags: [
+            { name: '베스트', rank: 6 },
+            // { name: '신상품', rank: 10 },
+        ],
+
+        details: {
+            origin: '상세페이지 참고',
+
+            packagingType: '냉동',
+            additionalDiscount: '현대카드 결제 시 10% 추가 할인',
+            deliveryType: '새벽배송',
+
+            barcode: '8801234567890',
+            size: '지름 약 7~8cm',
+            unitWeight: '1kg',
+
+            manufacturer: '그리니팅',
+            importer: null,
+
+            originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
+
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+
+            itemName: '해당사항없음',
+
+            gmoInfo: '해당사항없음',
+
+            importNotice: '해당사항없음',
+
+            productContents: ['사과', '보관법 안내'],
+
+            storageMethod: '냉장보관',
+
+            customerService: '현대식품관 to home 고객센터(1800-9549)',
+
+            safetyNotice: '상품 상세 혹은 이미지 참조',
+
+            stock: 100,
+
+            quantity: 1,
+        },
+    },
+    {
+        id: 25,
+        num: 615,
+        name: '[새벽시장] 무화과 600g',
+        info: '',
+        des: '',
+        price: 18500,
+        discountedPrice: null,
+        isDiscounted: false,
+        discountRate: null,
+        pricePerUnit: '100g당 3,083원',
+
+        thumbnail:
+            'https://tohomeimage.thehyundai.com/PD/PDImages/S/7/1/2/8806079738217_00.jpg?RS=720x864',
+
+        category: {
+            main: '과일·채소',
+            sub: '과일·채소',
+        },
+
+        tags: [{ name: '제철과일', rank: 6 }],
+
+        details: {
+            origin: '국내산',
+
+            packagingType: '냉장',
+            additionalDiscount: ' 0원',
+            deliveryType: '새벽배송',
+
+            barcode: '8801234567890',
+            size: '지름 약 7~8cm',
+            unitWeight: '1kg',
+
+            manufacturer: '후르츠사계절',
+            importer: null,
+
+            originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
+
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+
+            itemName: '해당사항없음',
+
+            gmoInfo: '해당사항없음',
+
+            importNotice: '해당사항없음',
+
+            productContents: ['사과', '보관법 안내'],
+
+            storageMethod: '냉장보관',
+
+            customerService: '현대식품관 to home 고객센터(1800-9549)',
+
+            safetyNotice: '상품 상세 혹은 이미지 참조',
+
+            stock: 100,
+
+            quantity: 1,
+        },
+    },
+    {
+        id: 26,
+        num: 616,
+        name: '[경복궁BLACK] 꼬리곰탕 600g',
+        info: '',
+        des: '',
+        price: 11200,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: 10,
+        pricePerUnit: '100g당 1,867원',
+
+        thumbnail:
+            'https://tohomeimage.thehyundai.com/PD/PDImages/S/6/8/3/8809725761386_00.jpg?RS=720x864',
+
+        category: {
+            main: '밥·국·면',
+            sub: '국',
+        },
+
+        tags: [{ name: '여름보양식', rank: 6 }],
+
+        details: {
+            origin: '국내산(완도)',
+
+            packagingType: '냉장',
+            additionalDiscount: ' 0원',
+            deliveryType: '새벽배송',
+
+            barcode: '8801234567890',
+            size: '지름 약 7~8cm',
+            unitWeight: '1kg',
+
+            manufacturer: '완도청해포구',
+            importer: null,
+
+            originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
+
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+
+            itemName: '해당사항없음',
+
+            gmoInfo: '해당사항없음',
+
+            importNotice: '해당사항없음',
+
+            productContents: ['사과', '보관법 안내'],
+
+            storageMethod: '냉장보관',
+
+            customerService: '현대식품관 to home 고객센터(1800-9549)',
+
+            safetyNotice: '상품 상세 혹은 이미지 참조',
+
+            stock: 100,
+
             quantity: 1,
         },
     },

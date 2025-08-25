@@ -4,6 +4,7 @@ export const DetailSideStyle = styled.div`
     border-right: 1px solid #000;
     padding: 77px 40px;
     padding-left: 20px;
+    /* padding: 0 20px; */
     width: 568px;
     margin-right: 40px;
 
@@ -278,15 +279,25 @@ export const DetailArtMainStyle = styled.div`
     width: 1330px;
     height: 800px;
     height: max-content;
+    /* DetailArtMainStyle 내부 */
     overflow-x: auto;
     overflow-y: hidden;
-    overscroll-behavior: contain;
+    overscroll-behavior: contain; /* 페이지로 스크롤 전파 줄이기 */
 
     .detailContent {
         display: flex;
         gap: 20px;
     }
 
+    /* .slide {
+        cursor: grab;
+        &:active {
+            cursor: grabbing;
+        }
+
+        width: min-content;
+        margin-right: 10px;
+    } */
     .detailContent {
         width: max-content;
         display: flex;

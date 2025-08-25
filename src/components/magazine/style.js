@@ -9,13 +9,21 @@ export const MagazineBottomStyle = styled.div`
         gap: 30px;
         margin-bottom: 70px;
         button {
-            width: 170px;
+            width: 172px;
             height: 40px;
+            line-height: 40px;
+            text-align: center;
             border-radius: 50px;
             background-color: #3c6039;
             color: white;
             font-size: 17px;
-            line-height: 17px;
+            font-weight: 600;
+            &:hover {
+                border: 2px solid #3c6039;
+                background-color: white;
+                color: #3c6039;
+                line-height: 37px;
+            }
         }
     }
     @media screen and (max-width: 600px) {

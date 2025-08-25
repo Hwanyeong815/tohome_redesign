@@ -35,6 +35,7 @@ import Notice from './components/support/notice/Notice';
 import { useEffect, useState } from 'react';
 import Spinner from './components/spinner';
 import ProductResult from './components/product/ProducTools/ProductResult';
+import DetailReview from './components/product/productDetail/DetailReview';
 
 const App = () => {
     const [isSpinner, setIsSpinner] = useState(true);
@@ -70,25 +71,23 @@ const App = () => {
                             <Route index element={<Notice />} />
                             <Route path=":noticeID" element={<NoticeDetail />} />
                         </Route>
-                        <Route path="/customer">
-                            <Route index element={<Customer />} />
-                            <Route path="customeradd" element={<CustomerAdd />} />
-                            <Route path="customeredit" element={<CustomerEdit />} />
-                            <Route path=":customerID" element={<CustomerDetail />} />
-                        </Route>
                         <Route path="/sale" element={<Sale />} />
                         <Route path="/specialBrand" element={<SpecialBrand />} />
                         <Route path="/support" element={<Support />} />
 
+                        <Route path="/customer">
+                            <Route index element={<Customer />} />
+                            <Route path="customeradd" element={<CustomerAdd />} />
+                            <Route path="customeredit/:customerID" element={<CustomerEdit />} />
+                            <Route path=":customerID" element={<CustomerDetail />} />
+                        </Route>
+
                         {/* 공통상세페이지 */}
                         <Route path="/product/:productNum" element={<ProductDetail />} />
                         <Route path="/result" element={<ProductResult />} />
-
                         <Route path="/healFood" element={<HealFood />} />
                         <Route path="/sideDish" element={<SideDish />} />
-
                         <Route path="*" element={<NotFiles />} />
-
                         <Route path="/category/:categoryID" element={<Category />} />
                     </Route>
                 </Routes>

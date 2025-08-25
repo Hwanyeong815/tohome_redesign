@@ -38,21 +38,6 @@ const slug = (s) =>
         .replace(/[^\w가-힣·]/g, '')
         .toLowerCase();
 
-// const deriveCategories = (list = []) => {
-//     const map = new Map();
-//     list.forEach((raw) => {
-//         const item = normalizeItem(raw);
-//         const title = item.category?.main || item.category?.group || '기타';
-//         const key = slug(title) || '기타';
-//         if (!map.has(key)) {
-//             map.set(key, { title, products: [] });
-//         }
-//         map.get(key).products.push(item);
-//     });
-//     return Object.fromEntries(map);
-// };
-
-// AllMergeData에서 giftId 있는 것만 선별
 export const selectGifts = createSelector([selectAllDataList], (list) =>
     list.filter((item) => !!item.giftId)
 );
@@ -115,22 +100,55 @@ const pickStableId = (p) =>
     p?.liquidId ??
     `${p?.name ?? ''}__${p?.brandName ?? ''}__${p?.price ?? ''}`;
 
-// AllMergeData → categories
+/* =========================
+   🔹 추가: 도메인 ID 필터링
+   ========================= */
+const DOMAIN_ID_KEYS = [
+    'fruitId',
+    'grainId',
+    'seafoodId',
+    'meatId',
+    'riceId',
+    'sideId',
+    'seasoningId',
+    'bakeryId',
+    'snackId',
+    'liquidId',
+];
+
+const hasDomainId = (p) => DOMAIN_ID_KEYS.some((k) => p?.[k] != null && p[k] !== '' && p[k] !== 0);
+
+const getDomainStableKey = (p) => {
+    for (const k of DOMAIN_ID_KEYS) {
+        const v = p?.[k];
+        if (v != null && v !== '' && v !== 0) return `${k}:${v}`; // 도메인 키 포함한 중복방지 키
+    }
+    return null;
+};
+
+/* =========================
+   🔹 교체: buildCategories
+   ========================= */
 const buildCategories = (all = []) => {
     const byMain = new Map(); // mainTitle -> { title, products, _seen }
 
     for (const item of all) {
+        // 도메인별 ID가 있는 상품만 카테고리에 포함 (gift 전용 등 제외)
+        if (!hasDomainId(item)) continue;
+
         const main = item?.category?.main;
         if (!main) continue;
 
-        const stableId = String(pickStableId(item) ?? '');
-        if (!stableId) continue;
+        const stableDomainKey = getDomainStableKey(item);
+        if (!stableDomainKey) continue;
 
         if (!byMain.has(main)) byMain.set(main, { title: main, products: [], _seen: new Set() });
         const bucket = byMain.get(main);
 
-        if (bucket._seen.has(stableId)) continue; // dedup
-        bucket._seen.add(stableId);
+        // 도메인 ID 기준으로 중복 제거
+        if (bucket._seen.has(stableDomainKey)) continue;
+        bucket._seen.add(stableDomainKey);
+
         bucket.products.push(item);
     }
 
@@ -144,6 +162,31 @@ const buildCategories = (all = []) => {
     }
     return categories;
 };
+
+export const makeSelectProductsByCategoryKey = () =>
+    createSelector([selectAllDataList, (_s, key) => key], (all, key) => {
+        if (!key) return [];
+
+        // 레거시 키면 한글 타이틀로 치환, 아니면 디코딩 후 사용 → 슬러그 통일
+        const decoded = decodeURIComponent(String(key));
+        const title = legacyKeyToTitle[key] ?? decoded;
+        const wanted = slug(title);
+
+        const seen = new Set();
+        const result = [];
+        for (const item of all) {
+            const main = item?.category?.main;
+            if (!main) continue;
+            if (slug(main) !== wanted) continue;
+
+            const stable = String(pickStableId(item));
+            if (seen.has(stable)) continue;
+            seen.add(stable);
+
+            result.push(item);
+        }
+        return result;
+    });
 
 const initialState = {
     priceTotal: 0,
@@ -236,7 +279,6 @@ export const cartSlice = createSlice({
                 save(state.carts);
             } else {
                 state.carts.push({
-                    // id,
                     num: Number(action.payload?.num ?? action.payload),
                     quantity: 1,
                     price: 0,
@@ -286,12 +328,6 @@ export const cartSlice = createSlice({
             state.totalPayable = state.totalDiscounted + state.totalDeliveryFee;
 
             save(JSON.parse(JSON.stringify(state.carts)));
-        },
-        setCurrentCategory(state, action) {
-            state.currentCategory = action.payload;
-        },
-        setSortType(state, action) {
-            state.sortType = action.payload;
         },
     },
 });

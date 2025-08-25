@@ -34,8 +34,13 @@ export const ProductItemStyle = styled.li`
         width: 250px;
         height: 300px;
         margin-bottom: 20px;
+        position: relative;
 
         img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 100%;
             height: auto;
             display: block;

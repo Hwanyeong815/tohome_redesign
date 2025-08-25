@@ -13,19 +13,15 @@ import 'aos/dist/aos.css';
 const Main = () => {
     useEffect(() => {
         if (typeof window === 'undefined') return;
-
         const initAOS = () => {
             AOS.init({
                 duration: 1000,
                 once: false,
                 mirror: true,
-
                 disable: () => window.matchMedia('(max-width: 600px)').matches,
             });
         };
-
         initAOS();
-
         let resizeTimer;
         const onResize = () => {
             clearTimeout(resizeTimer);
@@ -34,7 +30,6 @@ const Main = () => {
                 AOS.refreshHard();
             }, 150);
         };
-
         window.addEventListener('resize', onResize);
         return () => {
             window.removeEventListener('resize', onResize);

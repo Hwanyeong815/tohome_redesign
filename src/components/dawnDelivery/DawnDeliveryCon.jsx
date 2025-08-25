@@ -6,7 +6,18 @@ import {
   DawnDeliveryConStyle,
 } from "./style";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const DawnDeliveryCon = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 400,
+      once: true,
+      offset: 20,
+    });
+  }, []);
   return (
     <DawnDeliveryConStyle>
       <Con1Style>
@@ -16,7 +27,7 @@ const DawnDeliveryCon = () => {
             <div className="left">
               <img src="/images/dawnDelivery/con1/img1.png" alt="img1" />
             </div>
-            <div className="right">
+            <div className="right" data-aos="flip-left" data-aos-delay="200">
               <div className="txt">
                 <p>새벽배송</p>
                 <img src="/images/dawnDelivery/con1/img2.png" alt="img2" />
@@ -30,7 +41,7 @@ const DawnDeliveryCon = () => {
             </div>
           </div>
           <div className="bottom">
-            <div className="left">
+            <div className="left" data-aos="flip-left" data-aos-delay="350">
               <div className="txt">
                 <p>택배배송</p>
                 <img src="/images/dawnDelivery/con1/img3.png" alt="img3" />
@@ -100,7 +111,7 @@ const DawnDeliveryCon = () => {
       <Con3Style>
         <h2>투홈 패키지 안내</h2>
         <div className="wholeBox">
-          <div className="box top">
+          <div className="box top" data-aos="fade-up" data-aos-delay="0">
             <img src="./images/dawnDelivery/con3/img1.png" alt="img1" />
             <div className="txtBox">
               <p>투홈백</p>
@@ -129,7 +140,7 @@ const DawnDeliveryCon = () => {
               </div>
             </div>
           </div>
-          <div className="box middle">
+          <div className="box middle" data-aos="fade-up" data-aos-delay="100">
             <div className="box">
               <div className="txtBox">
                 <p>회수용 보냉백</p>
@@ -159,7 +170,7 @@ const DawnDeliveryCon = () => {
             </div>
             <img src="./images/dawnDelivery/con3/img2.png" alt="img2" />
           </div>
-          <div className="box bottom">
+          <div className="box bottom" data-aos="fade-up" data-aos-delay="200">
             <img src="./images/dawnDelivery/con3/img3.png" alt="img3" />
             <div className="txtBox">
               <p>투홈 박스</p>
@@ -184,11 +195,11 @@ const DawnDeliveryCon = () => {
         <p>Q & A</p>
         <div className="box">
           <div className="txt">
-            <div className="left">
+            <div className="left" data-aos="fade-right">
               <span className="qNum">Q1</span>
               <div className="bubbleQ">투홈백은 어떻게 구입할 수 있나요?</div>
             </div>
-            <div className="right">
+            <div className="right" data-aos="fade-left" data-aos-delay="50">
               <div className="bubbleA">
                 투홈백 상세 페이지에서 주문하신 후, 새벽배송 상품과 함께
                 구매해야 <br /> 결제하실 수 있습니다. 구매하신 투홈백은
@@ -197,24 +208,26 @@ const DawnDeliveryCon = () => {
               <span className="aNum">A1</span>
             </div>
           </div>
+
           <div className="txt">
-            <div className="left">
+            <div className="left" data-aos="fade-right" data-aos-delay="150">
               <span className="qNum">Q2</span>
               <div className="bubbleQ">투홈백은 반납하지 않아도 되나요?</div>
             </div>
-            <div className="right">
+            <div className="right" data-aos="fade-left" data-aos-delay="200">
               <div className="bubbleA">
                 투홈백은 구매하신 고객님의 소유로 반납하지 않으셔도 됩니다.
               </div>
               <span className="aNum">A2</span>
             </div>
           </div>
+
           <div className="txt">
-            <div className="left">
+            <div className="left" data-aos="fade-right" data-aos-delay="300">
               <span className="qNum">Q3</span>
               <div className="bubbleQ">투홈백은 어떻게 사용하나요?</div>
             </div>
-            <div className="right">
+            <div className="right" data-aos="fade-left" data-aos-delay="350">
               <div className="bubbleA">
                 새벽 배송 상품을 주문하시며, 주문서에서 투홈백을 선택하세요.
                 <br />
@@ -223,12 +236,13 @@ const DawnDeliveryCon = () => {
               <span className="aNum">A3</span>
             </div>
           </div>
+
           <div className="txt">
-            <div className="left">
+            <div className="left" data-aos="fade-right" data-aos-delay="450">
               <span className="qNum">Q4</span>
               <div className="bubbleQ">회수용 보냉백을 반납해야 하나요?</div>
             </div>
-            <div className="right">
+            <div className="right" data-aos="fade-left" data-aos-delay="500">
               <div className="bubbleA">
                 상품을 신선하게 보관하는 역할을 하는 회수용 보냉백은 <br />
                 기사님의 운반 편의를 위해 고안한 가방이기도 합니다.

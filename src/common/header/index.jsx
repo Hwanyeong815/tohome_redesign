@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import { HeaderStyle, SearchWrap, TopMenu } from './style';
 
 import FloatingBtn from '../../components/floatingItem/FloatingBtn';
+import NavMobile from './NavMobile';
 
 const Header = () => {
     return (
@@ -28,6 +29,7 @@ const Header = () => {
             </div>
 
             <FloatingBtn />
+            <NavMobile />
         </HeaderStyle>
     );
 };

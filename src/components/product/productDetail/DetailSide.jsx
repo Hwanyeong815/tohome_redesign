@@ -68,11 +68,6 @@ const DetailSide = ({ obj }) => {
         );
     };
 
-    const buyNow = () => {
-        addToCart();
-        navigate('/cart', { state: { goTo: 'order' } });
-    };
-
     const handleCartClick = () => {
         if (!authed) {
             const goLogin = window.confirm(

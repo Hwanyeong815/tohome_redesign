@@ -22,7 +22,7 @@ export const MainCon1Style = styled.article`
                 width: 310px;
                 position: relative;
                 h2 {
-                    margin-top: 20px;
+                    margin-top: 10px;
                     width: 310px;
                     height: 60px;
                     white-space: break-spaces;
@@ -32,6 +32,7 @@ export const MainCon1Style = styled.article`
                     font-size: 15px;
                     white-space: pre-line;
                     word-break: keep-all;
+                    padding: 10px 0;
                     /* padding: 0 10px; */
                 }
 
@@ -39,7 +40,7 @@ export const MainCon1Style = styled.article`
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    margin-top: 30px;
+                    margin-top: 50px;
                     font-size: 15px;
                     text-align: left;
                     padding-left: 10px;
@@ -228,8 +229,11 @@ export const MainCon1Style = styled.article`
         }
         .main-newPro-wrap {
             width: 100vw;
-            height: 66.6667vw;
+            height: 346px;
             margin-top: 0;
+            .swiper {
+                height: 260px;
+            }
             .swiper-slide {
                 height: 66.6667vw;
                 .left {
@@ -274,11 +278,7 @@ export const MainCon1Style = styled.article`
                         content: '';
                         position: absolute;
                         inset: 0;
-                        background: linear-gradient(
-                            180deg,
-                            #fff 0%,
-                            rgba(255, 255, 255, 0) 67.61%
-                        );
+                        background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 67.61%);
                     }
                 }
             }

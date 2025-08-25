@@ -1,26 +1,68 @@
-import React from 'react';
+import { useMemo, useState } from 'react';
 import DetailReviewItem from './DetailReviewItem';
 import { ReviewListStyle } from './style';
-import { useSelector } from 'react-redux';
 
-const DetailReviewList = () => {
-    const { reviews } = useSelector((state) => state.support);
+const DetailReviewList = ({ reviews = [], avgRate = 0 }) => {
+    // ✅ 탭 초깃값: 최신순
+    const [tab, setTab] = useState('newest'); // 'best' | 'newest' | 'photo'
+
+    const isNonEmptyString = (v) => typeof v === 'string' && v.trim().length > 0;
+
+    const hasPhoto = (r) => isNonEmptyString(r?.img);
+
+    const parseDate = (v) => {
+        const d = new Date(v);
+        return isNaN(d.getTime()) ? 0 : d.getTime();
+    };
+    const getRate = (r) => Number(r?.rate) || 0;
+
+    const shown = useMemo(() => {
+        let arr = Array.isArray(reviews) ? [...reviews] : [];
+
+        if (tab === 'photo') {
+            return arr.filter(hasPhoto).sort((a, b) => parseDate(b?.date) - parseDate(a?.date));
+        }
+        if (tab === 'newest') {
+            return arr.sort((a, b) => parseDate(b?.date) - parseDate(a?.date));
+        }
+        // tab === 'best'
+        return arr.sort((a, b) => getRate(b) - getRate(a));
+    }, [reviews, tab]);
 
     return (
-        <ReviewListStyle rate={reviews.rate}>
+        <ReviewListStyle rate={avgRate}>
             <div className="tab">
-                <div className="photo">
+                <div
+                    className={`photo ${tab === 'photo' ? 'active' : ''}`}
+                    onClick={() => setTab('photo')}
+                    role="button"
+                    tabIndex={0}
+                >
                     <p>포토 리뷰</p>
                 </div>
-                <div className="best">
+                <div
+                    className={`best ${tab === 'best' ? 'active' : ''}`}
+                    onClick={() => setTab('best')}
+                    role="button"
+                    tabIndex={0}
+                >
                     <p>베스트순</p>
                 </div>
-                <div className="newest">
+                <div
+                    className={`newest ${tab === 'newest' ? 'active' : ''}`}
+                    onClick={() => setTab('newest')}
+                    role="button"
+                    tabIndex={0}
+                >
                     <p>최신순</p>
                 </div>
             </div>
-            {reviews.map((review) => (
-                <DetailReviewItem key={review.id} review={review} />
+
+            {shown.map((review) => (
+                <DetailReviewItem
+                    key={review.id ?? `${review.userId ?? ''}_${review.date ?? ''}`}
+                    review={review}
+                />
             ))}
         </ReviewListStyle>
     );

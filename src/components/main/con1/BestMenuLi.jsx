@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
 const BestMenuLi = ({ product }) => {
-    const { id, name, thumbnail, des } = product;
+    const { id, num, name, thumbnail, des } = product;
     const navigate = useNavigate();
     const onGo = () => {
-        navigate(`product/${id}`);
+        navigate(`product/${product.num}`);
     };
     return (
         <li onClick={onGo} className="main-best-li">

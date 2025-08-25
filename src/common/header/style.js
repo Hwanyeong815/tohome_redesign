@@ -360,3 +360,35 @@ export const SearchWrap = styled.ul`
         }
     }
 `;
+
+export const NavMobileStyle = styled.div`
+    display: none;
+    @media screen and (max-width: 600px) {
+        z-index: 1000;
+        position: fixed;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 60px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 84px;
+        padding: 0 60px;
+        li {
+            width: 24px;
+            height: 24px;
+
+            position: relative;
+            img {
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+`;

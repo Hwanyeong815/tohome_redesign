@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
 import DawnDeliveryCon from '../../components/dawnDelivery/DawnDeliveryCon';
 import { BannerStyle, DawnDeliveryStyle } from './style';
 
 const DawnDelivery = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <DawnDeliveryStyle>
             <BannerStyle>

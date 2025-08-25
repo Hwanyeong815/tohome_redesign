@@ -12,15 +12,28 @@ const CategoryItem = ({ product }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const handleClick = () => {
-        navigate(`/product/${product.num}`);
-        window.scrollTo({ top: 0, left: 0 });
-    };
+    const productId =
+        product?.num ??
+        product?.id ??
+        product?.fruitId ??
+        product?.grainId ??
+        product?.seafoodId ??
+        product?.meatId ??
+        product?.riceId ??
+        product?.sideId ??
+        product?.seasoningId ??
+        product?.bakeryId ??
+        product?.snackId ??
+        product?.liquidId;
+
+    const to = productId != null ? `/product/${productId}` : undefined;
+
+    const scrollTop = () => window.scrollTo({ top: 0, left: 0 });
     return (
         <li>
-            <Link to="">
+            <Link to={to} onClick={scrollTop}>
                 <div className="img-wrap">
-                    <img src={thumbnail} alt={name} onClick={handleClick} />
+                    <img src={thumbnail} alt={name} />
                     <div className="overlay">
                         <button
                             className="icon-btn"

@@ -2,7 +2,7 @@ import React from 'react';
 import { GradeStar, ReviewItemStyle } from './style';
 
 const DetailReviewItem = ({ review }) => {
-    const { productId, reviewid, img, title, username, context, date, rate } = review;
+    const { img, title, username, context, date, rate } = review;
     return (
         <ReviewItemStyle>
             <div className="itemBox">

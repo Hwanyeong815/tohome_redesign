@@ -12,14 +12,14 @@ const MagazineDetail = ({ onToggle }) => {
     const [currentStep, setCurrentStep] = useState(STEP.ITEM2);
     const [isMobile, setIsMobile] = useState(() => {
         if (typeof window === 'undefined') return false;
-        return window.innerWidth <= 768;
+        return window.innerWidth <= 600;
     });
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
         let ticking = false;
         const check = () => {
-            const m = window.innerWidth <= 768;
+            const m = window.innerWidth <= 600;
             setIsMobile((prev) => (prev !== m ? m : prev));
             ticking = false;
         };

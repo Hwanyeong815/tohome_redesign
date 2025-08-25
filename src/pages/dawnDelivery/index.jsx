@@ -1,15 +1,11 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-=======
->>>>>>> e652e0925ede9dbcaf5aab8bce0bfda96974a649
 import DawnDeliveryCon from '../../components/dawnDelivery/DawnDeliveryCon';
 import { BannerStyle, DawnDeliveryStyle } from './style';
 
 const DawnDelivery = () => {
     useEffect(() => {
-<<<<<<< HEAD
         if (typeof window === 'undefined') return;
         const initAOS = () => {
             AOS.init({
@@ -33,9 +29,6 @@ const DawnDelivery = () => {
             window.removeEventListener('resize', onResize);
             clearTimeout(resizeTimer);
         };
-=======
-        window.scrollTo(0, 0);
->>>>>>> e652e0925ede9dbcaf5aab8bce0bfda96974a649
     }, []);
     return (
         <DawnDeliveryStyle>
@@ -44,13 +37,9 @@ const DawnDelivery = () => {
                 <div className="txt-box">
                     <h2>새벽투홈</h2>
                     <span>배송안내 패키지 가이드</span>
-<<<<<<< HEAD
                     <p>
                         매일 아침, 현관 앞에서 만나는 현대식품관의 신선한 상품.
                     </p>
-=======
-                    <p>매일 아침, 현관 앞에서 만나는 현대식품관의 신선한 상품.</p>
->>>>>>> e652e0925ede9dbcaf5aab8bce0bfda96974a649
                     <p>환경을 생각한 패키지와 새벽배송 시스템으로</p>
                     <p>풍요로운 식탁을 전합니다.</p>
                 </div>

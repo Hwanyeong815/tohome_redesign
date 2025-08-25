@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { CustomerDetailStyle } from './style';
 import { LuPaperclip } from 'react-icons/lu';
 import { CiSquarePlus } from 'react-icons/ci';
+import { supportActions } from '../../../store/modules/supportSlice';
 
 const CustomerDetail = () => {
     const { customerID } = useParams();
@@ -10,8 +11,30 @@ const CustomerDetail = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const newItem = customers.find((customer) => customer.customerId === Number(customerID));
+    const newItem = customers.find(
+        (customer) => customer.customerId === Number(customerID)
+    );
     const { customerId, username, title, context, date } = newItem;
+    const { authed } = useSelector((state) => state.auth);
+
+    const onEdit = () => {
+        if (!authed) {
+            alert('로그인 후 이용');
+            return navigate('/login');
+        }
+        dispatch(supportActions.setCurrentCustomer(newItem));
+        navigate(`/support/customeradd`);
+    };
+
+    const onDel = () => {
+        if (!authed) {
+            alert('로그인 후 이용');
+            return navigate('/login');
+        }
+
+        dispatch(supportActions.removeCustomer(newItem.id));
+        navigate('/customer'); // 또는 navigate(-1)
+    };
 
     return (
         <div className="inner">
@@ -51,9 +74,11 @@ const CustomerDetail = () => {
                             </div>
                             <div className="checkbox">답변 알림받기</div>
                             <div className="btn-wrap">
-                                <button>수정</button>
-                                <button>삭제</button>
-                                <button onClick={() => navigate(-1)}>목록</button>
+                                <button onClick={onEdit}>수정</button>
+                                <button onClick={onDel}>삭제</button>
+                                <button onClick={() => navigate(-1)}>
+                                    목록
+                                </button>
                             </div>
                         </div>
                     </article>

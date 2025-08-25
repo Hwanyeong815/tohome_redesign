@@ -408,7 +408,7 @@ export const DetailArtSubStyle = styled.div`
     word-break: keep-all;
 
     .slide {
-        width: 800px;
+        width: 700px;
     }
 
     col.col-k {
@@ -458,7 +458,7 @@ export const DetailArtFaqStyle = styled.div`
     margin-top: 40px;
     width: 1330px;
     .slide {
-        width: 700px;
+        width: 650px;
     }
     .boxWrap {
         display: flex;
@@ -506,7 +506,7 @@ export const DetailArtFaqStyle = styled.div`
                     color: #5f5f5f;
                     font-size: 15px;
                     text-align: left;
-                    padding-left: 20px;
+                    padding-left: 7px;
                 }
             }
         }

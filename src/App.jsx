@@ -35,6 +35,7 @@ import Notice from './components/support/notice/Notice';
 import { useEffect, useState } from 'react';
 import Spinner from './components/spinner';
 import ProductResult from './components/product/ProducTools/ProductResult';
+import DetailReview from './components/product/productDetail/DetailReview';
 
 const App = () => {
     const [isSpinner, setIsSpinner] = useState(true);
@@ -59,29 +60,100 @@ const App = () => {
                         <Route path="/best" element={<Best />} />
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/cart" element={<Cart />} />
-                        <Route path="/directDelivery" element={<DirectDelivery />} />
+                        <Route
+                            path="/directDelivery"
+                            element={<DirectDelivery />}
+                        />
                         <Route path="/gift" element={<Gift />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/join" element={<Join />} />
                         <Route path="/magazine" element={<Magazine />} />
                         <Route path="/newProducts" element={<NewProducts />} />
-                        <Route path="/dawnDelivery" element={<DawnDelivery />} />
+                        <Route
+                            path="/dawnDelivery"
+                            element={<DawnDelivery />}
+                        />
                         <Route path="/notice">
                             <Route index element={<Notice />} />
-                            <Route path=":noticeID" element={<NoticeDetail />} />
+                            <Route
+                                path=":noticeID"
+                                element={<NoticeDetail />}
+                            />
                         </Route>
                         <Route path="/customer">
                             <Route index element={<Customer />} />
-                            <Route path="customeradd" element={<CustomerAdd />} />
-                            <Route path="customeredit" element={<CustomerEdit />} />
-                            <Route path=":customerID" element={<CustomerDetail />} />
+                            <Route
+                                path="customeradd"
+                                element={<CustomerAdd />}
+                            />
+                            <Route
+                                path="customeredit"
+                                element={<CustomerEdit />}
+                            />
+                            <Route
+                                path=":customerID"
+                                element={<CustomerDetail />}
+                            />
                         </Route>
+
+                        {/* <Route path="/detailReview">
+                            <Route index element={<DetailReview />} />
+                            <Route
+                                path="customeradd"
+                                element={<DetailReviewAdd />}
+                            />
+                            <Route
+                                path="customeredit"
+                                element={<DetailReviewEdit />}
+                            />
+                            <Route
+                                path=":customerID"
+                                element={<DetailReviewItem />}
+                            />
+                        </Route> */}
+
                         <Route path="/sale" element={<Sale />} />
-                        <Route path="/specialBrand" element={<SpecialBrand />} />
-                        <Route path="/support" element={<Support />} />
+                        <Route
+                            path="/specialBrand"
+                            element={<SpecialBrand />}
+                        />
+
+                        <Route path="/support" element={<Support />}>
+                            <Route index element={<Customer />} />
+                            <Route
+                                path="customeradd"
+                                element={<CustomerAdd />}
+                            />
+                            <Route
+                                path="customeredit/:customerID"
+                                element={<CustomerEdit />}
+                            />
+                            <Route
+                                path=":customerID"
+                                element={<CustomerDetail />}
+                            />
+                        </Route>
+
+                        {/* <Route path="/support" element={<Support />}>
+                            <Route
+                                path="customeradd"
+                                element={<CustomerAdd />}
+                            />
+                            <Route
+                                path="customeredit/:customerID"
+                                element={<CustomerEdit />}
+                            />{' '}
+                            <Route
+                                path=":customerID"
+                                element={<CustomerDetail />}
+                            />
+                        </Route> */}
 
                         {/* 공통상세페이지 */}
-                        <Route path="/product/:productNum" element={<ProductDetail />} />
+                        <Route
+                            path="/product/:productNum"
+                            element={<ProductDetail />}
+                        />
                         <Route path="/result" element={<ProductResult />} />
 
                         <Route path="/healFood" element={<HealFood />} />
@@ -89,7 +161,10 @@ const App = () => {
 
                         <Route path="*" element={<NotFiles />} />
 
-                        <Route path="/category/:categoryID" element={<Category />} />
+                        <Route
+                            path="/category/:categoryID"
+                            element={<Category />}
+                        />
                     </Route>
                 </Routes>
             </BrowserRouter>

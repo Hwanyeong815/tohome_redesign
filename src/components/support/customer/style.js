@@ -25,6 +25,20 @@ export const CustomerStyle = styled.div`
             }
         }
     }
+    .btn-wrap {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+        button {
+            width: 70px;
+            height: 40px;
+            background-color: #ececec;
+            &:first-child {
+                color: white;
+                background: #333;
+            }
+        }
+    }
 `;
 export const CustomerListStyle = styled.div`
     /* background-color: beige; */
@@ -142,3 +156,5 @@ export const CustomerDetailStyle = styled.div`
         }
     }
 `;
+
+export const CustomerAddStyle = styled.div``;

@@ -16,3 +16,4 @@ export { default as SideDish } from './sideDish';
 export { default as SpecialBrand } from './specialBrand';
 export { default as Support } from './support';
 export { default as Category } from './category';
+export { default as MyPage } from './myPage';

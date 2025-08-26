@@ -61,13 +61,7 @@ const MainRecom = () => {
             >
                 <SwiperSlide>
                     <img className="back" src="/images/main/mainRecom1.png" alt="" />
-                    <h3 className="sub-title">
-                        좋은 한끼를 위한 MD의 작은 제안
-                        <span className="timer">
-                            <MdOutlineWatchLater />
-                            {formatTime(time)}
-                        </span>
-                    </h3>
+                    <h3 className="sub-title">좋은 한끼를 위한 MD의 작은 제안</h3>
                     <section>
                         <div className="left">
                             <strong>MD&apos;s PICK</strong>
@@ -100,7 +94,13 @@ const MainRecom = () => {
 
                 <SwiperSlide>
                     <img className="back" src="/images/main/mainRecom2.png" alt="" />
-                    <h3 className="sub-title">오늘 이 시간, 더 가볍게 만나는 건강 간식</h3>
+                    <h3 className="sub-title">
+                        오늘 이 시간, 더 가볍게 만나는 건강 간식
+                        <span className="timer">
+                            <MdOutlineWatchLater />
+                            {formatTime(time)}
+                        </span>
+                    </h3>
                     <section>
                         <div className="left">
                             <strong>오늘의 타임특가</strong>

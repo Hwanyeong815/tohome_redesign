@@ -16,6 +16,7 @@ import {
     Login,
     Magazine,
     Main,
+    MyPage,
     NewProducts,
     NotFiles,
     Sale,
@@ -89,6 +90,8 @@ const App = () => {
                         <Route path="/sideDish" element={<SideDish />} />
                         <Route path="*" element={<NotFiles />} />
                         <Route path="/category/:categoryID" element={<Category />} />
+
+                        <Route path="/myPage" element={<MyPage />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

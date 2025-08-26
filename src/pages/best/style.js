@@ -74,7 +74,7 @@ export const BestWrap = styled.div`
                     display: none;
                     font-size: 3.0769vw;
                     width: 100%;
-
+                    margin-left: 0;
                     text-align: center;
                     box-sizing: border-box;
                     &.on {

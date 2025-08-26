@@ -8,34 +8,28 @@ const BrandList = ({ brandTag }) => {
     const { AllDataList } = useSelector((state) => state.cart);
     const [sortType, setSortType] = useState('판매량순');
     const [selectedSub, setSelectedSub] = useState('전체보기');
-
     const brandTagMap = {
         Brand1Myeong: '명인명촌',
         Brand2Table: '1TABLE',
         Brand3Yehyang: '예향',
         Brand4Market: '동행마켓',
     };
-
     const filteredBrands = AllDataList?.filter((item) => item.brandtag === brandTagMap[brandTag]);
-
     const subCategories =
         filteredBrands && filteredBrands.length > 0
             ? [...new Set(filteredBrands.map((f) => f.category?.trim() || '기타'))]
             : [];
-
     const getFilteredProducts = () => {
         if (!filteredBrands) return [];
         return selectedSub === '전체보기'
             ? filteredBrands
             : filteredBrands.filter((product) => product.category?.trim() === selectedSub?.trim());
     };
-
     const getSortedProducts = () => {
         const products = getFilteredProducts().map((item, idx) => ({
             ...item,
             originalIndex: idx,
         }));
-
         return products.sort((a, b) => {
             if (sortType === '판매량순' || sortType === '신상품순') {
                 if (a.rank === b.rank) return a.originalIndex - b.originalIndex;
@@ -50,7 +44,6 @@ const BrandList = ({ brandTag }) => {
             return 0;
         });
     };
-
     return (
         <BrandListStyle>
             <ProductTop

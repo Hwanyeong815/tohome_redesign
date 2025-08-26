@@ -46,32 +46,26 @@ const stepsData = [
 ];
 
 gsap.registerPlugin(ScrollTrigger);
-
 const isMobile = () => (typeof window !== 'undefined' ? window.innerWidth <= 600 : false);
-
 const MagazineDetailItem4 = ({ onPrev, onNext }) => {
     const imgRefs = useRef([]);
     const mainTxtRef = useRef(null);
-
     imgRefs.current = [];
     const addToRefs = (el) => {
         if (el && !imgRefs.current.includes(el)) imgRefs.current.push(el);
     };
 
-    // ✅ 모바일용 현재 인덱스
     const [currentIdx, setCurrentIdx] = useState(0);
     const total = stepsData.length;
     const [mobile, setMobile] = useState(isMobile());
     useEffect(() => {
         const mq = window.matchMedia('(max-width: 600px)');
         const onChange = (e) => setMobile(e.matches);
-        // 초기값 동기화  리스너 등록
         setMobile(mq.matches);
         mq.addEventListener('change', onChange);
         return () => mq.removeEventListener('change', onChange);
     }, []);
 
-    // 모바일 전환 시 첫 화면을 0번으로 초기화(선택)
     useEffect(() => {
         if (mobile) setCurrentIdx(0);
     }, [mobile]);

@@ -8,24 +8,19 @@ const MagazineListRight = ({ start, onToggle }) => {
     const h2Ref = useRef(null);
     const h3Ref = useRef(null);
     const h4Ref = useRef(null);
-
     const addRotateRef = (el) => {
         if (el && !rotateRefs.current.includes(el)) rotateRefs.current.push(el);
     };
     const addParsleyRef = (el) => {
         if (el && !parsleyRefs.current.includes(el)) parsleyRefs.current.push(el);
     };
-
     useEffect(() => {
         if (!start) return;
         const tl = gsap.timeline();
-
         tl.from(h2Ref.current, { opacity: 0, x: 50, duration: 0.5 });
         tl.from(h4Ref.current, { opacity: 0, x: 50, duration: 0.5 }, '-=0.4');
         tl.from(h3Ref.current, { opacity: 0, x: -50, duration: 0.5 }, '-=0.4');
-
         tl.from(meshpotatoRef.current, { opacity: 0, scale: 0.8, duration: 0.5 }, '-=0.3');
-
         tl.from(
             rotateRefs.current,
             {
@@ -38,7 +33,6 @@ const MagazineListRight = ({ start, onToggle }) => {
             },
             '-=0.3'
         );
-
         tl.from(
             parsleyRefs.current,
             {
@@ -50,7 +44,6 @@ const MagazineListRight = ({ start, onToggle }) => {
             '-=0.2'
         );
     }, [start]);
-
     return (
         <section className="right">
             <div className="right-title">

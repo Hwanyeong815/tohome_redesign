@@ -358,11 +358,12 @@ export const MagazineDetailItem2Style = styled.div`
     .web-txts {
         display: none;
     }
-    .txts {
+    .mobile-txts {
         width: 838px;
         margin-right: 126px;
         h2 {
             font-size: 30px;
+            margin-bottom: 20px;
         }
         h3 {
             text-align: center;
@@ -417,6 +418,7 @@ export const MagazineDetailItem2Style = styled.div`
             h2 {
                 font-size: 5.1282vw;
                 h3 {
+                    display: none;
                     margin-top: 4.1026vw;
                     font-size: 3.8462vw;
                 }
@@ -426,16 +428,18 @@ export const MagazineDetailItem2Style = styled.div`
             box-sizing: border-box;
             padding: 0 6.9231vw;
             margin: 0;
+            width: 100%;
             h2,
             h3 {
                 display: none;
             }
             p {
-                /* width: 390px; */
+                width: 100%;
 
                 font-size: 3.3333vw;
                 line-height: 1.5;
                 text-align: center;
+                padding-bottom: 5vw;
 
                 span {
                     display: block;

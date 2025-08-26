@@ -1186,8 +1186,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1247,8 +1246,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1308,8 +1306,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1369,8 +1366,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1430,8 +1426,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1491,8 +1486,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1552,8 +1546,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1593,7 +1586,7 @@ export default [
         },
 
         tags: [
-            // { name: '베스트', rank: 12 },
+            { name: '베스트', rank: 10 },
             { name: '신상품', rank: 3 },
         ],
 
@@ -1613,8 +1606,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1673,8 +1665,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1733,8 +1724,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1793,8 +1783,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1835,7 +1824,10 @@ export default [
             sub: '과일',
         },
 
-        tags: [{ name: '제철과일', rank: 4 }],
+        tags: [
+            { name: '제철과일', rank: 4 },
+            { name: '베스트', rank: 8 },
+        ],
 
         details: {
             origin: '국내산',
@@ -1853,8 +1845,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1913,8 +1904,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1973,8 +1963,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2033,8 +2022,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2092,8 +2080,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2152,8 +2139,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2212,8 +2198,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2238,7 +2223,7 @@ export default [
         id: 19,
         num: 68,
         name: '[새벽시장] 한입 감자 (700g)',
-        des: '',
+        des: '한입에 쏙, 통으로 먹기 좋은 한입감자',
         price: 7100,
         discountedPrice: '',
         isDiscounted: false,
@@ -2252,7 +2237,10 @@ export default [
             sub: '채소',
         },
 
-        tags: [{ name: '오늘의레시피', rank: 1 }],
+        tags: [
+            { name: '오늘의레시피', rank: 1 },
+            { name: '베스트', rank: 6 },
+        ],
 
         details: {
             origin: '국내산(완도)',
@@ -2270,8 +2258,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2328,8 +2315,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2386,8 +2372,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2444,8 +2429,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2502,8 +2486,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15489,7 +15472,7 @@ export default [
         id: 24,
         num: 614,
         name: '[새벽시장] 복숭아(황도) 5입(1.2kg)',
-        des: '',
+        des: '노란빛을 품은 황도복숭아',
         price: 23100,
         discountedPrice: '',
         isDiscounted: false,
@@ -15504,7 +15487,7 @@ export default [
         },
 
         tags: [
-            { name: '베스트', rank: 6 },
+            { name: '베스트', rank: 7 },
             // { name: '신상품', rank: 10 },
         ],
 
@@ -15524,8 +15507,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15584,8 +15566,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15611,7 +15592,7 @@ export default [
         num: 616,
         name: '[경복궁BLACK] 꼬리곰탕 600g',
         info: '',
-        des: '',
+        des: '전통 약재 육수를 더한 꼬리곰탕',
         price: 11200,
         discountedPrice: '',
         isDiscounted: false,
@@ -15626,7 +15607,10 @@ export default [
             sub: '국',
         },
 
-        tags: [{ name: '여름보양식', rank: 6 }],
+        tags: [
+            { name: '여름보양식', rank: 6 },
+            { name: '베스트', rank: 9 },
+        ],
 
         details: {
             origin: '국내산(완도)',
@@ -15644,8 +15628,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 

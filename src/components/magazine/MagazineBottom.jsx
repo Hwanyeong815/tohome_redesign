@@ -28,14 +28,12 @@ const MagazineBottom = ({ onPrev, onNext }) => {
             isInitialSelectionDone.current = true;
         }
     }, [recipes]);
-
     const handleItemSelect = (num, isSelected) => {
         const next = new Set(selectedItems);
         if (isSelected) next.add(num);
         else next.delete(num);
         setSelectedItems(next);
     };
-
     const handleAddSelectedToCart = () => {
         const selectedProducts = recipes.filter((product) => selectedItems.has(product.id));
         selectedProducts.forEach((product) => {
@@ -44,7 +42,6 @@ const MagazineBottom = ({ onPrev, onNext }) => {
         setSelectedItems(new Set());
         alert(`${selectedProducts.length}개의 상품이 장바구니에 담겼습니다.`);
     };
-
     const handleAddAllToCart = () => {
         recipes.forEach((product) => {
             dispatch(cartActions.addToCart(product));

@@ -7,14 +7,12 @@ import MagazineDetailItem4 from './MagazineDetailItem4';
 import { MagazineDetailStyle } from './style';
 
 const STEP = { ITEM2: 2, ITEM3: 3, ITEM4: 4, BOTTOM: 5 };
-
 const MagazineDetail = ({ onToggle }) => {
     const [currentStep, setCurrentStep] = useState(STEP.ITEM2);
     const [isMobile, setIsMobile] = useState(() => {
         if (typeof window === 'undefined') return false;
         return window.innerWidth <= 600;
     });
-
     useEffect(() => {
         if (typeof window === 'undefined') return;
         let ticking = false;
@@ -37,7 +35,6 @@ const MagazineDetail = ({ onToggle }) => {
             window.removeEventListener('orientationchange', onResize);
         };
     }, []);
-
     const goPrev = () => setCurrentStep((s) => Math.max(STEP.ITEM2, s - 1));
     const goNext = () => setCurrentStep((s) => Math.min(STEP.BOTTOM, s + 1));
     const isFirst = currentStep === STEP.ITEM2;

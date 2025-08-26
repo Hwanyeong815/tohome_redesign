@@ -48,16 +48,9 @@ const Content2 = () => {
                 />
             </MainRecomStyle>
             <Content2Style>
-                <section
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
-                >
-                    <h2 className="main-title">
-                        여름의 달콤한 위로, 제철 과일
-                    </h2>
-                    <h3 className="sub-title">
-                        한입 가득 퍼지는 여름 햇살의 맛
-                    </h3>
+                <section data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <h2 className="main-title">여름의 달콤한 위로, 제철 과일</h2>
+                    <h3 className="sub-title">한입 가득 퍼지는 여름 햇살의 맛</h3>
                     <div className="btn-wrap">
                         <button className="more" onClick={onGo}>
                             전체보기
@@ -65,16 +58,10 @@ const Content2 = () => {
                     </div>
                     {isMobile ? (
                         <div className="productWrap">
-                            <ProductList
-                                products={seasonFruits6}
-                                showCheckbox={false}
-                            />
+                            <ProductList products={seasonFruits6} showCheckbox={false} />
                         </div>
                     ) : (
-                        <ProductList
-                            products={seasonFruits}
-                            showCheckbox={false}
-                        />
+                        <ProductList products={seasonFruits} showCheckbox={false} />
                     )}
                     <div className="btn">
                         <button>베스트 상품 더보기</button>
@@ -86,24 +73,16 @@ const Content2 = () => {
                     className="product-list"
                 >
                     <h2 className="main-title">몸을 채우는 여름 보양식</h2>
-                    <h3 className="sub-title">
-                        지친 여름에 꼭 필요한 한 상차림
-                    </h3>
+                    <h3 className="sub-title">지친 여름에 꼭 필요한 한 상차림</h3>
                     <div className="btn-wrap">
                         <button className="more">전체보기</button>
                     </div>
                     {isMobile ? (
                         <div className="productWrap">
-                            <ProductList
-                                products={healingFoods6}
-                                showCheckbox={false}
-                            />
+                            <ProductList products={healingFoods6} showCheckbox={false} />
                         </div>
                     ) : (
-                        <ProductList
-                            products={healingFoods}
-                            showCheckbox={false}
-                        />
+                        <ProductList products={healingFoods} showCheckbox={false} />
                     )}
                     <div className="btn">
                         <button>베스트 상품 더보기</button>

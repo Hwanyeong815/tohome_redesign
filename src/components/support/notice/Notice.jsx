@@ -15,8 +15,6 @@ const Notice = () => {
                 <p onClick={() => setNoticeTab('당첨자 발표')}>당첨자 발표</p>
             </div>
             <NoticeList noticeTab={noticeTab} />
-
-            {/* <NoticeDetail /> */}
         </NoticeStyle>
     );
 };

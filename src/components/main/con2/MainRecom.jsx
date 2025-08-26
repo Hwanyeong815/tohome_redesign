@@ -96,7 +96,7 @@ const MainRecom = () => {
                     <img className="back" src="/images/main/mainRecom2.png" alt="" />
                     <h3 className="sub-title">
                         오늘 이 시간, 더 가볍게 만나는 건강 간식
-                        <span className="timer">
+                      <span className="timer">
                             <MdOutlineWatchLater />
                             {formatTime(time)}
                         </span>
@@ -138,6 +138,8 @@ const MainRecom = () => {
                     <img className="back" src="/images/main/mainRecom3.png" alt="" />
                     <h3 className="sub-title">
                         현대식품관이 먼저 담아본 브랜드, 좋은 식품은 좋은 브랜드에서 시작됩니다
+
+                          
                     </h3>
                     <section>
                         <div className="left">

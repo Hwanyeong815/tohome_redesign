@@ -286,17 +286,17 @@ export const BannerWrap = styled.article`
                         width: 250px;
                         height: 250px;
                         position: relative;
-
-                        overflow: visible !important;
+                       overflow: visible !important;
                         img {
                             position: absolute;
-                            left: 0%;
+                            left: 60%;
                             top: 40%;
                             transform: translate(-50%, -50%);
                             height: 120%;
                             width: auto;
                         }
                     }
+                
                     width: 250px;
                     height: 250px;
                     overflow: visible;

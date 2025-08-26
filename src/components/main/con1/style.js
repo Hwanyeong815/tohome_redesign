@@ -162,6 +162,7 @@ export const MainCon1Style = styled.article`
             padding: 12.3077vw 0;
             /* padding: 0 4.1026vw; */
             width: 100vw;
+            margin-top:0;
 
             .productWrap {
                 display: grid;

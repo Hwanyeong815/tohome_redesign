@@ -1233,7 +1233,7 @@ export default [
         details: {
             origin: '상세페이지 참고',
 
-            packagingType: '냉동',
+            packagingType: '냉장',
             additionalDiscount: '현대카드 결제 시 10% 추가 할인',
             deliveryType: '새벽배송',
 

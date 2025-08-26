@@ -64,7 +64,7 @@ const Content5 = () => {
                 <section
                     className="main-today-recipe"
                     data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
+                       data-aos-anchor-placement="top-center"
                 >
                     <h2 className="main-title">오늘의 레시피</h2>
                     <p className="title2">
@@ -117,7 +117,7 @@ const Content5 = () => {
                     className="main-gift-wrap"
                     onClick={onClick1}
                     data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
+                     data-aos-anchor-placement="top-center"
                 >
                     <div className="txt-box">
                         <img src="images/main/main_gift01.png" alt="모눈종이" />

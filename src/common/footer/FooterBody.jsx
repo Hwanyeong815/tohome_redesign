@@ -53,7 +53,9 @@ const FooterBody = () => {
                 </div>
             </li>
             <li className="utill-mobile-wrap">
-                <p>브랜드소개</p>
+                 <p onClick={onAbout}>
+                        <Link>브랜드소개</Link>
+                    </p>
                 <p>이용약관</p>
                 <p>개인정보처리방침</p>
                 <p>청소년보호정책</p>

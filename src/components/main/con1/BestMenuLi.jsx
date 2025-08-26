@@ -5,6 +5,7 @@ const BestMenuLi = ({ product }) => {
     const navigate = useNavigate();
     const onGo = () => {
         navigate(`product/${product.num}`);
+         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
     return (
         <li onClick={onGo} className="main-best-li">

@@ -63,7 +63,7 @@ const Content3 = () => {
                     onClick={onClick1}
                     className="main-about position-fix"
                     data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
+                     data-aos-anchor-placement="bottom-bottom"
                 >
                     <h2>현대식품관 BRAND STORY</h2>
                     <div>
@@ -77,7 +77,7 @@ const Content3 = () => {
                     className="brand-about"
                     onClick={onClick2}
                     data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
+                     data-aos-anchor-placement="bottom-bottom"
                 >
                     <h2 className="main-title">브랜드로 만나는 미식의 깊이</h2>
                     <strong>Connecting Taste & Story</strong>

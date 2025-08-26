@@ -119,6 +119,7 @@ export const FooterBodyUl = styled.ul`
             border-top: 1px solid #333;
             display: flex;
             flex-direction: column;
+            align-items: center;
             padding: 0 50px;
             padding-top: 20px;
             em {

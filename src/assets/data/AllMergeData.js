@@ -15265,7 +15265,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 900원',
-        thumbnail: '/images/recipeproduct/01.jpg',
+        thumbnail: '/images/recipeProduct/01.jpg',
         category: {
             main: '',
             sub: '',
@@ -15290,7 +15290,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 1,014원',
-        thumbnail: '/images/recipeproduct/02.jpg',
+        thumbnail: '/images/recipeProduct/02.jpg',
         category: {
             main: '',
             sub: '',
@@ -15315,7 +15315,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '10g당 500원',
-        thumbnail: '/images/recipeproduct/03.jpg',
+        thumbnail: '/images/recipeProduct/03.jpg',
         category: {
             main: '',
             sub: '',
@@ -15341,7 +15341,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 3,400원',
-        thumbnail: '/images/recipeproduct/04.jpg',
+        thumbnail: '/images/recipeProduct/04.jpg',
         category: {
             main: '',
             sub: '',
@@ -15366,7 +15366,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 1,495원',
-        thumbnail: '/images/recipeproduct/05.jpg',
+        thumbnail: '/images/recipeProduct/05.jpg',
         category: {
             main: '',
             sub: '',
@@ -15392,7 +15392,7 @@ export default [
         isDiscounted: true,
         discountRate: 13,
         pricePerUnit: '100ml당 6,475원',
-        thumbnail: '/images/recipeproduct/06.jpg',
+        thumbnail: '/images/recipeProduct/06.jpg',
         category: {
             main: '',
             sub: '',
@@ -15418,7 +15418,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 748원',
-        thumbnail: '/images/recipeproduct/07.jpg',
+        thumbnail: '/images/recipeProduct/07.jpg',
         category: {
             main: '',
             sub: '',
@@ -15444,7 +15444,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 2489원',
-        thumbnail: '/images/recipeproduct/08.jpg',
+        thumbnail: '/images/recipeProduct/08.jpg',
         category: {
             main: '',
             sub: '',
@@ -15470,7 +15470,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 1,890원',
-        thumbnail: '/images/recipeproduct/09.jpg',
+        thumbnail: '/images/recipeProduct/09.jpg',
         category: {
             main: '',
             sub: '',

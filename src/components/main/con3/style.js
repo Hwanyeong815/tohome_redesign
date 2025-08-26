@@ -233,6 +233,7 @@ export const Content3Style = styled.div`
             background-image: url(/images/main/brandStory.png);
             background-repeat: no-repeat;
             background-position: 0 0;
+            margin-top: 0;
             img {
                 display: none;
             }
@@ -242,14 +243,14 @@ export const Content3Style = styled.div`
                 margin-top: 18px;
             }
             div {
-                width: 260px;
-                margin-top: 26px;
-                line-height: 1;
+                width: 66.6667vw;
+                margin-top: 4.6667vw;
+                line-height: 1.5;
                 p {
-                    font-size: 18px;
+                    font-size: 3.6154vw;
                     font-weight: 500;
-                    width: 260px;
-                    letter-spacing: 0.9px;
+                    width: 66.6667vw;
+                    letter-spacing: 1.9px;
                 }
             }
             button {

@@ -16,28 +16,27 @@ export const NewProductsWrap = styled.div`
     }
     .filter-wrap {
         display: flex;
-        justify-content: end;
+        justify-content: right;
+        font-size: 15px;
         margin-bottom: 30px;
         p {
+            margin-left: 40px;
             cursor: pointer;
             position: relative;
-            font-size: 15px;
             color: #666;
-            margin-left: 20px;
             &.on {
-                font-weight: 600;
-                color: #3c6039;
+                color: #477c42 !important;
             }
             &:not(:last-child) {
                 &::after {
                     content: '';
-                    position: absolute;
                     width: 1px;
-                    height: 60%;
+                    height: 15px;
                     background-color: #666;
-                    right: -10px;
+                    position: absolute;
                     top: 50%;
-                    transform: translateY(-50%);
+                    transform: translateY(-55%);
+                    right: -20px;
                 }
             }
         }

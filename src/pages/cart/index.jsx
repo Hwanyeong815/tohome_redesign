@@ -108,7 +108,7 @@ const Cart = () => {
                                 <CartSide
                                     setIsCartTab={setIsCartTab}
                                     isCartTab={isCartTab}
-                                    isMenuTab={isMenuTab} // ✅ 현재 탭 전달
+                                    isMenuTab={isMenuTab} // 현재 탭 전달
                                 />
                             )}
                             {isCartTab === 'Result' && <CartResult />}

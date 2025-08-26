@@ -95,21 +95,16 @@ export const ContentStyle = styled.div`
     @media screen and (max-width: 600px) {
         width: 100vw;
         min-height: 0;
-        /* background-color: yellow; */
-
         section {
             margin-top: 12.3077vw;
         }
         .inner {
-            /* background-color: yellowgreen; */
-            /* width: 100vw; */
-            /* padding: 16.9231vw 0;
-            overflow: visible; */
         }
         .main-title {
             font-size: 4.1026vw;
             margin-left: 0;
             padding-left: calc(5.1282vw + 5px);
+            margin-top: 66px;
             &::before {
                 width: 5.1282vw;
                 height: 5.1282vw;

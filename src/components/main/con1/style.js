@@ -153,7 +153,7 @@ export const MainCon1Style = styled.article`
         width: 100vw;
         .main-best-wrap {
             padding: 12.3077vw 0;
-            /* padding: 0 4.1026vw; */
+            padding-bottom: 0;
             width: 100vw;
             .productWrap {
                 display: grid;
@@ -279,7 +279,11 @@ export const MainCon1Style = styled.article`
                         content: '';
                         position: absolute;
                         inset: 0;
-                        background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 67.61%);
+                        background: linear-gradient(
+                            180deg,
+                            #fff 0%,
+                            rgba(255, 255, 255, 0) 67.61%
+                        );
                     }
                 }
             }

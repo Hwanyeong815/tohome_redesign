@@ -30,14 +30,18 @@ const Best = () => {
             case '판매량순':
                 return arr.sort((a, b) => {
                     const r = getRank(b) - getRank(a);
-                    return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
+                    return r !== 0
+                        ? r
+                        : dataByNum.indexOf(a) - dataByNum.indexOf(b);
                 });
             case '신상품순':
                 return arr
                     .filter((p) => p.tags?.some((t) => t.name === '신상품'))
                     .sort((a, b) => {
                         const r = getRank(b) - getRank(a);
-                        return r !== 0 ? r : dataByNum.indexOf(a) - dataByNum.indexOf(b);
+                        return r !== 0
+                            ? r
+                            : dataByNum.indexOf(a) - dataByNum.indexOf(b);
                     });
             case '높은가격순':
                 return arr.sort((a, b) => getPrice(b) - getPrice(a));
@@ -62,7 +66,12 @@ const Best = () => {
                 </section>
                 <div className="filter">
                     <div className="filter-wrap">
-                        {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
+                        {[
+                            '판매량순',
+                            '신상품순',
+                            '높은가격순',
+                            '낮은가격순',
+                        ].map((type) => (
                             <p
                                 key={type}
                                 onClick={() => setSortType(type)}
@@ -74,7 +83,11 @@ const Best = () => {
                     </div>
                 </div>
 
-                <ProductList products={sortedData} showCheckbox={false} className="product-list" />
+                <ProductList
+                    products={sortedData}
+                    showCheckbox={false}
+                    className="product-list"
+                />
             </div>
         </BestWrap>
     );

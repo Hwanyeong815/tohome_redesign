@@ -5,12 +5,13 @@ import { ContentStyle } from '../style';
 import { Content2Style, MainRecomStyle } from './style';
 import ProductList from '../../product/ProductList';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import MainRecom from './MainRecom';
 import { useNavigate } from 'react-router-dom';
 
 const Content2 = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
     const navigate = useNavigate();
 
     const onGo = () => {
@@ -23,8 +24,14 @@ const Content2 = () => {
     const seasonFruits = AllDataList.filter((product) =>
         product.tags?.some((tag) => tag.name === '제철과일' && tag.rank <= 5)
     );
+    const seasonFruits6 = AllDataList.filter((product) =>
+        product.tags?.some((tag) => tag.name === '제철과일' && tag.rank <= 6)
+    );
     const healingFoods = AllDataList.filter((product) =>
         product.tags?.some((tag) => tag.name === '여름보양식' && tag.rank <= 5)
+    );
+    const healingFoods6 = AllDataList.filter((product) =>
+        product.tags?.some((tag) => tag.name === '여름보양식' && tag.rank <= 6)
     );
 
     useEffect(() => {
@@ -56,11 +63,19 @@ const Content2 = () => {
                             전체보기
                         </button>
                     </div>
-                    <ProductList
-                        products={seasonFruits}
-                        showCheckbox={false}
-                        className="product-list"
-                    />
+                    {isMobile ? (
+                        <div className="productWrap">
+                            <ProductList
+                                products={seasonFruits6}
+                                showCheckbox={false}
+                            />
+                        </div>
+                    ) : (
+                        <ProductList
+                            products={seasonFruits}
+                            showCheckbox={false}
+                        />
+                    )}
                     <div className="btn">
                         <button>베스트 상품 더보기</button>
                     </div>
@@ -77,7 +92,19 @@ const Content2 = () => {
                     <div className="btn-wrap">
                         <button className="more">전체보기</button>
                     </div>
-                    <ProductList products={healingFoods} showCheckbox={false} />
+                    {isMobile ? (
+                        <div className="productWrap">
+                            <ProductList
+                                products={healingFoods6}
+                                showCheckbox={false}
+                            />
+                        </div>
+                    ) : (
+                        <ProductList
+                            products={healingFoods}
+                            showCheckbox={false}
+                        />
+                    )}
                     <div className="btn">
                         <button>베스트 상품 더보기</button>
                     </div>

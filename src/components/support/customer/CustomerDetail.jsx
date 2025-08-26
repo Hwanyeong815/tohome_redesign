@@ -13,18 +13,13 @@ const CustomerDetail = () => {
     const { authed } = useSelector((state) => state.auth);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
-    // ✅ id/customerId 기준으로 안전 비교
     const newItem = customers.find((c) => getItemId(c) === String(customerID));
-
     if (!newItem) {
         return <p>해당 게시글을 찾을 수 없습니다.</p>;
     }
-
     const id = getItemId(newItem);
     const { title = '', context = '', date = '' } = newItem;
     const username = newItem.username ?? newItem.name ?? '';
-
     const onEdit = () => {
         if (!authed) {
             alert('로그인 후 이용');
@@ -34,7 +29,6 @@ const CustomerDetail = () => {
         // ✅ /customer/customeredit/:customerID 로 이동
         navigate(`/customer/customeredit/${id}`, { state: { item: newItem } });
     };
-
     const onDel = () => {
         if (!authed) {
             alert('로그인 후 이용');
@@ -44,7 +38,6 @@ const CustomerDetail = () => {
         dispatch(supportActions.removeCustomer(id));
         navigate('/customer');
     };
-
     return (
         <div className="inner">
             <CustomerDetailStyle>

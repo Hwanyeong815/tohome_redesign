@@ -10,10 +10,16 @@ export const VisualStyle = styled.div`
         transform: translate(-50%, -50%);
         top: 50%;
         background-color: #fdfbf0;
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
     }
     position: relative;
     height: 680px;
     margin-top: 50px;
+    @media screen and (max-width: 600px) {
+        margin-top: 0;
+    }
     margin-bottom: 50px;
     width: 1440px;
 

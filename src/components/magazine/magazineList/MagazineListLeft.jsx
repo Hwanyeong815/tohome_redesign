@@ -7,10 +7,8 @@ const MagazineListLeft = ({ onComplete }) => {
     const addToRefs = (el) => {
         if (el && !wrapRefs.current.includes(el)) wrapRefs.current.push(el);
     };
-
     useEffect(() => {
         const images = wrapRefs.current.map((ref) => ref.querySelector('img'));
-
         const promises = images.map(
             (img) =>
                 new Promise((resolve) => {
@@ -18,7 +16,6 @@ const MagazineListLeft = ({ onComplete }) => {
                     else img.onload = img.onerror = resolve;
                 })
         );
-
         Promise.all(promises).then(() => {
             setTimeout(() => {
                 gsap.from(wrapRefs.current, {
@@ -31,7 +28,6 @@ const MagazineListLeft = ({ onComplete }) => {
             }, 0);
         });
     }, []);
-
     return (
         <section className="left">
             {magazineData.slice(0, 12).map((list, idx) => (

@@ -10,67 +10,54 @@ const MagazineDetailItem2 = ({ onPrev, onNext }) => {
     const defRef = useRef(null);
     const pathRef = useRef(null);
     const textPathRef = useRef(null);
-    const mmRef = useRef(null); // matchMedia 저장
-
+    const mmRef = useRef(null);
     useEffect(() => {
         const pathEl = pathRef.current;
         const defEl = defRef.current;
         const textPathEl = textPathRef.current;
         if (!pathEl || !defEl || !textPathEl) return;
-
-        // defs 경로 d 복사
         const d = pathEl.getAttribute('d');
         if (d) defEl.setAttribute('d', d);
-
-        const textEl = textPathEl.parentElement; // <text>
-
-        // 안전한 초기값(데스크톱/모바일 공통)
+        const textEl = textPathEl.parentElement;
         textPathEl.setAttribute('startOffset', '0%');
-        if (textEl) textEl.setAttribute('opacity', '1'); // 먼저 보이게
-
-        // 모바일/데스크톱 분기
+        textEl?.setAttribute('opacity', '1');
+        const triggerEl = pathEl.closest && pathEl.closest('svg') ? pathEl.closest('svg') : pathEl;
         const mm = gsap.matchMedia();
         mmRef.current = mm;
-
-        // 모바일: 애니메이션 없이 고정
         mm.add('(max-width: 600px)', () => {
-            if (textEl) textEl.setAttribute('opacity', '1');
-            textPathEl.setAttribute('startOffset', '10%'); // 원하는 고정 지점
-            return () => {}; // cleanup 없음
+            textEl?.setAttribute('opacity', '1');
+            textPathEl.setAttribute('startOffset', '10%');
+            return () => {};
         });
-
-        // 데스크톱: 스크롤에 따라 startOffset/opacity 업데이트
         mm.add('(min-width: 601px)', () => {
-            // 초기엔 보여두고, 스크롤 구간에서만 부드럽게 변하도록 설정
-            if (textEl) textEl.setAttribute('opacity', '1');
-
-            const st = ScrollTrigger.create({
-                trigger: pathEl,
-                start: 'top bottom', // 화면 아래에서부터 트리거되게 여유있게
-                end: 'top center', // 중앙까지
-                scrub: 1,
-                onUpdate: (self) => {
-                    // 0% ~ 10% 사이로 이동
-                    const offset = 0 + self.progress * (10 - 0);
-                    textPathEl.setAttribute('startOffset', `${offset}%`);
-                    // 필요하면 투명도도 함께
-                    const op = 0.2 + self.progress * (1 - 0.2);
-                    if (textEl) textEl.setAttribute('opacity', String(op));
-                },
-                onEnter: () => textEl && textEl.setAttribute('opacity', '1'),
-                onLeaveBack: () => textEl && textEl.setAttribute('opacity', '0.2'),
-            });
-
-            // 레이아웃 변화 대응
-            ScrollTrigger.refresh();
+            let st;
+            try {
+                st = ScrollTrigger.create({
+                    trigger: triggerEl,
+                    start: 'top bottom',
+                    end: 'top center',
+                    scrub: 1,
+                    onUpdate: (self) => {
+                        const offset = self.progress * 10; // 0% → 10%
+                        textPathEl.setAttribute('startOffset', `${offset}%`);
+                        const op = 0.2 + self.progress * 0.8; // 0.2 → 1
+                        textEl?.setAttribute('opacity', String(op));
+                    },
+                    onEnter: () => textEl && textEl.setAttribute('opacity', '1'),
+                    onLeaveBack: () => textEl && textEl.setAttribute('opacity', '0.2'),
+                });
+            } catch (e) {
+                // 트리거 미작동 시에도 보이는 채로 멈춤
+                textPathEl.setAttribute('startOffset', '10%');
+                textEl?.setAttribute('opacity', '1');
+            }
 
             return () => {
-                st.kill();
+                st && st.kill();
             };
         });
 
         return () => {
-            // 컴포넌트 언마운트 시 생성한 미디어쿼리/트리거 정리
             mmRef.current?.revert();
         };
     }, []);
@@ -102,11 +89,8 @@ const MagazineDetailItem2 = ({ onPrev, onNext }) => {
                     preserveAspectRatio="xMidYMid meet"
                 >
                     <defs>
-                        {/* textPath가 따라갈 실제 경로 */}
                         <path id="def-1" ref={defRef} />
                     </defs>
-
-                    {/* 보이는 원형 경로 (stroke 안 주면 안 보이는 게 정상) */}
                     <path
                         id="path-1"
                         ref={pathRef}
@@ -114,13 +98,11 @@ const MagazineDetailItem2 = ({ onPrev, onNext }) => {
                         fill="none"
                         strokeWidth="2"
                     />
-
-                    {/* 원을 따라 움직이는 텍스트 */}
                     <text fontSize="20" fill="black">
                         <textPath
                             ref={textPathRef}
-                            href="#def-1" // 최신 브라우저용
-                            xlinkHref="#def-1" // 호환용 (일부 브라우저/환경)
+                            href="#def-1"
+                            xlinkHref="#def-1"
                             startOffset="0%"
                             method="align"
                             spacing="auto"
@@ -133,7 +115,10 @@ const MagazineDetailItem2 = ({ onPrev, onNext }) => {
             </div>
 
             <div className="mobile-txts">
-                <p data-aos="fade-up" data-aos-delay="200">
+                <h2 className="fontChange" data-aos="fade-up" data-aos-delay="200">
+                    Chef&apos;s Say
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="300">
                     “강원도 고랭지에서 막 수확한 제철 감자를 삶아 곱게 으깬 뒤 파르미지아노 치즈와
                     파슬리를 올렸습니다. 에어프라이어로 겉은 은은하고 바삭하게, 속은 촉촉하게 구워
                     한 입마다 부드럽게 녹아내리죠. 치즈와 파슬리로 맛을 더 풍부하게 하고, 그릭

@@ -63,7 +63,7 @@ export const MagazineDetailStyle = styled.div`
             &:nth-child(1) {
             }
             &.mag-item2 {
-                padding-top: 95vw;
+                padding-top: 125vw;
             }
             &.mag-item3,
             &.mag-item4 {
@@ -358,11 +358,12 @@ export const MagazineDetailItem2Style = styled.div`
     .web-txts {
         display: none;
     }
-    .txts {
+    .mobile-txts {
         width: 838px;
         margin-right: 126px;
         h2 {
             font-size: 30px;
+            margin-bottom: 20px;
         }
         h3 {
             text-align: center;
@@ -392,27 +393,22 @@ export const MagazineDetailItem2Style = styled.div`
         /* background-color: black; */
         background-color: antiquewhite;
         /* margin-top: 88px; */
-
         width: 100vw;
         height: 185.8974vw;
         flex-direction: column;
         align-content: start;
         .chefs {
             width: 100%;
-            margin-left: 200px;
             .pathTxt {
                 opacity: 1 !important;
-                right: -18.2051vw;
-                top: -12.6923vw;
-                transform: scale(0.9);
+                right: -28.2051vw;
+                top: -7.6923vw;
             }
             img {
             }
         }
         .web-txts {
-            /* margin-top: 12.8205vw; */
-            /* padding-top: 0; */
-
+            margin-top: 12.8205vw;
             display: block;
             text-align: center;
             width: 100%;
@@ -422,6 +418,7 @@ export const MagazineDetailItem2Style = styled.div`
             h2 {
                 font-size: 5.1282vw;
                 h3 {
+                    display: none;
                     margin-top: 4.1026vw;
                     font-size: 3.8462vw;
                 }
@@ -431,16 +428,18 @@ export const MagazineDetailItem2Style = styled.div`
             box-sizing: border-box;
             padding: 0 6.9231vw;
             margin: 0;
+            width: 100%;
             h2,
             h3 {
                 display: none;
             }
             p {
-                /* width: 390px; */
+                width: 100%;
 
                 font-size: 3.3333vw;
                 line-height: 1.5;
                 text-align: center;
+                padding-bottom: 5vw;
 
                 span {
                     display: block;
@@ -519,21 +518,16 @@ export const MagazineDetailItem3Style = styled.div`
     @media screen and (max-width: 600px) {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        gap: 0;
         .main-img {
             margin: 0;
             padding: 0;
             height: min-content;
             top: 39.4872vw;
             width: 82.0513vw;
-
             img {
-                margin-left: 8vw;
-                width: 80%;
+                width: 100%;
             }
         }
-
         .img-box {
         }
         .detail-vectors {

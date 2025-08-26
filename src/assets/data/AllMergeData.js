@@ -1586,7 +1586,7 @@ export default [
         },
 
         tags: [
-            // { name: '베스트', rank: 12 },
+            { name: '베스트', rank: 10 },
             { name: '신상품', rank: 3 },
         ],
 
@@ -1824,7 +1824,10 @@ export default [
             sub: '과일',
         },
 
-        tags: [{ name: '제철과일', rank: 4 }],
+        tags: [
+            { name: '제철과일', rank: 4 },
+            { name: '베스트', rank: 8 },
+        ],
 
         details: {
             origin: '국내산',
@@ -2220,7 +2223,7 @@ export default [
         id: 19,
         num: 68,
         name: '[새벽시장] 한입 감자 (700g)',
-        des: '',
+        des: '한입에 쏙, 통으로 먹기 좋은 한입감자',
         price: 7100,
         discountedPrice: '',
         isDiscounted: false,
@@ -2234,7 +2237,10 @@ export default [
             sub: '채소',
         },
 
-        tags: [{ name: '오늘의레시피', rank: 1 }],
+        tags: [
+            { name: '오늘의레시피', rank: 1 },
+            { name: '베스트', rank: 6 },
+        ],
 
         details: {
             origin: '국내산(완도)',
@@ -2641,34 +2647,34 @@ export default [
             quantity: 1,
         },
     },
-    // {
-    //     fruitId: 6,
-    //     num: 78,
-    //     name: '[새벽시장] \n수박 7kg 1통',
-    //     des: '폭염으로 인해 상품의 당도가 다소 떨어질 수 있습니다. 구매 후 당일 섭취 부탁드립니다. 품질관리를 위해 노력하겠습니다.',
-    //     price: 57200,
-    //     discountedPrice: '',
-    //     isDiscounted: false,
-    //     discountRate: '',
-    //     pricePerUnit: '100g당 817원',
-    //     thumbnail: '/images/menu01/06.jpg',
-    //     category: {
-    //         main: '과일·채소',
-    //         sub: '계절 과일',
-    //     },
-    //     tags: [
-    //         { name: '베스트', rank: 6 },
-    //         { name: '신상품', rank: 35 },
-    //     ],
-    //     details: {
-    //         origin: '국내산',
-    //         manufacturer: '찬솔농산',
-    //         packagingType: '냉장',
-    //         deliveryType: '택배배송',
-    //         stock: 100,
-    //         quantity: 1,
-    //     },
-    // },
+    {
+        fruitId: 6,
+        num: 78,
+        name: '[새벽시장] \n수박 7kg 1통',
+        des: '폭염으로 인해 상품의 당도가 다소 떨어질 수 있습니다. 구매 후 당일 섭취 부탁드립니다. 품질관리를 위해 노력하겠습니다.',
+        price: 57200,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 817원',
+        thumbnail: '/images/menu01/06.jpg',
+        category: {
+            main: '과일·채소',
+            sub: '계절 과일',
+        },
+        tags: [
+            { name: '베스트', rank: 6 },
+            { name: '신상품', rank: 35 },
+        ],
+        details: {
+            origin: '국내산',
+            manufacturer: '찬솔농산',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
+        },
+    },
     {
         fruitId: 7,
         num: 79,
@@ -15242,7 +15248,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 900원',
-        thumbnail: '/images/recipeproduct/01.jpg',
+        thumbnail: '/images/recipeProduct/01.jpg',
         category: {
             main: '',
             sub: '',
@@ -15267,7 +15273,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 1,014원',
-        thumbnail: '/images/recipeproduct/02.jpg',
+        thumbnail: '/images/recipeProduct/02.jpg',
         category: {
             main: '',
             sub: '',
@@ -15292,7 +15298,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '10g당 500원',
-        thumbnail: '/images/recipeproduct/03.jpg',
+        thumbnail: '/images/recipeProduct/03.jpg',
         category: {
             main: '',
             sub: '',
@@ -15318,7 +15324,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 3,400원',
-        thumbnail: '/images/recipeproduct/04.jpg',
+        thumbnail: '/images/recipeProduct/04.jpg',
         category: {
             main: '',
             sub: '',
@@ -15343,7 +15349,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 1,495원',
-        thumbnail: '/images/recipeproduct/05.jpg',
+        thumbnail: '/images/recipeProduct/05.jpg',
         category: {
             main: '',
             sub: '',
@@ -15369,7 +15375,7 @@ export default [
         isDiscounted: true,
         discountRate: 13,
         pricePerUnit: '100ml당 6,475원',
-        thumbnail: '/images/recipeproduct/06.jpg',
+        thumbnail: '/images/recipeProduct/06.jpg',
         category: {
             main: '',
             sub: '',
@@ -15395,7 +15401,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 748원',
-        thumbnail: '/images/recipeproduct/07.jpg',
+        thumbnail: '/images/recipeProduct/07.jpg',
         category: {
             main: '',
             sub: '',
@@ -15421,7 +15427,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 2489원',
-        thumbnail: '/images/recipeproduct/08.jpg',
+        thumbnail: '/images/recipeProduct/08.jpg',
         category: {
             main: '',
             sub: '',
@@ -15447,7 +15453,7 @@ export default [
         isDiscounted: false,
         discountRate: '',
         pricePerUnit: '100g당 1,890원',
-        thumbnail: '/images/recipeproduct/09.jpg',
+        thumbnail: '/images/recipeProduct/09.jpg',
         category: {
             main: '',
             sub: '',
@@ -15466,7 +15472,7 @@ export default [
         id: 24,
         num: 614,
         name: '[새벽시장] 복숭아(황도) 5입(1.2kg)',
-        des: '',
+        des: '노란빛을 품은 황도복숭아',
         price: 23100,
         discountedPrice: '',
         isDiscounted: false,
@@ -15481,7 +15487,7 @@ export default [
         },
 
         tags: [
-            { name: '베스트', rank: 6 },
+            { name: '베스트', rank: 7 },
             // { name: '신상품', rank: 10 },
         ],
 
@@ -15586,7 +15592,7 @@ export default [
         num: 616,
         name: '[경복궁BLACK] 꼬리곰탕 600g',
         info: '',
-        des: '',
+        des: '전통 약재 육수를 더한 꼬리곰탕',
         price: 11200,
         discountedPrice: '',
         isDiscounted: false,
@@ -15601,7 +15607,10 @@ export default [
             sub: '국',
         },
 
-        tags: [{ name: '여름보양식', rank: 6 }],
+        tags: [
+            { name: '여름보양식', rank: 6 },
+            { name: '베스트', rank: 9 },
+        ],
 
         details: {
             origin: '국내산(완도)',

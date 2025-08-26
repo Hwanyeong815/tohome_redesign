@@ -103,12 +103,12 @@ const Cart = () => {
                             {isCartTab === 'List' && (
                                 <CartList setIsCartTab={setIsCartTab} items={displayCarts} />
                             )}
-                            {isCartTab === 'Order' && <CartOrder />}+{' '}
+                            {isCartTab === 'Order' && <CartOrder />}
                             {(isCartTab === 'List' || isCartTab === 'Order') && (
                                 <CartSide
                                     setIsCartTab={setIsCartTab}
                                     isCartTab={isCartTab}
-                                    isMenuTab={isMenuTab} // ✅ 현재 탭 전달
+                                    isMenuTab={isMenuTab} // 현재 탭 전달
                                 />
                             )}
                             {isCartTab === 'Result' && <CartResult />}

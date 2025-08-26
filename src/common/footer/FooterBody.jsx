@@ -43,12 +43,11 @@ const FooterBody = () => {
             <li className="utill">
                 <div className="option">Family Site</div>
                 <div>
-                    <em>
-                        <p onClick={onAbout}>
-                            <Link>브랜드소개</Link>
-                        </p>
-                        <p>이용약관</p>
-                    </em>
+                    <p onClick={onAbout}>
+                        <Link>브랜드소개</Link>
+                    </p>
+                    <p>이용약관</p>
+
                     <p>개인정보처리방침</p>
                     <p>영상기기운영방침</p>
                 </div>

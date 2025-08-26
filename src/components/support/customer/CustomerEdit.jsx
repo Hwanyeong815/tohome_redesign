@@ -4,30 +4,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { supportActions } from '../../../store/modules/supportSlice';
 import { CustomerDetailStyle } from './style';
-
 const getItemId = (c) => Number(c?.id ?? c?.customerId);
 const getUsername = (c) => c?.username ?? c?.name ?? '';
-
 const CustomerEdit = () => {
     const { customerID } = useParams();
     const location = useLocation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
     const { current, customers } = useSelector((state) => state.support);
-
     const rawItem = useMemo(() => {
         const byState = location.state?.item;
         if (byState) return byState;
-
-        const byParam = customers?.find(
-            (c) => String(getItemId(c)) === String(customerID)
-        );
+        const byParam = customers?.find((c) => String(getItemId(c)) === String(customerID));
         if (byParam) return byParam;
-
         return current ?? null;
     }, [location.state, customers, current, customerID]);
-
     const [user, setUser] = useState({
         id: null,
         username: '',
@@ -36,7 +27,6 @@ const CustomerEdit = () => {
         date: '',
     });
     const [error, setError] = useState('');
-
     useEffect(() => {
         if (rawItem) {
             setUser({
@@ -48,13 +38,11 @@ const CustomerEdit = () => {
             });
         }
     }, [rawItem]);
-
     const changeInput = (e) => {
         const { name, value } = e.target;
         setUser((prev) => ({ ...prev, [name]: value }));
         if (error) setError('');
     };
-
     const onSubmit = (e) => {
         e.preventDefault();
         if (!user.title.trim()) {
@@ -96,11 +84,7 @@ const CustomerEdit = () => {
                                 문의 게시판 <span>게시글 수정</span>
                             </h2>
                         </div>
-                        <form
-                            className="customer-add"
-                            onSubmit={onSubmit}
-                            noValidate
-                        >
+                        <form className="customer-add" onSubmit={onSubmit} noValidate>
                             <p>
                                 <input
                                     name="title"
@@ -130,21 +114,11 @@ const CustomerEdit = () => {
                             </p>
 
                             {/* 에러 메시지 */}
-                            {error && (
-                                <p style={{ color: 'crimson', marginTop: 8 }}>
-                                    {error}
-                                </p>
-                            )}
+                            {error && <p style={{ color: 'crimson', marginTop: 8 }}>{error}</p>}
 
-                            <div
-                                className="btn-wrap"
-                                style={{ position: 'relative', zIndex: 1 }}
-                            >
+                            <div className="btn-wrap" style={{ position: 'relative', zIndex: 1 }}>
                                 <button type="submit">저장하기</button>
-                                <button
-                                    type="button"
-                                    onClick={() => navigate(-1)}
-                                >
+                                <button type="button" onClick={() => navigate(-1)}>
                                     목록
                                 </button>
                             </div>

@@ -8,30 +8,24 @@ import { paginationActions } from '../../../store/modules/paginationSlice';
 
 const NoticeList = ({ noticeTab }) => {
     const { notices } = useSelector((state) => state.support);
-
     const { pageData, totalCount, perPage, currentPage, totalPages } = useSelector(
         (state) => state.pagination.notice
     );
-
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const startIdx = (currentPage - 1) * perPage;
     const endIdx = startIdx + perPage;
     const currentNotices = pageData.slice(startIdx, endIdx);
-
     useEffect(() => {
         const filteredNotices =
             noticeTab === 'all'
                 ? notices
                 : notices.filter((notice) => notice.tags?.name === noticeTab);
-
         dispatch(paginationActions.setData({ key: 'notice', data: filteredNotices }));
     }, [notices, noticeTab]);
 
     const handlePageChange = (page) => {
         dispatch(paginationActions.goToPage({ key: 'notice', page }));
     };
-
     return (
         <NoticeListStyle>
             <table className="noticeTable">

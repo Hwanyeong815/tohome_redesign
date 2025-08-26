@@ -14,21 +14,23 @@ export const MainCon1Style = styled.article`
             }
             display: flex;
             overflow-x: auto;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE 10+ */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
 
             li {
                 box-sizing: border-box;
-                height: 410px;
+                height: 450px;
                 width: 290px;
                 position: relative;
                 h2 {
                     padding: 0 4px;
                     margin-top: 10px;
-                    width: 310px;
+                    width: 90%;
                     height: 60px;
+
                     white-space: break-spaces;
                     text-align: left;
+                    overflow: hidden;
                 }
                 h3 {
                     font-size: 15px;
@@ -36,14 +38,13 @@ export const MainCon1Style = styled.article`
                     word-break: keep-all;
                     padding: 10px 0;
                     text-align: left;
-                    /* padding: 0 10px; */
                 }
 
                 p {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    margin-top: 50px;
+                    margin-top: 80px;
                     font-size: 15px;
 
                     padding-left: 10px;
@@ -156,14 +157,17 @@ export const MainCon1Style = styled.article`
     }
     @media screen and (max-width: 600px) {
         width: 100vw;
+
         .main-best-wrap {
             padding: 12.3077vw 0;
             /* padding: 0 4.1026vw; */
             width: 100vw;
+
             .productWrap {
                 display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 width: 100vw;
+
                 flex-wrap: wrap;
                 gap: 3.0769vw;
                 .product-list {

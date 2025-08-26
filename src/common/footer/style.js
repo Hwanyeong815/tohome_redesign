@@ -18,6 +18,7 @@ export const FooterStyle = styled.footer`
     @media screen and (max-width: 600px) {
         /* height: 89.2308vw; */
         height: max-content;
+        margin-top: 22.3077vw;
         .inner {
             width: 91.7949vw;
             padding-top: 6.1538vw;
@@ -118,6 +119,7 @@ export const FooterBodyUl = styled.ul`
             border-top: 1px solid #333;
             display: flex;
             flex-direction: column;
+            align-items: center;
             padding: 0 50px;
             padding-top: 20px;
             em {

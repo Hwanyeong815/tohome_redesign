@@ -2,10 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const FaqItem = ({ faq, isOpen, onClick }) => {
     const { faqId, title, context } = faq;
-
     const contentRef = useRef(null);
     const [maxHeight, setMaxHeight] = useState('0px');
-
     useEffect(() => {
         if (isOpen && contentRef.current) {
             setMaxHeight(contentRef.current.scrollHeight + 'px');
@@ -13,7 +11,6 @@ const FaqItem = ({ faq, isOpen, onClick }) => {
             setMaxHeight('0px');
         }
     }, [isOpen]);
-
     return (
         <div className={`accr ${isOpen ? 'on' : ''}`}>
             <div className="accHead" onClick={() => onClick(faqId)}>
@@ -40,7 +37,14 @@ const FaqItem = ({ faq, isOpen, onClick }) => {
                     transition: 'max-height 0.4s ease',
                 }}
             >
-                <p>{context}</p>
+                <p>
+                    {context.split('\n').map((line, idx) => (
+                        <span key={idx}>
+                            {line}
+                            <br />
+                        </span>
+                    ))}
+                </p>
             </div>
         </div>
     );

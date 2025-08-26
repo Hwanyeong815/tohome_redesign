@@ -31,7 +31,8 @@ export const SupporMainTap = styled.section`
         justify-content: space-between;
         align-items: center;
         /* border: 1px solid #000; */
-        font-size: 24px;
+        font-size: 18px;
+        cursor: pointer;
         p {
             font-weight: 500;
             &.on {

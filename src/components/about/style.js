@@ -101,8 +101,8 @@ export const AboutSlideWrap = styled.div`
 
         button {
             position: absolute;
-            font-size: 10px;
-            font-family: 'Arita-buri-SemiBold';
+            font-size: 17px;
+
             background-color: transparent;
             p {
                 transition: 0.3s;
@@ -113,22 +113,22 @@ export const AboutSlideWrap = styled.div`
                 content: '';
                 position: absolute;
                 top: -12px;
-                width: 30px;
+                width: 38px;
                 height: 1px;
                 background-color: #333;
             }
             &::before {
-                left: 50%;
+                left: 42%;
             }
             &::after {
-                left: -40%;
+                left: -36%;
             }
             &.prev {
-                left: -30px;
+                left: -70px;
                 transform: rotate(-90deg);
             }
             &.next {
-                right: -30px;
+                right: -70px;
                 transform: rotate(90deg);
             }
             &:hover {
@@ -441,6 +441,7 @@ export const AboutLeft = styled.ul`
         li {
             position: relative;
             width: 91.7949vw;
+            height: 260px;
             &:first-child {
                 width: 91.7949vw;
                 position: absolute;
@@ -459,9 +460,8 @@ export const AboutLeft = styled.ul`
                 display: flex;
                 flex-direction: column;
                 width: 278px;
-                height: 189px;
                 align-items: center;
-                margin: 0;
+                margin-bottom: 108px;
                 .titleWrap {
                     display: flex;
                     align-items: center;
@@ -490,16 +490,21 @@ export const AboutLeft = styled.ul`
                         margin-left: 0;
                         white-space: nowrap;
                         line-height: 1;
+                        font-weight: 500;
                     }
                 }
 
                 p {
                     color: #fff;
                     font-size: 2.5641vw;
-                    font-weight: 500;
+                    font-weight: 400;
                     display: flex;
                     text-align: center;
                     justify-content: center;
+                    display: none;
+                    &:first-of-type {
+                        display: block;
+                    }
                 }
             }
             .goto {
@@ -587,17 +592,21 @@ export const AboutRight = styled.ul`
         display: flex;
         padding: 0 4.1026vw;
         margin-top: 6.1538vw;
+        height: 260px;
         li {
             position: relative;
             width: 91.7949vw;
+            height: 260px;
             &:first-child {
                 position: relative;
                 z-index: 1;
                 width: 91.7949vw;
+                height: 260px;
                 border-radius: 0;
             }
             &:last-child {
                 width: 91.7949vw;
+                height: 350px;
                 position: absolute;
                 z-index: 2;
                 display: flex;
@@ -639,15 +648,20 @@ export const AboutRight = styled.ul`
                         margin-left: 0;
                         white-space: nowrap;
                         line-height: 1;
+                        font-weight: 500;
                     }
                 }
                 p {
                     color: #fff;
                     font-size: 2.5641vw;
-                    font-weight: 500;
+                    font-weight: 400;
                     display: flex;
                     text-align: center;
                     justify-content: center;
+                    display: none;
+                    &:first-of-type {
+                        display: block;
+                    }
                 }
             }
             .goto {

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const MainStyle = styled.main`
     .banner-wrap {
         padding-top: 30px;
+        @media screen and (max-width: 600px) {
+            padding-top: 0;
+        }
     }
     .inner {
     }

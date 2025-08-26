@@ -45,7 +45,10 @@ const Navbar = () => {
                 {authed ? (
                     <>
                         <li>
-                            <Link to="/">{user.name}님 환영합니다</Link>
+                            <Link>{user.name}님 환영합니다</Link>
+                        </li>
+                        <li>
+                            <Link to="/myPage">마이페이지</Link>
                         </li>
                         <li onClick={onLogout}>
                             <Link>로그아웃</Link>
@@ -134,9 +137,6 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to="/specialBrand">특화브랜드관</Link>
-                    </li>
-                    <li>
-                        <Link to="/healFood">구독투홈</Link>
                     </li>
                     <li>
                         <Link to="/magazine">매거진</Link>

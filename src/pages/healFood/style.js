@@ -90,7 +90,6 @@ export const HealFoodStyle = styled.div`
                 }
                 &:hover img {
                     transform: scale(1.1);
-                    cursor: pointer;
                 }
                 strong {
                     font-size: 20px;

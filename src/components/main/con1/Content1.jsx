@@ -17,8 +17,7 @@ const Content1 = () => {
     const { AllDataList } = useSelector((state) => state.cart);
     const bestTop5 = AllDataList.filter(
         (product) =>
-            product.id && // 🔴 id가 있는 애들만
-            product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 10)
+            product.id && product.tags?.some((tag) => tag.name === '베스트' && tag.rank <= 10)
     );
     const bestTop6 = AllDataList.filter(
         (product) =>
@@ -52,11 +51,11 @@ const Content1 = () => {
                                 spaceBetween={24}
                                 freeMode={true}
                                 autoplay={{
-                                    delay: 2000, // 2초마다 자동 이동
-                                    disableOnInteraction: false, // 유저 터치 후에도 autoplay 유지
-                                    pauseOnMouseEnter: true, // 마우스 올리면 멈춤
+                                    delay: 2000,
+                                    disableOnInteraction: false,
+                                    pauseOnMouseEnter: true,
                                 }}
-                                speed={1000} // 애니메이션 속도
+                                speed={1000}
                                 loop={true}
                             >
                                 {bestTop5.map((product) => (

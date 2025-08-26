@@ -9,29 +9,20 @@ const Support = () => {
     const [activeTab, setActiveTab] = useState('all');
     const isIndex = useMatch({ path: '/support', end: true });
     const navigate = useNavigate();
-
     const goTab = (tab) => {
         setActiveTab(tab);
-        // 탭 화면은 /support 인덱스에서만 보여주기 위해 보장
         if (!isIndex) navigate('/support');
     };
-
     return (
         <SupportWrap>
             <div className="inner">
                 <SupporMainTap>
                     <h2>고객센터</h2>
                     <div className="tab">
-                        <p
-                            className={activeTab === 'all' ? 'on' : ''}
-                            onClick={() => goTab('all')}
-                        >
+                        <p className={activeTab === 'all' ? 'on' : ''} onClick={() => goTab('all')}>
                             ALL
                         </p>
-                        <p
-                            className={activeTab === 'faq' ? 'on' : ''}
-                            onClick={() => goTab('faq')}
-                        >
+                        <p className={activeTab === 'faq' ? 'on' : ''} onClick={() => goTab('faq')}>
                             자주 묻는 질문
                         </p>
                         <p
@@ -49,18 +40,11 @@ const Support = () => {
                     </div>
                 </SupporMainTap>
 
-                {/* ✅ 인덱스(/support)일 때만 탭 콘텐츠 렌더 */}
                 {isIndex && (
                     <>
-                        {(activeTab === 'all' || activeTab === 'faq') && (
-                            <Faq />
-                        )}
-                        {(activeTab === 'all' || activeTab === 'notice') && (
-                            <Notice />
-                        )}
-                        {(activeTab === 'all' || activeTab === 'customer') && (
-                            <Customer />
-                        )}
+                        {(activeTab === 'all' || activeTab === 'faq') && <Faq />}
+                        {(activeTab === 'all' || activeTab === 'notice') && <Notice />}
+                        {(activeTab === 'all' || activeTab === 'customer') && <Customer />}
                     </>
                 )}
 

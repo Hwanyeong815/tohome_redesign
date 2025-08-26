@@ -35,6 +35,7 @@ import Notice from './components/support/notice/Notice';
 import { useEffect, useState } from 'react';
 import Spinner from './components/spinner';
 import ProductResult from './components/product/ProducTools/ProductResult';
+import DetailReview from './components/product/productDetail/DetailReview';
 
 const App = () => {
     const [isSpinner, setIsSpinner] = useState(true);

@@ -164,6 +164,7 @@ export const MainRecomStyle = styled.div`
     }
     @media screen and (max-width: 600px) {
         height: 97.6923vw;
+        margin-top: 0;
         h2 {
             top: 0;
         }
@@ -376,6 +377,11 @@ export const Content2Style = styled.div`
             }
             .des {
                 display: none;
+            }
+        }
+        section {
+            &:nth-child(2) {
+                margin-top: 0;
             }
         }
     }

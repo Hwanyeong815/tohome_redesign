@@ -11,7 +11,6 @@ const FaqList = ({ selectedTag, filteredFaqs, openFaqIds, dispatch, faqs }) => {
                     ? '전체'
                     : ` ${selectedTag}`}
             </h3>
-
             {filteredFaqs.map((faq) => (
                 <FaqItem
                     key={faq.faqId}

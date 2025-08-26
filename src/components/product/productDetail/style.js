@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const DetailSideStyle = styled.div`
     border-right: 1px solid #000;
     padding: 77px 40px;
-    padding-left: 70px;
-
+    padding-left: 20px;
+    /* padding: 0 20px; */
     width: 568px;
     margin-right: 40px;
 
@@ -386,10 +386,7 @@ export const DetailArtMainStyle = styled.div`
         }
     }
     .box3 {
-        /* display: flex; */
-        /* justify-content: space-between; */
         width: 1030px;
-        /* border: 1px solid #000; */
         padding: 130px 0;
         padding-right: 30px;
         .title {
@@ -403,10 +400,7 @@ export const DetailArtMainStyle = styled.div`
         }
         .content {
             display: flex;
-            align-items: center;
-            gap: 30px;
-
-            justify-content: flex-start;
+            justify-content: space-between;
 
             .profile {
                 min-width: 250px;

@@ -1186,7 +1186,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1246,7 +1247,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1306,7 +1308,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1366,7 +1369,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1426,7 +1430,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1486,7 +1491,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1546,7 +1552,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1606,7 +1613,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1665,7 +1673,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1724,7 +1733,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1783,7 +1793,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1845,7 +1856,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1904,7 +1916,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1963,7 +1976,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2022,7 +2036,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2080,7 +2095,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2139,7 +2155,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2198,7 +2215,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2258,7 +2276,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2315,7 +2334,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2372,7 +2392,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2429,7 +2450,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2486,7 +2508,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15507,7 +15530,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15566,7 +15590,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15628,7 +15653,8 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy:
+                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 

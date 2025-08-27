@@ -1,6 +1,6 @@
 import React from 'react';
 import { MyPageStyle } from './style';
-import MyPageItem from '../../components/mypage/MyPageItem';
+import MyPageItem from '../../components/myPage/MyPageItem';
 
 const MyPage = () => {
     return (

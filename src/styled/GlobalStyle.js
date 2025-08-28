@@ -12,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
         word-break: keep-all;
   }
+  .pretendard {
+    font-family: 'Pretendard' !important;
+  }
+ 
+
   a, button {
     text-decoration: none;
     color:#333; 

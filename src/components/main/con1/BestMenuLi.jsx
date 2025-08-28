@@ -5,7 +5,7 @@ const BestMenuLi = ({ product }) => {
     const navigate = useNavigate();
     const onGo = () => {
         navigate(`product/${product.num}`);
-         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     };
     return (
         <li onClick={onGo} className="main-best-li">
@@ -13,7 +13,7 @@ const BestMenuLi = ({ product }) => {
                 <img src={thumbnail} alt="" />
             </div>
             <h2>{name}</h2>
-            <h3>
+            <h3 className="pretendard">
                 {des}
                 {/* {des.split('\n').map((line, idx) => (
                     <span key={idx}>

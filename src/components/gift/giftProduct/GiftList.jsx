@@ -41,7 +41,7 @@ const GiftList = ({ selectedSub }) => {
     return (
         <GiftProducts>
             <div>
-                <ul className="category-sort">
+                <ul className="category-sort pretendard">
                     {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
                         <li
                             key={type}

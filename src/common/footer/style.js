@@ -114,6 +114,9 @@ export const FooterBodyUl = styled.ul`
         .option {
             text-align: center;
         }
+        p {
+            margin-bottom: 16px;
+        }
         div:not(.option) {
             margin-top: 20px;
             border-top: 1px solid #333;
@@ -220,10 +223,11 @@ export const FooterBodyUl = styled.ul`
 
 export const FooterInfoUl = styled.ul`
     margin: 50px auto;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     width: 1060px;
     word-break: keep-all;
+    font-family: 'pretendard';
     li {
         margin-bottom: 20px;
         display: flex;

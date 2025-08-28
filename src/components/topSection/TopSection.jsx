@@ -6,7 +6,7 @@ const TopSection = ({ title, subtitle, $borderTop, $borderBottom }) => {
                 <img src="/images/directDelivery/icon/title.png" alt="" />
                 {title}
             </h2>
-            <p>{subtitle}</p>
+            <p className="pretendard">{subtitle}</p>
         </TitleBox>
     );
 };

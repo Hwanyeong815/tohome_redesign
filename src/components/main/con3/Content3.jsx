@@ -63,7 +63,7 @@ const Content3 = () => {
                     onClick={onClick1}
                     className="main-about position-fix"
                     data-aos="fade-up"
-                     data-aos-anchor-placement="bottom-bottom"
+                    data-aos-anchor-placement="bottom-bottom"
                 >
                     <h2>현대식품관 BRAND STORY</h2>
                     <div>
@@ -77,11 +77,11 @@ const Content3 = () => {
                     className="brand-about"
                     onClick={onClick2}
                     data-aos="fade-up"
-                     data-aos-anchor-placement="bottom-bottom"
+                    data-aos-anchor-placement="bottom-bottom"
                 >
                     <h2 className="main-title">브랜드로 만나는 미식의 깊이</h2>
                     <strong>Connecting Taste & Story</strong>
-                    <div className="txts">
+                    <div className="txts pretendard fw300">
                         <p>
                             전통과 혁신, 지역과 일상, 미식과 기술을 잇는 현대식품관의 특화브랜드를
                             소개합니다. <br /> ‘명인명촌, 원테이블, 동행마켓, 예향’ <br /> 각기 다른
@@ -110,8 +110,8 @@ const Content3 = () => {
                         <img src="images/main/mobile_dawn.png" alt="" className="mobileDawn" />
                         <div className="txts">
                             <h2>투홈 새벽배송</h2>
-                            <p>“월요일부터 일요일까지 하루도 빠짐없이</p>
-                            <p>투홈은 새벽을 부지런히 달립니다.”</p>
+                            <p className="pretendard">“월요일부터 일요일까지 하루도 빠짐없이</p>
+                            <p className="pretendard">투홈은 새벽을 부지런히 달립니다.”</p>
                         </div>
                     </div>
                 </section>

@@ -6,7 +6,7 @@ const SubscribeLi = ({ dishes }) => {
                 <img src={thumbnail} alt={title} />
             </div>
             <h3>{title}</h3>
-            <p>{des}</p>
+            <p className="pretendard fw300">{des}</p>
         </li>
     );
 };

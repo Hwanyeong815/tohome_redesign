@@ -43,6 +43,7 @@ export const ContentStyle = styled.div`
         text-align: center;
         color: #666;
         font-size: 25px;
+        font-family: 'Pretendard';
     }
     .all-btn {
     }

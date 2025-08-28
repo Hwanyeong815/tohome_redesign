@@ -42,21 +42,21 @@ const Content4 = () => {
                                     src="images/icon/icon_sidedish1.png"
                                     alt="images/icon/icon_sidedish1.png"
                                 />
-                                <p>신선한 식재료</p>
+                                <p className="pretendard fw400">신선한 식재료</p>
                             </div>
                             <div className="icons-box">
                                 <img
                                     src="images/icon/icon_sidedish2.png"
                                     alt="images/icon/icon_sidedish2.png"
                                 />
-                                <p>정성 가득한 맛</p>
+                                <p className="pretendard fw400">정성 가득한 맛</p>
                             </div>
                             <div className="icons-box">
                                 <img
                                     src="images/icon/icon_sidedish3.png"
                                     alt="images/icon/icon_sidedish3.png"
                                 />
-                                <p>합리적인 가격</p>
+                                <p className="pretendard fw400">합리적인 가격</p>
                             </div>
                         </div>
                         <button className="more1" onClick={onClick1}>
@@ -73,7 +73,7 @@ const Content4 = () => {
                     className="health-sub-wrap"
                     onClick={onClick2}
                     data-aos="fade-up"
-                      data-aos-anchor-placement="top-center"
+                    data-aos-anchor-placement="top-center"
                 >
                     <HealthList />
                 </section>

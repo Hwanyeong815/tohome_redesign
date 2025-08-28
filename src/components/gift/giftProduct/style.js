@@ -23,6 +23,7 @@ export const GiftListTopWrap = styled.ul`
     padding: 30px 0 100px;
     border-top: 1px solid #666;
     li {
+        font-family: 'pretendard';
         margin-left: 40px;
         font-size: 17px;
         cursor: pointer;

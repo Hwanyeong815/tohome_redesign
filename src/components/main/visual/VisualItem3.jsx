@@ -71,7 +71,7 @@ const VisualItem3 = ({ visual, isActive }) => {
                         </span>
                     ))}
                 </h3>
-                <p>
+                <p className="pretendard fw400">
                     {des.split('\n').map((line, idx) => (
                         <span key={idx}>
                             {line}

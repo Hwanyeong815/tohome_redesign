@@ -64,26 +64,28 @@ const Content5 = () => {
                 <section
                     className="main-today-recipe"
                     data-aos="fade-up"
-                       data-aos-anchor-placement="top-center"
+                    data-aos-anchor-placement="top-center"
                 >
                     <h2 className="main-title">오늘의 레시피</h2>
                     <p className="title2">
                         <span>오늘 뭐 먹지? 고민은 그만</span>
-                        매일 먹어도 질리지 않는 정성 가득 집밥 큐레이션
+                        <p className="pretendard">
+                            매일 먹어도 질리지 않는 정성 가득 집밥 큐레이션
+                        </p>
                     </p>
                     <div className="recipe-head">
                         <div className="left">
                             <img src="images/main/main-recipe.png" alt="" />
                         </div>
                         <div className="right">
-                            <em>제철 식재료를 이용한 맛있는 반찬</em>
+                            <em className="pretendard fw300">제철 식재료를 이용한 맛있는 반찬</em>
                             <h3>으깬 감자구이</h3>
                             <strong>
                                 <img src="images/icon/icon-park-outline_cook.svg" alt="" />
                                 <span>조리시간</span>
                                 1시간
                             </strong>
-                            <p>
+                            <p className="pretendard fw300">
                                 겉은 바삭, 속은 촉촉 - 간편하게 즐기는 으깬 감자구이 <br /> 부드럽게
                                 으깬 감자를 한입 크기로 뭉쳐 노릇하게 구워낸 감자구이입니다. <br />{' '}
                                 겉은 바삭하고 속은 포슬포슬한 식감이 매력적이에요. <br /> 오븐이나
@@ -117,7 +119,7 @@ const Content5 = () => {
                     className="main-gift-wrap"
                     onClick={onClick1}
                     data-aos="fade-up"
-                     data-aos-anchor-placement="top-center"
+                    data-aos-anchor-placement="top-center"
                 >
                     <div className="txt-box">
                         <img src="images/main/main_gift01.png" alt="모눈종이" />
@@ -128,10 +130,11 @@ const Content5 = () => {
                                 투홈의 선물하기를 이용하세요!
                             </span>
                         </div>
-                        <p>
-                            진심을 담아 전하는 순간, 선물이 특별해지는 이유 투홈의 선물하기를
-                            이용하세요!
+                        <p className="pretendard">
+                            진심을 담아 전하는 순간, 선물이 특별해지는 이유
+                            <br /> 투홈의 선물하기를 이용하세요!
                         </p>
+                        <p className="pretendard"></p>
                     </div>
                     <img src="images/main/main_gift.png" alt="main_gift.png" className="back" />
                     <img

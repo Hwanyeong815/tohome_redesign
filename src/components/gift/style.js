@@ -31,7 +31,8 @@ export const GiftPointWrap = styled.div`
             p {
                 font-size: 13px;
                 color: #666;
-                font-weight: 300;
+                font-weight: 400;
+                font-family: 'pretendard';
             }
         }
         &:last-child {
@@ -75,6 +76,7 @@ export const GiftTutorialWrap = styled.div`
             padding-bottom: 50px;
             & li > ul > li {
                 line-height: 2.5;
+                font-weight: 300;
             }
             h4 {
                 font-size: 18px;
@@ -86,14 +88,16 @@ export const GiftTutorialWrap = styled.div`
                 border: 1px solid #3c6039;
                 padding: 7px 10px;
                 margin-right: 10px;
+                font-weight: 500;
             }
         }
         .tutorial-dsc {
             margin-top: 50px;
-            font-size: 12px;
+            font-size: 14px;
+            font-family: 'pretendard';
             p {
-                line-height: 2.3;
-                font-weight: 300;
+                line-height: 2.1;
+                font-weight: 400;
                 background-image: url('/images/gift/check.png');
                 background-repeat: no-repeat;
                 background-position: 0 50%;

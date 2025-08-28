@@ -75,7 +75,7 @@ const VisualItem5 = ({ visual, isActive }) => {
                 <h3 className="mobileOnlyTit">
                     <img src="/images/main/mobileBanner5tit.png" alt="" />
                 </h3>
-                <p>
+                <p className="pretendard fw400">
                     {des.split('\n').map((line, idx) => (
                         <span key={idx}>
                             {line}

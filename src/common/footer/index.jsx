@@ -10,7 +10,7 @@ const Footer = () => {
                 <FooterBody />
                 <FooterInfo />
             </div>
-            <div className="copyright">
+            <div className="copyright pretendard">
                 Copyright © Hyundai Department Store. All rights reserved.
             </div>
         </FooterStyle>

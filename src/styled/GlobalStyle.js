@@ -14,6 +14,18 @@ const GlobalStyle = createGlobalStyle`
   }
   .pretendard {
     font-family: 'Pretendard' !important;
+    &.fw400 {
+      font-weight: 400 !important;
+    }
+    &.fw300 {
+      font-weight: 300 !important;
+    }
+    &.fw200 {
+      font-weight: 200 !important;
+    }
+    &.fz16{
+      font-size: 16px;
+    }
   }
  
 

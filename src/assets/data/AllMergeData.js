@@ -1150,8 +1150,8 @@ export default [
     {
         id: 1,
         num: 50,
-        name: '[그리니팅] \n 진짜레몬 (80ml*5개입)',
-        des: '레몬 4개를 통쨰로 한 팩에. 시칠리아 레몬공장에서 착즙한 유기농 레몬즙',
+        name: '[그리니팅] \n진짜레몬 (80ml*5개입)',
+        des: '레몬 4개를 통쨰로 한 팩에. \n시칠리아 레몬공장에서 착즙한 유기농 레몬즙',
         price: 27400,
         discountedPrice: 20550,
         isDiscounted: true,
@@ -1186,8 +1186,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1211,7 +1210,7 @@ export default [
     {
         id: 2,
         num: 51,
-        name: '[새벽시장] \n 수박 7kg (1통)',
+        name: '[새벽시장] \n수박 7kg (1통)',
         des: '봄 여름 단짝, 달콤한 수박. 시원하고 아삭한 과육과 풍부한 과즙에서 느껴지는 달콤함!',
         price: 57200,
         discountedPrice: null,
@@ -1247,8 +1246,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1273,7 +1271,7 @@ export default [
         id: 3,
         num: 52,
         name: '[새벽시장] \n불로초 감귤 1.5kg',
-        des: '제주감귤 대표 브랜드로 최상위의 맛과 영양. 입안가득 새콤달콤한 과즙을 느껴보세요!',
+        des: '제주감귤 대표 브랜드로 최상위의 맛과 영양.\n입안가득 새콤달콤한 과즙을 느껴보세요!',
         price: 27200,
         discountedPrice: 24480,
         isDiscounted: true,
@@ -1308,8 +1306,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1333,8 +1330,8 @@ export default [
     {
         id: 4,
         num: 53,
-        name: '[로버츠베리에] 야생 빌베리 (12pack)',
-        des: '한 잔에 담긴 핀란드 야생 베리. 껍질과 씨앗까지 온전히 담은 풍부한 영양 음료',
+        name: '[로버츠베리에] \n야생 빌베리 (12pack)',
+        des: '한 잔에 담긴 핀란드 야생 베리. \n껍질과 씨앗까지 온전히 담은 풍부한 영양 음료',
         price: 27200,
         discountedPrice: 24480,
         isDiscounted: true,
@@ -1369,8 +1366,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1394,7 +1390,7 @@ export default [
     {
         id: 5,
         num: 54,
-        name: '[리치몬드 과자점] 밤 파이 세트 (10개입)',
+        name: '[리치몬드 과자점] \n밤 파이 세트 (10개입)',
         des: '정성스럽게 빚은 달콤함. 밤을 닮은 둥근 모양 속 알밤을 통째 숨기고 있는 밤파이',
         price: 33600,
         discountedPrice: null,
@@ -1430,8 +1426,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1455,7 +1450,7 @@ export default [
     {
         id: 6,
         num: 55,
-        name: '[소바쿠] 쫄깃한 백메밀소바 532g',
+        name: '[소바쿠] \n쫄깃한 백메밀소바 532g',
         des: '수령 후 냉장보관 권장합니다. 쌀은 신선식품으로 수령 후 2주이내 품질관련 문의 가능합니다.',
         price: 9900,
         discountedPrice: null,
@@ -1491,8 +1486,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1516,7 +1510,7 @@ export default [
     {
         id: 7,
         num: 56,
-        name: '[경복궁BLACK] 한우 떡갈비 200g (냉동)',
+        name: '[경복궁BLACK] \n한우 떡갈비 200g (냉동)',
         des: '수령 후 냉장보관 권장합니다. 쌀은 신선식품으로 수령 후 2주이내 품질관련 문의 가능합니다.',
         price: 9900,
         discountedPrice: null,
@@ -1552,8 +1546,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1577,8 +1570,8 @@ export default [
     {
         id: 8,
         num: 57,
-        name: '[상어알분식] 한입 쌀 떡볶이 860g (3~4인분)',
-        des: '수령 후 냉장보관 권장합니다. 쌀은 신선식품으로 수령 후 2주이내 품질관련 문의 가능합니다.',
+        name: '[상어알분식] \n한입 쌀 떡볶이 860g (3~4인분)',
+        des: '두툼한 쌀 가래떡이 쫀득쫀득',
         price: 12900,
         discountedPrice: null,
         isDiscounted: false,
@@ -1613,8 +1606,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1639,7 +1631,7 @@ export default [
         // https://tohome.thehyundai.com/front/pd/pdd/productDetail.do?slitmCd=S02006004336
         id: 9,
         num: 58,
-        name: '[새벽시장] \n 천봉엑셀라 복숭아 5입',
+        name: '[새벽시장] \n천봉엑셀라 복숭아 5입',
         info: '복숭아 본연의 향긋한 향미와 핑크빛 과육',
         des: '복숭아 본연의 향긋한 향미와 핑크빛 과육',
         price: 32900,
@@ -1673,8 +1665,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1698,7 +1689,7 @@ export default [
     {
         id: 10,
         num: 59,
-        name: '[주인환 농부] \n 머스크 멜론, 2종',
+        name: '[주인환 농부] \n머스크 멜론, 2종',
         info: '달콤한 향과 맛, 부드러운 식감의 머스크 멜론',
         des: '달콤한 향과 맛, 부드러운 식감의 머스크 멜론',
         price: 28000,
@@ -1733,8 +1724,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1758,7 +1748,7 @@ export default [
     {
         id: 11,
         num: 60,
-        name: '[새벽시장] \n 후무사 자두 900g',
+        name: '[새벽시장] \n후무사 자두 900g',
         info: '후숙 없이 신선할 때 즐기기 좋은 후무사 자두',
         des: '후숙 없이 신선할 때 즐기기 좋은 후무사 자두',
         price: 20300,
@@ -1793,8 +1783,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1818,7 +1807,7 @@ export default [
     {
         id: 12,
         num: 61,
-        name: '[새벽시장] \n 샤인머스캣 포도 1송이 (640g 이상)',
+        name: '[새벽시장] \n샤인머스캣 포도 1송이 (640g 이상)',
         info: '알알이 꽉찬 달콤한 과즙의 샤인머스캣',
         des: '알알이 꽉찬 달콤한 과즙의 샤인머스캣',
         price: 28000,
@@ -1856,8 +1845,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1881,7 +1869,7 @@ export default [
     {
         id: 13,
         num: 62,
-        name: '[새벽시장] \n 수박 7kg (1통)',
+        name: '[새벽시장] \n수박 7kg (1통)',
         info: '시원하고 아삭한 과육과 풍부한 과즙의 달콤한 수박',
         des: '시원하고 아삭한 과육과 풍부한 과즙의 달콤한 수박',
         price: 57200,
@@ -1916,8 +1904,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -1941,7 +1928,7 @@ export default [
     {
         id: 14,
         num: 63,
-        name: '[경복궁BLACK] \n 영양삼계탕 (냉동)',
+        name: '[경복궁BLACK] \n영양삼계탕 (냉동)',
         info: '몸에 좋은 한방 약재를 고아낸 삼계탕',
         des: '몸에 좋은 한방 약재를 고아낸 삼계탕',
         price: 15000,
@@ -1976,8 +1963,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2001,7 +1987,7 @@ export default [
     {
         id: 15,
         num: 64,
-        name: '[청해포구] \n 백점복 전복 선물세트',
+        name: '[청해포구] \n백점복 전복 선물세트',
         info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
         des: '',
         price: 82000,
@@ -2036,8 +2022,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2061,7 +2046,7 @@ export default [
     {
         id: 16,
         num: 65,
-        name: '[풍천장어갤러리] \n 고창 풍천장어 2마리',
+        name: '[풍천장어갤러리] \n고창 풍천장어 2마리',
         info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
         des: '',
         price: 55800,
@@ -2095,8 +2080,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2120,7 +2104,7 @@ export default [
     {
         id: 17,
         num: 66,
-        name: '[경복궁BLACK] \n 영양갈비탕 (냉동)',
+        name: '[경복궁BLACK] \n영양갈비탕 (냉동)',
         info: '국내 1호 유기수산물(친환경) 인증을 받은 완도산 전복 선물세트입니다.',
         des: '1kg(2인분), 2kg(4인분), 3kg(6인분), 4kg(8인분), 5kg(10인분) 입니다. 고창 풍천장어 활어 손질 후 초벌 중량 600g 2kg 이상 주문시부터 무료 배송입니다.',
         price: 15000,
@@ -2155,8 +2139,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2180,7 +2163,7 @@ export default [
     {
         id: 18,
         num: 67,
-        name: '[압구정 예향] \n 정성 가득 보양 삼계탕',
+        name: '[압구정 예향] \n정성 가득 보양 삼계탕',
         info: '30년 전통의 명가 경복궁의 육향 그윽한 갈비탕',
         des: '',
         price: 18000,
@@ -2215,8 +2198,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2240,7 +2222,7 @@ export default [
     {
         id: 19,
         num: 68,
-        name: '[새벽시장] 한입 감자 (700g)',
+        name: '[새벽시장] \n한입 감자 (700g)',
         des: '한입에 쏙, 통으로 먹기 좋은 한입감자',
         price: 7100,
         discountedPrice: '',
@@ -2276,8 +2258,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2301,7 +2282,7 @@ export default [
     {
         id: 20,
         num: 69,
-        name: '[모니니] 엑스트라버진올리브유 스프레이 (200ml)',
+        name: '[모니니] \n엑스트라버진올리브유 스프레이 (200ml)',
         des: '',
         price: 7100,
         discountedPrice: '',
@@ -2334,8 +2315,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2359,7 +2339,7 @@ export default [
     {
         id: 21,
         num: 70,
-        name: '[새벽시장] 깐쪽파 90g',
+        name: '[새벽시장] \n깐쪽파 90g',
         des: '',
         price: 7100,
         discountedPrice: '',
@@ -2392,8 +2372,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2417,7 +2396,7 @@ export default [
     {
         id: 22,
         num: 71,
-        name: '[새벽시장] 레몬 3~4입',
+        name: '[새벽시장] \n레몬 3~4입',
         des: '',
         price: 7100,
         discountedPrice: '',
@@ -2450,8 +2429,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -2475,7 +2453,7 @@ export default [
     {
         id: 23,
         num: 72,
-        name: '[백설] 오천년의 신비 명품 구운소금 (400g)',
+        name: '[백설] \n오천년의 신비 명품 구운소금 (400g)',
         des: '',
         price: 7100,
         discountedPrice: '',
@@ -2508,8 +2486,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15494,7 +15471,7 @@ export default [
     {
         id: 24,
         num: 614,
-        name: '[새벽시장] 복숭아(황도) 5입(1.2kg)',
+        name: '[새벽시장] \n복숭아(황도) 5입(1.2kg)',
         des: '노란빛을 품은 황도복숭아',
         price: 23100,
         discountedPrice: '',
@@ -15530,8 +15507,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15590,8 +15566,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 
@@ -15615,7 +15590,7 @@ export default [
     {
         id: 26,
         num: 616,
-        name: '[경복궁BLACK] 꼬리곰탕 600g',
+        name: '[경복궁BLACK] \n꼬리곰탕 600g',
         info: '',
         des: '전통 약재 육수를 더한 꼬리곰탕',
         price: 11200,
@@ -15653,8 +15628,7 @@ export default [
 
             originLaw: '농수산물의 원산지 표시 등에 관한 법률에 따름',
 
-            expirationPolicy:
-                '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
+            expirationPolicy: '주문일 기준 소비기한이 2일 이상 남은 상품을 취급하고 있습니다.',
 
             itemName: '해당사항없음',
 

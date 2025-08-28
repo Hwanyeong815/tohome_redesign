@@ -12,7 +12,7 @@ const FooterBody = () => {
             <li>
                 <div>
                     <em>고객센터</em>
-                    <p>오전 7시 ~ 오후 9시</p>
+                    <p className="pretendard">오전 7시 ~ 오후 9시</p>
                     <strong>
                         <img src="/images/icon/icon_call.png" alt="전화기" />
                         1800.9549
@@ -20,7 +20,9 @@ const FooterBody = () => {
                 </div>
                 <div>
                     <em>공지사항</em>
-                    <h5>SKT 이용 고객 대상 피해 예방 수칙안내 휴면계정 해제 안내</h5>
+                    <h5 className="pretendard fw300">
+                        SKT 이용 고객 대상 피해 예방 수칙안내 휴면계정 해제 안내
+                    </h5>
                     <img src="/images/icon/icon_plus.png" alt="플러스" />
                 </div>
             </li>
@@ -42,20 +44,19 @@ const FooterBody = () => {
             </li>
             <li className="utill">
                 <div className="option">Family Site</div>
-                <div>
+                <div className="pretendard">
                     <p onClick={onAbout}>
                         <Link>브랜드소개</Link>
                     </p>
                     <p>이용약관</p>
-
                     <p>개인정보처리방침</p>
                     <p>영상기기운영방침</p>
                 </div>
             </li>
             <li className="utill-mobile-wrap">
-                 <p onClick={onAbout}>
-                        <Link>브랜드소개</Link>
-                    </p>
+                <p onClick={onAbout}>
+                    <Link>브랜드소개</Link>
+                </p>
                 <p>이용약관</p>
                 <p>개인정보처리방침</p>
                 <p>청소년보호정책</p>

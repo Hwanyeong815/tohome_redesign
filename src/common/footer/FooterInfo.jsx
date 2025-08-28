@@ -3,7 +3,7 @@ import { FooterInfoUl } from './style';
 const FooterInfo = () => {
     return (
         <FooterInfoUl>
-            <li>(주)현대백화점</li>
+            <li style={{ fontSize: 16 }}>(주)현대백화점</li>
             <li>
                 <div>
                     <p>대표이사 : 정지선, 정지영</p>

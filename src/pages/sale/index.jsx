@@ -59,7 +59,7 @@ const Sale = () => {
                         subtitle={'특별한 가격으로 만나는 상품, 지금이 가장 좋은 기회예요.'}
                     />
                 </section>
-                <div className="filter-wrap">
+                <div className="filter-wrap pretendard">
                     {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
                         <p
                             key={type}

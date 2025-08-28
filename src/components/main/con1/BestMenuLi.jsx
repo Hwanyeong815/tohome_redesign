@@ -13,14 +13,13 @@ const BestMenuLi = ({ product }) => {
                 <img src={thumbnail} alt="" />
             </div>
             <h2>{name}</h2>
-            <h3 className="pretendard">
-                {des}
-                {/* {des.split('\n').map((line, idx) => (
+            <h3 className="pretendard fw300">
+                {des.split('\n').map((line, idx) => (
                     <span key={idx}>
                         {line}
                         <br />
                     </span>
-                ))} */}
+                ))}
             </h3>
 
             <p>상품보기</p>

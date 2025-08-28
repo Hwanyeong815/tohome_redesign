@@ -61,7 +61,7 @@ const NewProducts = () => {
                     />
                 </section>
 
-                <div className="filter-wrap">
+                <div className="filter-wrap pretendard">
                     {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
                         <p
                             key={type}

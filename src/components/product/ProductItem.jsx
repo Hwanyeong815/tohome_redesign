@@ -99,7 +99,7 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
                 </p>
             </div>
 
-            <div className="des">{info}</div>
+            <div className="des pretendard fw300">{info}</div>
         </ProductItemStyle>
     );
 };

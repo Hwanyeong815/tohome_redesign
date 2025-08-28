@@ -80,6 +80,7 @@ export const Content05Style = styled.div`
                     display: flex;
                     align-items: center;
                     font-size: 20px;
+                    margin: 12px 0 15px;
                     img {
                         margin-right: 8px;
                     }

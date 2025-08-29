@@ -93,7 +93,6 @@ const FloatingMenu = ({ setIsOpen }) => {
 
                     <button type="button close" onClick={() => setIsOpen(false)}>
                         <p>
-                            {' '}
                             <IoClose />
                         </p>
                     </button>

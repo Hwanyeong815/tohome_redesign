@@ -19,13 +19,15 @@ export const SaleWrap = styled.div`
         justify-content: right;
         font-size: 15px;
         margin-bottom: 30px;
+        font-weight: 400;
         p {
             margin-left: 40px;
             cursor: pointer;
             position: relative;
             color: #666;
             &.on {
-                color: #477c42 !important;
+                color: #3c6039 !important;
+                font-weight: 600;
             }
             &:not(:last-child) {
                 &::after {

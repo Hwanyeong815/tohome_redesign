@@ -49,6 +49,8 @@ export const AboutTopWrap = styled.div`
         }
     }
     .about-text {
+        font-family: 'pretendard';
+        font-weight: 400;
         width: 1000px;
         margin: auto;
         background: rgba(255, 255, 255, 0.95);
@@ -357,7 +359,7 @@ export const AboutSlideItem = styled.div`
 export const AboutGotoWrap = styled.div`
     margin-top: 150px;
     h2 {
-        font-size: 25px;
+        font-size: 25px !important;
     }
     @media screen and (max-width: 600px) {
         margin-top: 12.3077vw;
@@ -412,10 +414,14 @@ export const AboutLeft = styled.ul`
                 color: #3c6039;
                 margin-bottom: 30px;
                 margin-left: 10px;
+                font-family: 'pretendard';
+                font-weight: 400;
             }
             p {
                 line-height: 2;
                 margin-left: 10px;
+                font-family: 'pretendard';
+                font-weight: 300;
             }
         }
         .goto {
@@ -566,10 +572,14 @@ export const AboutRight = styled.ul`
                 color: #3c6039;
                 margin-bottom: 30px;
                 margin-left: 10px;
+                font-family: 'pretendard';
+                font-weight: 400;
             }
             p {
                 line-height: 2;
                 margin-left: 10px;
+                font-family: 'pretendard';
+                font-weight: 300;
             }
         }
         .goto {

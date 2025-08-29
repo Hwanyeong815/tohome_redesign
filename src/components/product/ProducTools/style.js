@@ -14,7 +14,6 @@ export const ProductTopStyle = styled.ul`
     li {
         cursor: pointer;
         max-width: 90px;
-        /* border: 1px solid #000; */
         white-space: nowrap;
         padding: 5px 20px;
         display: flex;
@@ -22,6 +21,8 @@ export const ProductTopStyle = styled.ul`
         justify-content: center;
         font-size: ${(props) => props.fontSize || '15px'};
         font-family: 'Pretendard';
+        font-weight: 400;
+        font-size: 18px;
         &.on {
             font-weight: 600;
             color: #3c6039;

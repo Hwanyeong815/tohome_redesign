@@ -16,15 +16,18 @@ export const FaqStyle = styled.section`
         /* border: 1px solid #000; */
     }
     .accr {
+        font-family: 'pretendard';
         cursor: pointer;
         user-select: none;
         width: 100%;
         &.on {
             .accHead {
-                border: 2px solid #3c6039;
+                border: 2px solid #ff7259;
                 .circle {
                     color: #fff;
-                    background-color: #3c6039;
+                    background-color: #ff7259;
+                    font-size: 24px;
+                    font-family: 'Arita buri';
                 }
             }
             .accBody {
@@ -41,13 +44,15 @@ export const FaqStyle = styled.section`
             height: 70px;
             padding: 0 20px;
             .circle {
+                font-family: 'Arita buri';
+                font-size: 24px;
                 width: 40px;
                 height: 40px;
                 line-height: 40px;
                 border-radius: 100px;
                 text-align: center;
                 margin-right: 10px;
-                padding: 7px 10px;
+                padding: 7px 12px;
                 /* box-sizing: border-box; */
             }
         }

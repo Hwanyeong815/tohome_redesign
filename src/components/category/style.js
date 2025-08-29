@@ -28,16 +28,18 @@ export const CategorySub = styled.ul`
     width: 1200px;
     margin: 30px auto 0;
     justify-content: center;
-    font-size: 17px;
+    font-size: 18px;
+    font-family: 'pretendard';
+    font-weight: 400;
     li {
         margin-left: 40px;
         cursor: pointer;
         &:first-child {
             margin-left: 0;
-            color: #3c6039;
         }
         &.active {
-            color: #386633;
+            color: #3c6039;
+            font-weight: 600;
         }
     }
 `;
@@ -49,6 +51,7 @@ export const CategoryBoxWrap = styled.ul`
 `;
 export const CategoryFilterWrap = styled.div`
     width: 250px;
+    font-family: 'pretendard';
     h3 {
         font-size: 25px;
     }
@@ -116,13 +119,17 @@ export const CategoryListWrap = styled.div`
         justify-content: right;
         font-size: 15px;
         margin-bottom: 30px;
+        font-family: 'pretendard';
         li {
             margin-left: 40px;
             cursor: pointer;
             position: relative;
             color: #666;
+            font-weight: 400;
+            font-size: 15px;
             &.active {
-                color: #477c42;
+                color: #3c6039;
+                font-weight: 600;
             }
             &::after {
                 content: '';
@@ -152,7 +159,7 @@ export const CategoryItemWrap = styled.ul`
         padding-bottom: 10px;
         border-bottom: 1px solid #333;
         margin-bottom: 5px;
-        font-family: 'Pretendard';
+
         .img-wrap {
             position: relative;
             overflow: hidden;

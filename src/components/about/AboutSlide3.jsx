@@ -25,7 +25,7 @@ const AboutSlide3 = ({ about }) => {
                         <span>3</span>
                     </h4>
                     <strong>{title}</strong>
-                    <p>{des}</p>
+                    <p className="pretendard fw400 fz16">{des}</p>
                 </div>
                 <div className="AboutMagazine">
                     <ul>

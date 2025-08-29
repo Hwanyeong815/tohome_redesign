@@ -478,6 +478,7 @@ export const DetailArtSubStyle = styled.div`
 `;
 
 export const DetailArtFaqStyle = styled.div`
+    font-family: 'pretendard';
     margin-top: 40px;
     width: 1330px;
     .slide {

@@ -52,13 +52,13 @@ const CustomerDetail = () => {
                         <div className="detail-body">
                             <section className="line line1">
                                 <div className="col1">분류</div>
-                                <div className="col2">배송문의</div>
+                                <div className="col2 pretendard">배송문의</div>
                                 <div className="col3"></div>
                             </section>
 
                             <section className="line line2">
                                 <div className="col1">제목</div>
-                                <div className="col2">
+                                <div className="col2 pretendard">
                                     {title} {username}
                                 </div>
                                 <div className="col3"></div>
@@ -66,14 +66,14 @@ const CustomerDetail = () => {
 
                             <section className="line line3">
                                 <div className="col1"></div>
-                                <div className="col2">{context}</div>
+                                <div className="col2 pretendard">{context}</div>
                                 <div className="col3"></div>
                             </section>
                         </div>
 
                         <div className="detail-bottom">
                             <div className="upload">
-                                <p>첨부파일 업로드</p>
+                                <p className="pretendard">첨부파일 업로드</p>
                                 <p>
                                     <LuPaperclip />
                                     <LuPaperclip />
@@ -81,13 +81,18 @@ const CustomerDetail = () => {
                                 </p>
                             </div>
 
-                            <div className="checkbox">답변 알림받기</div>
+                            <div className="checkbox pretendard">
+                                답변 알림받기
+                            </div>
 
                             <div className="btn-wrap">
                                 <button onClick={onEdit}>수정</button>
                                 <button onClick={onDel}>삭제</button>
                                 {/* ✅ 목록은 /customer */}
-                                <button type="button" onClick={() => navigate('/customer')}>
+                                <button
+                                    type="button"
+                                    onClick={() => navigate('/customer')}
+                                >
                                     목록
                                 </button>
                             </div>

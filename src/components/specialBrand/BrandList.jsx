@@ -14,16 +14,24 @@ const BrandList = ({ brandTag }) => {
         Brand3Yehyang: '예향',
         Brand4Market: '동행마켓',
     };
-    const filteredBrands = AllDataList?.filter((item) => item.brandtag === brandTagMap[brandTag]);
+    const filteredBrands = AllDataList?.filter(
+        (item) => item.brandtag === brandTagMap[brandTag]
+    );
     const subCategories =
         filteredBrands && filteredBrands.length > 0
-            ? [...new Set(filteredBrands.map((f) => f.category?.trim() || '기타'))]
+            ? [
+                  ...new Set(
+                      filteredBrands.map((f) => f.category?.trim() || '기타')
+                  ),
+              ]
             : [];
     const getFilteredProducts = () => {
         if (!filteredBrands) return [];
         return selectedSub === '전체보기'
             ? filteredBrands
-            : filteredBrands.filter((product) => product.category?.trim() === selectedSub?.trim());
+            : filteredBrands.filter(
+                  (product) => product.category?.trim() === selectedSub?.trim()
+              );
     };
     const getSortedProducts = () => {
         const products = getFilteredProducts().map((item, idx) => ({
@@ -36,10 +44,16 @@ const BrandList = ({ brandTag }) => {
                 return b.rank - a.rank;
             }
             if (sortType === '높은가격순') {
-                return (b.discountedPrice || b.price) - (a.discountedPrice || a.price);
+                return (
+                    (b.discountedPrice || b.price) -
+                    (a.discountedPrice || a.price)
+                );
             }
             if (sortType === '낮은가격순') {
-                return (a.discountedPrice || a.price) - (b.discountedPrice || b.price);
+                return (
+                    (a.discountedPrice || a.price) -
+                    (b.discountedPrice || b.price)
+                );
             }
             return 0;
         });
@@ -48,21 +62,24 @@ const BrandList = ({ brandTag }) => {
         <BrandListStyle>
             <ProductTop
                 className="filter-category-wrap"
-                fontSize="20px"
+                fontSize="18px"
+                fontWeight="300"
                 subCategories={subCategories}
                 selectedSub={selectedSub}
                 setSelectedSub={setSelectedSub}
             />
-            <div className="filter-wrap">
-                {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
-                    <p
-                        key={type}
-                        onClick={() => setSortType(type)}
-                        className={sortType === type ? 'on' : ''}
-                    >
-                        {type}
-                    </p>
-                ))}
+            <div className="filter-wrap pretendard">
+                {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map(
+                    (type) => (
+                        <p
+                            key={type}
+                            onClick={() => setSortType(type)}
+                            className={sortType === type ? 'on' : ''}
+                        >
+                            {type}
+                        </p>
+                    )
+                )}
             </div>
             <ProductList products={getSortedProducts()} showCheckbox={false} />
         </BrandListStyle>

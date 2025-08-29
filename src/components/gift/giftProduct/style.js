@@ -25,14 +25,15 @@ export const GiftListTopWrap = styled.ul`
     li {
         font-family: 'pretendard';
         margin-left: 40px;
-        font-size: 17px;
+        font-size: 18px;
+        font-weight: 400;
         cursor: pointer;
         &:first-child {
             margin-left: 0;
-            color: #3c6039;
         }
         &.active {
-            color: #386633;
+            color: #3c6039;
+            font-weight: 600;
         }
     }
 `;
@@ -43,13 +44,16 @@ export const GiftProducts = styled.div`
         justify-content: right;
         font-size: 15px;
         margin-bottom: 30px;
+        font-family: 'pretendard';
         li {
             margin-left: 40px;
             cursor: pointer;
             position: relative;
             color: #666;
+            font-weight: 400;
             &.active {
-                color: #477c42;
+                color: #3c6039;
+                font-weight: 600;
             }
             &::after {
                 content: '';

@@ -69,7 +69,11 @@ const JoinInfo = () => {
                         <p className="arrowDown">
                             <MdOutlineKeyboardArrowDown
                                 style={{
-                                    transform: `${openIndex === 1 ? 'rotate(180deg)' : 'none'}`,
+                                    transform: `${
+                                        openIndex === 1
+                                            ? 'rotate(180deg)'
+                                            : 'none'
+                                    }`,
                                 }}
                             />
                         </p>
@@ -77,12 +81,14 @@ const JoinInfo = () => {
                     {openIndex === 1 && (
                         <div className="info-tab-body">
                             <p>
-                                {JoinInfoData[0].info.split('\n').map((line, index) => (
-                                    <span key={index}>
-                                        {line}
-                                        <br />
-                                    </span>
-                                ))}
+                                {JoinInfoData[0].info
+                                    .split('\n')
+                                    .map((line, index) => (
+                                        <span key={index}>
+                                            {line}
+                                            <br />
+                                        </span>
+                                    ))}
                             </p>
                         </div>
                     )}
@@ -101,7 +107,11 @@ const JoinInfo = () => {
                         <p className="arrowDown">
                             <MdOutlineKeyboardArrowDown
                                 style={{
-                                    transform: `${openIndex === 2 ? 'rotate(180deg)' : 'none'}`,
+                                    transform: `${
+                                        openIndex === 2
+                                            ? 'rotate(180deg)'
+                                            : 'none'
+                                    }`,
                                 }}
                             />
                         </p>
@@ -109,12 +119,14 @@ const JoinInfo = () => {
                     {openIndex === 2 && (
                         <div className="info-tab-body">
                             <p>
-                                {JoinInfoData[1].info.split('\n').map((line, index) => (
-                                    <span key={index}>
-                                        {line}
-                                        <br />
-                                    </span>
-                                ))}
+                                {JoinInfoData[1].info
+                                    .split('\n')
+                                    .map((line, index) => (
+                                        <span key={index}>
+                                            {line}
+                                            <br />
+                                        </span>
+                                    ))}
                             </p>
                         </div>
                     )}
@@ -134,7 +146,11 @@ const JoinInfo = () => {
                         <p className="arrowDown">
                             <MdOutlineKeyboardArrowDown
                                 style={{
-                                    transform: `${openIndex === 3 ? 'rotate(180deg)' : 'none'}`,
+                                    transform: `${
+                                        openIndex === 3
+                                            ? 'rotate(180deg)'
+                                            : 'none'
+                                    }`,
                                 }}
                             />
                         </p>
@@ -142,12 +158,14 @@ const JoinInfo = () => {
                     {openIndex === 3 && (
                         <div className="info-tab-body">
                             <p>
-                                {JoinInfoData[2].info.split('\n').map((line, index) => (
-                                    <span key={index}>
-                                        {line}
-                                        <br />
-                                    </span>
-                                ))}
+                                {JoinInfoData[2].info
+                                    .split('\n')
+                                    .map((line, index) => (
+                                        <span key={index}>
+                                            {line}
+                                            <br />
+                                        </span>
+                                    ))}
                             </p>
                         </div>
                     )}
@@ -167,7 +185,11 @@ const JoinInfo = () => {
                         <p className="arrowDown">
                             <MdOutlineKeyboardArrowDown
                                 style={{
-                                    transform: `${openIndex === 4 ? 'rotate(180deg)' : 'none'}`,
+                                    transform: `${
+                                        openIndex === 4
+                                            ? 'rotate(180deg)'
+                                            : 'none'
+                                    }`,
                                 }}
                             />
                         </p>

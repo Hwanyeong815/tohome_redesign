@@ -192,6 +192,8 @@ export const MagazineDetailItem1Style = styled.div`
             }
             h3 {
                 font-size: 32px;
+                font-family: 'pretendard';
+                font-weight: 200;
             }
             h4 {
                 margin-left: 180px;

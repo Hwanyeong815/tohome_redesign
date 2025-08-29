@@ -21,6 +21,7 @@ export const NoticeStyle = styled.article`
 `;
 
 export const NoticeListStyle = styled.div`
+    font-family: 'pretendard';
     caption {
         display: none;
     }

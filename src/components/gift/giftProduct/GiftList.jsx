@@ -12,7 +12,9 @@ const GiftList = ({ selectedSub }) => {
     };
 
     const gifts = useSelector(selectGifts);
-    const filterGifts = selectedSub ? gifts.filter((f) => f.category?.sub === selectedSub) : gifts;
+    const filterGifts = selectedSub
+        ? gifts.filter((f) => f.category?.sub === selectedSub)
+        : gifts;
 
     const finalPrice = (product) => {
         return product.isDiscounted && product.discountedPrice
@@ -21,13 +23,17 @@ const GiftList = ({ selectedSub }) => {
     };
     const sortedGifts = [...filterGifts].sort((a, b) => {
         if (sortType === '판매량순') {
-            const aRank = a.tags.find((t) => t.name === '베스트')?.rank ?? Infinity;
-            const bRank = b.tags.find((t) => t.name === '베스트')?.rank ?? Infinity;
+            const aRank =
+                a.tags.find((t) => t.name === '베스트')?.rank ?? Infinity;
+            const bRank =
+                b.tags.find((t) => t.name === '베스트')?.rank ?? Infinity;
             return aRank - bRank;
         }
         if (sortType === '신상품순') {
-            const aRank = a.tags.find((t) => t.name === '신상품')?.rank ?? Infinity;
-            const bRank = b.tags.find((t) => t.name === '신상품')?.rank ?? Infinity;
+            const aRank =
+                a.tags.find((t) => t.name === '신상품')?.rank ?? Infinity;
+            const bRank =
+                b.tags.find((t) => t.name === '신상품')?.rank ?? Infinity;
             return aRank - bRank;
         }
         if (sortType === '높은가격순') {
@@ -41,16 +47,18 @@ const GiftList = ({ selectedSub }) => {
     return (
         <GiftProducts>
             <div>
-                <ul className="category-sort pretendard">
-                    {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
-                        <li
-                            key={type}
-                            className={sortType === type ? 'active' : ''}
-                            onClick={() => handleSort(type)}
-                        >
-                            {type}
-                        </li>
-                    ))}
+                <ul className="category-sort">
+                    {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map(
+                        (type) => (
+                            <li
+                                key={type}
+                                className={sortType === type ? 'active' : ''}
+                                onClick={() => handleSort(type)}
+                            >
+                                {type}
+                            </li>
+                        )
+                    )}
                 </ul>
             </div>
             <GiftListWrap>

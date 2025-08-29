@@ -36,7 +36,7 @@ export const DirectDeliveryWrap = styled.div`
         padding: 30px 0;
         display: grid;
         width: 100%;
-
+        margin-bottom: 120px;
         .left {
             display: flex;
             flex-direction: column;
@@ -71,6 +71,7 @@ export const DirectDeliveryWrap = styled.div`
                 background: #f8f8f8;
                 border-radius: 10px;
                 padding: 8px 75px;
+                border: 1px solid #c5c5c5;
                 .words {
                     width: 510px;
                     display: flex;
@@ -131,11 +132,13 @@ export const DirectDeliveryWrap = styled.div`
         justify-content: end;
         margin-top: 70px;
         margin-bottom: 30px;
+        gap: 20px;
         p {
             cursor: pointer;
             position: relative;
             font-size: 15px;
             color: #666;
+            font-weight: 400;
             &.on {
                 font-weight: 600;
                 color: #3c6039;
@@ -148,7 +151,7 @@ export const DirectDeliveryWrap = styled.div`
                     width: 1px;
                     height: 60%;
                     background-color: #666;
-                    right: -10px;
+                    right: -20px;
                     top: 50%;
                     transform: translateY(-50%);
                 }

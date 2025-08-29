@@ -17,7 +17,10 @@ const GiftListTop = ({ onSelectSub, selectedSub }) => {
 
     return (
         <GiftListTopWrap>
-            <li className="show-all" onClick={() => onSelectSub(null)}>
+            <li
+                className={`show-all ${selectedSub === null ? 'active' : ''}`}
+                onClick={() => onSelectSub(null)}
+            >
                 전체보기
             </li>
             {subCategories.map((sub, idx) => (

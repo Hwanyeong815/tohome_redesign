@@ -13,7 +13,6 @@ export const JoinItemStyle = styled.div`
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 18px;
-                font-family: 'Pretendard';
                 span {
                     font-size: 20px;
                     font-weight: 600;
@@ -133,6 +132,7 @@ export const JoinItemStyle = styled.div`
             }
             .form tbody tr {
                 td {
+                    font-family: 'Pretendard';
                     border: 1px solid #adadad;
                     vertical-align: top;
                     padding: 10px 15px;
@@ -143,6 +143,7 @@ export const JoinItemStyle = styled.div`
                         gap: 10px;
                         p {
                             button {
+                                font-family: 'Pretendard';
                                 font-size: 16px;
                                 font-weight: 500;
                                 width: 90px;
@@ -202,7 +203,7 @@ export const JoinItemStyle = styled.div`
                                         width: 90px;
                                         height: 48px;
                                         background: #fff;
-
+                                        font-family: 'pretendard';
                                         color: #7e7e7e;
                                         border: 1px solid #7e7e7e;
                                         &:hover {

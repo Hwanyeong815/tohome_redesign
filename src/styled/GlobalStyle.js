@@ -18,24 +18,27 @@ const GlobalStyle = createGlobalStyle`
   }
   .pretendard {
     font-family: 'Pretendard' !important;
-    &.fw400 {
-      font-weight: 400 !important;
+    &.fw200 {
+      font-weight: 200 !important;
     }
     &.fw300 {
       font-weight: 300 !important;
     }
-    &.fw200 {
-      font-weight: 200 !important;
-    }
-    &.fz16{
-      font-size: 16px;
-    }
-    &.fw600{
-      font-weight: 600;
+    &.fw400 {
+      font-weight: 400 !important;
     }
     &.fw500{
-      font-weight: 500;
+      font-weight: 500 !important;
     }
+    &.fw600{
+      font-weight: 600 !important;
+    }
+    &.fz16{
+      font-size: 16px !important;
+    }  
+    &.fz20{
+      font-size: 20px !important;
+    }  
   }
  
 

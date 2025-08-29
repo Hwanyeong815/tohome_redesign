@@ -42,6 +42,7 @@ export const CustomerStyle = styled.div`
 `;
 export const CustomerListStyle = styled.div`
     /* background-color: beige; */
+    font-family: 'pretendard';
     caption {
         display: none;
     }

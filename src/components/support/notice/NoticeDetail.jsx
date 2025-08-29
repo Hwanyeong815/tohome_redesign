@@ -9,7 +9,9 @@ const CustomerDetail = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const newItem = notices.find((notice) => notice.noticeId === Number(noticeID));
+    const newItem = notices.find(
+        (notice) => notice.noticeId === Number(noticeID)
+    );
 
     if (!newItem) {
         return (
@@ -41,9 +43,9 @@ const CustomerDetail = () => {
                         <p>#{name}</p>
                     </div>
                     <div className="detail-body">
-                        <h3 className="title">{title}</h3>
-                        <p className="context">{context}</p>
-                        <p className="date">{date}</p>
+                        <h3 className="title pretendard">{title}</h3>
+                        <p className="context pretendard">{context}</p>
+                        <p className="date pretendard">{date}</p>
                     </div>
                 </div>
                 <div className="btn-wrap">

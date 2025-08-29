@@ -1,8 +1,14 @@
 import { ProductTopStyle } from './style';
 
-const ProductTop = ({ subCategories, selectedSub, setSelectedSub, fontSize }) => {
+const ProductTop = ({
+    subCategories,
+    selectedSub,
+    setSelectedSub,
+    fontSize,
+    fontWeight,
+}) => {
     return (
-        <ProductTopStyle fontSize={fontSize}>
+        <ProductTopStyle fontSize={fontSize} fontWeight={fontWeight}>
             <li
                 className={selectedSub === '전체보기' ? 'on' : ''}
                 onClick={() => setSelectedSub('전체보기')}

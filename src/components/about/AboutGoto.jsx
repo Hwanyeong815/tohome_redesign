@@ -33,10 +33,24 @@ const AboutGoto = () => {
 
     return (
         <AboutGotoWrap>
-            <h2>현대투홈을 특별하게 만드는 3가지 키워드</h2>
-            <AboutGotoCon1 data-aos="fade-up" data-aos-delay="0" onClick={onSideDish} />
-            <AboutGotoCon2 data-aos="fade-up" data-aos-delay="100" onClick={onDawn} />
-            <AboutGotoCon3 data-aos="fade-up" data-aos-delay="200" onClick={onDirect} />
+            <h2 className="pretendard">
+                현대투홈을 특별하게 만드는 3가지 키워드
+            </h2>
+            <AboutGotoCon1
+                data-aos="fade-up"
+                data-aos-delay="0"
+                onClick={onSideDish}
+            />
+            <AboutGotoCon2
+                data-aos="fade-up"
+                data-aos-delay="100"
+                onClick={onDawn}
+            />
+            <AboutGotoCon3
+                data-aos="fade-up"
+                data-aos-delay="200"
+                onClick={onDirect}
+            />
         </AboutGotoWrap>
     );
 };

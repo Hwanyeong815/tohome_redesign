@@ -314,6 +314,7 @@ export const Con4Style = styled.div`
         justify-content: center;
     }
     .box {
+        font-family: 'pretendard';
         width: 1200px;
         margin: 0 auto;
         margin-top: 46px;
@@ -368,6 +369,7 @@ export const Con4Style = styled.div`
                 font-size: 18px;
                 padding: 28px 60px;
                 border-radius: 20px;
+                font-weight: 400;
                 &::before {
                     content: '';
                     position: absolute;

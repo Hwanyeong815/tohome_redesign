@@ -93,20 +93,21 @@ export const BrandListStyle = styled.div`
             cursor: pointer;
             position: relative;
             font-size: 15px;
+            font-weight: 400;
             color: #666;
             &.on {
                 font-weight: 600;
                 color: #3c6039;
             }
             &:not(:last-child) {
-                margin-right: 20px;
+                margin-right: 40px;
                 &::after {
                     content: '';
                     position: absolute;
                     width: 1px;
                     height: 60%;
                     background-color: #666;
-                    right: -10px;
+                    right: -20px;
                     top: 50%;
                     transform: translateY(-50%);
                 }

@@ -97,7 +97,7 @@ export const MainRecomStyle = styled.div`
                     font-size: 20px;
                     line-height: 160%;
                     position: relative;
-                    font-weight: 500;
+                    /* font-weight: 500; */
                     position: relative;
                     border-bottom: 1px solid #333;
                     margin-bottom: 15px;

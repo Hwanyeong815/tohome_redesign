@@ -59,7 +59,7 @@ const DawnDeliveryCon = () => {
                     <div className="box2">
                         <p>Notice</p>
                     </div>
-                    <div className="txt-box">
+                    <div className="txt-box pretendard">
                         <div className="txt">
                             <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                             <span>
@@ -105,24 +105,24 @@ const DawnDeliveryCon = () => {
                         <img src="./images/dawnDelivery/con3/img1.png" alt="img1" />
                         <div className="txtBox">
                             <p>투홈백</p>
-                            <span className="title">
+                            <span className="title pretendard ">
                                 보냉백은 한 번 구매하면 계속 사용할 수 있으며,
                                 <br />
                                 새벽배송 시 현관 앞에 두면 신선식품을 담아드립니다.
                             </span>
-                            <div className="text">
+                            <div className="text pretendard ">
                                 <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                 <span>안감까지 보냉처리해 신선해요</span>
                             </div>
-                            <div className="text">
+                            <div className="text pretendard ">
                                 <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                 <span>폐 페트병을 재활용한 친환경 소재로 제작했어요</span>
                             </div>
-                            <div className="text">
+                            <div className="text pretendard ">
                                 <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                 <span>접어서 보관이 가능해요</span>
                             </div>
-                            <div className="text">
+                            <div className="text pretendard ">
                                 <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                 <span>종이박스 등 불필요한 포장재를 분리수거 할 필요가 없어요</span>
                             </div>
@@ -132,23 +132,23 @@ const DawnDeliveryCon = () => {
                         <div className="box">
                             <div className="txtBox">
                                 <p>회수용 보냉백</p>
-                                <span>
+                                <span className="pretendard">
                                     투홈백을 깜빡했나요? <br /> 회수용 보냉백이 대신합니다
                                 </span>
-                                <div className="text">
+                                <div className="text pretendard">
                                     <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                     <span>
                                         투홈백 없이도, 냉기를 오래 유지하는 회수용 보냉백으로
                                         신선하게 받아보세요.
                                     </span>
                                 </div>
-                                <div className="text">
+                                <div className="text pretendard">
                                     <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                     <span>
                                         다음 주문 때 문 앞에 꺼내두면 현대식품관이 직접 회수해요.
                                     </span>
                                 </div>
-                                <div className="text">
+                                <div className="text pretendard">
                                     <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                     <span>일회용 포장 없이 더 친환경적으로 사용할 수 있어요.</span>
                                 </div>
@@ -160,15 +160,15 @@ const DawnDeliveryCon = () => {
                         <img src="./images/dawnDelivery/con3/img3.png" alt="img3" />
                         <div className="txtBox">
                             <p>투홈 박스</p>
-                            <span>
+                            <span className="pretendard">
                                 투홈백 없이도 모든 상품을 신선하게 종이 박스로 배송하며, <br />
                                 분리 포장보다 불필요한 부자재가 확연히 줄어요.
                             </span>
-                            <div className="text">
+                            <div className="text pretendard">
                                 <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                 <span>비교적 쓰레기가 적게 나와요</span>
                             </div>
-                            <div className="text">
+                            <div className="text pretendard">
                                 <img src="./images/dawnDelivery/con2/check.png" alt="check" />
                                 <span>재활용이 쉬운 부자재를 함께 담았어요</span>
                             </div>
@@ -180,7 +180,7 @@ const DawnDeliveryCon = () => {
                 <h2>투홈백 사용법</h2>
                 <p>Q & A</p>
                 <div className="box">
-                    <div className="txt">
+                    <div className="txt fw600">
                         <div className="left" data-aos="fade-right">
                             <span className="qNum">Q1</span>
                             <div className="bubbleQ">투홈백은 어떻게 구입할 수 있나요?</div>
@@ -195,7 +195,7 @@ const DawnDeliveryCon = () => {
                         </div>
                     </div>
 
-                    <div className="txt">
+                    <div className="txt fw600">
                         <div className="left" data-aos="fade-right" data-aos-delay="150">
                             <span className="qNum">Q2</span>
                             <div className="bubbleQ">투홈백은 반납하지 않아도 되나요?</div>
@@ -208,7 +208,7 @@ const DawnDeliveryCon = () => {
                         </div>
                     </div>
 
-                    <div className="txt">
+                    <div className="txt fw600">
                         <div className="left" data-aos="fade-right" data-aos-delay="300">
                             <span className="qNum">Q3</span>
                             <div className="bubbleQ">투홈백은 어떻게 사용하나요?</div>
@@ -223,7 +223,7 @@ const DawnDeliveryCon = () => {
                         </div>
                     </div>
 
-                    <div className="txt">
+                    <div className="txt fw600">
                         <div className="left" data-aos="fade-right" data-aos-delay="450">
                             <span className="qNum">Q4</span>
                             <div className="bubbleQ">회수용 보냉백을 반납해야 하나요?</div>

@@ -119,22 +119,22 @@ const DetailSide = ({ obj }) => {
                     <span>{pricePerUnit}</span>
                 </div>
 
-                <div className="detailInfo">
+                <div className="detailInfo ">
                     <dl>
-                        <div className="infoItem">
+                        <div className="infoItem ">
                             <dt>원산지</dt>
                             <dd>{origin ? origin : '상세페이지 참고'}</dd>
                         </div>
-                        <div className="infoItem">
+                        <div className="infoItem ">
                             <dt>포장타입</dt>
                             <dd>{packagingType}</dd>
                         </div>
-                        <div className="infoItem">
+                        <div className="infoItem ">
                             <dt>추가 혜택가</dt>
                             <dd>{additionalDiscount}</dd>
                         </div>
 
-                        <div className="infoItem name">
+                        <div className="infoItem name ">
                             <dt>상품선택</dt>
                             <dd>
                                 <p>{name}</p>
@@ -165,7 +165,7 @@ const DetailSide = ({ obj }) => {
                     </dl>
                 </div>
 
-                <div className="totalPrice">
+                <div className="totalPrice pretendard">
                     <p>총 금액</p>
                     <strong>
                         {(

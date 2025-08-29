@@ -38,7 +38,7 @@ const Cart = () => {
                 <div className="steps">
                     <div className="cart box" onClick={() => setIsCartTab('List')}>
                         <span className="dot on"></span>
-                        <span className="txt on">장바구니</span>
+                        <span className="txt on ">장바구니</span>
                     </div>
                     <div
                         className={`line ${

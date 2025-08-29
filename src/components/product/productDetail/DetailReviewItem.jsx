@@ -10,7 +10,7 @@ const DetailReviewItem = ({ review }) => {
                     <div className="grade-star">
                         <GradeStar rate={rate} />
                     </div>
-                    <div className="review">
+                    <div className="review"> 
                         <div className="photo">
                             <img src={img} alt={title} />
                         </div>

@@ -31,7 +31,7 @@ const DetailArtMain = ({ obj }) => {
 
             // 그 외에는 현재 컨테이너에서만 가로 스크롤 처리
             e.preventDefault();
-            const speed = 1.2; 
+            const speed = 1.2;
             const next = left + delta * speed;
             const target = Math.max(0, Math.min(max, next));
             gsap.to(container, { scrollLeft: target, duration: 0.3, ease: 'power2.out' });

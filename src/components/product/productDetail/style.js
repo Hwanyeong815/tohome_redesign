@@ -76,6 +76,7 @@ export const DetailSideStyle = styled.div`
                 font-size: 15px;
                 font-weight: 500;
                 color: #aea7a2;
+                font-family: 'Pretendard';
             }
         }
         .detailInfo {
@@ -88,6 +89,7 @@ export const DetailSideStyle = styled.div`
                     border-bottom: 1px solid #e7e7e7;
                     font-size: 15px;
                     font-weight: 500;
+                    font-family: 'Pretendard';
 
                     &:nth-child(4) {
                         dd {
@@ -256,6 +258,7 @@ export const DetailTabStyle = styled.div`
                 font-size: 15px;
                 font-weight: 700;
                 padding: 25px 7px;
+                font-family: 'Pretendard';
                 &.on {
                     color: #3c6039;
                     border-bottom: 2px solid #3c6039;
@@ -288,16 +291,6 @@ export const DetailArtMainStyle = styled.div`
         display: flex;
         gap: 20px;
     }
-
-    /* .slide {
-        cursor: grab;
-        &:active {
-            cursor: grabbing;
-        }
-
-        width: min-content;
-        margin-right: 10px;
-    } */
     .detailContent {
         width: max-content;
         display: flex;
@@ -338,11 +331,13 @@ export const DetailArtMainStyle = styled.div`
             font-weight: 700;
             padding: 10px 0;
             display: flex;
+            font-family: 'Pretendard';
         }
         p {
             font-size: 20px;
             font-weight: 500;
             line-height: 1.7;
+            font-family: 'Pretendard';
         }
     }
 
@@ -357,7 +352,7 @@ export const DetailArtMainStyle = styled.div`
                     font-weight: 700;
                     text-align: left;
                     display: block;
-
+                    font-family: 'Pretendard';
                     width: 100%;
                 }
                 ul {
@@ -374,6 +369,7 @@ export const DetailArtMainStyle = styled.div`
                     font-size: 18px;
                     font-weight: 500;
                     line-height: 1.8;
+                    font-family: 'Pretendard';
                     svg {
                         width: 22px;
                         height: 22px;
@@ -416,10 +412,12 @@ export const DetailArtMainStyle = styled.div`
                     text-align: left;
                     display: block;
                     color: #454545;
+                    font-family: 'Pretendard';
                 }
                 p {
                     font-size: 26px;
                     color: #767572;
+                    font-family: 'Pretendard';
                 }
             }
         }
@@ -464,6 +462,7 @@ export const DetailArtSubStyle = styled.div`
                 vertical-align: top;
                 text-align: left;
                 padding: 15px;
+                font-family: 'Pretendard';
             }
             th {
                 font-size: 15px;
@@ -493,6 +492,7 @@ export const DetailArtFaqStyle = styled.div`
         strong {
             font-size: 30px;
             font-weight: 500;
+            font-family: 'Pretendard';
         }
         .article {
             margin-top: 30px;
@@ -516,6 +516,7 @@ export const DetailArtFaqStyle = styled.div`
                     font-size: 15px;
                     color: #5f5f5f;
                     line-height: 1.8;
+                    font-family: 'Pretendard';
                     &::before {
                         content: '';
                         flex: 0 0 5px;
@@ -649,6 +650,7 @@ export const ReviewItemStyle = styled.div`
                 }
                 .txt {
                     padding: 18px 0;
+                    font-family: 'Pretendard';
                 }
             }
             .like {

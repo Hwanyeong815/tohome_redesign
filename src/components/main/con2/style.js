@@ -14,7 +14,9 @@ export const MainRecomStyle = styled.div`
         top: 135px;
     }
     .swiper {
-        width: 100vw;
+        /* width: 100vw; */
+        width: calc(100vw - var(--scrollbar-width));
+
         margin-left: calc(-50vw + 720px);
     }
     .swiper-slide {

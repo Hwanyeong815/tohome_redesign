@@ -12,6 +12,13 @@ export const HeaderStyle = styled.header`
 
     &.header {
         height: 230px;
+        /* height: 150px; */
+        overflow: hidden;
+        position: sticky;
+        left: 0;
+        top: 0;
+        z-index: 500;
+        background-color: white;
         .status-bar {
             display: none;
             background-color: white;

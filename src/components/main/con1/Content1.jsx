@@ -32,11 +32,7 @@ const Content1 = () => {
         <ContentStyle>
             <div className="inner">
                 <MainCon1Style>
-                    <section
-                        className="main-best-wrap"
-                        data-aos="fade-up"
-                        data-aos-anchor-placement="bottom-bottom"
-                    >
+                    <section className="main-best-wrap" data-aos="fade-up">
                         <h2 className="main-title">베스트 메뉴</h2>
                         <h3 className="pretendard sub-title">
                             지금 가장 사랑받는 메뉴, 한눈에 담아보세요
@@ -71,11 +67,7 @@ const Content1 = () => {
                             <button>베스트 상품 더보기</button>
                         </div>
                     </section>
-                    <section
-                        className="main-newPro-wrap"
-                        data-aos="fade-up"
-                        data-aos-anchor-placement="bottom-bottom"
-                    >
+                    <section className="main-newPro-wrap" data-aos="fade-up">
                         <h2 className="main-title">신상품</h2>
                         <h3 className="sub-title pretendard">
                             현대식품관에서 처음 선보이는 오늘 막 도착한 신상품

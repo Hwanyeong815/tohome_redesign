@@ -290,8 +290,8 @@ export const Con3Style = styled.div`
 `;
 
 export const Con4Style = styled.div`
-    /* width: calc(100vw - var(--scrollbar-width)); */
-    width: 100vw;
+    width: calc(100vw - var(--scrollbar-width));
+    /* width: 100dvw; */
     overflow: hidden;
     background-color: #fdfbf0;
     padding: 100px 0;

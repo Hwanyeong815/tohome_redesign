@@ -9,7 +9,7 @@ const MagazineDetailItem1 = ({ onToggle }) => {
                 <p>Tohome Magazine</p>
             </div>
             <article className="main-box">
-                <div className="txts" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                <div className="txts" data-aos="fade-right">
                     <h2 className="fontChange">Bon&apos;s appetit</h2>
                     <h3>7월 첫째주 셰프의 레시피</h3>
                     <h4>‘으깬 감자 구이’</h4>

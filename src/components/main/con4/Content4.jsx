@@ -31,7 +31,6 @@ const Content4 = () => {
                     className="side-dish-wrap position-fix"
                     data-aos="fade-up"
                     data-aos-delay="0"
-                    data-aos-anchor-placement="top-center"
                 >
                     <div className="txts">
                         <h2 className="main-title">투홈 반찬구독</h2>
@@ -69,12 +68,7 @@ const Content4 = () => {
                     </div>
                 </section>
                 {/* 반찬구독 */}
-                <section
-                    className="health-sub-wrap"
-                    onClick={onClick2}
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
-                >
+                <section className="health-sub-wrap" onClick={onClick2} data-aos="fade-up">
                     <HealthList />
                 </section>
                 {/* 건강식품구독 */}

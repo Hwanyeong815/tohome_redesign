@@ -59,12 +59,7 @@ const Content3 = () => {
     return (
         <ContentStyle>
             <Content3Style>
-                <section
-                    onClick={onClick1}
-                    className="main-about position-fix"
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                >
+                <section onClick={onClick1} className="main-about position-fix" data-aos="fade-up">
                     <h2>현대식품관 BRAND STORY</h2>
                     <div>
                         <p>“정성으로 차린 식탁,</p>
@@ -73,12 +68,7 @@ const Content3 = () => {
                     <img src="images/main/main_about.png" alt="" />
                     <button className="main-about-btn hover">브랜드 소개</button>
                 </section>
-                <section
-                    className="brand-about"
-                    onClick={onClick2}
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                >
+                <section className="brand-about" onClick={onClick2} data-aos="fade-up">
                     <h2 className="main-title">브랜드로 만나는 미식의 깊이</h2>
                     <strong>Connecting Taste & Story</strong>
                     <div className="txts pretendard fw300">
@@ -99,12 +89,7 @@ const Content3 = () => {
                         ))}
                     </div>
                 </section>
-                <section
-                    className="main-dawn-wrap"
-                    onClick={onClick3}
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                >
+                <section className="main-dawn-wrap" onClick={onClick3} data-aos="fade-up">
                     <div>
                         <img src="images/main/main_dawn.png" alt="" />
                         <img src="images/main/mobile_dawn.png" alt="" className="mobileDawn" />

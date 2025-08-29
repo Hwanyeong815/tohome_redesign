@@ -8,16 +8,18 @@ export const FloatingBtnStyle = styled.div`
     width: 80px;
     cursor: pointer;
     div {
+        mix-blend-mode: difference;
         background-color: white;
-        height: 160px;
+        height: 180px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
         border-radius: 100px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        gap: 10px;
+        justify-content: center;
+        gap: 30px;
         position: relative;
-        padding: 10px 0;
+        padding: 20px 0;
+        box-sizing: border-box;
         &::after {
             content: '';
             position: absolute;
@@ -29,10 +31,11 @@ export const FloatingBtnStyle = styled.div`
             background-color: #000;
         }
         p {
+            font-size: 13px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
             /* height: 50px; */
             text-align: center;
@@ -47,10 +50,11 @@ export const FloatingBtnStyle = styled.div`
         display: flex;
         justify-content: center;
         align-content: center;
-        /* align-items: center; */
         width: 100%;
         gap: 10px;
+
         background-color: transparent;
+        /* mix-blend-mode: difference; */
         p {
             font-size: 16px;
         }

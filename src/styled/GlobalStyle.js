@@ -5,11 +5,15 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
   /* other styles */
   
+  :root {
+  --scrollbar-width: 17px; 
+  }
+
   body {
     font-size: 16px;
     line-height: 1.6;
     color:#333;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
         word-break: keep-all;
   }
   .pretendard {

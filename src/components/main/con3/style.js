@@ -16,12 +16,16 @@ export const Content3Style = styled.div`
             align-items: center;
             height: 450px;
             position: relative;
-            width: 100vw;
+            /* width: 100vw; */
+            width: calc(100vw - var(--scrollbar-width));
+
             left: 50%;
             transform: translateX(-50%);
             margin-top: 160px;
             &.position-fix {
-                width: 100vw;
+                /* width: 100vw; */
+                width: calc(100vw - var(--scrollbar-width));
+
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);

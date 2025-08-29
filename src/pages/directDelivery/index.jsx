@@ -73,7 +73,7 @@ const DirectDelivery = () => {
                                 <div className="title">
                                     <span>Point 1</span> 브랜드가 직접 선택한 신뢰 배송
                                 </div>
-                                <div className="desc">
+                                <div className="desc pretendard">
                                     상품 준비 상황에 따라 브랜드가 직접 가장 최적의 배송 방법을
                                     선택해, 신선함과 품질을 그대로 전합니다.
                                 </div>
@@ -83,7 +83,7 @@ const DirectDelivery = () => {
                                     <div className="title">
                                         <span>Point 2</span> MD의 안목으로 고른 검증된 브랜드
                                     </div>
-                                    <div className="desc">
+                                    <div className="desc pretendard">
                                         현대식품관 투홈 MD가 지금 가장 주목받는, 믿고 추천할 수 있는
                                         브랜드만을 엄선했습니다.
                                     </div>
@@ -93,7 +93,9 @@ const DirectDelivery = () => {
                                         <span>Point 3</span> 로컬의 맛, 한 번에 만나보는 미식의
                                         즐거움
                                     </div>
-                                    <div className="desc">전국 맛집을 투홈에 다 담았습니다.</div>
+                                    <div className="desc pretendard">
+                                        전국 맛집을 투홈에 다 담았습니다.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -102,11 +104,13 @@ const DirectDelivery = () => {
                             <div className="words">
                                 <p>브랜드직송 배송안내</p>
                                 <span className="dot" />
-                                <span>주문 후 1 ~ 3일 후 도착</span>
+                                <span className="pretendard">주문 후 1 ~ 3일 후 도착</span>
                                 <span className="dot" />
-                                <span>도착 가능 요일 : 화 ~ 토 (공휴일 제외)</span>
+                                <span className="pretendard">
+                                    도착 가능 요일 : 화 ~ 토 (공휴일 제외)
+                                </span>
                             </div>
-                            <span>
+                            <span className="pretendard">
                                 * 상품별로 배송일정이 다를 수 있으니 상품상세를 확인해주세요
                             </span>
                         </div>
@@ -122,7 +126,7 @@ const DirectDelivery = () => {
                     selectedSub={selectedSub}
                     setSelectedSub={setSelectedSub}
                 />
-                <div className="filter-wrap">
+                <div className="filter-wrap pretendard">
                     {['판매량순', '신상품순', '높은가격순', '낮은가격순'].map((type) => (
                         <p
                             key={type}

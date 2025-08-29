@@ -152,6 +152,7 @@ export const CategoryItemWrap = styled.ul`
         padding-bottom: 10px;
         border-bottom: 1px solid #333;
         margin-bottom: 5px;
+        font-family: 'Pretendard';
         .img-wrap {
             position: relative;
             overflow: hidden;

@@ -53,6 +53,7 @@ export const CheckboxStyle = styled.label`
     .check-label {
         font-size: 14px;
         color: #333;
+        font-family: 'Pretendard';
     }
 `;
 

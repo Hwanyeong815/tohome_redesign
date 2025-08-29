@@ -98,7 +98,7 @@ const Login = () => {
                             로그인 후 다양한 혜택과 이벤트를 확인하세요.
                         </span>
                         <div className="txtbox-wrap">
-                            <div className="txtbox id">
+                            <div className="txtbox id pretendard">
                                 <i>
                                     <FaUser />
                                 </i>
@@ -110,7 +110,7 @@ const Login = () => {
                                     onChange={changeInput}
                                 />
                             </div>
-                            <div className="txtbox password">
+                            <div className="txtbox password pretendard">
                                 <i>
                                     <RiLockPasswordLine />
                                 </i>

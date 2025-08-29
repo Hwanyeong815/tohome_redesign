@@ -203,11 +203,11 @@ const MagazineDetailItem4 = ({ onPrev, onNext }) => {
                         <div className="img-wrap">
                             <img src={step.img} alt={step.title} />
                         </div>
-                        <div className="txt">
+                        <div className="txt ">
                             <h2>{step.title}</h2>
-                            <p>{step.desc}</p>
+                            <p className="pretendard">{step.desc}</p>
                             {step.tip && (
-                                <em>
+                                <em className="pretendard">
                                     <span>TIP</span>
                                     {step.tip}
                                 </em>

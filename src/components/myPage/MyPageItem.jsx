@@ -53,43 +53,43 @@ const MyPageItem = () => {
                 </div>
 
                 <div className="order">
-                    <div className="text">
+                    <div className="text ">
                         <h2>주문/배송 조회</h2>
                         <span>최근 6개월</span>
                     </div>
                     <div className="stepbystep">
                         <div className="inner">
-                            <div className="step step1">
+                            <div className="step step1 ">
                                 <strong>0</strong>
-                                <span>주문접수</span>
+                                <span className="pretendard">주문접수</span>
                             </div>
                             <i>
                                 <FaAngleRight />
                             </i>
                             <div className="step step2">
                                 <strong>0</strong>
-                                <span>결제완료</span>
+                                <span className="pretendard">결제완료</span>
                             </div>
                             <i>
                                 <FaAngleRight />
                             </i>
                             <div className="step step3">
                                 <strong>0</strong>
-                                <span>배송준비중</span>
+                                <span className="pretendard">배송준비중</span>
                             </div>
                             <i>
                                 <FaAngleRight />
                             </i>
                             <div className="step step4">
                                 <strong>1</strong>
-                                <span>배송중</span>
+                                <span className="pretendard">배송중</span>
                             </div>
                             <i>
                                 <FaAngleRight />
                             </i>
                             <div className="step step5">
                                 <strong>5</strong>
-                                <span>배송완료</span>
+                                <span className="pretendard">배송완료</span>
                             </div>
                         </div>
                     </div>

@@ -13,6 +13,7 @@ export const JoinItemStyle = styled.div`
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 18px;
+                font-family: 'Pretendard';
                 span {
                     font-size: 20px;
                     font-weight: 600;
@@ -43,6 +44,7 @@ export const JoinItemStyle = styled.div`
                     border: 1px solid #adadad;
                     vertical-align: top;
                     padding: 10px 15px;
+                    font-family: 'Pretendard';
                     label {
                         font-size: 18px;
                         font-weight: 500;
@@ -68,6 +70,7 @@ export const JoinItemStyle = styled.div`
                     padding: 0px 15px;
                     box-sizing: border-box;
                     outline: none;
+                    font-family: 'Pretendard';
                 }
             }
             tr {
@@ -338,7 +341,7 @@ export const JoinInfoStyle = styled.div`
                     padding: 30px;
                     border: 1px solid #000;
                 }
-
+                font-family: 'Pretendard';
                 padding-left: 20px;
                 padding-bottom: 10px;
                 &:last-of-type {

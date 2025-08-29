@@ -33,6 +33,9 @@ const GlobalStyle = createGlobalStyle`
     &.fw600{
       font-weight: 600;
     }
+    &.fw500{
+      font-weight: 500;
+    }
   }
  
 

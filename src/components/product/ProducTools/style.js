@@ -21,6 +21,7 @@ export const ProductTopStyle = styled.ul`
         align-items: center;
         justify-content: center;
         font-size: ${(props) => props.fontSize || '15px'};
+        font-family: 'Pretendard';
         &.on {
             font-weight: 600;
             color: #3c6039;

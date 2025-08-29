@@ -50,13 +50,15 @@ const JoinInfo = () => {
                         checked={isAllChecked}
                         onChange={handleAllCheck}
                     />
-                    <label htmlFor="">전체 약관에 동의합니다.</label>
+                    <label htmlFor="" className="pretendard">
+                        전체 약관에 동의합니다.
+                    </label>
                 </form>
                 <div className="info-tab-box info-tab-box1">
                     <div className="info-tab-head" onClick={() => toggleBox(1)}>
                         <form action="">
                             <Checkbox
-                                className="checkbox"
+                                className="checkbox fw500"
                                 checked={checkedItems.admit1}
                                 onChange={handleCheckboxChange}
                                 label="[필수] 이용약관 동의"

@@ -65,6 +65,7 @@ export const LoginStyle = styled.div`
                     outline: none;
                     font-size: 15px;
                     color: #7e7e7e;
+                    font-family: 'Pretendard';
                 }
             }
             p {
@@ -72,6 +73,7 @@ export const LoginStyle = styled.div`
                 font-size: 16px;
                 font-weight: 500;
                 cursor: pointer;
+                font-family: 'Pretendard';
             }
             .btns {
                 display: flex;

@@ -80,7 +80,7 @@ const Join = () => {
     return (
         <JoinStyle>
             <div className="inner">
-                <h2>회원가입</h2>
+                <h2>회원가입</h2> 
                 <JoinItem />
                 <JoinInfo />
                 <div className="btn-wrap">

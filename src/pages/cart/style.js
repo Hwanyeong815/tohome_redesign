@@ -131,6 +131,7 @@ export const CartWrap = styled.div`
             font-size: 20px;
             font-weight: 500;
             display: flex;
+            font-family: 'Pretendard';
         }
         .line {
             &.on {

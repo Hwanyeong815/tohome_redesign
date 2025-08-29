@@ -38,7 +38,7 @@ const DetailReviewList = ({ reviews = [], avgRate = 0 }) => {
                     role="button"
                     tabIndex={0}
                 >
-                    <p>포토 리뷰</p>
+                    <p className="pretendard">포토 리뷰</p>
                 </div>
                 <div
                     className={`best ${tab === 'best' ? 'active' : ''}`}
@@ -46,7 +46,7 @@ const DetailReviewList = ({ reviews = [], avgRate = 0 }) => {
                     role="button"
                     tabIndex={0}
                 >
-                    <p>베스트순</p>
+                    <p className="pretendard">베스트순</p>
                 </div>
                 <div
                     className={`newest ${tab === 'newest' ? 'active' : ''}`}
@@ -54,7 +54,7 @@ const DetailReviewList = ({ reviews = [], avgRate = 0 }) => {
                     role="button"
                     tabIndex={0}
                 >
-                    <p>최신순</p>
+                    <p className="pretendard">최신순</p>
                 </div>
             </div>
 

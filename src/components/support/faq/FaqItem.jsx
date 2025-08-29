@@ -29,7 +29,7 @@ const FaqItem = ({ faq, isOpen, onClick }) => {
                 )}
             </div>
             <div
-                className="accBody"
+                className="accBody pretendard"
                 ref={contentRef}
                 style={{
                     maxHeight,

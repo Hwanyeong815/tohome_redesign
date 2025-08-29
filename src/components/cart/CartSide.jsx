@@ -100,15 +100,15 @@ const CartSide = ({ setIsCartTab, isCartTab, isMenuTab }) => {
     return (
         <div className="countBox">
             <div className="total">
-                <div className="priceT">
+                <div className="priceT pretendard">
                     <span>총 금액</span>
                     <span>{fmt(tabPriceTotal)}원</span>
                 </div>
-                <div className="discountT">
+                <div className="discountT pretendard">
                     <span>총 할인금액</span>
                     <span>{fmt(tabDiscount)}원</span>
                 </div>
-                <div className="delivery">
+                <div className="delivery pretendard">
                     <span>총 배송비</span>
                     <span>{fmt(tabDeliveryFee)}원</span>
                 </div>
@@ -116,7 +116,7 @@ const CartSide = ({ setIsCartTab, isCartTab, isMenuTab }) => {
 
             <div className="line"></div>
 
-            <div className="cost">
+            <div className="cost pretendard">
                 <p>총 예상금액</p>
                 <p>{fmt(tabPayable)}원</p>
             </div>

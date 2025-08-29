@@ -30,6 +30,9 @@ const GlobalStyle = createGlobalStyle`
     &.fz16{
       font-size: 16px;
     }
+    &.fw600{
+      font-weight: 600;
+    }
   }
  
 

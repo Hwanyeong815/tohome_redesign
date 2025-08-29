@@ -56,6 +56,7 @@ export const ItemBox = styled.div`
             width: 150px;
             p {
                 font-size: 18px;
+                font-family: 'Pretendard';
             }
             span {
                 display: flex;
@@ -171,6 +172,7 @@ export const FormsStyle = styled.div`
             display: flex;
             margin: 20px;
             gap: 10px;
+            font-family: 'Pretendard';
             label {
                 width: 170px;
                 font-size: 16px;
@@ -276,10 +278,12 @@ export const ResultBoxStyle = styled.div`
             gap: 10px;
             padding: 20px 0;
             border-bottom: 1px solid #000;
+            font-family: 'Pretendard';
             .price {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                font-family: 'Pretendard';
             }
         }
         .cost {
@@ -287,6 +291,7 @@ export const ResultBoxStyle = styled.div`
             display: flex;
             justify-content: space-between;
             padding: 20px 0;
+            font-family: 'Pretendard';
             p {
                 font-size: 24px;
                 font-weight: 600;

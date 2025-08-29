@@ -57,6 +57,7 @@ export const FaqStyle = styled.section`
             background-color: #f3f3f3;
             transition: 0.4s;
             /* max-height: 0px; */
+            font-family: 'Pretendard';
             p {
                 color: #5f5f5f;
                 text-align: left;

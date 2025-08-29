@@ -15,7 +15,7 @@ const FaqItem = ({ faq, isOpen, onClick }) => {
         <div className={`accr ${isOpen ? 'on' : ''}`}>
             <div className="accHead" onClick={() => onClick(faqId)}>
                 <section>
-                    <span className="circle">Q</span>
+                    <span className="circle pretendard">Q</span>
                     {title}
                 </section>
                 {isOpen ? (

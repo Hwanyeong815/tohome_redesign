@@ -137,7 +137,6 @@ export const FloatingMenuStyle = styled.div`
         top: 0;
         margin: 0;
         padding: 6.1538vw;
-        /* box-sizing: border-box; */
         width: 89.7436vw;
         height: 216.4103vw;
         border-radius: 0 20px 20px 0;
@@ -163,8 +162,11 @@ export const FloatingMenuStyle = styled.div`
                         width: 100%;
                     }
                 }
+                button {
+                    background-color: transparent;
+                }
                 p {
-                    font-size: 8.9744vw;
+                    font-size: 8.9744vw !important;
                     line-height: 8.9744vw;
                     height: 5.7692vw;
                 }

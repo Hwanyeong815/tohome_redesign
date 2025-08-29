@@ -90,12 +90,13 @@ const FloatingMenu = ({ setIsOpen }) => {
                     <div className="mobile-logo-wrap-img">
                         <img src="/images/common/logo_tohome1.png" alt="tohome" />
                     </div>
-                    <p>
-                        {/* 닫기는 네비게이션이 아니라 모달 close 동작이므로 Link 대신 button */}
-                        <button type="button" onClick={() => setIsOpen(false)}>
+
+                    <button type="button close" onClick={() => setIsOpen(false)}>
+                        <p>
+                            {' '}
                             <IoClose />
-                        </button>
-                    </p>
+                        </p>
+                    </button>
                 </section>
 
                 <section className="mobile-login-wrap">

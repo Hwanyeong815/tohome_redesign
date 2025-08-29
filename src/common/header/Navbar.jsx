@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
 import ProductSearch from '../../components/product/ProducTools/ProductSearch';
 
-const Navbar = () => {
+const Navbar = ({ expanded }) => {
     const [isOpen, setIsOpen] = useState(false);
     const { authed, user } = useSelector((state) => state.auth);
     const { carts } = useSelector((state) => state.cart);
@@ -41,7 +41,7 @@ const Navbar = () => {
     };
     return (
         <>
-            <TopMenu className="top-menu">
+            <TopMenu className="top-menu" $expanded={expanded}>
                 {authed ? (
                     <>
                         <li>
@@ -70,7 +70,7 @@ const Navbar = () => {
                     <Link to="/support">고객센터</Link>
                 </li>
             </TopMenu>
-            <SearchWrap>
+            <SearchWrap $expanded={expanded}>
                 <div className="search">
                     <form
                         onSubmit={(e) => {
@@ -117,7 +117,7 @@ const Navbar = () => {
                     </p>
                 </button>
             </SearchWrap>
-            <NavStyle className="nav" isOpen={isOpen}>
+            <NavStyle className="nav" isOpen={isOpen} $expanded={expanded} aria-hidden={!expanded}>
                 <ul className="gnb">
                     <li>
                         <Link to="/best">베스트</Link>
@@ -154,7 +154,6 @@ const Navbar = () => {
             {isOpen && <FloatingMenu setIsOpen={setIsOpen} />}
             {showSearch && (
                 <ProductSearch
-                    // keyword prop은 사용 안 해도 동작하므로 빼도 되고 둬도 무방
                     onClose={() => {
                         setShowSearch(false);
                         setSearchTerm('');

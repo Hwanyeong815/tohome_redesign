@@ -4,7 +4,6 @@ export const VisualStyle = styled.div`
     &::after {
         content: '';
         position: absolute;
-        /* width: 100dvw; */
         width: calc(100vw - var(--scrollbar-width));
 
         height: 120%;
@@ -288,7 +287,7 @@ export const BannerWrap = styled.article`
                         width: 250px;
                         height: 250px;
                         position: relative;
-                        overflow: visible !important;
+                        /* overflow: visible !important; */
                         img {
                             position: absolute;
                             left: 60%;

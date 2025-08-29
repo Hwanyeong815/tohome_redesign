@@ -6,6 +6,11 @@ import { useState } from 'react';
 import ProductList from '../../product/ProductList';
 import { cartActions } from '../../../store/modules/cartSlice';
 
+const toNum = (v) => {
+    const n = Number(v);
+    return Number.isFinite(n) ? n : 0;
+};
+
 const Content5 = () => {
     const { AllDataList } = useSelector((state) => state.cart);
     const todayRecipe = AllDataList.filter((product) =>
@@ -13,46 +18,40 @@ const Content5 = () => {
     );
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
-    const [selectedItems, setSelectedItems] = useState(() => {
-        return new Set(todayRecipe.map((product) => product.id));
-    });
+    const [selectedItems, setSelectedItems] = useState(new Set());
 
     ////////
 
-    const handleItemSelect = (productId, isSelected) => {
-        const newSelectedItems = new Set(selectedItems);
-        if (isSelected) {
-            newSelectedItems.add(productId);
-        } else {
-            newSelectedItems.delete(productId);
-        }
-        setSelectedItems(newSelectedItems);
+    const handleItemSelect = (productNum, isSelected) => {
+        const n = toNum(productNum);
+        if (n == null) return;
+        const next = new Set(selectedItems);
+        isSelected ? next.add(n) : next.delete(n);
+        setSelectedItems(next);
     };
 
-    const handleAddSelectedToCart = () => {
-        const selectedProducts = todayRecipe.filter((product) => selectedItems.has(product.id));
-
-        selectedProducts.forEach((product) => {
-            dispatch(cartActions.addToCart(product));
-        });
-
-        setSelectedItems(new Set());
-
-        alert(`${selectedProducts.length}개의 상품이 장바구니에 담겼습니다.`);
-    };
+    const selectedProducts = todayRecipe.filter((p) => selectedItems.has(toNum(p.num)));
+    const selectedCount = selectedProducts.length;
 
     const handleAddAllToCart = () => {
-        todayRecipe.forEach((product) => {
-            dispatch(cartActions.addToCart(product));
-        });
-
+        if (todayRecipe.length === 0) {
+            alert('담을 수 있는 상품이 없습니다.');
+            return;
+        }
+        todayRecipe.forEach((p) => dispatch(cartActions.addToCart(p)));
         setSelectedItems(new Set());
-
         alert(`${todayRecipe.length}개의 상품이 장바구니에 담겼습니다.`);
     };
 
-    ////////////////////
+    const handleAddSelectedToCart = () => {
+        if (selectedCount === 0) {
+            alert('선택된 상품이 없습니다.');
+            return;
+        }
+        selectedProducts.forEach((p) => dispatch(cartActions.addToCart(p)));
+        setSelectedItems(new Set());
+        alert(`${selectedCount}개의 상품이 장바구니에 담겼습니다.`);
+    };
 
     const onClick1 = () => {
         navigate('/gift');
@@ -93,9 +92,16 @@ const Content5 = () => {
                             </button>
                             <div className="line"></div>
                             <div className="btn-wrap">
-                                <button className="btn1" onClick={handleAddSelectedToCart}>
-                                    선택 재료 담기
+                                <button
+                                    className="btn1"
+                                    onClick={handleAddSelectedToCart}
+                                    disabled={selectedCount === 0}
+                                    aria-disabled={selectedCount === 0}
+                                    title={selectedCount === 0 ? '선택된 상품이 없습니다' : ''}
+                                >
+                                    선택 재료 담기 {selectedCount > 0 ? `(${selectedCount})` : ''}
                                 </button>
+
                                 <button className="btn1" onClick={handleAddAllToCart}>
                                     재료 한번에 담기
                                 </button>

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ProductItemStyle } from './style';
 import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
@@ -6,15 +6,23 @@ import { cartActions } from '../../store/modules/cartSlice';
 import { useState } from 'react';
 import Checkbox from '../../ui/CheckBox';
 
+const formatPrice = (n) => new Intl.NumberFormat('ko-KR').format(n ?? 0);
+
 const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelect, idx }) => {
     const [hoverHeart, setHoverHeart] = useState(false);
     const [clicked, setClicked] = useState(false);
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    // ✅ product 없을 때 대비
+    if (!product) return null;
+
+    const num = Number(product.num); // product.num을 숫자로 변환
+    const safeNum = Number.isFinite(num) ? num : null;
+
     const handleClick = () => {
-        navigate(`/product/${product.num}`);
+        if (safeNum == null) return;
+        navigate(`/product/${safeNum}`);
         window.scrollTo({ top: 0, left: 0 });
     };
 
@@ -26,7 +34,7 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
         isDiscounted = false,
         discountRate,
         info,
-    } = product ?? {};
+    } = product;
 
     return (
         <ProductItemStyle>
@@ -36,66 +44,69 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
                 <div className="overlay">
                     <button
                         className="icon-btn"
+                        aria-label="관심상품"
+                        aria-pressed={clicked}
                         onMouseEnter={() => setHoverHeart(true)}
                         onMouseLeave={() => setHoverHeart(false)}
-                        onClick={() => setClicked((prev) => !prev)}
-                    >
-                        {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
-                    </button>
-                    <button
-                        className="icon-btn"
-                        type="button"
                         onClick={(e) => {
                             e.stopPropagation();
                             e.preventDefault();
-                            // cartSlice 기대 스키마에 맞춰 전달
-                            const payload = { num: product.num, qty: 1, product };
-                            // 액션명이 addToCart인지 addItem인지 프로젝트에 맞춰 사용
-                            if (cartActions.addToCart) {
-                                dispatch(cartActions.addToCart(payload));
-                            } else if (cartActions.addItem) {
-                                dispatch(cartActions.addItem(payload));
-                            } else {
-                                // 최후방어: 기존처럼 전체 product도 시도
-                                dispatch(cartActions.addToCart?.(product));
-                            }
+                            setClicked((prev) => !prev);
                         }}
+                    >
+                        {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
+                    </button>
+
+                    <button
+                        className="icon-btn"
+                        type="button"
+                        aria-label="장바구니 담기"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            if (safeNum == null) return;
+                            const payload = { num: safeNum, qty: 1, product };
+                            dispatch(cartActions.addToCart(payload));
+                        }}
+                        disabled={safeNum == null}
                     >
                         <BsCart2 />
                     </button>
                 </div>
+
                 {showCheckbox && (
                     <Checkbox
-                        htmlFor={`recipe-${product.num ?? product.id ?? idx}`}
-                        right={'15px'}
-                        top={'15px'}
-                        checked={isSelected}
-                        onChange={(e) => onSelect(product.num ?? product.id, e.target.checked)}
+                        htmlFor={`recipe-${safeNum ?? idx}`}
+                        right="15px"
+                        top="15px"
+                        checked={!!isSelected}
+                        onChange={(e) => {
+                            if (onSelect && safeNum != null) {
+                                onSelect(safeNum, e.target.checked);
+                            }
+                        }}
                     />
                 )}
             </div>
+
             <h3 onClick={handleClick}>
-                {name.split('\n').map((line, idx) => (
-                    <span key={idx}>
+                {name.split('\n').map((line, i) => (
+                    <span key={i}>
                         {line}
                         <br />
                     </span>
                 ))}
             </h3>
+
             <div className="price-box" onClick={handleClick}>
                 {isDiscounted ? (
-                    <p className="discount">
-                        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
-                    </p>
+                    <p className="discount">{formatPrice(price)}원</p>
                 ) : (
                     <p className="discount">{''}</p>
                 )}
                 <p className="price">
                     {isDiscounted && <span>{discountRate}%</span>}
-                    {isDiscounted
-                        ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                        : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                    원
+                    {formatPrice(isDiscounted ? discountedPrice : price)}원
                 </p>
             </div>
 

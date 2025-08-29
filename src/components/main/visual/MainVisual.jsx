@@ -95,7 +95,7 @@ const MainVisual = () => {
             <Swiper
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 modules={[Autoplay]}
-                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                // autoplay={{ delay: 4000, disableOnInteraction: false }}
                 loop={true}
                 slidesPerView={1}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}

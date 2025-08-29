@@ -38,7 +38,11 @@ export const MagazineBottomStyle = styled.div`
             button {
                 width: 34.1026vw;
                 height: 7.9487vw;
+                line-height: 7.9487vw;
                 font-size: 3.8462vw;
+                &:hover {
+                    line-height: 7.1795vw;
+                }
             }
         }
     }

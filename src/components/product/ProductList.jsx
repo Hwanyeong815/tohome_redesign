@@ -7,7 +7,6 @@ const ProductList = ({
     showCheckbox = true,
     selectedItems = new Set(), // Set<number> 권장 (num 저장)
     onItemSelect, // (num: number, checked: boolean) => void
-    onSelectAll,
 }) => {
     const [visibleCount, setVisibleCount] = useState(15);
 
@@ -44,7 +43,6 @@ const ProductList = ({
                         product={product}
                         showCheckbox={showCheckbox}
                         isSelected={isSelected}
-                        // ✅ 자식에서 체크 상태만 넘기면, 여기서 num을 함께 전달
                         onSelect={(checked) => {
                             if (onItemSelect && num != null) onItemSelect(num, checked);
                         }}

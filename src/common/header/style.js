@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const HeaderStyle = styled.header`
+export const HeaderStyle = styled.header.withConfig({
+    shouldForwardProp: (prop) => !['$expanded'].includes(prop),
+})`
     .overlay {
         /* floatinmenu */
         z-index: 999;
@@ -10,9 +12,14 @@ export const HeaderStyle = styled.header`
         opacity: 0.4;
     }
 
+    --ease: cubic-bezier(0.2, 0.65, 0.2, 1);
+    --d: 0.22s;
+    transition: opacity var(--d) var(--ease), transform var(--d) var(--ease), visibility var(--d),
+        height var(--d) var(--ease);
+
     &.header {
         height: 230px;
-        /* height: 150px; */
+        height: ${({ $expanded }) => ($expanded ? '230px' : '90px')};
         overflow: hidden;
         position: sticky;
         left: 0;
@@ -31,7 +38,8 @@ export const HeaderStyle = styled.header`
                 height: 50px;
                 position: absolute;
                 left: 50%;
-                top: 80px;
+                top: ${({ $expanded }) => ($expanded ? '80px' : '20px')};
+                transition: top 0.22s ease;
                 transform: translateX(-50%);
                 transition: 0.3s;
                 width: 300px;
@@ -69,7 +77,6 @@ export const HeaderStyle = styled.header`
     }
     @media screen and (max-width: 600px) {
         &.header {
-            /* position: sticky !important; */
             left: 50%;
             top: 0;
             z-index: 500;
@@ -91,8 +98,6 @@ export const HeaderStyle = styled.header`
             .headBody {
                 top: 15.3846vw !important;
                 h1 {
-                    /* border: 1px solid #000; */
-
                     img {
                         width: 30.7692vw;
                     }
@@ -103,7 +108,7 @@ export const HeaderStyle = styled.header`
 `;
 
 export const NavStyle = styled.nav.withConfig({
-    shouldForwardProp: (prop) => prop !== 'isOpen', // isOpen은 DOM으로 전달하지 않음
+    shouldForwardProp: (prop) => !['isOpen', '$expanded'].includes(prop),
 })`
     .overlay {
         z-index: 999;
@@ -119,6 +124,19 @@ export const NavStyle = styled.nav.withConfig({
     justify-content: center;
     align-items: flex-end;
 
+    --ease: cubic-bezier(0.2, 0.65, 0.2, 1);
+    --d: 0.22s;
+
+    transition: opacity var(--d) var(--ease), transform var(--d) var(--ease), visibility var(--d),
+        height var(--d) var(--ease);
+    opacity: ${({ $expanded }) => ($expanded ? 1 : 0)};
+    transform: ${({ $expanded }) => ($expanded ? 'translateY(0)' : 'translateY(-10px)')};
+    visibility: ${({ $expanded }) => ($expanded ? 'visible' : 'hidden')};
+    pointer-events: ${({ $expanded }) => ($expanded ? 'auto' : 'none')};
+    /* 높이 전환이 필요하면 아래 두 줄 활성화 (현재는 시맨틱/접근성 위해 visibility 기반 유지)
+     height: ${({ $expanded }) => ($expanded ? 'auto' : '0')};
+     overflow: hidden;
+  */
     .gnb {
         display: flex;
         justify-content: center;
@@ -158,7 +176,6 @@ export const NavStyle = styled.nav.withConfig({
             }
         }
     }
-
     .all-menu {
         position: absolute;
         right: 0px;
@@ -235,7 +252,9 @@ export const NavStyle = styled.nav.withConfig({
     }
 `;
 
-export const TopMenu = styled.ul`
+export const TopMenu = styled.ul.withConfig({
+    shouldForwardProp: (prop) => !['$expanded'].includes(prop),
+})`
     &.top-menu {
         padding: 20px;
         position: absolute;
@@ -243,6 +262,12 @@ export const TopMenu = styled.ul`
         top: 0px;
         display: flex;
         gap: 30px;
+
+        transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+        opacity: ${({ $expanded }) => ($expanded ? 1 : 0)};
+        transform: ${({ $expanded }) => ($expanded ? 'translateY(0)' : 'translateY(-8px)')};
+        visibility: ${({ $expanded }) => ($expanded ? 'visible' : 'hidden')};
+        pointer-events: ${({ $expanded }) => ($expanded ? 'auto' : 'none')};
 
         li {
             /* background-color: aqua; */
@@ -274,11 +299,14 @@ export const TopMenu = styled.ul`
     }
 `;
 
-export const SearchWrap = styled.ul`
+export const SearchWrap = styled.div.withConfig({
+    shouldForwardProp: (prop) => !['$expanded'].includes(prop),
+})`
     transform: translateY(50%);
     position: absolute;
     right: 15px;
-    top: 80px;
+    top: ${({ $expanded }) => ($expanded ? '80px' : '10px')};
+    transition: top 0.22s ease;
     display: flex;
     gap: 15px;
     .search {

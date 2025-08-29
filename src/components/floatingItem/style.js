@@ -37,7 +37,6 @@ export const FloatingBtnStyle = styled.div`
             justify-content: center;
             gap: 8px;
             align-items: center;
-            /* height: 50px; */
             text-align: center;
             font-size: 13px;
             img {
@@ -54,7 +53,7 @@ export const FloatingBtnStyle = styled.div`
         gap: 10px;
 
         background-color: transparent;
-        /* mix-blend-mode: difference; */
+        mix-blend-mode: difference;
         p {
             font-size: 16px;
         }

@@ -1,16 +1,23 @@
 import { useNavigate } from 'react-router-dom';
 import { ProductItemStyle } from './style';
-import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
-import { useDispatch } from 'react-redux';
+import { BsCart2 } from 'react-icons/bs';
+import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../store/modules/cartSlice';
-import { useState } from 'react';
 import Checkbox from '../../ui/CheckBox';
+import HeartButton from '../../ui/HeartButton';
+// import HeartButton from '../../ui/HeartButton.jsx';
 
 const formatPrice = (n) => new Intl.NumberFormat('ko-KR').format(n ?? 0);
 
-const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelect, idx }) => {
-    const [hoverHeart, setHoverHeart] = useState(false);
-    const [clicked, setClicked] = useState(false);
+const ProductItem = ({
+    product,
+    showCheckbox = true,
+    isSelected = false,
+    onSelect,
+    idx,
+    heartVariant = 'overlay', // 'mypage'로 넘기면 하단 고정
+    onUnliked, // 마이페이지에서 취소 후 상위 처리(선택)
+}) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -18,6 +25,7 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
 
     const num = Number(product.num);
     const safeNum = Number.isFinite(num) ? num : null;
+    const userId = useSelector((s) => s.auth?.user?.id);
 
     const handleClick = () => {
         if (safeNum == null) return;
@@ -35,44 +43,36 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
         info,
     } = product;
 
+    const handleAddToCart = (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        if (safeNum == null) return;
+        dispatch(cartActions.addToCart({ num: safeNum, qty: 1, product }));
+    };
+
     return (
         <ProductItemStyle>
             <div className="img-wrap">
                 <img src={thumbnail} alt={name} onClick={handleClick} />
-
-                <div className="overlay">
-                    <button
-                        className="icon-btn"
-                        aria-label="관심상품"
-                        aria-pressed={clicked}
-                        onMouseEnter={() => setHoverHeart(true)}
-                        onMouseLeave={() => setHoverHeart(false)}
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            setClicked((prev) => !prev);
-                        }}
-                    >
-                        {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
-                    </button>
-
-                    <button
-                        className="icon-btn"
-                        type="button"
-                        aria-label="장바구니 담기"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            if (safeNum == null) return;
-                            const payload = { num: safeNum, qty: 1, product };
-                            dispatch(cartActions.addToCart(payload));
-                        }}
-                        disabled={safeNum == null}
-                    >
-                        <BsCart2 />
-                    </button>
-                </div>
-
+                {heartVariant === 'overlay' && (
+                    <div className="overlay">
+                        <HeartButton productId={safeNum} variant="overlay" />
+                        <button
+                            className="icon-btn"
+                            aria-label="장바구니 담기"
+                            onClick={handleAddToCart}
+                            disabled={safeNum == null}
+                        >
+                            <BsCart2 />
+                        </button>
+                    </div>
+                )}
+                <HeartButton
+                    productId={safeNum}
+                    variant={heartVariant === 'mypage' ? 'mypage' : 'overlay'}
+                    onUnliked={onUnliked}
+                    className="heart-in-img"
+                />
                 {showCheckbox && (
                     <Checkbox
                         htmlFor={`recipe-${safeNum ?? idx}`}
@@ -80,14 +80,11 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
                         top="15px"
                         checked={!!isSelected}
                         onChange={(e) => {
-                            if (onSelect && safeNum != null) {
-                                onSelect(safeNum, e.target.checked);
-                            }
+                            if (onSelect && safeNum != null) onSelect(safeNum, e.target.checked);
                         }}
                     />
                 )}
             </div>
-
             <h3 onClick={handleClick}>
                 {name.split('\n').map((line, i) => (
                     <span key={i}>
@@ -96,7 +93,6 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
                     </span>
                 ))}
             </h3>
-
             <div className="price-box" onClick={handleClick}>
                 {isDiscounted ? (
                     <p className="discount">{formatPrice(price)}원</p>
@@ -108,8 +104,7 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
                     {formatPrice(isDiscounted ? discountedPrice : price)}원
                 </p>
             </div>
-
-            <div className="des pretendard fw300">{info}</div>
+            {heartVariant !== 'mypage' && <div className="des pretendard fw300">{info}</div>}
         </ProductItemStyle>
     );
 };

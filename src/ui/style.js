@@ -55,3 +55,16 @@ export const CheckboxStyle = styled.label`
         color: #333;
     }
 `;
+
+export const HeartButtonStyle = styled.button`
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 45px;
+    height: 45px;
+    color: #ff7259;
+    font-size: 18px;
+    line-height: 52px;
+    border-radius: 10px;
+    background-color: white;
+`;

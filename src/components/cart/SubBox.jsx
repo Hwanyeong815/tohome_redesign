@@ -4,6 +4,7 @@ import { FaMinus, FaPlus } from 'react-icons/fa6';
 import { IoGiftOutline, IoClose } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/modules/cartSlice';
+import HeartButton from '../../ui/HeartButton';
 
 const toNum = (v) => {
     const n = Number(String(v ?? '').replace(/[^\d.-]/g, ''));
@@ -14,6 +15,9 @@ const SubBox = ({ cart, setIsCartTab }) => {
     const { num, name, price, discountedPrice, thumbnail, pricePerUnit, quantity } = cart;
 
     const dispatch = useDispatch();
+
+    const n = Number(num);
+    const safeNum = Number.isFinite(n) ? n : null;
 
     const { qty, lineOriginal, lineDiscounted } = useMemo(() => {
         const qtySafe = Number(quantity) || 1;
@@ -28,6 +32,7 @@ const SubBox = ({ cart, setIsCartTab }) => {
             lineDiscounted: discNum != null ? discNum * qtySafe : null,
         };
     }, [price, discountedPrice, quantity]);
+
     return (
         <ItemBox>
             <img className="image" src={thumbnail} alt={name} />
@@ -69,8 +74,15 @@ const SubBox = ({ cart, setIsCartTab }) => {
                 </div>
 
                 <div className="icons">
-                    <div className="gift">
+                    {/* <div className="gift">
                         <IoGiftOutline />
+                    </div> */}
+                    <div className="heart-wrap">
+                        <HeartButton
+                            productId={safeNum}
+                            variant="overlay"
+                            className="heart-in-cart"
+                        />
                     </div>
                     <div
                         className="cancel"

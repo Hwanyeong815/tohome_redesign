@@ -5,7 +5,7 @@ export const SpinnerStyle = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 500;
+    z-index: 5000;
 
     display: flex;
     flex-direction: column;

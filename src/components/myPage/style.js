@@ -215,5 +215,13 @@ export const MyPageLikesStyle = styled.div`
                 color: #7e7e7e;
             }
         }
+        &.expanded {
+            .grid-list {
+                display: grid;
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+                column-gap: 50px;
+                row-gap: 0px;
+            }
+        }
     }
 `;

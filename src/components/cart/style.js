@@ -108,10 +108,30 @@ export const ItemBox = styled.div`
         .icons {
             display: flex;
             justify-content: center;
-            align-items: center;
+
             gap: 10px;
             height: 40px;
             font-size: 25px;
+            .heart-wrap {
+                position: relative;
+
+                width: 35px;
+                height: 40px;
+                .heart-in-cart {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 50%;
+                    border-radius: 5px;
+                    color: #ff7259;
+
+                    font-size: 20px;
+                    background-color: #f7f7f7ff;
+                    &:hover {
+                        color: #ffb2a4;
+                    }
+                }
+            }
             .cancel {
                 cursor: pointer;
                 font-size: 30px;

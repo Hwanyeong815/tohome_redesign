@@ -35,16 +35,18 @@ export const HeaderStyle = styled.header.withConfig({
             position: relative;
 
             .headBody {
-                height: 50px;
                 position: absolute;
+
                 left: 50%;
                 top: ${({ $expanded }) => ($expanded ? '80px' : '20px')};
                 transition: top 0.22s ease;
-                transform: translateX(-50%);
+                transform: translateX(-50%) scale(${({ $expanded }) => ($expanded ? 1 : 0.7)});
                 transition: 0.3s;
+                height: 50px;
                 width: 300px;
                 overflow: hidden;
                 position: relative;
+
                 &:hover {
                     h1 {
                         img {
@@ -77,11 +79,14 @@ export const HeaderStyle = styled.header.withConfig({
     }
     @media screen and (max-width: 600px) {
         &.header {
-            left: 50%;
+            position: absolute !important;
+            left: 0;
             top: 0;
+            width: 100vw;
             z-index: 500;
-            height: 38.4615vw;
+            height: 41.4615vw !important;
             margin-bottom: 2.5641vw;
+            overflow: visible !important;
 
             .status-bar {
                 display: block;
@@ -133,10 +138,7 @@ export const NavStyle = styled.nav.withConfig({
     transform: ${({ $expanded }) => ($expanded ? 'translateY(0)' : 'translateY(-10px)')};
     visibility: ${({ $expanded }) => ($expanded ? 'visible' : 'hidden')};
     pointer-events: ${({ $expanded }) => ($expanded ? 'auto' : 'none')};
-    /* 높이 전환이 필요하면 아래 두 줄 활성화 (현재는 시맨틱/접근성 위해 visibility 기반 유지)
-     height: ${({ $expanded }) => ($expanded ? 'auto' : '0')};
-     overflow: hidden;
-  */
+
     .gnb {
         display: flex;
         justify-content: center;
@@ -237,9 +239,8 @@ export const NavStyle = styled.nav.withConfig({
             }
         }
         .all-menu {
-            /* border: 1px solid #000; */
             left: 0;
-            top: 55%;
+            top: -20%;
             width: 3.6923vw;
             margin: 0;
             padding: 0;

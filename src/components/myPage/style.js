@@ -77,35 +77,6 @@ export const MyPageItemStyle = styled.div`
                 }
             }
         }
-        .list {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 100px;
-            .menu {
-                width: 287px;
-                height: 100px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                img {
-                    height: 35px;
-                }
-
-                span {
-                    font-size: 17px;
-                    font-weight: 700;
-                    color: #333;
-                }
-                p {
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: #7e7e7e;
-                }
-            }
-        }
 
         .order {
             margin-top: 100px;
@@ -177,39 +148,71 @@ export const MyPageItemStyle = styled.div`
                 }
             }
         }
-        .like {
-            .text {
-                width: 1440px;
-                height: 29px;
+    }
+`;
+
+export const MyPageLikesStyle = styled.div`
+    .like {
+        .text {
+            width: 1440px;
+            height: 29px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #d8d8d8;
+            padding-bottom: 15px;
+            h2 {
+                font-size: 24px !important;
+                font-weight: 700;
+                color: #333;
+                margin-right: 8px;
+            }
+            button {
+                background: none;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
-                border-bottom: 1px solid #d8d8d8;
-                padding-bottom: 15px;
-                h2 {
-                    font-size: 24px !important;
-                    font-weight: 700;
-                    color: #333;
-                    margin-right: 8px;
+                span {
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #7e7e7e;
+                    margin-top: 10px;
+                    margin-right: 10px;
                 }
-                button {
-                    background: none;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    span {
-                        cursor: pointer;
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: #7e7e7e;
-                        margin-top: 10px;
-                        margin-right: 10px;
-                    }
-                    img {
-                        height: 20px;
-                        margin-top: 10px;
-                    }
+                img {
+                    height: 20px;
+                    margin-top: 10px;
                 }
+            }
+        }
+    }
+    .list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+        .menu {
+            width: 287px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            img {
+                height: 35px;
+            }
+
+            span {
+                font-size: 17px;
+                font-weight: 700;
+                color: #333;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 600;
+                color: #7e7e7e;
             }
         }
     }

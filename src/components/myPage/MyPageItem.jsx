@@ -1,12 +1,14 @@
+import { useSelector } from 'react-redux';
 import { MyPageItemStyle } from './style';
 import { FaAngleRight } from 'react-icons/fa6';
 
 const MyPageItem = () => {
+    const { authed, user } = useSelector((state) => state.auth);
     return (
         <MyPageItemStyle>
             <div className="inner">
                 <div className="name">
-                    <h2>이지은</h2>
+                    <h2>{user.name}</h2>
                     <span>님은 일반회원 입니다.</span>
                 </div>
                 <div className="items">
@@ -93,17 +95,6 @@ const MyPageItem = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="like">
-                    <div className="text">
-                        <h2>좋아요</h2>
-                        <button>
-                            <span>자세히보기</span>
-                            <img src="images/icon/icon_all.png" alt=""></img>
-                        </button>
-                    </div>
-                    <div className="list"></div>
                 </div>
             </div>
         </MyPageItemStyle>

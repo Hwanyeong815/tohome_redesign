@@ -14,10 +14,9 @@ const ProductItem = ({ product, showCheckbox = true, isSelected = false, onSelec
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    // ✅ product 없을 때 대비
     if (!product) return null;
 
-    const num = Number(product.num); // product.num을 숫자로 변환
+    const num = Number(product.num);
     const safeNum = Number.isFinite(num) ? num : null;
 
     const handleClick = () => {

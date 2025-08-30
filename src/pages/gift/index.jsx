@@ -6,7 +6,18 @@ import GiftPremium from '../../components/gift/giftPremium/GiftPremium';
 import GiftPopular from '../../components/gift/giftPopular/GiftPopular';
 import GiftProduct from '../../components/gift/giftProduct/GiftProduct';
 
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Gift = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false,
+        });
+    }, []);
+
     return (
         <>
             <div className="inner">
@@ -20,8 +31,10 @@ const Gift = () => {
                 <GiftPoint />
                 <GiftTutorial />
             </div>
-            <GiftBest />
-            <div className="inner">
+            <div data-aos="fade-up">
+                <GiftBest />
+            </div>
+            <div className="inner" data-aos="fade-up">
                 <GiftPremium />
                 <GiftPopular />
             </div>

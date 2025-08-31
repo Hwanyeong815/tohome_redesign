@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const NewProductsWrap = styled.div`
+    .heart-in-img {
+        display: none;
+    }
     .top-wrap {
         position: relative;
         &::before {

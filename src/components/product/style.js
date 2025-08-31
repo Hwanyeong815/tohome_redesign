@@ -35,6 +35,7 @@ export const ProductItemStyle = styled.li`
         height: 300px;
         margin-bottom: 20px;
         position: relative;
+        background-color: #f3f3f3;
 
         img {
             position: absolute;
@@ -42,6 +43,7 @@ export const ProductItemStyle = styled.li`
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
+            height: 100%;
             height: auto;
             display: block;
         }

@@ -4,7 +4,6 @@ export const HeaderStyle = styled.header.withConfig({
     shouldForwardProp: (prop) => !['$expanded'].includes(prop),
 })`
     .overlay {
-        /* floatinmenu */
         z-index: 999;
         position: fixed;
         inset: 0;
@@ -271,7 +270,6 @@ export const TopMenu = styled.ul.withConfig({
         pointer-events: ${({ $expanded }) => ($expanded ? 'auto' : 'none')};
 
         li {
-            /* background-color: aqua; */
             position: relative;
             a {
                 color: #7e7e7e !important;
@@ -374,16 +372,15 @@ export const SearchWrap = styled.div.withConfig({
 
             &-item {
                 font-size: 19px;
-                /* text-align: center; */
+
                 position: absolute;
-                /* right: 10px; */
+
                 right: 0;
-                /* top: 50%; */
+
                 transform: translateY(-50%);
             }
         }
         .cart {
-            /* height: auto; */
             text-align: center;
             font-size: 19px;
             width: 6.1538vw;

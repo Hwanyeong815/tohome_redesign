@@ -253,7 +253,7 @@ export const AboutSlideItem = styled.div`
     @media screen and (max-width: 600px) {
         /* 컨테이너 */
         display: flex;
-        padding: 0 2.5641vw; /* 좌우 10px */
+        padding: 0 2.5641vw;
         box-sizing: border-box;
         gap: 4.1026vw;
         flex-direction: row;

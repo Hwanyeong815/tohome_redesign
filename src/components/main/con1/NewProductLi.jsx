@@ -6,7 +6,6 @@ const NewProductLi = ({ product }) => {
         <li>
             <img src={thumbnailImage} alt="" />
             <h2>{name}</h2>
-            {/* {info && <p>{info}</p>}*/}
         </li>
     );
 };

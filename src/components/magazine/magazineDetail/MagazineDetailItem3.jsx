@@ -1,4 +1,3 @@
-// MagazineDetailItem3.jsx
 import { MagazineDetailItem3Style } from './style';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';

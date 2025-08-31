@@ -51,7 +51,12 @@ export const CategoryBoxWrap = styled.ul`
 `;
 export const CategoryFilterWrap = styled.div`
     width: 250px;
+    height: max-content;
+    position: sticky;
+    top: 250px;
+    left: 0;
     font-family: 'pretendard';
+
     h3 {
         font-size: 25px;
     }

@@ -4,6 +4,8 @@ import { FloatingMenuStyle } from './style';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
 import { IoClose } from 'react-icons/io5';
+import { createPortal } from 'react-dom';
+import { useEffect } from 'react';
 
 const MenuItems = [
     {
@@ -68,33 +70,57 @@ const MenuItems = [
     },
 ];
 
-const FloatingMenu = ({ setIsOpen }) => {
+const FloatingMenu = ({ setIsOpen, isOpen = true, headerOffset = 0, lockScroll = true }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { authed, user } = useSelector((state) => state.auth);
 
-    const handleOverlayClick = () => {
-        setIsOpen(false);
+    const onClose = () => setIsOpen?.(false);
+
+    const onOverlayClick = (e) => {
+        if (e.target === e.currentTarget) onClose();
     };
 
     const onLogout = () => {
         dispatch(authActions.logout(user));
         navigate('/login');
+        onClose();
     };
 
-    return (
-        <>
-            <div className="overlay" onClick={handleOverlayClick}></div>
-            <FloatingMenuStyle>
+    useEffect(() => {
+        const onKey = (e) => e.key === 'Escape' && onClose();
+        window.addEventListener('keydown', onKey);
+
+        if (!isOpen || !lockScroll) return () => window.removeEventListener('keydown', onKey);
+
+        const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+        const prevOverflow = document.body.style.overflow;
+        const prevPaddingRight = document.body.style.paddingRight;
+
+        document.body.style.overflow = 'hidden';
+        if (scrollBarWidth > 0) document.body.style.paddingRight = `${scrollBarWidth}px`;
+
+        return () => {
+            window.removeEventListener('keydown', onKey);
+            document.body.style.overflow = prevOverflow;
+            document.body.style.paddingRight = prevPaddingRight;
+        };
+    }, [isOpen, lockScroll]);
+
+    const node = (
+        <FloatingMenuStyle
+            onClick={onOverlayClick}
+            style={{ '--header-offset': `${headerOffset}px` }}
+            role="dialog"
+            aria-modal="true"
+        >
+            <div className="panel" onClick={(e) => e.stopPropagation()}>
                 <section className="mobile-logo-wrap">
                     <div className="mobile-logo-wrap-img">
                         <img src="/images/common/logo_tohome1.png" alt="tohome" />
                     </div>
-
-                    <button type="button close" onClick={() => setIsOpen(false)}>
-                        <p>
-                            <IoClose />
-                        </p>
+                    <button type="button" className="close-btn" onClick={onClose} aria-label="닫기">
+                        <IoClose />
                     </button>
                 </section>
 
@@ -102,12 +128,13 @@ const FloatingMenu = ({ setIsOpen }) => {
                     <ul className="mobile-login-wrap-list">
                         {authed ? (
                             <>
-                                <li onClick={onLogout}>
-                                    {/* 단순 액션이면 Link 필요 없음 */}
-                                    <button type="button">로그아웃</button>
+                                <li>
+                                    <button type="button" onClick={onLogout}>
+                                        로그아웃
+                                    </button>
                                 </li>
                                 <li>
-                                    <Link to="/mypage" onClick={() => setIsOpen(false)}>
+                                    <Link to="/myPage" onClick={onClose}>
                                         마이페이지
                                     </Link>
                                 </li>
@@ -115,19 +142,19 @@ const FloatingMenu = ({ setIsOpen }) => {
                         ) : (
                             <>
                                 <li>
-                                    <Link to="/login" onClick={() => setIsOpen(false)}>
+                                    <Link to="/login" onClick={onClose}>
                                         로그인
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/join" onClick={() => setIsOpen(false)}>
+                                    <Link to="/join" onClick={onClose}>
                                         회원가입
                                     </Link>
                                 </li>
                             </>
                         )}
                         <li>
-                            <Link to="/" onClick={() => setIsOpen(false)}>
+                            <Link to="/" onClick={onClose}>
                                 홈
                             </Link>
                         </li>
@@ -136,7 +163,7 @@ const FloatingMenu = ({ setIsOpen }) => {
                     <div className="mobile-login-wrap-title">
                         {authed ? (
                             <h4>
-                                <span>{user.name}</span>님 환영합니다
+                                <span>{user?.name}</span>님 환영합니다
                             </h4>
                         ) : (
                             <strong>로그인을 해주세요.</strong>
@@ -146,12 +173,7 @@ const FloatingMenu = ({ setIsOpen }) => {
 
                 <section className="item-wrap">
                     {MenuItems.map((menu) => (
-                        <Link
-                            key={menu.id}
-                            to={menu.route}
-                            onClick={() => setIsOpen(false)}
-                            className="menu-link"
-                        >
+                        <Link key={menu.id} to={menu.route} onClick={onClose} className="menu-link">
                             <FloatingMenuItem menu={menu} />
                         </Link>
                     ))}
@@ -159,19 +181,21 @@ const FloatingMenu = ({ setIsOpen }) => {
 
                 <section className="mobile-support-wrap">
                     <p>
-                        <Link to="/support" onClick={() => setIsOpen(false)}>
+                        <Link to="/support" onClick={onClose}>
                             공지사항
                         </Link>
                     </p>
                     <p>
-                        <Link to="/support" onClick={() => setIsOpen(false)}>
+                        <Link to="/support" onClick={onClose}>
                             고객센터
                         </Link>
                     </p>
                 </section>
-            </FloatingMenuStyle>
-        </>
+            </div>
+        </FloatingMenuStyle>
     );
+
+    return createPortal(node, document.body);
 };
 
 export default FloatingMenu;

@@ -1,24 +1,22 @@
-import { useState } from 'react';
-import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
-import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { BsCart2 } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
 import { cartActions } from '../../../store/modules/cartSlice';
+import HeartButton from '../../../ui/HeartButton';
 
-const GiftBestItem = ({ gift }) => {
-    const item = gift; // ✅ 변수 통일
+const GiftBestItem = ({ gift, heartVariant = 'overlay', onUnliked }) => {
+    const item = gift;
     const { name, price, discountedPrice, isDiscounted, discountRate, thumbnail, tags = [] } = item;
     const bestTag = tags.find((t) => t.name === '베스트10');
-
-    const [hoverHeart, setHoverHeart] = useState(false);
-    const [clicked, setClicked] = useState(false);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const safeNum = item.num ?? item.giftId; // ✅ num 보정
+    const n = Number(item.num ?? item.giftId);
+    const safeNum = Number.isFinite(n) ? n : null;
 
     const handleClick = () => {
-        if (!safeNum) return;
+        if (safeNum == null) return;
         navigate(`/product/${safeNum}`);
         window.scrollTo({ top: 0, left: 0 });
     };
@@ -26,33 +24,47 @@ const GiftBestItem = ({ gift }) => {
     const handleAdd = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        if (!safeNum) return;
+        if (safeNum == null) return;
         dispatch(cartActions.addToCart({ product: { ...item, num: safeNum }, qty: 1 }));
     };
 
     return (
         <li>
             <Link
-                to={safeNum ? `/product/${safeNum}` : '/'}
+                to={safeNum != null ? `/product/${safeNum}` : '/'}
                 onClick={() => window.scrollTo({ top: 0, left: 0 })}
             >
                 <div className="best-img">
-                    <img src={thumbnail} alt={name} onClick={handleClick} />
+                    <img src={thumbnail} alt={name} onClick={handleClick} loading="lazy" />
                     <span className="ranking">{bestTag ? bestTag.rank : ''}</span>
-                    <div className="overlay">
-                        <button
-                            className="icon-btn"
-                            onMouseEnter={() => setHoverHeart(true)}
-                            onMouseLeave={() => setHoverHeart(false)}
-                            onClick={() => setClicked((prev) => !prev)}
-                        >
-                            {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
-                        </button>
-                        <button className="icon-btn" type="button" onClick={handleAdd}>
-                            <BsCart2 />
-                        </button>
-                    </div>
+                    {heartVariant === 'overlay' && (
+                        <div className="overlay">
+                            <HeartButton
+                                productId={safeNum}
+                                variant="overlay"
+                                onUnliked={onUnliked}
+                            />
+                            <button
+                                className="icon-btn"
+                                type="button"
+                                onClick={handleAdd}
+                                disabled={safeNum == null}
+                            >
+                                <BsCart2 />
+                            </button>
+                        </div>
+                    )}
                 </div>
+
+                {heartVariant === 'mypage' && (
+                    <HeartButton
+                        productId={safeNum}
+                        variant="mypage"
+                        onUnliked={onUnliked}
+                        className="heart-in-img"
+                    />
+                )}
+
                 <h3>
                     {String(name || '')
                         .split('\n')
@@ -63,6 +75,7 @@ const GiftBestItem = ({ gift }) => {
                             </span>
                         ))}
                 </h3>
+
                 <div className="price-box">
                     {isDiscounted ? (
                         <p className="discount">{Number(price || 0).toLocaleString()}원</p>

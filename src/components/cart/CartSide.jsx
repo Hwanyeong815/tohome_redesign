@@ -1,10 +1,9 @@
-// CartSide.jsx
 import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { cartActions } from '../../store/modules/cartSlice';
 
-const NONMEMBER_ROUTE = '/order/guest'; // ✅ 추가(프로젝트 라우트에 맞게)
+const NONMEMBER_ROUTE = '/order/guest';
 
 const DELIVERY_THRESHOLD = 10000;
 const DELIVERY_FEE = 3000;
@@ -91,9 +90,9 @@ const CartSide = ({ setIsCartTab, isCartTab, isMenuTab }) => {
         }
         const goLogin = window.confirm('로그인이 필요합니다. 로그인 하시겠습니까?');
         if (goLogin) {
-            navigate('/login', { state: { redirectTo: '/cart' } }); // ✅ 로그인 후 장바구니 복귀
+            navigate('/login', { state: { redirectTo: '/cart' } });
         } else {
-            navigate(NONMEMBER_ROUTE); // ✅ 비회원 주문/조회 페이지로
+            navigate(NONMEMBER_ROUTE);
         }
     };
 

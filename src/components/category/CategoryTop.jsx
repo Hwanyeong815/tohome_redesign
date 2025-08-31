@@ -38,16 +38,13 @@ const slug = (s) =>
 const CategoryTop = ({ categoryID, onSelectSub, selectedSub }) => {
     const categories = useSelector((s) => s.cart.categories) ?? {};
 
-    // 1) 바로 키 조회
     let bucket = categories?.[categoryID];
 
-    // 2) 레거시 키면 → 한글 타이틀 매핑 → slug 조회
     if (!bucket && legacyTitleMap[categoryID]) {
         const keyByTitle = slug(legacyTitleMap[categoryID]);
         bucket = categories?.[keyByTitle];
     }
 
-    // 3) 한글/인코딩 라우트 파라미터 대응
     if (!bucket && categoryID) {
         const decoded = decodeURIComponent(categoryID);
         const keyByDecoded = slug(decoded);

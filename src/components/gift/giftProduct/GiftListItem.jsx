@@ -1,23 +1,22 @@
-import { useState } from 'react';
-import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
+import { useNavigate, Link } from 'react-router-dom';
+import { BsCart2 } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { cartActions } from '../../../store/modules/cartSlice';
+import HeartButton from '../../../ui/HeartButton';
 
-const GiftListItem = ({ gift }) => {
-    const item = gift; // ✅ 변수 통일
+const GiftListItem = ({ gift, heartVariant = 'overlay', onUnliked }) => {
+    const item = gift;
     const { thumbnail, name, price, discountedPrice, isDiscounted, discountRate } = item;
-
-    const [hoverHeart, setHoverHeart] = useState(false);
-    const [clicked, setClicked] = useState(false);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const safeNum = item.num ?? item.giftId; // ✅ num 보정
+    const n = Number(item.num ?? item.giftId);
+    const safeNum = Number.isFinite(n) ? n : null;
 
     const handleClick = () => {
-        if (!safeNum) return;
+        if (safeNum == null) return;
         navigate(`/product/${safeNum}`);
         window.scrollTo({ top: 0, left: 0 });
     };
@@ -25,52 +24,67 @@ const GiftListItem = ({ gift }) => {
     const handleAdd = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        if (!safeNum) return;
+        if (safeNum == null) return;
         dispatch(cartActions.addToCart({ product: { ...item, num: safeNum }, qty: 1 }));
     };
 
     return (
         <li>
-            <Link>
+            <Link
+                to={safeNum != null ? `/product/${safeNum}` : '/'}
+                onClick={() => window.scrollTo({ top: 0, left: 0 })}
+            >
                 <div className="img-wrap">
-                    <img src={thumbnail} alt={name} onClick={handleClick} />
-                    <div className="overlay">
-                        <button
-                            className="icon-btn"
-                            onMouseEnter={() => setHoverHeart(true)}
-                            onMouseLeave={() => setHoverHeart(false)}
-                            onClick={() => setClicked((prev) => !prev)}
-                        >
-                            {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
-                        </button>
-                        <button className="icon-btn" type="button" onClick={handleAdd}>
-                            <BsCart2 />
-                        </button>
-                    </div>
+                    <img src={thumbnail} alt={name} onClick={handleClick} loading="lazy" />
+                    {heartVariant === 'overlay' && (
+                        <div className="overlay">
+                            <HeartButton
+                                productId={safeNum}
+                                variant="overlay"
+                                onUnliked={onUnliked}
+                            />
+                            <button
+                                className="icon-btn"
+                                type="button"
+                                onClick={handleAdd}
+                                disabled={safeNum == null}
+                            >
+                                <BsCart2 />
+                            </button>
+                        </div>
+                    )}
+                </div>
 
-                    <h3>
-                        {String(name || '')
-                            .split('\n')
-                            .map((line, idx) => (
-                                <span key={idx}>
-                                    {line}
-                                    <br />
-                                </span>
-                            ))}
-                    </h3>
+                {heartVariant === 'mypage' && (
+                    <HeartButton
+                        productId={safeNum}
+                        variant="mypage"
+                        onUnliked={onUnliked}
+                        className="heart-in-img"
+                    />
+                )}
 
-                    <div className="price-box">
-                        {isDiscounted ? (
-                            <p className="discount">{Number(price || 0).toLocaleString()}원</p>
-                        ) : (
-                            <p className="discount">{''}</p>
-                        )}
-                        <p className="price">
-                            {isDiscounted && <span>{discountRate}%</span>}
-                            {Number((isDiscounted ? discountedPrice : price) || 0).toLocaleString()}
-                            원
-                        </p>
-                    </div>
+                <h3>
+                    {String(name || '')
+                        .split('\n')
+                        .map((line, idx) => (
+                            <span key={idx}>
+                                {line}
+                                <br />
+                            </span>
+                        ))}
+                </h3>
+
+                <div className="price-box">
+                    {isDiscounted ? (
+                        <p className="discount">{Number(price || 0).toLocaleString()}원</p>
+                    ) : (
+                        <p className="discount">{''}</p>
+                    )}
+                    <p className="price">
+                        {isDiscounted && <span>{discountRate}%</span>}
+                        {Number((isDiscounted ? discountedPrice : price) || 0).toLocaleString()}원
+                    </p>
                 </div>
             </Link>
         </li>

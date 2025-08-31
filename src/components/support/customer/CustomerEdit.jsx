@@ -1,4 +1,3 @@
-// src/pages/support/CustomerEdit.jsx
 import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
@@ -54,20 +53,17 @@ const CustomerEdit = () => {
         const id = Number(user.id);
 
         const updatedUser = {
-            ...rawItem, // 기존 값 보존
-            ...user, // 변경 덮어쓰기
+            ...rawItem,
+            ...user,
             id,
             customerId: id,
             username: user.username || getUsername(rawItem),
             date: `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`,
         };
 
-        // 디버깅용 로그 (필요 시)
-        // console.log('submit payload', updatedUser);
-
         dispatch(supportActions.updateCustomer(updatedUser));
         navigate(`/customer/${id}`);
-        // 이동 후 스크롤 상단
+
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
@@ -113,7 +109,6 @@ const CustomerEdit = () => {
                                 />
                             </p>
 
-                            {/* 에러 메시지 */}
                             {error && <p style={{ color: 'crimson', marginTop: 8 }}>{error}</p>}
 
                             <div className="btn-wrap" style={{ position: 'relative', zIndex: 1 }}>

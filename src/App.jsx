@@ -83,7 +83,6 @@ const App = () => {
                             <Route path=":customerID" element={<CustomerDetail />} />
                         </Route>
 
-                        {/* 공통상세페이지 */}
                         <Route path="/product/:productNum" element={<ProductDetail />} />
                         <Route path="/result" element={<ProductResult />} />
                         <Route path="/healFood" element={<HealFood />} />

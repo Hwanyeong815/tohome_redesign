@@ -1,6 +1,6 @@
 import { createSlice, createSelector } from '@reduxjs/toolkit';
 
-const initialState = { byUser: {} }; // { [userId]: number[] }
+const initialState = { byUser: {} };
 
 const toggleInArray = (arr, id) => (arr.includes(id) ? arr.filter((v) => v !== id) : [...arr, id]);
 
@@ -31,7 +31,6 @@ const likesSlice = createSlice({
 export const likesActions = likesSlice.actions;
 export default likesSlice.reducer;
 
-// -------- selectors (slice 바깥) --------
 const selectLikesRoot = (state) => state.likes || initialState;
 
 export const selectUserLikes = (state, userId) =>

@@ -1,4 +1,3 @@
-// src/pages/mypage/MyPageLikes.jsx
 import { useState } from 'react';
 import { MyPageLikesStyle } from './style';
 import ProductItem from '../../components/product/ProductItem';

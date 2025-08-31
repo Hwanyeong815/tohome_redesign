@@ -20,8 +20,6 @@ const Content5 = () => {
     const navigate = useNavigate();
     const [selectedItems, setSelectedItems] = useState(new Set());
 
-    ////////
-
     const handleItemSelect = (productNum, isSelected) => {
         const n = toNum(productNum);
         if (n == null) return;

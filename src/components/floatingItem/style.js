@@ -84,15 +84,43 @@ export const FloatingBtnStyle = styled.div`
         display: none;
     }
 `;
+
 export const FloatingMenuStyle = styled.div`
-    z-index: 1001;
-    position: absolute;
-    top: 220px;
-    right: 0px;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.15);
-    background-color: white;
+    /* 오버레이(배경) */
+    position: fixed;
+    inset: 0;
+    z-index: 2001;
+    background: rgba(0, 0, 0, 0.45);
+
+    /* 데스크톱: 헤더 높이만큼 아래에서 시작 (모바일은 아래에서 무시) */
+    padding-top: var(--header-offset, 0px);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    /* 패널 */
+    .panel {
+        /* 데스크톱 오프셋 적용: 헤더 높이를 제외한 나머지 영역 스크롤 */
+        /* height: calc(100% - var(--header-offset, 0px)); */
+        width: min(86vw, 240px);
+        margin-right: 550px; /* 기존 right: 550px 보정 */
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.15);
+        /* overflow-y: auto; */
+        -webkit-overflow-scrolling: touch;
+        padding: 20px;
+    }
+
+    .close-btn {
+        background: transparent;
+        border: 0;
+        font-size: 28px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+    }
 
     .item {
         &:hover {
@@ -113,7 +141,7 @@ export const FloatingMenuStyle = styled.div`
             display: flex;
             align-items: center;
             padding: 10px 15px;
-            margin: 10px 0px;
+            margin: 10px 0;
             p {
                 font-weight: 500;
                 font-size: 16px;
@@ -132,14 +160,18 @@ export const FloatingMenuStyle = styled.div`
             display: none;
         }
     }
+
+    /* ✅ 모바일: 헤더 오프셋 무시(top=0), 패널 크기/여백 모바일 디자인 유지 */
     @media screen and (max-width: 600px) {
-        left: -4.359vw;
-        top: 0;
-        margin: 0;
-        padding: 6.1538vw;
-        width: 89.7436vw;
-        height: 216.4103vw;
-        border-radius: 0 20px 20px 0;
+        padding-top: 0; /* 헤더 오프셋 무시 */
+
+        .panel {
+            width: 89.7436vw;
+            height: 100%;
+            margin-right: 0;
+            border-radius: 0 20px 20px 0;
+            padding: 6.1538vw;
+        }
 
         .mobile {
             &-logo-wrap,
@@ -149,6 +181,7 @@ export const FloatingMenuStyle = styled.div`
                 box-sizing: border-box;
             }
         }
+
         .mobile {
             &-logo-wrap {
                 display: flex;
@@ -156,14 +189,15 @@ export const FloatingMenuStyle = styled.div`
                 align-content: center;
                 align-items: center;
                 height: 10.7692vw;
+
                 &-img {
                     width: 42.3077vw;
                     img {
                         width: 100%;
                     }
                 }
-                button {
-                    background-color: transparent;
+                .close-btn {
+                    font-size: 8.9744vw;
                 }
                 p {
                     font-size: 8.9744vw !important;
@@ -171,6 +205,7 @@ export const FloatingMenuStyle = styled.div`
                     height: 5.7692vw;
                 }
             }
+
             &-login-wrap {
                 margin-top: 2.0513vw;
                 &-list {
@@ -196,6 +231,7 @@ export const FloatingMenuStyle = styled.div`
                     }
                 }
             }
+
             &-support-wrap {
                 margin-top: 24px;
                 margin-bottom: 42px;
@@ -207,6 +243,7 @@ export const FloatingMenuStyle = styled.div`
                 }
             }
         }
+
         .item {
             &-wrap {
                 border-top: 0.2564vw solid #000;
@@ -230,7 +267,6 @@ export const FloatingMenuStyle = styled.div`
                 }
                 p {
                     font-weight: 600;
-
                     font-size: 5.1282vw;
                 }
             }

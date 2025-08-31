@@ -9,11 +9,11 @@ const ProductSearch = ({ onClose, onSelectKeyword, onSubmit }) => {
     const navigate = useNavigate();
 
     const goResult = (raw) => {
-        const q = raw.replace(/^#/, ''); // 태그 앞 # 제거
-        // 선택/제출 콜백도 그대로 지원 (있으면 호출)
+        const q = raw.replace(/^#/, '');
+
         onSelectKeyword?.(q);
         onSubmit?.(q);
-        // /result로 이동 (쿼리스트링 방식)
+
         navigate(`/result?q=${encodeURIComponent(q)}`);
         onClose?.();
     };

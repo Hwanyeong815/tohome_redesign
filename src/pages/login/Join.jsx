@@ -1,4 +1,3 @@
-// pages/Join/index.jsx
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import JoinInfo from '../../components/login/JoinInfo';
@@ -69,7 +68,6 @@ const Join = () => {
         try {
             dispatch(authActions.signup(payload));
             alert('회원가입이 완료되었습니다.');
-            // 🔽 alert 이후 라우팅을 확실히 보장
             setTimeout(() => navigate('/', { replace: true }), 0);
         } catch (e) {
             console.error(e);
@@ -80,7 +78,7 @@ const Join = () => {
     return (
         <JoinStyle>
             <div className="inner">
-                <h2>회원가입</h2> 
+                <h2>회원가입</h2>
                 <JoinItem />
                 <JoinInfo />
                 <div className="btn-wrap">

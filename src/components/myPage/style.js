@@ -77,7 +77,36 @@ export const MyPageItemStyle = styled.div`
                 }
             }
         }
+        .list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+            .menu {
+                width: 287px;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                img {
+                    height: 35px;
+                }
 
+                span {
+                    font-size: 17px;
+                    font-weight: 700;
+                    color: #333;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #7e7e7e;
+                    font-family: 'Pretendard';
+                }
+            }
+        }
         .order {
             margin-top: 100px;
             .text {
@@ -213,6 +242,12 @@ export const MyPageLikesStyle = styled.div`
                 font-size: 14px;
                 font-weight: 600;
                 color: #7e7e7e;
+            }
+        }
+        .swiper-slide {
+            h3 {
+                text-align: left;
+                padding-left: 10px;
             }
         }
         &.expanded {

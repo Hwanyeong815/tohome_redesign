@@ -67,11 +67,10 @@ const Content4 = () => {
                         <SubscribeUl />
                     </div>
                 </section>
-                {/* 반찬구독 */}
+
                 <section className="health-sub-wrap" onClick={onClick2} data-aos="fade-up">
                     <HealthList />
                 </section>
-                {/* 건강식품구독 */}
             </Content4Style>
         </ContentStyle>
     );

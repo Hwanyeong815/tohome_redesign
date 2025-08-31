@@ -95,11 +95,9 @@ const MagazineDetail = ({ onToggle }) => {
 
     return (
         <MagazineDetailStyle>
-            {/* 항상 배경 */}
             <MagazineDetailItem1 onToggle={onToggle} />
 
             {isMobile ? (
-                // 래퍼 없이 해당 아이템만 교체 렌더 (DOM 구조 동일)
                 mobileContent
             ) : (
                 <>

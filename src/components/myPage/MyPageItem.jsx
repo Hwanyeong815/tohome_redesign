@@ -8,7 +8,7 @@ const MyPageItem = () => {
         <MyPageItemStyle>
             <div className="inner">
                 <div className="name">
-                    <h2>{user.name}</h2>
+                    <h2 className="pretendard">{user.name}</h2>
                     <span>님은 일반회원 입니다.</span>
                 </div>
                 <div className="items">
@@ -30,19 +30,19 @@ const MyPageItem = () => {
                 </div>
                 <div className="list">
                     <div className="menu menu1">
-                        <img src="/images/mypage/mypage_icon1.jpg" alt="주문내역 조회" />
+                        <img src="/images/mypage/mypage_icon3.jpg" alt="주문내역 조회" />
 
                         <span>ORDER</span>
                         <p>주문내역 조회</p>
                     </div>
                     <div className="menu menu2">
-                        <img src="/images/mypage/mypage_icon2.jpg" alt="회원정보" />
+                        <img src="/images/mypage/mypage_icon1.jpg" alt="회원정보" />
 
                         <span>PROFILE</span>
                         <p>회원정보</p>
                     </div>
                     <div className="menu menu3">
-                        <img src="/images/mypage/mypage_icon3.jpg" alt="게시물관리" />
+                        <img src="/images/mypage/mypage_icon1.jpg" alt="게시물관리" />
 
                         <span>BOARD</span>
                         <p>게시물 관리</p>

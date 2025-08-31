@@ -1465,10 +1465,7 @@ export default [
             sub: '면',
         },
 
-        tags: [
-            // { name: '베스트', rank: 10 },
-            { name: '신상품', rank: 1 },
-        ],
+        tags: [{ name: '신상품', rank: 1 }],
 
         details: {
             origin: '상세페이지 참고',
@@ -6992,25 +6989,25 @@ export default [
         num: 233,
         name: '[엄지네포장마차] \n강릉엄지네 꼬막무침 333g',
         des: '밥이 포함되어 있지 않으니 구매시 참고해주세요',
-        price: 25000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 7,508원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/01.jpg', // 상품 썸네일 이미지 URL
+        price: 25000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 7,508원',
+        thumbnail: '/images/menu05/01.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밥·볶음밥·도시락', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '밥·볶음밥·도시락',
         },
         tags: [{ name: '베스트', rank: 12 }],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '엄지네포장마차(여수올림)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '엄지네포장마차(여수올림)',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7018,25 +7015,25 @@ export default [
         num: 234,
         name: '[압구정 예향] \n찰밥 200gX2개 (냉동)',
         des: '',
-        price: 13000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,250원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/02.jpg', // 상품 썸네일 이미지 URL
+        price: 13000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,250원',
+        thumbnail: '/images/menu05/02.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밥·볶음밥·도시락', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '밥·볶음밥·도시락',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7044,25 +7041,25 @@ export default [
         num: 235,
         name: '[햇반] \n솥반 전복버터영양밥 200g',
         des: '',
-        price: 5480, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/03.jpg', // 상품 썸네일 이미지 URL
+        price: 5480,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/03.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밥·볶음밥·도시락', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '밥·볶음밥·도시락',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7070,25 +7067,25 @@ export default [
         num: 236,
         name: '[햇반컵반] \n스팸마요덮밥 219g',
         des: '',
-        price: 4980, //가격
-        discountedPrice: 3640, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 26, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/04.jpg', // 상품 썸네일 이미지 URL
+        price: 4980,
+        discountedPrice: 3640,
+        isDiscounted: true,
+        discountRate: 26,
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/04.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밥·볶음밥·도시락', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '밥·볶음밥·도시락',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7096,25 +7093,25 @@ export default [
         num: 237,
         name: '[원테이블] \n한우 잡채볶음밥 450g',
         des: '',
-        price: 5500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,222원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/05.jpg', // 상품 썸네일 이미지 URL
+        price: 5500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,222원',
+        thumbnail: '/images/menu05/05.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밥·볶음밥·도시락', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '밥·볶음밥·도시락',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '현대그린푸드(원테이블)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '현대그린푸드(원테이블)',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7122,25 +7119,25 @@ export default [
         num: 238,
         name: '[하남돼지집] \n차돌 된장술밥 250g (냉동)',
         des: '',
-        price: 6000, //가격
-        discountedPrice: 5200, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 13, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/06.jpg', // 상품 썸네일 이미지 URL
+        price: 6000,
+        discountedPrice: 5200,
+        isDiscounted: true,
+        discountRate: 13,
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/06.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밥·볶음밥·도시락', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '밥·볶음밥·도시락',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 홈이디어', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 홈이디어',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7148,25 +7145,25 @@ export default [
         num: 239,
         name: '[설성목장] \n한우불고기볶음밥 920g (4인분)',
         des: '',
-        price: 11800, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/07.jpg', // 상품 썸네일 이미지 URL
+        price: 11800,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/07.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밥·볶음밥·도시락', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '밥·볶음밥·도시락',
         },
         tags: [''],
 
         details: {
-            origin: '국내산', // 원산지
-            manufacturer: '설성푸드 주식회사', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국내산',
+            manufacturer: '설성푸드 주식회사',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7174,25 +7171,25 @@ export default [
         num: 240,
         name: '[설성목장] \n한우불고기김밥 240g',
         des: '',
-        price: 3800, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/08.jpg', // 상품 썸네일 이미지 URL
+        price: 3800,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/08.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밥·볶음밥·도시락', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '밥·볶음밥·도시락',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '설성푸드 주식회사', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '설성푸드 주식회사',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7200,25 +7197,25 @@ export default [
         num: 241,
         name: '[압구정 예향] \n5시간 우려낸 정성 가득 보양 삼계탕',
         des: '',
-        price: 18000, //가격
-        discountedPrice: 16200, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 900원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/09.jpg', // 상품 썸네일 이미지 URL
+        price: 18000,
+        discountedPrice: 16200,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '100g당 900원',
+        thumbnail: '/images/menu05/09.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '국·탕·찌개', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '국·탕·찌개',
         },
         tags: [{ name: '베스트' }],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7226,25 +7223,25 @@ export default [
         num: 242,
         name: '[압구정 예향] \n깊은 맛이 느껴지는 육개장 (냉동)',
         des: '푹 우려낸 육수와 건더기의 깊은 맛을 느낄 수 있는 예향의 육개장입니다',
-        price: 8000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,231원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/10.jpg', // 상품 썸네일 이미지 URL
+        price: 8000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,231원',
+        thumbnail: '/images/menu05/10.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '국·탕·찌개', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '국·탕·찌개',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7252,25 +7249,25 @@ export default [
         num: 243,
         name: '[반찬가게 슈퍼키친] \n찹쌀가득 닭다리백숙 900g',
         des: '',
-        price: 14500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,611원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/11.jpg', // 상품 썸네일 이미지 URL
+        price: 14500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,611원',
+        thumbnail: '/images/menu05/11.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '국·탕·찌개', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '국·탕·찌개',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '슈퍼키친', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '슈퍼키친',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7278,25 +7275,25 @@ export default [
         num: 244,
         name: '[압구정 예향] \n국산들개가루 버섯들깨탕 (냉동)',
         des: '걸쭉한 국물이 매력적인 버섯들깨탕입니다',
-        price: 8000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,231원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/12.jpg', // 상품 썸네일 이미지 URL
+        price: 8000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,231원',
+        thumbnail: '/images/menu05/12.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '국·탕·찌개', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '국·탕·찌개',
         },
         tags: [{ name: '베스트', rank: 36 }],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7304,25 +7301,25 @@ export default [
         num: 245,
         name: '[압구정 예향] \n부드러운 순두부 황태국',
         des: '',
-        price: 7500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,154원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/13.jpg', // 상품 썸네일 이미지 URL
+        price: 7500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,154원',
+        thumbnail: '/images/menu05/13.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '국·탕·찌개', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '국·탕·찌개',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7330,25 +7327,25 @@ export default [
         num: 246,
         name: '[벽제갈비] \n한우곰탕 500g (냉동)',
         des: '',
-        price: 17000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,400원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/14.jpg', // 상품 썸네일 이미지 URL
+        price: 17000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,400원',
+        thumbnail: '/images/menu05/14.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '국·탕·찌개', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '국·탕·찌개',
         },
         tags: [''],
 
         details: {
-            origin: '국내산', // 원산지
-            manufacturer: '(주)벽제갈비 하남지점', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국내산',
+            manufacturer: '(주)벽제갈비 하남지점',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7356,25 +7353,25 @@ export default [
         num: 247,
         name: '[존쿡델리미트] \n킬바사 부대찌개 800g',
         des: '',
-        price: 9780, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,223원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/15.jpg', // 상품 썸네일 이미지 URL
+        price: 9780,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,223원',
+        thumbnail: '/images/menu05/15.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '국·탕·찌개', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '국·탕·찌개',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '존쿡델리미트(에스푸드)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '존쿡델리미트(에스푸드)',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7382,25 +7379,25 @@ export default [
         num: 248,
         name: '[삼원가든] \n소갈비찜 700g',
         des: '',
-        price: 30500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,357원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/16.jpg', // 상품 썸네일 이미지 URL
+        price: 30500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 4,357원',
+        thumbnail: '/images/menu05/16.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '국·탕·찌개', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '국·탕·찌개',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사캐비아', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사캐비아',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7408,25 +7405,25 @@ export default [
         num: 249,
         name: '[명인명촌] \n강희탁 수연소면(우리밀) 200g',
         des: '',
-        price: 7400, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,700원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/17.jpg', // 상품 썸네일 이미지 URL
+        price: 7400,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,700원',
+        thumbnail: '/images/menu05/17.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '면·스파게티·국수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '면·스파게티·국수',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '명인명촌',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7434,25 +7431,25 @@ export default [
         num: 250,
         name: '[파라디] \n들기름 타레 소바 274g',
         des: '',
-        price: 10900, //가격
-        discountedPrice: 8720, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 20, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,182원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/18.jpg', // 상품 썸네일 이미지 URL
+        price: 10900,
+        discountedPrice: 8720,
+        isDiscounted: true,
+        discountRate: 20,
+        pricePerUnit: '100g당 3,182원',
+        thumbnail: '/images/menu05/18.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '면·스파게티·국수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '면·스파게티·국수',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '파라디', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '파라디',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7460,25 +7457,25 @@ export default [
         num: 251,
         name: '[효성] \n부산어묵 유부우동전골 710g',
         des: '',
-        price: 12730, //가격
-        discountedPrice: 11600, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 8, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/19.jpg', // 상품 썸네일 이미지 URL
+        price: 12730,
+        discountedPrice: 11600,
+        isDiscounted: true,
+        discountRate: 8,
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/19.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '면·스파게티·국수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '면·스파게티·국수',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '효성앤에프', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '효성앤에프',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7486,25 +7483,25 @@ export default [
         num: 252,
         name: '[뽀모] \n토마토 라구소스(다짐육) 190g',
         des: '',
-        price: 10500, //가격
-        discountedPrice: 8920, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/20.jpg', // 상품 썸네일 이미지 URL
+        price: 10500,
+        discountedPrice: 8920,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/20.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '면·스파게티·국수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '면·스파게티·국수',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '뽀모', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '뽀모',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7512,25 +7509,25 @@ export default [
         num: 253,
         name: '[소바쿠] \n쫄깃한 백메밀소바 532g',
         des: '',
-        price: 9900, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,861원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/21.jpg', // 상품 썸네일 이미지 URL
+        price: 9900,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,861원',
+        thumbnail: '/images/menu05/21.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '면·스파게티·국수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '면·스파게티·국수',
         },
         tags: [{ name: '신상품', rank: 31 }],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사캐비아', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사캐비아',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7538,25 +7535,25 @@ export default [
         num: 254,
         name: '[데체코] \n스파게티니 500g',
         des: '',
-        price: 7700, //가격
-        discountedPrice: 5940, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 22, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,1188원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/22.jpg', // 상품 썸네일 이미지 URL
+        price: 7700,
+        discountedPrice: 5940,
+        isDiscounted: true,
+        discountRate: 22,
+        pricePerUnit: '100g당 1,1188원',
+        thumbnail: '/images/menu05/22.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '면·스파게티·국수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '면·스파게티·국수',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'SEE21(씨21)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'SEE21(씨21)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7564,25 +7561,25 @@ export default [
         num: 255,
         name: '[CJ] \n가쓰오우동 933.2g',
         des: '',
-        price: 9480, //가격
-        discountedPrice: 8980, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 5, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/23.jpg', // 상품 썸네일 이미지 URL
+        price: 9480,
+        discountedPrice: 8980,
+        isDiscounted: true,
+        discountRate: 5,
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/23.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '면·스파게티·국수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '면·스파게티·국수',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7590,25 +7587,25 @@ export default [
         num: 256,
         name: '[농심] \n누들핏 육개장 사발면 맛',
         des: '',
-        price: 1550, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/24.jpg', // 상품 썸네일 이미지 URL
+        price: 1550,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/24.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '면·스파게티·국수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '면·스파게티·국수',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '농심(경인)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '농심(경인)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7616,25 +7613,25 @@ export default [
         num: 257,
         name: '[햇반] \n발아현미밥 작은공기 130gX3',
         des: '',
-        price: 6180, //가격
-        discountedPrice: 3460, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 44, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 887원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/25.jpg', // 상품 썸네일 이미지 URL
+        price: 6180,
+        discountedPrice: 3460,
+        isDiscounted: true,
+        discountRate: 44,
+        pricePerUnit: '100g당 887원',
+        thumbnail: '/images/menu05/25.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '라면·햇반·즉석밥', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '라면·햇반·즉석밥',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7642,25 +7639,25 @@ export default [
         num: 258,
         name: '[농심] \n신라면 멀티팩 120gX5',
         des: '',
-        price: 4900, //가격
-        discountedPrice: 4500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 8, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 750원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/26.jpg', // 상품 썸네일 이미지 URL
+        price: 4900,
+        discountedPrice: 4500,
+        isDiscounted: true,
+        discountRate: 8,
+        pricePerUnit: '100g당 750원',
+        thumbnail: '/images/menu05/26.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '라면·햇반·즉석밥', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '라면·햇반·즉석밥',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '농심(경인)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '농심(경인)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7668,25 +7665,25 @@ export default [
         num: 259,
         name: '[햇반] \n작은공기 130g',
         des: '',
-        price: 1700, //가격
-        discountedPrice: 1100, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 35, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 846원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/27.jpg', // 상품 썸네일 이미지 URL
+        price: 1700,
+        discountedPrice: 1100,
+        isDiscounted: true,
+        discountRate: 35,
+        pricePerUnit: '100g당 846원',
+        thumbnail: '/images/menu05/27.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '라면·햇반·즉석밥', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '라면·햇반·즉석밥',
         },
         tags: [{ name: '베스트', rank: 12 }],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7694,25 +7691,25 @@ export default [
         num: 260,
         name: '[농심] \n육개장 사발면 86g',
         des: '',
-        price: 1030, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 120원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/28.jpg', // 상품 썸네일 이미지 URL
+        price: 1030,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 120원',
+        thumbnail: '/images/menu05/28.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '라면·햇반·즉석밥', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '라면·햇반·즉석밥',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '농심(경인)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '농심(경인)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7720,25 +7717,25 @@ export default [
         num: 261,
         name: '[햇반] \n파로통곡물밥 190gX4',
         des: '',
-        price: 14980, //가격
-        discountedPrice: 10950, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 26, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/29.jpg', // 상품 썸네일 이미지 URL
+        price: 14980,
+        discountedPrice: 10950,
+        isDiscounted: true,
+        discountRate: 26,
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/29.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '라면·햇반·즉석밥', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '라면·햇반·즉석밥',
         },
         tags: [{ name: '신상품', rank: 25 }],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7746,25 +7743,25 @@ export default [
         num: 262,
         name: '[오뚜기] \n진라면 순한맛 120gX5',
         des: '',
-        price: 4280, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 713원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/30.jpg', // 상품 썸네일 이미지 URL
+        price: 4280,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 713원',
+        thumbnail: '/images/menu05/30.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '라면·햇반·즉석밥', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '라면·햇반·즉석밥',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '오뚜기', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '오뚜기',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7772,25 +7769,25 @@ export default [
         num: 263,
         name: '[팔도] \n비빔면 130gX5',
         des: '',
-        price: 5750, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 885원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/31.jpg', // 상품 썸네일 이미지 URL
+        price: 5750,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 885원',
+        thumbnail: '/images/menu05/31.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '라면·햇반·즉석밥', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '라면·햇반·즉석밥',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '팔도', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '팔도',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7798,25 +7795,25 @@ export default [
         num: 264,
         name: '[햇반] \n솥반 버섯영양방 200g',
         des: '',
-        price: 5280, //가격
-        discountedPrice: 2720, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 48, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 136원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/32.jpg', // 상품 썸네일 이미지 URL
+        price: 5280,
+        discountedPrice: 2720,
+        isDiscounted: true,
+        discountRate: 48,
+        pricePerUnit: '10g당 136원',
+        thumbnail: '/images/menu05/32.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '라면·햇반·즉석밥', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '라면·햇반·즉석밥',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7824,25 +7821,25 @@ export default [
         num: 265,
         name: '[압구정 예향] \n포테이토 에그 샐러드',
         des: '',
-        price: 6500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,250원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/33.jpg', // 상품 썸네일 이미지 URL
+        price: 6500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,250원',
+        thumbnail: '/images/menu05/33.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7850,25 +7847,25 @@ export default [
         num: 266,
         name: '[풀무원] \n한끼 계란연두부 2입 236g',
         des: '',
-        price: 3280, //가격
-        discountedPrice: 2780, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,178원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/34.jpg', // 상품 썸네일 이미지 URL
+        price: 3280,
+        discountedPrice: 2780,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 1,178원',
+        thumbnail: '/images/menu05/34.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '풀무원식품(주)생식품', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '풀무원식품(주)생식품',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7876,25 +7873,25 @@ export default [
         num: 267,
         name: '[풀무원] \n생순도토리묵 300gX2입',
         des: '',
-        price: 3500, //가격
-        discountedPrice: 2970, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 495원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/35.jpg', // 상품 썸네일 이미지 URL
+        price: 3500,
+        discountedPrice: 2970,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 495원',
+        thumbnail: '/images/menu05/35.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '풀무원식품(주)생식품', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '풀무원식품(주)생식품',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7902,25 +7899,25 @@ export default [
         num: 268,
         name: '[한성] \n실곤약 200g',
         des: '',
-        price: 1280, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 640원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/36.jpg', // 상품 썸네일 이미지 URL
+        price: 1280,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 640원',
+        thumbnail: '/images/menu05/36.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '한성기업', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '한성기업',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7928,25 +7925,25 @@ export default [
         num: 269,
         name: '[풀무원] \n식물성 지구식단 크리스피 두부스틱 400g',
         des: '',
-        price: 7980, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,995원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/37.jpg', // 상품 썸네일 이미지 URL
+        price: 7980,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,995원',
+        thumbnail: '/images/menu05/37.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '풀무원식품(주)생식품', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '풀무원식품(주)생식품',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7954,25 +7951,25 @@ export default [
         num: 270,
         name: '[메디쏠라] \n마녀스프(냉동)',
         des: '',
-        price: 6900, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/38.jpg', // 상품 썸네일 이미지 URL
+        price: 6900,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/38.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '메디쏠라 주식회사', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '메디쏠라 주식회사',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -7980,25 +7977,25 @@ export default [
         num: 271,
         name: '[압구정 예향] \n연근 흑임자 소스 샐러드',
         des: '',
-        price: 6500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,333원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/39.jpg', // 상품 썸네일 이미지 URL
+        price: 6500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 4,333원',
+        thumbnail: '/images/menu05/39.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -8006,25 +8003,25 @@ export default [
         num: 272,
         name: '[압구정 예향] \n단호박 견과 샐러드',
         des: '',
-        price: 6500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,250원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/40.jpg', // 상품 썸네일 이미지 URL
+        price: 6500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,250원',
+        thumbnail: '/images/menu05/40.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -8032,25 +8029,25 @@ export default [
         num: 273,
         name: '[메디쏠라] \n프로틴3 새우두부 함박스테이트 100g',
         des: '',
-        price: 4300, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/41.jpg', // 상품 썸네일 이미지 URL
+        price: 4300,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/41.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '메디쏠라 주식회사', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '메디쏠라 주식회사',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -8058,25 +8055,25 @@ export default [
         num: 274,
         name: '[메디쏠라] \n프로틴3 치킨두부 함박스테이크 100g',
         des: '',
-        price: 4300, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu05/42.jpg', // 상품 썸네일 이미지 URL
+        price: 4300,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu05/42.jpg',
         category: {
-            main: '밥·국·면', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '샐러드·저칼로리식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밥·국·면',
+            sub: '샐러드·저칼로리식',
         },
         tags: [''],
 
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '메디쏠라 주식회사', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '메디쏠라 주식회사',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -8084,27 +8081,27 @@ export default [
         num: 275,
         name: '[압구정 예향] \n5시간 우려낸 정성 가득 보양 삼계탕',
         des: '',
-        price: 18000, //가격
-        discountedPrice: 16200, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 900원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/01.jpg', // 상품 썸네일 이미지 URL
+        price: 18000,
+        discountedPrice: 16200,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '100g당 900원',
+        thumbnail: '/images/menu06/01.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '엄마 손맛 즉석반찬', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '엄마 손맛 즉석반찬',
         },
         tags: [
             { name: '베스트', rank: 1 },
             { name: '신상품', rank: 40 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8112,27 +8109,27 @@ export default [
         num: 276,
         name: '[압구정 예향] \n소고기 듬뿍 수제 함박',
         des: '',
-        price: 12000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,000원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/02.jpg', // 상품 썸네일 이미지 URL
+        price: 12000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 4,000원',
+        thumbnail: '/images/menu06/02.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '엄마 손맛 즉석반찬', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '엄마 손맛 즉석반찬',
         },
         tags: [
             { name: '베스트', rank: 2 },
             { name: '신상품', rank: 39 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8140,27 +8137,27 @@ export default [
         num: 277,
         name: '[비비고] \n가자미구이 70g',
         des: '',
-        price: 5480, //가격
-        discountedPrice: 3980, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 27, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/03.jpg', // 상품 썸네일 이미지 URL
+        price: 5480,
+        discountedPrice: 3980,
+        isDiscounted: true,
+        discountRate: 27,
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/03.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '엄마 손맛 즉석반찬', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '엄마 손맛 즉석반찬',
         },
         tags: [
             { name: '베스트', rank: 3 },
             { name: '신상품', rank: 38 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8168,27 +8165,27 @@ export default [
         num: 278,
         name: '[비비고] \n고등어구이 60g',
         des: '',
-        price: 5480, //가격
-        discountedPrice: 3980, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 27, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/04.jpg', // 상품 썸네일 이미지 URL
+        price: 5480,
+        discountedPrice: 3980,
+        isDiscounted: true,
+        discountRate: 27,
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/04.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '엄마 손맛 즉석반찬', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '엄마 손맛 즉석반찬',
         },
         tags: [
             { name: '베스트', rank: 4 },
             { name: '신상품', rank: 37 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8196,27 +8193,27 @@ export default [
         num: 279,
         name: '[풀무원] \n와사비국산콩생나또8개입세트 356g',
         des: '',
-        price: 11600, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/05.jpg', // 상품 썸네일 이미지 URL
+        price: 11600,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/05.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '김치 · 젓갈 · 장아찌', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '김치 · 젓갈 · 장아찌',
         },
         tags: [
             { name: '베스트', rank: 5 },
             { name: '신상품', rank: 36 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '풀무원', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '풀무원',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8224,27 +8221,27 @@ export default [
         num: 280,
         name: '[사비니 타르투피] \n복숭아 송로버섯 오일 절임 175g',
         des: '',
-        price: 33000, //가격
-        discountedPrice: 23100, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 30, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 13,200원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/06.jpg', // 상품 썸네일 이미지 URL
+        price: 33000,
+        discountedPrice: 23100,
+        isDiscounted: true,
+        discountRate: 30,
+        pricePerUnit: '100g당 13,200원',
+        thumbnail: '/images/menu06/06.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '김치 · 젓갈 · 장아찌', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '김치 · 젓갈 · 장아찌',
         },
         tags: [
             { name: '베스트', rank: 6 },
             { name: '신상품', rank: 35 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '에봇', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '에봇',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8252,27 +8249,27 @@ export default [
         num: 281,
         name: '[리졸리] \n엔쵸비 58g',
         des: '',
-        price: 11000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 1,897원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/07.jpg', // 상품 썸네일 이미지 URL
+        price: 11000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 1,897원',
+        thumbnail: '/images/menu06/07.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '김치 · 젓갈 · 장아찌', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '김치 · 젓갈 · 장아찌',
         },
         tags: [
             { name: '베스트', rank: 7 },
             { name: '신상품', rank: 34 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'SEE21(씨21)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'SEE21(씨21)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8280,27 +8277,27 @@ export default [
         num: 282,
         name: '[명인명촌] \n김정배 젓갈 250g, 3종 낙지, 창란, 오징어',
         des: '',
-        price: 15000, //가격
-        discountedPrice: 11250, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 25, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 450원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/08.jpg', // 상품 썸네일 이미지 URL
+        price: 15000,
+        discountedPrice: 11250,
+        isDiscounted: true,
+        discountRate: 25,
+        pricePerUnit: '10g당 450원',
+        thumbnail: '/images/menu06/08.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '김치 · 젓갈 · 장아찌', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '김치 · 젓갈 · 장아찌',
         },
         tags: [
             { name: '베스트', rank: 8 },
             { name: '신상품', rank: 33 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '명인명촌',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8308,27 +8305,27 @@ export default [
         num: 283,
         name: '[경복궁BLACK] \n한우 떡갈비 200g',
         des: '',
-        price: 15000, //가격
-        discountedPrice: 12700, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 6,350원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/09.jpg', // 상품 썸네일 이미지 URL
+        price: 15000,
+        discountedPrice: 12700,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 6,350원',
+        thumbnail: '/images/menu06/09.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '메인 요리 · 밀키트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '메인 요리 · 밀키트',
         },
         tags: [
             { name: '베스트', rank: 9 },
             { name: '신상품', rank: 32 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '경복궁BLACK', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '경복궁BLACK',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8336,27 +8333,27 @@ export default [
         num: 284,
         name: '[경복궁BLACK] \n한우불고기 600g',
         des: '',
-        price: 35000, //가격
-        discountedPrice: 29700, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,950원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/10.jpg', // 상품 썸네일 이미지 URL
+        price: 35000,
+        discountedPrice: 29700,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 4,950원',
+        thumbnail: '/images/menu06/10.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '메인 요리 · 밀키트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '메인 요리 · 밀키트',
         },
         tags: [
             { name: '베스트', rank: 10 },
             { name: '신상품', rank: 31 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '경복궁BLACK', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '경복궁BLACK',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8364,27 +8361,27 @@ export default [
         num: 285,
         name: '[경복궁BLACK] \n양념불고기 600g',
         des: '',
-        price: 20000, //가격
-        discountedPrice: 17000, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,833원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/11.jpg', // 상품 썸네일 이미지 URL
+        price: 20000,
+        discountedPrice: 17000,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 2,833원',
+        thumbnail: '/images/menu06/11.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '메인 요리 · 밀키트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '메인 요리 · 밀키트',
         },
         tags: [
             { name: '베스트', rank: 11 },
             { name: '신상품', rank: 30 },
         ],
         details: {
-            origin: '별도표기', // 원산지
-            manufacturer: '경복궁BLACK', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '별도표기',
+            manufacturer: '경복궁BLACK',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8392,27 +8389,27 @@ export default [
         num: 286,
         name: '[경복궁BLACK] \n칼집LA갈비 600g',
         des: '',
-        price: 30000, //가격
-        discountedPrice: 27000, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,500원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/12.jpg', // 상품 썸네일 이미지 URL
+        price: 30000,
+        discountedPrice: 27000,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '100g당 4,500원',
+        thumbnail: '/images/menu06/12.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '메인 요리 · 밀키트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '메인 요리 · 밀키트',
         },
         tags: [
             { name: '베스트', rank: 12 },
             { name: '신상품', rank: 29 },
         ],
         details: {
-            origin: '별도표기', // 원산지
-            manufacturer: '경복궁BLACK', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '별도표기',
+            manufacturer: '경복궁BLACK',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8420,27 +8417,27 @@ export default [
         num: 287,
         name: '[존쿡델리미트] \n불닭 킬바사 270g',
         des: '',
-        price: 9180, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,400원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/13.jpg', // 상품 썸네일 이미지 URL
+        price: 9180,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,400원',
+        thumbnail: '/images/menu06/13.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡볶이 · 만두 · 냉동간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '떡볶이 · 만두 · 냉동간식',
         },
         tags: [
             { name: '베스트', rank: 13 },
             { name: '신상품', rank: 28 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '존쿡델리미트(에스푸드)', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '존쿡델리미트(에스푸드)',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8448,27 +8445,27 @@ export default [
         num: 288,
         name: '[존쿡델리미트] \n부어스첸 핫도그 300g 6개입',
         des: '',
-        price: 8980, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,993원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/14.jpg', // 상품 썸네일 이미지 URL
+        price: 8980,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 2,993원',
+        thumbnail: '/images/menu06/14.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡볶이 · 만두 · 냉동간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '떡볶이 · 만두 · 냉동간식',
         },
         tags: [
             { name: '베스트', rank: 14 },
             { name: '신상품', rank: 27 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '존쿡델리미트(에스푸드)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '존쿡델리미트(에스푸드)',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8476,27 +8473,27 @@ export default [
         num: 289,
         name: '[더블루팜] \n루지 미트볼 치즈카츠 270g',
         des: '',
-        price: 10000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,704원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/15.jpg', // 상품 썸네일 이미지 URL
+        price: 10000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,704원',
+        thumbnail: '/images/menu06/15.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡볶이 · 만두 · 냉동간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '떡볶이 · 만두 · 냉동간식',
         },
         tags: [
             { name: '베스트', rank: 15 },
             { name: '신상품', rank: 26 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 더블루팜', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 더블루팜',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8504,27 +8501,27 @@ export default [
         num: 290,
         name: '[존쿡델리미트X보마켓] \n시그니처 로제 떡볶이 485g',
         des: '',
-        price: 7780, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,604원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/16.jpg', // 상품 썸네일 이미지 URL
+        price: 7780,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,604원',
+        thumbnail: '/images/menu06/16.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡볶이 · 만두 · 냉동간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '떡볶이 · 만두 · 냉동간식',
         },
         tags: [
             { name: '베스트', rank: 16 },
             { name: '신상품', rank: 25 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 더블루팜', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 더블루팜',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8532,27 +8529,27 @@ export default [
         num: 291,
         name: '[뽀모] \n바칼라우 150g',
         des: '',
-        price: 9500, //가격
-        discountedPrice: 8070, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 5,380원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/17.jpg', // 상품 썸네일 이미지 URL
+        price: 9500,
+        discountedPrice: 8070,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 5,380원',
+        thumbnail: '/images/menu06/17.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '죽 · 스프 · 카레', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '죽 · 스프 · 카레',
         },
         tags: [
             { name: '베스트', rank: 17 },
             { name: '신상품', rank: 24 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '뽀모', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '뽀모',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8560,27 +8557,27 @@ export default [
         num: 292,
         name: '[햇반] \n소프트밀 양송이 크림수프',
         des: '',
-        price: 4480, //가격
-        discountedPrice: 2170, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 51, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/18.jpg', // 상품 썸네일 이미지 URL
+        price: 4480,
+        discountedPrice: 2170,
+        isDiscounted: true,
+        discountRate: 51,
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/18.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '죽 · 스프 · 카레', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '죽 · 스프 · 카레',
         },
         tags: [
             { name: '베스트', rank: 18 },
             { name: '신상품', rank: 23 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8588,27 +8585,27 @@ export default [
         num: 293,
         name: '[햇반] \n소프트밀 베이컨감자 크림수프',
         des: '',
-        price: 4480, //가격
-        discountedPrice: 2170, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 51, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/19.jpg', // 상품 썸네일 이미지 URL
+        price: 4480,
+        discountedPrice: 2170,
+        isDiscounted: true,
+        discountRate: 51,
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/19.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '죽 · 스프 · 카레', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '죽 · 스프 · 카레',
         },
         tags: [
             { name: '베스트', rank: 19 },
             { name: '신상품', rank: 22 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8616,27 +8613,27 @@ export default [
         num: 294,
         name: '[차오차이] \n스파이시 블랙페퍼짜장',
         des: '본 상품은 전자레인지 조리용입니다.',
-        price: 4480, //가격
-        discountedPrice: 2510, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 43, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/20.jpg', // 상품 썸네일 이미지 URL
+        price: 4480,
+        discountedPrice: 2510,
+        isDiscounted: true,
+        discountRate: 43,
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/20.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '죽 · 스프 · 카레', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '죽 · 스프 · 카레',
         },
         tags: [
             { name: '베스트', rank: 20 },
             { name: '신상품', rank: 21 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '샘표', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '샘표',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8644,27 +8641,27 @@ export default [
         num: 295,
         name: '[존쿡델리미트] \n부어스트 2종',
         des: '부드럽고 담백한 맛의 독일식 소시지 부어스트',
-        price: 9180, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,869원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/21.jpg', // 상품 썸네일 이미지 URL
+        price: 9180,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 2,869원',
+        thumbnail: '/images/menu06/21.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '햄 · 어묵 · 반찬재료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '햄 · 어묵 · 반찬재료',
         },
         tags: [
             { name: '베스트', rank: 21 },
             { name: '신상품', rank: 20 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '존쿡델리미트(에스푸드)', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '존쿡델리미트(에스푸드)',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8672,27 +8669,27 @@ export default [
         num: 296,
         name: '[존쿡 델리미트] \n베이컨 4종 120~150g',
         des: '',
-        price: 4680, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,340원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/22.jpg', // 상품 썸네일 이미지 URL
+        price: 4680,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 2,340원',
+        thumbnail: '/images/menu06/22.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '햄 · 어묵 · 반찬재료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '햄 · 어묵 · 반찬재료',
         },
         tags: [
             { name: '베스트', rank: 22 },
             { name: '신상품', rank: 19 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '존쿡델리미트(에스푸드)', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '존쿡델리미트(에스푸드)',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8700,27 +8697,27 @@ export default [
         num: 297,
         name: '[존쿡델리미트] \n비프 핫도그 소시지 300g ',
         des: '',
-        price: 10780, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,593원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/23.jpg', // 상품 썸네일 이미지 URL
+        price: 10780,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,593원',
+        thumbnail: '/images/menu06/23.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '햄 · 어묵 · 반찬재료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '햄 · 어묵 · 반찬재료',
         },
         tags: [
             { name: '베스트', rank: 23 },
             { name: '신상품', rank: 18 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '존쿡델리미트(에스푸드)', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '존쿡델리미트(에스푸드)',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8728,27 +8725,27 @@ export default [
         num: 298,
         name: '[뽀모] \n후레쉬 수제 훈제연어 100g',
         des: '',
-        price: 13000, //가격
-        discountedPrice: 11050, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/24.jpg', // 상품 썸네일 이미지 URL
+        price: 13000,
+        discountedPrice: 11050,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/24.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '햄 · 어묵 · 반찬재료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '햄 · 어묵 · 반찬재료',
         },
         tags: [
             { name: '베스트', rank: 24 },
             { name: '신상품', rank: 17 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '뽀모', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '뽀모',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8756,27 +8753,27 @@ export default [
         num: 299,
         name: '[압구정 예향] \n순두부 찌개',
         des: '',
-        price: 7900, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,317원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/25.jpg', // 상품 썸네일 이미지 URL
+        price: 7900,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,317원',
+        thumbnail: '/images/menu06/25.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '엄마 손맛 즉석반찬', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '엄마 손맛 즉석반찬',
         },
         tags: [
             { name: '베스트', rank: 25 },
             { name: '신상품', rank: 16 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8784,27 +8781,27 @@ export default [
         num: 300,
         name: '[압구정 예향] \n맑은 명란국',
         des: '',
-        price: 8500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,308원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/26.jpg', // 상품 썸네일 이미지 URL
+        price: 8500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,308원',
+        thumbnail: '/images/menu06/26.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '엄마 손맛 즉석반찬', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '엄마 손맛 즉석반찬',
         },
         tags: [
             { name: '베스트', rank: 26 },
             { name: '신상품', rank: 15 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8812,27 +8809,27 @@ export default [
         num: 301,
         name: '[압구정 예향] \n부드러운 순두부 황태국',
         des: '',
-        price: 7500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,154원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/27.jpg', // 상품 썸네일 이미지 URL
+        price: 7500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,154원',
+        thumbnail: '/images/menu06/27.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '엄마 손맛 즉석반찬', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '엄마 손맛 즉석반찬',
         },
         tags: [
             { name: '베스트', rank: 27 },
             { name: '신상품', rank: 14 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8840,27 +8837,27 @@ export default [
         num: 302,
         name: '[압구정 예향] \n국산 꽃게 된장찌개',
         des: '오늘 저녁 반찬 고민 끝 넉넉한 양으로 한끼 푸짐하게!',
-        price: 8500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,417원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/28.jpg', // 상품 썸네일 이미지 URL
+        price: 8500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,417원',
+        thumbnail: '/images/menu06/28.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '엄마 손맛 즉석반찬', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '엄마 손맛 즉석반찬',
         },
         tags: [
             { name: '베스트', rank: 28 },
             { name: '신상품', rank: 13 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8868,27 +8865,27 @@ export default [
         num: 303,
         name: '[명인명촌] \n이정하 마늘쫑 장아찌 250g',
         des: '',
-        price: 11500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,600원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/29.jpg', // 상품 썸네일 이미지 URL
+        price: 11500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 4,600원',
+        thumbnail: '/images/menu06/29.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '김치 · 젓갈 · 장아찌', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '김치 · 젓갈 · 장아찌',
         },
         tags: [
             { name: '베스트', rank: 29 },
             { name: '신상품', rank: 12 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '명인명촌',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8896,27 +8893,27 @@ export default [
         num: 304,
         name: '[명인명촌] \n순창의장맛 더덕장아찌 220g',
         des: '',
-        price: 15500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 705원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/30.jpg', // 상품 썸네일 이미지 URL
+        price: 15500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 705원',
+        thumbnail: '/images/menu06/30.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '김치 · 젓갈 · 장아찌', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '김치 · 젓갈 · 장아찌',
         },
         tags: [
             { name: '베스트', rank: 30 },
             { name: '신상품', rank: 11 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '명인명촌',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8924,27 +8921,27 @@ export default [
         num: 305,
         name: '[종가집] \n옛맛깻잎지200g',
         des: '',
-        price: 7880, //가격
-        discountedPrice: 6980, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 11, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,490원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/31.jpg', // 상품 썸네일 이미지 URL
+        price: 7880,
+        discountedPrice: 6980,
+        isDiscounted: true,
+        discountRate: 11,
+        pricePerUnit: '100g당 3,490원',
+        thumbnail: '/images/menu06/31.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '김치 · 젓갈 · 장아찌', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '김치 · 젓갈 · 장아찌',
         },
         tags: [
             { name: '베스트', rank: 31 },
             { name: '신상품', rank: 10 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '대상(종가집)', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '대상(종가집)',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8952,27 +8949,27 @@ export default [
         num: 306,
         name: '[맛의명태자] \n순한맛의 명태자 자른명란 180g',
         des: '',
-        price: 16000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 8,889원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/32.jpg', // 상품 썸네일 이미지 URL
+        price: 16000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 8,889원',
+        thumbnail: '/images/menu06/32.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '김치 · 젓갈 · 장아찌', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '김치 · 젓갈 · 장아찌',
         },
         tags: [
             { name: '베스트', rank: 32 },
             { name: '신상품', rank: 9 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '대경에프앤비(주)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '대경에프앤비(주)',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -8980,27 +8977,27 @@ export default [
         num: 307,
         name: '[원테이블] \n페퍼로니 피자 330g',
         des: '',
-        price: 10500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,182원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/33.jpg', // 상품 썸네일 이미지 URL
+        price: 10500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 3,182원',
+        thumbnail: '/images/menu06/33.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '메인 요리 · 밀키트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '메인 요리 · 밀키트',
         },
         tags: [
             { name: '베스트', rank: 33 },
             { name: '신상품', rank: 8 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '현대그린푸드(원테이블)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '현대그린푸드(원테이블)',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -9008,27 +9005,27 @@ export default [
         num: 308,
         name: '[원테이블] \n트러플 버섯피자 300g',
         des: '버섯의 쫄깃한 식감과 향긋한 트러플 향의 만남',
-        price: 11000, //가격
-        discountedPrice: 10450, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 5, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 3,483원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/34.jpg', // 상품 썸네일 이미지 URL
+        price: 11000,
+        discountedPrice: 10450,
+        isDiscounted: true,
+        discountRate: 5,
+        pricePerUnit: '100g당 3,483원',
+        thumbnail: '/images/menu06/34.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '메인 요리 · 밀키트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '메인 요리 · 밀키트',
         },
         tags: [
             { name: '베스트', rank: 34 },
             { name: '신상품', rank: 7 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '현대그린푸드(원테이블)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '현대그린푸드(원테이블)',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -9036,27 +9033,27 @@ export default [
         num: 309,
         name: '[반찬가게 슈퍼키친] \n후레쉬 모짜렐라 리가토니 260g',
         des: '',
-        price: 7500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,885원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/35.jpg', // 상품 썸네일 이미지 URL
+        price: 7500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 2,885원',
+        thumbnail: '/images/menu06/35.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '메인 요리 · 밀키트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '메인 요리 · 밀키트',
         },
         tags: [
             { name: '베스트', rank: 35 },
             { name: '신상품', rank: 6 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '슈퍼키친', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '슈퍼키친',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -9064,27 +9061,27 @@ export default [
         num: 310,
         name: '[압구정 예향] \n마늘양념에 재운 닭다리살구이',
         des: '',
-        price: 11000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 5,000원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/36.jpg', // 상품 썸네일 이미지 URL
+        price: 11000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 5,000원',
+        thumbnail: '/images/menu06/36.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '메인 요리 · 밀키트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '메인 요리 · 밀키트',
         },
         tags: [
             { name: '베스트', rank: 36 },
             { name: '신상품', rank: 5 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예향', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예향',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -9092,27 +9089,27 @@ export default [
         num: 311,
         name: '[오똘] \n붕어빵 팥앙금 15입',
         des: '소비기한 25년 10월 25일까지 입니다.',
-        price: 16700, //가격
-        discountedPrice: 8350, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 50, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/37.jpg', // 상품 썸네일 이미지 URL
+        price: 16700,
+        discountedPrice: 8350,
+        isDiscounted: true,
+        discountRate: 50,
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/37.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡볶이 · 만두 · 냉동간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '떡볶이 · 만두 · 냉동간식',
         },
         tags: [
             { name: '베스트', rank: 37 },
             { name: '신상품', rank: 4 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '오똘', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '오똘',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -9120,27 +9117,27 @@ export default [
         num: 312,
         name: '[오똘] \n국화빵 슈크림 20입',
         des: '',
-        price: 11300, //가격
-        discountedPrice: 5960, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 47, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/38.jpg', // 상품 썸네일 이미지 URL
+        price: 11300,
+        discountedPrice: 5960,
+        isDiscounted: true,
+        discountRate: 47,
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/38.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡볶이 · 만두 · 냉동간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '떡볶이 · 만두 · 냉동간식',
         },
         tags: [
             { name: '베스트', rank: 38 },
             { name: '신상품', rank: 3 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '오똘', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '오똘',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -9148,27 +9145,27 @@ export default [
         num: 313,
         name: '[오즈키친] \n푸팟퐁카레 180g',
         des: '',
-        price: 3980, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/39.jpg', // 상품 썸네일 이미지 URL
+        price: 3980,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/39.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '죽 · 스프 · 카레', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '죽 · 스프 · 카레',
         },
         tags: [
             { name: '베스트', rank: 39 },
             { name: '신상품', rank: 2 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '오뚜기', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '오뚜기',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -9176,27 +9173,27 @@ export default [
         num: 314,
         name: '[선셋스위밍] \n초당 옥수수 스프',
         des: '',
-        price: 4000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu06/39.jpg', // 상품 썸네일 이미지 URL
+        price: 4000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu06/39.jpg',
         category: {
-            main: '밑반찬·간식', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '죽 · 스프 · 카레', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '밑반찬·간식',
+            sub: '죽 · 스프 · 카레',
         },
         tags: [
             { name: '베스트', rank: 40 },
             { name: '신상품', rank: 1 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사캐비아', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사캐비아',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -9204,24 +9201,24 @@ export default [
         num: 315,
         name: '[데체코] \n발사믹모데나식초_5년산 250g',
         des: '',
-        price: 19800, //가격
-        discountedPrice: 15300, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 22, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/01.jpg', // 상품 썸네일 이미지 URL
+        price: 19800,
+        discountedPrice: 15300,
+        isDiscounted: true,
+        discountRate: 22,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/01.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식초·간장·장류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식초·간장·장류',
         },
         tags: [{ name: '베스트', rank: 7 }],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'SEE21(씨21)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'SEE21(씨21)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9229,24 +9226,24 @@ export default [
         num: 316,
         name: '[멩가졸리] \n발사믹3년산식초_유기농 250ml',
         des: '',
-        price: 16500, //가격
-        discountedPrice: 14400, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 12, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/02.jpg', // 상품 썸네일 이미지 URL
+        price: 16500,
+        discountedPrice: 14400,
+        isDiscounted: true,
+        discountRate: 12,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/02.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식초·간장·장류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식초·간장·장류',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'SEE21(씨21)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'SEE21(씨21)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9254,24 +9251,24 @@ export default [
         num: 317,
         name: '[한라] \n참치액골드 900ml',
         des: '',
-        price: 15900, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10ml당 177원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/03.jpg', // 상품 썸네일 이미지 URL
+        price: 15900,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10ml당 177원',
+        thumbnail: '/images/menu07/03.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식초·간장·장류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식초·간장·장류',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '한라식품', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '한라식품',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9279,24 +9276,24 @@ export default [
         num: 318,
         name: '[기꼬만] \n폰즈유즈카',
         des: '',
-        price: 9200, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 3,680', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/04.jpg', // 상품 썸네일 이미지 URL
+        price: 9200,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 3,680',
+        thumbnail: '/images/menu07/04.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식초·간장·장류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식초·간장·장류',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매크로통상(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매크로통상(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9304,24 +9301,24 @@ export default [
         num: 319,
         name: '[해찬들] \n100% 국산 고추장 1kg',
         des: '',
-        price: 28150, //가격
-        discountedPrice: 15500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 44, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,550', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/05.jpg', // 상품 썸네일 이미지 URL
+        price: 28150,
+        discountedPrice: 15500,
+        isDiscounted: true,
+        discountRate: 44,
+        pricePerUnit: '100g당 1,550',
+        thumbnail: '/images/menu07/05.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식초·간장·장류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식초·간장·장류',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9329,24 +9326,24 @@ export default [
         num: 320,
         name: '[샘표] \n토장 900g',
         des: '',
-        price: 13730, //가격
-        discountedPrice: 8800, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 35, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 978', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/06.jpg', // 상품 썸네일 이미지 URL
+        price: 13730,
+        discountedPrice: 8800,
+        isDiscounted: true,
+        discountRate: 35,
+        pricePerUnit: '100g당 978',
+        thumbnail: '/images/menu07/06.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식초·간장·장류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식초·간장·장류',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '샘표', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '샘표',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9354,24 +9351,24 @@ export default [
         num: 321,
         name: '[쥬세페주스티] \n발사믹 3종세트(T4)',
         des: '',
-        price: 393000, //가격
-        discountedPrice: 335600, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 14, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,475', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/07.jpg', // 상품 썸네일 이미지 URL
+        price: 393000,
+        discountedPrice: 335600,
+        isDiscounted: true,
+        discountRate: 14,
+        pricePerUnit: '100g당 4,475',
+        thumbnail: '/images/menu07/07.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식초·간장·장류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식초·간장·장류',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '선민F&B', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '선민F&B',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9379,24 +9376,24 @@ export default [
         num: 322,
         name: '[청정원] \n햇살담은 저당맛간장 840ml',
         des: '',
-        price: 12480, //가격
-        discountedPrice: 10820, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 13, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/08.jpg', // 상품 썸네일 이미지 URL
+        price: 12480,
+        discountedPrice: 10820,
+        isDiscounted: true,
+        discountRate: 13,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/08.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식초·간장·장류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식초·간장·장류',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '대상', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '대상',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9404,24 +9401,24 @@ export default [
         num: 323,
         name: '[명인명촌] \n해바랑 청국장 100g',
         des: '',
-        price: 4000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,000원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/09.jpg', // 상품 썸네일 이미지 URL
+        price: 4000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 4,000원',
+        thumbnail: '/images/menu07/09.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소금·설탕·조미료·향신료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소금·설탕·조미료·향신료',
         },
         tags: [{ name: '베스트', rank: 10 }],
         details: {
-            origin: '국내산', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국내산',
+            manufacturer: '명인명촌',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9429,24 +9426,24 @@ export default [
         num: 324,
         name: '[명인명촌] \n김영습 매실간장 420ml',
         des: '',
-        price: 22000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 5,238원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/10.jpg', // 상품 썸네일 이미지 URL
+        price: 22000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 5,238원',
+        thumbnail: '/images/menu07/10.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소금·설탕·조미료·향신료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소금·설탕·조미료·향신료',
         },
         tags: [''],
         details: {
-            origin: '국내산', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국내산',
+            manufacturer: '명인명촌',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9454,24 +9451,24 @@ export default [
         num: 325,
         name: '[백설] \n달콤함 그대로, 스테비아',
         des: '',
-        price: 8480, //가격
-        discountedPrice: 6560, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 22, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/11.jpg', // 상품 썸네일 이미지 URL
+        price: 8480,
+        discountedPrice: 6560,
+        isDiscounted: true,
+        discountRate: 22,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/11.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소금·설탕·조미료·향신료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소금·설탕·조미료·향신료',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9479,24 +9476,24 @@ export default [
         num: 326,
         name: '[오뚜기] \n순후추_캔 50g',
         des: '',
-        price: 4850, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/12.jpg', // 상품 썸네일 이미지 URL
+        price: 4850,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/12.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소금·설탕·조미료·향신료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소금·설탕·조미료·향신료',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '오뚜기', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '오뚜기',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9504,24 +9501,24 @@ export default [
         num: 327,
         name: '[그랑크뤼 드 바츠] \n플뢰르 드 셀 천일염 5종',
         des: '',
-        price: 32000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/13.jpg', // 상품 썸네일 이미지 URL
+        price: 32000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/13.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소금·설탕·조미료·향신료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소금·설탕·조미료·향신료',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '그랑크뤼드바츠(온라인)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '그랑크뤼드바츠(온라인)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9529,24 +9526,24 @@ export default [
         num: 328,
         name: '[청정원] \n맛선생 야채 국물내기한알 100g',
         des: '',
-        price: 10400, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/14.jpg', // 상품 썸네일 이미지 URL
+        price: 10400,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/14.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소금·설탕·조미료·향신료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소금·설탕·조미료·향신료',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '대상', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '대상',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9554,24 +9551,24 @@ export default [
         num: 329,
         name: '[샘표] \n양조간장 701 860ml',
         des: '',
-        price: 11870, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 1,380원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/15.jpg', // 상품 썸네일 이미지 URL
+        price: 11870,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 1,380원',
+        thumbnail: '/images/menu07/15.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소금·설탕·조미료·향신료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소금·설탕·조미료·향신료',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '샘표', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '샘표',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9579,24 +9576,24 @@ export default [
         num: 330,
         name: '[명인명촌] \n국령애 굴비볶음고추장 250g',
         des: '',
-        price: 22500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 9,000원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/16.jpg', // 상품 썸네일 이미지 URL
+        price: 22500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 9,000원',
+        thumbnail: '/images/menu07/16.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소금·설탕·조미료·향신료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소금·설탕·조미료·향신료',
         },
         tags: [''],
         details: {
-            origin: '국내산', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국내산',
+            manufacturer: '명인명촌',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9604,24 +9601,24 @@ export default [
         num: 331,
         name: '[뽀모] \n명품콩 훈제고등어 120g',
         des: '',
-        price: 7500, //가격
-        discountedPrice: 6370, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 5,308원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/17.jpg', // 상품 썸네일 이미지 URL
+        price: 7500,
+        discountedPrice: 6370,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 5,308원',
+        thumbnail: '/images/menu07/17.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소스·드레싱', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소스·드레싱',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '뽀모', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '뽀모',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9629,24 +9626,24 @@ export default [
         num: 332,
         name: '[뽀모] \n바칼라우 150g',
         des: '',
-        price: 9500, //가격
-        discountedPrice: 8070, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 5,380원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/18.jpg', // 상품 썸네일 이미지 URL
+        price: 9500,
+        discountedPrice: 8070,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 5,380원',
+        thumbnail: '/images/menu07/18.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소스·드레싱', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소스·드레싱',
         },
         tags: [{ name: '신상품', rank: 21 }],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '뽀모', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '뽀모',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9654,24 +9651,24 @@ export default [
         num: 333,
         name: '[뽀모] \n파르메자노 올리브 100g',
         des: '',
-        price: 6300, //가격
-        discountedPrice: 5350, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 5,350원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/19.jpg', // 상품 썸네일 이미지 URL
+        price: 6300,
+        discountedPrice: 5350,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100g당 5,350원',
+        thumbnail: '/images/menu07/19.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소스·드레싱', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소스·드레싱',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '뽀모', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '뽀모',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9679,24 +9676,24 @@ export default [
         num: 334,
         name: '[폰타나] \n볼로네제 파스타소스 430g',
         des: '',
-        price: 12990, //가격
-        discountedPrice: 7690, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 40, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,788원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/20.jpg', // 상품 썸네일 이미지 URL
+        price: 12990,
+        discountedPrice: 7690,
+        isDiscounted: true,
+        discountRate: 40,
+        pricePerUnit: '100g당 1,788원',
+        thumbnail: '/images/menu07/20.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소스·드레싱', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소스·드레싱',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '샘표', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '샘표',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9704,24 +9701,24 @@ export default [
         num: 335,
         name: '[하인즈] \n굿 마요네즈 295ml',
         des: '',
-        price: 8600, //가격
-        discountedPrice: 8060, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 6, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 2,732원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/21.jpg', // 상품 썸네일 이미지 URL
+        price: 8600,
+        discountedPrice: 8060,
+        isDiscounted: true,
+        discountRate: 6,
+        pricePerUnit: '100ml당 2,732원',
+        thumbnail: '/images/menu07/21.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소스·드레싱', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소스·드레싱',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '예광인터내셔널', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '예광인터내셔널',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9729,24 +9726,24 @@ export default [
         num: 336,
         name: '[폰타나] \n알리오올리오 파스타소스 430g',
         des: '',
-        price: 12990, //가격
-        discountedPrice: 7690, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 40, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 1,788원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/22.jpg', // 상품 썸네일 이미지 URL
+        price: 12990,
+        discountedPrice: 7690,
+        isDiscounted: true,
+        discountRate: 40,
+        pricePerUnit: '100ml당 1,788원',
+        thumbnail: '/images/menu07/22.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소스·드레싱', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소스·드레싱',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '샘표', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '샘표',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9754,24 +9751,24 @@ export default [
         num: 337,
         name: '[일보스케토] \n엑스트라버진 올리브 오일 500ml',
         des: '',
-        price: 101000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/23.jpg', // 상품 썸네일 이미지 URL
+        price: 101000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/23.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소스·드레싱', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소스·드레싱',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '에봇', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '에봇',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9779,24 +9776,24 @@ export default [
         num: 338,
         name: '[오뚜기] \n삼겹살 양파절임소스',
         des: '',
-        price: 3980, //가격
-        discountedPrice: 3370, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/24.jpg', // 상품 썸네일 이미지 URL
+        price: 3980,
+        discountedPrice: 3370,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/24.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '소스·드레싱', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '소스·드레싱',
         },
         tags: [{ name: '베스트', rank: 27 }],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '오뚜기', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '오뚜기',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9804,24 +9801,24 @@ export default [
         num: 339,
         name: '[명인명촌] \n이순진 새송이버섯 부각 60g',
         des: '',
-        price: 15000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 2,500원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/25.jpg', // 상품 썸네일 이미지 URL
+        price: 15000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 2,500원',
+        thumbnail: '/images/menu07/25.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밀가루·분말', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '밀가루·분말',
         },
         tags: [{ name: '베스트', rank: 27 }],
         details: {
-            origin: '국산', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국산',
+            manufacturer: '명인명촌',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9829,24 +9826,24 @@ export default [
         num: 340,
         name: '[백설] \n자연재료 부침가루 1kg',
         des: '',
-        price: 4380, //가격
-        discountedPrice: 3880, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 11, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 388원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/26.jpg', // 상품 썸네일 이미지 URL
+        price: 4380,
+        discountedPrice: 3880,
+        isDiscounted: true,
+        discountRate: 11,
+        pricePerUnit: '100g당 388원',
+        thumbnail: '/images/menu07/26.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밀가루·분말', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '밀가루·분말',
         },
         tags: [{ name: '베스트', rank: 27 }],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9854,24 +9851,24 @@ export default [
         num: 341,
         name: '[아이숑] \n청마대 분말 세트',
         des: '',
-        price: 50000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/27.jpg', // 상품 썸네일 이미지 URL
+        price: 50000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/27.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밀가루·분말', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '밀가루·분말',
         },
         tags: [{ name: '베스트', rank: 32 }],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '중앙해장', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '중앙해장',
+            packagingType: '상온',
+            deliveryType: '새벽배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9879,24 +9876,24 @@ export default [
         num: 342,
         name: '[명인명촌] \n이정하 꿀마늘 200g',
         des: '',
-        price: 29000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 14,500원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/28.jpg', // 상품 썸네일 이미지 URL
+        price: 29000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 14,500원',
+        thumbnail: '/images/menu07/28.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밀가루·분말', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '밀가루·분말',
         },
         tags: [''],
         details: {
-            origin: '국산', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국산',
+            manufacturer: '명인명촌',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9904,24 +9901,24 @@ export default [
         num: 343,
         name: '[백설] \n핫케익가루 500g',
         des: '',
-        price: 3280, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 656원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/29.jpg', // 상품 썸네일 이미지 URL
+        price: 3280,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 656원',
+        thumbnail: '/images/menu07/29.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '밀가루·분말', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '밀가루·분말',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9929,24 +9926,24 @@ export default [
         num: 344,
         name: '[알티보] \n엑스트라버진 올리브유 1L (스페인)',
         des: '',
-        price: 35000, //가격
-        discountedPrice: 20900, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 40, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 2,090원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/30.jpg', // 상품 썸네일 이미지 URL
+        price: 35000,
+        discountedPrice: 20900,
+        isDiscounted: true,
+        discountRate: 40,
+        pricePerUnit: '100ml당 2,090원',
+        thumbnail: '/images/menu07/30.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식용유·참기름·올리브유', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식용유·참기름·올리브유',
         },
         tags: [{ name: '신상품' }],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '알티보', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '알티보',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9954,24 +9951,24 @@ export default [
         num: 345,
         name: '[쥬세페크레모니니] \n모데나 발사믹식초 5그레이프 250ml',
         des: '',
-        price: 33000, //가격
-        discountedPrice: 21400, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 35, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/31.jpg', // 상품 썸네일 이미지 URL
+        price: 33000,
+        discountedPrice: 21400,
+        isDiscounted: true,
+        discountRate: 35,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/31.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식용유·참기름·올리브유', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식용유·참기름·올리브유',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '서영이앤티(그린푸드)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '서영이앤티(그린푸드)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -9979,24 +9976,24 @@ export default [
         num: 346,
         name: '[백설] \n포도씨유 900ml',
         des: '',
-        price: 16600, //가격
-        discountedPrice: 8210, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 50, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/32.jpg', // 상품 썸네일 이미지 URL
+        price: 16600,
+        discountedPrice: 8210,
+        isDiscounted: true,
+        discountRate: 50,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/32.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '식용유·참기름·올리브유', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '식용유·참기름·올리브유',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '서영이앤티(그린푸드)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '서영이앤티(그린푸드)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -10004,24 +10001,24 @@ export default [
         num: 347,
         name: '[CJ] \n동치미냉면육수 300g',
         des: '',
-        price: 1280, //가격
-        discountedPrice: 1090, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 14, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10ml당 37원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/33.jpg', // 상품 썸네일 이미지 URL
+        price: 1280,
+        discountedPrice: 1090,
+        isDiscounted: true,
+        discountRate: 14,
+        pricePerUnit: '10ml당 37원',
+        thumbnail: '/images/menu07/33.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '육수·다시팩', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '육수·다시팩',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -10029,24 +10026,24 @@ export default [
         num: 348,
         name: '[기꼬만] \n혼쯔유 코이다시 500ml',
         des: '',
-        price: 9000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/34.jpg', // 상품 썸네일 이미지 URL
+        price: 9000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/34.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '육수·다시팩', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '육수·다시팩',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매크로통상(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매크로통상(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -10054,24 +10051,24 @@ export default [
         num: 349,
         name: '[청정원] \n쉐프의 치킨스톡 340g',
         des: '',
-        price: 8380, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,465원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/35.jpg', // 상품 썸네일 이미지 URL
+        price: 8380,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 2,465원',
+        thumbnail: '/images/menu07/35.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '육수·다시팩', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '육수·다시팩',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '대상', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '대상',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -10079,24 +10076,24 @@ export default [
         num: 350,
         name: '[스팸] \n25%라이트 200gX3',
         des: '',
-        price: 17080, //가격
-        discountedPrice: 13900, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 18, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,317원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/36.jpg', // 상품 썸네일 이미지 URL
+        price: 17080,
+        discountedPrice: 13900,
+        isDiscounted: true,
+        discountRate: 18,
+        pricePerUnit: '100g당 2,317원',
+        thumbnail: '/images/menu07/36.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '통조림·캔', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '통조림·캔',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -10104,24 +10101,24 @@ export default [
         num: 351,
         name: '[마다마] \n그린 카스텔베트라노 올리브 575g',
         des: '',
-        price: 24000, //가격
-        discountedPrice: 15900, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 33, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,765원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/37.jpg', // 상품 썸네일 이미지 URL
+        price: 24000,
+        discountedPrice: 15900,
+        isDiscounted: true,
+        discountRate: 33,
+        pricePerUnit: '100g당 2,765원',
+        thumbnail: '/images/menu07/37.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '통조림·캔', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '통조림·캔',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'SEE21(씨21)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'SEE21(씨21)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -10129,24 +10126,24 @@ export default [
         num: 352,
         name: '[온브릭스] \n원물 그대로! 백도 병조림 450g',
         des: '제철복숭아의 향긋함과 기분좋은 단맛을 그대로',
-        price: 13980, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,765원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/38.jpg', // 상품 썸네일 이미지 URL
+        price: 13980,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 2,765원',
+        thumbnail: '/images/menu07/38.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '통조림·캔', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '통조림·캔',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'SEE21(씨21)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'SEE21(씨21)',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -10154,24 +10151,24 @@ export default [
         num: 353,
         name: '[오뚜기] \n가벼운참치 더마일드 135g',
         des: '',
-        price: 3480, //가격
-        discountedPrice: 2860, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 17, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/39.jpg', // 상품 썸네일 이미지 URL
+        price: 3480,
+        discountedPrice: 2860,
+        isDiscounted: true,
+        discountRate: 17,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/39.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '통조림·캔', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '통조림·캔',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '오뚜기', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '오뚜기',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
@@ -10179,51 +10176,51 @@ export default [
         num: 354,
         name: '[폴리] \n씨없는 블랙올리브 135g',
         des: '',
-        price: 7900, //가격
-        discountedPrice: 6710, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu07/40.jpg', // 상품 썸네일 이미지 URL
+        price: 7900,
+        discountedPrice: 6710,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '',
+        thumbnail: '/images/menu07/40.jpg',
         category: {
-            main: '양념·오일·통조림', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '통조림·캔', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '양념·오일·통조림',
+            sub: '통조림·캔',
         },
         tags: [''],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '(주)영인코퍼레이션', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: '100', // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '(주)영인코퍼레이션',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: '100',
+            quantity: 1,
         },
     },
     {
         bakeryId: 1,
         num: 355,
         name: '[태극당] \n월병3종 세트',
-        price: 37200, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,429원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/01.jpg', // 상품 썸네일 이미지 URL
+        price: 37200,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 4,429원',
+        thumbnail: '/images/menu08/01.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 1 },
             { name: '신상품', rank: 40 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '태극당', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '태극당',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10231,27 +10228,27 @@ export default [
         num: 356,
         name: '[태극당] \n정통오란다 세트 12개입',
         des: '부드럽고 쫀득한 식감의 정통오란다 세트',
-        price: 28000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 8,187원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/02.jpg', // 상품 썸네일 이미지 URL
+        price: 28000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 8,187원',
+        thumbnail: '/images/menu08/02.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 2 },
             { name: '신상품', rank: 39 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '태극당', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '태극당',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10259,27 +10256,27 @@ export default [
         num: 357,
         name: '[타쿠미야] \n고급생식빵 하프400g',
         des: '',
-        price: 7000, //가격
-        discountedPrice: 5600, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 20, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,400원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/03.jpg', // 상품 썸네일 이미지 URL
+        price: 7000,
+        discountedPrice: 5600,
+        isDiscounted: true,
+        discountRate: 20,
+        pricePerUnit: '100g당 1,400원',
+        thumbnail: '/images/menu08/03.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 3 },
             { name: '신상품', rank: 38 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '타쿠미야(투홈)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '타쿠미야(투홈)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10287,27 +10284,27 @@ export default [
         num: 358,
         name: '[나폴레옹] \n얼그레이 파운드 330g',
         des: '',
-        price: 19000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 5,758원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/04.jpg', // 상품 썸네일 이미지 URL
+        price: 19000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 5,758원',
+        thumbnail: '/images/menu08/04.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 4 },
             { name: '신상품', rank: 37 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10315,27 +10312,27 @@ export default [
         num: 359,
         name: '[상하] \n유기농 우리아이치즈 180g 3종',
         des: '아기치즈 소비기한 임박 상품입니다.',
-        price: 6860, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 381원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/05.jpg', // 상품 썸네일 이미지 URL
+        price: 6860,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 381원',
+        thumbnail: '/images/menu08/05.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '치즈',
         },
         tags: [
             { name: '베스트', rank: 5 },
             { name: '신상품', rank: 36 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매일유업', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매일유업',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10343,27 +10340,27 @@ export default [
         num: 360,
         name: '[상하] \nMini 치즈 3종',
         des: '',
-        price: 2700, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 563원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/06.jpg', // 상품 썸네일 이미지 URL
+        price: 2700,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 563원',
+        thumbnail: '/images/menu08/06.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '치즈',
         },
         tags: [
             { name: '베스트', rank: 6 },
             { name: '신상품', rank: 35 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매일유업', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매일유업',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10371,27 +10368,27 @@ export default [
         num: 361,
         name: '[상하] \n더블업 모짜렐라 240g',
         des: '',
-        price: 9780, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 272원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/07.jpg', // 상품 썸네일 이미지 URL
+        price: 9780,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 272원',
+        thumbnail: '/images/menu08/07.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '치즈',
         },
         tags: [
             { name: '베스트', rank: 7 },
             { name: '신상품', rank: 34 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매일유업', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매일유업',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10399,27 +10396,27 @@ export default [
         num: 362,
         name: '[상하] \n스트링치즈 링스 80g',
         des: '',
-        price: 6980, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 873원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/08.jpg', // 상품 썸네일 이미지 URL
+        price: 6980,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 873원',
+        thumbnail: '/images/menu08/08.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '치즈',
         },
         tags: [
             { name: '베스트', rank: 8 },
             { name: '신상품', rank: 33 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매일유업', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매일유업',
+            packagingType: '냉장',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10427,27 +10424,27 @@ export default [
         num: 363,
         name: '[허니파머스] \n천연벌꿀 3종 아카시아,야생화,밤나무 각 250g',
         des: '',
-        price: 21000, //가격
-        discountedPrice: 9900, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 52, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/09.jpg', // 상품 썸네일 이미지 URL
+        price: 21000,
+        discountedPrice: 9900,
+        isDiscounted: true,
+        discountRate: 52,
+        pricePerUnit: '',
+        thumbnail: '/images/menu08/09.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 9 },
             { name: '신상품', rank: 32 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '허니파머스(가공)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '허니파머스(가공)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10455,27 +10452,27 @@ export default [
         num: 364,
         name: '[허니파머스] \n저당 저칼로리 사과잼 220g',
         des: '소비기한 25년 10월 21일까지 입니다.',
-        price: 15000, //가격
-        discountedPrice: 6000, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 60, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/10.jpg', // 상품 썸네일 이미지 URL
+        price: 15000,
+        discountedPrice: 6000,
+        isDiscounted: true,
+        discountRate: 60,
+        pricePerUnit: '',
+        thumbnail: '/images/menu08/10.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 10 },
             { name: '신상품', rank: 31 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '허니파머스(가공)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '허니파머스(가공)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10483,27 +10480,27 @@ export default [
         num: 365,
         name: '[쥬에그] \n잼 2종',
         des: '',
-        price: 11000, //가격
-        discountedPrice: 8480, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 22, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,650원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/11.jpg', // 상품 썸네일 이미지 URL
+        price: 11000,
+        discountedPrice: 8480,
+        isDiscounted: true,
+        discountRate: 22,
+        pricePerUnit: '100g당 2,650원',
+        thumbnail: '/images/menu08/11.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 11 },
             { name: '신상품', rank: 30 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'SEE21(씨21)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'SEE21(씨21)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10511,27 +10508,27 @@ export default [
         num: 366,
         name: '[본마망] \n피넛 스프레드 크런치',
         des: '',
-        price: 10000, //가격
-        discountedPrice: 8860, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 11, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 2,650원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/12.jpg', // 상품 썸네일 이미지 URL
+        price: 10000,
+        discountedPrice: 8860,
+        isDiscounted: true,
+        discountRate: 11,
+        pricePerUnit: '100g당 2,650원',
+        thumbnail: '/images/menu08/12.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 12 },
             { name: '신상품', rank: 29 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매크로통상(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매크로통상(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10539,27 +10536,27 @@ export default [
         num: 367,
         name: '[나폴레옹] \n유자스폰지 430g',
         des: '',
-        price: 27500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 6,395원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/13.jpg', // 상품 썸네일 이미지 URL
+        price: 27500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 6,395원',
+        thumbnail: '/images/menu08/13.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 13 },
             { name: '신상품', rank: 28 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10567,27 +10564,27 @@ export default [
         num: 368,
         name: '[나폴레옹] \n오렌지 파운드 290g',
         des: '',
-        price: 19000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 6,552원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/14.jpg', // 상품 썸네일 이미지 URL
+        price: 19000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 6,552원',
+        thumbnail: '/images/menu08/14.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 14 },
             { name: '신상품', rank: 27 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10595,27 +10592,27 @@ export default [
         num: 369,
         name: '[나폴레옹] \n해풍쑥 크럼블 파운드 350g',
         des: '',
-        price: 19000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 5,429원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/15.jpg', // 상품 썸네일 이미지 URL
+        price: 19000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 5,429원',
+        thumbnail: '/images/menu08/15.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 15 },
             { name: '신상품', rank: 26 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10623,27 +10620,27 @@ export default [
         num: 370,
         name: '[나폴레옹] \n쿠키 베스트 세트 4개입',
         des: '',
-        price: 49000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 724원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/16.jpg', // 상품 썸네일 이미지 URL
+        price: 49000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 724원',
+        thumbnail: '/images/menu08/16.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 16 },
             { name: '신상품', rank: 25 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10651,27 +10648,27 @@ export default [
         num: 371,
         name: '[나폴레옹] \n초코칩 모닝롤',
         des: '',
-        price: 5800, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 312원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/17.jpg', // 상품 썸네일 이미지 URL
+        price: 5800,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 312원',
+        thumbnail: '/images/menu08/17.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 17 },
             { name: '신상품', rank: 24 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10679,27 +10676,27 @@ export default [
         num: 372,
         name: '[나폴레옹] \n구로칸토슈니탱',
         des: '',
-        price: 27500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 661원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/18.jpg', // 상품 썸네일 이미지 URL
+        price: 27500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 661원',
+        thumbnail: '/images/menu08/18.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 18 },
             { name: '신상품', rank: 23 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10707,27 +10704,27 @@ export default [
         num: 373,
         name: '[나폴레옹] \n화이트롤 450g',
         des: '',
-        price: 24500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 5,444원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/19.jpg', // 상품 썸네일 이미지 URL
+        price: 24500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 5,444원',
+        thumbnail: '/images/menu08/19.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 19 },
             { name: '신상품', rank: 22 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10735,27 +10732,27 @@ export default [
         num: 374,
         name: '[PNB풍년제과] \n수제 초코파이 5개입',
         des: '',
-        price: 11500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 288원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/20.jpg', // 상품 썸네일 이미지 URL
+        price: 11500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 288원',
+        thumbnail: '/images/menu08/20.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 20 },
             { name: '신상품', rank: 21 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'PNB풍년제과', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'PNB풍년제과',
+            packagingType: '상온',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10763,27 +10760,27 @@ export default [
         num: 375,
         name: '[덴마크] \n피자치즈 4입 280g',
         des: '',
-        price: 8980, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 321원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/21.jpg', // 상품 썸네일 이미지 URL
+        price: 8980,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 321원',
+        thumbnail: '/images/menu08/21.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '치즈',
         },
         tags: [
             { name: '베스트', rank: 21 },
             { name: '신상품', rank: 20 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '동원 F&B', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '동원 F&B',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10791,27 +10788,27 @@ export default [
         num: 376,
         name: '[사비니 타르투피] \n송로버섯 치즈크림소스 180g',
         des: '',
-        price: 39000, //가격
-        discountedPrice: 31200, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 20, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 17,333원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/22.jpg', // 상품 썸네일 이미지 URL
+        price: 39000,
+        discountedPrice: 31200,
+        isDiscounted: true,
+        discountRate: 20,
+        pricePerUnit: '100g당 17,333원',
+        thumbnail: '/images/menu08/22.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '치즈',
         },
         tags: [
             { name: '베스트', rank: 22 },
             { name: '신상품', rank: 19 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '에봇', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '에봇',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10819,27 +10816,27 @@ export default [
         num: 377,
         name: '[덴마크] \n리코타 치즈 150g',
         des: '',
-        price: 5980, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 399원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/23.jpg', // 상품 썸네일 이미지 URL
+        price: 5980,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 399원',
+        thumbnail: '/images/menu08/23.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '치즈',
         },
         tags: [
             { name: '베스트', rank: 23 },
             { name: '신상품', rank: 18 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '동원데어리푸드', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '동원데어리푸드',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10847,27 +10844,27 @@ export default [
         num: 378,
         name: '[효덕목장] \n썬러브 구워먹는 치즈 150g',
         des: '땅을 건강하게 만들고 씨앗을 뿌려 만든 풀을 먹고 자란건강한 효덕목장행복순이 젖소의 원유로 만들었어요',
-        price: 10000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/24.jpg', // 상품 썸네일 이미지 URL
+        price: 10000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu08/24.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '치즈',
         },
         tags: [
             { name: '베스트', rank: 24 },
             { name: '신상품', rank: 17 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'Sun-Love 치즈', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'Sun-Love 치즈',
+            packagingType: '냉장',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10875,27 +10872,27 @@ export default [
         num: 379,
         name: '[도이퉁] \n마카다미아 넛 스프레드 2종 200g',
         des: '',
-        price: 14800, //가격
-        discountedPrice: 13200, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 6,600원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/25.jpg', // 상품 썸네일 이미지 URL
+        price: 14800,
+        discountedPrice: 13200,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '100g당 6,600원',
+        thumbnail: '/images/menu08/25.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 25 },
             { name: '신상품', rank: 16 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 머천트리', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송 ', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 머천트리',
+            packagingType: '상온',
+            deliveryType: '택배배송 ',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10903,27 +10900,27 @@ export default [
         num: 380,
         name: '[위내추럴] \n유층분리 없는 100% 땅콩버터 크리미',
         des: '',
-        price: 15000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/26.jpg', // 상품 썸네일 이미지 URL
+        price: 15000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu08/26.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 26 },
             { name: '신상품', rank: 15 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '링크트레이드', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송 ', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '링크트레이드',
+            packagingType: '상온',
+            deliveryType: '택배배송 ',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10931,27 +10928,27 @@ export default [
         num: 381,
         name: '[위내추럴] \n유층분리 없는 100% 땅콩버터 크런치',
         des: '',
-        price: 15000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/27.jpg', // 상품 썸네일 이미지 URL
+        price: 15000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu08/27.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 27 },
             { name: '신상품', rank: 14 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '링크트레이드', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송 ', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '링크트레이드',
+            packagingType: '상온',
+            deliveryType: '택배배송 ',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10959,27 +10956,27 @@ export default [
         num: 382,
         name: '[오뚜기] \n딸기쨈 500g',
         des: '',
-        price: 7780, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,556원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/28.jpg', // 상품 썸네일 이미지 URL
+        price: 7780,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 1,556원',
+        thumbnail: '/images/menu08/28.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 28 },
             { name: '신상품', rank: 13 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '오뚜기', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송 ', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '오뚜기',
+            packagingType: '상온',
+            deliveryType: '택배배송 ',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -10987,27 +10984,27 @@ export default [
         num: 383,
         name: '[리치몬드 과자점] \n레몬 케이크세트 6개입',
         des: '',
-        price: 25400, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 847원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/29.jpg', // 상품 썸네일 이미지 URL
+        price: 25400,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 847원',
+        thumbnail: '/images/menu08/29.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 29 },
             { name: '신상품', rank: 12 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '리치몬드', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송 ', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '리치몬드',
+            packagingType: '상온',
+            deliveryType: '택배배송 ',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11015,27 +11012,27 @@ export default [
         num: 384,
         name: '[그래인스쿠키] \n샤르망 세트',
         des: '',
-        price: 25000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 694원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/30.jpg', // 상품 썸네일 이미지 URL
+        price: 25000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 694원',
+        thumbnail: '/images/menu08/30.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 30 },
             { name: '신상품', rank: 11 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '그래인스쿠키', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송 ', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '그래인스쿠키',
+            packagingType: '상온',
+            deliveryType: '택배배송 ',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11043,27 +11040,27 @@ export default [
         num: 385,
         name: '[베즐리] \n까사테라',
         des: '',
-        price: 7200, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 400원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/31.jpg', // 상품 썸네일 이미지 URL
+        price: 7200,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 400원',
+        thumbnail: '/images/menu08/31.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 31 },
             { name: '신상품', rank: 10 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '베즐리베이커리', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '베즐리베이커리',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11071,27 +11068,27 @@ export default [
         num: 386,
         name: '[서울카스테라] \n하프사이즈 3종',
         des: '초코 소비기한 25.07.26 까지 입니다.',
-        price: 9000, //가격
-        discountedPrice: 7650, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 510원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/32.jpg', // 상품 썸네일 이미지 URL
+        price: 9000,
+        discountedPrice: 7650,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '10g당 510원',
+        thumbnail: '/images/menu08/32.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 32 },
             { name: '신상품', rank: 9 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '서울카스테라', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '서울카스테라',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11099,27 +11096,27 @@ export default [
         num: 387,
         name: '[블랑제리코팡] \n시그니처 바게트',
         des: '',
-        price: 5000, //가격
-        discountedPrice: 4500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 161원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/33.jpg', // 상품 썸네일 이미지 URL
+        price: 5000,
+        discountedPrice: 4500,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '10g당 161원',
+        thumbnail: '/images/menu08/33.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 33 },
             { name: '신상품', rank: 8 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '블랑제리코팡', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '블랑제리코팡',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11127,27 +11124,27 @@ export default [
         num: 388,
         name: '[블랑제리코팡] \n버터풍미 브리오쉬 식빵160g',
         des: '',
-        price: 5700, //가격
-        discountedPrice: 5130, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 321원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/34.jpg', // 상품 썸네일 이미지 URL
+        price: 5700,
+        discountedPrice: 5130,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '10g당 321원',
+        thumbnail: '/images/menu08/34.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 34 },
             { name: '신상품', rank: 7 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '블랑제리코팡', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '블랑제리코팡',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11155,27 +11152,27 @@ export default [
         num: 389,
         name: '[블랑제리코팡] \n잠봉뵈르 샌드위치',
         des: '',
-        price: 5300, //가격
-        discountedPrice: 4920, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 7, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 246원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/35.jpg', // 상품 썸네일 이미지 URL
+        price: 5300,
+        discountedPrice: 4920,
+        isDiscounted: true,
+        discountRate: 7,
+        pricePerUnit: '10g당 246원',
+        thumbnail: '/images/menu08/35.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 35 },
             { name: '신상품', rank: 6 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '블랑제리코팡', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '블랑제리코팡',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11183,27 +11180,27 @@ export default [
         num: 390,
         name: '[블랑제리코팡] \n쌀 바게트',
         des: '',
-        price: 5000, //가격
-        discountedPrice: 4650, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 7, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 211원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/36.jpg', // 상품 썸네일 이미지 URL
+        price: 5000,
+        discountedPrice: 4650,
+        isDiscounted: true,
+        discountRate: 7,
+        pricePerUnit: '10g당 211원',
+        thumbnail: '/images/menu08/36.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '베이커리 · 케이크 · 파이', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '베이커리 · 케이크 · 파이',
         },
         tags: [
             { name: '베스트', rank: 36 },
             { name: '신상품', rank: 5 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '블랑제리코팡', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '블랑제리코팡',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11211,27 +11208,27 @@ export default [
         num: 391,
         name: '[허니파머스] \n천연 스틱꿀 3종 아카시아, 야생화, 밤',
         des: '',
-        price: 19200, //가격
-        discountedPrice: 9600, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 50, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/37.jpg', // 상품 썸네일 이미지 URL
+        price: 19200,
+        discountedPrice: 9600,
+        isDiscounted: true,
+        discountRate: 50,
+        pricePerUnit: '',
+        thumbnail: '/images/menu08/37.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 37 },
             { name: '신상품', rank: 4 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '허니파머스(가공)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '허니파머스(가공)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11239,27 +11236,27 @@ export default [
         num: 392,
         name: '[허니파머스] \n천연 스틱꿀&튜브꿀 혼합 6종 선물세트',
         des: '',
-        price: 150000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 11,111원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/38.jpg', // 상품 썸네일 이미지 URL
+        price: 150000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 11,111원',
+        thumbnail: '/images/menu08/38.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '잼 · 버터 · 꿀', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '잼 · 버터 · 꿀',
         },
         tags: [
             { name: '베스트', rank: 38 },
             { name: '신상품', rank: 3 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '허니파머스(가공)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '허니파머스(가공)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11267,27 +11264,27 @@ export default [
         num: 393,
         name: '[나폴레옹] \n스폰지 케이크',
         des: '',
-        price: 24500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 606원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/39.jpg', // 상품 썸네일 이미지 URL
+        price: 24500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 606원',
+        thumbnail: '/images/menu08/39.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 39 },
             { name: '신상품', rank: 2 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '나폴레옹베이커리', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '나폴레옹베이커리',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11295,297 +11292,297 @@ export default [
         num: 394,
         name: '[야카] 약과 \n3종 6개입/8개입/12개입',
         des: '',
-        price: 10000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu08/40.jpg', // 상품 썸네일 이미지 URL
+        price: 10000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu08/40.jpg',
         category: {
-            main: '베이커리·치즈', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '선물용 베이커리와 치즈', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '베이커리·치즈',
+            sub: '선물용 베이커리와 치즈',
         },
         tags: [
             { name: '베스트', rank: 40 },
             { name: '신상품', rank: 1 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '야카(YAKKA)', // 생산자
-            packagingType: '', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '야카(YAKKA)',
+            packagingType: '',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 1,
         num: 395,
         name: '[만전식품] \n후라잉칩 블랙 명인 찹쌀 김부각 70g',
-        price: 9000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 1,286원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/01.jpg', // 상품 썸네일 이미지 URL
+        price: 9000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 1,286원',
+        thumbnail: '/images/menu09/01.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 1 },
             { name: '신상품', rank: 40 },
         ],
         details: {
-            origin: '상세 및 이미지 참조', // 원산지
-            manufacturer: '만전식품(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세 및 이미지 참조',
+            manufacturer: '만전식품(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 2,
         num: 396,
         name: '[만전식품] \n후라잉칩 블랙 명인 찹쌀 연근부각 70g',
-        price: 9000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 1,286원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/02.jpg', // 상품 썸네일 이미지 URL
+        price: 9000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 1,286원',
+        thumbnail: '/images/menu09/02.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 2 },
             { name: '신상품', rank: 39 },
         ],
         details: {
-            origin: '상세 및 이미지 참조', // 원산지
-            manufacturer: '만전식품(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세 및 이미지 참조',
+            manufacturer: '만전식품(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 3,
         num: 397,
         name: '[덴로쿠] \n오이리 스낵 믹스 294g',
-        price: 15000, //가격
-        discountedPrice: 13400, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 4,558원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/03.jpg', // 상품 썸네일 이미지 URL
+        price: 15000,
+        discountedPrice: 13400,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '100g당 4,558원',
+        thumbnail: '/images/menu09/03.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 3 },
             { name: '신상품', rank: 38 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'TDF코리아', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'TDF코리아',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 4,
         num: 398,
         name: '[혼다] \n소프트 센베이 콘포타쥬맛',
-        price: 5900, //가격
-        discountedPrice: 5500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 6, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/04.jpg', // 상품 썸네일 이미지 URL
+        price: 5900,
+        discountedPrice: 5500,
+        isDiscounted: true,
+        discountRate: 6,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/04.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 4 },
             { name: '신상품', rank: 37 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'TDF코리아', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'TDF코리아',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 5,
         num: 399,
         name: '[태극당] \n옛날 전병 4종',
-        price: 16000, //가격
-        discountedPrice: 14400, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 6,667원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/05.jpg', // 상품 썸네일 이미지 URL
+        price: 16000,
+        discountedPrice: 14400,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '100g당 6,667원',
+        thumbnail: '/images/menu09/05.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 5 },
             { name: '신상품', rank: 36 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '태극당', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '태극당',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 6,
         num: 400,
         name: '[현대쌀집] \n[가공] 조청 현미강정 150g',
-        price: 9700, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 6,467원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/06.jpg', // 상품 썸네일 이미지 URL
+        price: 9700,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100g당 6,467원',
+        thumbnail: '/images/menu09/06.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 6 },
             { name: '신상품', rank: 35 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '보성특수농산', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '보성특수농산',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 7,
         num: 401,
         name: '[고구마농장] \n반건조 스위트 고구마 70g',
-        price: 3000, //가격
-        discountedPrice: 2550, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 364원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/07.jpg', // 상품 썸네일 이미지 URL
+        price: 3000,
+        discountedPrice: 2550,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '10g당 364원',
+        thumbnail: '/images/menu09/07.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 7 },
             { name: '신상품', rank: 34 },
         ],
         details: {
-            origin: '국내산', // 원산지
-            manufacturer: '가든클래식스', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국내산',
+            manufacturer: '가든클래식스',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 8,
         num: 402,
         name: '[명인명촌] \n이원복 옥수수콘 100g',
-        price: 4000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 400원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/08.jpg', // 상품 썸네일 이미지 URL
+        price: 4000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 400원',
+        thumbnail: '/images/menu09/08.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 8 },
             { name: '신상품', rank: 33 },
         ],
         details: {
-            origin: '국내산', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국내산',
+            manufacturer: '명인명촌',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 9,
         num: 403,
         name: '[PNB풍년제과] \n옛날 전병 4종',
-        price: 9000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 346원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/09.jpg', // 상품 썸네일 이미지 URL
+        price: 9000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '10g당 346원',
+        thumbnail: '/images/menu09/09.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 9 },
             { name: '신상품', rank: 32 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: 'PNB풍년제과', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: 'PNB풍년제과',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         snackId: 10,
         num: 404,
         name: '[삼립] \n누네띠네 카라멜 크림치즈 120g',
-        price: 3300, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/10.jpg', // 상품 썸네일 이미지 URL
+        price: 3300,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/10.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 10 },
             { name: '신상품', rank: 31 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '삼립식품(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '삼립식품(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11593,27 +11590,27 @@ export default [
         num: 405,
         name: '[쁘띠첼] \n워터젤리 포도 130ml',
         des: '',
-        price: 1480, //가격
-        discountedPrice: 1090, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 26, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/11.jpg', // 상품 썸네일 이미지 URL
+        price: 1480,
+        discountedPrice: 1090,
+        isDiscounted: true,
+        discountRate: 26,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/11.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 11 },
             { name: '신상품', rank: 30 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11621,27 +11618,27 @@ export default [
         num: 406,
         name: '[쁘띠첼] \n워터젤리 오렌지 130ml',
         des: '',
-        price: 1480, //가격
-        discountedPrice: 1090, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 26, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/12.jpg', // 상품 썸네일 이미지 URL
+        price: 1480,
+        discountedPrice: 1090,
+        isDiscounted: true,
+        discountRate: 26,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/12.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 12 },
             { name: '신상품', rank: 29 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11649,27 +11646,27 @@ export default [
         num: 407,
         name: '[쁘띠첼] \n요거젤리딸기 210g',
         des: '',
-        price: 2800, //가격
-        discountedPrice: 2190, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 21, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/13.jpg', // 상품 썸네일 이미지 URL
+        price: 2800,
+        discountedPrice: 2190,
+        isDiscounted: true,
+        discountRate: 21,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/13.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 13 },
             { name: '신상품', rank: 28 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '씨제이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '씨제이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11677,27 +11674,27 @@ export default [
         num: 408,
         name: '[폴바셋] \n우유모나카 3개입 420ml',
         des: '구매 시 제조일 24.12.04 제품으로 배송해드립니다.',
-        price: 13500, //가격
-        discountedPrice: 12150, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10ml당 289원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/14.jpg', // 상품 썸네일 이미지 URL
+        price: 13500,
+        discountedPrice: 12150,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '10ml당 289원',
+        thumbnail: '/images/menu09/14.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '아이스크림', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '아이스크림',
         },
         tags: [
             { name: '베스트', rank: 14 },
             { name: '신상품', rank: 27 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '폴바셋(D)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '폴바셋(D)',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11705,27 +11702,27 @@ export default [
         num: 409,
         name: '[태극당] \n초코 모나카(5개입)',
         des: '',
-        price: 16000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 5,333원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/15.jpg', // 상품 썸네일 이미지 URL
+        price: 16000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 5,333원',
+        thumbnail: '/images/menu09/15.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '아이스크림', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '아이스크림',
         },
         tags: [
             { name: '베스트', rank: 15 },
             { name: '신상품', rank: 26 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '태극당', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '태극당',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11733,27 +11730,27 @@ export default [
         num: 410,
         name: '[명인명촌] \n아이스크림(우유) 100ml',
         des: '최소 2개이상 구매 가능합니다.',
-        price: 5500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 5,500원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/16.jpg', // 상품 썸네일 이미지 URL
+        price: 5500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 5,500원',
+        thumbnail: '/images/menu09/16.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '아이스크림', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '아이스크림',
         },
         tags: [
             { name: '베스트', rank: 16 },
             { name: '신상품', rank: 25 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '명인명촌',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11761,27 +11758,27 @@ export default [
         num: 411,
         name: '[이룸푸드] \n냉동 망고 스틱 5개입 50g x 5개',
         des: '',
-        price: 6500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/17.jpg', // 상품 썸네일 이미지 URL
+        price: 6500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/17.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '아이스크림', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '아이스크림',
         },
         tags: [
             { name: '베스트', rank: 17 },
             { name: '신상품', rank: 24 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '이룸푸드시스템', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '이룸푸드시스템',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11789,27 +11786,27 @@ export default [
         num: 412,
         name: '[팻위치] \n브라우니 6구 (4종)',
         des: '',
-        price: 28500, //가격
-        discountedPrice: 25080, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 12, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/18.jpg', // 상품 썸네일 이미지 URL
+        price: 28500,
+        discountedPrice: 25080,
+        isDiscounted: true,
+        discountRate: 12,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/18.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 18 },
             { name: '신상품', rank: 23 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '팻위치(온)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '팻위치(온)',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11817,27 +11814,27 @@ export default [
         num: 413,
         name: '[팻위치] \n브라우니 뉴욕맵 에디션 12구',
         des: '',
-        price: 55500, //가격
-        discountedPrice: 49950, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 10, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/19.jpg', // 상품 썸네일 이미지 URL
+        price: 55500,
+        discountedPrice: 49950,
+        isDiscounted: true,
+        discountRate: 10,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/19.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 19 },
             { name: '신상품', rank: 22 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '팻위치(온)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '팻위치(온)',
+            packagingType: '냉동',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11845,27 +11842,27 @@ export default [
         num: 414,
         name: '[쎄모아] \n초코곰 마시멜로 920g',
         des: '소비기한 임박(25.9.30) 상품입니다.',
-        price: 84500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/20.jpg', // 상품 썸네일 이미지 URL
+        price: 84500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/20.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 20 },
             { name: '신상품', rank: 21 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '쎄모아', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '쎄모아',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11873,27 +11870,27 @@ export default [
         num: 415,
         name: '[리소케이크] \n단호박 카스텔라 인절미 & 수수팥경단 (3종 택1)',
         des: '',
-        price: 63000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/21.jpg', // 상품 썸네일 이미지 URL
+        price: 63000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/21.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 21 },
             { name: '신상품', rank: 20 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '리소케이크', // 생산자
-            packagingType: '', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '리소케이크',
+            packagingType: '',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11901,27 +11898,27 @@ export default [
         num: 416,
         name: '[리소케이크] \n곶감단지 (3종 택1)',
         des: '',
-        price: 59000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/22.jpg', // 상품 썸네일 이미지 URL
+        price: 59000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/22.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 22 },
             { name: '신상품', rank: 19 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '리소케이크', // 생산자
-            packagingType: '', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '리소케이크',
+            packagingType: '',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11929,27 +11926,27 @@ export default [
         num: 417,
         name: '[리소케이크] \n송편구절판 990g',
         des: '한 박스당 90g x 5개입으로 구성되어 있습니다.',
-        price: 16200, //가격
-        discountedPrice: 13500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 16, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/23.jpg', // 상품 썸네일 이미지 URL
+        price: 16200,
+        discountedPrice: 13500,
+        isDiscounted: true,
+        discountRate: 16,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/23.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 23 },
             { name: '신상품', rank: 18 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 홈이디어', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 홈이디어',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11957,27 +11954,27 @@ export default [
         num: 418,
         name: '[떡편] \n우유 백설기 450g x 2박스',
         des: '한 박스당 90g x 5개입으로 구성되어 있습니다.',
-        price: 16200, //가격
-        discountedPrice: 13500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 16, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/24.jpg', // 상품 썸네일 이미지 URL
+        price: 16200,
+        discountedPrice: 13500,
+        isDiscounted: true,
+        discountRate: 16,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/24.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 24 },
             { name: '신상품', rank: 17 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 홈이디어', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 홈이디어',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -11985,27 +11982,27 @@ export default [
         num: 419,
         name: '[쁘띠첼] \n과일젤리 복숭아 90g*3',
         des: '',
-        price: 16200, //가격
-        discountedPrice: 13500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 16, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/25.jpg', // 상품 썸네일 이미지 URL
+        price: 16200,
+        discountedPrice: 13500,
+        isDiscounted: true,
+        discountRate: 16,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/25.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 25 },
             { name: '신상품', rank: 16 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 홈이디어', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 홈이디어',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12013,27 +12010,27 @@ export default [
         num: 420,
         name: '[카토] \n카토 시오 토마토 아메 55g',
         des: '',
-        price: 2400, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/26.jpg', // 상품 썸네일 이미지 URL
+        price: 2400,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/26.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 26 },
             { name: '신상품', rank: 15 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '삼경아이', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '삼경아이',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12041,27 +12038,27 @@ export default [
         num: 421,
         name: '[마요라] \n코피코커피맛캔디 블리스터 32g',
         des: '',
-        price: 1000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/27.jpg', // 상품 썸네일 이미지 URL
+        price: 1000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/27.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 27 },
             { name: '신상품', rank: 14 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매크로통상(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매크로통상(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12069,27 +12066,27 @@ export default [
         num: 422,
         name: '[이룸푸드] \n냉동 파인애플 스틱 5개입 50g x 5개',
         des: '',
-        price: 6900, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/28.jpg', // 상품 썸네일 이미지 URL
+        price: 6900,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/28.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '아이스크림', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '아이스크림',
         },
         tags: [
             { name: '베스트', rank: 28 },
             { name: '신상품', rank: 13 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '이룸푸드시스템', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '이룸푸드시스템',
+            packagingType: '냉동',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12097,27 +12094,27 @@ export default [
         num: 423,
         name: '[잇츠리얼] \n하루 건강견과 엑설런트 20g*10입',
         des: '*소비기한 25년 10월 30일까지 입니다.',
-        price: 15000, //가격
-        discountedPrice: 7500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 50, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/29.jpg', // 상품 썸네일 이미지 URL
+        price: 15000,
+        discountedPrice: 7500,
+        isDiscounted: true,
+        discountRate: 50,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/29.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 29 },
             { name: '신상품', rank: 12 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '잇츠리얼', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '잇츠리얼',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12125,27 +12122,27 @@ export default [
         num: 424,
         name: '[쿤브라더스] \n마스쿠키 300g',
         des: '',
-        price: 12000, //가격
-        discountedPrice: 10410, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 13, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/30.jpg', // 상품 썸네일 이미지 URL
+        price: 12000,
+        discountedPrice: 10410,
+        isDiscounted: true,
+        discountRate: 13,
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/30.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 30 },
             { name: '신상품', rank: 11 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '천하코퍼레이션(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '천하코퍼레이션(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12153,27 +12150,27 @@ export default [
         num: 425,
         name: '[자케브로사드] \n미니 브라우니 150g',
         des: '',
-        price: 4000, //가격
-        discountedPrice: 3500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 12, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '10g당 233원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/31.jpg', // 상품 썸네일 이미지 URL
+        price: 4000,
+        discountedPrice: 3500,
+        isDiscounted: true,
+        discountRate: 12,
+        pricePerUnit: '10g당 233원',
+        thumbnail: '/images/menu09/31.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 31 },
             { name: '신상품', rank: 10 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매크로통상(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매크로통상(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12181,27 +12178,27 @@ export default [
         num: 426,
         name: '[라메르풀라르] \n소박스 쿠키 7종',
         des: '',
-        price: 4500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/32.jpg', // 상품 썸네일 이미지 URL
+        price: 4500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/32.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 32 },
             { name: '신상품', rank: 9 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매크로통상(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매크로통상(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12209,27 +12206,27 @@ export default [
         num: 427,
         name: '[올라] \n프리미엄 완숙 건망고 80g',
         des: '',
-        price: 4900, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/33.jpg', // 상품 썸네일 이미지 URL
+        price: 4900,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/33.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '스낵 · 쿠키류', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '스낵 · 쿠키류',
         },
         tags: [
             { name: '베스트', rank: 33 },
             { name: '신상품', rank: 8 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '비즈니어코퍼레이션(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '비즈니어코퍼레이션(주)',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12237,27 +12234,27 @@ export default [
         num: 428,
         name: '[유밀가] \n호두정과 선물세트 720g',
         des: '',
-        price: 85900, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/34.jpg', // 상품 썸네일 이미지 URL
+        price: 85900,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/34.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 34 },
             { name: '신상품', rank: 7 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 온고잉', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 온고잉',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12265,27 +12262,27 @@ export default [
         num: 429,
         name: '[유밀가] \n도라지정과 선물세트 240g (보자기 포장 옵션 선택)',
         des: '',
-        price: 54900, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/35.jpg', // 상품 썸네일 이미지 URL
+        price: 54900,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/35.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 35 },
             { name: '신상품', rank: 6 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '주식회사 온고잉', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '주식회사 온고잉',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12293,27 +12290,27 @@ export default [
         num: 430,
         name: '[지리산황치마을] \n유기가공 누른당 바사삭 누룽지 5종 (택1)',
         des: '',
-        price: 2000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/36.jpg', // 상품 썸네일 이미지 URL
+        price: 2000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/36.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '떡 · 전통간식', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '떡 · 전통간식',
         },
         tags: [
             { name: '베스트', rank: 36 },
             { name: '신상품', rank: 5 },
         ],
         details: {
-            origin: '국산', // 원산지
-            manufacturer: '지리산황치마을 영농조합법인', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국산',
+            manufacturer: '지리산황치마을 영농조합법인',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12321,27 +12318,27 @@ export default [
         num: 431,
         name: '[츄파춥스] \n골프공 롱박스 화이트박스 (4구+볼마커)',
         des: '',
-        price: 32000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/37.jpg', // 상품 썸네일 이미지 URL
+        price: 32000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/37.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 37 },
             { name: '신상품', rank: 4 },
         ],
         details: {
-            origin: '국산', // 원산지
-            manufacturer: '엑스존', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국산',
+            manufacturer: '엑스존',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12349,27 +12346,27 @@ export default [
         num: 432,
         name: '[명인명촌] \n강혜정 쌀조청 캐러멜 60g',
         des: '',
-        price: 12000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/38.jpg', // 상품 썸네일 이미지 URL
+        price: 12000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/38.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 38 },
             { name: '신상품', rank: 3 },
         ],
         details: {
-            origin: '상세페이지 참고 ', // 원산지
-            manufacturer: '명인명촌', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고 ',
+            manufacturer: '명인명촌',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12377,27 +12374,27 @@ export default [
         num: 433,
         name: '[DMZ드림푸드] \n알콩이 초콜릿 선물세트 90g×3',
         des: '',
-        price: 21000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/39.jpg', // 상품 썸네일 이미지 URL
+        price: 21000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/39.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 39 },
             { name: '신상품', rank: 2 },
         ],
         details: {
-            origin: '상세페이지 참고 ', // 원산지
-            manufacturer: '농업회사법인디엠제트드림푸드주식회사', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고 ',
+            manufacturer: '농업회사법인디엠제트드림푸드주식회사',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12405,270 +12402,270 @@ export default [
         num: 434,
         name: '[DMZ드림푸드] \n콩초콜릿 삼각 선물세트 320g',
         des: '콩초콜릿 120g×2개, 40g×2개로 구성되어 있습니다.',
-        price: 37000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu09/40.jpg', // 상품 썸네일 이미지 URL
+        price: 37000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu09/40.jpg',
         category: {
-            main: '과자·초콜릿·캔디', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '초콜릿 · 캔디 · 젤리', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '과자·초콜릿·캔디',
+            sub: '초콜릿 · 캔디 · 젤리',
         },
         tags: [
             { name: '베스트', rank: 40 },
             { name: '신상품', rank: 1 },
         ],
         details: {
-            origin: '대한민국', // 원산지
-            manufacturer: '농업회사법인디엠제트드림푸드주식회사', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '대한민국',
+            manufacturer: '농업회사법인디엠제트드림푸드주식회사',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 1,
         num: 435,
         name: '[웅진] \n하늘보리 500ml',
-        price: 1600, //가격
-        discountedPrice: 1200, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 25, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 240원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/01.jpg', // 상품 썸네일 이미지 URL
+        price: 1600,
+        discountedPrice: 1200,
+        isDiscounted: true,
+        discountRate: 25,
+        pricePerUnit: '100ml당 240원',
+        thumbnail: '/images/menu10/01.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '생수 · 탄산수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '생수 · 탄산수',
         },
         tags: [
             { name: '베스트', rank: 1 },
             { name: '신상품', rank: 40 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '웅진식품(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '웅진식품(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 2,
         num: 436,
         name: '[롯데] \n초가을 우엉차 500ml',
-        price: 1580, //가격
-        discountedPrice: 1270, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 19, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 254원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/02.jpg', // 상품 썸네일 이미지 URL
+        price: 1580,
+        discountedPrice: 1270,
+        isDiscounted: true,
+        discountRate: 19,
+        pricePerUnit: '100ml당 254원',
+        thumbnail: '/images/menu10/02.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '생수 · 탄산수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '생수 · 탄산수',
         },
         tags: [
             { name: '베스트', rank: 2 },
             { name: '신상품', rank: 39 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '롯데칠성(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '롯데칠성(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 3,
         num: 437,
         name: '[롯데] \n오늘의차 수염차 500ml',
-        price: 1580, //가격
-        discountedPrice: 1270, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 19, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 254원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/03.jpg', // 상품 썸네일 이미지 URL
+        price: 1580,
+        discountedPrice: 1270,
+        isDiscounted: true,
+        discountRate: 19,
+        pricePerUnit: '100ml당 254원',
+        thumbnail: '/images/menu10/03.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '생수 · 탄산수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '생수 · 탄산수',
         },
         tags: [
             { name: '베스트', rank: 3 },
             { name: '신상품', rank: 38 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '롯데칠성(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '롯데칠성(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 4,
         num: 438,
         name: '[농심] \n오이오차녹차 525ml',
-        price: 1850, //가격
-        discountedPrice: 1570, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 299원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/04.jpg', // 상품 썸네일 이미지 URL
+        price: 1850,
+        discountedPrice: 1570,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '100ml당 299원',
+        thumbnail: '/images/menu10/04.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '생수 · 탄산수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '생수 · 탄산수',
         },
         tags: [
             { name: '베스트', rank: 4 },
             { name: '신상품', rank: 37 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '농심(경인)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '농심(경인)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 5,
         num: 439,
         name: '[풀무원] \n특등급 국산 콩물 960g',
-        price: 5980, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 623원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/05.jpg', // 상품 썸네일 이미지 URL
+        price: 5980,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 623원',
+        thumbnail: '/images/menu10/05.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '우유 · 두유 · 요거트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '우유 · 두유 · 요거트',
         },
         tags: [
             { name: '베스트', rank: 5 },
             { name: '신상품', rank: 36 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '풀무원식품(주)생식품', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '풀무원식품(주)생식품',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 6,
         num: 440,
         name: '[서울우유] \n짜요짜요 3종',
-        price: 2650, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/06.jpg', // 상품 썸네일 이미지 URL
+        price: 2650,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/06.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '우유 · 두유 · 요거트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '우유 · 두유 · 요거트',
         },
         tags: [
             { name: '베스트', rank: 6 },
             { name: '신상품', rank: 35 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '서울우유고촌대리점', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '서울우유고촌대리점',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 7,
         num: 441,
         name: '[서울우유] \nA2플러스 3종',
-        price: 1800, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/07.jpg', // 상품 썸네일 이미지 URL
+        price: 1800,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/07.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '우유 · 두유 · 요거트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '우유 · 두유 · 요거트',
         },
         tags: [
             { name: '베스트', rank: 7 },
             { name: '신상품', rank: 34 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '서울우유고촌대리점', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '서울우유고촌대리점',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 8,
         num: 442,
         name: '[연세] \n검은콩&고칼슘 팩두유 190ml×16',
-        price: 20000, //가격
-        discountedPrice: 12900, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 35, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 403원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/08.jpg', // 상품 썸네일 이미지 URL
+        price: 20000,
+        discountedPrice: 12900,
+        isDiscounted: true,
+        discountRate: 35,
+        pricePerUnit: '100ml당 403원',
+        thumbnail: '/images/menu10/08.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '우유 · 두유 · 요거트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '우유 · 두유 · 요거트',
         },
         tags: [
             { name: '베스트', rank: 8 },
             { name: '신상품', rank: 33 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '연세우유 도곡점', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '연세우유 도곡점',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
         liquidId: 9,
         num: 443,
         name: '[허니파머스] \n애플 착즙주스 20입',
-        price: 35500, //가격
-        discountedPrice: 17750, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 50, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/09.jpg', // 상품 썸네일 이미지 URL
+        price: 35500,
+        discountedPrice: 17750,
+        isDiscounted: true,
+        discountRate: 50,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/09.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '탄산음료 · 주스', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '탄산음료 · 주스',
         },
         tags: [
             { name: '베스트', rank: 9 },
             { name: '신상품', rank: 32 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '허니파머스(가공)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '허니파머스(가공)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12676,27 +12673,27 @@ export default [
         num: 444,
         name: '[인생주스] \n타트체리 100% 착즙주스',
         des: '차갑게 드시면 더욱 맛있습니다. *소비기한 임박 상품입니다.(25년 11월 13일)',
-        price: 49000, //가격
-        discountedPrice: 37200, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 24, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/10.jpg', // 상품 썸네일 이미지 URL
+        price: 49000,
+        discountedPrice: 37200,
+        isDiscounted: true,
+        discountRate: 24,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/10.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '탄산음료 · 주스', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '탄산음료 · 주스',
         },
         tags: [
             { name: '베스트', rank: 10 },
             { name: '신상품', rank: 31 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '인생주스', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '인생주스',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12704,27 +12701,27 @@ export default [
         num: 445,
         name: '[인생주스] \n블루베리 100% 착즙주스',
         des: '차갑게 드시면 더욱 맛있습니다.',
-        price: 53500, //가격
-        discountedPrice: 41000, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 24, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/11.jpg', // 상품 썸네일 이미지 URL
+        price: 53500,
+        discountedPrice: 41000,
+        isDiscounted: true,
+        discountRate: 24,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/11.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '탄산음료 · 주스', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '탄산음료 · 주스',
         },
         tags: [
             { name: '베스트', rank: 11 },
             { name: '신상품', rank: 30 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '인생주스', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '인생주스',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12732,27 +12729,27 @@ export default [
         num: 446,
         name: '[풀무원] \n아임리얼 100 망고 140ml x 6입',
         des: '',
-        price: 7480, //가격
-        discountedPrice: 4980, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 33, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 593원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/12.jpg', // 상품 썸네일 이미지 URL
+        price: 7480,
+        discountedPrice: 4980,
+        isDiscounted: true,
+        discountRate: 33,
+        pricePerUnit: '100ml당 593원',
+        thumbnail: '/images/menu10/12.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '탄산음료 · 주스', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '탄산음료 · 주스',
         },
         tags: [
             { name: '베스트', rank: 12 },
             { name: '신상품', rank: 29 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '풀무원식품(주)생식품', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '풀무원식품(주)생식품',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12760,27 +12757,27 @@ export default [
         num: 447,
         name: '[롯데] \n레쓰비 마일드 175ml',
         des: '',
-        price: 680, //가격
-        discountedPrice: 600, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 11, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 343원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/13.jpg', // 상품 썸네일 이미지 URL
+        price: 680,
+        discountedPrice: 600,
+        isDiscounted: true,
+        discountRate: 11,
+        pricePerUnit: '100ml당 343원',
+        thumbnail: '/images/menu10/13.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '커피', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '커피',
         },
         tags: [
             { name: '베스트', rank: 13 },
             { name: '신상품', rank: 28 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '롯데칠성(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '롯데칠성(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12788,27 +12785,27 @@ export default [
         num: 448,
         name: '[AGF] \n포션커피 라이트슈거 108g(18g*6개입)',
         des: '',
-        price: 4500, //가격
-        discountedPrice: 4180, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 7, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/14.jpg', // 상품 썸네일 이미지 URL
+        price: 4500,
+        discountedPrice: 4180,
+        isDiscounted: true,
+        discountRate: 7,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/14.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '커피', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '커피',
         },
         tags: [
             { name: '베스트', rank: 14 },
             { name: '신상품', rank: 27 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매크로통상(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매크로통상(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12816,27 +12813,27 @@ export default [
         num: 449,
         name: '[hy] \n하이브루 아인슈페너',
         des: '',
-        price: 2800, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/15.jpg', // 상품 썸네일 이미지 URL
+        price: 2800,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/15.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '커피', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '커피',
         },
         tags: [
             { name: '베스트', rank: 15 },
             { name: '신상품', rank: 26 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '한국야쿠르트', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '한국야쿠르트',
+            packagingType: '상온',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12844,27 +12841,27 @@ export default [
         num: 450,
         name: '[스타벅스] \n프라푸치노 모카 281ml',
         des: '',
-        price: 2850, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 1,014원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/16.jpg', // 상품 썸네일 이미지 URL
+        price: 2850,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 1,014원',
+        thumbnail: '/images/menu10/16.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '커피', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '커피',
         },
         tags: [
             { name: '베스트', rank: 16 },
             { name: '신상품', rank: 25 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '동서식품(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '동서식품(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12872,27 +12869,27 @@ export default [
         num: 451,
         name: '[웨지우드] \n셀렉티드 티세트 2종, 티포유 티세트 5종 (택1)',
         des: '',
-        price: 19600, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 1,014원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/17.jpg', // 상품 썸네일 이미지 URL
+        price: 19600,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 1,014원',
+        thumbnail: '/images/menu10/17.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '차 · 과실청', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '차 · 과실청',
         },
         tags: [
             { name: '베스트', rank: 17 },
             { name: '신상품', rank: 24 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '웨지우드', // 생산자
-            packagingType: '', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '웨지우드',
+            packagingType: '',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12900,27 +12897,27 @@ export default [
         num: 452,
         name: '[modoo] \n모두의 망고청 1kg',
         des: '개봉 후에는 재냉동하지 마시고(냉장 보관) 5일 이내 섭취를 권장드립니다.',
-        price: 16500, //가격
-        discountedPrice: 4950, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 70, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/18.jpg', // 상품 썸네일 이미지 URL
+        price: 16500,
+        discountedPrice: 4950,
+        isDiscounted: true,
+        discountRate: 70,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/18.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '차 · 과실청', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '차 · 과실청',
         },
         tags: [
             { name: '베스트', rank: 18 },
             { name: '신상품', rank: 23 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '모두(modoo)', // 생산자
-            packagingType: '냉동', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '모두(modoo)',
+            packagingType: '냉동',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12928,27 +12925,27 @@ export default [
         num: 453,
         name: '[modoo] \n모두의 제주 유기농 감귤즙 500ml',
         des: '차갑게 드시면 더욱 맛있습니다 (최소 주문수량 2개)',
-        price: 7500, //가격
-        discountedPrice: 4500, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 40, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/19.jpg', // 상품 썸네일 이미지 URL
+        price: 7500,
+        discountedPrice: 4500,
+        isDiscounted: true,
+        discountRate: 40,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/19.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '차 · 과실청', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '차 · 과실청',
         },
         tags: [
             { name: '베스트', rank: 19 },
             { name: '신상품', rank: 22 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '모두(modoo)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '모두(modoo)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12956,27 +12953,27 @@ export default [
         num: 454,
         name: '[청정원] \n홍초 저당 레몬&라임 900ml',
         des: '',
-        price: 12980, //가격
-        discountedPrice: 8770, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 32, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/20.jpg', // 상품 썸네일 이미지 URL
+        price: 12980,
+        discountedPrice: 8770,
+        isDiscounted: true,
+        discountRate: 32,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/20.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '차 · 과실청', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '차 · 과실청',
         },
         tags: [
             { name: '베스트', rank: 20 },
             { name: '신상품', rank: 21 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '대상', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '대상',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -12984,27 +12981,27 @@ export default [
         num: 455,
         name: '[제주본초] \n동백꽃, 제주',
         des: '16도 365ml',
-        price: 12000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/21.jpg', // 상품 썸네일 이미지 URL
+        price: 12000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/21.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '전통주 · 논알콜', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '전통주 · 논알콜',
         },
         tags: [
             { name: '베스트', rank: 21 },
             { name: '신상품', rank: 20 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '제주본초 협동조합', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '제주본초 협동조합',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13012,27 +13009,27 @@ export default [
         num: 456,
         name: '[제주본초] \n유채꽃, 제주',
         des: '16도 365ml',
-        price: 12000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/22.jpg', // 상품 썸네일 이미지 URL
+        price: 12000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/22.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '전통주 · 논알콜', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '전통주 · 논알콜',
         },
         tags: [
             { name: '베스트', rank: 22 },
             { name: '신상품', rank: 19 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '제주본초 협동조합', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '제주본초 협동조합',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13040,27 +13037,27 @@ export default [
         num: 457,
         name: '[명인명촌] \n[전통주] 홍승희 오미자 탄산주 500ml',
         des: '※ 발효과정에서 생긴 천연 탄산으로 인해 개봉시 흘러 넘칠 수 있습니다. 45도로 기울여 여닫기를 반복 후 탄산이 안정되면 개봉 권장합니다.',
-        price: 40000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/23.jpg', // 상품 썸네일 이미지 URL
+        price: 40000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/23.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '전통주 · 논알콜', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '전통주 · 논알콜',
         },
         tags: [
             { name: '베스트', rank: 23 },
             { name: '신상품', rank: 18 },
         ],
         details: {
-            origin: '국산', // 원산지
-            manufacturer: '농업회사법인 주식회사 밀과노닐다', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국산',
+            manufacturer: '농업회사법인 주식회사 밀과노닐다',
+            packagingType: '냉장',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13068,27 +13065,27 @@ export default [
         num: 458,
         name: '[두루미양조장] \n전통주 선물세트 5호 (4종 中 택1)',
         des: '',
-        price: 48000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/24.jpg', // 상품 썸네일 이미지 URL
+        price: 48000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/24.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '전통주 · 논알콜', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '전통주 · 논알콜',
         },
         tags: [
             { name: '베스트', rank: 24 },
             { name: '신상품', rank: 17 },
         ],
         details: {
-            origin: '국산', // 원산지
-            manufacturer: '농업회사법인 주식회사우창', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '국산',
+            manufacturer: '농업회사법인 주식회사우창',
+            packagingType: '냉장',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13096,27 +13093,27 @@ export default [
         num: 459,
         name: '[워터라이트] \n마시는 수액 음료 워터라이트 비긴스 (230ml*24개입)',
         des: '간편하게 수분 충전하는 마시는 수액 음료',
-        price: 48700, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/25.jpg', // 상품 썸네일 이미지 URL
+        price: 48700,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/25.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '대용량 음료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '대용량 음료',
         },
         tags: [
             { name: '베스트', rank: 25 },
             { name: '신상품', rank: 16 },
         ],
         details: {
-            origin: '', // 원산지
-            manufacturer: '에이치앤파이(주)', // 생산자
-            packagingType: '', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '',
+            manufacturer: '에이치앤파이(주)',
+            packagingType: '',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13124,27 +13121,27 @@ export default [
         num: 460,
         name: '[에스비] \n석수 2L 6병 생수',
         des: '',
-        price: 5900, //가격
-        discountedPrice: 5000, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 15, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/26.jpg', // 상품 썸네일 이미지 URL
+        price: 5900,
+        discountedPrice: 5000,
+        isDiscounted: true,
+        discountRate: 15,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/26.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '대용량 음료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '대용량 음료',
         },
         tags: [
             { name: '베스트', rank: 26 },
             { name: '신상품', rank: 15 },
         ],
         details: {
-            origin: '대한민국', // 원산지
-            manufacturer: '주식회사 에스비', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '대한민국',
+            manufacturer: '주식회사 에스비',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13152,27 +13149,27 @@ export default [
         num: 461,
         name: '[에스비] 석수 500ml 20병 생수',
         des: '',
-        price: 6500, //가격
-        discountedPrice: 5600, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 13, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/27.jpg', // 상품 썸네일 이미지 URL
+        price: 6500,
+        discountedPrice: 5600,
+        isDiscounted: true,
+        discountRate: 13,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/27.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '대용량 음료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '대용량 음료',
         },
         tags: [
             { name: '베스트', rank: 27 },
             { name: '신상품', rank: 14 },
         ],
         details: {
-            origin: '대한민국', // 원산지
-            manufacturer: '주식회사 에스비', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '대한민국',
+            manufacturer: '주식회사 에스비',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13180,27 +13177,27 @@ export default [
         num: 462,
         name: '[에스비] \n백산수 330ml 20병 생수',
         des: '',
-        price: 8500, //가격
-        discountedPrice: 7820, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 8, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/28.jpg', // 상품 썸네일 이미지 URL
+        price: 8500,
+        discountedPrice: 7820,
+        isDiscounted: true,
+        discountRate: 8,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/28.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '대용량 음료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '대용량 음료',
         },
         tags: [
             { name: '베스트', rank: 28 },
             { name: '신상품', rank: 13 },
         ],
         details: {
-            origin: '중국', // 원산지
-            manufacturer: '주식회사 에스비', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '중국',
+            manufacturer: '주식회사 에스비',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13208,27 +13205,27 @@ export default [
         num: 463,
         name: '[에스비] \n백산수 1L 12병 생수',
         des: '',
-        price: 8700, //가격
-        discountedPrice: 8000, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 8, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/29.jpg', // 상품 썸네일 이미지 URL
+        price: 8700,
+        discountedPrice: 8000,
+        isDiscounted: true,
+        discountRate: 8,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/29.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '대용량 음료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '대용량 음료',
         },
         tags: [
             { name: '베스트', rank: 29 },
             { name: '신상품', rank: 12 },
         ],
         details: {
-            origin: '중국', // 원산지
-            manufacturer: '주식회사 에스비', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '중국',
+            manufacturer: '주식회사 에스비',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13236,27 +13233,27 @@ export default [
         num: 464,
         name: '[에스비] \n백산수 1L 12병 생수',
         des: '',
-        price: 8700, //가격
-        discountedPrice: 8000, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 8, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/30.jpg', // 상품 썸네일 이미지 URL
+        price: 8700,
+        discountedPrice: 8000,
+        isDiscounted: true,
+        discountRate: 8,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/30.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '대용량 음료', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '대용량 음료',
         },
         tags: [
             { name: '베스트', rank: 30 },
             { name: '신상품', rank: 11 },
         ],
         details: {
-            origin: '중국', // 원산지
-            manufacturer: '주식회사 에스비', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '중국',
+            manufacturer: '주식회사 에스비',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13264,27 +13261,27 @@ export default [
         num: 465,
         name: '[트레비] \n라임 500ml',
         des: '',
-        price: 1480, //가격
-        discountedPrice: 1270, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 14, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/31.jpg', // 상품 썸네일 이미지 URL
+        price: 1480,
+        discountedPrice: 1270,
+        isDiscounted: true,
+        discountRate: 14,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/31.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '생수 · 탄산수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '생수 · 탄산수',
         },
         tags: [
             { name: '베스트', rank: 31 },
             { name: '신상품', rank: 10 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '롯데칠성(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '롯데칠성(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13292,27 +13289,27 @@ export default [
         num: 466,
         name: '[트레비] \n자몽 500ml',
         des: '',
-        price: 1480, //가격
-        discountedPrice: 1270, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 14, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/32.jpg', // 상품 썸네일 이미지 URL
+        price: 1480,
+        discountedPrice: 1270,
+        isDiscounted: true,
+        discountRate: 14,
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/32.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '생수 · 탄산수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '생수 · 탄산수',
         },
         tags: [
             { name: '베스트', rank: 32 },
             { name: '신상품', rank: 9 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '롯데칠성(주)', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '롯데칠성(주)',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13320,27 +13317,27 @@ export default [
         num: 467,
         name: '[팔도] \n뽀로로 보리차 220ml',
         des: '',
-        price: 1600, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/33.jpg', // 상품 썸네일 이미지 URL
+        price: 1600,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/33.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '생수 · 탄산수', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '생수 · 탄산수',
         },
         tags: [
             { name: '베스트', rank: 33 },
             { name: '신상품', rank: 8 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '팔도', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '팔도',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13348,27 +13345,27 @@ export default [
         num: 468,
         name: '[연세] \n아몬드잣 팩두유 190ml×16',
         des: '',
-        price: 20000, //가격
-        discountedPrice: 12900, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 35, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 403원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/34.jpg', // 상품 썸네일 이미지 URL
+        price: 20000,
+        discountedPrice: 12900,
+        isDiscounted: true,
+        discountRate: 35,
+        pricePerUnit: '100ml당 403원',
+        thumbnail: '/images/menu10/34.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '우유 · 두유 · 요거트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '우유 · 두유 · 요거트',
         },
         tags: [
             { name: '베스트', rank: 34 },
             { name: '신상품', rank: 7 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '연세우유 도곡점', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '연세우유 도곡점',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13376,27 +13373,27 @@ export default [
         num: 469,
         name: '[매일] \n매일두유99.89 2종',
         des: '',
-        price: 1500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 789원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/35.jpg', // 상품 썸네일 이미지 URL
+        price: 1500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '100ml당 789원',
+        thumbnail: '/images/menu10/35.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '우유 · 두유 · 요거트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '우유 · 두유 · 요거트',
         },
         tags: [
             { name: '베스트', rank: 35 },
             { name: '신상품', rank: 6 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '매일유업', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '매일유업',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13404,27 +13401,27 @@ export default [
         num: 470,
         name: '[일동후디스] \n그릭요거트 플레인 450g',
         des: '',
-        price: 6400, //가격
-        discountedPrice: 6120, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 4, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100g당 1,360원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/36.jpg', // 상품 썸네일 이미지 URL
+        price: 6400,
+        discountedPrice: 6120,
+        isDiscounted: true,
+        discountRate: 4,
+        pricePerUnit: '100g당 1,360원',
+        thumbnail: '/images/menu10/36.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '우유 · 두유 · 요거트', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '우유 · 두유 · 요거트',
         },
         tags: [
             { name: '베스트', rank: 36 },
             { name: '신상품', rank: 5 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '일동후디스(주)', // 생산자
-            packagingType: '냉장', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '새벽배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '일동후디스(주)',
+            packagingType: '냉장',
+            deliveryType: '새벽배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13432,27 +13429,27 @@ export default [
         num: 471,
         name: '[얼라이브] \n유기농 콤부차 진저레몬 315ml',
         des: '',
-        price: 3800, //가격
-        discountedPrice: 3640, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 4, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 1,156원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/37.jpg', // 상품 썸네일 이미지 URL
+        price: 3800,
+        discountedPrice: 3640,
+        isDiscounted: true,
+        discountRate: 4,
+        pricePerUnit: '100ml당 1,156원',
+        thumbnail: '/images/menu10/37.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '탄산음료 · 주스', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '탄산음료 · 주스',
         },
         tags: [
             { name: '베스트', rank: 37 },
             { name: '신상품', rank: 4 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '프레시코', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '프레시코',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13460,27 +13457,27 @@ export default [
         num: 472,
         name: '[얼라이브] \n유기농 콤부차 오리지날 315ml',
         des: '',
-        price: 3800, //가격
-        discountedPrice: 3640, // 할인된 가격
-        isDiscounted: true, // 할인하면 true, 아니면 false
-        discountRate: 4, // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '100ml당 1,156원', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/38.jpg', // 상품 썸네일 이미지 URL
+        price: 3800,
+        discountedPrice: 3640,
+        isDiscounted: true,
+        discountRate: 4,
+        pricePerUnit: '100ml당 1,156원',
+        thumbnail: '/images/menu10/38.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '탄산음료 · 주스', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '탄산음료 · 주스',
         },
         tags: [
             { name: '베스트', rank: 38 },
             { name: '신상품', rank: 3 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '프레시코', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '택배배송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '프레시코',
+            packagingType: '상온',
+            deliveryType: '택배배송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13488,27 +13485,27 @@ export default [
         num: 473,
         name: '[에이블마켓] \n함께 가꾸는 나무 커피랑 커피백 100개입',
         des: '',
-        price: 33500, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/39.jpg', // 상품 썸네일 이미지 URL
+        price: 33500,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/39.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '커피', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '커피',
         },
         tags: [
             { name: '베스트', rank: 39 },
             { name: '신상품', rank: 2 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '서울특별시립 장애인생산품판매시설', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '서울특별시립 장애인생산품판매시설',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     {
@@ -13516,27 +13513,27 @@ export default [
         num: 474,
         name: '[명인명촌] \n[전통주] 이성우 백일주(十年) 360ml, 750ml',
         des: '360ml 상품은 10년 숙성이 아닌 일반 숙성 제품입니다.',
-        price: 49000, //가격
-        discountedPrice: '', // 할인된 가격
-        isDiscounted: false, // 할인하면 true, 아니면 false
-        discountRate: '', // (number 타입, 22% 할인이라면 22)
-        pricePerUnit: '', // 그램당 가격 / 단위당 가격
-        thumbnail: '/images/menu10/40.jpg', // 상품 썸네일 이미지 URL
+        price: 49000,
+        discountedPrice: '',
+        isDiscounted: false,
+        discountRate: '',
+        pricePerUnit: '',
+        thumbnail: '/images/menu10/40.jpg',
         category: {
-            main: '물·우유·커피·음료', // 대분류 (ex: 식품, 의류, 가전)
-            sub: '전통주 · 논알콜', // 중분류 (ex: 과일, 채소, 수산물)
+            main: '물·우유·커피·음료',
+            sub: '전통주 · 논알콜',
         },
         tags: [
             { name: '베스트', rank: 40 },
             { name: '신상품', rank: 1 },
         ],
         details: {
-            origin: '상세페이지 참고', // 원산지
-            manufacturer: '농업회사법인 주식회사 밀과노닐다', // 생산자
-            packagingType: '상온', // 포장타입 (ex냉장, 냉동)
-            deliveryType: '브랜드직송', // 배송형태 (ex:새벽배송만 있으면 '새벽배송', 택배배송도 같이있으면 '택배배송' or '브랜드직송')
-            stock: 100, // 현재 남아있는 상품의 총 재고 수량 - default
-            quantity: 1, // 수량추가 - default
+            origin: '상세페이지 참고',
+            manufacturer: '농업회사법인 주식회사 밀과노닐다',
+            packagingType: '상온',
+            deliveryType: '브랜드직송',
+            stock: 100,
+            quantity: 1,
         },
     },
     // 1~40:명인명촌, 41~55:테이블, 56~95:예향, 96~130:동행마켓
@@ -13547,7 +13544,7 @@ export default [
         category: '기름·식초', //ex) 기름·식초
         thumbnail: '/images/specialbrand/01.jpg', // 썸네일 주소
         name: '[명인명촌] \n해바랑 현미식초, 2종 (200ml/420ml)', //제품명
-        price: 14860, //가격
+        price: 14860,
         discountedPrice: 14800, //  할인된 가격
         discountRate: 10, // (number 타입, 22% 할인이라면 22)
         pricePerUnit: '10ml당 740원', // ✨ 그램당 가격 / 단위당 가격
@@ -15486,10 +15483,7 @@ export default [
             sub: '과일',
         },
 
-        tags: [
-            { name: '베스트', rank: 7 },
-            // { name: '신상품', rank: 10 },
-        ],
+        tags: [{ name: '베스트', rank: 7 }],
 
         details: {
             origin: '상세페이지 참고',

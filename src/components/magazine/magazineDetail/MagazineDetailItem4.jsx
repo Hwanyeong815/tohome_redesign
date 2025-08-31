@@ -3,7 +3,6 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// steps 데이터 배열
 const stepsData = [
     {
         id: 1,
@@ -92,19 +91,16 @@ const MagazineDetailItem4 = ({ onPrev, onNext }) => {
 
     useEffect(() => {
         if (mobile) {
-            // 모바일: 애니메이션 없이 즉시 보이게
-            // 모바일: 아이콘만 보이게, 스텝은 초기엔 0번만 노출
             if (mainTxtRef.current) {
                 gsap.set(mainTxtRef.current, { opacity: 1, y: 0, scale: 1 });
             }
             const items = document.querySelectorAll('.steps-wrap .steps');
             items.forEach((el, i) => {
-                gsap.set(el, { opacity: i === 0 ? 1 : 0, x: i === 0 ? 0 : 10 }); // step1만 보이게
+                gsap.set(el, { opacity: i === 0 ? 1 : 0, x: i === 0 ? 0 : 10 });
             });
             return;
         }
 
-        // 데스크탑: GSAP 애니메이션 (기존 그대로)
         const ctx = gsap.context(() => {
             if (mainTxtRef.current) {
                 gsap.fromTo(
@@ -181,7 +177,7 @@ const MagazineDetailItem4 = ({ onPrev, onNext }) => {
                     </strong>
                 </div>
             </div>
-            {/* ✅ 모바일 전용 이전/다음 버튼: onClick 연결 */}
+
             <div className="steps-wrap-mobile-btns">
                 <button type="button" aria-label="이전 단계" onClick={goPrev}>
                     <img src="/images/icon/btn-prev1.png" alt="" />
@@ -196,7 +192,6 @@ const MagazineDetailItem4 = ({ onPrev, onNext }) => {
                         key={step.id}
                         className={`steps steps${step.id}`}
                         ref={addToRefs}
-                        // ✅ 모바일일 때만 활성/비활성 플래그로 한 장씩 표시
                         data-active={idx === currentIdx}
                         aria-hidden={mobile ? idx !== currentIdx : false}
                     >

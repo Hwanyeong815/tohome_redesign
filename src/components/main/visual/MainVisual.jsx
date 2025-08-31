@@ -95,7 +95,7 @@ const MainVisual = () => {
             <Swiper
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 modules={[Autoplay]}
-                // autoplay={{ delay: 4000, disableOnInteraction: false }}
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
                 loop={true}
                 slidesPerView={1}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -110,13 +110,11 @@ const MainVisual = () => {
                 })}
             </Swiper>
 
-            {/* Prev 버튼 */}
             <div className="btn-wrap">
                 <button className="prev" onClick={() => swiperRef.current?.slidePrev()}>
                     <p>Prev</p>
                 </button>
 
-                {/* Next 버튼 */}
                 <button className="next" onClick={() => swiperRef.current?.slideNext()}>
                     <p>Next</p>
                 </button>

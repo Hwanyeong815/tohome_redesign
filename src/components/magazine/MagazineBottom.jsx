@@ -15,13 +15,11 @@ const MagazineBottom = ({ onPrev, onNext }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    // ✅ '매거진' 태그로 필터 + num 기준 사용
     const recipes = useMemo(
         () => (AllDataList ?? []).filter((p) => p?.tags?.some((t) => t?.name === '매거진')),
         [AllDataList]
     );
 
-    // ✅ 선택 상태: Set<number> (num 저장)
     const [selectedItems, setSelectedItems] = useState(new Set());
 
     const handleItemSelect = (num, isSelected) => {
@@ -32,14 +30,12 @@ const MagazineBottom = ({ onPrev, onNext }) => {
         setSelectedItems(next);
     };
 
-    // 현재 선택된 상품들 계산
     const selectedProducts = useMemo(
         () => recipes.filter((p) => selectedItems.has(toNum(p.num))),
         [recipes, selectedItems]
     );
     const selectedCount = selectedProducts.length;
 
-    // ✅ 선택된 것만 담기
     const handleAddSelectedToCart = () => {
         if (selectedCount === 0) {
             alert('선택된 상품이 없습니다.');
@@ -50,7 +46,6 @@ const MagazineBottom = ({ onPrev, onNext }) => {
         alert(`${selectedCount}개의 상품이 장바구니에 담겼습니다.`);
     };
 
-    // ✅ 전체 담기
     const handleAddAllToCart = () => {
         if (recipes.length === 0) {
             alert('담을 수 있는 상품이 없습니다.');
@@ -71,7 +66,7 @@ const MagazineBottom = ({ onPrev, onNext }) => {
             <div className="btn-wrap">
                 <button
                     onClick={handleAddSelectedToCart}
-                    disabled={selectedCount === 0} // 원치 않으면 이 줄 제거
+                    disabled={selectedCount === 0}
                     aria-disabled={selectedCount === 0}
                     title={selectedCount === 0 ? '선택된 상품이 없습니다.' : ''}
                 >
@@ -83,8 +78,8 @@ const MagazineBottom = ({ onPrev, onNext }) => {
             <ProductList
                 products={recipes}
                 showCheckbox={true}
-                selectedItems={selectedItems} // Set<number>
-                onItemSelect={handleItemSelect} // (num, checked)
+                selectedItems={selectedItems}
+                onItemSelect={handleItemSelect}
             />
         </MagazineBottomStyle>
     );

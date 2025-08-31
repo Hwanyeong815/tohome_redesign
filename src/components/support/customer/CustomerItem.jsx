@@ -10,7 +10,6 @@ const CustomerItem = ({ customer, index, totalCount, currentPage, perPage }) => 
     const offset = (nPage - 1) * nPer;
     const number = nTotal - (offset + index);
 
-    // ✅ id 보정 (id, customerId 둘 다 대응)
     const rawId = customer?.customerId ?? customer?.id;
     const id = encodeURIComponent(String(rawId));
 

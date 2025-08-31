@@ -27,7 +27,6 @@ const legacyTitleMap = {
 const CategoryBox = ({ categoryID, selectedSub }) => {
     const categories = useSelector((s) => s.cart.categories) ?? {};
 
-    // 카테고리 버킷 찾기 (slug/레거시/한글 파라미터 모두 대응)
     let categoryData = categories?.[categoryID];
     if (!categoryData && legacyTitleMap[categoryID]) {
         const keyByTitle = slug(legacyTitleMap[categoryID]);
@@ -41,7 +40,6 @@ const CategoryBox = ({ categoryID, selectedSub }) => {
 
     const products = categoryData?.products || [];
 
-    // id 통일 (num 우선 → 없으면 도메인별 id)
     const unifiedProducts = useMemo(
         () =>
             products.map((u) => ({
@@ -62,11 +60,9 @@ const CategoryBox = ({ categoryID, selectedSub }) => {
         [products]
     );
 
-    // ---- 필터 UI 상태 ----
-    const [priceRange, setPriceRange] = useState([]); // ["~5천원", ...]
-    const [deliveryTypes, setDeliveryTypes] = useState([]); // ["새벽배송","택배배송","전체"]
+    const [priceRange, setPriceRange] = useState([]);
+    const [deliveryTypes, setDeliveryTypes] = useState([]);
 
-    // ---- 가격 구간 맵 ----
     const priceMap = {
         '~5천원': [0, 5000],
         '5천원~1만원': [5000, 10000],
@@ -76,7 +72,6 @@ const CategoryBox = ({ categoryID, selectedSub }) => {
         '5만원 이상': [50000, null],
     };
 
-    // 최종 필터
     const filtered = useMemo(() => {
         let arr = unifiedProducts;
 

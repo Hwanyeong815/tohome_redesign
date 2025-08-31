@@ -22,9 +22,7 @@ const Customer = () => {
                 <h2>
                     문의 게시판 <span>문의내역</span>
                 </h2>
-                {/* <CustomerAdd /> */}
-                {/* <CustomerDetail /> */}
-                {/* <CustomerEdit /> */}
+
                 <CustomerList />
                 <div className="btn-wrap">
                     <button onClick={onMake}>글쓰기</button>

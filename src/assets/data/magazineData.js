@@ -84,4 +84,3 @@ export default [
         route: '',
     },
 ];
-// 매거진데이터

@@ -1,6 +1,5 @@
-// KakaoLoginButton.jsx
-const REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY; // ✅ .env 값 불러오기
-const REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI; // ✅ .env 값 불러오기
+const REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY;
+const REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI;
 
 export default function KakaoLoginButton() {
     const handleKakaoLogin = () => {

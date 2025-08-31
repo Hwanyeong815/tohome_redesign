@@ -45,9 +45,8 @@ const NoticeList = ({ noticeTab }) => {
 
                 <tbody>
                     {[...currentNotices]
-                        .sort((a, b) => new Date(b.date) - new Date(a.date)) // 최신순
+                        .sort((a, b) => new Date(b.date) - new Date(a.date))
                         .map((notice, idx) => {
-                            // 안전한 기본값
                             const safeTotal = Number.isFinite(totalCount)
                                 ? totalCount
                                 : pageData.length;

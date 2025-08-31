@@ -74,9 +74,6 @@ const SubBox = ({ cart, setIsCartTab }) => {
                 </div>
 
                 <div className="icons">
-                    {/* <div className="gift">
-                        <IoGiftOutline />
-                    </div> */}
                     <div className="heart-wrap">
                         <HeartButton
                             productId={safeNum}

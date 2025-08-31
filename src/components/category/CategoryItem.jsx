@@ -1,18 +1,17 @@
-import { useState } from 'react';
-import { BsCart2, BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { cartActions } from '../../store/modules/cartSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import HeartButton from '../../ui/HeartButton';
+import { BsCart } from 'react-icons/bs';
 
-const CategoryItem = ({ product }) => {
-    const { thumbnail, name, price, discountedPrice, isDiscounted, discountRate } = product;
-    const [hoverHeart, setHoverHeart] = useState(false);
-    const [clicked, setClicked] = useState(false);
-
-    const navigate = useNavigate();
+const CategoryItem = ({ product, heartVariant = 'overlay', onUnliked }) => {
+    const { thumbnail, name, price, discountedPrice, isDiscounted, discountRate } = product || {};
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const authed = useSelector((s) => s.auth?.authed);
 
-    const productId =
+    const idCandidate =
         product?.num ??
         product?.id ??
         product?.fruitId ??
@@ -26,68 +25,90 @@ const CategoryItem = ({ product }) => {
         product?.snackId ??
         product?.liquidId;
 
-    const to = productId != null ? `/product/${productId}` : undefined;
+    const n = Number(idCandidate);
+    const safeNum = Number.isFinite(n) ? n : null;
 
+    const to = safeNum != null ? `/product/${safeNum}` : '/';
     const scrollTop = () => window.scrollTo({ top: 0, left: 0 });
+
+    const handleAddCart = (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        if (safeNum == null) return;
+        dispatch(cartActions.addToCart({ num: safeNum, qty: 1, product }));
+    };
+
+    const fmt = (v) => Number(v || 0).toLocaleString();
+
+    const onHeartClickCapture = (e) => {
+        if (authed) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const ok = window.confirm('좋아요를 추가하려면 로그인 해야합니다. 로그인 하시겠습니까?');
+        if (ok) {
+            const redirectTo = location.pathname + location.search + location.hash;
+            navigate('/login', { state: { redirectTo } });
+        }
+    };
+
     return (
         <li>
             <Link to={to} onClick={scrollTop}>
                 <div className="img-wrap">
-                    <img src={thumbnail} alt={name} />
-                    <div className="overlay">
-                        <button
-                            className="icon-btn"
-                            onMouseEnter={() => setHoverHeart(true)}
-                            onMouseLeave={() => setHoverHeart(false)}
-                            onClick={() => setClicked((prev) => !prev)}
-                        >
-                            {hoverHeart || clicked ? <BsSuitHeartFill /> : <BsSuitHeart />}
-                        </button>
-                        <button
-                            className="icon-btn"
-                            type="button"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                e.preventDefault();
-                                // cartSlice 기대 스키마에 맞춰 전달
-                                const payload = { num: product.num, qty: 1, product };
-                                // 액션명이 addToCart인지 addItem인지 프로젝트에 맞춰 사용
-                                if (cartActions.addToCart) {
-                                    dispatch(cartActions.addToCart(payload));
-                                } else if (cartActions.addItem) {
-                                    dispatch(cartActions.addItem(payload));
-                                } else {
-                                    // 최후방어: 기존처럼 전체 product도 시도
-                                    dispatch(cartActions.addToCart?.(product));
-                                }
-                            }}
-                        >
-                            <BsCart2 />
-                        </button>
-                    </div>
+                    <img src={thumbnail} alt={name} loading="lazy" />
+                    {heartVariant === 'overlay' && (
+                        <div className="overlay">
+                            <span onClickCapture={onHeartClickCapture}>
+                                <HeartButton
+                                    productId={safeNum}
+                                    variant="overlay"
+                                    onUnliked={onUnliked}
+                                />
+                            </span>
+                            <button
+                                className="icon-btn"
+                                type="button"
+                                onClick={handleAddCart}
+                                disabled={safeNum == null}
+                                aria-label="장바구니 담기"
+                            >
+                                <BsCart />
+                            </button>
+                        </div>
+                    )}
                 </div>
+
+                {heartVariant === 'mypage' && (
+                    <span onClickCapture={onHeartClickCapture}>
+                        <HeartButton
+                            productId={safeNum}
+                            variant="mypage"
+                            onUnliked={onUnliked}
+                            className="heart-in-img"
+                        />
+                    </span>
+                )}
+
                 <h3>
-                    {name.split('\n').map((line, idx) => (
-                        <span key={idx}>
-                            {line}
-                            <br />
-                        </span>
-                    ))}
+                    {String(name || '')
+                        .split('\n')
+                        .map((line, idx) => (
+                            <span key={idx}>
+                                {line}
+                                <br />
+                            </span>
+                        ))}
                 </h3>
+
                 <div className="price-box">
                     {isDiscounted ? (
-                        <p className="discount">
-                            {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
-                        </p>
+                        <p className="discount">{fmt(price)}원</p>
                     ) : (
                         <p className="discount">{''}</p>
                     )}
                     <p className="price">
                         {isDiscounted && <span>{discountRate}%</span>}
-                        {isDiscounted
-                            ? discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                            : price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-                        원
+                        {fmt(isDiscounted ? discountedPrice : price)}원
                     </p>
                 </div>
             </Link>

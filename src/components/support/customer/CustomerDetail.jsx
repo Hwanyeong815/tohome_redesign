@@ -26,7 +26,7 @@ const CustomerDetail = () => {
             return navigate('/login');
         }
         dispatch(supportActions.setCurrentCustomer(newItem));
-        // ✅ /customer/customeredit/:customerID 로 이동
+
         navigate(`/customer/customeredit/${id}`, { state: { item: newItem } });
     };
     const onDel = () => {
@@ -34,7 +34,7 @@ const CustomerDetail = () => {
             alert('로그인 후 이용');
             return navigate('/login');
         }
-        // 슬라이스가 number 비교면 Number(id)로
+
         dispatch(supportActions.removeCustomer(id));
         navigate('/customer');
     };
@@ -81,18 +81,13 @@ const CustomerDetail = () => {
                                 </p>
                             </div>
 
-                            <div className="checkbox pretendard">
-                                답변 알림받기
-                            </div>
+                            <div className="checkbox pretendard">답변 알림받기</div>
 
                             <div className="btn-wrap">
                                 <button onClick={onEdit}>수정</button>
                                 <button onClick={onDel}>삭제</button>
-                                {/* ✅ 목록은 /customer */}
-                                <button
-                                    type="button"
-                                    onClick={() => navigate('/customer')}
-                                >
+
+                                <button type="button" onClick={() => navigate('/customer')}>
                                     목록
                                 </button>
                             </div>

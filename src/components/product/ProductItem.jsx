@@ -1,11 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { ProductItemStyle } from './style';
 import { BsCart2 } from 'react-icons/bs';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/modules/cartSlice';
 import Checkbox from '../../ui/CheckBox';
 import HeartButton from '../../ui/HeartButton';
-// import HeartButton from '../../ui/HeartButton.jsx';
 
 const formatPrice = (n) => new Intl.NumberFormat('ko-KR').format(n ?? 0);
 
@@ -15,8 +14,9 @@ const ProductItem = ({
     isSelected = false,
     onSelect,
     idx,
-    heartVariant = 'overlay', // 'mypage'로 넘기면 하단 고정
-    onUnliked, // 마이페이지에서 취소 후 상위 처리(선택)
+    heartVariant = 'overlay',
+    onUnliked,
+    showDesc = false,
 }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -25,7 +25,6 @@ const ProductItem = ({
 
     const num = Number(product.num);
     const safeNum = Number.isFinite(num) ? num : null;
-    const userId = useSelector((s) => s.auth?.user?.id);
 
     const handleClick = () => {
         if (safeNum == null) return;
@@ -85,6 +84,7 @@ const ProductItem = ({
                     />
                 )}
             </div>
+
             <h3 onClick={handleClick}>
                 {name.split('\n').map((line, i) => (
                     <span key={i}>
@@ -93,6 +93,7 @@ const ProductItem = ({
                     </span>
                 ))}
             </h3>
+
             <div className="price-box" onClick={handleClick}>
                 {isDiscounted ? (
                     <p className="discount">{formatPrice(price)}원</p>
@@ -104,7 +105,10 @@ const ProductItem = ({
                     {formatPrice(isDiscounted ? discountedPrice : price)}원
                 </p>
             </div>
-            {heartVariant !== 'mypage' && <div className="des pretendard fw300">{info}</div>}
+
+            {showDesc && heartVariant !== 'mypage' && info && (
+                <div className="des pretendard fw300">{info}</div>
+            )}
         </ProductItemStyle>
     );
 };

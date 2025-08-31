@@ -42,7 +42,6 @@ const Faq = () => {
                 dispatch={dispatch}
                 faqs={faqs}
             />
-            {/* <Pagination /> */}
         </FaqStyle>
     );
 };

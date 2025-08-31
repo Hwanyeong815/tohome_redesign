@@ -9,8 +9,8 @@ const normalized = customerData.map((c) => {
     return {
         ...c,
         id,
-        customerId: id, // 둘 다 보유
-        username: c.username ?? c.name ?? '', // 표시용은 username으로 통일
+        customerId: id,
+        username: c.username ?? c.name ?? '',
     };
 });
 
@@ -32,7 +32,7 @@ export const supportSlice = createSlice({
         addCustomer: (state, action) => {
             const nid = no++;
             action.payload.id = nid;
-            action.payload.customerId = nid; // 호환 유지
+            action.payload.customerId = nid;
             state.customers = [action.payload, ...state.customers];
         },
         setCurrentCustomer: (state, action) => {

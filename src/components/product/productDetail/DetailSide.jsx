@@ -13,7 +13,7 @@ const toNum = (v) => {
 const DetailSide = ({ obj }) => {
     const {
         id,
-        num, // 혹시 detail 객체에 num이 있으면 우선 사용
+        num,
         name,
         thumbnail,
         price,
@@ -29,7 +29,6 @@ const DetailSide = ({ obj }) => {
     const navigate = useNavigate();
     const { authed, user } = useSelector((state) => state.auth);
 
-    // ✅ num/id 혼재 방지: cart에 들어가는 product는 항상 num을 갖도록 통일
     const safeNum = num ?? id;
 
     const [qty, setQty] = useState(1);
@@ -48,15 +47,14 @@ const DetailSide = ({ obj }) => {
         };
     }, [price, discountedPrice, qty]);
 
-    // ✅ 공용 함수: 담기만/담고 이동 두 케이스를 깔끔하게
     const addToCart = () => {
         if (!safeNum) return;
         dispatch(
             cartActions.addToCart({
                 product: {
                     ...obj,
-                    num: safeNum, // 통일
-                    id: safeNum, // 혹시 reducer가 id를 참조한다면 겸사겸사
+                    num: safeNum,
+                    id: safeNum,
                     thumbnail,
                     price,
                     discountedPrice,
@@ -176,17 +174,15 @@ const DetailSide = ({ obj }) => {
                 </div>
 
                 <div className="buttonWrap">
-                    {/* 🛒 장바구니: 담기만 */}
                     <button type="button" onClick={addToCart}>
                         장바구니
                     </button>
 
-                    {/* ⚡ 바로구매: 담고 이동 */}
                     <button
                         type="button"
                         onClick={() => {
-                            addToCart(); // 담기
-                            handleCartClick(); // 로그인 체크 → cart 이동
+                            addToCart();
+                            handleCartClick();
                         }}
                     >
                         바로구매

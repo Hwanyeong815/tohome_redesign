@@ -1,4 +1,3 @@
-// ProductResult.jsx
 import { useEffect, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
@@ -13,9 +12,9 @@ const toKey = (v) => (v ?? '').toString().toLowerCase();
 const ProductResult = () => {
     const { AllDataList } = useSelector((s) => s.cart);
     const [params] = useSearchParams();
-    const qFromUrl = params.get('q') || ''; // /result?q=복숭아
+    const qFromUrl = params.get('q') || '';
 
-    const [query, setQuery] = useState(qFromUrl); // 내부 인풋 없음(요구사항)
+    const [query, setQuery] = useState(qFromUrl);
     const [activeFilter, setActiveFilter] = useState('전체보기');
     const [activeSort, setActiveSort] = useState('판매량순');
 
@@ -78,7 +77,6 @@ const ProductResult = () => {
                         <span> {sorted.length}</span>건
                     </h2>
 
-                    {/* 필터 탭 */}
                     <ul className="filter">
                         {FILTER_TABS.map((t) => (
                             <li
@@ -91,7 +89,6 @@ const ProductResult = () => {
                         ))}
                     </ul>
 
-                    {/* 정렬 탭 (선택식) */}
                     <ul className="sort">
                         {SORT_TABS.map((s) => (
                             <li
@@ -105,7 +102,6 @@ const ProductResult = () => {
                     </ul>
                 </section>
 
-                {/* 결과 리스트 */}
                 <ProductList products={sorted} showCheckbox={false} className="list" />
             </div>
         </ProductResultStyle>

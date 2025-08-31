@@ -3,8 +3,7 @@ import DetailReviewItem from './DetailReviewItem';
 import { ReviewListStyle } from './style';
 
 const DetailReviewList = ({ reviews = [], avgRate = 0 }) => {
-    // ✅ 탭 초깃값: 최신순
-    const [tab, setTab] = useState('newest'); // 'best' | 'newest' | 'photo'
+    const [tab, setTab] = useState('newest');
 
     const isNonEmptyString = (v) => typeof v === 'string' && v.trim().length > 0;
 
@@ -25,7 +24,7 @@ const DetailReviewList = ({ reviews = [], avgRate = 0 }) => {
         if (tab === 'newest') {
             return arr.sort((a, b) => parseDate(b?.date) - parseDate(a?.date));
         }
-        // tab === 'best'
+
         return arr.sort((a, b) => getRate(b) - getRate(a));
     }, [reviews, tab]);
 

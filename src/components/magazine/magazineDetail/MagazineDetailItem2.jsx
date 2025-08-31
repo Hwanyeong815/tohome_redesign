@@ -1,4 +1,3 @@
-// MagazineDetailItem2.jsx
 import { MagazineDetailItem2Style } from './style';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -38,16 +37,15 @@ const MagazineDetailItem2 = ({ onPrev, onNext }) => {
                     end: 'top center',
                     scrub: 1,
                     onUpdate: (self) => {
-                        const offset = self.progress * 10; // 0% → 10%
+                        const offset = self.progress * 10;
                         textPathEl.setAttribute('startOffset', `${offset}%`);
-                        const op = 0.2 + self.progress * 0.8; // 0.2 → 1
+                        const op = 0.2 + self.progress * 0.8;
                         textEl?.setAttribute('opacity', String(op));
                     },
                     onEnter: () => textEl && textEl.setAttribute('opacity', '1'),
                     onLeaveBack: () => textEl && textEl.setAttribute('opacity', '0.2'),
                 });
             } catch (e) {
-                // 트리거 미작동 시에도 보이는 채로 멈춤
                 textPathEl.setAttribute('startOffset', '10%');
                 textEl?.setAttribute('opacity', '1');
             }

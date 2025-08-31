@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const CartList = ({ setIsCartTab, items }) => {
     const { carts } = useSelector((state) => state.cart);
-    const list = items ?? carts; // ✅ props 우선, 없으면 기존대로
+    const list = items ?? carts;
 
     return (
         <CartBoxStyle>

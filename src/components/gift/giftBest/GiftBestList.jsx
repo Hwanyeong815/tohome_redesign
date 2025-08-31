@@ -11,7 +11,7 @@ const GiftBestList = ({ sliderRef }) => {
 
     const settings = {
         dots: false,
-        arrows: false, // 내부 화살표는 끔
+        arrows: false,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,

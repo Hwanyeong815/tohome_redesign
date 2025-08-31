@@ -1,6 +1,83 @@
+import { useState, useMemo } from 'react';
 import { JoinItemStyle } from './style';
 
 const JoinItem = () => {
+    const [form, setForm] = useState({
+        userId: '',
+        password: '',
+        password2: '',
+    });
+
+    const [touched, setTouched] = useState({
+        userId: false,
+        password: false,
+        password2: false,
+    });
+
+    const validateUserId = (v) => {
+        const re = /^(?=.{8,30}$)[A-Z](?=.*\d)[A-Za-z0-9]+$/;
+        if (!v) return '아이디를 입력하세요.';
+        if (!re.test(v)) {
+            return '아이디는 첫 글자 대문자, 영문/숫자 조합 8~30자이며 숫자를 최소 1개 포함해야 합니다.';
+        }
+        return '';
+    };
+
+    const validatePassword = (v) => {
+        if (!v) return '비밀번호를 입력하세요.';
+        if (/\s/.test(v)) return '비밀번호에 공백은 허용되지 않습니다.';
+        if (v.length < 8 || v.length > 16) return '비밀번호는 8~16자여야 합니다.';
+
+        const hasUpper = /[A-Z]/.test(v);
+        const hasLower = /[a-z]/.test(v);
+        const hasDigit = /\d/.test(v);
+        const hasSpecial = /[^A-Za-z0-9]/.test(v);
+        const kinds = [hasUpper, hasLower, hasDigit, hasSpecial].filter(Boolean).length;
+
+        if (kinds < 3) {
+            return '비밀번호는 대문자/소문자/숫자/특수문자 중 3가지 이상을 포함해야 합니다.';
+        }
+        return '';
+    };
+
+    const validatePassword2 = (v, p1) => {
+        if (!v) return '비밀번호 확인을 입력하세요.';
+        if (v !== p1) return '비밀번호가 일치하지 않습니다.';
+        return '';
+    };
+
+    const errors = useMemo(() => {
+        return {
+            userId: validateUserId(form.userId),
+            password: validatePassword(form.password),
+            password2: validatePassword2(form.password2, form.password),
+        };
+    }, [form]);
+
+    const isValid = useMemo(() => {
+        return !errors.userId && !errors.password && !errors.password2;
+    }, [errors]);
+
+    const onChange = (e) => {
+        const { name, value } = e.target;
+        setForm((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const onBlur = (e) => {
+        const { name } = e.target;
+        setTouched((prev) => ({ ...prev, [name]: true }));
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        setTouched({ userId: true, password: true, password2: true });
+
+        if (!isValid) return;
+
+        alert('가입 정보가 유효합니다. 제출 로직을 연결하세요.');
+    };
+
     return (
         <JoinItemStyle>
             <div className="inner">
@@ -13,7 +90,15 @@ const JoinItem = () => {
                         </div>
                     </div>
 
-                    <form action="#" method="post" name="form" className="form" id="join-form">
+                    <form
+                        action="#"
+                        method="post"
+                        name="form"
+                        className="form"
+                        id="join-form"
+                        onSubmit={onSubmit}
+                        noValidate
+                    >
                         <table className="table-wrap">
                             <colgroup>
                                 <col className="w1" />
@@ -22,55 +107,76 @@ const JoinItem = () => {
                             <tbody>
                                 <tr>
                                     <td>
-                                        <label htmlFor="userid">
+                                        <label htmlFor="userId">
                                             아이디 <p>*</p>
                                         </label>
                                     </td>
                                     <td>
                                         <input
                                             type="text"
-                                            name="userid"
-                                            id="userid"
-                                            placeholder="예) 영문/숫자 조합 8~30자   ex)rere0811"
+                                            name="userId"
+                                            id="userId"
+                                            placeholder="예) 영문/숫자 조합 8~30자, 첫 글자 대문자  ex)Rere0811"
                                             title="아이디를 입력하세요"
+                                            value={form.userId}
+                                            onChange={onChange}
+                                            onBlur={onBlur}
+                                            aria-invalid={touched.userId && !!errors.userId}
                                             required
                                         />
+                                        {touched.userId && errors.userId && (
+                                            <p className="error">{errors.userId}</p>
+                                        )}
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>
-                                        <label htmlFor="userpassword">
+                                        <label htmlFor="password">
                                             비밀번호 <p>*</p>
                                         </label>
                                     </td>
                                     <td>
                                         <input
-                                            type="password" /* ← 주석은 이렇게 */
-                                            name="userpassword"
-                                            id="userpassword"
-                                            placeholder="예) 영문/숫자/특수문자 3가지 이상 8~16자   ex)rere0811@"
+                                            type="password"
+                                            name="password"
+                                            id="password"
+                                            placeholder="예) 8~16자, 대/소/숫/특 중 3가지 이상  ex)Rere0811@"
                                             title="비밀번호를 입력하세요"
+                                            value={form.password}
+                                            onChange={onChange}
+                                            onBlur={onBlur}
+                                            aria-invalid={touched.password && !!errors.password}
                                             required
                                         />
+                                        {touched.password && errors.password && (
+                                            <p className="error">{errors.password}</p>
+                                        )}
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>
-                                        <label htmlFor="userpassword2">
+                                        <label htmlFor="password2">
                                             비밀번호 확인 <p>*</p>
                                         </label>
                                     </td>
                                     <td>
                                         <input
                                             type="password"
-                                            name="userpassword2"
-                                            id="userpassword2"
-                                            placeholder="ex)rere0811@"
-                                            title="비밀번호를 입력하세요"
+                                            name="password2"
+                                            id="password2"
+                                            placeholder="비밀번호를 한번 더 입력하세요"
+                                            title="비밀번호 확인을 입력하세요"
+                                            value={form.password2}
+                                            onChange={onChange}
+                                            onBlur={onBlur}
+                                            aria-invalid={touched.password2 && !!errors.password2}
                                             required
                                         />
+                                        {touched.password2 && errors.password2 && (
+                                            <p className="error">{errors.password2}</p>
+                                        )}
                                     </td>
                                 </tr>
 
@@ -92,7 +198,6 @@ const JoinItem = () => {
                                     </td>
                                 </tr>
 
-                                {/* 이메일 */}
                                 <tr>
                                     <td>
                                         <label htmlFor="emailLocal">
@@ -126,7 +231,6 @@ const JoinItem = () => {
                                     </td>
                                 </tr>
 
-                                {/* 전화번호 */}
                                 <tr>
                                     <td>
                                         <label htmlFor="telPrefix">
@@ -183,6 +287,12 @@ const JoinItem = () => {
                                 </tr>
                             </tbody>
                         </table>
+
+                        <div className="actions" style={{ marginTop: 20 }}>
+                            <button type="submit" disabled={!isValid}>
+                                회원가입
+                            </button>
+                        </div>
                     </form>
                 </div>
 
@@ -228,7 +338,6 @@ const JoinItem = () => {
                                                 <option value="">년</option>
                                                 <option value="2025">2025</option>
                                                 <option value="2024">2024</option>
-                                                {/* ... 필요 연도만 남기세요 ... */}
                                                 <option value="1980">1980</option>
                                             </select>
                                             <span>년</span>

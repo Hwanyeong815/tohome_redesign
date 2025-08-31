@@ -12,25 +12,20 @@ const Cart = () => {
     const [isMenuTab, setIsMenuTab] = useState('새벽배송');
     const { carts } = useSelector((state) => state.cart);
 
-    // 탭별 서브셋
     const brandCarts = useMemo(
         () => carts.filter((c) => c.details?.deliveryType === '브랜드직송'),
         [carts]
     );
 
     const giftCarts = useMemo(() => carts.filter((c) => !!c.giftId), [carts]);
-    const dawnCarts = useMemo(
-        () => carts.filter((c) => !c.giftId), // giftId 없는 것만
-        [carts]
-    );
+    const dawnCarts = useMemo(() => carts.filter((c) => !c.giftId), [carts]);
 
     const displayCarts = useMemo(() => {
         if (isMenuTab === '브랜드직송') return brandCarts;
         if (isMenuTab === '선물하기') return giftCarts;
         if (isMenuTab === '정기구독') return [];
-        return dawnCarts; // 기본 = 새벽배송
+        return dawnCarts;
     }, [isMenuTab, brandCarts, giftCarts, dawnCarts]);
-    // 새벽배송 탭은 "전체" 요구 → 필터 없이 carts 전체 노출
 
     return (
         <CartWrap>
@@ -108,7 +103,7 @@ const Cart = () => {
                                 <CartSide
                                     setIsCartTab={setIsCartTab}
                                     isCartTab={isCartTab}
-                                    isMenuTab={isMenuTab} // 현재 탭 전달
+                                    isMenuTab={isMenuTab}
                                 />
                             )}
                             {isCartTab === 'Result' && <CartResult />}

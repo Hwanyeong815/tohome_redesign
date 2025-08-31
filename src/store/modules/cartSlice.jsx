@@ -85,7 +85,6 @@ const titleToLegacyKey = Object.fromEntries(
     Object.entries(legacyKeyToTitle).map(([k, v]) => [v, k])
 );
 
-// num 우선, 없으면 도메인별 id 사용
 const pickStableId = (p) =>
     p?.num ??
     p?.fruitId ??
@@ -100,9 +99,6 @@ const pickStableId = (p) =>
     p?.liquidId ??
     `${p?.name ?? ''}__${p?.brandName ?? ''}__${p?.price ?? ''}`;
 
-/* =========================
-   🔹 추가: 도메인 ID 필터링
-   ========================= */
 const DOMAIN_ID_KEYS = [
     'fruitId',
     'grainId',
@@ -121,19 +117,15 @@ const hasDomainId = (p) => DOMAIN_ID_KEYS.some((k) => p?.[k] != null && p[k] !==
 const getDomainStableKey = (p) => {
     for (const k of DOMAIN_ID_KEYS) {
         const v = p?.[k];
-        if (v != null && v !== '' && v !== 0) return `${k}:${v}`; // 도메인 키 포함한 중복방지 키
+        if (v != null && v !== '' && v !== 0) return `${k}:${v}`;
     }
     return null;
 };
 
-/* =========================
-   🔹 교체: buildCategories
-   ========================= */
 const buildCategories = (all = []) => {
-    const byMain = new Map(); // mainTitle -> { title, products, _seen }
+    const byMain = new Map();
 
     for (const item of all) {
-        // 도메인별 ID가 있는 상품만 카테고리에 포함 (gift 전용 등 제외)
         if (!hasDomainId(item)) continue;
 
         const main = item?.category?.main;
@@ -145,7 +137,6 @@ const buildCategories = (all = []) => {
         if (!byMain.has(main)) byMain.set(main, { title: main, products: [], _seen: new Set() });
         const bucket = byMain.get(main);
 
-        // 도메인 ID 기준으로 중복 제거
         if (bucket._seen.has(stableDomainKey)) continue;
         bucket._seen.add(stableDomainKey);
 
@@ -158,7 +149,7 @@ const buildCategories = (all = []) => {
         categories[slugKey] = { title, products };
 
         const legacyKey = titleToLegacyKey[mainTitle];
-        if (legacyKey) categories[legacyKey] = { title, products }; // 레거시 라우트 호환
+        if (legacyKey) categories[legacyKey] = { title, products };
     }
     return categories;
 };
@@ -167,7 +158,6 @@ export const makeSelectProductsByCategoryKey = () =>
     createSelector([selectAllDataList, (_s, key) => key], (all, key) => {
         if (!key) return [];
 
-        // 레거시 키면 한글 타이틀로 치환, 아니면 디코딩 후 사용 → 슬러그 통일
         const decoded = decodeURIComponent(String(key));
         const title = legacyKeyToTitle[key] ?? decoded;
         const wanted = slug(title);

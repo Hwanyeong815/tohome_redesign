@@ -57,10 +57,7 @@ const FloatingBtn = () => {
                 <FloatingBtnStyle>
                     <div>
                         <p className="img-box" onClick={onClick1}>
-                            <img
-                                src="/images/icon/icon_dawnDelivery.png"
-                                alt="새벽투홈"
-                            />
+                            <img src="/images/icon/icon_dawnDelivery.png" alt="새벽투홈" />
                             새벽투홈
                         </p>
                         <p
@@ -80,7 +77,6 @@ const FloatingBtn = () => {
                         <span>
                             <IoIosArrowDropup />
                         </span>
-                        {/* <img src="/images/icon/icon_topBtn.png" alt="탑버튼" /> */}
                     </button>
                 </FloatingBtnStyle>
             )}

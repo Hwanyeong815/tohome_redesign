@@ -57,7 +57,7 @@ const Content2 = () => {
                             <ProductList products={seasonFruits6} showCheckbox={false} />
                         </div>
                     ) : (
-                        <ProductList products={seasonFruits} showCheckbox={false} />
+                        <ProductList products={seasonFruits} showCheckbox={false} showDesc={true} />
                     )}
                     <div className="btn">
                         <button>베스트 상품 더보기</button>
@@ -74,7 +74,7 @@ const Content2 = () => {
                             <ProductList products={healingFoods6} showCheckbox={false} />
                         </div>
                     ) : (
-                        <ProductList products={healingFoods} showCheckbox={false} />
+                        <ProductList products={healingFoods} showCheckbox={false} showDesc={true} />
                     )}
                     <div className="btn">
                         <button>베스트 상품 더보기</button>

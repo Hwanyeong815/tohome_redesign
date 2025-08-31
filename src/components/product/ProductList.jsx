@@ -5,8 +5,9 @@ import { useEffect, useState } from 'react';
 const ProductList = ({
     products = [],
     showCheckbox = true,
-    selectedItems = new Set(), // Set<number> 권장 (num 저장)
-    onItemSelect, // (num: number, checked: boolean) => void
+    selectedItems = new Set(),
+    onItemSelect,
+    showDesc = false,
 }) => {
     const [visibleCount, setVisibleCount] = useState(15);
 
@@ -23,6 +24,10 @@ const ProductList = ({
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
+    }, [products.length]);
+
+    useEffect(() => {
+        setVisibleCount(15);
     }, [products.length]);
 
     const toNum = (p) => {
@@ -43,10 +48,11 @@ const ProductList = ({
                         product={product}
                         showCheckbox={showCheckbox}
                         isSelected={isSelected}
-                        onSelect={(checked) => {
-                            if (onItemSelect && num != null) onItemSelect(num, checked);
+                        onSelect={(n, checked) => {
+                            if (onItemSelect && n != null) onItemSelect(n, checked);
                         }}
                         idx={idx}
+                        showDesc={showDesc}
                     />
                 );
             })}

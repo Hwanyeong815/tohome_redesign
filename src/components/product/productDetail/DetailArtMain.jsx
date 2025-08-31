@@ -6,7 +6,6 @@ import { useEffect, useRef } from 'react';
 const DetailArtMain = ({ obj }) => {
     const { thumbnail, name } = obj || {};
 
-    // 바깥 컨테이너(가로 스크롤 영역) / 안쪽 트랙(최대 스크롤 폭)
     const containerRef = useRef(null);
     const contentRef = useRef(null);
 
@@ -18,7 +17,6 @@ const DetailArtMain = ({ obj }) => {
         const getMax = () => Math.max(0, content.scrollWidth - container.clientWidth);
 
         const onWheel = (e) => {
-            // 트랙패드 가로/세로 모두 대응: 더 큰 축을 사용
             const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
 
             const max = getMax();
@@ -26,10 +24,8 @@ const DetailArtMain = ({ obj }) => {
             const atLeft = left <= 0 && delta < 0;
             const atRight = left >= max - 1 && delta > 0;
 
-            // 양 끝에서는 기본 스크롤(페이지로 전달) 허용 → 다른 컴포넌트 영향 최소화
             if (atLeft || atRight) return;
 
-            // 그 외에는 현재 컨테이너에서만 가로 스크롤 처리
             e.preventDefault();
             const speed = 1.2;
             const next = left + delta * speed;

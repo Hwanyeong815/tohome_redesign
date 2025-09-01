@@ -101,10 +101,9 @@ export const FloatingMenuStyle = styled.div`
 
     /* 패널 */
     .panel {
-        /* 데스크톱 오프셋 적용: 헤더 높이를 제외한 나머지 영역 스크롤 */
-        /* height: calc(100% - var(--header-offset, 0px)); */
         width: min(86vw, 240px);
-        margin-right: 550px; /* 기존 right: 550px 보정 */
+        margin-top: 7vw;
+        margin-right: 13vw;
         background-color: #fff;
         border-radius: 16px;
         box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.15);

@@ -69,7 +69,13 @@ const Navbar = ({ expanded }) => {
                     {authed ? (
                         <>
                             <li>
-                                <Link>{user.name}님 환영합니다</Link>
+                                <Link>
+                                    {user?.name ||
+                                        user?.userid ||
+                                        user?.profile?.nickname ||
+                                        '회원'}
+                                    님 환영합니다
+                                </Link>
                             </li>
                             <li>
                                 <Link to="/myPage">마이페이지</Link>

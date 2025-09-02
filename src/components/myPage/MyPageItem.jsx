@@ -8,7 +8,9 @@ const MyPageItem = () => {
         <MyPageItemStyle>
             <div className="inner">
                 <div className="name">
-                    <h2 className="pretendard">{user.name}</h2>
+                    <h2 className="pretendard">
+                        {user?.name || user?.userid || user?.profile?.nickname || '회원'}
+                    </h2>
                     <span>님은 일반회원 입니다.</span>
                 </div>
                 <div className="items">

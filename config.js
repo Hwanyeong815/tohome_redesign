@@ -4,4 +4,4 @@ console.log(isLocal);
 
 export const KAKAO_REDITECT_URI = isLocal
     ? 'http://localhost:5173/login/'
-    : 'https://xxx.vercel.app/oauth/';
+    : 'https://tohome-redesign-p.vercel.app/oauth/';
